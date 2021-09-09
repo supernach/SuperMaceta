@@ -1,19 +1,79 @@
 #ifndef CLOCK_H
 #define CLOCK_H
 
-/**
-
-@file Clock.c
-@brief Proporciona un acceso basico a la configuracion y
-			 usos del reloj interno del micro.
-			 
-@author Supernach
-@date 2/2021
-
-*/
-
+/****************************************************************************
+* Title                 :   Clock API
+* Filename              :   Clock.h
+* Author                :   SuperNach
+* Origin Date           :   20/02/2021
+* Version               :   1.0.0
+* Compiler              :   Cosmic C
+* Target                :   STM8
+* Copyright             :   
+* All Rights Reserved
+*
+* AQUI VA DECLARACIONES DERECHOS
+*
+*******************************************************************************/
+/****************************************************************************
+* Doxygen C Template
+* Copyright (c) 2013 - Jacob Beningo - All Rights Reserved
+*
+* Feel free to use this Doxygen Code Template at your own risk for your own
+* purposes.  The latest license and updates for this Doxygen C template can be
+* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.
+*
+* For updates, free software, training and to stay up to date on the latest
+* embedded software techniques sign-up for Jacobs newsletter at
+* http://www.beningo.com/814-2/
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Template.
+*
+*****************************************************************************/
+/*************** SOURCE REVISION LOG *****************************************
+*
+*    Date    Version   Author         Description
+*  20/02/21   1.0.0   SuperNach       Initial Release.
+*  
+*
+*******************************************************************************/
+/** @file Clock.h
+ *  @brief Proporciona un acceso basico a la configuracion y
+ *				 usos del reloj interno del micro.
+ */
+/******************************************************************************
+* Includes
+*******************************************************************************/
 #include <stm8s.h>
 #include <Gpio.h>
+
+/******************************************************************************
+* Constants
+*******************************************************************************/
+
+/******************************************************************************
+* Configuration
+*******************************************************************************/
+
+/******************************************************************************
+* Macros
+*******************************************************************************/
+
+/******************************************************************************
+* Typedefs
+*******************************************************************************/
+
+/******************************************************************************
+* Variables
+*******************************************************************************/
+
+/******************************************************************************
+* Function Prototypes
+*******************************************************************************/
+#ifdef __cplusplus
+extern "C"{
+#endif
 
 /**
 @brief Deshabilita el uso del reloj en todos los perifericos			 
@@ -43,5 +103,9 @@ void Clock_HSI_Init(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu);
 */
 void EnableClockMirror(CLK_Output_TypeDef source, Gpio_Config_t* pin);
 
+
+#ifdef __cplusplus
+} // extern "C"
+#endif 
 
 #endif
