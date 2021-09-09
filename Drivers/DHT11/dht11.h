@@ -130,7 +130,7 @@ struct DHT11
 extern "C"{
 #endif
 
-void DHT11_Init( DHT11_t_ptr dht11 );
+void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura );
 DHT11_SI_t dht11_Lectura( DHT11_t_ptr sensor );
 
 #ifdef __cplusplus

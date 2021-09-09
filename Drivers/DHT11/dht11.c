@@ -1,4 +1,68 @@
+/****************************************************************************
+* Title                 :   DHT11  DRIVER
+* Filename              :   Dht11.h
+* Author                :   SuperNach
+* Origin Date           :   20/08/2021
+* Version               :   1.0.0
+* Compiler              :   Cosmic C
+* Target                :   STM8
+* Copyright             :   
+* All Rights Reserved
+*
+* AQUI VA DECLARACIONES DERECHOS
+*
+*******************************************************************************/
+/****************************************************************************
+* Doxygen C Template
+* Copyright (c) 2013 - Jacob Beningo - All Rights Reserved
+*
+* Feel free to use this Doxygen Code Template at your own risk for your own
+* purposes.  The latest license and updates for this Doxygen C template can be
+* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.
+*
+* For updates, free software, training and to stay up to date on the latest
+* embedded software techniques sign-up for Jacobs newsletter at
+* http://www.beningo.com/814-2/
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Template.
+*
+*****************************************************************************/
+/*************** SOURCE REVISION LOG *****************************************
+*
+*    Date    Version   Author         Description
+*  20/08/21   1.0.0   SuperNach       Initial Release.
+*  
+*
+*******************************************************************************/
+/** @file Dht11.h
+ *  @brief Configura y proporciona acceso a la lectura del sensor de temperatura
+ *         y humedad DHT11
+ */
+/******************************************************************************
+* Includes
+*******************************************************************************/
 #include <dht11.h>
+
+/******************************************************************************
+* Module Preprocessor Constants
+*******************************************************************************/
+
+/******************************************************************************
+* Module Preprocessor Macros
+*******************************************************************************/
+
+/******************************************************************************
+* Module Typedefs
+*******************************************************************************/
+
+/******************************************************************************
+* Module Variable Definitions
+*******************************************************************************/
+
+/******************************************************************************
+* Function Prototypes
+*******************************************************************************/
 
 static @inline uint8_t leerByte( Gpio_Config_t* gpio )
 {
@@ -118,10 +182,44 @@ static @inline void dht11_CerrarConexion( DHT11_t_ptr sensor )
 	}	
 }
 
-
-void DHT11_Init( DHT11_t_ptr dht11 )
+/******************************************************************************
+* Function : DHT11_Init()
+*//**
+* \b Description:
+*
+* Inicializa valores y funciones del sensor
+*
+* PRE-CONDITION: Clock habilitado
+* PRE-CONDITION: Configuracion de la gpio creada
+* PRE-CONDITION: funcion callback d electura creada
+*
+* POST-CONDITION: El sensor esta listo para usarse
+* 
+* @param			Sensor a inicializar
+* @param			Funcion callback de lectura
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		DHT11_Init( &dht11, &dht11_Lectura );
+* @endcode
+*
+* @see DHT11_t
+* @see DHT11_fPtr
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura )
 {
-	dht11->Lectura = &dht11_Lectura;
+	dht11->Lectura = Lectura;
 	
 	dht11->Datos.UltimaLectura.CRC = 0;
 	dht11->Datos.UltimaLectura.T_Decimal = 0;
@@ -138,6 +236,40 @@ void DHT11_Init( DHT11_t_ptr dht11 )
 	
 }
 
+/******************************************************************************
+* Function : dht11_Lectura(()
+*//**
+* \b Description:
+*
+* Realiza y devuelve el valor de la lectura de temperatura y humedad
+*
+* PRE-CONDITION: Dht11 inicializado
+* 
+*
+* POST-CONDITION: Lectura valida o fallo
+* 
+* @param			Sensor sobre el que realizar la lectura
+*
+* @return 		Lectura
+*
+* \b Example Ejemplo:
+* @code
+*		DHT11_Init( &dht11, &dht11_Lectura );
+*		dht11.Datos.UltimaLectura = dht11.Lectura( &dht11 );
+* @endcode
+*
+* @see DHT11_SI_t
+* @see DHT11_t
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 DHT11_SI_t dht11_Lectura( DHT11_t_ptr dht11 )
 {
 	DHT11_SI_t lectura = { 0, 0, 0, 0, 0 };
