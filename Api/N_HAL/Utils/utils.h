@@ -87,12 +87,77 @@ static @inline void _delay_cycl( unsigned short __ticks )
 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 }
 
-
+/******************************************************************************
+* Function : _delay_us()
+*//**
+* \b Description:
+*
+* Bloquea el programa durante los microsegundos definidos
+*
+* PRE-CONDITION: Reloj inicializado
+* PRE-CONDITION: FCLK definido
+* 
+*
+* POST-CONDITION: Bloqueo durante el tiempo elegido
+* 
+* @param			tiempo de bloqueo
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		_delay_us( 10 );
+* @endcode
+*
+* 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 9/09/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void _delay_us( const unsigned short __us )
 {
 	_delay_cycl( (unsigned short)( T_COUNT(__us) );
 }
 
+/******************************************************************************
+* Function : _delay_ms()
+*//**
+* \b Description:
+*
+* Bloquea el programa durante los milisegundos definidos
+*
+* PRE-CONDITION: Reloj inicializado
+* PRE-CONDITION: FCLK definido
+* 
+*
+* POST-CONDITION: Bloqueo durante el tiempo elegido
+* 
+* @param			tiempo de bloqueo
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		_delay_ms( 10 );
+* @endcode
+*
+* 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 9/09/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void _delay_ms( unsigned short __ms )
 {
 	while ( __ms-- )
