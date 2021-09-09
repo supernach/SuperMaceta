@@ -9,41 +9,41 @@
   22  0002 00            	dc.b	0
   23  0003 00            	dc.b	0
   24  0004 00            	dc.b	0
- 581                     ; 217 void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura )
- 581                     ; 218 {
+ 581                     ; 220 void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura )
+ 581                     ; 221 {
  583                     .text:	section	.text,new
  584  0000               _DHT11_Init:
  586  0000 89            	pushw	x
  587       00000000      OFST:	set	0
- 590                     ; 219 	dht11->Lectura = Lectura;
+ 590                     ; 222 	dht11->Lectura = Lectura;
  592  0001 1605          	ldw	y,(OFST+5,sp)
  593  0003 ef0a          	ldw	(10,x),y
- 594                     ; 221 	dht11->Datos.UltimaLectura.CRC = 0;
+ 594                     ; 224 	dht11->Datos.UltimaLectura.CRC = 0;
  596  0005 6f04          	clr	(4,x)
- 597                     ; 222 	dht11->Datos.UltimaLectura.T_Decimal = 0;
+ 597                     ; 225 	dht11->Datos.UltimaLectura.T_Decimal = 0;
  599  0007 6f05          	clr	(5,x)
- 600                     ; 223 	dht11->Datos.UltimaLectura.T_Entero = 0;
+ 600                     ; 226 	dht11->Datos.UltimaLectura.T_Entero = 0;
  602  0009 6f06          	clr	(6,x)
- 603                     ; 224 	dht11->Datos.UltimaLectura.H_Decimal = 0;
+ 603                     ; 227 	dht11->Datos.UltimaLectura.H_Decimal = 0;
  605  000b 6f07          	clr	(7,x)
- 606                     ; 225 	dht11->Datos.UltimaLectura.H_Entero = 0;
+ 606                     ; 228 	dht11->Datos.UltimaLectura.H_Entero = 0;
  608  000d 6f08          	clr	(8,x)
- 609                     ; 227 	NHALgpioConfig_SetType( &dht11->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
+ 609                     ; 230 	NHALgpioConfig_SetType( &dht11->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
  611  000f 4bc0          	push	#192
  612  0011 cd0000        	call	_NHALgpioConfig_SetType
  614  0014 84            	pop	a
- 615                     ; 228 	NHALgpio_Init( &dht11->Config.HW );
+ 615                     ; 231 	NHALgpio_Init( &dht11->Config.HW );
  617  0015 1e01          	ldw	x,(OFST+1,sp)
  618  0017 cd0000        	call	_NHALgpio_Init
- 620                     ; 230 	NHALgpio_Write( &dht11->Config.HW, true );
+ 620                     ; 233 	NHALgpio_Write( &dht11->Config.HW, true );
  622  001a 4b01          	push	#1
  623  001c 1e02          	ldw	x,(OFST+2,sp)
  624  001e cd0000        	call	_NHALgpio_Write
  626  0021 84            	pop	a
- 627                     ; 232 	dht11->Datos.Estado = dht11_INICIALIZADO;
+ 627                     ; 235 	dht11->Datos.Estado = dht11_INICIALIZADO;
  629  0022 1e01          	ldw	x,(OFST+1,sp)
  630  0024 6f09          	clr	(9,x)
- 631                     ; 234 }
+ 631                     ; 237 }
  634  0026 85            	popw	x
  635  0027 81            	ret	
  638                     	switch	.const
@@ -59,19 +59,19 @@
  648  000c 00            	dc.b	0
  649  000d 00            	dc.b	0
  650  000e 00            	dc.b	0
- 934                     ; 270 DHT11_SI_t dht11_Lectura( DHT11_t_ptr dht11 )
- 934                     ; 271 {
+ 934                     ; 273 DHT11_SI_t dht11_Lectura( DHT11_t_ptr dht11 )
+ 934                     ; 274 {
  935                     .text:	section	.text,new
  936  0000               _dht11_Lectura:
  938  0000 5213          	subw	sp,#19
  939       00000013      OFST:	set	19
- 942                     ; 272 	DHT11_SI_t lectura = { 0, 0, 0, 0, 0 };
+ 942                     ; 275 	DHT11_SI_t lectura = { 0, 0, 0, 0, 0 };
  944  0002 96            	ldw	x,sp
  945  0003 1c000f        	addw	x,#OFST-4
  946  0006 90ae0005      	ldw	y,#L733_lectura
  947  000a a605          	ld	a,#5
  948  000c cd0000        	call	c_xymov
- 950                     ; 274 	if( dht11_ComenzarTransmision( dht11 ) )
+ 950                     ; 277 	if( dht11_ComenzarTransmision( dht11 ) )
  953  000f 1e18          	ldw	x,(OFST+5,sp)
  954  0011 1f0c          	ldw	(OFST-7,sp),x
  956                     ; 108 	NHALgpioConfig_SetType( &sensor->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
@@ -157,7 +157,7 @@
 1073  007e a601          	ld	a,#1
 1074  0080 6b0e          	ld	(OFST-5,sp),a
 1078  0082 2603cc0268    	jreq	L316
-1079                     ; 276 		lectura = dht11_LeerDatos( dht11 );
+1079                     ; 279 		lectura = dht11_LeerDatos( dht11 );
 1082  0087 1e18          	ldw	x,(OFST+5,sp)
 1083  0089 1f0c          	ldw	(OFST-7,sp),x
 1085                     ; 138 	uint16_t checkCRC = 0;
@@ -517,7 +517,7 @@
 1646  023c 72a90007      	addw	y,#OFST-12
 1647  0240 a605          	ld	a,#5
 1648  0242 cd0000        	call	c_xymov
-1650                     ; 277 		dht11_CerrarConexion( dht11 );
+1650                     ; 280 		dht11_CerrarConexion( dht11 );
 1653  0245 1e18          	ldw	x,(OFST+5,sp)
 1654  0247 1f0c          	ldw	(OFST-7,sp),x
 1656                     ; 174 	NHALgpioConfig_SetType( &sensor->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
@@ -539,14 +539,14 @@
 1679  0262 a105          	cp	a,#5
 1680  0264 262b          	jrne	L124
 1681                     ; 181 		sensor->Datos.Estado = dht11_SLEEP;
-1682                     ; 279 		return lectura;
+1682                     ; 282 		return lectura;
 1685  0266 2025          	jp	LC001
 1686  0268               L316:
-1687                     ; 283 		dht11->Datos.Estado = dht11_FALLO_AL_COMUNICAR;
+1687                     ; 286 		dht11->Datos.Estado = dht11_FALLO_AL_COMUNICAR;
 1689  0268 1e18          	ldw	x,(OFST+5,sp)
 1690  026a a60a          	ld	a,#10
 1691  026c e709          	ld	(9,x),a
-1692                     ; 284 		dht11_CerrarConexion( dht11 );
+1692                     ; 287 		dht11_CerrarConexion( dht11 );
 1695  026e 1f0c          	ldw	(OFST-7,sp),x
 1697                     ; 174 	NHALgpioConfig_SetType( &sensor->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
 1699  0270 4bc0          	push	#192
@@ -571,7 +571,7 @@
 1726  028d a606          	ld	a,#6
 1727  028f e709          	ld	(9,x),a
 1728  0291               L124:
-1729                     ; 286 		return lectura;
+1729                     ; 289 		return lectura;
 1734  0291 1e16          	ldw	x,(OFST+3,sp)
 1735  0293 9096          	ldw	y,sp
 1736  0295 72a9000f      	addw	y,#OFST-4

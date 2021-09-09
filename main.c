@@ -96,7 +96,7 @@ static @inline void Inicializacion_Total(void)
 /*
 */
 
-main()
+int main()
 {
 	Inicializacion_Total();
 	
