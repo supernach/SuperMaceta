@@ -7,7 +7,7 @@
 #include <AppConfig.h>
 
 /**
-/*
+/* @fn void DeInitAllGPIO
 /* @brief Resetear todos los puertos perifericos
 /*
 /*
@@ -22,7 +22,7 @@ static @inline void DeInitAllGPIO(void)
 }
 
 /**
-/*
+/* @fn void Pin_Init
 /* @brief Inicializacion de los pines fisicos asociados a sensores
 /*        a traves del tipo Pin.
 /*
@@ -44,7 +44,7 @@ static @inline void Pin_Init(void)
 }
 
 /**
-/*
+/* @fn void InicializacionGPIO
 /* @brief Inicializacion completa de las GPIO. Por ultimo
 /*        la IO se configura segun se necesite.
 /*
@@ -57,7 +57,7 @@ static @inline void InicializacionGPIO(void)
 }
 
 /**
-/*
+/* @fn void InicializacionCLK
 /* @brief Inicializacion del reloj de sistema y cpu.
 /*
 /*
@@ -68,6 +68,12 @@ static @inline void InicializacionCLK(void)
 	Clock_HSI_Init(CLK_PRESCALER_HSIDIV1, CLK_PRESCALER_CPUDIV1);
 }
 
+/**
+/* @fn void InicializacionComponentes
+/* @brief Inicializacion componentes del sistema
+/*
+/*
+*/
 static @inline void InicializacionComponentes(void)
 {
 	DHT11_Init( &SensorTempHum, &dht11_Lectura );
@@ -75,7 +81,7 @@ static @inline void InicializacionComponentes(void)
 }
 
 /**
-/*
+/* @fn void Inicializacion_Total
 /* @brief Resumen de todas las anteriores inicializaciones
 /*
 /*
