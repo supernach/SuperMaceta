@@ -63,61 +63,129 @@
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef struct DHT11 DHT11_t;
+
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef struct DHT11_Config DHT11_Config_t;
+
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef struct sDht11_SI DHT11_SI_t;
+
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef struct sDht11Datos DHT11_Datos_t;
 
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef DHT11_SI_t ( *DHT11_fPtr )( DHT11_t* );
+
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef DHT11_t* DHT11_t_ptr;
 
+/**
+* @typedef
+* @brief
+*
+* @see
+*/
 typedef enum
 {
-	dht11_INICIALIZADO,
-	dht11_COMUNICANDO,
-	dht11_CONEXION_OK,
-	dht11_MIDIENDO_H,
-	dht11_MIDIENDO_T,
-	dht11_CERRANDO_CONEXION,
-	dht11_SLEEP,
-	dht11_ESPERA_BAJO,
-	dht11_ESPERA_ALTO,
-	dht11_FALLO_AL_LEER,
-	dht11_FALLO_AL_COMUNICAR,
-	dht11_LECTURA_OK
+	dht11_INICIALIZADO,				/**<  */
+	dht11_COMUNICANDO,				/**<  */
+	dht11_CONEXION_OK,				/**<  */
+	dht11_MIDIENDO_H,					/**<  */
+	dht11_MIDIENDO_T,					/**<  */
+	dht11_CERRANDO_CONEXION,	/**<  */
+	dht11_SLEEP,							/**<  */
+	dht11_ESPERA_BAJO,				/**<  */
+	dht11_ESPERA_ALTO,				/**<  */
+	dht11_FALLO_AL_LEER,			/**<  */
+	dht11_FALLO_AL_COMUNICAR,	/**<  */
+	dht11_LECTURA_OK					/**<  */
 } DHT11_Estado_e;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
+/**
+* @struct
+* @brief
+*
+* @see
+*/
 struct sDht11_SI
 {
-	uint8_t CRC;
-	uint8_t T_Decimal;
-	uint8_t T_Entero;
-	uint8_t H_Decimal;
-	uint8_t H_Entero;
+	uint8_t CRC;				/**<  */
+	uint8_t T_Decimal;	/**<  */
+	uint8_t T_Entero;		/**<  */
+	uint8_t H_Decimal;	/**<  */
+	uint8_t H_Entero;		/**<  */
 };
 
+/**
+* @struct
+* @brief
+*
+* @see
+*/
 struct sDht11Datos
 {
-	DHT11_SI_t UltimaLectura;
-	DHT11_Estado_e Estado;
+	DHT11_SI_t UltimaLectura;	/**<  */
+	DHT11_Estado_e Estado;		/**<  */
 };
 
-
+/**
+* @struct
+* @brief
+*
+* @see
+*/
 struct DHT11_Config
 {
-	Gpio_Config_t HW;
+	Gpio_Config_t HW;	/**<  */
 };
 
-
+/**
+* @struct
+* @brief
+*
+* @see
+*/
 struct DHT11
 {
-	DHT11_Config_t Config;
-	DHT11_Datos_t Datos;
+	DHT11_Config_t Config;	/**<  */
+	DHT11_Datos_t Datos;		/**<  */
 	
-	DHT11_fPtr Lectura;
+	DHT11_fPtr Lectura;			/**<  */
 };
 
 /******************************************************************************
