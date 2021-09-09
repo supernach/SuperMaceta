@@ -50,8 +50,9 @@
 /******************************************************************************
 * Constants
 *******************************************************************************/
-static const uint8_t LONGITUDTRAMA = 24;
+static const uint8_t HX711_LONGITUDTRAMA = 24;
 static const uint8_t HX711_TIEMPOCLOCK = 3;
+static const uint8_t HX711_TIEMPOCLOCKSLEEP = 70;
 
 /******************************************************************************
 * Configuration

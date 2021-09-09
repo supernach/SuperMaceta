@@ -104,7 +104,7 @@ static @inline void chequearValorConversion( HX711_t_ptr hx711 )
 static @inline void aDormir( HX711_t_ptr hx711 )
 {
 	NHALgpio_Write( &hx711->Config.PD_SCK, true );
-	_delay_us( 70 );
+	_delay_us( HX711_TIEMPOCLOCKSLEEP );
 	
 	if( hx711->Datos.Estado != SINVALORCONVERSION )
 	{
@@ -176,7 +176,7 @@ static @inline uint32_t leer( HX711_t_ptr hx711 )
 		esperoDatosDisponibles( hx711 );
 	
 		/*** Lectura de la trama 24 bits **/
-		while( contadorBucle < LONGITUDTRAMA ) 
+		while( contadorBucle < HX711_LONGITUDTRAMA ) 
 		{
 			// Señal reloj en alto para iniciar recepcion  bit
 			pulsoReloj( hx711, true );

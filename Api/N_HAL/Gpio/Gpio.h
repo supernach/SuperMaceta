@@ -86,4 +86,4 @@ void NHALgpio_Write( Gpio_Config_t* gpio, bool estado );
 } // extern "C"
 #endif 
 
-#endif/*GPIO_H_*/
+#endif /*GPIO_H_*/

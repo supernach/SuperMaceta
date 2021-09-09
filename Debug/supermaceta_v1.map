@@ -1,5 +1,5 @@
 
-Map of Debug\supermaceta_v1.sm8 from link file Debug\supermaceta_v1.lkf - Thu Sep  9 14:36:15 2021
+Map of Debug\supermaceta_v1.sm8 from link file Debug\supermaceta_v1.lkf - Thu Sep  9 15:53:53 2021
 
 
                                --------
@@ -16,7 +16,7 @@ start 0000002e end 0000002e length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 00000100 length     0 segment .bss
 start 00000000 end 00001115 length  4373 segment .info.
-start 00000000 end 000140f3 length 82163 segment .debug
+start 00000000 end 00014157 length 82263 segment .debug
 start 00008000 end 00008080 length   128 segment .const
 start 0000808f end 00008092 length     3 segment .init
 
@@ -33,39 +33,39 @@ start 00000000 end 00000034 length    52 section .info.
 
 Debug\main.o:
 start 00000000 end 00000024 length    36 section .ubsct
-start 00000000 end 00000c2c length  3116 section .debug
+start 00000000 end 00000c5e length  3166 section .debug
 start 00000034 end 000000b1 length   125 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start 000080e2 end 00008170 length   142 section .text
 
 Debug\clock.o:
-start 00000c2c end 000015f4 length  2504 section .debug
+start 00000c5e end 00001626 length  2504 section .debug
 start 000000b1 end 0000012f length   126 section .info.
 start 00008170 end 000081a9 length    57 section .text
 start 000081a9 end 000081d7 length    46 section .text
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\gpio_config.o:
-start 000015f4 end 00001b54 length  1376 section .debug
+start 00001626 end 00001b86 length  1376 section .debug
 start 0000012f end 000001b3 length   132 section .info.
 start 000081d7 end 000081dc length     5 section .text
 
 Debug\gpio.o:
-start 00001b54 end 00002170 length  1564 section .debug
+start 00001b86 end 000021a2 length  1564 section .debug
 start 000001b3 end 00000230 length   125 section .info.
 start 000081dc end 000081e8 length    12 section .text
 start 000081e8 end 000081f7 length    15 section .text
 start 000081f7 end 00008211 length    26 section .text
 
 Debug\dht11.o:
-start 00002170 end 00002d5d length  3053 section .debug
+start 000021a2 end 00002d8f length  3053 section .debug
 start 00000230 end 000002ae length   126 section .info.
 start 00008080 end 0000808f length    15 section .const
 start 00008211 end 00008239 length    40 section .text
 start 00008239 end 000084da length   673 section .text
 
 Debug\hx711.o:
-start 00002d5d end 000038de length  2945 section .debug
+start 00002d8f end 00003942 length  2995 section .debug
 start 000002ae end 0000032c length   126 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start 000084da end 00008554 length   122 section .text
@@ -73,7 +73,7 @@ start 00008554 end 00008718 length   452 section .text
 start 00008718 end 000088d6 length   446 section .text
 
 Debug\stm8s_wwdg.o:
-start 000038de end 00003b24 length   582 section .debug
+start 00003942 end 00003b88 length   582 section .debug
 start 0000032c end 000003af length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -82,7 +82,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_uart1.o:
-start 00003b24 end 00004f10 length  5100 section .debug
+start 00003b88 end 00004f74 length  5100 section .debug
 start 000003af end 00000433 length   132 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .const *** removed ***
@@ -112,7 +112,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_tim4.o:
-start 00004f10 end 00005ac7 length  2999 section .debug
+start 00004f74 end 00005b2b length  2999 section .debug
 start 00000433 end 000004b6 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -134,7 +134,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_tim2.o:
-start 00005ac7 end 00007ddb length  8980 section .debug
+start 00005b2b end 00007e3f length  8980 section .debug
 start 000004b6 end 00000539 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -184,7 +184,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_tim1.o:
-start 00007ddb end 0000bd65 length 16266 section .debug
+start 00007e3f end 0000bdc9 length 16266 section .debug
 start 00000539 end 000005bc length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -266,7 +266,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_spi.o:
-start 0000bd65 end 0000cca1 length  3900 section .debug
+start 0000bdc9 end 0000cd05 length  3900 section .debug
 start 000005bc end 0000063e length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -287,13 +287,13 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_rst.o:
-start 0000cca1 end 0000ced0 length   559 section .debug
+start 0000cd05 end 0000cf34 length   559 section .debug
 start 0000063e end 000006c0 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_iwdg.o:
-start 0000ced0 end 0000d272 length   930 section .debug
+start 0000cf34 end 0000d2d6 length   930 section .debug
 start 000006c0 end 00000743 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -302,7 +302,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_itc.o:
-start 0000d272 end 0000d875 length  1539 section .debug
+start 0000d2d6 end 0000d8d9 length  1539 section .debug
 start 00000743 end 000007c5 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -312,7 +312,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_i2c.o:
-start 0000d875 end 0000ee16 length  5537 section .debug
+start 0000d8d9 end 0000ee7a length  5537 section .debug
 start 000007c5 end 00000847 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .const *** removed ***
@@ -337,7 +337,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_gpio.o:
-start 0000ee16 end 0000f820 length  2570 section .debug
+start 0000ee7a end 0000f884 length  2570 section .debug
 start 00000847 end 000008ca length   131 section .info.
 start 000088d6 end 000088de length     8 section .text
 start 000088de end 0000892f length    81 section .text
@@ -351,7 +351,7 @@ start 0000893a end 0000893f length     5 section .text
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_flash.o:
-start 0000f820 end 000105ff length  3551 section .debug
+start 0000f884 end 00010663 length  3551 section .debug
 start 000008ca end 0000094e length   132 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -375,7 +375,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_exti.o:
-start 000105ff end 00010a8e length  1167 section .debug
+start 00010663 end 00010af2 length  1167 section .debug
 start 0000094e end 000009d1 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -384,7 +384,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_clk.o:
-start 00010a8e end 000120fd length  5743 section .debug
+start 00010af2 end 00012161 length  5743 section .debug
 start 000009d1 end 00000a53 length   130 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start 0000893f end 00008975 length    54 section .text
@@ -412,7 +412,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_beep.o:
-start 000120fd end 000123d8 length   731 section .debug
+start 00012161 end 0001243c length   731 section .debug
 start 00000a53 end 00000ad6 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -421,7 +421,7 @@ start ******** end ******** length     0 section .const *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_awu.o:
-start 000123d8 end 00012997 length  1471 section .debug
+start 0001243c end 000129fb length  1471 section .debug
 start 00000ad6 end 00000b58 length   130 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -432,7 +432,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_adc1.o:
-start 00012997 end 00013f88 length  5617 section .debug
+start 000129fb end 00013fec length  5617 section .debug
 start 00000b58 end 00000bdb length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -553,7 +553,7 @@ start 0000002b end 0000002e length     3 section .ubsct
 start 0000101c end 0000104b length    47 section .info.
 
 Debug\stm8_interrupt_vector.o:
-start 00013f88 end 000140f3 length   363 section .debug
+start 00013fec end 00014157 length   363 section .debug
 start 0000104b end 000010d9 length   142 section .info.
 start 00008cfb end 00008cfc length     1 section .text
 start 00008000 end 00008080 length   128 section .const

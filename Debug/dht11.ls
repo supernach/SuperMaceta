@@ -94,7 +94,7 @@
  983  002e ae0012        	ldw	x,#18
  986  0031 200a          	jra	L126
  987  0033               L516:
- 988                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+ 988                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
  992  0033 ae14d4        	ldw	x,#5332
  994  0036 9d            	nop	
  995  0037               L42:
@@ -104,7 +104,7 @@
  999                     
 1001  003b 1e0a          	ldw	x,(OFST-9,sp)
 1002  003d               L126:
-1003                     ; 39 	while ( __ms-- )
+1003                     ; 98 	while ( __ms-- )
 1005  003d 5a            	decw	x
 1006  003e 1f0a          	ldw	(OFST-9,sp),x
 1007  0040 5c            	incw	x
@@ -117,7 +117,7 @@
 1017                     ; 117 	NHALgpio_Init( &sensor->Config.HW ); 
 1019  004b 1e0c          	ldw	x,(OFST-7,sp)
 1020  004d cd0000        	call	_NHALgpio_Init
-1022                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1022                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1026  0050 ae00d4        	ldw	x,#212
 1028  0053 9d            	nop	
 1029  0054               L23:
@@ -187,7 +187,7 @@
 1124  00aa cd0000        	call	_NHALgpio_Read
 1126  00ad 4d            	tnz	a
 1127  00ae 27f8          	jreq	L356
-1128                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1128                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1132  00b0 ae00d4        	ldw	x,#212
 1134  00b3 9d            	nop	
 1135  00b4               L24:
@@ -247,7 +247,7 @@
 1222  00f2 cd0000        	call	_NHALgpio_Read
 1224  00f5 4d            	tnz	a
 1225  00f6 27f8          	jreq	L507
-1226                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1226                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1230  00f8 ae00d4        	ldw	x,#212
 1232  00fb 9d            	nop	
 1233  00fc               L25:
@@ -307,7 +307,7 @@
 1320  013a cd0000        	call	_NHALgpio_Read
 1322  013d 4d            	tnz	a
 1323  013e 27f8          	jreq	L737
-1324                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1324                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1328  0140 ae00d4        	ldw	x,#212
 1330  0143 9d            	nop	
 1331  0144               L26:
@@ -367,7 +367,7 @@
 1418  0182 cd0000        	call	_NHALgpio_Read
 1420  0185 4d            	tnz	a
 1421  0186 27f8          	jreq	L177
-1422                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1422                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1426  0188 ae00d4        	ldw	x,#212
 1428  018b 9d            	nop	
 1429  018c               L27:
@@ -423,7 +423,7 @@
 1511  01c4 cd0000        	call	_NHALgpio_Read
 1513  01c7 4d            	tnz	a
 1514  01c8 27f8          	jreq	L3201
-1515                     ; 28 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1515                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1519  01ca ae00d4        	ldw	x,#212
 1521  01cd 9d            	nop	
 1522  01ce               L201:
