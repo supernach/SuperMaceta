@@ -88,7 +88,7 @@
  812  0063 ae0174        	ldw	x,#372
  813  0066 9d            	nop	
  814  0067 84            	pop	a
- 815                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+ 815                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
  820  0068               L02:
  821  0068 5a            	decw	X
  822  0069 26fd          	jrne	L02
@@ -135,7 +135,7 @@
  999  0020 ae000f        	ldw	x,#15
 1000  0023 9d            	nop	
 1001  0024 84            	pop	a
-1002                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1002                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1007  0025               L62:
 1008  0025 5a            	decw	X
 1009  0026 26fd          	jrne	L62
@@ -147,7 +147,7 @@
 1017  002b cd0000        	call	_NHALgpio_Read
 1019  002e 4d            	tnz	a
 1020  002f 26f8          	jrne	L147
-1021                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1021                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1025  0031 ae000f        	ldw	x,#15
 1027  0034 9d            	nop	
 1028  0035               L23:
@@ -164,7 +164,7 @@
 1043  0044 ae000f        	ldw	x,#15
 1044  0047 9d            	nop	
 1045  0048 84            	pop	a
-1046                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1046                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1051  0049               L63:
 1052  0049 5a            	decw	X
 1053  004a 26fd          	jrne	L63
@@ -195,7 +195,7 @@
 1090  0075 ae000f        	ldw	x,#15
 1091  0078 9d            	nop	
 1092  0079 84            	pop	a
-1093                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1093                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1098  007a               L44:
 1099  007a 5a            	decw	X
 1100  007b 26fd          	jrne	L44
@@ -227,7 +227,7 @@
 1132  009f ae000f        	ldw	x,#15
 1133  00a2 9d            	nop	
 1134  00a3 84            	pop	a
-1135                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1135                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1140  00a4               L05:
 1141  00a4 5a            	decw	X
 1142  00a5 26fd          	jrne	L05
@@ -241,7 +241,7 @@
 1154  00b2 ae000f        	ldw	x,#15
 1155  00b5 9d            	nop	
 1156  00b6 84            	pop	a
-1157                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1157                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1162  00b7               L45:
 1163  00b7 5a            	decw	X
 1164  00b8 26fd          	jrne	L45
@@ -263,7 +263,7 @@
 1185  00ce ae000f        	ldw	x,#15
 1186  00d1 9d            	nop	
 1187  00d2 84            	pop	a
-1188                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1188                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1193  00d3               L06:
 1194  00d3 5a            	decw	X
 1195  00d4 26fd          	jrne	L06
@@ -277,7 +277,7 @@
 1207  00e1 ae000f        	ldw	x,#15
 1208  00e4 9d            	nop	
 1209  00e5 84            	pop	a
-1210                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1210                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1215  00e6               L46:
 1216  00e6 5a            	decw	X
 1217  00e7 26fd          	jrne	L46
@@ -291,7 +291,7 @@
 1229  00f4 ae000f        	ldw	x,#15
 1230  00f7 9d            	nop	
 1231  00f8 84            	pop	a
-1232                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1232                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1237  00f9               L07:
 1238  00f9 5a            	decw	X
 1239  00fa 26fd          	jrne	L07
@@ -305,7 +305,7 @@
 1251  0107 ae000f        	ldw	x,#15
 1252  010a 9d            	nop	
 1253  010b 84            	pop	a
-1254                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1254                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1259  010c               L47:
 1260  010c 5a            	decw	X
 1261  010d 26fd          	jrne	L47
@@ -319,7 +319,7 @@
 1273  011a ae000f        	ldw	x,#15
 1274  011d 9d            	nop	
 1275  011e 84            	pop	a
-1276                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1276                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1281  011f               L001:
 1282  011f 5a            	decw	X
 1283  0120 26fd          	jrne	L001
@@ -333,7 +333,7 @@
 1295  012d ae000f        	ldw	x,#15
 1296  0130 9d            	nop	
 1297  0131 84            	pop	a
-1298                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1298                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1303  0132               L401:
 1304  0132 5a            	decw	X
 1305  0133 26fd          	jrne	L401
@@ -348,7 +348,7 @@
 1318  0141 ae000f        	ldw	x,#15
 1319  0144 9d            	nop	
 1320  0145 84            	pop	a
-1321                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1321                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1326  0146               L011:
 1327  0146 5a            	decw	X
 1328  0147 26fd          	jrne	L011
@@ -362,7 +362,7 @@
 1340  0154 ae000f        	ldw	x,#15
 1341  0157 9d            	nop	
 1342  0158 84            	pop	a
-1343                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1343                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1348  0159               L411:
 1349  0159 5a            	decw	X
 1350  015a 26fd          	jrne	L411
@@ -376,7 +376,7 @@
 1362  0167 ae000f        	ldw	x,#15
 1363  016a 9d            	nop	
 1364  016b 84            	pop	a
-1365                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1365                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1370  016c               L021:
 1371  016c 5a            	decw	X
 1372  016d 26fd          	jrne	L021
@@ -390,7 +390,7 @@
 1384  017a ae000f        	ldw	x,#15
 1385  017d 9d            	nop	
 1386  017e 84            	pop	a
-1387                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1387                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1392  017f               L421:
 1393  017f 5a            	decw	X
 1394  0180 26fd          	jrne	L421
@@ -409,7 +409,7 @@
 1417  0193 ae0174        	ldw	x,#372
 1418  0196 9d            	nop	
 1419  0197 84            	pop	a
-1420                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1420                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1425  0198               L231:
 1426  0198 5a            	decw	X
 1427  0199 26fd          	jrne	L231
@@ -477,7 +477,7 @@
 1628  002b ae000f        	ldw	x,#15
 1629  002e 9d            	nop	
 1630  002f 84            	pop	a
-1631                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1631                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1636  0030               L041:
 1637  0030 5a            	decw	X
 1638  0031 26fd          	jrne	L041
@@ -489,7 +489,7 @@
 1646  0036 cd0000        	call	_NHALgpio_Read
 1648  0039 4d            	tnz	a
 1649  003a 26f8          	jrne	L7121
-1650                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1650                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1654  003c ae000f        	ldw	x,#15
 1656  003f 9d            	nop	
 1657  0040               L441:
@@ -506,7 +506,7 @@
 1672  004f ae000f        	ldw	x,#15
 1673  0052 9d            	nop	
 1674  0053 84            	pop	a
-1675                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1675                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1680  0054               L051:
 1681  0054 5a            	decw	X
 1682  0055 26fd          	jrne	L051
@@ -537,7 +537,7 @@
 1719  0080 ae000f        	ldw	x,#15
 1720  0083 9d            	nop	
 1721  0084 84            	pop	a
-1722                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1722                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1727  0085               L651:
 1728  0085 5a            	decw	X
 1729  0086 26fd          	jrne	L651
@@ -569,7 +569,7 @@
 1761  00aa ae000f        	ldw	x,#15
 1762  00ad 9d            	nop	
 1763  00ae 84            	pop	a
-1764                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1764                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1769  00af               L261:
 1770  00af 5a            	decw	X
 1771  00b0 26fd          	jrne	L261
@@ -583,7 +583,7 @@
 1783  00bd ae000f        	ldw	x,#15
 1784  00c0 9d            	nop	
 1785  00c1 84            	pop	a
-1786                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1786                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1791  00c2               L661:
 1792  00c2 5a            	decw	X
 1793  00c3 26fd          	jrne	L661
@@ -605,7 +605,7 @@
 1814  00d9 ae000f        	ldw	x,#15
 1815  00dc 9d            	nop	
 1816  00dd 84            	pop	a
-1817                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1817                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1822  00de               L271:
 1823  00de 5a            	decw	X
 1824  00df 26fd          	jrne	L271
@@ -619,7 +619,7 @@
 1836  00ec ae000f        	ldw	x,#15
 1837  00ef 9d            	nop	
 1838  00f0 84            	pop	a
-1839                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1839                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1844  00f1               L671:
 1845  00f1 5a            	decw	X
 1846  00f2 26fd          	jrne	L671
@@ -633,7 +633,7 @@
 1858  00ff ae000f        	ldw	x,#15
 1859  0102 9d            	nop	
 1860  0103 84            	pop	a
-1861                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1861                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1866  0104               L202:
 1867  0104 5a            	decw	X
 1868  0105 26fd          	jrne	L202
@@ -647,7 +647,7 @@
 1880  0112 ae000f        	ldw	x,#15
 1881  0115 9d            	nop	
 1882  0116 84            	pop	a
-1883                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1883                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1888  0117               L602:
 1889  0117 5a            	decw	X
 1890  0118 26fd          	jrne	L602
@@ -661,7 +661,7 @@
 1902  0125 ae000f        	ldw	x,#15
 1903  0128 9d            	nop	
 1904  0129 84            	pop	a
-1905                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1905                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1910  012a               L212:
 1911  012a 5a            	decw	X
 1912  012b 26fd          	jrne	L212
@@ -675,7 +675,7 @@
 1924  0138 ae000f        	ldw	x,#15
 1925  013b 9d            	nop	
 1926  013c 84            	pop	a
-1927                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1927                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1932  013d               L612:
 1933  013d 5a            	decw	X
 1934  013e 26fd          	jrne	L612
@@ -690,7 +690,7 @@
 1947  014c ae000f        	ldw	x,#15
 1948  014f 9d            	nop	
 1949  0150 84            	pop	a
-1950                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1950                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1955  0151               L222:
 1956  0151 5a            	decw	X
 1957  0152 26fd          	jrne	L222
@@ -704,7 +704,7 @@
 1969  015f ae000f        	ldw	x,#15
 1970  0162 9d            	nop	
 1971  0163 84            	pop	a
-1972                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1972                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1977  0164               L622:
 1978  0164 5a            	decw	X
 1979  0165 26fd          	jrne	L622
@@ -718,7 +718,7 @@
 1991  0172 ae000f        	ldw	x,#15
 1992  0175 9d            	nop	
 1993  0176 84            	pop	a
-1994                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1994                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1999  0177               L232:
 2000  0177 5a            	decw	X
 2001  0178 26fd          	jrne	L232
@@ -732,7 +732,7 @@
 2013  0185 ae000f        	ldw	x,#15
 2014  0188 9d            	nop	
 2015  0189 84            	pop	a
-2016                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+2016                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 2021  018a               L632:
 2022  018a 5a            	decw	X
 2023  018b 26fd          	jrne	L632

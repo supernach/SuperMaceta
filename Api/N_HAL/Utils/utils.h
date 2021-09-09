@@ -50,6 +50,10 @@
 /******************************************************************************
 * Constants
 *******************************************************************************/
+/**
+* @def FCLK
+* @brief Definir en Hz la frecuencia de trabajo del reloj
+*/
 #define FCLK 16000000 /**< Velocidad frecuencia cpu(depende de la configuracion) */
 
 /******************************************************************************
@@ -59,8 +63,18 @@
 /******************************************************************************
 * Macros
 *******************************************************************************/
+/**
+* @def NULL
+* @brief Macro Null para punteros
+*/
 #define NULL (void*)0 /**< Definicion de puntero nulo */
+
+/**
+* @def IS_NULL(val)
+* @brief Macro para comprobar punteros nulos
+*/
 #define IS_NULL(val) ((val == NULL) ? true : false) /**< Chequeo puntero nulo */
+
 
 #ifndef FCLK /**< Comprobacion que esta establecida la velocidad en Hz del reloj */
 	#error FCLK is not defined! 

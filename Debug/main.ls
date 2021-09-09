@@ -76,11 +76,11 @@
  957  006e cd0000        	call	c_uitolx
  959  0071 ae000f        	ldw	x,#_SensorPesaje+15
  960  0074 cd0000        	call	c_rtol
- 962                     ; 155 * <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+ 962                     ; 155 * @param			tiempo de bloqueo
  965  0077 ae03e8        	ldw	x,#1000
  968  007a 200a          	jra	L745
  969  007c               L345:
- 970                     ; 87 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+ 970                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
  974  007c ae14d4        	ldw	x,#5332
  976  007f 9d            	nop	
  977  0080               L23:
@@ -90,7 +90,7 @@
  981                     
  983  0084 1e06          	ldw	x,(OFST-1,sp)
  984  0086               L745:
- 985                     ; 163 	while ( __ms-- )
+ 985                     ; 177 	while ( __ms-- )
  987  0086 5a            	decw	x
  988  0087 1f06          	ldw	(OFST-1,sp),x
  989  0089 5c            	incw	x
