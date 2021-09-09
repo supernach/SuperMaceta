@@ -104,7 +104,7 @@
  999                     
 1001  003b 1e0a          	ldw	x,(OFST-9,sp)
 1002  003d               L126:
-1003                     ; 98 	while ( __ms-- )
+1003                     ; 163 	while ( __ms-- )
 1005  003d 5a            	decw	x
 1006  003e 1f0a          	ldw	(OFST-9,sp),x
 1007  0040 5c            	incw	x

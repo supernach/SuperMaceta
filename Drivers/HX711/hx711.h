@@ -50,8 +50,22 @@
 /******************************************************************************
 * Constants
 *******************************************************************************/
+/**
+* @var   uint8_t  HX711_LONGITUDTRAMA
+* @brief Define los bits a leer
+*/
 static const uint8_t HX711_LONGITUDTRAMA = 24;
+
+/**
+* @var   uint8_t  HX711_TIEMPOCLOCK
+* @brief Define la espera entre acciones hacia y desde el hx711
+*/
 static const uint8_t HX711_TIEMPOCLOCK = 3;
+
+/**
+* @var   uint8_t  HX711_TIEMPOCLOCKSLEEP
+* @brief Define el tiempo para poner en modo sleep el hx711
+*/
 static const uint8_t HX711_TIEMPOCLOCKSLEEP = 70;
 
 /******************************************************************************
@@ -65,61 +79,113 @@ static const uint8_t HX711_TIEMPOCLOCKSLEEP = 70;
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/**
+* @typedef struct  HX711 HX711_t
+* @brief   Crea un tipo de dato HX711 para trabajar sobre el
+*					 Contiene toda la funcionalidad del sensor
+*/
 typedef struct HX711 HX711_t;
+
+/**
+* @typedef   struct  _Config HX711_Config_t
+* @brief 		 Tipo de dato para definir la configuracion del hx711
+*/
 typedef struct HX711_Config HX711_Config_t;
+
+/**
+* @typedef   struct  HX711_Datos HX711_Datos_t
+* @brief 		 Tipo de dato para definir la informacion a almacenar
+*/
 typedef struct HX711_Datos HX711_Datos_t;
 
+/**
+* @typedef   uint16_t( *HX711_fPtr )( HX711_t* )  
+* @brief 		 Puntero a funcion para definir las acciones del sensor
+*				 		 asociadas a lecturas
+*/
 typedef uint16_t( *HX711_fPtr )( HX711_t* );
+
+/**
+* @typedef   HX711_t* HX711_t_ptr  
+* @brief 		 Puntero al tipo HX711_t
+*/
 typedef HX711_t* HX711_t_ptr;
 
+/**
+* @typedef   enum HX711_Estado_e 
+* @brief 		 Estados en los que puede encontrarse el HX711
+*/
 typedef enum
 {
-	INICIALIZADO,
-	SINVALORCONVERSION,
-	SLEEP,
-	NUEVA_LECTURA
+	INICIALIZADO, 			/**< hx711 listo  */
+	SINVALORCONVERSION, /**< hx711 sin calibrar */
+	SLEEP,							/**< hx711 durmiendo */
+	NUEVA_LECTURA				/**< hx711 nueva lectura disponible */
 } HX711_Estado_e;
 
+/**
+* @typedef   HX711_Ganancia_e  
+* @brief 		 La ganancia que queremos definir para las lecturas
+*/
 typedef enum
 {
-	CHANNELA_128,
-	CHANNELA_64,
-	CHANNELB_32
+	CHANNELA_128,	/**< ganancia de 128 */
+	CHANNELA_64,	/**< ganancia de 64 */
+	CHANNELB_32		/**< ganancia de 32 CanalB */
 } HX711_Ganancia_e;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
+/**
+* @struct HX711_Datos
+* @brief 	Contiene los datos que podemos obtener dle hx711
+*
+* @see		HX711_Estado_e
+*/
 struct HX711_Datos
 {
-	uint32_t UltimaLectura;
-	HX711_Estado_e Estado;
+	uint32_t UltimaLectura;	/**< Resultado de la ultima lectura */
+	HX711_Estado_e Estado;	/**< Como se encuentra */
 };
 
-
+/**
+* @struct HX711_Config
+* @brief 	Contiene elementos de configuracion para el hx711 y sus funciones
+*
+* @see		Gpio_Config_t
+* @see		HX711_Ganancia_e
+*/
 struct HX711_Config
 {
-	Gpio_Config_t DOUT;
-	Gpio_Config_t PD_SCK;
+	Gpio_Config_t DOUT;					/**< Pin DOUT del hx711. Por aqui recibimos info */
+	Gpio_Config_t PD_SCK;				/**< Pin PD_SCK del hx711. Señal de reloj para desplazar bits leidos */
 	
-	HX711_Ganancia_e Ganancia;
-	//Calcularlo poniendo un peso conocido. Luego dividir lectura entre 
-	//peso en gramos para tener lectura en gramos. Asi queda calibrada.
-	//Deberia guardarla en eeprom?
-	uint16_t ValorConversion;
-	//Valor sin peso...idealmente 0.
-	uint16_t ValorZero;
-	uint16_t ValorTara;
+	HX711_Ganancia_e Ganancia;	/**< Ganacia que queremos para el hx711 */
+	uint16_t ValorConversion;		/**< Valor de calibracion con peso conocido. Usado para calcular respuesta lectura
+															*		 TODO: Guardar en eeprom
+															*/
+	uint16_t ValorZero;					/**< Valor unico de cada grupo de 4 celulas de carga. Grabado en cada unidad
+															* 	 TODO:Guardar en eeprom y por programa. No modificable
+															*/
+	uint16_t ValorTara;					/**< Valor guardado al ejecutar la funcion de taraje */
 };
 
-
+/**
+* @struct  HX711 
+* @brief 	 Objeto principal para interactuar con el hx711
+*
+* @see		HX711_Config_t
+* @see		HX711_Datos_t
+* @see		HX711_fPtr
+*/
 struct HX711
 {
-	HX711_Config_t Config;
-	HX711_Datos_t Datos;
+	HX711_Config_t Config;	/**< Configuracion del objeto hx711 */
+	HX711_Datos_t Datos;		/**< Datos del objeto hx711 */
 	
-	HX711_fPtr Lectura;
-	HX711_fPtr Tarar;
+	HX711_fPtr Lectura;			/**< Puntero hacia la funcion de lectura */
+	HX711_fPtr Tarar;				/**< Puntero hacia la funcion de taraje */
 };
 
 /******************************************************************************
