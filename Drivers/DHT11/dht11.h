@@ -64,128 +64,132 @@
 * Typedefs
 *******************************************************************************/
 /**
-* @typedef
-* @brief
+* @typedef DHT11_t
+* @brief Tipo que define el objeto principal DHT11
 *
-* @see
+* @see DHT11
 */
 typedef struct DHT11 DHT11_t;
 
 /**
-* @typedef
-* @brief
+* @typedef DHT11_Config_t
+* @brief Tipo que define la configuracion del sensor
 *
-* @see
+* @see DHT11
 */
 typedef struct DHT11_Config DHT11_Config_t;
 
 /**
-* @typedef
-* @brief
+* @typedef DHT11_SI_t
+* @brief Tipo que define la trama recibida del sensor
 *
-* @see
+* @see sDht11_SI
 */
 typedef struct sDht11_SI DHT11_SI_t;
 
 /**
-* @typedef
-* @brief
+* @typedef DHT11_Datos_t
+* @brief Tipo que define el esquema de datos del sensor
 *
-* @see
+* @see sDht11Datos
 */
 typedef struct sDht11Datos DHT11_Datos_t;
 
 /**
-* @typedef
-* @brief
+* @typedef DHT11_t_ptr
+* @brief Puntero a un objeto DHT11
 *
-* @see
-*/
-typedef DHT11_SI_t ( *DHT11_fPtr )( DHT11_t* );
-
-/**
-* @typedef
-* @brief
-*
-* @see
+* @see DHT11_t
 */
 typedef DHT11_t* DHT11_t_ptr;
 
 /**
-* @typedef
-* @brief
+* @typedef DHT11_fPtr
+* @brief Puntero a una funcion para realizar acciones de lectura
 *
-* @see
+* @see DHT11_SI_t
+* @see DHT11_t_ptr
+*/
+typedef DHT11_SI_t ( *DHT11_fPtr )( DHT11_t_ptr );
+
+/**
+* @typedef DHT11_Estado_e
+* @brief Distintos estados en los qu epuede encontrarse el sensor
+*
+* 
 */
 typedef enum
 {
-	dht11_INICIALIZADO,				/**<  */
-	dht11_COMUNICANDO,				/**<  */
-	dht11_CONEXION_OK,				/**<  */
-	dht11_MIDIENDO_H,					/**<  */
-	dht11_MIDIENDO_T,					/**<  */
-	dht11_CERRANDO_CONEXION,	/**<  */
-	dht11_SLEEP,							/**<  */
-	dht11_ESPERA_BAJO,				/**<  */
-	dht11_ESPERA_ALTO,				/**<  */
-	dht11_FALLO_AL_LEER,			/**<  */
-	dht11_FALLO_AL_COMUNICAR,	/**<  */
-	dht11_LECTURA_OK					/**<  */
+	dht11_INICIALIZADO,				/**< En proceso de inicializar */
+	dht11_COMUNICANDO,				/**< Comunicando con el sensor */
+	dht11_CONEXION_OK,				/**< Sensor y conexion ok */
+	dht11_MIDIENDO_H,					/**< Recibiendo valor humedad */
+	dht11_MIDIENDO_T,					/**< Recibiendo valor temperatura */
+	dht11_CERRANDO_CONEXION,	/**< Cerrando conexion con sensor */
+	dht11_SLEEP,							/**< Sensor dormido */
+	dht11_ESPERA_BAJO,				/**< Recibiendo datos. Espero sensor en bajo */
+	dht11_ESPERA_ALTO,				/**< Recibiendo datos. Espero sensor en alto */
+	dht11_FALLO_AL_LEER,			/**< Datos recibidos y crc no concuerdan */
+	dht11_FALLO_AL_COMUNICAR,	/**< Sensor no responde */
+	dht11_LECTURA_OK					/**< Datos recibidos y crc concuerdan */
 } DHT11_Estado_e;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
 /**
-* @struct
-* @brief
+* @struct sDht11_SI
+* @brief Define el esquema de la trama recibida al leer el sensor
 *
-* @see
+* 
 */
 struct sDht11_SI
 {
-	uint8_t CRC;				/**<  */
-	uint8_t T_Decimal;	/**<  */
-	uint8_t T_Entero;		/**<  */
-	uint8_t H_Decimal;	/**<  */
-	uint8_t H_Entero;		/**<  */
+	uint8_t CRC;				/**< CRC recibido */
+	uint8_t T_Decimal;	/**< Temperatura, parte decimal */
+	uint8_t T_Entero;		/**< Temperatura, parte entera */
+	uint8_t H_Decimal;	/**< Humedad, parte decimal */
+	uint8_t H_Entero;		/**< Humedad, parte entera */
 };
 
 /**
-* @struct
-* @brief
+* @struct sDht11Datos
+* @brief Define la composicion de datos del sensor
 *
-* @see
+* @see DHT11_SI_t
+* @see DHT11_Estado_e
 */
 struct sDht11Datos
 {
-	DHT11_SI_t UltimaLectura;	/**<  */
-	DHT11_Estado_e Estado;		/**<  */
+	DHT11_SI_t UltimaLectura;	/**< Buffer de la ultima lectura */
+	DHT11_Estado_e Estado;		/**< Estado del sensor */
 };
 
 /**
-* @struct
-* @brief
+* @struct DHT11_Config
+* @brief Define los pines elegidos para comunicar con el sensor
 *
-* @see
+* @see Gpio_Config_t
 */
 struct DHT11_Config
 {
-	Gpio_Config_t HW;	/**<  */
+	Gpio_Config_t HW;	/**< Configuracion de los pine */
 };
 
 /**
-* @struct
-* @brief
+* @struct DHT11
+* @brief Define el objeto principal para interactuar con un sensor DHT11
 *
-* @see
+* @see DHT11_Config_t
+* @see DHT11_Datos_t
+* @see DHT11_fPtr
 */
 struct DHT11
 {
-	DHT11_Config_t Config;	/**<  */
-	DHT11_Datos_t Datos;		/**<  */
+	DHT11_Config_t Config;	/**< Configuracion del sensor */
+	DHT11_Datos_t Datos;		/**< Datos del sensor */
 	
-	DHT11_fPtr Lectura;			/**<  */
+	DHT11_fPtr Lectura;			/**< Puntero a la funcion de lectura */
 };
 
 /******************************************************************************
