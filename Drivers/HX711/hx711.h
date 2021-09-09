@@ -46,6 +46,7 @@
 *******************************************************************************/
 #include <utils.h>
 #include <gpio.h>
+#include <timeout.h>
 
 /******************************************************************************
 * Constants
@@ -183,6 +184,7 @@ struct HX711
 {
 	HX711_Config_t Config;	/**< Configuracion del objeto hx711 */
 	HX711_Datos_t Datos;		/**< Datos del objeto hx711 */
+	Timeout_t* Timeout;
 	
 	HX711_fPtr Lectura;			/**< Puntero hacia la funcion de lectura */
 	HX711_fPtr Tarar;				/**< Puntero hacia la funcion de taraje */
@@ -199,7 +201,7 @@ struct HX711
 extern "C"{
 #endif
 
-void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar );
+void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout );
 uint16_t hx711_Lectura( HX711_t_ptr hx711 );
 uint16_t hx711_Tarar( HX711_t_ptr hx711 );
 

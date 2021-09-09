@@ -1,11 +1,11 @@
-#ifndef APPCONFIG_H
-#define APPCONFIG_H
+#ifndef TIMEOUT_CONFIG_H
+#define TIMEOUT_CONFIG_H
 
 /****************************************************************************
-* Title                 :   AppConfig
-* Filename              :   AppConfig.h
+* Title                 :   Timeout_Config API
+* Filename              :   Timeout_Config.h
 * Author                :   SuperNach
-* Origin Date           :   20/08/2021
+* Origin Date           :   9/09/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,25 +34,17 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  20/08/21   1.0.0   SuperNach       Initial Release.
+*  9/09/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
-/** @file  AppConfig.h
- *  @brief Archivo de configuracion para la aplicacion. Se declaran los componentes
- *         necesarios para su funcionamiento.
+/** @file Timeout_Config.h
+ *  @brief 
  */
-
 /******************************************************************************
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <Clock.h>
-#include <Gpio.h>
-#include <Dht11.h>
-#include <Hx711.h>
-#include <utils.h>
-
 
 /******************************************************************************
 * Constants
@@ -69,34 +61,81 @@
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/**
+* @typedef Timeout_Config_t
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef struct Timeout_Config Timeout_Config_t;
+
+/**
+* @typedef Timeout_Config_Timer_t
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef struct Timeout_Config_Timer Timeout_Config_Timer_t;
+
+/**
+* @typedef Timeout_Config_Timer_e
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef enum
+{
+	TIMER1,
+	TIMER2
+}Timeout_Config_Timer_e;
+
+/**
+* @typedef Timeout_Config_Canal_e
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef enum
+{
+	CANAL1,
+	CANAL2
+}Timeout_Config_Canal_e;
+
+/******************************************************************************
+* Struct
+*******************************************************************************/
+/**
+* @struct Timeout_Config
+* @brief 
+*
+* @see
+*/
+struct Timeout_Config_Timer
+{
+	Timeout_Config_Timer_e Numero;
+	Timeout_Config_Canal_e Canal;
+};
+
+/**
+* @struct Timeout_Config
+* @brief 
+*
+* @see
+*/
+struct Timeout_Config
+{
+	Timeout_Config_Timer_t Timer;
+};
 
 /******************************************************************************
 * Variables
 *******************************************************************************/
 /**
-* @var DHT11_t SensorTempHum
-* @brief
+* @var 
+* @brief 
 *
-* @see DHT11_t
+* @see
 */
-DHT11_t SensorTempHum;
-
-/**
-* @var HX711_t SensorPesaje
-* @brief
-*
-* @see HX711_t
-*/
-HX711_t SensorPesaje;
-
-/**
-* @var Timeout
-* @brief
-*
-* @see Timeout_t
-*/
-Timeout_t Timeout;
-Gpio_Config_t Timeout_test;
 
 /******************************************************************************
 * Function Prototypes
@@ -105,7 +144,7 @@ Gpio_Config_t Timeout_test;
 extern "C"{
 #endif
 
-
+//void Timeout_Config_Init( Timeout_Config_t* timeout_config );
 
 #ifdef __cplusplus
 } // extern "C"

@@ -1,6 +1,6 @@
 /****************************************************************************
 * Title                 :   DHT11  DRIVER
-* Filename              :   Dht11.h
+* Filename              :   Dht11.c
 * Author                :   SuperNach
 * Origin Date           :   20/08/2021
 * Version               :   1.0.0

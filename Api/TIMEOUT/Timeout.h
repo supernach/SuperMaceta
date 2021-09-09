@@ -1,11 +1,11 @@
-#ifndef APPCONFIG_H
-#define APPCONFIG_H
+#ifndef TIMEOUT_H
+#define TIMEOUT_H
 
 /****************************************************************************
-* Title                 :   AppConfig
-* Filename              :   AppConfig.h
+* Title                 :   Timeout API
+* Filename              :   Timeout.h
 * Author                :   SuperNach
-* Origin Date           :   20/08/2021
+* Origin Date           :   9/09/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,25 +34,19 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  20/08/21   1.0.0   SuperNach       Initial Release.
+*  9/09/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
-/** @file  AppConfig.h
- *  @brief Archivo de configuracion para la aplicacion. Se declaran los componentes
- *         necesarios para su funcionamiento.
+/** @file plantilla.h
+ *  @brief 
  */
-
 /******************************************************************************
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <Clock.h>
-#include <Gpio.h>
-#include <Dht11.h>
-#include <Hx711.h>
 #include <utils.h>
-
+#include <Timeout_Config.h>
 
 /******************************************************************************
 * Constants
@@ -69,34 +63,60 @@
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/**
+* @typedef Timeout_t
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef struct Timeout Timeout_t;
+
+/**
+* @typedef Timeout_t_ptr
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef Timeout_t* Timeout_t_ptr;
+
+/**
+* @typedef Timeout_Estado_e
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef enum
+{
+	INACTIVO,
+	ACTIVO,
+	DISPARADO
+}Timeout_Estado_e;
+
+/******************************************************************************
+* Struct
+*******************************************************************************/
+/**
+* @struct Timeout
+* @brief 
+*
+* @see
+*/
+struct Timeout
+{
+	Timeout_Config_t Config;
+	Timeout_Estado_e Estado;
+	uint16_t ValorDesborde;
+};
 
 /******************************************************************************
 * Variables
 *******************************************************************************/
 /**
-* @var DHT11_t SensorTempHum
-* @brief
+* @var 
+* @brief 
 *
-* @see DHT11_t
+* @see
 */
-DHT11_t SensorTempHum;
-
-/**
-* @var HX711_t SensorPesaje
-* @brief
-*
-* @see HX711_t
-*/
-HX711_t SensorPesaje;
-
-/**
-* @var Timeout
-* @brief
-*
-* @see Timeout_t
-*/
-Timeout_t Timeout;
-Gpio_Config_t Timeout_test;
 
 /******************************************************************************
 * Function Prototypes
@@ -105,7 +125,10 @@ Gpio_Config_t Timeout_test;
 extern "C"{
 #endif
 
-
+void Timeout_Init( Timeout_t_ptr timeout );
+void Timeout_Start( Timeout_t_ptr timeout, uint16_t us );
+void Timeout_Stop( Timeout_t_ptr timeout );
+void Timeout_Check( Timeout_t_ptr timeout );
 
 #ifdef __cplusplus
 } // extern "C"

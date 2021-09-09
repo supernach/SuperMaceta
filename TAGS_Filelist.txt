@@ -7,6 +7,9 @@ api\n_hal\gpio\gpio_config.h
 api\n_hal\gpio\gpio.h
 api\n_hal\gpio\gpio.c
 api\n_hal\utils\utils.h
+api\timeout\timeout_config.h
+api\timeout\timeout.h
+api\timeout\timeout.c
 aplicacion\configuracion\appconfig.h
 drivers\dht11\dht11.h
 drivers\dht11\dht11.c

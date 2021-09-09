@@ -1,9 +1,6 @@
-#ifndef APPCONFIG_H
-#define APPCONFIG_H
-
 /****************************************************************************
-* Title                 :   AppConfig
-* Filename              :   AppConfig.h
+* Title                 :   plantilla
+* Filename              :   plantilla.c
 * Author                :   SuperNach
 * Origin Date           :   20/08/2021
 * Version               :   1.0.0
@@ -38,77 +35,65 @@
 *  
 *
 *******************************************************************************/
-/** @file  AppConfig.h
- *  @brief Archivo de configuracion para la aplicacion. Se declaran los componentes
- *         necesarios para su funcionamiento.
+/** @file plantilla.c
+ *  @brief 
  */
-
 /******************************************************************************
 * Includes
 *******************************************************************************/
-#include <stm8s.h>
-#include <Clock.h>
-#include <Gpio.h>
-#include <Dht11.h>
-#include <Hx711.h>
-#include <utils.h>
-
+#include <plantilla.h>
 
 /******************************************************************************
-* Constants
+* Module Preprocessor Constants
 *******************************************************************************/
 
 /******************************************************************************
-* Configuration
+* Module Preprocessor Macros
 *******************************************************************************/
 
 /******************************************************************************
-* Macros
+* Module Typedefs
 *******************************************************************************/
 
 /******************************************************************************
-* Typedefs
+* Module Variable Definitions
 *******************************************************************************/
-
-/******************************************************************************
-* Variables
-*******************************************************************************/
-/**
-* @var DHT11_t SensorTempHum
-* @brief
-*
-* @see DHT11_t
-*/
-DHT11_t SensorTempHum;
-
-/**
-* @var HX711_t SensorPesaje
-* @brief
-*
-* @see HX711_t
-*/
-HX711_t SensorPesaje;
-
-/**
-* @var Timeout
-* @brief
-*
-* @see Timeout_t
-*/
-Timeout_t Timeout;
-Gpio_Config_t Timeout_test;
 
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
-#ifdef __cplusplus
-extern "C"{
-#endif
-
-
-
-#ifdef __cplusplus
-} // extern "C"
-#endif 
-
-#endif
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/

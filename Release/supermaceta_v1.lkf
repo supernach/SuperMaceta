@@ -54,6 +54,7 @@ Release\main.o
 Release\clock.o
 Release\gpio_config.o
 Release\gpio.o
+Release\timeout.o
 Release\dht11.o
 Release\hx711.o
 Release\stm8s_wwdg.o

@@ -54,6 +54,7 @@ Debug\main.o
 Debug\clock.o
 Debug\gpio_config.o
 Debug\gpio.o
+Debug\timeout.o
 Debug\dht11.o
 Debug\hx711.o
 Debug\stm8s_wwdg.o

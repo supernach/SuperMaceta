@@ -1,9 +1,9 @@
-#ifndef APPCONFIG_H
-#define APPCONFIG_H
+#ifndef PLANTILLA_H
+#define PLANTILLA_H
 
 /****************************************************************************
-* Title                 :   AppConfig
-* Filename              :   AppConfig.h
+* Title                 :   plantilla
+* Filename              :   plantilla.h
 * Author                :   SuperNach
 * Origin Date           :   20/08/2021
 * Version               :   1.0.0
@@ -38,21 +38,13 @@
 *  
 *
 *******************************************************************************/
-/** @file  AppConfig.h
- *  @brief Archivo de configuracion para la aplicacion. Se declaran los componentes
- *         necesarios para su funcionamiento.
+/** @file plantilla.h
+ *  @brief 
  */
-
 /******************************************************************************
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <Clock.h>
-#include <Gpio.h>
-#include <Dht11.h>
-#include <Hx711.h>
-#include <utils.h>
-
 
 /******************************************************************************
 * Constants
@@ -69,34 +61,32 @@
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/**
+* @typedef <name>
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+
+/******************************************************************************
+* Struct
+*******************************************************************************/
+/**
+* @struct 
+* @brief 
+*
+* @see
+*/
 
 /******************************************************************************
 * Variables
 *******************************************************************************/
 /**
-* @var DHT11_t SensorTempHum
-* @brief
+* @var 
+* @brief 
 *
-* @see DHT11_t
+* @see
 */
-DHT11_t SensorTempHum;
-
-/**
-* @var HX711_t SensorPesaje
-* @brief
-*
-* @see HX711_t
-*/
-HX711_t SensorPesaje;
-
-/**
-* @var Timeout
-* @brief
-*
-* @see Timeout_t
-*/
-Timeout_t Timeout;
-Gpio_Config_t Timeout_test;
 
 /******************************************************************************
 * Function Prototypes
@@ -104,7 +94,6 @@ Gpio_Config_t Timeout_test;
 #ifdef __cplusplus
 extern "C"{
 #endif
-
 
 
 #ifdef __cplusplus

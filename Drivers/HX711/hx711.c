@@ -156,10 +156,13 @@ static @inline void fijarGanancia( HX711_t_ptr hx711 )
 
 static @inline void esperoDatosDisponibles( HX711_t_ptr hx711 )
 {
-	while( NHALgpio_Read( &hx711->Config.DOUT ) == true )
-		{
-		}
-		_delay_us( HX711_TIEMPOCLOCK );
+	Timeout_Start( hx711->Timeout, 40 );
+	while( ( NHALgpio_Read( &hx711->Config.DOUT ) == true ) || ( hx711->Timeout->Estado == DISPARADO ) )
+	{
+		Timeout_Check( hx711->Timeout );
+	}
+	Timeout_Stop( hx711->Timeout );
+	_delay_us( HX711_TIEMPOCLOCK );
 }
 
 static @inline uint32_t leer( HX711_t_ptr hx711 )
@@ -235,9 +238,11 @@ static @inline uint32_t leer( HX711_t_ptr hx711 )
 * <hr>
 *
 *******************************************************************************/
-void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar )
+void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout )
 {
 	initPtrFunciones( hx711, Lectura, Tarar );
+	
+	hx711->Timeout = Timeout;
 	
 	initVariables( hx711 );
 	

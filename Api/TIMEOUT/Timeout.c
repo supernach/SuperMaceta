@@ -1,0 +1,181 @@
+/****************************************************************************
+* Title                 :   Timeout API
+* Filename              :   Timeout.c
+* Author                :   SuperNach
+* Origin Date           :   09/09/2021
+* Version               :   1.0.0
+* Compiler              :   Cosmic C
+* Target                :   STM8
+* Copyright             :   
+* All Rights Reserved
+*
+* AQUI VA DECLARACIONES DERECHOS
+*
+*******************************************************************************/
+/****************************************************************************
+* Doxygen C Template
+* Copyright (c) 2013 - Jacob Beningo - All Rights Reserved
+*
+* Feel free to use this Doxygen Code Template at your own risk for your own
+* purposes.  The latest license and updates for this Doxygen C template can be
+* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.
+*
+* For updates, free software, training and to stay up to date on the latest
+* embedded software techniques sign-up for Jacobs newsletter at
+* http://www.beningo.com/814-2/
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Template.
+*
+*****************************************************************************/
+/*************** SOURCE REVISION LOG *****************************************
+*
+*    Date    Version   Author         Description
+*  9/09/21   1.0.0   SuperNach       Initial Release.
+*  
+*
+*******************************************************************************/
+/** @file Timeout.c
+ *  @brief 
+ */
+/******************************************************************************
+* Includes
+*******************************************************************************/
+#include <timeout.h>
+
+/******************************************************************************
+* Module Preprocessor Constants
+*******************************************************************************/
+
+/******************************************************************************
+* Module Preprocessor Macros
+*******************************************************************************/
+
+/******************************************************************************
+* Module Typedefs
+*******************************************************************************/
+
+/******************************************************************************
+* Module Variable Definitions
+*******************************************************************************/
+
+/******************************************************************************
+* Function Prototypes
+*******************************************************************************/
+static @inline uint16_t tick1us( void )
+{
+	//return ( FCLK ) / ( 1000000 - 1 );
+	return 15;
+}
+
+/******************************************************************************
+* Function : Timeout_Init()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+void Timeout_Init( Timeout_t_ptr timeout )
+{
+	timeout->Config.Timer.Numero = TIMER1;
+	timeout->Config.Timer.Canal = CANAL1;
+	timeout->Estado = INACTIVO;
+	timeout->ValorDesborde = 1;
+}
+
+/******************************************************************************
+* Function : Timeout_Start()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+void Timeout_Start( Timeout_t_ptr timeout, uint16_t us )
+{
+	CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, ENABLE);
+	TIM1_DeInit();
+	TIM1_TimeBaseInit( 15, TIM1_COUNTERMODE_UP, 0xFFFF, 0);
+	
+	TIM1_Cmd( ENABLE );
+	timeout->ValorDesborde = us;
+	timeout->Estado = ACTIVO;
+}
+
+void Timeout_Stop( Timeout_t_ptr timeout )
+{
+	CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, DISABLE);
+	TIM1_Cmd( DISABLE );
+	TIM1_DeInit();
+	
+	timeout->ValorDesborde = 0;
+	timeout->Estado = INACTIVO;
+}
+
+void Timeout_Check( Timeout_t_ptr timeout )
+{
+	if(  TIM1_GetCounter() >= timeout->ValorDesborde )
+	{
+		timeout->Estado = DISPARADO;
+	}
+	else
+	{
+		
+	}
+}
+
