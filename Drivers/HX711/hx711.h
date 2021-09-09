@@ -82,7 +82,7 @@ static const uint8_t HX711_TIEMPOCLOCKSLEEP = 70;
 /**
 * @typedef struct  HX711 HX711_t
 * @brief   Crea un tipo de dato HX711 para trabajar sobre el
-*					 Contiene toda la funcionalidad del sensor
+*					Contiene toda la funcionalidad del sensor
 */
 typedef struct HX711 HX711_t;
 
