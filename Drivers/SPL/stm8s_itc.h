@@ -29,8 +29,17 @@
 #ifndef __STM8S_ITC_H
 #define __STM8S_ITC_H
 
+
+
+
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
+
+static volatile uint8_t flagTimer1 = 0;
+@far @interrupt void TIM1_OV_IRQHandler( void );
+uint8_t getFlagTimer1( void );
+void setFlagTimer1( uint8_t valor );
+//#include <gpio.h>
 
 /* Exported types ------------------------------------------------------------*/
 

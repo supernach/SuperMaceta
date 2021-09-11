@@ -1,7 +1,15 @@
 /*	BASIC INTERRUPT VECTOR TABLE FOR STM8 devices
  *	Copyright (c) 2007 STMicroelectronics
  */
-
+ 
+ /**
+ * includes agregados por mi
+ *
+ *
+ */
+#include <stm8s_itc.h>
+ 
+ 
 typedef void @far (*interrupt_handler_t)(void);
 
 struct interrupt_vector {
@@ -16,6 +24,14 @@ struct interrupt_vector {
 	*/
 	return;
 }
+
+/*@far @interrupt void TIM1_OV_IRQHandler (void)
+{
+	
+	return;
+}*/
+
+
 
 extern void _stext();     /* startup routine */
 
@@ -33,7 +49,7 @@ struct interrupt_vector const _vectab[] = {
 	{0x82, NonHandledInterrupt}, /* irq8  */
 	{0x82, NonHandledInterrupt}, /* irq9  */
 	{0x82, NonHandledInterrupt}, /* irq10 */
-	{0x82, NonHandledInterrupt}, /* irq11 */
+	{0x82, (interrupt_handler_t)TIM1_OV_IRQHandler}, /* irq11 */
 	{0x82, NonHandledInterrupt}, /* irq12 */
 	{0x82, NonHandledInterrupt}, /* irq13 */
 	{0x82, NonHandledInterrupt}, /* irq14 */

@@ -28,6 +28,23 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s_itc.h"
 
+
+void TIM1_OV_IRQHandler( void )
+{
+	++flagTimer1;
+	TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
+	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
+}
+
+uint8_t getFlagTimer1( void )
+{
+	return flagTimer1;
+}
+
+void setFlagTimer1( uint8_t valor )
+{
+	flagTimer1 = valor;
+}
 /** @addtogroup STM8S_StdPeriph_Driver
   * @{
   */

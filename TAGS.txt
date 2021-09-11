@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ACTIVO	api\timeout\timeout.h	91;"	enumerator	enum:__anon3
+ACTIVO	api\timeout\timeout.h	92;"	enumerator	enum:__anon3
 ADC1	drivers\spl\stm8s.h	2603;"	macro
 ADC1_ALIGN_LEFT	drivers\spl\stm8s_adc1.h	70;"	enumerator	enum:__anon120
 ADC1_ALIGN_RIGHT	drivers\spl\stm8s_adc1.h	71;"	enumerator	enum:__anon120
@@ -669,7 +669,7 @@ CONST	drivers\spl\stm8s.h	126;"	macro
 CONST	drivers\spl\stm8s.h	132;"	macro
 CONST	drivers\spl\stm8s.h	146;"	macro
 CPU_CC_I1I0	drivers\spl\stm8s.h	1462;"	macro
-CPU_SOFT_INT_DISABLED	drivers\spl\stm8s_itc.h	136;"	macro
+CPU_SOFT_INT_DISABLED	drivers\spl\stm8s_itc.h	145;"	macro
 CR	drivers\spl\stm8s.h	1635;"	member	struct:WWDG_struct
 CR1	drivers\spl\stm8s.h	1060;"	member	struct:TIM4_struct
 CR1	drivers\spl\stm8s.h	1123;"	member	struct:TIM5_struct
@@ -729,7 +729,7 @@ ChgBit	drivers\spl\stm8s.h	2792;"	macro
 Clock_HSI_Init	api\n_hal\clock\clock.c	99;"	function	signature:(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
 Clock_HSI_Init	api\n_hal\clock\clock.h	95;"	prototype	signature:(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
 ClrBit	drivers\spl\stm8s.h	2790;"	macro
-Config	api\timeout\timeout.h	106;"	member	struct:Timeout
+Config	api\timeout\timeout.h	107;"	member	struct:Timeout
 Config	drivers\dht11\dht11.h	189;"	member	struct:DHT11
 Config	drivers\hx711\hx711.h	185;"	member	struct:HX711
 Config	drivers\spl\stm8s.h	2306;"	member	union:__anon130::__anon131	typeref:struct:__anon130::__anon131::__anon137
@@ -768,7 +768,7 @@ DHT11_fPtr	drivers\dht11\dht11.h	113;"	typedef
 DHT11_t	drivers\dht11\dht11.h	72;"	typedef	typeref:struct:DHT11
 DHT11_t_ptr	drivers\dht11\dht11.h	104;"	typedef
 DISABLE	drivers\spl\stm8s.h	235;"	enumerator	enum:__anon128
-DISPARADO	api\timeout\timeout.h	92;"	enumerator	enum:__anon3
+DISPARADO	api\timeout\timeout.h	93;"	enumerator	enum:__anon3
 DM	drivers\spl\stm8s.h	2704;"	macro
 DM_BaseAddress	drivers\spl\stm8s.h	2591;"	macro
 DOUT	drivers\hx711\hx711.h	162;"	member	struct:HX711_Config
@@ -786,7 +786,7 @@ DTR	drivers\spl\stm8s.h	644;"	member	struct:TIM1_struct
 DUKR	drivers\spl\stm8s.h	1526;"	member	struct:FLASH_struct
 Datos	drivers\dht11\dht11.h	190;"	member	struct:DHT11
 Datos	drivers\hx711\hx711.h	186;"	member	struct:HX711
-DeInitAllGPIO	main.c	54;"	function	file:	signature:(void)
+DeInitAllGPIO	main.c	55;"	function	file:	signature:(void)
 DisableAllPeripherals	api\n_hal\clock\clock.c	120;"	function	signature:(void)
 DisableAllPeripherals	api\n_hal\clock\clock.h	82;"	prototype	signature:(void)
 ECKR	drivers\spl\stm8s.h	511;"	member	struct:CLK_struct
@@ -843,7 +843,7 @@ EXTI_struct	drivers\spl\stm8s.h	1473;"	struct
 EnableClockMirror	api\n_hal\clock\clock.c	167;"	function	signature:(CLK_Output_TypeDef source, Gpio_Config_t* pin)
 EnableClockMirror	api\n_hal\clock\clock.h	104;"	prototype	signature:(CLK_Output_TypeDef source, Gpio_Config_t* pin)
 ErrorStatus	drivers\spl\stm8s.h	238;"	typedef	typeref:enum:__anon129
-Estado	api\timeout\timeout.h	107;"	member	struct:Timeout
+Estado	api\timeout\timeout.h	108;"	member	struct:Timeout
 Estado	drivers\dht11\dht11.h	165;"	member	struct:sDht11Datos
 Estado	drivers\hx711\hx711.h	150;"	member	struct:HX711_Datos
 F0R1	drivers\spl\stm8s.h	2230;"	member	struct:__anon130::__anon131::__anon134
@@ -1323,7 +1323,7 @@ IER	drivers\spl\stm8s.h	2181;"	member	struct:__anon130
 IER	drivers\spl\stm8s.h	618;"	member	struct:TIM1_struct
 IER	drivers\spl\stm8s.h	831;"	member	struct:TIM2_struct
 IER	drivers\spl\stm8s.h	955;"	member	struct:TIM3_struct
-INACTIVO	api\timeout\timeout.h	90;"	enumerator	enum:__anon3
+INACTIVO	api\timeout\timeout.h	91;"	enumerator	enum:__anon3
 INICIALIZADO	drivers\hx711\hx711.h	121;"	enumerator	enum:__anon5
 INTERRUPT	drivers\spl\stm8s.h	2770;"	macro
 INTERRUPT	drivers\spl\stm8s.h	2772;"	macro
@@ -1402,9 +1402,9 @@ IS_I2C_INTERRUPT_OK	drivers\spl\stm8s_i2c.h	383;"	macro
 IS_I2C_ITPENDINGBIT_OK	drivers\spl\stm8s_i2c.h	428;"	macro
 IS_I2C_OUTPUT_CLOCK_FREQ_OK	drivers\spl\stm8s_i2c.h	493;"	macro
 IS_I2C_OWN_ADDRESS_OK	drivers\spl\stm8s_i2c.h	476;"	macro
-IS_ITC_INTERRUPTS_DISABLED	drivers\spl\stm8s_itc.h	161;"	macro
-IS_ITC_IRQ_OK	drivers\spl\stm8s_itc.h	151;"	macro
-IS_ITC_PRIORITY_OK	drivers\spl\stm8s_itc.h	154;"	macro
+IS_ITC_INTERRUPTS_DISABLED	drivers\spl\stm8s_itc.h	170;"	macro
+IS_ITC_IRQ_OK	drivers\spl\stm8s_itc.h	160;"	macro
+IS_ITC_PRIORITY_OK	drivers\spl\stm8s_itc.h	163;"	macro
 IS_IWDG_PRESCALER_OK	drivers\spl\stm8s_iwdg.h	65;"	macro
 IS_IWDG_WRITEACCESS_MODE_OK	drivers\spl\stm8s_iwdg.h	77;"	macro
 IS_LSI_FREQUENCY_OK	drivers\spl\stm8s_awu.h	120;"	macro
@@ -1515,54 +1515,54 @@ IS_WWDG_COUNTERVALUE_OK	drivers\spl\stm8s_wwdg.h	55;"	macro
 IS_WWDG_WINDOWLIMITVALUE_OK	drivers\spl\stm8s_wwdg.h	49;"	macro
 ITC	drivers\spl\stm8s.h	2700;"	macro
 ITC_BaseAddress	drivers\spl\stm8s.h	2590;"	macro
-ITC_DeInit	drivers\spl\stm8s_itc.c	80;"	function	signature:(void)
-ITC_DeInit	drivers\spl\stm8s_itc.h	174;"	prototype	signature:(void)
-ITC_GetCPUCC	drivers\spl\stm8s_itc.c	50;"	function	signature:(void)
-ITC_GetCPUCC	drivers\spl\stm8s_itc.h	173;"	prototype	signature:(void)
-ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.c	97;"	function	signature:(void)
-ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.h	175;"	prototype	signature:(void)
-ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.c	107;"	function	signature:(ITC_Irq_TypeDef IrqNum)
-ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.h	177;"	prototype	signature:(ITC_Irq_TypeDef IrqNum)
-ITC_IRQ_ADC1	drivers\spl\stm8s_itc.h	104;"	enumerator	enum:__anon84
-ITC_IRQ_ADC2	drivers\spl\stm8s_itc.h	100;"	enumerator	enum:__anon84
-ITC_IRQ_AWU	drivers\spl\stm8s_itc.h	46;"	enumerator	enum:__anon84
-ITC_IRQ_CAN_RX	drivers\spl\stm8s_itc.h	55;"	enumerator	enum:__anon84
-ITC_IRQ_CAN_TX	drivers\spl\stm8s_itc.h	56;"	enumerator	enum:__anon84
-ITC_IRQ_CLK	drivers\spl\stm8s_itc.h	47;"	enumerator	enum:__anon84
-ITC_IRQ_EEPROM_EEC	drivers\spl\stm8s_itc.h	114;"	enumerator	enum:__anon84
-ITC_IRQ_I2C	drivers\spl\stm8s_itc.h	90;"	enumerator	enum:__anon84
-ITC_IRQ_PORTA	drivers\spl\stm8s_itc.h	48;"	enumerator	enum:__anon84
-ITC_IRQ_PORTB	drivers\spl\stm8s_itc.h	49;"	enumerator	enum:__anon84
-ITC_IRQ_PORTC	drivers\spl\stm8s_itc.h	50;"	enumerator	enum:__anon84
-ITC_IRQ_PORTD	drivers\spl\stm8s_itc.h	51;"	enumerator	enum:__anon84
-ITC_IRQ_PORTE	drivers\spl\stm8s_itc.h	52;"	enumerator	enum:__anon84
-ITC_IRQ_PORTF	drivers\spl\stm8s_itc.h	60;"	enumerator	enum:__anon84
-ITC_IRQ_SPI	drivers\spl\stm8s_itc.h	63;"	enumerator	enum:__anon84
-ITC_IRQ_TIM1_CAPCOM	drivers\spl\stm8s_itc.h	66;"	enumerator	enum:__anon84
-ITC_IRQ_TIM1_OVF	drivers\spl\stm8s_itc.h	64;"	enumerator	enum:__anon84
-ITC_IRQ_TIM3_CAPCOM	drivers\spl\stm8s_itc.h	78;"	enumerator	enum:__anon84
-ITC_IRQ_TIM3_OVF	drivers\spl\stm8s_itc.h	77;"	enumerator	enum:__anon84
-ITC_IRQ_TIM5_CAPCOM	drivers\spl\stm8s_itc.h	71;"	enumerator	enum:__anon84
-ITC_IRQ_TIM5_OVFTRI	drivers\spl\stm8s_itc.h	69;"	enumerator	enum:__anon84
-ITC_IRQ_TIM6_OVFTRI	drivers\spl\stm8s_itc.h	108;"	enumerator	enum:__anon84
-ITC_IRQ_TLI	drivers\spl\stm8s_itc.h	45;"	enumerator	enum:__anon84
-ITC_IRQ_UART1_RX	drivers\spl\stm8s_itc.h	83;"	enumerator	enum:__anon84
-ITC_IRQ_UART1_TX	drivers\spl\stm8s_itc.h	82;"	enumerator	enum:__anon84
-ITC_IRQ_UART2_RX	drivers\spl\stm8s_itc.h	94;"	enumerator	enum:__anon84
-ITC_IRQ_UART2_TX	drivers\spl\stm8s_itc.h	93;"	enumerator	enum:__anon84
-ITC_IRQ_UART3_RX	drivers\spl\stm8s_itc.h	99;"	enumerator	enum:__anon84
-ITC_IRQ_UART3_TX	drivers\spl\stm8s_itc.h	98;"	enumerator	enum:__anon84
-ITC_IRQ_UART4_RX	drivers\spl\stm8s_itc.h	87;"	enumerator	enum:__anon84
-ITC_IRQ_UART4_TX	drivers\spl\stm8s_itc.h	86;"	enumerator	enum:__anon84
-ITC_Irq_TypeDef	drivers\spl\stm8s_itc.h	115;"	typedef	typeref:enum:__anon84
-ITC_PRIORITYLEVEL_0	drivers\spl\stm8s_itc.h	121;"	enumerator	enum:__anon85
-ITC_PRIORITYLEVEL_1	drivers\spl\stm8s_itc.h	122;"	enumerator	enum:__anon85
-ITC_PRIORITYLEVEL_2	drivers\spl\stm8s_itc.h	123;"	enumerator	enum:__anon85
-ITC_PRIORITYLEVEL_3	drivers\spl\stm8s_itc.h	124;"	enumerator	enum:__anon85
-ITC_PriorityLevel_TypeDef	drivers\spl\stm8s_itc.h	125;"	typedef	typeref:enum:__anon85
+ITC_DeInit	drivers\spl\stm8s_itc.c	101;"	function	signature:(void)
+ITC_DeInit	drivers\spl\stm8s_itc.h	183;"	prototype	signature:(void)
+ITC_GetCPUCC	drivers\spl\stm8s_itc.c	71;"	function	signature:(void)
+ITC_GetCPUCC	drivers\spl\stm8s_itc.h	182;"	prototype	signature:(void)
+ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.c	118;"	function	signature:(void)
+ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.h	184;"	prototype	signature:(void)
+ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.c	128;"	function	signature:(ITC_Irq_TypeDef IrqNum)
+ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.h	186;"	prototype	signature:(ITC_Irq_TypeDef IrqNum)
+ITC_IRQ_ADC1	drivers\spl\stm8s_itc.h	113;"	enumerator	enum:__anon84
+ITC_IRQ_ADC2	drivers\spl\stm8s_itc.h	109;"	enumerator	enum:__anon84
+ITC_IRQ_AWU	drivers\spl\stm8s_itc.h	55;"	enumerator	enum:__anon84
+ITC_IRQ_CAN_RX	drivers\spl\stm8s_itc.h	64;"	enumerator	enum:__anon84
+ITC_IRQ_CAN_TX	drivers\spl\stm8s_itc.h	65;"	enumerator	enum:__anon84
+ITC_IRQ_CLK	drivers\spl\stm8s_itc.h	56;"	enumerator	enum:__anon84
+ITC_IRQ_EEPROM_EEC	drivers\spl\stm8s_itc.h	123;"	enumerator	enum:__anon84
+ITC_IRQ_I2C	drivers\spl\stm8s_itc.h	99;"	enumerator	enum:__anon84
+ITC_IRQ_PORTA	drivers\spl\stm8s_itc.h	57;"	enumerator	enum:__anon84
+ITC_IRQ_PORTB	drivers\spl\stm8s_itc.h	58;"	enumerator	enum:__anon84
+ITC_IRQ_PORTC	drivers\spl\stm8s_itc.h	59;"	enumerator	enum:__anon84
+ITC_IRQ_PORTD	drivers\spl\stm8s_itc.h	60;"	enumerator	enum:__anon84
+ITC_IRQ_PORTE	drivers\spl\stm8s_itc.h	61;"	enumerator	enum:__anon84
+ITC_IRQ_PORTF	drivers\spl\stm8s_itc.h	69;"	enumerator	enum:__anon84
+ITC_IRQ_SPI	drivers\spl\stm8s_itc.h	72;"	enumerator	enum:__anon84
+ITC_IRQ_TIM1_CAPCOM	drivers\spl\stm8s_itc.h	75;"	enumerator	enum:__anon84
+ITC_IRQ_TIM1_OVF	drivers\spl\stm8s_itc.h	73;"	enumerator	enum:__anon84
+ITC_IRQ_TIM3_CAPCOM	drivers\spl\stm8s_itc.h	87;"	enumerator	enum:__anon84
+ITC_IRQ_TIM3_OVF	drivers\spl\stm8s_itc.h	86;"	enumerator	enum:__anon84
+ITC_IRQ_TIM5_CAPCOM	drivers\spl\stm8s_itc.h	80;"	enumerator	enum:__anon84
+ITC_IRQ_TIM5_OVFTRI	drivers\spl\stm8s_itc.h	78;"	enumerator	enum:__anon84
+ITC_IRQ_TIM6_OVFTRI	drivers\spl\stm8s_itc.h	117;"	enumerator	enum:__anon84
+ITC_IRQ_TLI	drivers\spl\stm8s_itc.h	54;"	enumerator	enum:__anon84
+ITC_IRQ_UART1_RX	drivers\spl\stm8s_itc.h	92;"	enumerator	enum:__anon84
+ITC_IRQ_UART1_TX	drivers\spl\stm8s_itc.h	91;"	enumerator	enum:__anon84
+ITC_IRQ_UART2_RX	drivers\spl\stm8s_itc.h	103;"	enumerator	enum:__anon84
+ITC_IRQ_UART2_TX	drivers\spl\stm8s_itc.h	102;"	enumerator	enum:__anon84
+ITC_IRQ_UART3_RX	drivers\spl\stm8s_itc.h	108;"	enumerator	enum:__anon84
+ITC_IRQ_UART3_TX	drivers\spl\stm8s_itc.h	107;"	enumerator	enum:__anon84
+ITC_IRQ_UART4_RX	drivers\spl\stm8s_itc.h	96;"	enumerator	enum:__anon84
+ITC_IRQ_UART4_TX	drivers\spl\stm8s_itc.h	95;"	enumerator	enum:__anon84
+ITC_Irq_TypeDef	drivers\spl\stm8s_itc.h	124;"	typedef	typeref:enum:__anon84
+ITC_PRIORITYLEVEL_0	drivers\spl\stm8s_itc.h	130;"	enumerator	enum:__anon85
+ITC_PRIORITYLEVEL_1	drivers\spl\stm8s_itc.h	131;"	enumerator	enum:__anon85
+ITC_PRIORITYLEVEL_2	drivers\spl\stm8s_itc.h	132;"	enumerator	enum:__anon85
+ITC_PRIORITYLEVEL_3	drivers\spl\stm8s_itc.h	133;"	enumerator	enum:__anon85
+ITC_PriorityLevel_TypeDef	drivers\spl\stm8s_itc.h	134;"	typedef	typeref:enum:__anon85
 ITC_SPRX_RESET_VALUE	drivers\spl\stm8s.h	1452;"	macro
-ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.c	220;"	function	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
-ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.h	176;"	prototype	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
+ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.c	241;"	function	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
+ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.h	185;"	prototype	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
 ITC_TypeDef	drivers\spl\stm8s.h	1446;"	typedef	typeref:struct:ITC_struct
 ITC_struct	drivers\spl\stm8s.h	1435;"	struct
 ITEN_Mask	drivers\spl\stm8s_i2c.c	44;"	macro	file:
@@ -1597,10 +1597,10 @@ IWDG_WriteAccess_Disable	drivers\spl\stm8s_iwdg.h	91;"	enumerator	enum:__anon82
 IWDG_WriteAccess_Enable	drivers\spl\stm8s_iwdg.h	90;"	enumerator	enum:__anon82
 IWDG_WriteAccess_TypeDef	drivers\spl\stm8s_iwdg.h	92;"	typedef	typeref:enum:__anon82
 IWDG_struct	drivers\spl\stm8s.h	1609;"	struct
-InicializacionCLK	main.c	109;"	function	file:	signature:(void)
-InicializacionComponentes	main.c	120;"	function	file:	signature:(void)
-InicializacionGPIO	main.c	97;"	function	file:	signature:(void)
-Inicializacion_Total	main.c	133;"	function	file:	signature:(void)
+InicializacionCLK	main.c	110;"	function	file:	signature:(void)
+InicializacionComponentes	main.c	121;"	function	file:	signature:(void)
+InicializacionGPIO	main.c	98;"	function	file:	signature:(void)
+Inicializacion_Total	main.c	134;"	function	file:	signature:(void)
 KR	drivers\spl\stm8s.h	1611;"	member	struct:IWDG_struct
 LSI_FREQUENCY_MAX	drivers\spl\stm8s_awu.h	77;"	macro
 LSI_FREQUENCY_MAX	drivers\spl\stm8s_beep.h	64;"	macro
@@ -1671,7 +1671,7 @@ NOPT5	drivers\spl\stm8s.h	1596;"	member	struct:OPT_struct
 NOPT7	drivers\spl\stm8s.h	1600;"	member	struct:OPT_struct
 NUEVA_LECTURA	drivers\hx711\hx711.h	124;"	enumerator	enum:__anon5
 NULL	api\n_hal\utils\utils.h	70;"	macro
-NonHandledInterrupt	stm8_interrupt_vector.c	12;"	function	signature:(void)
+NonHandledInterrupt	stm8_interrupt_vector.c	20;"	function	signature:(void)
 Numero	api\timeout\timeout_config.h	115;"	member	struct:Timeout_Config_Timer
 OARH	drivers\spl\stm8s.h	1334;"	member	struct:I2C_struct
 OARL	drivers\spl\stm8s.h	1333;"	member	struct:I2C_struct
@@ -1709,7 +1709,7 @@ PSR	drivers\spl\stm8s.h	2183;"	member	struct:__anon130
 PUKR	drivers\spl\stm8s.h	1524;"	member	struct:FLASH_struct
 Page	drivers\spl\stm8s.h	2327;"	member	struct:__anon130	typeref:union:__anon130::__anon131
 Pin	api\n_hal\gpio\gpio_config.h	21;"	member	struct:Gpio_Config_t
-Pin_Init	main.c	70;"	function	file:	signature:(void)
+Pin_Init	main.c	71;"	function	file:	signature:(void)
 PointerAttr	drivers\spl\stm8s.h	156;"	macro
 PointerAttr	drivers\spl\stm8s.h	160;"	macro
 Puerto	api\n_hal\gpio\gpio_config.h	20;"	member	struct:Gpio_Config_t
@@ -1918,8 +1918,8 @@ SUCCESS	drivers\spl\stm8s.h	238;"	enumerator	enum:__anon129
 SWCR	drivers\spl\stm8s.h	515;"	member	struct:CLK_struct
 SWIMCCR	drivers\spl\stm8s.h	523;"	member	struct:CLK_struct
 SWR	drivers\spl\stm8s.h	514;"	member	struct:CLK_struct
-SensorPesaje	aplicacion\configuracion\appconfig.h	90;"	variable
-SensorTempHum	aplicacion\configuracion\appconfig.h	82;"	variable
+SensorPesaje	aplicacion\configuracion\appconfig.h	91;"	variable
+SensorTempHum	aplicacion\configuracion\appconfig.h	83;"	variable
 SetBit	drivers\spl\stm8s.h	2789;"	macro
 TBR	drivers\spl\stm8s.h	444;"	member	struct:AWU_struct
 TBR_Array	drivers\spl\stm8s_awu.c	55;"	variable
@@ -2260,6 +2260,8 @@ TIM1_OUTPUTNSTATE_DISABLE	drivers\spl\stm8s_tim1.h	154;"	enumerator	enum:__anon4
 TIM1_OUTPUTNSTATE_ENABLE	drivers\spl\stm8s_tim1.h	155;"	enumerator	enum:__anon46
 TIM1_OUTPUTSTATE_DISABLE	drivers\spl\stm8s_tim1.h	144;"	enumerator	enum:__anon45
 TIM1_OUTPUTSTATE_ENABLE	drivers\spl\stm8s_tim1.h	145;"	enumerator	enum:__anon45
+TIM1_OV_IRQHandler	drivers\spl\stm8s_itc.c	32;"	function	signature:( void )
+TIM1_OV_IRQHandler	drivers\spl\stm8s_itc.h	39;"	prototype	signature:( void )
 TIM1_OutputNState_TypeDef	drivers\spl\stm8s_tim1.h	156;"	typedef	typeref:enum:__anon46
 TIM1_OutputState_TypeDef	drivers\spl\stm8s_tim1.h	146;"	typedef	typeref:enum:__anon45
 TIM1_PSCH_PSC	drivers\spl\stm8s.h	777;"	macro
@@ -2859,27 +2861,27 @@ T_COUNT	api\n_hal\utils\utils.h	100;"	macro
 T_Decimal	drivers\dht11\dht11.h	149;"	member	struct:sDht11_SI
 T_Entero	drivers\dht11\dht11.h	150;"	member	struct:sDht11_SI
 Tarar	drivers\hx711\hx711.h	190;"	member	struct:HX711
-Timeout	api\timeout\timeout.h	104;"	struct
-Timeout	aplicacion\configuracion\appconfig.h	98;"	variable
+Timeout	api\timeout\timeout.h	105;"	struct
+Timeout	aplicacion\configuracion\appconfig.h	99;"	variable
 Timeout	drivers\hx711\hx711.h	187;"	member	struct:HX711
-Timeout_Check	api\timeout\timeout.c	170;"	function	signature:( Timeout_t_ptr timeout )
-Timeout_Check	api\timeout\timeout.h	131;"	prototype	signature:( Timeout_t_ptr timeout )
+Timeout_Check	api\timeout\timeout.c	247;"	function	signature:( Timeout_t_ptr timeout )
+Timeout_Check	api\timeout\timeout.h	133;"	prototype	signature:( Timeout_t_ptr timeout )
 Timeout_Config	api\timeout\timeout_config.h	125;"	struct
 Timeout_Config_Canal_e	api\timeout\timeout_config.h	102;"	typedef	typeref:enum:__anon2
 Timeout_Config_Timer	api\timeout\timeout_config.h	113;"	struct
 Timeout_Config_Timer_e	api\timeout\timeout_config.h	90;"	typedef	typeref:enum:__anon1
 Timeout_Config_Timer_t	api\timeout\timeout_config.h	78;"	typedef	typeref:struct:Timeout_Config_Timer
 Timeout_Config_t	api\timeout\timeout_config.h	70;"	typedef	typeref:struct:Timeout_Config
-Timeout_Estado_e	api\timeout\timeout.h	93;"	typedef	typeref:enum:__anon3
+Timeout_Estado_e	api\timeout\timeout.h	94;"	typedef	typeref:enum:__anon3
 Timeout_Init	api\timeout\timeout.c	106;"	function	signature:( Timeout_t_ptr timeout )
-Timeout_Init	api\timeout\timeout.h	128;"	prototype	signature:( Timeout_t_ptr timeout )
-Timeout_Start	api\timeout\timeout.c	149;"	function	signature:( Timeout_t_ptr timeout, uint16_t us )
-Timeout_Start	api\timeout\timeout.h	129;"	prototype	signature:( Timeout_t_ptr timeout, uint16_t us )
-Timeout_Stop	api\timeout\timeout.c	160;"	function	signature:( Timeout_t_ptr timeout )
-Timeout_Stop	api\timeout\timeout.h	130;"	prototype	signature:( Timeout_t_ptr timeout )
-Timeout_t	api\timeout\timeout.h	72;"	typedef	typeref:struct:Timeout
-Timeout_t_ptr	api\timeout\timeout.h	80;"	typedef
-Timeout_test	aplicacion\configuracion\appconfig.h	99;"	variable
+Timeout_Init	api\timeout\timeout.h	130;"	prototype	signature:( Timeout_t_ptr timeout )
+Timeout_Start	api\timeout\timeout.c	153;"	function	signature:( Timeout_t_ptr timeout, uint16_t us )
+Timeout_Start	api\timeout\timeout.h	131;"	prototype	signature:( Timeout_t_ptr timeout, uint16_t us )
+Timeout_Stop	api\timeout\timeout.c	199;"	function	signature:( Timeout_t_ptr timeout )
+Timeout_Stop	api\timeout\timeout.h	132;"	prototype	signature:( Timeout_t_ptr timeout )
+Timeout_t	api\timeout\timeout.h	73;"	typedef	typeref:struct:Timeout
+Timeout_t_ptr	api\timeout\timeout.h	81;"	typedef
+Timeout_test	aplicacion\configuracion\appconfig.h	100;"	variable
 Timer	api\timeout\timeout_config.h	127;"	member	struct:Timeout_Config
 Tipo	api\n_hal\gpio\gpio_config.h	22;"	member	struct:Gpio_Config_t
 TxMailbox	drivers\spl\stm8s.h	2205;"	member	union:__anon130::__anon131	typeref:struct:__anon130::__anon131::__anon132
@@ -3233,7 +3235,7 @@ UltimaLectura	drivers\hx711\hx711.h	149;"	member	struct:HX711_Datos
 VECTOR_ID	drivers\spl\stm8s.h	2759;"	macro
 ValBit	drivers\spl\stm8s.h	2798;"	macro
 ValorConversion	drivers\hx711\hx711.h	166;"	member	struct:HX711_Config
-ValorDesborde	api\timeout\timeout.h	108;"	member	struct:Timeout
+ValorDesborde	api\timeout\timeout.h	109;"	member	struct:Timeout
 ValorTara	drivers\hx711\hx711.h	172;"	member	struct:HX711_Config
 ValorZero	drivers\hx711\hx711.h	169;"	member	struct:HX711_Config
 WR	drivers\spl\stm8s.h	1636;"	member	struct:WWDG_struct
@@ -3294,8 +3296,8 @@ __bool_true_false_are_defined	..\..\programas\cosmicc\cxstm8\hstm8\stdbool.h	11;
 _delay_cycl	api\n_hal\utils\utils.h	98;"	function	signature:( unsigned short __ticks )
 _delay_ms	api\n_hal\utils\utils.h	175;"	function	signature:( unsigned short __ms )
 _delay_us	api\n_hal\utils\utils.h	137;"	function	signature:( const unsigned short __us )
-_stext	stm8_interrupt_vector.c	20;"	prototype	file:
-_vectab	stm8_interrupt_vector.c	22;"	variable
+_stext	stm8_interrupt_vector.c	36;"	prototype	file:
+_vectab	stm8_interrupt_vector.c	38;"	variable
 aDormir	drivers\hx711\hx711.c	104;"	function	file:	signature:( HX711_t_ptr hx711 )
 assert_failed	drivers\spl\stm8s_conf.h	109;"	prototype	signature:(uint8_t* file, uint32_t line)
 assert_param	drivers\spl\stm8s_conf.h	107;"	macro
@@ -3329,6 +3331,9 @@ enableInterrupts	drivers\spl\stm8s.h	2735;"	macro
 esperoDatosDisponibles	drivers\hx711\hx711.c	157;"	function	file:	signature:( HX711_t_ptr hx711 )
 false	..\..\programas\cosmicc\cxstm8\hstm8\stdbool.h	10;"	macro
 fijarGanancia	drivers\hx711\hx711.c	124;"	function	file:	signature:( HX711_t_ptr hx711 )
+flagTimer1	drivers\spl\stm8s_itc.h	38;"	variable
+getFlagTimer1	drivers\spl\stm8s_itc.c	43;"	function	signature:( void )
+getFlagTimer1	drivers\spl\stm8s_itc.h	40;"	prototype	signature:( void )
 halt	drivers\spl\stm8s.h	2723;"	macro
 halt	drivers\spl\stm8s.h	2732;"	macro
 halt	drivers\spl\stm8s.h	2742;"	macro
@@ -3343,13 +3348,13 @@ initVariables	drivers\hx711\hx711.c	71;"	function	file:	signature:( HX711_t_ptr 
 int16_t	drivers\spl\stm8s.h	212;"	typedef
 int32_t	drivers\spl\stm8s.h	213;"	typedef
 int8_t	drivers\spl\stm8s.h	211;"	typedef
-interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
-interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
-interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
-interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
+interrupt_handler	stm8_interrupt_vector.c	17;"	member	struct:interrupt_vector	file:
+interrupt_handler_t	stm8_interrupt_vector.c	13;"	typedef	file:
+interrupt_instruction	stm8_interrupt_vector.c	16;"	member	struct:interrupt_vector	file:
+interrupt_vector	stm8_interrupt_vector.c	15;"	struct	file:
 leer	drivers\hx711\hx711.c	168;"	function	file:	signature:( HX711_t_ptr hx711 )
 leerByte	drivers\dht11\dht11.c	67;"	function	file:	signature:( Gpio_Config_t* gpio )
-main	main.c	149;"	function
+main	main.c	150;"	function
 nop	drivers\spl\stm8s.h	2720;"	macro
 nop	drivers\spl\stm8s.h	2729;"	macro
 nop	drivers\spl\stm8s.h	2739;"	macro
@@ -3362,6 +3367,8 @@ s32	drivers\spl\stm8s.h	222;"	typedef
 s8	drivers\spl\stm8s.h	224;"	typedef
 sDht11Datos	drivers\dht11\dht11.h	162;"	struct
 sDht11_SI	drivers\dht11\dht11.h	146;"	struct
+setFlagTimer1	drivers\spl\stm8s_itc.c	48;"	function	signature:( uint8_t valor )
+setFlagTimer1	drivers\spl\stm8s_itc.h	41;"	prototype	signature:( uint8_t valor )
 sim	drivers\spl\stm8s.h	2719;"	macro
 sim	drivers\spl\stm8s.h	2728;"	macro
 sim	drivers\spl\stm8s.h	2738;"	macro

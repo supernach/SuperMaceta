@@ -121,7 +121,8 @@ typedef enum
 	INICIALIZADO, 			/**< hx711 listo  */
 	SINVALORCONVERSION, /**< hx711 sin calibrar */
 	SLEEP,							/**< hx711 durmiendo */
-	NUEVA_LECTURA				/**< hx711 nueva lectura disponible */
+	NUEVA_LECTURA,			/**< hx711 nueva lectura disponible */
+	TIMEOUT							/**< Timeout ocurrido */
 } HX711_Estado_e;
 
 /**

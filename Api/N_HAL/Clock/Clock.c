@@ -124,7 +124,7 @@ void DisableAllPeripherals(void)
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_UART1, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_AWU, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_ADC, DISABLE);
-  CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, DISABLE);
+  CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, ENABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER2, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER4, DISABLE);
 }

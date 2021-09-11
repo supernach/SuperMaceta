@@ -157,9 +157,14 @@ static @inline void fijarGanancia( HX711_t_ptr hx711 )
 static @inline void esperoDatosDisponibles( HX711_t_ptr hx711 )
 {
 	Timeout_Start( hx711->Timeout, 40 );
-	while( ( NHALgpio_Read( &hx711->Config.DOUT ) == true ) || ( hx711->Timeout->Estado == DISPARADO ) )
+	while( ( NHALgpio_Read( &hx711->Config.DOUT ) == true ) || ( hx711->Timeout->Config.Notificacion( ) == 0 ) )
 	{
-		Timeout_Check( hx711->Timeout );
+		
+	}
+	
+	if( hx711->Timeout->Config.Notificacion( ) )
+	{
+		hx711->Datos.Estado = TIMEOUT;
 	}
 	Timeout_Stop( hx711->Timeout );
 	_delay_us( HX711_TIEMPOCLOCK );
@@ -196,7 +201,10 @@ static @inline uint32_t leer( HX711_t_ptr hx711 )
 		
 		fijarGanancia( hx711 );
 		
-		hx711->Datos.Estado = NUEVA_LECTURA;
+		if( hx711->Datos.Estado != TIMEOUT )
+		{
+			hx711->Datos.Estado = NUEVA_LECTURA;
+		}
 	}
 		return semilla;
 }

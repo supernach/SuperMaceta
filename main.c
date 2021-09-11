@@ -44,6 +44,7 @@
 #include <stm8s.h>
 #include <AppConfig.h>
 
+//extern volatile uint8_t flagTimer1;
 /**
 /* @fn void DeInitAllGPIO
 /* @brief Resetear todos los puertos perifericos
@@ -82,7 +83,7 @@ static @inline void Pin_Init(void)
 	
 	Timeout_test.Puerto = GPIOC;
 	Timeout_test.Pin = GPIO_PIN_4;
-	NHALgpioConfig_SetType( &Timeout_test, GPIO_MODE_OUT_PP_HIGH_FAST );
+	NHALgpioConfig_SetType( &Timeout_test, GPIO_MODE_OUT_PP_HIGH_SLOW/*GPIO_MODE_OUT_PP_HIGH_FAST*/ );
 	NHALgpio_Init( &Timeout_test );
 }
 
@@ -119,7 +120,7 @@ static @inline void InicializacionCLK(void)
 */
 static @inline void InicializacionComponentes(void)
 {
-	Timeout_Init( &Timeout );
+	Timeout_Init( &Timeout, &getFlagTimer1 );
 	DHT11_Init( &SensorTempHum, &dht11_Lectura );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
 }
@@ -150,31 +151,23 @@ int main()
 {
 	Inicializacion_Total();
 	
-	//SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
-	
+	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 	while (1)
 	{
+		Timeout_Start( &Timeout, 1500 );
+
+		if( Timeout.Config.Notificacion() )
+		{
+			Timeout_Stop( &Timeout );
+			NHALgpio_Write( &Timeout_test, true );
+			NHALgpio_Write( &Timeout_test, false );
+		} 
 		//SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
 		
 		//SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
 		
 		//_delay_ms( 1000 );
-		if( Timeout.Estado == INACTIVO )
-		{
-			NHALgpio_Write( &Timeout_test, false );
-			Timeout_Start( &Timeout, 80 );
-		}
-		
-		Timeout_Check( &Timeout );
-		if( Timeout.Estado == DISPARADO )
-		{
-			NHALgpio_Write( &Timeout_test, true );
-			Timeout_Stop( &Timeout );
-		}
-		else
-		{
-				NHALgpio_Write( &Timeout_test, false );
-		}
+	
 
 	}
 }

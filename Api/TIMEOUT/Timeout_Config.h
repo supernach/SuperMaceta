@@ -78,6 +78,14 @@ typedef struct Timeout_Config Timeout_Config_t;
 typedef struct Timeout_Config_Timer Timeout_Config_Timer_t;
 
 /**
+* @typedef Timeout_Notificacion
+* @brief <descripcion>
+*
+* @see <referencias>
+*/
+typedef uint8_t( *Timeout_Notificacion )( void );
+
+/**
 * @typedef Timeout_Config_Timer_e
 * @brief <descripcion>
 *
@@ -125,6 +133,7 @@ struct Timeout_Config_Timer
 struct Timeout_Config
 {
 	Timeout_Config_Timer_t Timer;
+	Timeout_Notificacion Notificacion;
 };
 
 /******************************************************************************

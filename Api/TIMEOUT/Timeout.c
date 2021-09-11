@@ -103,13 +103,15 @@ static @inline uint16_t tick1us( void )
 * <hr>
 *
 *******************************************************************************/
-void Timeout_Init( Timeout_t_ptr timeout )
+void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion tm_Notificacion )
 {
 	timeout->Config.Timer.Numero = TIMER1;
 	timeout->Config.Timer.Canal = CANAL1;
+	timeout->Config.Notificacion = tm_Notificacion;
 	timeout->Estado = INACTIVO;
 	timeout->ValorDesborde = 1;
 }
+
 
 /******************************************************************************
 * Function : Timeout_Start()
@@ -148,28 +150,110 @@ void Timeout_Init( Timeout_t_ptr timeout )
 *******************************************************************************/
 void Timeout_Start( Timeout_t_ptr timeout, uint16_t us )
 {
-	CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, ENABLE);
-	TIM1_DeInit();
-	TIM1_TimeBaseInit( 15, TIM1_COUNTERMODE_UP, 0xFFFF, 0);
+	if( timeout->Estado == INACTIVO )
+	{
+		TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
+		TIM1_Cmd( DISABLE );
 	
-	TIM1_Cmd( ENABLE );
-	timeout->ValorDesborde = us;
-	timeout->Estado = ACTIVO;
+		TIM1_TimeBaseInit( 15, TIM1_COUNTERMODE_UP, us, 0);
+		TIM1_ITConfig( TIM1_IT_UPDATE, ENABLE );
+		TIM1_Cmd( ENABLE );
+		enableInterrupts();
+	
+		timeout->ValorDesborde = us;
+		timeout->Estado = ACTIVO;
+	}
 }
 
+/******************************************************************************
+* Function : Timeout_Stop()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 void Timeout_Stop( Timeout_t_ptr timeout )
 {
-	CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, DISABLE);
-	TIM1_Cmd( DISABLE );
-	TIM1_DeInit();
+	TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
+	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
+	TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
 	
+	TIM1_Cmd( DISABLE );
+
+	setFlagTimer1( 0 );
 	timeout->ValorDesborde = 0;
 	timeout->Estado = INACTIVO;
 }
 
+/******************************************************************************
+* Function : Timeout_Check()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 void Timeout_Check( Timeout_t_ptr timeout )
 {
-	if(  TIM1_GetCounter() >= timeout->ValorDesborde )
+	volatile uint16_t ticks = 0;
+	ticks = TIM1_GetCounter();
+	
+	if(  ticks >= timeout->ValorDesborde )
 	{
 		timeout->Estado = DISPARADO;
 	}
