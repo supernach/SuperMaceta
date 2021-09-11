@@ -127,7 +127,7 @@ extern "C"{
 #endif
 
 
-void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion tm_Notificacion );
+void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset );
 void Timeout_Start( Timeout_t_ptr timeout, uint16_t us );
 void Timeout_Stop( Timeout_t_ptr timeout );
 void Timeout_Check( Timeout_t_ptr timeout );

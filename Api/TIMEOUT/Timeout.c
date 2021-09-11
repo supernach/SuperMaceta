@@ -103,11 +103,12 @@ static @inline uint16_t tick1us( void )
 * <hr>
 *
 *******************************************************************************/
-void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion tm_Notificacion )
+void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
 {
 	timeout->Config.Timer.Numero = TIMER1;
 	timeout->Config.Timer.Canal = CANAL1;
-	timeout->Config.Notificacion = tm_Notificacion;
+	timeout->Config.Notificacion = isr_Notificacion;
+	timeout->Config.ResetNotificacion = isr_Reset;
 	timeout->Estado = INACTIVO;
 	timeout->ValorDesborde = 1;
 }
@@ -208,7 +209,7 @@ void Timeout_Stop( Timeout_t_ptr timeout )
 	
 	TIM1_Cmd( DISABLE );
 
-	setFlagTimer1( 0 );
+	timeout->Config.ResetNotificacion( 0 );
 	timeout->ValorDesborde = 0;
 	timeout->Estado = INACTIVO;
 }

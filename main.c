@@ -120,7 +120,7 @@ static @inline void InicializacionCLK(void)
 */
 static @inline void InicializacionComponentes(void)
 {
-	Timeout_Init( &Timeout, &getFlagTimer1 );
+	Timeout_Init( &Timeout, &getFlagTimer1, &setFlagTimer1 );
 	DHT11_Init( &SensorTempHum, &dht11_Lectura );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
 }
