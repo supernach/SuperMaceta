@@ -1,11 +1,8 @@
-#ifndef TIMEOUT_H
-#define TIMEOUT_H
-
 /****************************************************************************
-* Title                 :   Timeout API
-* Filename              :   Timeout.h
+* Title                 :   Timer API
+* Filename              :   Timer.c
 * Author                :   SuperNach
-* Origin Date           :   9/09/2021
+* Origin Date           :   11/09/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,107 +31,89 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  9/09/21   1.0.0   SuperNach       Initial Release.
+*  11/09/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
-/** @file plantilla.h
+/** @file Timer.c
  *  @brief 
  */
 /******************************************************************************
 * Includes
 *******************************************************************************/
-#include <stm8s.h>
-#include <utils.h>
-#include <gpio.h>
 #include <timer.h>
-#include <Timeout_Config.h>
 
 /******************************************************************************
-* Constants
+* Module Preprocessor Constants
 *******************************************************************************/
 
 /******************************************************************************
-* Configuration
+* Module Preprocessor Macros
 *******************************************************************************/
 
 /******************************************************************************
-* Macros
+* Module Typedefs
 *******************************************************************************/
 
 /******************************************************************************
-* Typedefs
+* Module Variable Definitions
 *******************************************************************************/
-/**
-* @typedef Timeout_t
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef struct Timeout Timeout_t;
-
-/**
-* @typedef Timeout_t_ptr
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef Timeout_t* Timeout_t_ptr;
-
-/**
-* @typedef Timeout_Estado_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef enum
-{
-	INACTIVO,
-	ACTIVO,
-	DISPARADO
-}Timeout_Estado_e;
-
-/******************************************************************************
-* Struct
-*******************************************************************************/
-/**
-* @struct Timeout
-* @brief 
-*
-* @see
-*/
-struct Timeout
-{
-	Timeout_Config_t Config;
-	Timeout_Estado_e Estado;
-	uint16_t ValorDesborde;
-};
-
-/******************************************************************************
-* Variables
-*******************************************************************************/
-/**
-* @var 
-* @brief 
-*
-* @see
-*/
 
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
-#ifdef __cplusplus
-extern "C"{
-#endif
-
-
-void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset );
-void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos );
-void Timeout_Stop( Timeout_t_ptr timeout );
-void Timeout_Check( Timeout_t_ptr timeout );
-
-#ifdef __cplusplus
-} // extern "C"
-#endif 
-
-#endif
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+void Timer_Init( Timer_t_ptr timer )
+{
+	if( timer->Config.Timer == TIMER1 )
+	{
+		if( timer->Config.IT == SI )
+		{
+			TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
+		}
+		TIM1_Cmd( DISABLE );
+	
+		TIM1_TimeBaseInit( 15, TIM1_COUNTERMODE_UP, timer->Config.Tiempo, 0);
+		
+		if( timer->Config.IT == SI )
+		{
+			TIM1_ITConfig( TIM1_IT_UPDATE, ENABLE );
+		}
+		TIM1_Cmd( ENABLE );
+	}
+	enableInterrupts();
+}

@@ -44,7 +44,7 @@
 #include <stm8s.h>
 #include <AppConfig.h>
 
-//extern volatile uint8_t flagTimer1;
+
 /**
 /* @fn void DeInitAllGPIO
 /* @brief Resetear todos los puertos perifericos
@@ -120,7 +120,13 @@ static @inline void InicializacionCLK(void)
 */
 static @inline void InicializacionComponentes(void)
 {
-	Timeout_Init( &Timeout, &getFlagTimer1, &setFlagTimer1 );
+	timer_Timeout.Config.Timer = TIMER1;
+	timer_Timeout.Config.Canal = CANAL1;
+	timer_Timeout.Config.Modo = COUNTERUP;
+	timer_Timeout.Config.IT = SI;
+	timer_Timeout.Config.Tiempo = 1;
+	
+	Timeout_Init( &Timeout, &timer_Timeout, &getFlagTimer1, &setFlagTimer1 );
 	DHT11_Init( &SensorTempHum, &dht11_Lectura );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
 }

@@ -103,14 +103,13 @@ static @inline uint16_t tick1us( void )
 * <hr>
 *
 *******************************************************************************/
-void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
+void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
 {
-	timeout->Config.Timer.Numero = TIMER1;
-	timeout->Config.Timer.Canal = CANAL1;
 	timeout->Config.Notificacion = isr_Notificacion;
 	timeout->Config.ResetNotificacion = isr_Reset;
+	timeout->Config.Timer = timer;
 	timeout->Estado = INACTIVO;
-	timeout->ValorDesborde = 1;
+	timeout->ValorDesborde = timer->Config.Tiempo;
 }
 
 
@@ -149,19 +148,14 @@ void Timeout_Init( Timeout_t_ptr timeout, Timeout_Notificacion isr_Notificacion,
 * <hr>
 *
 *******************************************************************************/
-void Timeout_Start( Timeout_t_ptr timeout, uint16_t us )
+void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos )
 {
 	if( timeout->Estado == INACTIVO )
 	{
-		TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
-		TIM1_Cmd( DISABLE );
+		timeout->Config.Timer->Config.Tiempo = microsegundos;
+		Timer_Init( timeout->Config.Timer );
 	
-		TIM1_TimeBaseInit( 15, TIM1_COUNTERMODE_UP, us, 0);
-		TIM1_ITConfig( TIM1_IT_UPDATE, ENABLE );
-		TIM1_Cmd( ENABLE );
-		enableInterrupts();
-	
-		timeout->ValorDesborde = us;
+		timeout->ValorDesborde = timeout->Config.Timer->Config.Tiempo;
 		timeout->Estado = ACTIVO;
 	}
 }

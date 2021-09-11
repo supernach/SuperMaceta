@@ -49,6 +49,7 @@
 #include <stm8s.h>
 #include <Clock.h>
 #include <Gpio.h>
+#include <timer_config.h>
 #include <Dht11.h>
 #include <Hx711.h>
 #include <utils.h>
@@ -88,6 +89,14 @@ DHT11_t SensorTempHum;
 * @see HX711_t
 */
 HX711_t SensorPesaje;
+
+/**
+* @var tConfig_Timeout
+* @brief
+*
+* @see Timeout_t
+*/
+Timer_t timer_Timeout;
 
 /**
 * @var Timeout

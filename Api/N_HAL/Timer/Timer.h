@@ -1,11 +1,11 @@
-#ifndef TIMEOUT_H
-#define TIMEOUT_H
+#ifndef NHAL_TIMER_H
+#define NHAL_TIMER_H
 
 /****************************************************************************
-* Title                 :   Timeout API
-* Filename              :   Timeout.h
+* Title                 :   Timar API
+* Filename              :   Timer.h
 * Author                :   SuperNach
-* Origin Date           :   9/09/2021
+* Origin Date           :   11/09/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,21 +34,18 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  9/09/21   1.0.0   SuperNach       Initial Release.
+*  11/09/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
-/** @file plantilla.h
+/** @file Timer.h
  *  @brief 
  */
 /******************************************************************************
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <utils.h>
-#include <gpio.h>
-#include <timer.h>
-#include <Timeout_Config.h>
+#include <timer_config.h>
 
 /******************************************************************************
 * Constants
@@ -66,48 +63,33 @@
 * Typedefs
 *******************************************************************************/
 /**
-* @typedef Timeout_t
+* @typedef Timer_t
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef struct Timeout Timeout_t;
+typedef struct Timer Timer_t;
 
 /**
-* @typedef Timeout_t_ptr
+* @typedef Timer_t_ptr
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef Timeout_t* Timeout_t_ptr;
-
-/**
-* @typedef Timeout_Estado_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef enum
-{
-	INACTIVO,
-	ACTIVO,
-	DISPARADO
-}Timeout_Estado_e;
+typedef Timer_t* Timer_t_ptr;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
 /**
-* @struct Timeout
+* @struct Timer
 * @brief 
 *
 * @see
 */
-struct Timeout
+struct Timer
 {
-	Timeout_Config_t Config;
-	Timeout_Estado_e Estado;
-	uint16_t ValorDesborde;
+	Timer_Config_t Config;
 };
 
 /******************************************************************************
@@ -127,11 +109,7 @@ struct Timeout
 extern "C"{
 #endif
 
-
-void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset );
-void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos );
-void Timeout_Stop( Timeout_t_ptr timeout );
-void Timeout_Check( Timeout_t_ptr timeout );
+void Timer_Init( Timer_t_ptr timer );
 
 #ifdef __cplusplus
 } // extern "C"

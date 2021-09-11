@@ -70,14 +70,6 @@
 typedef struct Timeout_Config Timeout_Config_t;
 
 /**
-* @typedef Timeout_Config_Timer_t
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef struct Timeout_Config_Timer Timeout_Config_Timer_t;
-
-/**
 * @typedef Timeout_Notificacion
 * @brief <descripcion>
 *
@@ -93,30 +85,6 @@ typedef uint8_t( *Timeout_Notificacion )( void );
 */
 typedef void( *Timeout_ResetNotificacion )( uint8_t );
 
-/**
-* @typedef Timeout_Config_Timer_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef enum
-{
-	TIMER1,
-	TIMER2
-}Timeout_Config_Timer_e;
-
-/**
-* @typedef Timeout_Config_Canal_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef enum
-{
-	CANAL1,
-	CANAL2
-}Timeout_Config_Canal_e;
-
 /******************************************************************************
 * Struct
 *******************************************************************************/
@@ -126,21 +94,9 @@ typedef enum
 *
 * @see
 */
-struct Timeout_Config_Timer
-{
-	Timeout_Config_Timer_e Numero;
-	Timeout_Config_Canal_e Canal;
-};
-
-/**
-* @struct Timeout_Config
-* @brief 
-*
-* @see
-*/
 struct Timeout_Config
 {
-	Timeout_Config_Timer_t Timer;
+	Timer_t_ptr Timer;
 	Timeout_Notificacion Notificacion;
 	Timeout_ResetNotificacion ResetNotificacion;
 };
