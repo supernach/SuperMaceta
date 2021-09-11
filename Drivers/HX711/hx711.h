@@ -185,7 +185,7 @@ struct HX711
 {
 	HX711_Config_t Config;	/**< Configuracion del objeto hx711 */
 	HX711_Datos_t Datos;		/**< Datos del objeto hx711 */
-	Timeout_t* Timeout;
+	Timeout_t_ptr Timeout;
 	
 	HX711_fPtr Lectura;			/**< Puntero hacia la funcion de lectura */
 	HX711_fPtr Tarar;				/**< Puntero hacia la funcion de taraje */

@@ -105,7 +105,6 @@ Timer_t timer_Timeout;
 * @see Timeout_t
 */
 Timeout_t Timeout;
-Gpio_Config_t Timeout_test;
 
 /******************************************************************************
 * Function Prototypes

@@ -80,11 +80,6 @@ static @inline void Pin_Init(void)
 	
 	SensorPesaje.Config.PD_SCK.Puerto = GPIOD;
 	SensorPesaje.Config.PD_SCK.Pin = GPIO_PIN_3;
-	
-	Timeout_test.Puerto = GPIOC;
-	Timeout_test.Pin = GPIO_PIN_4;
-	NHALgpioConfig_SetType( &Timeout_test, GPIO_MODE_OUT_PP_HIGH_SLOW/*GPIO_MODE_OUT_PP_HIGH_FAST*/ );
-	NHALgpio_Init( &Timeout_test );
 }
 
 /**
@@ -160,20 +155,10 @@ int main()
 	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 	while (1)
 	{
-		Timeout_Start( &Timeout, 1500 );
-
-		if( Timeout.Config.Notificacion() )
-		{
-			Timeout_Stop( &Timeout );
-			NHALgpio_Write( &Timeout_test, true );
-			NHALgpio_Write( &Timeout_test, false );
-		} 
 		//SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
 		
-		//SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
+		SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
 		
 		//_delay_ms( 1000 );
-	
-
 	}
 }
