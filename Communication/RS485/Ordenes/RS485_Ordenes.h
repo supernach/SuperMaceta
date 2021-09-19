@@ -1,11 +1,11 @@
-#ifndef RS485_TRAMAS_H
-#define RS485_TRAMAS_H
+#ifndef RS485_ORDENES_H
+#define RS485_ORDENES_H
 
 /****************************************************************************
 * Title                 :   plantilla
 * Filename              :   plantilla.h
 * Author                :   SuperNach
-* Origin Date           :   19/09/2021
+* Origin Date           :   20/08/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,7 +34,7 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  19/09/21   1.0.0   SuperNach       Initial Release.
+*  20/08/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
@@ -45,7 +45,6 @@
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <rs485_ordenes.h>
 
 /******************************************************************************
 * Constants
@@ -63,71 +62,28 @@
 * Typedefs
 *******************************************************************************/
 /**
-* @typedef Trama_RX_t
+* @typedef <name>
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef struct Trama_RX Trama_RX_t;
+typedef struct RS485_Orden RS485_Orden_t;
 
-/**
-* @typedef Trama_TX_t
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef struct Trama_TX Trama_TX_t;
-
-/**
-* @typedef Trama_BROADCAST_t
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef struct Trama_BROADCAST Trama_BROADCAST_t;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
 /**
-* @struct Trama_RX
+* @struct RS485_Orden
 * @brief 
 *
 * @see
 */
-struct Trama_RX
+struct RS485_Orden
 {
-	uint8_t nNodo;
-	RS485_Orden_t OrdenDHT11;
-	RS485_Orden_t OrdenHX711;
+	uint8_t Funcion;
+	uint8_t Comando;
 };
-
-/**
-* @struct Trama_TX
-* @brief 
-*
-* @see
-*/
-struct Trama_TX
-{
-	uint8_t nNodo;
-	uint32_t LecturaDHT11;
-	uint32_t LecturaHX711;
-};
-
-/**
-* @struct Trama_BROADCAST 
-* @brief 
-*
-* @see
-*/
-struct Trama_BROADCAST
-{
-	uint8_t nNodo;
-	RS485_Orden_t Orden;
-};
-	
-
 /******************************************************************************
 * Variables
 *******************************************************************************/
