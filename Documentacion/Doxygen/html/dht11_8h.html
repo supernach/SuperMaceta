@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Referencia del Archivo Drivers/DHT11/dht11.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dht11_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo dht11.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Configura y proporciona acceso a la lectura del sensor de temperatura y humedad <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="utils_8h_source.html">utils.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_gpio_8h_source.html">Gpio.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_timeout_8h_source.html">timeout.h</a>&gt;</code><br />
+</div>
+<p><a href="dht11_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs_dht11___s_i.html">sDht11_SI</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define el esquema de la trama recibida al leer el sensor.  <a href="structs_dht11___s_i.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs_dht11_datos.html">sDht11Datos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define la composicion de datos del sensor.  <a href="structs_dht11_datos.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t11___config.html">DHT11_Config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define los pines elegidos para comunicar con el sensor.  <a href="struct_d_h_t11___config.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_h_t11.html">DHT11</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define el objeto principal para interactuar con un sensor <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>.  <a href="struct_d_h_t11.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a3e97a241d353f95774a23c235c6dc368"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_d_h_t11.html">DHT11</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368">DHT11_t</a></td></tr>
+<tr class="memdesc:a3e97a241d353f95774a23c235c6dc368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo que define el objeto principal <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>.  <a href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368">Más...</a><br /></td></tr>
+<tr class="separator:a3e97a241d353f95774a23c235c6dc368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bff03c163f4d9d48b1f0e977cb57c5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_d_h_t11___config.html">DHT11_Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#aa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</a></td></tr>
+<tr class="memdesc:aa4bff03c163f4d9d48b1f0e977cb57c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo que define la configuracion del sensor.  <a href="dht11_8h.html#aa4bff03c163f4d9d48b1f0e977cb57c5">Más...</a><br /></td></tr>
+<tr class="separator:aa4bff03c163f4d9d48b1f0e977cb57c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58e655246648a2659266698cd6ea634"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structs_dht11___s_i.html">sDht11_SI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634">DHT11_SI_t</a></td></tr>
+<tr class="memdesc:ad58e655246648a2659266698cd6ea634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo que define la trama recibida del sensor.  <a href="dht11_8h.html#ad58e655246648a2659266698cd6ea634">Más...</a><br /></td></tr>
+<tr class="separator:ad58e655246648a2659266698cd6ea634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3005d6c153733375aef0805f401fee"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structs_dht11_datos.html">sDht11Datos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#aec3005d6c153733375aef0805f401fee">DHT11_Datos_t</a></td></tr>
+<tr class="memdesc:aec3005d6c153733375aef0805f401fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo que define el esquema de datos del sensor.  <a href="dht11_8h.html#aec3005d6c153733375aef0805f401fee">Más...</a><br /></td></tr>
+<tr class="separator:aec3005d6c153733375aef0805f401fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cde3b7d6488ac04438cda9833420f56"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368">DHT11_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a></td></tr>
+<tr class="memdesc:a8cde3b7d6488ac04438cda9833420f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero a un objeto <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>.  <a href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">Más...</a><br /></td></tr>
+<tr class="separator:a8cde3b7d6488ac04438cda9833420f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0534084dc24b29582964fb110d3460db"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634">DHT11_SI_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#a0534084dc24b29582964fb110d3460db">DHT11_fPtr</a>) (<a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a>)</td></tr>
+<tr class="memdesc:a0534084dc24b29582964fb110d3460db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero a una funcion para realizar acciones de lectura.  <a href="dht11_8h.html#a0534084dc24b29582964fb110d3460db">Más...</a><br /></td></tr>
+<tr class="separator:a0534084dc24b29582964fb110d3460db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:aaa2d8e60a03c936f50ad271d0f0c4952"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</a> { <br />
+&#160;&#160;<a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e">dht11_INICIALIZADO</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4">dht11_COMUNICANDO</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3">dht11_CONEXION_OK</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5">dht11_MIDIENDO_H</a>
+, <br />
+&#160;&#160;<a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7">dht11_MIDIENDO_T</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842">dht11_CERRANDO_CONEXION</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7">dht11_SLEEP</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5">dht11_ESPERA_BAJO</a>
+, <br />
+&#160;&#160;<a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9">dht11_ESPERA_ALTO</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e">dht11_FALLO_AL_LEER</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2">dht11_FALLO_AL_COMUNICAR</a>
+, <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a">dht11_LECTURA_OK</a>
+, <br />
+&#160;&#160;<a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc">dht11_TIMEOUT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aaa2d8e60a03c936f50ad271d0f0c4952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distintos estados en los qu epuede encontrarse el sensor.  <a href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952">Más...</a><br /></td></tr>
+<tr class="separator:aaa2d8e60a03c936f50ad271d0f0c4952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a2876e9d69592befb3e7124df723635d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#a2876e9d69592befb3e7124df723635d9">DHT11_Init</a> (<a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a> dht11, <a class="el" href="dht11_8h.html#a0534084dc24b29582964fb110d3460db">DHT11_fPtr</a> Lectura, <a class="el" href="_timeout_8h.html#a22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</a> timeout)</td></tr>
+<tr class="separator:a2876e9d69592befb3e7124df723635d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13f84686ed64f57356ed7bccd942aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634">DHT11_SI_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht11_8h.html#aa13f84686ed64f57356ed7bccd942aaa">dht11_Lectura</a> (<a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a> sensor)</td></tr>
+<tr class="separator:aa13f84686ed64f57356ed7bccd942aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Configura y proporciona acceso a la lectura del sensor de temperatura y humedad <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>. </p>
+</div><h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a id="aa4bff03c163f4d9d48b1f0e977cb57c5" name="aa4bff03c163f4d9d48b1f0e977cb57c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4bff03c163f4d9d48b1f0e977cb57c5">&#9670;&nbsp;</a></span>DHT11_Config_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dht11_8h.html#aa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo que define la configuracion del sensor. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a> </dd></dl>
+
+</div>
+</div>
+<a id="aec3005d6c153733375aef0805f401fee" name="aec3005d6c153733375aef0805f401fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3005d6c153733375aef0805f401fee">&#9670;&nbsp;</a></span>DHT11_Datos_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dht11_8h.html#aec3005d6c153733375aef0805f401fee">DHT11_Datos_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo que define el esquema de datos del sensor. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="structs_dht11_datos.html" title="Define la composicion de datos del sensor.">sDht11Datos</a> </dd></dl>
+
+</div>
+</div>
+<a id="a0534084dc24b29582964fb110d3460db" name="a0534084dc24b29582964fb110d3460db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0534084dc24b29582964fb110d3460db">&#9670;&nbsp;</a></span>DHT11_fPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DHT11_fPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puntero a una funcion para realizar acciones de lectura. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634" title="Tipo que define la trama recibida del sensor.">DHT11_SI_t</a> </dd>
+<dd>
+<a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56" title="Puntero a un objeto DHT11.">DHT11_t_ptr</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad58e655246648a2659266698cd6ea634" name="ad58e655246648a2659266698cd6ea634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58e655246648a2659266698cd6ea634">&#9670;&nbsp;</a></span>DHT11_SI_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634">DHT11_SI_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo que define la trama recibida del sensor. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="structs_dht11___s_i.html" title="Define el esquema de la trama recibida al leer el sensor.">sDht11_SI</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3e97a241d353f95774a23c235c6dc368" name="a3e97a241d353f95774a23c235c6dc368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e97a241d353f95774a23c235c6dc368">&#9670;&nbsp;</a></span>DHT11_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368">DHT11_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo que define el objeto principal <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8cde3b7d6488ac04438cda9833420f56" name="a8cde3b7d6488ac04438cda9833420f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cde3b7d6488ac04438cda9833420f56">&#9670;&nbsp;</a></span>DHT11_t_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puntero a un objeto <a class="el" href="struct_d_h_t11.html" title="Define el objeto principal para interactuar con un sensor DHT11.">DHT11</a>. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368" title="Tipo que define el objeto principal DHT11.">DHT11_t</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
+<a id="aaa2d8e60a03c936f50ad271d0f0c4952" name="aaa2d8e60a03c936f50ad271d0f0c4952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2d8e60a03c936f50ad271d0f0c4952">&#9670;&nbsp;</a></span>DHT11_Estado_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="dht11_8h.html#aaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distintos estados en los qu epuede encontrarse el sensor. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e" name="aaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e"></a>dht11_INICIALIZADO&#160;</td><td class="fielddoc"><p >En proceso de inicializar </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4" name="aaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4"></a>dht11_COMUNICANDO&#160;</td><td class="fielddoc"><p >Comunicando con el sensor </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3" name="aaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3"></a>dht11_CONEXION_OK&#160;</td><td class="fielddoc"><p >Sensor y conexion ok </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5" name="aaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5"></a>dht11_MIDIENDO_H&#160;</td><td class="fielddoc"><p >Recibiendo valor humedad </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7" name="aaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7"></a>dht11_MIDIENDO_T&#160;</td><td class="fielddoc"><p >Recibiendo valor temperatura </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842" name="aaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842"></a>dht11_CERRANDO_CONEXION&#160;</td><td class="fielddoc"><p >Cerrando conexion con sensor </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7" name="aaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7"></a>dht11_SLEEP&#160;</td><td class="fielddoc"><p >Sensor dormido </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5" name="aaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5"></a>dht11_ESPERA_BAJO&#160;</td><td class="fielddoc"><p >Recibiendo datos. Espero sensor en bajo </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9" name="aaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9"></a>dht11_ESPERA_ALTO&#160;</td><td class="fielddoc"><p >Recibiendo datos. Espero sensor en alto </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e" name="aaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e"></a>dht11_FALLO_AL_LEER&#160;</td><td class="fielddoc"><p >Datos recibidos y crc no concuerdan </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2" name="aaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2"></a>dht11_FALLO_AL_COMUNICAR&#160;</td><td class="fielddoc"><p >Sensor no responde </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a" name="aaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a"></a>dht11_LECTURA_OK&#160;</td><td class="fielddoc"><p >Datos recibidos y crc concuerdan </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc" name="aaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc"></a>dht11_TIMEOUT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a2876e9d69592befb3e7124df723635d9" name="a2876e9d69592befb3e7124df723635d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2876e9d69592befb3e7124df723635d9">&#9670;&nbsp;</a></span>DHT11_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DHT11_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a>&#160;</td>
+          <td class="paramname"><em>dht11</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dht11_8h.html#a0534084dc24b29582964fb110d3460db">DHT11_fPtr</a>&#160;</td>
+          <td class="paramname"><em>Lectura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_timeout_8h.html#a22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</a>&#160;</td>
+          <td class="paramname"><em>Timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><b>Description:</b> </p>
+<p >Inicializa valores y funciones del sensor</p>
+<p >PRE-CONDITION: Clock habilitado PRE-CONDITION: Configuracion de la gpio creada PRE-CONDITION: funcion callback d electura creada</p>
+<p >POST-CONDITION: El sensor esta listo para usarse</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sensor</td><td>a inicializar </td></tr>
+    <tr><td class="paramname">Funcion</td><td>callback de lectura</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void</dd></dl>
+<p><b>Example</b> Ejemplo: </p><div class="fragment"><div class="line"><a class="code hl_function" href="dht11_8c.html#a86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</a>( &amp;dht11, &amp;<a class="code hl_function" href="dht11_8c.html#abc1f5f47365d834c03533a733cb911b9">dht11_Lectura</a> );</div>
+<div class="ttc" id="adht11_8c_html_a86dd6f57b9e0ef16f26c2e4f4c18df4a"><div class="ttname"><a href="dht11_8c.html#a86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</a></div><div class="ttdeci">void DHT11_Init(DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr Timeout)</div><div class="ttdef"><b>Definition:</b> dht11.c:256</div></div>
+<div class="ttc" id="adht11_8c_html_abc1f5f47365d834c03533a733cb911b9"><div class="ttname"><a href="dht11_8c.html#abc1f5f47365d834c03533a733cb911b9">dht11_Lectura</a></div><div class="ttdeci">DHT11_SI_t dht11_Lectura(DHT11_t_ptr dht11)</div><div class="ttdef"><b>Definition:</b> dht11.c:311</div></div>
+</div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd><a class="el" href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368" title="Tipo que define el objeto principal DHT11.">DHT11_t</a> </dd>
+<dd>
+<a class="el" href="dht11_8h.html#a0534084dc24b29582964fb110d3460db" title="Puntero a una funcion para realizar acciones de lectura.">DHT11_fPtr</a></dd></dl>
+<p><br  />
+<b> - CHANGELOG - </b></p>
+<table align="left" style="width:800px">
+<tr>
+<td>Fecha </td><td>Software Version </td><td>Creador </td><td>Descripcion  </td></tr>
+<tr>
+<td>20/08/2021 </td><td>1.0.0 </td><td>SN </td><td>Primera edicion  </td></tr>
+</table>
+<p><br  />
+<br  />
+ </p><hr  />
+ 
+</div>
+</div>
+<a id="aa13f84686ed64f57356ed7bccd942aaa" name="aa13f84686ed64f57356ed7bccd942aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13f84686ed64f57356ed7bccd942aaa">&#9670;&nbsp;</a></span>dht11_Lectura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634">DHT11_SI_t</a> dht11_Lectura </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dht11_8h.html#a8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</a>&#160;</td>
+          <td class="paramname"><em>dht11</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><b>Description:</b> </p>
+<p >Realiza y devuelve el valor de la lectura de temperatura y humedad</p>
+<p >PRE-CONDITION: Dht11 inicializado</p>
+<p >POST-CONDITION: Lectura valida o fallo</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sensor</td><td>sobre el que realizar la lectura</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Lectura</dd></dl>
+<p><b>Example</b> Ejemplo: </p><div class="fragment"><div class="line"><a class="code hl_function" href="dht11_8c.html#a86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</a>( &amp;dht11, &amp;<a class="code hl_function" href="dht11_8c.html#abc1f5f47365d834c03533a733cb911b9">dht11_Lectura</a> );</div>
+<div class="line">dht11.Datos.UltimaLectura = dht11.Lectura( &amp;dht11 );</div>
+</div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd><a class="el" href="dht11_8h.html#ad58e655246648a2659266698cd6ea634" title="Tipo que define la trama recibida del sensor.">DHT11_SI_t</a> </dd>
+<dd>
+<a class="el" href="dht11_8h.html#a3e97a241d353f95774a23c235c6dc368" title="Tipo que define el objeto principal DHT11.">DHT11_t</a></dd></dl>
+<p><br  />
+<b> - CHANGELOG - </b></p>
+<table align="left" style="width:800px">
+<tr>
+<td>Fecha </td><td>Software Version </td><td>Creador </td><td>Descripcion  </td></tr>
+<tr>
+<td>20/08/2021 </td><td>1.0.0 </td><td>SN </td><td>Primera edicion  </td></tr>
+</table>
+<p><br  />
+<br  />
+ </p><hr  />
+ 
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_5fc460d27da0b95beb93a0833f9675ec.html">DHT11</a></li><li class="navelem"><a class="el" href="dht11_8h.html">dht11.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

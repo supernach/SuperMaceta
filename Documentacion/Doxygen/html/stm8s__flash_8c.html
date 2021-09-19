@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Referencia del Archivo Drivers/SPL/stm8s_flash.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo stm8s_flash.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file contains all the functions for the FLASH peripheral.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="stm8s__flash_8h_source.html">stm8s_flash.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ga4ed67c8b1a35340c79c45e2a33929b78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m8_s___std_periph___driver.html#ga4ed67c8b1a35340c79c45e2a33929b78">FLASH_CLEAR_BYTE</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x00)</td></tr>
+<tr class="separator:ga4ed67c8b1a35340c79c45e2a33929b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fdab1bd900807c8a27910521c89ba3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m8_s___std_periph___driver.html#ga3fdab1bd900807c8a27910521c89ba3b">FLASH_SET_BYTE</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0xFF)</td></tr>
+<tr class="separator:ga3fdab1bd900807c8a27910521c89ba3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89727fe5caa11ee1ba6afe3b11d8808d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m8_s___std_periph___driver.html#ga89727fe5caa11ee1ba6afe3b11d8808d">OPERATION_TIMEOUT</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>)0xFFFF)</td></tr>
+<tr class="separator:ga89727fe5caa11ee1ba6afe3b11d8808d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:gad4100201744f55e313d155d9f94dc1a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gad4100201744f55e313d155d9f94dc1a1">FLASH_Unlock</a> (<a class="el" href="group___f_l_a_s_h___exported___types.html#ga2a698e5fed2b9738cfce0ef44c109e58">FLASH_MemType_TypeDef</a> FLASH_MemType)</td></tr>
+<tr class="memdesc:gad4100201744f55e313d155d9f94dc1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks the program or data EEPROM memory.  <a href="group___f_l_a_s_h___public__functions.html#gad4100201744f55e313d155d9f94dc1a1">Más...</a><br /></td></tr>
+<tr class="separator:gad4100201744f55e313d155d9f94dc1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3bb74434cacca6fef20f9558089c404"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gad3bb74434cacca6fef20f9558089c404">FLASH_Lock</a> (<a class="el" href="group___f_l_a_s_h___exported___types.html#ga2a698e5fed2b9738cfce0ef44c109e58">FLASH_MemType_TypeDef</a> FLASH_MemType)</td></tr>
+<tr class="memdesc:gad3bb74434cacca6fef20f9558089c404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the program or data EEPROM memory.  <a href="group___f_l_a_s_h___public__functions.html#gad3bb74434cacca6fef20f9558089c404">Más...</a><br /></td></tr>
+<tr class="separator:gad3bb74434cacca6fef20f9558089c404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3207ac8af8b3bece7a6414d08258ea5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gae3207ac8af8b3bece7a6414d08258ea5">FLASH_DeInit</a> (void)</td></tr>
+<tr class="memdesc:gae3207ac8af8b3bece7a6414d08258ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DeInitializes the FLASH registers to their default reset values.  <a href="group___f_l_a_s_h___public__functions.html#gae3207ac8af8b3bece7a6414d08258ea5">Más...</a><br /></td></tr>
+<tr class="separator:gae3207ac8af8b3bece7a6414d08258ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cb6c783c327fdd5ce5e2bc5373440d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga1cb6c783c327fdd5ce5e2bc5373440d2">FLASH_ITConfig</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga1cb6c783c327fdd5ce5e2bc5373440d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or Disables the Flash interrupt mode.  <a href="group___f_l_a_s_h___public__functions.html#ga1cb6c783c327fdd5ce5e2bc5373440d2">Más...</a><br /></td></tr>
+<tr class="separator:ga1cb6c783c327fdd5ce5e2bc5373440d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e9867ea0696794beb029d98d69d189d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga4e9867ea0696794beb029d98d69d189d">FLASH_EraseByte</a> (<a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> Address)</td></tr>
+<tr class="memdesc:ga4e9867ea0696794beb029d98d69d189d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases one byte in the program or data EEPROM memory.  <a href="group___f_l_a_s_h___public__functions.html#ga4e9867ea0696794beb029d98d69d189d">Más...</a><br /></td></tr>
+<tr class="separator:ga4e9867ea0696794beb029d98d69d189d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad66e105baffe3d005485857a4325a983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gad66e105baffe3d005485857a4325a983">FLASH_ProgramByte</a> (<a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> Address, <a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Data)</td></tr>
+<tr class="memdesc:gad66e105baffe3d005485857a4325a983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programs one byte in program or data EEPROM memory.  <a href="group___f_l_a_s_h___public__functions.html#gad66e105baffe3d005485857a4325a983">Más...</a><br /></td></tr>
+<tr class="separator:gad66e105baffe3d005485857a4325a983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a1e1ba6b5de25726d7460e03dcf377e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga4a1e1ba6b5de25726d7460e03dcf377e">FLASH_ReadByte</a> (<a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> Address)</td></tr>
+<tr class="memdesc:ga4a1e1ba6b5de25726d7460e03dcf377e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads any byte from flash memory.  <a href="group___f_l_a_s_h___public__functions.html#ga4a1e1ba6b5de25726d7460e03dcf377e">Más...</a><br /></td></tr>
+<tr class="separator:ga4a1e1ba6b5de25726d7460e03dcf377e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51cf5c75a6d09c4959aa86c69b26cf79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga51cf5c75a6d09c4959aa86c69b26cf79">FLASH_ProgramWord</a> (<a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> Address, <a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> Data)</td></tr>
+<tr class="memdesc:ga51cf5c75a6d09c4959aa86c69b26cf79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programs one word (4 bytes) in program or data EEPROM memory.  <a href="group___f_l_a_s_h___public__functions.html#ga51cf5c75a6d09c4959aa86c69b26cf79">Más...</a><br /></td></tr>
+<tr class="separator:ga51cf5c75a6d09c4959aa86c69b26cf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0605e2589b4e10801cceccb26682dd0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga0605e2589b4e10801cceccb26682dd0f">FLASH_ProgramOptionByte</a> (<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> Address, <a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Data)</td></tr>
+<tr class="memdesc:ga0605e2589b4e10801cceccb26682dd0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programs option byte.  <a href="group___f_l_a_s_h___public__functions.html#ga0605e2589b4e10801cceccb26682dd0f">Más...</a><br /></td></tr>
+<tr class="separator:ga0605e2589b4e10801cceccb26682dd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga534f25a4645a0a408f1f867aa38a723f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga534f25a4645a0a408f1f867aa38a723f">FLASH_EraseOptionByte</a> (<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> Address)</td></tr>
+<tr class="memdesc:ga534f25a4645a0a408f1f867aa38a723f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases option byte.  <a href="group___f_l_a_s_h___public__functions.html#ga534f25a4645a0a408f1f867aa38a723f">Más...</a><br /></td></tr>
+<tr class="separator:ga534f25a4645a0a408f1f867aa38a723f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3abe95d8fe80365a999c9c545bdfe367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga3abe95d8fe80365a999c9c545bdfe367">FLASH_ReadOptionByte</a> (<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> Address)</td></tr>
+<tr class="memdesc:ga3abe95d8fe80365a999c9c545bdfe367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads one option byte.  <a href="group___f_l_a_s_h___public__functions.html#ga3abe95d8fe80365a999c9c545bdfe367">Más...</a><br /></td></tr>
+<tr class="separator:ga3abe95d8fe80365a999c9c545bdfe367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed7ac730ca16a66132df5483925781f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gaed7ac730ca16a66132df5483925781f4">FLASH_SetLowPowerMode</a> (<a class="el" href="group___f_l_a_s_h___exported___types.html#ga5842482b60c5a4a1bc16a77525a0c2c3">FLASH_LPMode_TypeDef</a> FLASH_LPMode)</td></tr>
+<tr class="memdesc:gaed7ac730ca16a66132df5483925781f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the Flash behaviour in low power mode.  <a href="group___f_l_a_s_h___public__functions.html#gaed7ac730ca16a66132df5483925781f4">Más...</a><br /></td></tr>
+<tr class="separator:gaed7ac730ca16a66132df5483925781f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86c8df9d158f998c6afeef80a0542ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga86c8df9d158f998c6afeef80a0542ce3">FLASH_SetProgrammingTime</a> (<a class="el" href="group___f_l_a_s_h___exported___types.html#ga8ad12cc2599e8e65218df92e0804b296">FLASH_ProgramTime_TypeDef</a> FLASH_ProgTime)</td></tr>
+<tr class="memdesc:ga86c8df9d158f998c6afeef80a0542ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the fixed programming time.  <a href="group___f_l_a_s_h___public__functions.html#ga86c8df9d158f998c6afeef80a0542ce3">Más...</a><br /></td></tr>
+<tr class="separator:ga86c8df9d158f998c6afeef80a0542ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1637ab931d5c480e0b26fb7cfe8a277d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_l_a_s_h___exported___types.html#ga5842482b60c5a4a1bc16a77525a0c2c3">FLASH_LPMode_TypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga1637ab931d5c480e0b26fb7cfe8a277d">FLASH_GetLowPowerMode</a> (void)</td></tr>
+<tr class="memdesc:ga1637ab931d5c480e0b26fb7cfe8a277d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Flash behaviour type in low power mode.  <a href="group___f_l_a_s_h___public__functions.html#ga1637ab931d5c480e0b26fb7cfe8a277d">Más...</a><br /></td></tr>
+<tr class="separator:ga1637ab931d5c480e0b26fb7cfe8a277d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05e755247174e5f2c7a46e6521050533"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___f_l_a_s_h___exported___types.html#ga8ad12cc2599e8e65218df92e0804b296">FLASH_ProgramTime_TypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga05e755247174e5f2c7a46e6521050533">FLASH_GetProgrammingTime</a> (void)</td></tr>
+<tr class="memdesc:ga05e755247174e5f2c7a46e6521050533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed programming time.  <a href="group___f_l_a_s_h___public__functions.html#ga05e755247174e5f2c7a46e6521050533">Más...</a><br /></td></tr>
+<tr class="separator:ga05e755247174e5f2c7a46e6521050533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89be89293308a5cf6fb77561a9ccbfb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga89be89293308a5cf6fb77561a9ccbfb9">FLASH_GetBootSize</a> (void)</td></tr>
+<tr class="memdesc:ga89be89293308a5cf6fb77561a9ccbfb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Boot memory size in bytes.  <a href="group___f_l_a_s_h___public__functions.html#ga89be89293308a5cf6fb77561a9ccbfb9">Más...</a><br /></td></tr>
+<tr class="separator:ga89be89293308a5cf6fb77561a9ccbfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a077b655d41b8c8058d1d91b5b4d17f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga89136caac2e14c55151f527ac02daaff">FlagStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga9a077b655d41b8c8058d1d91b5b4d17f">FLASH_GetFlagStatus</a> (<a class="el" href="group___f_l_a_s_h___exported___types.html#ga745b516d2ac4f41bb683c72c40cf06bb">FLASH_Flag_TypeDef</a> FLASH_FLAG)</td></tr>
+<tr class="memdesc:ga9a077b655d41b8c8058d1d91b5b4d17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the specified SPI flag is set or not.  <a href="group___f_l_a_s_h___public__functions.html#ga9a077b655d41b8c8058d1d91b5b4d17f">Más...</a><br /></td></tr>
+<tr class="separator:ga9a077b655d41b8c8058d1d91b5b4d17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0421e9fcab08335156b311172949bda6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga0421e9fcab08335156b311172949bda6">UNUSED</a> (FLASH_MemType)</td></tr>
+<tr class="separator:ga0421e9fcab08335156b311172949bda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga214f9bb39d6059b461501664e3101926"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga214f9bb39d6059b461501664e3101926">while</a> ((flagstatus==0x00) &amp;&amp;(<a class="el" href="group___f_l_a_s_h___public__functions.html#ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae">timeout</a> !=0x00))</td></tr>
+<tr class="separator:ga214f9bb39d6059b461501664e3101926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee1bcbaaed61876b4e38e365c986534e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gaee1bcbaaed61876b4e38e365c986534e">if</a> (<a class="el" href="group___f_l_a_s_h___public__functions.html#ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae">timeout</a>==0x00)</td></tr>
+<tr class="separator:gaee1bcbaaed61876b4e38e365c986534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac34fd8129958d2cdae5ab5a5efb158e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gac34fd8129958d2cdae5ab5a5efb158e8">return</a> ((<a class="el" href="group___f_l_a_s_h___exported___types.html#ga1ef8018415efcf2c925ef84aa24c9541">FLASH_Status_TypeDef</a>) flagstatus)</td></tr>
+<tr class="separator:gac34fd8129958d2cdae5ab5a5efb158e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec337ee5f39760c2dfd270ac9d610b4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gaec337ee5f39760c2dfd270ac9d610b4f">assert_param</a> (<a class="el" href="group___f_l_a_s_h___private___macros.html#gaae738a21b75a1af104e567a3918aaef9">IS_MEMORY_TYPE_OK</a>(FLASH_MemType))</td></tr>
+<tr class="separator:gaec337ee5f39760c2dfd270ac9d610b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46eb16ce508f720ce21a800eeb1c2826"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga46eb16ce508f720ce21a800eeb1c2826">if</a> (FLASH_MemType==<a class="el" href="group___f_l_a_s_h___exported___types.html#gga2a698e5fed2b9738cfce0ef44c109e58a1c8f4134115522bc662131cf3d4a9009">FLASH_MEMTYPE_PROG</a>)</td></tr>
+<tr class="separator:ga46eb16ce508f720ce21a800eeb1c2826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85a7131a643bdc6c05274cc78492ca63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga85a7131a643bdc6c05274cc78492ca63">IN_RAM</a> (void FLASH_ProgramBlock(<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> BlockNum, <a class="el" href="group___f_l_a_s_h___exported___types.html#ga2a698e5fed2b9738cfce0ef44c109e58">FLASH_MemType_TypeDef</a> FLASH_MemType, <a class="el" href="group___f_l_a_s_h___exported___types.html#ga1e86181281cd4fca8e74de7343f99446">FLASH_ProgramMode_TypeDef</a> FLASH_ProgMode, <a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *Buffer))</td></tr>
+<tr class="memdesc:ga85a7131a643bdc6c05274cc78492ca63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programs a memory block.  <a href="group___f_l_a_s_h___public__functions.html#ga85a7131a643bdc6c05274cc78492ca63">Más...</a><br /></td></tr>
+<tr class="separator:ga85a7131a643bdc6c05274cc78492ca63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae">timeout</a> = <a class="el" href="group___s_t_m8_s___std_periph___driver.html#ga89727fe5caa11ee1ba6afe3b11d8808d">OPERATION_TIMEOUT</a></td></tr>
+<tr class="memdesc:ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a Flash operation to complete.  <a href="group___f_l_a_s_h___public__functions.html#ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae">Más...</a><br /></td></tr>
+<tr class="separator:ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafcc663f22a72e452b7733af1f0755407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> <a class="el" href="group___s_t_m8_s___std_periph___driver.html#ga1e44c0b03b9a8fa8fca626d23bd66851">PointerAttr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gafcc663f22a72e452b7733af1f0755407">pwFlash</a></td></tr>
+<tr class="memdesc:gafcc663f22a72e452b7733af1f0755407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a block in the program or data memory.  <a href="group___f_l_a_s_h___public__functions.html#gafcc663f22a72e452b7733af1f0755407">Más...</a><br /></td></tr>
+<tr class="separator:gafcc663f22a72e452b7733af1f0755407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0544c3fe466e421738dae463968b70ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga0544c3fe466e421738dae463968b70ba">else</a></td></tr>
+<tr class="separator:ga0544c3fe466e421738dae463968b70ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5cc8ba28e1c9276897b230005a843028"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#ga5cc8ba28e1c9276897b230005a843028">startaddress</a> = <a class="el" href="group___f_l_a_s_h___exported___constants.html#ga0f3b6e5b0a2815791f85743901918022">FLASH_DATA_START_PHYSICAL_ADDRESS</a></td></tr>
+<tr class="separator:ga5cc8ba28e1c9276897b230005a843028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacc71459e4c17a6da18dfb3167f385dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stm8s_8h.html#a844ea28ba1e0a5a0e497f16b61ea306b">FLASH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_l_a_s_h___public__functions.html#gaacc71459e4c17a6da18dfb3167f385dc">CR2</a> = <a class="el" href="group___f_l_a_s_h___registers___bits___definition.html#gab2357de72a300a00e6d60de621f7440c">FLASH_CR2_ERASE</a></td></tr>
+<tr class="separator:gaacc71459e4c17a6da18dfb3167f385dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >This file contains all the functions for the FLASH peripheral. </p>
+<dl class="section author"><dt>Autor</dt><dd>MCD Application Team </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>V2.3.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>16-June-2017</dd></dl>
+<dl class="section attention"><dt>Atención</dt><dd></dd></dl>
+<h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
+<p >Licensed under MCD-ST Liberty SW License Agreement V2, (the "License"); You may not use this file except in compliance with the License. You may obtain a copy of the License at: </p><pre class="fragment">   http://www.st.com/software_license_agreement_liberty_v2
+</pre><p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

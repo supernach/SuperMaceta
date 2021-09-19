@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Fichero Fuente Drivers/SPL/stm8s_iwdg.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">stm8s_iwdg.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="stm8s__iwdg_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef __STM8S_IWDG_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define __STM8S_IWDG_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="stm8s_8h.html">stm8s.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group___i_w_d_g___private___define.html#gaeb6bc86716057c4f3069e9544575ab84">   46</a></span><span class="preprocessor">#define IWDG_KEY_REFRESH    ((uint8_t)0xAA)  </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group___i_w_d_g___private___define.html#ga493295d56bb62752982234755612386f">   51</a></span><span class="preprocessor">#define IWDG_KEY_ENABLE     ((uint8_t)0xCC)  </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group___i_w_d_g___private___macros.html#ga640b37a899d5647ffe8db0435bcdde77">   65</a></span><span class="preprocessor">#define IS_IWDG_PRESCALER_OK(VALUE) (((VALUE) == IWDG_Prescaler_4   ) || \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">                                     ((VALUE) == IWDG_Prescaler_8   ) || \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">                                     ((VALUE) == IWDG_Prescaler_16  ) || \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">                                     ((VALUE) == IWDG_Prescaler_32  ) || \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">                                     ((VALUE) == IWDG_Prescaler_64  ) || \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">                                     ((VALUE) == IWDG_Prescaler_128 ) || \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">                                     ((VALUE) == IWDG_Prescaler_256))</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group___i_w_d_g___private___macros.html#gaf8c1b7e2599dd8a95fd8261c0e9af2cc">   77</a></span><span class="preprocessor">#define IS_IWDG_WRITEACCESS_MODE_OK(MODE) (((MODE) == IWDG_WriteAccess_Enable) || ((MODE) == IWDG_WriteAccess_Disable))</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ga48dcf1c03fe67bcd52e0e45d739c7e13">   88</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ac026cc98de8869e1f5f831d2d0a16c71">   90</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ac026cc98de8869e1f5f831d2d0a16c71">IWDG_WriteAccess_Enable</a>  = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x55, </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ae4e8de0a83e73486c23fc863b48b0773">IWDG_WriteAccess_Disable</a> = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x00  </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ae4e8de0a83e73486c23fc863b48b0773">   92</a></span>} <a class="code hl_enumeration" href="group___i_w_d_g___exported___types.html#ga48dcf1c03fe67bcd52e0e45d739c7e13">IWDG_WriteAccess_TypeDef</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#gae0636527cdb794fce2873f5f29ff665c">   95</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caf489f1cddbc066f3c3bcdc28ae57acc9">   97</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caf489f1cddbc066f3c3bcdc28ae57acc9">IWDG_Prescaler_4</a>   = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x00, </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaefb2c5ddcdef62f1a195309e162c680">   98</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaefb2c5ddcdef62f1a195309e162c680">IWDG_Prescaler_8</a>   = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x01, </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca95dee9c8d6d2393ab0d0173c42d23434">   99</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca95dee9c8d6d2393ab0d0173c42d23434">IWDG_Prescaler_16</a>  = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x02, </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca5812560698ca1e05e75c0d465872fe24">  100</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca5812560698ca1e05e75c0d465872fe24">IWDG_Prescaler_32</a>  = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x03, </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaee9d63d79741d4168aaf7353b577dec">  101</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaee9d63d79741d4168aaf7353b577dec">IWDG_Prescaler_64</a>  = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x04, </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca69024032b84d61597508cb920931355d">  102</a></span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca69024032b84d61597508cb920931355d">IWDG_Prescaler_128</a> = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x05, </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <a class="code hl_enumvalue" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca1d281cedc79946c2c3146cbffc8a46cd">IWDG_Prescaler_256</a> = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x06  </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca1d281cedc79946c2c3146cbffc8a46cd">  104</a></span>} <a class="code hl_enumeration" href="group___i_w_d_g___exported___types.html#gae0636527cdb794fce2873f5f29ff665c">IWDG_Prescaler_TypeDef</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_w_d_g___exported___functions.html#ga6d0fd5e5aa35335fed842b6a5acedd4c">IWDG_WriteAccessCmd</a>(<a class="code hl_enumeration" href="group___i_w_d_g___exported___types.html#ga48dcf1c03fe67bcd52e0e45d739c7e13">IWDG_WriteAccess_TypeDef</a> IWDG_WriteAccess);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_w_d_g___exported___functions.html#ga6ac608d9b248753dd41ca8a5bc88189a">IWDG_SetPrescaler</a>(<a class="code hl_enumeration" href="group___i_w_d_g___exported___types.html#gae0636527cdb794fce2873f5f29ff665c">IWDG_Prescaler_TypeDef</a> IWDG_Prescaler);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_w_d_g___exported___functions.html#ga47510486822000d8175cf4d5d2188af7">IWDG_SetReload</a>(<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> IWDG_Reload);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_w_d_g___exported___functions.html#ga7147ebabdc3fef97f532b171a4e70d49">IWDG_ReloadCounter</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___i_w_d_g___exported___functions.html#ga479b2921c86f8c67b819f5c4bea6bdb6">IWDG_Enable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#endif </span><span class="comment">/* __STM8S_IWDG_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span></div>
+<div class="ttc" id="agroup___exported__types_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> stm8s.h:216</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___functions_html_ga47510486822000d8175cf4d5d2188af7"><div class="ttname"><a href="group___i_w_d_g___exported___functions.html#ga47510486822000d8175cf4d5d2188af7">IWDG_SetReload</a></div><div class="ttdeci">void IWDG_SetReload(uint8_t IWDG_Reload)</div><div class="ttdoc">Sets IWDG Reload value.</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.c:78</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___functions_html_ga479b2921c86f8c67b819f5c4bea6bdb6"><div class="ttname"><a href="group___i_w_d_g___exported___functions.html#ga479b2921c86f8c67b819f5c4bea6bdb6">IWDG_Enable</a></div><div class="ttdeci">void IWDG_Enable(void)</div><div class="ttdoc">Enables IWDG.</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.c:99</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___functions_html_ga6ac608d9b248753dd41ca8a5bc88189a"><div class="ttname"><a href="group___i_w_d_g___exported___functions.html#ga6ac608d9b248753dd41ca8a5bc88189a">IWDG_SetPrescaler</a></div><div class="ttdeci">void IWDG_SetPrescaler(IWDG_Prescaler_TypeDef IWDG_Prescaler)</div><div class="ttdoc">Sets IWDG Prescaler value.</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.c:63</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___functions_html_ga6d0fd5e5aa35335fed842b6a5acedd4c"><div class="ttname"><a href="group___i_w_d_g___exported___functions.html#ga6d0fd5e5aa35335fed842b6a5acedd4c">IWDG_WriteAccessCmd</a></div><div class="ttdeci">void IWDG_WriteAccessCmd(IWDG_WriteAccess_TypeDef IWDG_WriteAccess)</div><div class="ttdoc">Enables or disables write access to Prescaler and Reload registers.</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.c:48</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___functions_html_ga7147ebabdc3fef97f532b171a4e70d49"><div class="ttname"><a href="group___i_w_d_g___exported___functions.html#ga7147ebabdc3fef97f532b171a4e70d49">IWDG_ReloadCounter</a></div><div class="ttdeci">void IWDG_ReloadCounter(void)</div><div class="ttdoc">Reloads IWDG counter.</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.c:89</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ga48dcf1c03fe67bcd52e0e45d739c7e13"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ga48dcf1c03fe67bcd52e0e45d739c7e13">IWDG_WriteAccess_TypeDef</a></div><div class="ttdeci">IWDG_WriteAccess_TypeDef</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:89</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_gae0636527cdb794fce2873f5f29ff665c"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#gae0636527cdb794fce2873f5f29ff665c">IWDG_Prescaler_TypeDef</a></div><div class="ttdeci">IWDG_Prescaler_TypeDef</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:96</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_gga48dcf1c03fe67bcd52e0e45d739c7e13ac026cc98de8869e1f5f831d2d0a16c71"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ac026cc98de8869e1f5f831d2d0a16c71">IWDG_WriteAccess_Enable</a></div><div class="ttdeci">@ IWDG_WriteAccess_Enable</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:90</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_gga48dcf1c03fe67bcd52e0e45d739c7e13ae4e8de0a83e73486c23fc863b48b0773"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ae4e8de0a83e73486c23fc863b48b0773">IWDG_WriteAccess_Disable</a></div><div class="ttdeci">@ IWDG_WriteAccess_Disable</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:91</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665ca1d281cedc79946c2c3146cbffc8a46cd"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca1d281cedc79946c2c3146cbffc8a46cd">IWDG_Prescaler_256</a></div><div class="ttdeci">@ IWDG_Prescaler_256</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:103</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665ca5812560698ca1e05e75c0d465872fe24"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca5812560698ca1e05e75c0d465872fe24">IWDG_Prescaler_32</a></div><div class="ttdeci">@ IWDG_Prescaler_32</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:100</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665ca69024032b84d61597508cb920931355d"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca69024032b84d61597508cb920931355d">IWDG_Prescaler_128</a></div><div class="ttdeci">@ IWDG_Prescaler_128</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:102</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665ca95dee9c8d6d2393ab0d0173c42d23434"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca95dee9c8d6d2393ab0d0173c42d23434">IWDG_Prescaler_16</a></div><div class="ttdeci">@ IWDG_Prescaler_16</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:99</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665caaee9d63d79741d4168aaf7353b577dec"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaee9d63d79741d4168aaf7353b577dec">IWDG_Prescaler_64</a></div><div class="ttdeci">@ IWDG_Prescaler_64</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:101</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665caaefb2c5ddcdef62f1a195309e162c680"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaefb2c5ddcdef62f1a195309e162c680">IWDG_Prescaler_8</a></div><div class="ttdeci">@ IWDG_Prescaler_8</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:98</div></div>
+<div class="ttc" id="agroup___i_w_d_g___exported___types_html_ggae0636527cdb794fce2873f5f29ff665caf489f1cddbc066f3c3bcdc28ae57acc9"><div class="ttname"><a href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caf489f1cddbc066f3c3bcdc28ae57acc9">IWDG_Prescaler_4</a></div><div class="ttdeci">@ IWDG_Prescaler_4</div><div class="ttdef"><b>Definition:</b> stm8s_iwdg.h:97</div></div>
+<div class="ttc" id="astm8s_8h_html"><div class="ttname"><a href="stm8s_8h.html">stm8s.h</a></div><div class="ttdoc">This file contains all HW registers definitions and memory mapping.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

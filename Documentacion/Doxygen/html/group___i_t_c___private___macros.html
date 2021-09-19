@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: ITC_Private_Macros</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a>  </div>
+  <div class="headertitle"><div class="title">ITC_Private_Macros</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Macros used by the assert function in order to check the different functions parameters.  
+<a href="#details">Más...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:gacdf5cf005dc65e2bc3bfc12bd825c0cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___private___macros.html#gacdf5cf005dc65e2bc3bfc12bd825c0cf">IS_ITC_IRQ_OK</a>(IRQ)&#160;&#160;&#160;((IRQ) &lt;= (<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)24)</td></tr>
+<tr class="separator:gacdf5cf005dc65e2bc3bfc12bd825c0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c680e2ed8d38c3a5f4acd709edcccc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___private___macros.html#ga6c680e2ed8d38c3a5f4acd709edcccc6">IS_ITC_PRIORITY_OK</a>(PriorityValue)</td></tr>
+<tr class="separator:ga6c680e2ed8d38c3a5f4acd709edcccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b2f03b8d319487fea35b11a6f5e2502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___private___macros.html#ga8b2f03b8d319487fea35b11a6f5e2502">IS_ITC_INTERRUPTS_DISABLED</a>&#160;&#160;&#160;(<a class="el" href="group___i_t_c___exported___functions.html#ga3507955493a20af5edf731c7606c5a7a">ITC_GetSoftIntStatus</a>() == <a class="el" href="group___i_t_c___exported___constants.html#gadf3cb88d1a6a5cbf5cf033936b83f7f0">CPU_SOFT_INT_DISABLED</a>)</td></tr>
+<tr class="separator:ga8b2f03b8d319487fea35b11a6f5e2502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<p >Macros used by the assert function in order to check the different functions parameters. </p>
+<h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="ga8b2f03b8d319487fea35b11a6f5e2502" name="ga8b2f03b8d319487fea35b11a6f5e2502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b2f03b8d319487fea35b11a6f5e2502">&#9670;&nbsp;</a></span>IS_ITC_INTERRUPTS_DISABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_ITC_INTERRUPTS_DISABLED&#160;&#160;&#160;(<a class="el" href="group___i_t_c___exported___functions.html#ga3507955493a20af5edf731c7606c5a7a">ITC_GetSoftIntStatus</a>() == <a class="el" href="group___i_t_c___exported___constants.html#gadf3cb88d1a6a5cbf5cf033936b83f7f0">CPU_SOFT_INT_DISABLED</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gacdf5cf005dc65e2bc3bfc12bd825c0cf" name="gacdf5cf005dc65e2bc3bfc12bd825c0cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdf5cf005dc65e2bc3bfc12bd825c0cf">&#9670;&nbsp;</a></span>IS_ITC_IRQ_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_ITC_IRQ_OK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IRQ</td><td>)</td>
+          <td>&#160;&#160;&#160;((IRQ) &lt;= (<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)24)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6c680e2ed8d38c3a5f4acd709edcccc6" name="ga6c680e2ed8d38c3a5f4acd709edcccc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c680e2ed8d38c3a5f4acd709edcccc6">&#9670;&nbsp;</a></span>IS_ITC_PRIORITY_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_ITC_PRIORITY_OK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PriorityValue</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">  (((PriorityValue) == <a class="code hl_enumvalue" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367cacf2ff0fe1316fed188a186da51e86564">ITC_PRIORITYLEVEL_0</a>) || \</div>
+<div class="line">   ((PriorityValue) == <a class="code hl_enumvalue" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367caa1b8e7e8a1fbcfeba6545c3d9aa88cf7">ITC_PRIORITYLEVEL_1</a>) || \</div>
+<div class="line">   ((PriorityValue) == <a class="code hl_enumvalue" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367ca3fb749cb5801dd74440d405875822684">ITC_PRIORITYLEVEL_2</a>) || \</div>
+<div class="line">   ((PriorityValue) == <a class="code hl_enumvalue" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367ca7850c304d0fcbb82571cbc7a30f45047">ITC_PRIORITYLEVEL_3</a>))</div>
+<div class="ttc" id="agroup___i_t_c___exported___types_html_ggad0fc5e0bd0301dcdb97ebf1b54ea367ca3fb749cb5801dd74440d405875822684"><div class="ttname"><a href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367ca3fb749cb5801dd74440d405875822684">ITC_PRIORITYLEVEL_2</a></div><div class="ttdeci">@ ITC_PRIORITYLEVEL_2</div><div class="ttdef"><b>Definition:</b> stm8s_itc.h:132</div></div>
+<div class="ttc" id="agroup___i_t_c___exported___types_html_ggad0fc5e0bd0301dcdb97ebf1b54ea367ca7850c304d0fcbb82571cbc7a30f45047"><div class="ttname"><a href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367ca7850c304d0fcbb82571cbc7a30f45047">ITC_PRIORITYLEVEL_3</a></div><div class="ttdeci">@ ITC_PRIORITYLEVEL_3</div><div class="ttdef"><b>Definition:</b> stm8s_itc.h:133</div></div>
+<div class="ttc" id="agroup___i_t_c___exported___types_html_ggad0fc5e0bd0301dcdb97ebf1b54ea367caa1b8e7e8a1fbcfeba6545c3d9aa88cf7"><div class="ttname"><a href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367caa1b8e7e8a1fbcfeba6545c3d9aa88cf7">ITC_PRIORITYLEVEL_1</a></div><div class="ttdeci">@ ITC_PRIORITYLEVEL_1</div><div class="ttdef"><b>Definition:</b> stm8s_itc.h:131</div></div>
+<div class="ttc" id="agroup___i_t_c___exported___types_html_ggad0fc5e0bd0301dcdb97ebf1b54ea367cacf2ff0fe1316fed188a186da51e86564"><div class="ttname"><a href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367cacf2ff0fe1316fed188a186da51e86564">ITC_PRIORITYLEVEL_0</a></div><div class="ttdeci">@ ITC_PRIORITYLEVEL_0</div><div class="ttdef"><b>Definition:</b> stm8s_itc.h:130</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

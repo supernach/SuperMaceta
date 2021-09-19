@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Referencia del Archivo Drivers/HX711/hx711.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('hx711_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo hx711.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Configura y proporciona acceso a la lectura del sensor adc de 24 bits.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="utils_8h_source.html">utils.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_gpio_8h_source.html">gpio.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_timeout_8h_source.html">timeout.h</a>&gt;</code><br />
+</div>
+<p><a href="hx711_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_x711___datos.html">HX711_Datos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contiene los datos que podemos obtener dle hx711.  <a href="struct_h_x711___datos.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_x711___config.html">HX711_Config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contiene elementos de configuracion para el hx711 y sus funciones.  <a href="struct_h_x711___config.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_x711.html">HX711</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto principal para interactuar con el hx711.  <a href="struct_h_x711.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:ga243fec3499adb318184d6dfc775d471d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_h_x711.html">HX711</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#ga243fec3499adb318184d6dfc775d471d">HX711_t</a></td></tr>
+<tr class="memdesc:ga243fec3499adb318184d6dfc775d471d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un tipo de dato <a class="el" href="struct_h_x711.html" title="Objeto principal para interactuar con el hx711.">HX711</a> para trabajar sobre el Contiene toda la funcionalidad del sensor.  <a href="group___h_x711.html#ga243fec3499adb318184d6dfc775d471d">Más...</a><br /></td></tr>
+<tr class="separator:ga243fec3499adb318184d6dfc775d471d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedf0be3fefff74aa155fe1f371df81a8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_h_x711___config.html">HX711_Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</a></td></tr>
+<tr class="memdesc:gaedf0be3fefff74aa155fe1f371df81a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo de dato para definir la configuracion del hx711.  <a href="group___h_x711.html#gaedf0be3fefff74aa155fe1f371df81a8">Más...</a><br /></td></tr>
+<tr class="separator:gaedf0be3fefff74aa155fe1f371df81a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b080b3cf8bfd49006abf285f711b889"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_h_x711___datos.html">HX711_Datos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</a></td></tr>
+<tr class="memdesc:ga0b080b3cf8bfd49006abf285f711b889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo de dato para definir la informacion a almacenar.  <a href="group___h_x711.html#ga0b080b3cf8bfd49006abf285f711b889">Más...</a><br /></td></tr>
+<tr class="separator:ga0b080b3cf8bfd49006abf285f711b889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41e4c007231820e467c5dfcb2f298084"><td class="memItemLeft" align="right" valign="top">typedef uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a>) (<a class="el" href="group___h_x711.html#ga243fec3499adb318184d6dfc775d471d">HX711_t</a> *)</td></tr>
+<tr class="separator:ga41e4c007231820e467c5dfcb2f298084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae379a330709bd3cfe8dff040b02c8b7a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_x711.html#ga243fec3499adb318184d6dfc775d471d">HX711_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</a></td></tr>
+<tr class="memdesc:gae379a330709bd3cfe8dff040b02c8b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero al tipo HX711_t.  <a href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">Más...</a><br /></td></tr>
+<tr class="separator:gae379a330709bd3cfe8dff040b02c8b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd5c6f1bb5950aaa81bf97d3c2556112"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_x711.html#ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#gacd5c6f1bb5950aaa81bf97d3c2556112">HX711_Datos_t_ptr</a></td></tr>
+<tr class="memdesc:gacd5c6f1bb5950aaa81bf97d3c2556112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero al tipo HX711_t.  <a href="group___h_x711.html#gacd5c6f1bb5950aaa81bf97d3c2556112">Más...</a><br /></td></tr>
+<tr class="separator:gacd5c6f1bb5950aaa81bf97d3c2556112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7666f28c15bcd886c56feea5977864e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___h_x711.html#gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#gaf7666f28c15bcd886c56feea5977864e">HX711_Config_t_ptr</a></td></tr>
+<tr class="memdesc:gaf7666f28c15bcd886c56feea5977864e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero al tipo HX711_t.  <a href="group___h_x711.html#gaf7666f28c15bcd886c56feea5977864e">Más...</a><br /></td></tr>
+<tr class="separator:gaf7666f28c15bcd886c56feea5977864e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ga3b06dedcf428c2a447fb32b6338f594e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</a> { <br />
+&#160;&#160;<a class="el" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">INICIALIZADO</a>
+, <a class="el" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">SINVALORCONVERSION</a>
+, <a class="el" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">SLEEP</a>
+, <a class="el" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">NUEVA_LECTURA</a>
+, <br />
+&#160;&#160;<a class="el" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">TIMEOUT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3b06dedcf428c2a447fb32b6338f594e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estados en los que puede encontrarse el <a class="el" href="struct_h_x711.html" title="Objeto principal para interactuar con el hx711.">HX711</a>.  <a href="group___h_x711.html#ga3b06dedcf428c2a447fb32b6338f594e">Más...</a><br /></td></tr>
+<tr class="separator:ga3b06dedcf428c2a447fb32b6338f594e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae933250036608b3d14c31720968d5bad"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</a> { <a class="el" href="group___h_x711.html#ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">CHANNELA_128</a>
+, <a class="el" href="group___h_x711.html#ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">CHANNELA_64</a>
+, <a class="el" href="group___h_x711.html#ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">CHANNELB_32</a>
+ }</td></tr>
+<tr class="memdesc:gae933250036608b3d14c31720968d5bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">La ganancia que queremos definir para las lecturas.  <a href="group___h_x711.html#gae933250036608b3d14c31720968d5bad">Más...</a><br /></td></tr>
+<tr class="separator:gae933250036608b3d14c31720968d5bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ga5e2f902a7b30390fa34d2bf2b05f0ef3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</a> (<a class="el" href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</a> hx711, <a class="el" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a> Lectura, <a class="el" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a> Tarar, <a class="el" href="_timeout_8h.html#a22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</a> <a class="el" href="struct_timeout.html">Timeout</a>)</td></tr>
+<tr class="separator:ga5e2f902a7b30390fa34d2bf2b05f0ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga324bf5567c5ec2e210404234fb5e5242"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</a> (<a class="el" href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</a> hx711)</td></tr>
+<tr class="separator:ga324bf5567c5ec2e210404234fb5e5242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecc0da5c8ae51a1eb3cb136c7c594a4f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_x711.html#gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</a> (<a class="el" href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</a> hx711)</td></tr>
+<tr class="separator:gaecc0da5c8ae51a1eb3cb136c7c594a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Configura y proporciona acceso a la lectura del sensor adc de 24 bits. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_58a76cc963dcd255a3d3f12ad2fa9465.html">HX711</a></li><li class="navelem"><a class="el" href="hx711_8h.html">hx711.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Fichero Fuente Drivers/HX711/hx711.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('hx711_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">hx711.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="hx711_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HX711_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HX711_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/****************************************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* Title                 :   HX711  DRIVER</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">* Filename              :   Hx711.h</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">* Author                :   SuperNach</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Origin Date           :   9/09/2021</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">* Version               :   1.0.0</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">* Compiler              :   Cosmic C</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">* Target                :   STM8</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">* Copyright             :   </span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">* All Rights Reserved</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">* @attention</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">* AQUI VA DECLARACIONES DERECHOS</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/****************************************************************************</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">* Doxygen C Template</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">* Copyright (c) 2013 - Jacob Beningo - All Rights Reserved</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">* Feel free to use this Doxygen Code Template at your own risk for your own</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">* purposes.  The latest license and updates for this Doxygen C template can be</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">* For updates, free software, training and to stay up to date on the latest</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">* embedded software techniques sign-up for Jacobs newsletter at</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">* http://www.beningo.com/814-2/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">* The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">* all copies or substantial portions of the Template.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/*************** SOURCE REVISION LOG *****************************************</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">*    Date    Version   Author         Description</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">*  9/09/21   1.0.0   SuperNach       Initial Release.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">*  </span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">*</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">* Includes</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &lt;<a class="code" href="utils_8h.html">utils.h</a>&gt;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &lt;<a class="code" href="_gpio_8h.html">gpio.h</a>&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;<a class="code" href="_timeout_8h.html">timeout.h</a>&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">* Constants</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t HX711_LONGITUDTRAMA = 24;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t HX711_TIEMPOCLOCK = 3;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t HX711_TIEMPOCLOCKSLEEP = 70;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">* Configuration</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">* Macros</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">* Typedefs</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group___h_x711.html#ga243fec3499adb318184d6dfc775d471d">   99</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_h_x711.html">HX711</a> <a class="code hl_struct" href="struct_h_x711.html">HX711_t</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group___h_x711.html#gaedf0be3fefff74aa155fe1f371df81a8">  105</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_h_x711___config.html">HX711_Config</a> <a class="code hl_struct" href="struct_h_x711___config.html">HX711_Config_t</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="group___h_x711.html#ga0b080b3cf8bfd49006abf285f711b889">  111</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_h_x711___datos.html">HX711_Datos</a> <a class="code hl_struct" href="struct_h_x711___datos.html">HX711_Datos_t</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">  118</a></span><span class="keyword">typedef</span> uint16_t(*<a class="code hl_typedef" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a>)(<a class="code hl_struct" href="struct_h_x711.html">HX711_t</a>*);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">  124</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="struct_h_x711.html">HX711_t</a>* <a class="code hl_typedef" href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group___h_x711.html#gacd5c6f1bb5950aaa81bf97d3c2556112">  130</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="struct_h_x711___datos.html">HX711_Datos_t</a>* <a class="code hl_typedef" href="group___h_x711.html#gacd5c6f1bb5950aaa81bf97d3c2556112">HX711_Datos_t_ptr</a>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group___h_x711.html#gaf7666f28c15bcd886c56feea5977864e">  136</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="struct_h_x711___config.html">HX711_Config_t</a>* <a class="code hl_typedef" href="group___h_x711.html#gaf7666f28c15bcd886c56feea5977864e">HX711_Config_t_ptr</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group___h_x711.html#ga3b06dedcf428c2a447fb32b6338f594e">  142</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">  144</a></span>  <a class="code hl_enumvalue" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">INICIALIZADO</a>,       </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">  145</a></span>  <a class="code hl_enumvalue" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">SINVALORCONVERSION</a>, </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">  146</a></span>  <a class="code hl_enumvalue" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">SLEEP</a>,              </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">  147</a></span>  <a class="code hl_enumvalue" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">NUEVA_LECTURA</a>,      </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <a class="code hl_enumvalue" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">TIMEOUT</a>             </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">  149</a></span>} <a class="code hl_enumeration" href="group___h_x711.html#ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group___h_x711.html#gae933250036608b3d14c31720968d5bad">  155</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group___h_x711.html#ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">  157</a></span>  <a class="code hl_enumvalue" href="group___h_x711.html#ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">CHANNELA_128</a>, </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="group___h_x711.html#ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">  158</a></span>  <a class="code hl_enumvalue" href="group___h_x711.html#ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">CHANNELA_64</a>,  </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <a class="code hl_enumvalue" href="group___h_x711.html#ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">CHANNELB_32</a>   </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group___h_x711.html#ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">  160</a></span>} <a class="code hl_enumeration" href="group___h_x711.html#gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">* Struct</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="struct_h_x711___datos.html">  171</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_h_x711___datos.html">HX711_Datos</a></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>{</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="struct_h_x711___datos.html#a6c0c13ba21079ed21363c817442a7389">  173</a></span>  uint32_t <a class="code hl_variable" href="struct_h_x711___datos.html#a6c0c13ba21079ed21363c817442a7389">UltimaLectura</a>; </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="struct_h_x711___datos.html#ae6e820be23d2ddec50532ecd92827e4c">  174</a></span>  <a class="code hl_enumeration" href="group___h_x711.html#ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</a> <a class="code hl_variable" href="struct_h_x711___datos.html#ae6e820be23d2ddec50532ecd92827e4c">Estado</a>;  </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>};</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html">  184</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_h_x711___config.html">HX711_Config</a></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>{</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html#adecab8ec6694738b9fc07a17e9ea60f5">  186</a></span>  <a class="code hl_struct" href="struct_gpio___config__t.html">Gpio_Config_t</a> <a class="code hl_variable" href="struct_h_x711___config.html#adecab8ec6694738b9fc07a17e9ea60f5">DOUT</a>;         </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html#ad23f57ec814bea3301f6271bc978f3c3">  187</a></span>  <a class="code hl_struct" href="struct_gpio___config__t.html">Gpio_Config_t</a> <a class="code hl_variable" href="struct_h_x711___config.html#ad23f57ec814bea3301f6271bc978f3c3">PD_SCK</a>;       </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html#a31842012140e37a11cbca628bd760dab">  189</a></span>  <a class="code hl_enumeration" href="group___h_x711.html#gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</a> <a class="code hl_variable" href="struct_h_x711___config.html#a31842012140e37a11cbca628bd760dab">Ganancia</a>;  </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html#ab4822d50ce6c66444969a14e37fea3b7">  190</a></span>  uint16_t <a class="code hl_variable" href="struct_h_x711___config.html#ab4822d50ce6c66444969a14e37fea3b7">ValorConversion</a>;   </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html#a22ce79c6f2694de604942b6ceb43c01a">  193</a></span>  uint32_t <a class="code hl_variable" href="struct_h_x711___config.html#a22ce79c6f2694de604942b6ceb43c01a">ValorZero</a>;         </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="struct_h_x711___config.html#afd4d615b3ad3796d58ef0ff2402c6627">  196</a></span>  uint16_t <a class="code hl_variable" href="struct_h_x711___config.html#afd4d615b3ad3796d58ef0ff2402c6627">ValorTara</a>;         </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="struct_h_x711.html">  207</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_h_x711.html">HX711</a></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>{</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="struct_h_x711.html#a91f722639ed0e1fbdc8a957b163280ba">  209</a></span>  <a class="code hl_struct" href="struct_h_x711___config.html">HX711_Config_t</a> <a class="code hl_variable" href="struct_h_x711.html#a91f722639ed0e1fbdc8a957b163280ba">Config</a>;  </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="struct_h_x711.html#a623fca772a5fa1e8240439472f1002c0">  210</a></span>  <a class="code hl_struct" href="struct_h_x711___datos.html">HX711_Datos_t</a> <a class="code hl_variable" href="struct_h_x711.html#a623fca772a5fa1e8240439472f1002c0">Datos</a>;   </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="struct_h_x711.html#abb295df56198a023972379bfc188cff5">  211</a></span>  <a class="code hl_struct" href="struct_timeout.html">Timeout_t_ptr</a> <a class="code hl_variable" href="struct_h_x711.html#abb295df56198a023972379bfc188cff5">Timeout</a>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="struct_h_x711.html#a1a4736592e3c8b2c7c80fbad979fdfaf">  213</a></span>  <a class="code hl_typedef" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a> <a class="code hl_variable" href="struct_h_x711.html#a1a4736592e3c8b2c7c80fbad979fdfaf">Lectura</a>;     </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="struct_h_x711.html#a841352c7ab2908ab44449f31d70e06a6">  214</a></span>  <a class="code hl_typedef" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a> <a class="code hl_variable" href="struct_h_x711.html#a841352c7ab2908ab44449f31d70e06a6">Tarar</a>;       </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>};</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">* Variables</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">* Function Prototypes</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___h_x711.html#ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</a>( <a class="code hl_struct" href="struct_h_x711.html">HX711_t_ptr</a> hx711, <a class="code hl_typedef" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a> Lectura, <a class="code hl_typedef" href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a> Tarar, <a class="code hl_struct" href="struct_timeout.html">Timeout_t_ptr</a> <a class="code hl_struct" href="struct_timeout.html">Timeout</a> );</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>uint16_t <a class="code hl_function" href="group___h_x711.html#ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</a>( <a class="code hl_struct" href="struct_h_x711.html">HX711_t_ptr</a> hx711 );</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>uint16_t <a class="code hl_function" href="group___h_x711.html#gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</a>( <a class="code hl_struct" href="struct_h_x711.html">HX711_t_ptr</a> hx711 );</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  </div>
+<div class="ttc" id="a_gpio_8h_html"><div class="ttname"><a href="_gpio_8h.html">Gpio.h</a></div><div class="ttdoc">Este archivo contiene las operaciones basicas sobre los puertos gpio.</div></div>
+<div class="ttc" id="a_timeout_8h_html"><div class="ttname"><a href="_timeout_8h.html">Timeout.h</a></div></div>
+<div class="ttc" id="agroup___h_x711_html_ga324bf5567c5ec2e210404234fb5e5242"><div class="ttname"><a href="group___h_x711.html#ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</a></div><div class="ttdeci">uint16_t hx711_Lectura(HX711_t_ptr hx711)</div><div class="ttdef"><b>Definition:</b> hx711.c:314</div></div>
+<div class="ttc" id="agroup___h_x711_html_ga3b06dedcf428c2a447fb32b6338f594e"><div class="ttname"><a href="group___h_x711.html#ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</a></div><div class="ttdeci">HX711_Estado_e</div><div class="ttdoc">Estados en los que puede encontrarse el HX711.</div><div class="ttdef"><b>Definition:</b> hx711.h:143</div></div>
+<div class="ttc" id="agroup___h_x711_html_ga41e4c007231820e467c5dfcb2f298084"><div class="ttname"><a href="group___h_x711.html#ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</a></div><div class="ttdeci">uint16_t(* HX711_fPtr)(HX711_t *)</div><div class="ttdef"><b>Definition:</b> hx711.h:118</div></div>
+<div class="ttc" id="agroup___h_x711_html_ga5e2f902a7b30390fa34d2bf2b05f0ef3"><div class="ttname"><a href="group___h_x711.html#ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</a></div><div class="ttdeci">void HX711_Init(HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout)</div><div class="ttdef"><b>Definition:</b> hx711.c:265</div></div>
+<div class="ttc" id="agroup___h_x711_html_gacd5c6f1bb5950aaa81bf97d3c2556112"><div class="ttname"><a href="group___h_x711.html#gacd5c6f1bb5950aaa81bf97d3c2556112">HX711_Datos_t_ptr</a></div><div class="ttdeci">HX711_Datos_t * HX711_Datos_t_ptr</div><div class="ttdoc">Puntero al tipo HX711_t.</div><div class="ttdef"><b>Definition:</b> hx711.h:130</div></div>
+<div class="ttc" id="agroup___h_x711_html_gae379a330709bd3cfe8dff040b02c8b7a"><div class="ttname"><a href="group___h_x711.html#gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</a></div><div class="ttdeci">HX711_t * HX711_t_ptr</div><div class="ttdoc">Puntero al tipo HX711_t.</div><div class="ttdef"><b>Definition:</b> hx711.h:124</div></div>
+<div class="ttc" id="agroup___h_x711_html_gae933250036608b3d14c31720968d5bad"><div class="ttname"><a href="group___h_x711.html#gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</a></div><div class="ttdeci">HX711_Ganancia_e</div><div class="ttdoc">La ganancia que queremos definir para las lecturas.</div><div class="ttdef"><b>Definition:</b> hx711.h:156</div></div>
+<div class="ttc" id="agroup___h_x711_html_gaecc0da5c8ae51a1eb3cb136c7c594a4f"><div class="ttname"><a href="group___h_x711.html#gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</a></div><div class="ttdeci">uint16_t hx711_Tarar(HX711_t_ptr hx711)</div><div class="ttdef"><b>Definition:</b> hx711.c:364</div></div>
+<div class="ttc" id="agroup___h_x711_html_gaf7666f28c15bcd886c56feea5977864e"><div class="ttname"><a href="group___h_x711.html#gaf7666f28c15bcd886c56feea5977864e">HX711_Config_t_ptr</a></div><div class="ttdeci">HX711_Config_t * HX711_Config_t_ptr</div><div class="ttdoc">Puntero al tipo HX711_t.</div><div class="ttdef"><b>Definition:</b> hx711.h:136</div></div>
+<div class="ttc" id="agroup___h_x711_html_gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99"><div class="ttname"><a href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">SINVALORCONVERSION</a></div><div class="ttdeci">@ SINVALORCONVERSION</div><div class="ttdef"><b>Definition:</b> hx711.h:145</div></div>
+<div class="ttc" id="agroup___h_x711_html_gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b"><div class="ttname"><a href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">TIMEOUT</a></div><div class="ttdeci">@ TIMEOUT</div><div class="ttdef"><b>Definition:</b> hx711.h:148</div></div>
+<div class="ttc" id="agroup___h_x711_html_gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2"><div class="ttname"><a href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">INICIALIZADO</a></div><div class="ttdeci">@ INICIALIZADO</div><div class="ttdef"><b>Definition:</b> hx711.h:144</div></div>
+<div class="ttc" id="agroup___h_x711_html_gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa"><div class="ttname"><a href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">SLEEP</a></div><div class="ttdeci">@ SLEEP</div><div class="ttdef"><b>Definition:</b> hx711.h:146</div></div>
+<div class="ttc" id="agroup___h_x711_html_gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855"><div class="ttname"><a href="group___h_x711.html#gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">NUEVA_LECTURA</a></div><div class="ttdeci">@ NUEVA_LECTURA</div><div class="ttdef"><b>Definition:</b> hx711.h:147</div></div>
+<div class="ttc" id="agroup___h_x711_html_ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6"><div class="ttname"><a href="group___h_x711.html#ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">CHANNELA_64</a></div><div class="ttdeci">@ CHANNELA_64</div><div class="ttdef"><b>Definition:</b> hx711.h:158</div></div>
+<div class="ttc" id="agroup___h_x711_html_ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0"><div class="ttname"><a href="group___h_x711.html#ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">CHANNELA_128</a></div><div class="ttdeci">@ CHANNELA_128</div><div class="ttdef"><b>Definition:</b> hx711.h:157</div></div>
+<div class="ttc" id="agroup___h_x711_html_ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8"><div class="ttname"><a href="group___h_x711.html#ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">CHANNELB_32</a></div><div class="ttdeci">@ CHANNELB_32</div><div class="ttdef"><b>Definition:</b> hx711.h:159</div></div>
+<div class="ttc" id="astruct_gpio___config__t_html"><div class="ttname"><a href="struct_gpio___config__t.html">Gpio_Config_t</a></div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:19</div></div>
+<div class="ttc" id="astruct_h_x711___config_html"><div class="ttname"><a href="struct_h_x711___config.html">HX711_Config</a></div><div class="ttdoc">Contiene elementos de configuracion para el hx711 y sus funciones.</div><div class="ttdef"><b>Definition:</b> hx711.h:185</div></div>
+<div class="ttc" id="astruct_h_x711___config_html_a22ce79c6f2694de604942b6ceb43c01a"><div class="ttname"><a href="struct_h_x711___config.html#a22ce79c6f2694de604942b6ceb43c01a">HX711_Config::ValorZero</a></div><div class="ttdeci">uint32_t ValorZero</div><div class="ttdef"><b>Definition:</b> hx711.h:193</div></div>
+<div class="ttc" id="astruct_h_x711___config_html_a31842012140e37a11cbca628bd760dab"><div class="ttname"><a href="struct_h_x711___config.html#a31842012140e37a11cbca628bd760dab">HX711_Config::Ganancia</a></div><div class="ttdeci">HX711_Ganancia_e Ganancia</div><div class="ttdef"><b>Definition:</b> hx711.h:189</div></div>
+<div class="ttc" id="astruct_h_x711___config_html_ab4822d50ce6c66444969a14e37fea3b7"><div class="ttname"><a href="struct_h_x711___config.html#ab4822d50ce6c66444969a14e37fea3b7">HX711_Config::ValorConversion</a></div><div class="ttdeci">uint16_t ValorConversion</div><div class="ttdef"><b>Definition:</b> hx711.h:190</div></div>
+<div class="ttc" id="astruct_h_x711___config_html_ad23f57ec814bea3301f6271bc978f3c3"><div class="ttname"><a href="struct_h_x711___config.html#ad23f57ec814bea3301f6271bc978f3c3">HX711_Config::PD_SCK</a></div><div class="ttdeci">Gpio_Config_t PD_SCK</div><div class="ttdef"><b>Definition:</b> hx711.h:187</div></div>
+<div class="ttc" id="astruct_h_x711___config_html_adecab8ec6694738b9fc07a17e9ea60f5"><div class="ttname"><a href="struct_h_x711___config.html#adecab8ec6694738b9fc07a17e9ea60f5">HX711_Config::DOUT</a></div><div class="ttdeci">Gpio_Config_t DOUT</div><div class="ttdef"><b>Definition:</b> hx711.h:186</div></div>
+<div class="ttc" id="astruct_h_x711___config_html_afd4d615b3ad3796d58ef0ff2402c6627"><div class="ttname"><a href="struct_h_x711___config.html#afd4d615b3ad3796d58ef0ff2402c6627">HX711_Config::ValorTara</a></div><div class="ttdeci">uint16_t ValorTara</div><div class="ttdef"><b>Definition:</b> hx711.h:196</div></div>
+<div class="ttc" id="astruct_h_x711___datos_html"><div class="ttname"><a href="struct_h_x711___datos.html">HX711_Datos</a></div><div class="ttdoc">Contiene los datos que podemos obtener dle hx711.</div><div class="ttdef"><b>Definition:</b> hx711.h:172</div></div>
+<div class="ttc" id="astruct_h_x711___datos_html_a6c0c13ba21079ed21363c817442a7389"><div class="ttname"><a href="struct_h_x711___datos.html#a6c0c13ba21079ed21363c817442a7389">HX711_Datos::UltimaLectura</a></div><div class="ttdeci">uint32_t UltimaLectura</div><div class="ttdef"><b>Definition:</b> hx711.h:173</div></div>
+<div class="ttc" id="astruct_h_x711___datos_html_ae6e820be23d2ddec50532ecd92827e4c"><div class="ttname"><a href="struct_h_x711___datos.html#ae6e820be23d2ddec50532ecd92827e4c">HX711_Datos::Estado</a></div><div class="ttdeci">HX711_Estado_e Estado</div><div class="ttdef"><b>Definition:</b> hx711.h:174</div></div>
+<div class="ttc" id="astruct_h_x711_html"><div class="ttname"><a href="struct_h_x711.html">HX711</a></div><div class="ttdoc">Objeto principal para interactuar con el hx711.</div><div class="ttdef"><b>Definition:</b> hx711.h:208</div></div>
+<div class="ttc" id="astruct_h_x711_html_a1a4736592e3c8b2c7c80fbad979fdfaf"><div class="ttname"><a href="struct_h_x711.html#a1a4736592e3c8b2c7c80fbad979fdfaf">HX711::Lectura</a></div><div class="ttdeci">HX711_fPtr Lectura</div><div class="ttdef"><b>Definition:</b> hx711.h:213</div></div>
+<div class="ttc" id="astruct_h_x711_html_a623fca772a5fa1e8240439472f1002c0"><div class="ttname"><a href="struct_h_x711.html#a623fca772a5fa1e8240439472f1002c0">HX711::Datos</a></div><div class="ttdeci">HX711_Datos_t Datos</div><div class="ttdef"><b>Definition:</b> hx711.h:210</div></div>
+<div class="ttc" id="astruct_h_x711_html_a841352c7ab2908ab44449f31d70e06a6"><div class="ttname"><a href="struct_h_x711.html#a841352c7ab2908ab44449f31d70e06a6">HX711::Tarar</a></div><div class="ttdeci">HX711_fPtr Tarar</div><div class="ttdef"><b>Definition:</b> hx711.h:214</div></div>
+<div class="ttc" id="astruct_h_x711_html_a91f722639ed0e1fbdc8a957b163280ba"><div class="ttname"><a href="struct_h_x711.html#a91f722639ed0e1fbdc8a957b163280ba">HX711::Config</a></div><div class="ttdeci">HX711_Config_t Config</div><div class="ttdef"><b>Definition:</b> hx711.h:209</div></div>
+<div class="ttc" id="astruct_h_x711_html_abb295df56198a023972379bfc188cff5"><div class="ttname"><a href="struct_h_x711.html#abb295df56198a023972379bfc188cff5">HX711::Timeout</a></div><div class="ttdeci">Timeout_t_ptr Timeout</div><div class="ttdef"><b>Definition:</b> hx711.h:211</div></div>
+<div class="ttc" id="astruct_timeout_html"><div class="ttname"><a href="struct_timeout.html">Timeout</a></div><div class="ttdef"><b>Definition:</b> Timeout.h:108</div></div>
+<div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div><div class="ttdoc">Define distintas funciones, macros utiles.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_58a76cc963dcd255a3d3f12ad2fa9465.html">HX711</a></li><li class="navelem"><a class="el" href="hx711_8h.html">hx711.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Referencia del Archivo Drivers/SPL/stm8s_iwdg.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo stm8s_iwdg.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file contains all functions prototypes and macros for the IWDG peripheral.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="stm8s_8h_source.html">stm8s.h</a>&quot;</code><br />
+</div>
+<p><a href="stm8s__iwdg_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:gaeb6bc86716057c4f3069e9544575ab84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___private___define.html#gaeb6bc86716057c4f3069e9544575ab84">IWDG_KEY_REFRESH</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0xAA)</td></tr>
+<tr class="memdesc:gaeb6bc86716057c4f3069e9544575ab84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define used to prevent watchdog reset.  <a href="group___i_w_d_g___private___define.html#gaeb6bc86716057c4f3069e9544575ab84">Más...</a><br /></td></tr>
+<tr class="separator:gaeb6bc86716057c4f3069e9544575ab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga493295d56bb62752982234755612386f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___private___define.html#ga493295d56bb62752982234755612386f">IWDG_KEY_ENABLE</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0xCC)</td></tr>
+<tr class="memdesc:ga493295d56bb62752982234755612386f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define used to start the watchdog counter down.  <a href="group___i_w_d_g___private___define.html#ga493295d56bb62752982234755612386f">Más...</a><br /></td></tr>
+<tr class="separator:ga493295d56bb62752982234755612386f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga640b37a899d5647ffe8db0435bcdde77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___private___macros.html#ga640b37a899d5647ffe8db0435bcdde77">IS_IWDG_PRESCALER_OK</a>(VALUE)</td></tr>
+<tr class="memdesc:ga640b37a899d5647ffe8db0435bcdde77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro used by the assert function in order to check the different values of the prescaler.  <a href="group___i_w_d_g___private___macros.html#ga640b37a899d5647ffe8db0435bcdde77">Más...</a><br /></td></tr>
+<tr class="separator:ga640b37a899d5647ffe8db0435bcdde77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8c1b7e2599dd8a95fd8261c0e9af2cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___private___macros.html#gaf8c1b7e2599dd8a95fd8261c0e9af2cc">IS_IWDG_WRITEACCESS_MODE_OK</a>(MODE)&#160;&#160;&#160;(((MODE) == <a class="el" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ac026cc98de8869e1f5f831d2d0a16c71">IWDG_WriteAccess_Enable</a>) || ((MODE) == <a class="el" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ae4e8de0a83e73486c23fc863b48b0773">IWDG_WriteAccess_Disable</a>))</td></tr>
+<tr class="memdesc:gaf8c1b7e2599dd8a95fd8261c0e9af2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro used by the assert function in order to check the different values of the counter register.  <a href="group___i_w_d_g___private___macros.html#gaf8c1b7e2599dd8a95fd8261c0e9af2cc">Más...</a><br /></td></tr>
+<tr class="separator:gaf8c1b7e2599dd8a95fd8261c0e9af2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ga48dcf1c03fe67bcd52e0e45d739c7e13"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___types.html#ga48dcf1c03fe67bcd52e0e45d739c7e13">IWDG_WriteAccess_TypeDef</a> { <a class="el" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ac026cc98de8869e1f5f831d2d0a16c71">IWDG_WriteAccess_Enable</a> = (uint8_t)0x55
+, <a class="el" href="group___i_w_d_g___exported___types.html#gga48dcf1c03fe67bcd52e0e45d739c7e13ae4e8de0a83e73486c23fc863b48b0773">IWDG_WriteAccess_Disable</a> = (uint8_t)0x00
+ }</td></tr>
+<tr class="separator:ga48dcf1c03fe67bcd52e0e45d739c7e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0636527cdb794fce2873f5f29ff665c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___types.html#gae0636527cdb794fce2873f5f29ff665c">IWDG_Prescaler_TypeDef</a> { <br />
+&#160;&#160;<a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caf489f1cddbc066f3c3bcdc28ae57acc9">IWDG_Prescaler_4</a> = (uint8_t)0x00
+, <a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaefb2c5ddcdef62f1a195309e162c680">IWDG_Prescaler_8</a> = (uint8_t)0x01
+, <a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca95dee9c8d6d2393ab0d0173c42d23434">IWDG_Prescaler_16</a> = (uint8_t)0x02
+, <a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca5812560698ca1e05e75c0d465872fe24">IWDG_Prescaler_32</a> = (uint8_t)0x03
+, <br />
+&#160;&#160;<a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665caaee9d63d79741d4168aaf7353b577dec">IWDG_Prescaler_64</a> = (uint8_t)0x04
+, <a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca69024032b84d61597508cb920931355d">IWDG_Prescaler_128</a> = (uint8_t)0x05
+, <a class="el" href="group___i_w_d_g___exported___types.html#ggae0636527cdb794fce2873f5f29ff665ca1d281cedc79946c2c3146cbffc8a46cd">IWDG_Prescaler_256</a> = (uint8_t)0x06
+<br />
+ }</td></tr>
+<tr class="separator:gae0636527cdb794fce2873f5f29ff665c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ga6d0fd5e5aa35335fed842b6a5acedd4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___functions.html#ga6d0fd5e5aa35335fed842b6a5acedd4c">IWDG_WriteAccessCmd</a> (<a class="el" href="group___i_w_d_g___exported___types.html#ga48dcf1c03fe67bcd52e0e45d739c7e13">IWDG_WriteAccess_TypeDef</a> IWDG_WriteAccess)</td></tr>
+<tr class="memdesc:ga6d0fd5e5aa35335fed842b6a5acedd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables write access to Prescaler and Reload registers.  <a href="group___i_w_d_g___exported___functions.html#ga6d0fd5e5aa35335fed842b6a5acedd4c">Más...</a><br /></td></tr>
+<tr class="separator:ga6d0fd5e5aa35335fed842b6a5acedd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ac608d9b248753dd41ca8a5bc88189a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___functions.html#ga6ac608d9b248753dd41ca8a5bc88189a">IWDG_SetPrescaler</a> (<a class="el" href="group___i_w_d_g___exported___types.html#gae0636527cdb794fce2873f5f29ff665c">IWDG_Prescaler_TypeDef</a> IWDG_Prescaler)</td></tr>
+<tr class="memdesc:ga6ac608d9b248753dd41ca8a5bc88189a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets IWDG Prescaler value.  <a href="group___i_w_d_g___exported___functions.html#ga6ac608d9b248753dd41ca8a5bc88189a">Más...</a><br /></td></tr>
+<tr class="separator:ga6ac608d9b248753dd41ca8a5bc88189a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47510486822000d8175cf4d5d2188af7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___functions.html#ga47510486822000d8175cf4d5d2188af7">IWDG_SetReload</a> (<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> IWDG_Reload)</td></tr>
+<tr class="memdesc:ga47510486822000d8175cf4d5d2188af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets IWDG Reload value.  <a href="group___i_w_d_g___exported___functions.html#ga47510486822000d8175cf4d5d2188af7">Más...</a><br /></td></tr>
+<tr class="separator:ga47510486822000d8175cf4d5d2188af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7147ebabdc3fef97f532b171a4e70d49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___functions.html#ga7147ebabdc3fef97f532b171a4e70d49">IWDG_ReloadCounter</a> (void)</td></tr>
+<tr class="memdesc:ga7147ebabdc3fef97f532b171a4e70d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads IWDG counter.  <a href="group___i_w_d_g___exported___functions.html#ga7147ebabdc3fef97f532b171a4e70d49">Más...</a><br /></td></tr>
+<tr class="separator:ga7147ebabdc3fef97f532b171a4e70d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga479b2921c86f8c67b819f5c4bea6bdb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_w_d_g___exported___functions.html#ga479b2921c86f8c67b819f5c4bea6bdb6">IWDG_Enable</a> (void)</td></tr>
+<tr class="memdesc:ga479b2921c86f8c67b819f5c4bea6bdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables IWDG.  <a href="group___i_w_d_g___exported___functions.html#ga479b2921c86f8c67b819f5c4bea6bdb6">Más...</a><br /></td></tr>
+<tr class="separator:ga479b2921c86f8c67b819f5c4bea6bdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >This file contains all functions prototypes and macros for the IWDG peripheral. </p>
+<dl class="section author"><dt>Autor</dt><dd>MCD Application Team </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>V2.3.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>16-June-2017</dd></dl>
+<dl class="section attention"><dt>Atención</dt><dd></dd></dl>
+<h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
+<p >Licensed under MCD-ST Liberty SW License Agreement V2, (the "License"); You may not use this file except in compliance with the License. You may obtain a copy of the License at: </p><pre class="fragment">   http://www.st.com/software_license_agreement_liberty_v2
+</pre><p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

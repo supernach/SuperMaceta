@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Fichero Fuente Drivers/SPL/stm8s_rst.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">stm8s_rst.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="stm8s__rst_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef __STM8S_RST_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define __STM8S_RST_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="stm8s_8h.html">stm8s.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group___r_s_t___exported___types.html#gac95072f5f08e3f52424e3323753613a4">   41</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a675363096783fb91c9e8f1ba7adadf73">   42</a></span>  <a class="code hl_enumvalue" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a675363096783fb91c9e8f1ba7adadf73">RST_FLAG_EMCF</a>    = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x10, </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a234e04ddd81dc006c5028d505181ebe5">   43</a></span>  <a class="code hl_enumvalue" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a234e04ddd81dc006c5028d505181ebe5">RST_FLAG_SWIMF</a>   = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x08, </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4aa9d049c1ae402ba07a4695569476e390">   44</a></span>  <a class="code hl_enumvalue" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4aa9d049c1ae402ba07a4695569476e390">RST_FLAG_ILLOPF</a>  = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x04, </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a069f2280eff0d5530330b0db8507e3c8">   45</a></span>  <a class="code hl_enumvalue" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a069f2280eff0d5530330b0db8507e3c8">RST_FLAG_IWDGF</a>   = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x02, </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_enumvalue" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a9270b180f2562c63eb5ef105ef290dda">RST_FLAG_WWDGF</a>   = (<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x01  </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a9270b180f2562c63eb5ef105ef290dda">   47</a></span>}<a class="code hl_enumeration" href="group___r_s_t___exported___types.html#gac95072f5f08e3f52424e3323753613a4">RST_Flag_TypeDef</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/* Exported constants --------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/* Exported macros -----------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group___r_s_t___private___macros.html#ga0f5f84e35c358b71fd1f5321a931a0ba">   66</a></span><span class="preprocessor">#define IS_RST_FLAG_OK(FLAG) (((FLAG) == RST_FLAG_EMCF) || \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">                              ((FLAG) == RST_FLAG_SWIMF)  ||\</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">                              ((FLAG) == RST_FLAG_ILLOPF) ||\</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">                              ((FLAG) == RST_FLAG_IWDGF)  ||\</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">                              ((FLAG) == RST_FLAG_WWDGF))</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><a class="code hl_enumeration" href="group___exported__types.html#ga89136caac2e14c55151f527ac02daaff">FlagStatus</a> <a class="code hl_function" href="group___r_s_t___exported__functions.html#ga9571869af64c89a70cf74b8be4bfe335">RST_GetFlagStatus</a>(<a class="code hl_enumeration" href="group___r_s_t___exported___types.html#gac95072f5f08e3f52424e3323753613a4">RST_Flag_TypeDef</a> RST_Flag);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___r_s_t___exported__functions.html#gaaf6beae0263686bd3a6fd89cfa9db8b4">RST_ClearFlag</a>(<a class="code hl_enumeration" href="group___r_s_t___exported___types.html#gac95072f5f08e3f52424e3323753613a4">RST_Flag_TypeDef</a> RST_Flag);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif </span><span class="comment">/* __STM8S_RST_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span></div>
+<div class="ttc" id="agroup___exported__types_html_ga89136caac2e14c55151f527ac02daaff"><div class="ttname"><a href="group___exported__types.html#ga89136caac2e14c55151f527ac02daaff">FlagStatus</a></div><div class="ttdeci">FlagStatus</div><div class="ttdef"><b>Definition:</b> stm8s.h:233</div></div>
+<div class="ttc" id="agroup___exported__types_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> stm8s.h:216</div></div>
+<div class="ttc" id="agroup___r_s_t___exported___types_html_gac95072f5f08e3f52424e3323753613a4"><div class="ttname"><a href="group___r_s_t___exported___types.html#gac95072f5f08e3f52424e3323753613a4">RST_Flag_TypeDef</a></div><div class="ttdeci">RST_Flag_TypeDef</div><div class="ttdef"><b>Definition:</b> stm8s_rst.h:41</div></div>
+<div class="ttc" id="agroup___r_s_t___exported___types_html_ggac95072f5f08e3f52424e3323753613a4a069f2280eff0d5530330b0db8507e3c8"><div class="ttname"><a href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a069f2280eff0d5530330b0db8507e3c8">RST_FLAG_IWDGF</a></div><div class="ttdeci">@ RST_FLAG_IWDGF</div><div class="ttdef"><b>Definition:</b> stm8s_rst.h:45</div></div>
+<div class="ttc" id="agroup___r_s_t___exported___types_html_ggac95072f5f08e3f52424e3323753613a4a234e04ddd81dc006c5028d505181ebe5"><div class="ttname"><a href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a234e04ddd81dc006c5028d505181ebe5">RST_FLAG_SWIMF</a></div><div class="ttdeci">@ RST_FLAG_SWIMF</div><div class="ttdef"><b>Definition:</b> stm8s_rst.h:43</div></div>
+<div class="ttc" id="agroup___r_s_t___exported___types_html_ggac95072f5f08e3f52424e3323753613a4a675363096783fb91c9e8f1ba7adadf73"><div class="ttname"><a href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a675363096783fb91c9e8f1ba7adadf73">RST_FLAG_EMCF</a></div><div class="ttdeci">@ RST_FLAG_EMCF</div><div class="ttdef"><b>Definition:</b> stm8s_rst.h:42</div></div>
+<div class="ttc" id="agroup___r_s_t___exported___types_html_ggac95072f5f08e3f52424e3323753613a4a9270b180f2562c63eb5ef105ef290dda"><div class="ttname"><a href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4a9270b180f2562c63eb5ef105ef290dda">RST_FLAG_WWDGF</a></div><div class="ttdeci">@ RST_FLAG_WWDGF</div><div class="ttdef"><b>Definition:</b> stm8s_rst.h:46</div></div>
+<div class="ttc" id="agroup___r_s_t___exported___types_html_ggac95072f5f08e3f52424e3323753613a4aa9d049c1ae402ba07a4695569476e390"><div class="ttname"><a href="group___r_s_t___exported___types.html#ggac95072f5f08e3f52424e3323753613a4aa9d049c1ae402ba07a4695569476e390">RST_FLAG_ILLOPF</a></div><div class="ttdeci">@ RST_FLAG_ILLOPF</div><div class="ttdef"><b>Definition:</b> stm8s_rst.h:44</div></div>
+<div class="ttc" id="agroup___r_s_t___exported__functions_html_ga9571869af64c89a70cf74b8be4bfe335"><div class="ttname"><a href="group___r_s_t___exported__functions.html#ga9571869af64c89a70cf74b8be4bfe335">RST_GetFlagStatus</a></div><div class="ttdeci">FlagStatus RST_GetFlagStatus(RST_Flag_TypeDef RST_Flag)</div><div class="ttdoc">Checks whether the specified RST flag is set or not.</div><div class="ttdef"><b>Definition:</b> stm8s_rst.c:54</div></div>
+<div class="ttc" id="agroup___r_s_t___exported__functions_html_gaaf6beae0263686bd3a6fd89cfa9db8b4"><div class="ttname"><a href="group___r_s_t___exported__functions.html#gaaf6beae0263686bd3a6fd89cfa9db8b4">RST_ClearFlag</a></div><div class="ttdeci">void RST_ClearFlag(RST_Flag_TypeDef RST_Flag)</div><div class="ttdoc">Clears the specified RST flag.</div><div class="ttdef"><b>Definition:</b> stm8s_rst.c:69</div></div>
+<div class="ttc" id="astm8s_8h_html"><div class="ttname"><a href="stm8s_8h.html">stm8s.h</a></div><div class="ttdoc">This file contains all HW registers definitions and memory mapping.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

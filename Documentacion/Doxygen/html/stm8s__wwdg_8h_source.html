@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Fichero Fuente Drivers/SPL/stm8s_wwdg.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">stm8s_wwdg.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="stm8s__wwdg_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef __STM8S_WWDG_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define __STM8S_WWDG_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="stm8s_8h.html">stm8s.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/* Private macros ------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group___w_w_d_g___private___macros.html#gafbe360a7dadb30aed617bfb9a55e5467">   49</a></span><span class="preprocessor">#define IS_WWDG_WINDOWLIMITVALUE_OK(WindowLimitValue) ((WindowLimitValue) &lt;= 0x7F)</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group___w_w_d_g___private___macros.html#gaabbcea8d733622f94c0affdef0bcac73">   55</a></span><span class="preprocessor">#define IS_WWDG_COUNTERVALUE_OK(CounterValue) ((CounterValue) &lt;= 0x7F)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/* Exported types ------------------------------------------------------------*/</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">/* Exported functions ------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_w_d_g___exported___functions.html#ga6e9f5281e1b9674c00c160bba949620c">WWDG_Init</a>(<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Counter, <a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> WindowValue);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_w_d_g___exported___functions.html#ga6e44cc35f133b28b9ad861f459bf8d76">WWDG_SetCounter</a>(<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Counter);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_function" href="group___w_w_d_g___exported___functions.html#gaaf6e0a92a3e4395a074f060cca1e2670">WWDG_GetCounter</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_w_d_g___exported___functions.html#gaf59f6cc54b5ba02dd121a3c8aac5ea39">WWDG_SWReset</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_w_d_g___exported___functions.html#gaf44a7bf8bf6b11b41cd89ff521fdd5a5">WWDG_SetWindowValue</a>(<a class="code hl_typedef" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> WindowValue);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif </span><span class="comment">/* __STM8S_WWDG_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span></div>
+<div class="ttc" id="agroup___exported__types_html_gaba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> stm8s.h:216</div></div>
+<div class="ttc" id="agroup___w_w_d_g___exported___functions_html_ga6e44cc35f133b28b9ad861f459bf8d76"><div class="ttname"><a href="group___w_w_d_g___exported___functions.html#ga6e44cc35f133b28b9ad861f459bf8d76">WWDG_SetCounter</a></div><div class="ttdeci">void WWDG_SetCounter(uint8_t Counter)</div><div class="ttdoc">Refreshes the WWDG peripheral.</div><div class="ttdef"><b>Definition:</b> stm8s_wwdg.c:69</div></div>
+<div class="ttc" id="agroup___w_w_d_g___exported___functions_html_ga6e9f5281e1b9674c00c160bba949620c"><div class="ttname"><a href="group___w_w_d_g___exported___functions.html#ga6e9f5281e1b9674c00c160bba949620c">WWDG_Init</a></div><div class="ttdeci">void WWDG_Init(uint8_t Counter, uint8_t WindowValue)</div><div class="ttdoc">Initializes the WWDG peripheral. This function set Window Register = WindowValue, Counter Register ac...</div><div class="ttdef"><b>Definition:</b> stm8s_wwdg.c:53</div></div>
+<div class="ttc" id="agroup___w_w_d_g___exported___functions_html_gaaf6e0a92a3e4395a074f060cca1e2670"><div class="ttname"><a href="group___w_w_d_g___exported___functions.html#gaaf6e0a92a3e4395a074f060cca1e2670">WWDG_GetCounter</a></div><div class="ttdeci">uint8_t WWDG_GetCounter(void)</div><div class="ttdoc">Gets the WWDG Counter Value. This value could be used to check if WWDG is in the window,...</div><div class="ttdef"><b>Definition:</b> stm8s_wwdg.c:86</div></div>
+<div class="ttc" id="agroup___w_w_d_g___exported___functions_html_gaf44a7bf8bf6b11b41cd89ff521fdd5a5"><div class="ttname"><a href="group___w_w_d_g___exported___functions.html#gaf44a7bf8bf6b11b41cd89ff521fdd5a5">WWDG_SetWindowValue</a></div><div class="ttdeci">void WWDG_SetWindowValue(uint8_t WindowValue)</div><div class="ttdoc">Sets the WWDG window value.</div><div class="ttdef"><b>Definition:</b> stm8s_wwdg.c:108</div></div>
+<div class="ttc" id="agroup___w_w_d_g___exported___functions_html_gaf59f6cc54b5ba02dd121a3c8aac5ea39"><div class="ttname"><a href="group___w_w_d_g___exported___functions.html#gaf59f6cc54b5ba02dd121a3c8aac5ea39">WWDG_SWReset</a></div><div class="ttdeci">void WWDG_SWReset(void)</div><div class="ttdoc">Generates immediate WWDG RESET.</div><div class="ttdef"><b>Definition:</b> stm8s_wwdg.c:96</div></div>
+<div class="ttc" id="astm8s_8h_html"><div class="ttname"><a href="stm8s_8h.html">stm8s.h</a></div><div class="ttdoc">This file contains all HW registers definitions and memory mapping.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Referencia del Archivo Drivers/SPL/stm8s_itc.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo stm8s_itc.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file contains all functions prototype and macros for the ITC peripheral.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="stm8s_8h_source.html">stm8s.h</a>&quot;</code><br />
+</div>
+<p><a href="stm8s__itc_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:gadf3cb88d1a6a5cbf5cf033936b83f7f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___constants.html#gadf3cb88d1a6a5cbf5cf033936b83f7f0">CPU_SOFT_INT_DISABLED</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)0x28)</td></tr>
+<tr class="separator:gadf3cb88d1a6a5cbf5cf033936b83f7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdf5cf005dc65e2bc3bfc12bd825c0cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___private___macros.html#gacdf5cf005dc65e2bc3bfc12bd825c0cf">IS_ITC_IRQ_OK</a>(IRQ)&#160;&#160;&#160;((IRQ) &lt;= (<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)24)</td></tr>
+<tr class="separator:gacdf5cf005dc65e2bc3bfc12bd825c0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c680e2ed8d38c3a5f4acd709edcccc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___private___macros.html#ga6c680e2ed8d38c3a5f4acd709edcccc6">IS_ITC_PRIORITY_OK</a>(PriorityValue)</td></tr>
+<tr class="separator:ga6c680e2ed8d38c3a5f4acd709edcccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b2f03b8d319487fea35b11a6f5e2502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___private___macros.html#ga8b2f03b8d319487fea35b11a6f5e2502">IS_ITC_INTERRUPTS_DISABLED</a>&#160;&#160;&#160;(<a class="el" href="group___i_t_c___exported___functions.html#ga3507955493a20af5edf731c7606c5a7a">ITC_GetSoftIntStatus</a>() == <a class="el" href="group___i_t_c___exported___constants.html#gadf3cb88d1a6a5cbf5cf033936b83f7f0">CPU_SOFT_INT_DISABLED</a>)</td></tr>
+<tr class="separator:ga8b2f03b8d319487fea35b11a6f5e2502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ga7d12439fb619ffbfe4b4eb6a0babfc20"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___types.html#ga7d12439fb619ffbfe4b4eb6a0babfc20">ITC_Irq_TypeDef</a> { <br />
+&#160;&#160;<a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a58f715aeaf79613737c8092e6b5a54eb">ITC_IRQ_TLI</a> = (uint8_t)0
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20aba3d403b6f2a5961cf1552570ecb8f4c">ITC_IRQ_AWU</a> = (uint8_t)1
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20ade2452ebf6dcc80a3467c67ae573c69a">ITC_IRQ_CLK</a> = (uint8_t)2
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a4ba52f7fe4877dffa0366c09d1513b25">ITC_IRQ_PORTA</a> = (uint8_t)3
+, <br />
+&#160;&#160;<a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a7774e6ea50dbd28fd39739a841dd10f2">ITC_IRQ_PORTB</a> = (uint8_t)4
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a81cdc3165e1b262e77312eba5e85e048">ITC_IRQ_PORTC</a> = (uint8_t)5
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a5679aea5234b8b7d02b102e479a24993">ITC_IRQ_PORTD</a> = (uint8_t)6
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a3f3ae7358d1fb55938434871a61bc3a3">ITC_IRQ_PORTE</a> = (uint8_t)7
+, <br />
+&#160;&#160;<a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20af7e1034dbb6d1af261d39cde0093c614">ITC_IRQ_SPI</a> = (uint8_t)10
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20afb561cbc959e74fd1ddfd6c249cc8071">ITC_IRQ_TIM1_OVF</a> = (uint8_t)11
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20aece79cbb67c08eb37bd326080f991678">ITC_IRQ_TIM1_CAPCOM</a> = (uint8_t)12
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a8b54b1f2c8a3fd7679ac4088a4f37227">ITC_IRQ_TIM2_OVF</a> = (uint8_t)13
+, <br />
+&#160;&#160;<a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a9c2fd7483e555bd6a6fc0f1ef646fb8a">ITC_IRQ_TIM2_CAPCOM</a> = (uint8_t)14
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20aeb1bd9152a83f27a129c284e1d78ec2c">ITC_IRQ_TIM3_OVF</a> = (uint8_t)15
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a8a43746a40b5690cda833b82a42ee4c6">ITC_IRQ_TIM3_CAPCOM</a> = (uint8_t)16
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a096fd3e073aed41d780c09f421b3b174">ITC_IRQ_UART1_TX</a> = (uint8_t)17
+, <br />
+&#160;&#160;<a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a38b74e80f86682cd846f2e73be16dc69">ITC_IRQ_UART1_RX</a> = (uint8_t)18
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20adc37cced8e1bb75704f4364c549891cb">ITC_IRQ_I2C</a> = (uint8_t)19
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20acbb9977dc30782c1b382ea330de6df5b">ITC_IRQ_ADC1</a> = (uint8_t)22
+, <a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a46c2fbedbd7918561886aba0c480176d">ITC_IRQ_TIM4_OVF</a> = (uint8_t)23
+, <br />
+&#160;&#160;<a class="el" href="group___i_t_c___exported___types.html#gga7d12439fb619ffbfe4b4eb6a0babfc20a8bd431595ee620169aa49eea67ed299a">ITC_IRQ_EEPROM_EEC</a> = (uint8_t)24
+<br />
+ }</td></tr>
+<tr class="memdesc:ga7d12439fb619ffbfe4b4eb6a0babfc20"><td class="mdescLeft">&#160;</td><td class="mdescRight">ITC Interrupt Lines selection.  <a href="group___i_t_c___exported___types.html#ga7d12439fb619ffbfe4b4eb6a0babfc20">Más...</a><br /></td></tr>
+<tr class="separator:ga7d12439fb619ffbfe4b4eb6a0babfc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0fc5e0bd0301dcdb97ebf1b54ea367c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___types.html#gad0fc5e0bd0301dcdb97ebf1b54ea367c">ITC_PriorityLevel_TypeDef</a> { <a class="el" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367cacf2ff0fe1316fed188a186da51e86564">ITC_PRIORITYLEVEL_0</a> = (uint8_t)0x02
+, <a class="el" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367caa1b8e7e8a1fbcfeba6545c3d9aa88cf7">ITC_PRIORITYLEVEL_1</a> = (uint8_t)0x01
+, <a class="el" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367ca3fb749cb5801dd74440d405875822684">ITC_PRIORITYLEVEL_2</a> = (uint8_t)0x00
+, <a class="el" href="group___i_t_c___exported___types.html#ggad0fc5e0bd0301dcdb97ebf1b54ea367ca7850c304d0fcbb82571cbc7a30f45047">ITC_PRIORITYLEVEL_3</a> = (uint8_t)0x03
+ }</td></tr>
+<tr class="memdesc:gad0fc5e0bd0301dcdb97ebf1b54ea367c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ITC Priority Levels selection.  <a href="group___i_t_c___exported___types.html#gad0fc5e0bd0301dcdb97ebf1b54ea367c">Más...</a><br /></td></tr>
+<tr class="separator:gad0fc5e0bd0301dcdb97ebf1b54ea367c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a704faa4f092d0e231575a4725cbb0672"><td class="memItemLeft" align="right" valign="top">far interrupt void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm8s__itc_8h.html#a704faa4f092d0e231575a4725cbb0672">TIM1_OV_IRQHandler</a> (void)</td></tr>
+<tr class="separator:a704faa4f092d0e231575a4725cbb0672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d298b5c98c09fd09857eabb880bb07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm8s__itc_8h.html#a53d298b5c98c09fd09857eabb880bb07">getFlagTimer1</a> (void)</td></tr>
+<tr class="separator:a53d298b5c98c09fd09857eabb880bb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c472cca8559413c2428354c601ac7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm8s__itc_8h.html#a00c472cca8559413c2428354c601ac7a">setFlagTimer1</a> (<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> valor)</td></tr>
+<tr class="separator:a00c472cca8559413c2428354c601ac7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6baafae4c11a073d7ef221b89bb757bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___functions.html#ga6baafae4c11a073d7ef221b89bb757bd">ITC_GetCPUCC</a> (void)</td></tr>
+<tr class="memdesc:ga6baafae4c11a073d7ef221b89bb757bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function used to read CC register.  <a href="group___i_t_c___exported___functions.html#ga6baafae4c11a073d7ef221b89bb757bd">Más...</a><br /></td></tr>
+<tr class="separator:ga6baafae4c11a073d7ef221b89bb757bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33de86ed566796e4fdce18197188ed1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___functions.html#ga33de86ed566796e4fdce18197188ed1a">ITC_DeInit</a> (void)</td></tr>
+<tr class="memdesc:ga33de86ed566796e4fdce18197188ed1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the ITC registers to their default reset value.  <a href="group___i_t_c___exported___functions.html#ga33de86ed566796e4fdce18197188ed1a">Más...</a><br /></td></tr>
+<tr class="separator:ga33de86ed566796e4fdce18197188ed1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3507955493a20af5edf731c7606c5a7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___functions.html#ga3507955493a20af5edf731c7606c5a7a">ITC_GetSoftIntStatus</a> (void)</td></tr>
+<tr class="memdesc:ga3507955493a20af5edf731c7606c5a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the interrupt software priority bits (I1, I0) value from CPU CC register.  <a href="group___i_t_c___exported___functions.html#ga3507955493a20af5edf731c7606c5a7a">Más...</a><br /></td></tr>
+<tr class="separator:ga3507955493a20af5edf731c7606c5a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga000d07c9ad94599f497526a453ef3906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___functions.html#ga000d07c9ad94599f497526a453ef3906">ITC_SetSoftwarePriority</a> (<a class="el" href="group___i_t_c___exported___types.html#ga7d12439fb619ffbfe4b4eb6a0babfc20">ITC_Irq_TypeDef</a> IrqNum, <a class="el" href="group___i_t_c___exported___types.html#gad0fc5e0bd0301dcdb97ebf1b54ea367c">ITC_PriorityLevel_TypeDef</a> PriorityValue)</td></tr>
+<tr class="memdesc:ga000d07c9ad94599f497526a453ef3906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the software priority of the specified interrupt source.  <a href="group___i_t_c___exported___functions.html#ga000d07c9ad94599f497526a453ef3906">Más...</a><br /></td></tr>
+<tr class="separator:ga000d07c9ad94599f497526a453ef3906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb0e3246a095c0f3e60fbaef5dcdea9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_t_c___exported___types.html#gad0fc5e0bd0301dcdb97ebf1b54ea367c">ITC_PriorityLevel_TypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_t_c___exported___functions.html#gaeb0e3246a095c0f3e60fbaef5dcdea9b">ITC_GetSoftwarePriority</a> (<a class="el" href="group___i_t_c___exported___types.html#ga7d12439fb619ffbfe4b4eb6a0babfc20">ITC_Irq_TypeDef</a> IrqNum)</td></tr>
+<tr class="memdesc:gaeb0e3246a095c0f3e60fbaef5dcdea9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the software priority of the specified interrupt source.  <a href="group___i_t_c___exported___functions.html#gaeb0e3246a095c0f3e60fbaef5dcdea9b">Más...</a><br /></td></tr>
+<tr class="separator:gaeb0e3246a095c0f3e60fbaef5dcdea9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >This file contains all functions prototype and macros for the ITC peripheral. </p>
+<dl class="section author"><dt>Autor</dt><dd>MCD Application Team </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>V2.3.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>16-June-2017</dd></dl>
+<dl class="section attention"><dt>Atención</dt><dd></dd></dl>
+<h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
+<p >Licensed under MCD-ST Liberty SW License Agreement V2, (the "License"); You may not use this file except in compliance with the License. You may obtain a copy of the License at: </p><pre class="fragment">   http://www.st.com/software_license_agreement_liberty_v2
+</pre><p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a53d298b5c98c09fd09857eabb880bb07" name="a53d298b5c98c09fd09857eabb880bb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d298b5c98c09fd09857eabb880bb07">&#9670;&nbsp;</a></span>getFlagTimer1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> getFlagTimer1 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00c472cca8559413c2428354c601ac7a" name="a00c472cca8559413c2428354c601ac7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c472cca8559413c2428354c601ac7a">&#9670;&nbsp;</a></span>setFlagTimer1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFlagTimer1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>valor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a704faa4f092d0e231575a4725cbb0672" name="a704faa4f092d0e231575a4725cbb0672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704faa4f092d0e231575a4725cbb0672">&#9670;&nbsp;</a></span>TIM1_OV_IRQHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">far interrupt void TIM1_OV_IRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

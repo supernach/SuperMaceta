@@ -12,6 +12,7 @@
 * Copyright             :   
 * All Rights Reserved
 *
+* @attention
 * AQUI VA DECLARACIONES DERECHOS
 *
 *******************************************************************************/
@@ -41,6 +42,14 @@
 /** @file Hx711.h
  *  @brief Configura y proporciona acceso a la lectura del sensor adc de 24 bits
  */
+ 
+/** @addtogroup DRIVERS
+  * @{
+  */
+/** @addtogroup HX711
+  * @{
+  */	
+
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -106,7 +115,7 @@ typedef struct HX711_Datos HX711_Datos_t;
 * @brief 		 Puntero a funcion para definir las acciones del sensor
 *				 		 asociadas a lecturas
 */
-typedef uint16_t( *HX711_fPtr )( HX711_t* );
+typedef uint16_t(*HX711_fPtr)(HX711_t*);
 
 /**
 * @typedef   HX711_t* HX711_t_ptr  
@@ -115,13 +124,13 @@ typedef uint16_t( *HX711_fPtr )( HX711_t* );
 typedef HX711_t* HX711_t_ptr;
 
 /**
-* @typedef   HX711_t* HX711_t_ptr  
+* @typedef   HX711_Datos_t* HX711_Datos_t_ptr  
 * @brief 		 Puntero al tipo HX711_t
 */
 typedef HX711_Datos_t* HX711_Datos_t_ptr;
 
 /**
-* @typedef   HX711_t* HX711_t_ptr  
+* @typedef   HX711_Config_t*  HX711_Config_t_ptr  
 * @brief 		 Puntero al tipo HX711_t
 */
 typedef HX711_Config_t* HX711_Config_t_ptr;
@@ -225,3 +234,10 @@ uint16_t hx711_Tarar( HX711_t_ptr hx711 );
 #endif 
 
 #endif
+
+/**
+  * @}
+  */
+/**
+  * @}
+  */	

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperMaceta: Referencia del Archivo Drivers/SPL/stm8s_i2c.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SuperMaceta<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Pequeño control de una maceta</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_47a3eb1e7d5d850623b64f413022cac9.html">SPL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo stm8s_i2c.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file contains all the functions for the I2C peripheral.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="stm8s__i2c_8h_source.html">stm8s_i2c.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:gabe83f294561a64ea986ec4f2fef39b0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___private___defines.html#gabe83f294561a64ea986ec4f2fef39b0a">REGISTER_Mask</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>)0x3000)</td></tr>
+<tr class="separator:gabe83f294561a64ea986ec4f2fef39b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab05825bbf266abde5a7875b167c67c01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___private___defines.html#gab05825bbf266abde5a7875b167c67c01">REGISTER_SR1_Index</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>)0x0100)</td></tr>
+<tr class="separator:gab05825bbf266abde5a7875b167c67c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga341cc1580349aeec19c455df368700fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___private___defines.html#ga341cc1580349aeec19c455df368700fd">REGISTER_SR2_Index</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>)0x0200)</td></tr>
+<tr class="separator:ga341cc1580349aeec19c455df368700fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab99e12994e073c2a681a6cf68492b3e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___private___defines.html#gab99e12994e073c2a681a6cf68492b3e2">ITEN_Mask</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>)0x0700)</td></tr>
+<tr class="separator:gab99e12994e073c2a681a6cf68492b3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2be62bf481cd44de9ab604efe5595ff6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___private___defines.html#ga2be62bf481cd44de9ab604efe5595ff6">FLAG_Mask</a>&#160;&#160;&#160;((<a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a>)0x00FF)</td></tr>
+<tr class="separator:ga2be62bf481cd44de9ab604efe5595ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ga475ebf7c2c0f64e9631fb1ed82d6bb32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga475ebf7c2c0f64e9631fb1ed82d6bb32">I2C_DeInit</a> (void)</td></tr>
+<tr class="memdesc:ga475ebf7c2c0f64e9631fb1ed82d6bb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the I2C peripheral registers to their default reset values.  <a href="group___i2_c___public___functions.html#ga475ebf7c2c0f64e9631fb1ed82d6bb32">Más...</a><br /></td></tr>
+<tr class="separator:ga475ebf7c2c0f64e9631fb1ed82d6bb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b854d035a3bb4b30350c57022d94f4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga1b854d035a3bb4b30350c57022d94f4d">I2C_Init</a> (<a class="el" href="group___exported__types.html#ga06896e8c53f721507066c079052171f8">uint32_t</a> OutputClockFrequencyHz, <a class="el" href="group___exported__types.html#ga5a8b2dc9e45a9ee81a94ef304fb62505">uint16_t</a> OwnAddress, <a class="el" href="group___i2_c___exported___types.html#gac0fae3e51f48b185d7413e529ef5dd1d">I2C_DutyCycle_TypeDef</a> I2C_DutyCycle, <a class="el" href="group___i2_c___exported___types.html#gaa4e039897cc642ec3abd95a1fa1cc1b3">I2C_Ack_TypeDef</a> Ack, <a class="el" href="group___i2_c___exported___types.html#ga183d9b2cf41469e7f6b7c00750e5a7ea">I2C_AddMode_TypeDef</a> AddMode, <a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> InputClockFrequencyMHz)</td></tr>
+<tr class="memdesc:ga1b854d035a3bb4b30350c57022d94f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the I2C according to the specified parameters in standard or fast mode.  <a href="group___i2_c___public___functions.html#ga1b854d035a3bb4b30350c57022d94f4d">Más...</a><br /></td></tr>
+<tr class="separator:ga1b854d035a3bb4b30350c57022d94f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae696416c6624783e6f3240742a1a474f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#gae696416c6624783e6f3240742a1a474f">I2C_Cmd</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:gae696416c6624783e6f3240742a1a474f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the I2C peripheral.  <a href="group___i2_c___public___functions.html#gae696416c6624783e6f3240742a1a474f">Más...</a><br /></td></tr>
+<tr class="separator:gae696416c6624783e6f3240742a1a474f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11fc3ef503340e7c395419cf0f04e3e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga11fc3ef503340e7c395419cf0f04e3e6">I2C_GeneralCallCmd</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga11fc3ef503340e7c395419cf0f04e3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the I2C General Call feature.  <a href="group___i2_c___public___functions.html#ga11fc3ef503340e7c395419cf0f04e3e6">Más...</a><br /></td></tr>
+<tr class="separator:ga11fc3ef503340e7c395419cf0f04e3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga176b1151ef1f0735fcf2df35fe3c93f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga176b1151ef1f0735fcf2df35fe3c93f1">I2C_GenerateSTART</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga176b1151ef1f0735fcf2df35fe3c93f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates I2C communication START condition.  <a href="group___i2_c___public___functions.html#ga176b1151ef1f0735fcf2df35fe3c93f1">Más...</a><br /></td></tr>
+<tr class="separator:ga176b1151ef1f0735fcf2df35fe3c93f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c1f2b51e6077fa322aa5f13d6cfba68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga1c1f2b51e6077fa322aa5f13d6cfba68">I2C_GenerateSTOP</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga1c1f2b51e6077fa322aa5f13d6cfba68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates I2C communication STOP condition.  <a href="group___i2_c___public___functions.html#ga1c1f2b51e6077fa322aa5f13d6cfba68">Más...</a><br /></td></tr>
+<tr class="separator:ga1c1f2b51e6077fa322aa5f13d6cfba68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga214d2beb6f03f51a0b5e8405e6dd4884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga214d2beb6f03f51a0b5e8405e6dd4884">I2C_SoftwareResetCmd</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga214d2beb6f03f51a0b5e8405e6dd4884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables I2C software reset.  <a href="group___i2_c___public___functions.html#ga214d2beb6f03f51a0b5e8405e6dd4884">Más...</a><br /></td></tr>
+<tr class="separator:ga214d2beb6f03f51a0b5e8405e6dd4884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f1d010931085ffefcab387579b87557"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga0f1d010931085ffefcab387579b87557">I2C_StretchClockCmd</a> (<a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga0f1d010931085ffefcab387579b87557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the I2C clock stretching.  <a href="group___i2_c___public___functions.html#ga0f1d010931085ffefcab387579b87557">Más...</a><br /></td></tr>
+<tr class="separator:ga0f1d010931085ffefcab387579b87557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga002310a2fd258c4cb013a7e8417f153b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga002310a2fd258c4cb013a7e8417f153b">I2C_AcknowledgeConfig</a> (<a class="el" href="group___i2_c___exported___types.html#gaa4e039897cc642ec3abd95a1fa1cc1b3">I2C_Ack_TypeDef</a> Ack)</td></tr>
+<tr class="memdesc:ga002310a2fd258c4cb013a7e8417f153b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or Disable the I2C acknowledge and position acknowledge feature.  <a href="group___i2_c___public___functions.html#ga002310a2fd258c4cb013a7e8417f153b">Más...</a><br /></td></tr>
+<tr class="separator:ga002310a2fd258c4cb013a7e8417f153b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ef0a21551d54216f84bd2077fe8bd6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga2ef0a21551d54216f84bd2077fe8bd6b">I2C_ITConfig</a> (<a class="el" href="group___i2_c___exported___types.html#gaed6510c550547134afb30f717f17da88">I2C_IT_TypeDef</a> I2C_IT, <a class="el" href="group___exported__types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</td></tr>
+<tr class="memdesc:ga2ef0a21551d54216f84bd2077fe8bd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the specified I2C interrupt.  <a href="group___i2_c___public___functions.html#ga2ef0a21551d54216f84bd2077fe8bd6b">Más...</a><br /></td></tr>
+<tr class="separator:ga2ef0a21551d54216f84bd2077fe8bd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad5fc0ce0378ec0e9616523ecf271a95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#gaad5fc0ce0378ec0e9616523ecf271a95">I2C_FastModeDutyCycleConfig</a> (<a class="el" href="group___i2_c___exported___types.html#gac0fae3e51f48b185d7413e529ef5dd1d">I2C_DutyCycle_TypeDef</a> I2C_DutyCycle)</td></tr>
+<tr class="memdesc:gaad5fc0ce0378ec0e9616523ecf271a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the specified I2C fast mode duty cycle.  <a href="group___i2_c___public___functions.html#gaad5fc0ce0378ec0e9616523ecf271a95">Más...</a><br /></td></tr>
+<tr class="separator:gaad5fc0ce0378ec0e9616523ecf271a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73e8870450debd272f1bb0cea9e77d52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga73e8870450debd272f1bb0cea9e77d52">I2C_ReceiveData</a> (void)</td></tr>
+<tr class="memdesc:ga73e8870450debd272f1bb0cea9e77d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the most recent received data.  <a href="group___i2_c___public___functions.html#ga73e8870450debd272f1bb0cea9e77d52">Más...</a><br /></td></tr>
+<tr class="separator:ga73e8870450debd272f1bb0cea9e77d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga865f03e165537185ccb1e5493bfb62ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga865f03e165537185ccb1e5493bfb62ae">I2C_Send7bitAddress</a> (<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Address, <a class="el" href="group___i2_c___exported___types.html#gac5294e7f2dfbf66c835de2f81f9edc72">I2C_Direction_TypeDef</a> Direction)</td></tr>
+<tr class="memdesc:ga865f03e165537185ccb1e5493bfb62ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmits the 7-bit address (to select the) slave device.  <a href="group___i2_c___public___functions.html#ga865f03e165537185ccb1e5493bfb62ae">Más...</a><br /></td></tr>
+<tr class="separator:ga865f03e165537185ccb1e5493bfb62ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9f80b2c416bdf1ac578859a11e68a40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#gad9f80b2c416bdf1ac578859a11e68a40">I2C_SendData</a> (<a class="el" href="group___exported__types.html#gaba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> Data)</td></tr>
+<tr class="memdesc:gad9f80b2c416bdf1ac578859a11e68a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a byte by writing in the DR register.  <a href="group___i2_c___public___functions.html#gad9f80b2c416bdf1ac578859a11e68a40">Más...</a><br /></td></tr>
+<tr class="separator:gad9f80b2c416bdf1ac578859a11e68a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7932c7b6a5da690a32632a6f9a23d641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga8333b96c67f83cba354b3407fcbb6ee8">ErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga7932c7b6a5da690a32632a6f9a23d641">I2C_CheckEvent</a> (<a class="el" href="group___i2_c___exported___types.html#gadc952f191791c5a48a1b03dd0c0c6940">I2C_Event_TypeDef</a> I2C_Event)</td></tr>
+<tr class="memdesc:ga7932c7b6a5da690a32632a6f9a23d641"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C State Monitoring Functions.  <a href="group___i2_c___public___functions.html#ga7932c7b6a5da690a32632a6f9a23d641">Más...</a><br /></td></tr>
+<tr class="separator:ga7932c7b6a5da690a32632a6f9a23d641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a4027acb7ff9817eefbdf6cf6ca217d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i2_c___exported___types.html#gadc952f191791c5a48a1b03dd0c0c6940">I2C_Event_TypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga4a4027acb7ff9817eefbdf6cf6ca217d">I2C_GetLastEvent</a> (void)</td></tr>
+<tr class="memdesc:ga4a4027acb7ff9817eefbdf6cf6ca217d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last I2C Event.  <a href="group___i2_c___public___functions.html#ga4a4027acb7ff9817eefbdf6cf6ca217d">Más...</a><br /></td></tr>
+<tr class="separator:ga4a4027acb7ff9817eefbdf6cf6ca217d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39f1313722666a647f4246adfbb713cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga89136caac2e14c55151f527ac02daaff">FlagStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga39f1313722666a647f4246adfbb713cd">I2C_GetFlagStatus</a> (<a class="el" href="group___i2_c___exported___types.html#gaa5ff1a9e0dffb49301663ae1ebeea40a">I2C_Flag_TypeDef</a> I2C_Flag)</td></tr>
+<tr class="memdesc:ga39f1313722666a647f4246adfbb713cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the specified I2C flag is set or not.  <a href="group___i2_c___public___functions.html#ga39f1313722666a647f4246adfbb713cd">Más...</a><br /></td></tr>
+<tr class="separator:ga39f1313722666a647f4246adfbb713cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab68d22553dbe25b1e6a7f4ed003c7279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#gab68d22553dbe25b1e6a7f4ed003c7279">I2C_ClearFlag</a> (<a class="el" href="group___i2_c___exported___types.html#gaa5ff1a9e0dffb49301663ae1ebeea40a">I2C_Flag_TypeDef</a> I2C_FLAG)</td></tr>
+<tr class="memdesc:gab68d22553dbe25b1e6a7f4ed003c7279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear flags.  <a href="group___i2_c___public___functions.html#gab68d22553dbe25b1e6a7f4ed003c7279">Más...</a><br /></td></tr>
+<tr class="separator:gab68d22553dbe25b1e6a7f4ed003c7279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2854c7eb7f8b23ccdf7df7e69beebe92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___exported__types.html#ga39d4411201fb731279ad5a409b2b80d7">ITStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#ga2854c7eb7f8b23ccdf7df7e69beebe92">I2C_GetITStatus</a> (<a class="el" href="group___i2_c___exported___types.html#ga073a1d724d4d4804dc509795a7c06329">I2C_ITPendingBit_TypeDef</a> I2C_ITPendingBit)</td></tr>
+<tr class="memdesc:ga2854c7eb7f8b23ccdf7df7e69beebe92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the specified I2C interrupt has occurred or not.  <a href="group___i2_c___public___functions.html#ga2854c7eb7f8b23ccdf7df7e69beebe92">Más...</a><br /></td></tr>
+<tr class="separator:ga2854c7eb7f8b23ccdf7df7e69beebe92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaadda9efbdbfc3651dbe735f25d2e529d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i2_c___public___functions.html#gaadda9efbdbfc3651dbe735f25d2e529d">I2C_ClearITPendingBit</a> (<a class="el" href="group___i2_c___exported___types.html#ga073a1d724d4d4804dc509795a7c06329">I2C_ITPendingBit_TypeDef</a> I2C_ITPendingBit)</td></tr>
+<tr class="memdesc:gaadda9efbdbfc3651dbe735f25d2e529d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear IT pending bit.  <a href="group___i2_c___public___functions.html#gaadda9efbdbfc3651dbe735f25d2e529d">Más...</a><br /></td></tr>
+<tr class="separator:gaadda9efbdbfc3651dbe735f25d2e529d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >This file contains all the functions for the I2C peripheral. </p>
+<dl class="section author"><dt>Autor</dt><dd>MCD Application Team </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>V2.3.0 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>16-June-2017</dd></dl>
+<dl class="section attention"><dt>Atención</dt><dd></dd></dl>
+<h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
+<p >Licensed under MCD-ST Liberty SW License Agreement V2, (the "License"); You may not use this file except in compliance with the License. You may obtain a copy of the License at: </p><pre class="fragment">   http://www.st.com/software_license_agreement_liberty_v2
+</pre><p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

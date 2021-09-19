@@ -38,6 +38,12 @@
 /** @file Hx711.c
  *  @brief Configura y proporciona acceso a la lectura del sensor adc de 24 bits
  */
+/** @addtogroup DRIVERS
+  * @{
+  */
+/** @addtogroup HX711
+  * @{
+  */	 
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -334,7 +340,7 @@ uint16_t hx711_Lectura( HX711_t_ptr hx711 )
 *
 * POST-CONDITION: Tara valida o fallo
 * 
-* @param			Sensor sobre el que realizar la lectura
+* @param			hx711 Sensor sobre el que realizar la lectura
 *
 * @return 		Tara
 *
@@ -369,6 +375,13 @@ uint16_t hx711_Tarar( HX711_t_ptr hx711 )
 	
 	return valorMedio/repeticiones;
 }
+
+/**
+  * @}
+  */
+/**
+  * @}
+  */	
 
 
 
