@@ -36,12 +36,12 @@ void TIM1_OV_IRQHandler( void )
 	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
 }
 
-uint8_t getFlagTimer1( void )
+uint16_t getFlagTimer1( void )
 {
 	return flagTimer1;
 }
 
-void setFlagTimer1( uint8_t valor )
+void setFlagTimer1( uint16_t valor )
 {
 	flagTimer1 = valor;
 }

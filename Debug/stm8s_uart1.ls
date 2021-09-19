@@ -4,7 +4,7 @@
    4                     ; Optimizer V4.5.1 - 29 Sep 2020
   18                     	bsct
   19  0000               L3_flagTimer1:
-  20  0000 00            	dc.b	0
+  20  0000 0000          	dc.w	0
   77                     ; 53 void UART1_DeInit(void)
   77                     ; 54 {
   79                     .text:	section	.text,new

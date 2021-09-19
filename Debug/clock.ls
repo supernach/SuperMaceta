@@ -4,7 +4,7 @@
    4                     ; Optimizer V4.5.1 - 29 Sep 2020
   18                     	bsct
   19  0000               L3_flagTimer1:
-  20  0000 00            	dc.b	0
+  20  0000 0000          	dc.w	0
  211                     ; 99 void Clock_HSI_Init(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
  211                     ; 100 {
  213                     .text:	section	.text,new

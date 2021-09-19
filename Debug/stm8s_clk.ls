@@ -4,7 +4,7 @@
    4                     ; Optimizer V4.5.1 - 29 Sep 2020
   18                     	bsct
   19  0000               L3_flagTimer1:
-  20  0000 00            	dc.b	0
+  20  0000 0000          	dc.w	0
   50                     .const:	section	.text
   51  0000               _HSIDivFactor:
   52  0000 01            	dc.b	1

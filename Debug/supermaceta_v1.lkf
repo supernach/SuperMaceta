@@ -56,6 +56,8 @@ Debug\gpio_config.o
 Debug\gpio.o
 Debug\timer.o
 Debug\timeout.o
+Debug\rs485.o
+Debug\rs485_tramas.o
 Debug\dht11.o
 Debug\hx711.o
 Debug\stm8s_uart1.o

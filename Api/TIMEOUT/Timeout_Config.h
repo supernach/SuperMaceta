@@ -75,7 +75,7 @@ typedef struct Timeout_Config Timeout_Config_t;
 *
 * @see <referencias>
 */
-typedef uint8_t( *Timeout_Notificacion )( void );
+typedef volatile uint16_t( *Timeout_Notificacion )( void );
 
 /**
 * @typedef Timeout_ResetNotificacion
@@ -83,7 +83,7 @@ typedef uint8_t( *Timeout_Notificacion )( void );
 *
 * @see <referencias>
 */
-typedef void( *Timeout_ResetNotificacion )( uint8_t );
+typedef void( *Timeout_ResetNotificacion )( uint16_t );
 
 /******************************************************************************
 * Struct

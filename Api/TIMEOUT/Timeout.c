@@ -199,6 +199,7 @@ void Timeout_Stop( Timeout_t_ptr timeout )
 {
 	TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
 	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
+	TIM1_SetCounter( 0 );
 	TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
 	
 	TIM1_Cmd( DISABLE );
@@ -208,53 +209,5 @@ void Timeout_Stop( Timeout_t_ptr timeout )
 	timeout->Estado = INACTIVO;
 }
 
-/******************************************************************************
-* Function : Timeout_Check()
-*//**
-* \b Description:
-*
-* plantilla descripcion
-*
-* PRE-CONDITION: 
-* PRE-CONDITION: 
-* PRE-CONDITION: 
-*
-* POST-CONDITION: 
-* 
-* @param			
-* @param			
-*
-* @return 		void
-*
-* \b Example Ejemplo:
-* @code
-*		
-* @endcode
-*
-* @see 
-* @see 
-*
-* <br><b> - CHANGELOG - </b>
-*
-* <table align="left" style="width:800px">
-* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
-* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
-* </table><br><br>
-* <hr>
-*
-*******************************************************************************/
-void Timeout_Check( Timeout_t_ptr timeout )
-{
-	volatile uint16_t ticks = 0;
-	ticks = TIM1_GetCounter();
-	
-	if(  ticks >= timeout->ValorDesborde )
-	{
-		timeout->Estado = DISPARADO;
-	}
-	else
-	{
-		
-	}
-}
+
 

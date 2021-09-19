@@ -1,11 +1,8 @@
-#ifndef TIMEOUT_H
-#define TIMEOUT_H
-
 /****************************************************************************
-* Title                 :   Timeout API
-* Filename              :   Timeout.h
+* Title                 :   plantilla
+* Filename              :   plantilla.c
 * Author                :   SuperNach
-* Origin Date           :   9/09/2021
+* Origin Date           :   20/08/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,107 +31,69 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  9/09/21   1.0.0   SuperNach       Initial Release.
+*  20/08/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
-/** @file plantilla.h
+/** @file plantilla.c
  *  @brief 
  */
 /******************************************************************************
 * Includes
 *******************************************************************************/
-#include <stm8s.h>
-#include <utils.h>
-#include <gpio.h>
-#include <timer.h>
-#include <Timeout_Config.h>
+#include <rs485_tramas.h>
 
 /******************************************************************************
-* Constants
-*******************************************************************************/
-#define TIMEOUT_MAX_500MS 500
-#define TIMEOUT_1MS 1000
-/******************************************************************************
-* Configuration
+* Module Preprocessor Constants
 *******************************************************************************/
 
 /******************************************************************************
-* Macros
+* Module Preprocessor Macros
 *******************************************************************************/
 
 /******************************************************************************
-* Typedefs
+* Module Typedefs
 *******************************************************************************/
-/**
-* @typedef Timeout_t
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef struct Timeout Timeout_t;
-
-/**
-* @typedef Timeout_t_ptr
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef Timeout_t* Timeout_t_ptr;
-
-/**
-* @typedef Timeout_Estado_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef enum
-{
-	INACTIVO,
-	ACTIVO,
-	DISPARADO
-}Timeout_Estado_e;
 
 /******************************************************************************
-* Struct
+* Module Variable Definitions
 *******************************************************************************/
-/**
-* @struct Timeout
-* @brief 
-*
-* @see
-*/
-struct Timeout
-{
-	Timeout_Config_t Config;
-	Timeout_Estado_e Estado;
-	uint16_t ValorDesborde;
-};
-
-/******************************************************************************
-* Variables
-*******************************************************************************/
-/**
-* @var 
-* @brief 
-*
-* @see
-*/
 
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
-#ifdef __cplusplus
-extern "C"{
-#endif
-
-
-void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset );
-void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos );
-void Timeout_Stop( Timeout_t_ptr timeout );
-
-#ifdef __cplusplus
-} // extern "C"
-#endif 
-
-#endif
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/

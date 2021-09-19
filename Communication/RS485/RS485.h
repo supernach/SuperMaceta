@@ -1,11 +1,11 @@
-#ifndef TIMEOUT_H
-#define TIMEOUT_H
+#ifndef RS485_H
+#define RS485_H
 
 /****************************************************************************
-* Title                 :   Timeout API
-* Filename              :   Timeout.h
+* Title                 :   RS485 COMM
+* Filename              :   RS485.h
 * Author                :   SuperNach
-* Origin Date           :   9/09/2021
+* Origin Date           :   20/08/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,27 +34,22 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  9/09/21   1.0.0   SuperNach       Initial Release.
+*  19/09/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
-/** @file plantilla.h
+/** @file RS485.h
  *  @brief 
  */
 /******************************************************************************
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <utils.h>
-#include <gpio.h>
-#include <timer.h>
-#include <Timeout_Config.h>
 
 /******************************************************************************
 * Constants
 *******************************************************************************/
-#define TIMEOUT_MAX_500MS 500
-#define TIMEOUT_1MS 1000
+
 /******************************************************************************
 * Configuration
 *******************************************************************************/
@@ -67,49 +62,21 @@
 * Typedefs
 *******************************************************************************/
 /**
-* @typedef Timeout_t
+* @typedef <name>
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef struct Timeout Timeout_t;
-
-/**
-* @typedef Timeout_t_ptr
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef Timeout_t* Timeout_t_ptr;
-
-/**
-* @typedef Timeout_Estado_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-typedef enum
-{
-	INACTIVO,
-	ACTIVO,
-	DISPARADO
-}Timeout_Estado_e;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
 /**
-* @struct Timeout
+* @struct 
 * @brief 
 *
 * @see
 */
-struct Timeout
-{
-	Timeout_Config_t Config;
-	Timeout_Estado_e Estado;
-	uint16_t ValorDesborde;
-};
 
 /******************************************************************************
 * Variables
@@ -128,10 +95,6 @@ struct Timeout
 extern "C"{
 #endif
 
-
-void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset );
-void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos );
-void Timeout_Stop( Timeout_t_ptr timeout );
 
 #ifdef __cplusplus
 } // extern "C"

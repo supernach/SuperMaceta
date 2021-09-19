@@ -68,12 +68,12 @@ static @inline void initPtrFunciones( HX711_t_ptr hx711, HX711_fPtr Lectura, HX7
 	hx711->Tarar = Tarar;
 }
 
-static @inline void initVariables( HX711_t_ptr hx711 )
+static @inline void initVariables(HX711_Config_t_ptr hx711Config, HX711_Datos_t_ptr hx711Datos )
 {
-	hx711->Datos.UltimaLectura = 0;
-	hx711->Config.ValorTara = 0;
-	hx711->Config.ValorConversion = 1;
-	hx711->Config.Ganancia = CHANNELA_128;
+	hx711Datos->UltimaLectura = 0;
+	hx711Config->ValorTara = 0;
+	hx711Config->ValorConversion = 1;
+	hx711Config->Ganancia = CHANNELA_128;
 }
 
 static @inline void initDOUT( Gpio_Config_t* dout )
@@ -88,16 +88,16 @@ static @inline void initPDSCK( Gpio_Config_t* pdsck )
 	NHALgpio_Init( pdsck );
 }
 
-static @inline void chequearValorConversion( HX711_t_ptr hx711 )
+static @inline void chequearValorConversion( HX711_Config_t_ptr hx711Config, HX711_Datos_t_ptr hx711Datos )
 {
-	if( ( hx711->Config.ValorConversion ) == 0 )
+	if( ( hx711Config->ValorConversion ) == 0 )
 	{
-		hx711->Config.ValorConversion = 1;
-		hx711->Datos.Estado = SINVALORCONVERSION;
+		hx711Config->ValorConversion = 1;
+		hx711Datos->Estado = SINVALORCONVERSION;
 	}
 	else
 	{
-		hx711->Datos.Estado = INICIALIZADO;
+		hx711Datos->Estado = INICIALIZADO;
 	}
 }
 
@@ -158,13 +158,13 @@ static @inline void esperoDatosDisponibles( HX711_t_ptr hx711 )
 {
 	if( hx711->Timeout != NULL )
 	{
-		Timeout_Start( hx711->Timeout, 40 );
-		while( ( NHALgpio_Read( &hx711->Config.DOUT ) == true ) || ( hx711->Timeout->Config.Notificacion( ) == 0 ) )
+		Timeout_Start( hx711->Timeout, TIMEOUT_1MS );
+		while( ( NHALgpio_Read( &hx711->Config.DOUT ) == true ) && ( hx711->Timeout->Config.Notificacion( ) < TIMEOUT_MAX_500MS ) )
 		{
-		
+	
 		}
 		
-		if( hx711->Timeout->Config.Notificacion( ) )
+		if( hx711->Timeout->Config.Notificacion( ) >= TIMEOUT_MAX_500MS )
 		{
 			hx711->Datos.Estado = TIMEOUT;
 		}
@@ -262,12 +262,12 @@ void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeou
 
 	hx711->Timeout = Timeout;
 	
-	initVariables( hx711 );
+	initVariables( &hx711->Config, &hx711->Datos );
 	
 	initDOUT( &hx711->Config.DOUT );
 	initPDSCK( &hx711->Config.PD_SCK );
 	
-	chequearValorConversion( hx711 );
+	chequearValorConversion( &hx711->Config, &hx711->Datos );
 	
 	aDormir( hx711 );
 }

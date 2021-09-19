@@ -4,7 +4,7 @@
    4                     ; Optimizer V4.5.1 - 29 Sep 2020
   18                     	bsct
   19  0000               L3_flagTimer1:
-  20  0000 00            	dc.b	0
+  20  0000 0000          	dc.w	0
  376                     ; 99 void NHALgpioConfig_SetType( Gpio_Config_t* gpio, GPIO_Mode_TypeDef nuevoTipo )
  376                     ; 100 {
  378                     .text:	section	.text,new

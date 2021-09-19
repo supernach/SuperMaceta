@@ -1,11 +1,11 @@
-#ifndef TIMEOUT_H
-#define TIMEOUT_H
+#ifndef RS485_TRAMAS_H
+#define RS485_TRAMAS_H
 
 /****************************************************************************
-* Title                 :   Timeout API
-* Filename              :   Timeout.h
+* Title                 :   plantilla
+* Filename              :   plantilla.h
 * Author                :   SuperNach
-* Origin Date           :   9/09/2021
+* Origin Date           :   19/09/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -34,7 +34,7 @@
 /*************** SOURCE REVISION LOG *****************************************
 *
 *    Date    Version   Author         Description
-*  9/09/21   1.0.0   SuperNach       Initial Release.
+*  19/09/21   1.0.0   SuperNach       Initial Release.
 *  
 *
 *******************************************************************************/
@@ -45,16 +45,11 @@
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <utils.h>
-#include <gpio.h>
-#include <timer.h>
-#include <Timeout_Config.h>
 
 /******************************************************************************
 * Constants
 *******************************************************************************/
-#define TIMEOUT_MAX_500MS 500
-#define TIMEOUT_1MS 1000
+
 /******************************************************************************
 * Configuration
 *******************************************************************************/
@@ -67,49 +62,82 @@
 * Typedefs
 *******************************************************************************/
 /**
-* @typedef Timeout_t
+* @typedef Trama_RX_t
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef struct Timeout Timeout_t;
+typedef struct Trama_RX Trama_RX_t;
 
 /**
-* @typedef Timeout_t_ptr
+* @typedef Trama_TX_t
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef Timeout_t* Timeout_t_ptr;
+typedef struct Trama_TX Trama_TX_t;
 
 /**
-* @typedef Timeout_Estado_e
+* @typedef Trama_BROADCAST_t
 * @brief <descripcion>
 *
 * @see <referencias>
 */
-typedef enum
-{
-	INACTIVO,
-	ACTIVO,
-	DISPARADO
-}Timeout_Estado_e;
+typedef struct Trama_BROADCAST Trama_BROADCAST_t;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
 /**
-* @struct Timeout
+* @struct Orden
 * @brief 
 *
 * @see
 */
-struct Timeout
+struct Orden
 {
-	Timeout_Config_t Config;
-	Timeout_Estado_e Estado;
-	uint16_t ValorDesborde;
+	uint8_t Funcion;
+	uint8_t Comando;
 };
+
+/**
+* @struct Trama_RX
+* @brief 
+*
+* @see
+*/
+struct Trama_RX
+{
+	uint8_t nNodo;
+	struct Orden OrdenDHT11;
+	struct Orden OrdenHX711;
+};
+
+/**
+* @struct Trama_TX
+* @brief 
+*
+* @see
+*/
+struct Trama_TX
+{
+	uint8_t nNodo;
+	uint32_t LecturaDHT11;
+	uint32_t LecturaHX711;
+};
+
+/**
+* @struct Trama_BROADCAST 
+* @brief 
+*
+* @see
+*/
+struct Trama_BROADCAST
+{
+	uint8_t nNodo;
+	struct Orden Orden;
+};
+	
 
 /******************************************************************************
 * Variables
@@ -128,10 +156,6 @@ struct Timeout
 extern "C"{
 #endif
 
-
-void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset );
-void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos );
-void Timeout_Stop( Timeout_t_ptr timeout );
 
 #ifdef __cplusplus
 } // extern "C"

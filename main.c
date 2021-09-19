@@ -145,8 +145,9 @@ static @inline void Inicializacion_Total(void)
 */
 static @inline void LecturaSensores(void)
 {
-	SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
 	SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
+	SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
+	
 }
 
 /**

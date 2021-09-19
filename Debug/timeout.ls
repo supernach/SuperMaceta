@@ -4,7 +4,7 @@
    4                     ; Optimizer V4.5.1 - 29 Sep 2020
   18                     	bsct
   19  0000               L3_flagTimer1:
-  20  0000 00            	dc.b	0
+  20  0000 0000          	dc.w	0
  359                     ; 106 void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
  359                     ; 107 {
  361                     .text:	section	.text,new
@@ -61,72 +61,48 @@
  476                     ; 161 }
  479  001f 85            	popw	x
  480  0020 81            	ret	
- 521                     ; 198 void Timeout_Stop( Timeout_t_ptr timeout )
- 521                     ; 199 {
- 522                     .text:	section	.text,new
- 523  0000               _Timeout_Stop:
- 525  0000 89            	pushw	x
- 526       00000000      OFST:	set	0
- 529                     ; 200 	TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
- 531  0001 a601          	ld	a,#1
- 532  0003 cd0000        	call	_TIM1_ClearITPendingBit
- 534                     ; 201 	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
- 536  0006 ae0001        	ldw	x,#1
- 537  0009 cd0000        	call	_TIM1_ClearFlag
- 539                     ; 202 	TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
- 541  000c ae0100        	ldw	x,#256
- 542  000f cd0000        	call	_TIM1_ITConfig
- 544                     ; 204 	TIM1_Cmd( DISABLE );
- 546  0012 4f            	clr	a
- 547  0013 cd0000        	call	_TIM1_Cmd
- 549                     ; 206 	timeout->Config.ResetNotificacion( 0 );
- 551  0016 1e01          	ldw	x,(OFST+1,sp)
- 552  0018 4f            	clr	a
- 553  0019 ee04          	ldw	x,(4,x)
- 554  001b fd            	call	(x)
- 556                     ; 207 	timeout->ValorDesborde = 0;
- 558  001c 1e01          	ldw	x,(OFST+1,sp)
- 559  001e 905f          	clrw	y
- 560  0020 ef07          	ldw	(7,x),y
- 561                     ; 208 	timeout->Estado = INACTIVO;
- 563  0022 6f06          	clr	(6,x)
- 564                     ; 209 }
- 567  0024 85            	popw	x
- 568  0025 81            	ret	
- 615                     ; 246 void Timeout_Check( Timeout_t_ptr timeout )
- 615                     ; 247 {
- 616                     .text:	section	.text,new
- 617  0000               _Timeout_Check:
- 619  0000 89            	pushw	x
- 620  0001 89            	pushw	x
- 621       00000002      OFST:	set	2
- 624                     ; 248 	volatile uint16_t ticks = 0;
- 626  0002 5f            	clrw	x
- 627  0003 1f01          	ldw	(OFST-1,sp),x
- 629                     ; 249 	ticks = TIM1_GetCounter();
- 631  0005 cd0000        	call	_TIM1_GetCounter
- 633  0008 1f01          	ldw	(OFST-1,sp),x
- 635                     ; 251 	if(  ticks >= timeout->ValorDesborde )
- 637  000a 1e03          	ldw	x,(OFST+1,sp)
- 638  000c ee07          	ldw	x,(7,x)
- 639  000e 1301          	cpw	x,(OFST-1,sp)
- 640  0010 2206          	jrugt	L333
- 641                     ; 253 		timeout->Estado = DISPARADO;
- 643  0012 1e03          	ldw	x,(OFST+1,sp)
- 644  0014 a602          	ld	a,#2
- 645  0016 e706          	ld	(6,x),a
- 647  0018               L333:
- 648                     ; 259 }
- 651  0018 5b04          	addw	sp,#4
- 652  001a 81            	ret	
- 665                     	xdef	_Timeout_Check
- 666                     	xdef	_Timeout_Stop
- 667                     	xdef	_Timeout_Start
- 668                     	xdef	_Timeout_Init
- 669                     	xref	_Timer_Init
- 670                     	xref	_TIM1_ClearITPendingBit
- 671                     	xref	_TIM1_ClearFlag
- 672                     	xref	_TIM1_GetCounter
- 673                     	xref	_TIM1_ITConfig
- 674                     	xref	_TIM1_Cmd
- 693                     	end
+ 522                     ; 198 void Timeout_Stop( Timeout_t_ptr timeout )
+ 522                     ; 199 {
+ 523                     .text:	section	.text,new
+ 524  0000               _Timeout_Stop:
+ 526  0000 89            	pushw	x
+ 527       00000000      OFST:	set	0
+ 530                     ; 200 	TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
+ 532  0001 a601          	ld	a,#1
+ 533  0003 cd0000        	call	_TIM1_ClearITPendingBit
+ 535                     ; 201 	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
+ 537  0006 ae0001        	ldw	x,#1
+ 538  0009 cd0000        	call	_TIM1_ClearFlag
+ 540                     ; 202 	TIM1_SetCounter( 0 );
+ 542  000c 5f            	clrw	x
+ 543  000d cd0000        	call	_TIM1_SetCounter
+ 545                     ; 203 	TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
+ 547  0010 ae0100        	ldw	x,#256
+ 548  0013 cd0000        	call	_TIM1_ITConfig
+ 550                     ; 205 	TIM1_Cmd( DISABLE );
+ 552  0016 4f            	clr	a
+ 553  0017 cd0000        	call	_TIM1_Cmd
+ 555                     ; 207 	timeout->Config.ResetNotificacion( 0 );
+ 557  001a 1601          	ldw	y,(OFST+1,sp)
+ 558  001c 5f            	clrw	x
+ 559  001d 90ee04        	ldw	y,(4,y)
+ 560  0020 90fd          	call	(y)
+ 562                     ; 208 	timeout->ValorDesborde = 0;
+ 564  0022 1e01          	ldw	x,(OFST+1,sp)
+ 565  0024 905f          	clrw	y
+ 566  0026 ef07          	ldw	(7,x),y
+ 567                     ; 209 	timeout->Estado = INACTIVO;
+ 569  0028 6f06          	clr	(6,x)
+ 570                     ; 210 }
+ 573  002a 85            	popw	x
+ 574  002b 81            	ret	
+ 587                     	xdef	_Timeout_Stop
+ 588                     	xdef	_Timeout_Start
+ 589                     	xdef	_Timeout_Init
+ 590                     	xref	_Timer_Init
+ 591                     	xref	_TIM1_ClearITPendingBit
+ 592                     	xref	_TIM1_ClearFlag
+ 593                     	xref	_TIM1_SetCounter
+ 594                     	xref	_TIM1_ITConfig
+ 595                     	xref	_TIM1_Cmd
+ 614                     	end

@@ -46,11 +46,8 @@
 *******************************************************************************/
 #include <utils.h>
 #include <gpio.h>
+#include <timeout.h>
 
-#define HX711_TIMEOUT_SI 1
-#ifdef HX711_TIMEOUT_SI
-	#include <timeout.h>
-#endif
 
 
 /******************************************************************************
@@ -116,6 +113,18 @@ typedef uint16_t( *HX711_fPtr )( HX711_t* );
 * @brief 		 Puntero al tipo HX711_t
 */
 typedef HX711_t* HX711_t_ptr;
+
+/**
+* @typedef   HX711_t* HX711_t_ptr  
+* @brief 		 Puntero al tipo HX711_t
+*/
+typedef HX711_Datos_t* HX711_Datos_t_ptr;
+
+/**
+* @typedef   HX711_t* HX711_t_ptr  
+* @brief 		 Puntero al tipo HX711_t
+*/
+typedef HX711_Config_t* HX711_Config_t_ptr;
 
 /**
 * @typedef   enum HX711_Estado_e 

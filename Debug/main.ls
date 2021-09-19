@@ -4,7 +4,7 @@
    4                     ; Optimizer V4.5.1 - 29 Sep 2020
   18                     	bsct
   19  0000               L3_flagTimer1:
-  20  0000 00            	dc.b	0
+  20  0000 0000          	dc.w	0
   50                     .const:	section	.text
   51  0000               L72_HX711_LONGITUDTRAMA:
   52  0000 18            	dc.b	24
@@ -12,8 +12,8 @@
   54  0001 03            	dc.b	3
   55  0002               L33_HX711_TIEMPOCLOCKSLEEP:
   56  0002 46            	dc.b	70
-1189                     ; 159 int main()
-1189                     ; 160 {
+1189                     ; 160 int main()
+1189                     ; 161 {
 1191                     .text:	section	.text,new
 1192  0000               _main:
 1194  0000 5207          	subw	sp,#7
@@ -85,27 +85,27 @@
 1291  007c ae000f        	ldw	x,#_SensorPesaje
 1292  007f cd0000        	call	_HX711_Init
 1294  0082 5b06          	addw	sp,#6
-1295                     ; 163 	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
+1295                     ; 164 	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 1297  0084 ae000f        	ldw	x,#_SensorPesaje
 1298  0087 92cd29        	call	[_SensorPesaje+26.w]
 1300  008a cd0000        	call	c_uitolx
 1302  008d ae001a        	ldw	x,#_SensorPesaje+11
 1303  0090 cd0000        	call	c_rtol
 1305  0093               L357:
-1306                     ; 148 	SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
-1309  0093 ae002b        	ldw	x,#_SensorTempHum
-1310  0096 89            	pushw	x
-1311  0097 ae002f        	ldw	x,#_SensorTempHum+4
-1312  009a 89            	pushw	x
-1313  009b 92cd37        	call	[_SensorTempHum+12.w]
-1315  009e 5b04          	addw	sp,#4
-1316                     ; 149 	SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
-1318  00a0 ae000f        	ldw	x,#_SensorPesaje
-1319  00a3 92cd27        	call	[_SensorPesaje+24.w]
-1321  00a6 cd0000        	call	c_uitolx
-1323  00a9 ae0020        	ldw	x,#_SensorPesaje+17
-1324  00ac cd0000        	call	c_rtol
-1326                     ; 167 *
+1306                     ; 148 	SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
+1309  0093 ae000f        	ldw	x,#_SensorPesaje
+1310  0096 92cd27        	call	[_SensorPesaje+24.w]
+1312  0099 cd0000        	call	c_uitolx
+1314  009c ae0020        	ldw	x,#_SensorPesaje+17
+1315  009f cd0000        	call	c_rtol
+1317                     ; 149 	SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
+1319  00a2 ae002b        	ldw	x,#_SensorTempHum
+1320  00a5 89            	pushw	x
+1321  00a6 ae002f        	ldw	x,#_SensorTempHum+4
+1322  00a9 89            	pushw	x
+1323  00aa 92cd37        	call	[_SensorTempHum+12.w]
+1325  00ad 5b04          	addw	sp,#4
+1326                     ; 168 * <table align="left" style="width:800px">
 1329  00af ae03e8        	ldw	x,#1000
 1332  00b2 200a          	jra	L367
 1333  00b4               L757:

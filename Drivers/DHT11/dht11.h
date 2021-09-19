@@ -47,11 +47,8 @@
 *******************************************************************************/
 #include <utils.h>
 #include <Gpio.h>
+#include <timeout.h>
 
-#define DHT11_TIMEOUT_SI 1
-#ifdef DHT11_TIMEOUT_SI
-	#include <timeout.h>
-#endif
 
 /******************************************************************************
 * Constants

@@ -1,5 +1,5 @@
 
-Map of Release\supermaceta_v1.sm8 from link file Release\supermaceta_v1.lkf - Sat Sep 18 13:47:49 2021
+Map of Release\supermaceta_v1.sm8 from link file Release\supermaceta_v1.lkf - Sun Sep 19 19:12:27 2021
 
 
                                --------
@@ -7,16 +7,16 @@ Map of Release\supermaceta_v1.sm8 from link file Release\supermaceta_v1.lkf - Sa
                                --------
 
 start 00008080 end 0000808f length    15 segment .const
-start 00008098 end 00008eb9 length  3617 segment .text
+start 00008099 end 00009122 length  4233 segment .text
 start 00004000 end 00004000 length     0 segment .eeprom
-start 00000000 end 00000001 length     1 segment .bsct, initialized
-start 00008097 end 00008098 length     1 segment .bsct, from
-start 00000001 end 00000040 length    63 segment .ubsct
-start 00000040 end 00000040 length     0 segment .bit
-start 00000040 end 00000040 length     0 segment .share
+start 00000000 end 00000002 length     2 segment .bsct, initialized
+start 00008097 end 00008099 length     2 segment .bsct, from
+start 00000002 end 00000045 length    67 segment .ubsct
+start 00000045 end 00000045 length     0 segment .bit
+start 00000045 end 00000045 length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 00000100 length     0 segment .bss
-start 00000000 end 000011fb length  4603 segment .info.
+start 00000000 end 000012fc length  4860 segment .info.
 start 00008000 end 00008080 length   128 segment .const
 start 0000808f end 00008097 length     8 segment .init
 
@@ -26,68 +26,76 @@ start 0000808f end 00008097 length     8 segment .init
                                -------
 
 D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8:
-start 00008098 end 000080e8 length    80 section .text
+start 00008099 end 000080e9 length    80 section .text
 start 00000100 end 00000100 length     0 section .bss
-start 00000001 end 00000001 length     0 section .ubsct
+start 00000002 end 00000002 length     0 section .ubsct
 start 00000000 end 00000034 length    52 section .info.
 
 Release\main.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000001 end 00000036 length    53 section .ubsct
+start 00000002 end 0000003b length    57 section .ubsct
 start 00000034 end 000000b0 length   124 section .info.
 start ******** end ******** length     0 section .const *** removed ***
-start 000080e8 end 00008175 length   141 section .text
+start 000080e9 end 000081af length   198 section .text
 
 Release\clock.o:
 start ******** end ******** length     0 section .bsct *** removed ***
 start 000000b0 end 0000012d length   125 section .info.
-start 00008175 end 000081ae length    57 section .text
-start 000081ae end 000081dc length    46 section .text
+start 000081af end 000081e8 length    57 section .text
+start 000081e8 end 00008216 length    46 section .text
 start ******** end ******** length     0 section .text *** removed ***
 
 Release\gpio_config.o:
 start ******** end ******** length     0 section .bsct *** removed ***
 start 0000012d end 000001b0 length   131 section .info.
-start 000081dc end 000081e1 length     5 section .text
+start 00008216 end 0000821b length     5 section .text
 
 Release\gpio.o:
 start ******** end ******** length     0 section .bsct *** removed ***
 start 000001b0 end 0000022c length   124 section .info.
-start 000081e1 end 000081ed length    12 section .text
-start 000081ed end 000081fc length    15 section .text
-start 000081fc end 00008216 length    26 section .text
+start 0000821b end 00008227 length    12 section .text
+start 00008227 end 00008236 length    15 section .text
+start 00008236 end 00008250 length    26 section .text
 
 Release\timer.o:
 start ******** end ******** length     0 section .bsct *** removed ***
 start 0000022c end 000002a9 length   125 section .info.
-start 00008216 end 0000824d length    55 section .text
+start 00008250 end 00008287 length    55 section .text
+start 00008287 end 0000829b length    20 section .text
 
 Release\timeout.o:
 start ******** end ******** length     0 section .bsct *** removed ***
 start 000002a9 end 00000328 length   127 section .info.
-start 0000824d end 00008265 length    24 section .text
-start 00008265 end 00008286 length    33 section .text
-start 00008286 end 000082ac length    38 section .text
-start ******** end ******** length     0 section .text *** removed ***
+start 0000829b end 000082b3 length    24 section .text
+start 000082b3 end 000082d4 length    33 section .text
+start 000082d4 end 00008300 length    44 section .text
+
+Release\rs485.o:
+start ******** end ******** length     0 section .bsct *** removed ***
+start 00000328 end 000003a5 length   125 section .info.
+
+Release\rs485_tramas.o:
+start ******** end ******** length     0 section .bsct *** removed ***
+start 000003a5 end 00000429 length   132 section .info.
 
 Release\dht11.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000328 end 000003a5 length   125 section .info.
+start 00000429 end 000004a6 length   125 section .info.
 start 00008080 end 0000808f length    15 section .const
-start 000082ac end 000082d4 length    40 section .text
-start 000082d4 end 00008575 length   673 section .text
+start 00008300 end 0000832c length    44 section .text
+start 0000832c end 0000875e length  1074 section .text
 
 Release\hx711.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000003a5 end 00000422 length   125 section .info.
+start 000004a6 end 00000523 length   125 section .info.
 start ******** end ******** length     0 section .const *** removed ***
-start 00008575 end 000085f3 length   126 section .text
-start 000085f3 end 00008800 length   525 section .text
-start 00008800 end 00008a07 length   519 section .text
+start 0000875e end 000087f4 length   150 section .text
+start 000087f4 end 00008a21 length   557 section .text
+start 00008a21 end 00008c2c length   523 section .text
 
 Release\stm8s_wwdg.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000422 end 000004a4 length   130 section .info.
+start 00000523 end 000005a5 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -96,7 +104,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_uart1.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000004a4 end 00000527 length   131 section .info.
+start 000005a5 end 00000628 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .const *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -126,7 +134,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_tim4.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000527 end 000005a9 length   130 section .info.
+start 00000628 end 000006aa length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -148,7 +156,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_tim2.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000005a9 end 0000062b length   130 section .info.
+start 000006aa end 0000072c length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -198,9 +206,9 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_tim1.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000062b end 000006ad length   130 section .info.
+start 0000072c end 000007ae length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
-start 00008a07 end 00008a29 length    34 section .text
+start 00008c2c end 00008c4e length    34 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -208,9 +216,9 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
-start 00008a29 end 00008a36 length    13 section .text
+start 00008c4e end 00008c5b length    13 section .text
 start ******** end ******** length     0 section .text *** removed ***
-start 00008a36 end 00008a4c length    22 section .text
+start 00008c5b end 00008c71 length    22 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -253,6 +261,7 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
+start 00008c71 end 00008c7a length     9 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -269,10 +278,9 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
+start 00008c7a end 00008c8a length    16 section .text
 start ******** end ******** length     0 section .text *** removed ***
-start 00008a4c end 00008a5c length    16 section .text
-start ******** end ******** length     0 section .text *** removed ***
-start 00008a5c end 00008a61 length     5 section .text
+start 00008c8a end 00008c8f length     5 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -280,7 +288,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_spi.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000006ad end 0000072e length   129 section .info.
+start 000007ae end 0000082f length   129 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -301,13 +309,13 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_rst.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000072e end 000007af length   129 section .info.
+start 0000082f end 000008b0 length   129 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_iwdg.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000007af end 00000831 length   130 section .info.
+start 000008b0 end 00000932 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -315,11 +323,11 @@ start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_itc.o:
-start 00000000 end 00000001 length     1 section .bsct
-start 00000831 end 000008b2 length   129 section .info.
-start 00008a61 end 00008a8d length    44 section .text
-start 00008a8d end 00008a90 length     3 section .text
-start 00008a90 end 00008a93 length     3 section .text
+start 00000000 end 00000002 length     2 section .bsct
+start 00000932 end 000009b3 length   129 section .info.
+start 00008c8f end 00008cbe length    47 section .text
+start 00008cbe end 00008cc1 length     3 section .text
+start 00008cc1 end 00008cc4 length     3 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -329,7 +337,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_i2c.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000008b2 end 00000933 length   129 section .info.
+start 000009b3 end 00000a34 length   129 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .const *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -354,21 +362,21 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_gpio.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000933 end 000009b5 length   130 section .info.
-start 00008a93 end 00008a9b length     8 section .text
-start 00008a9b end 00008aec length    81 section .text
+start 00000a34 end 00000ab6 length   130 section .info.
+start 00008cc4 end 00008ccc length     8 section .text
+start 00008ccc end 00008d1d length    81 section .text
 start ******** end ******** length     0 section .text *** removed ***
-start 00008aec end 00008af1 length     5 section .text
-start 00008af1 end 00008af7 length     6 section .text
+start 00008d1d end 00008d22 length     5 section .text
+start 00008d22 end 00008d28 length     6 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
-start 00008af7 end 00008afc length     5 section .text
+start 00008d28 end 00008d2d length     5 section .text
 start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_flash.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000009b5 end 00000a38 length   131 section .info.
+start 00000ab6 end 00000b39 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -392,7 +400,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_exti.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000a38 end 00000aba length   130 section .info.
+start 00000b39 end 00000bbb length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -401,35 +409,35 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_clk.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000aba end 00000b3b length   129 section .info.
+start 00000bbb end 00000c3c length   129 section .info.
 start ******** end ******** length     0 section .const *** removed ***
-start 00008afc end 00008b32 length    54 section .text
+start 00008d2d end 00008d63 length    54 section .text
 start ******** end ******** length     0 section .text *** removed ***
-start 00008b32 end 00008b3f length    13 section .text
-start 00008b3f end 00008b4c length    13 section .text
-start 00008b4c end 00008b59 length    13 section .text
+start 00008d63 end 00008d70 length    13 section .text
+start 00008d70 end 00008d7d length    13 section .text
+start 00008d7d end 00008d8a length    13 section .text
 start ******** end ******** length     0 section .text *** removed ***
-start 00008b59 end 00008b66 length    13 section .text
+start 00008d8a end 00008d97 length    13 section .text
 start ******** end ******** length     0 section .text *** removed ***
-start 00008b66 end 00008bcc length   102 section .text
-start 00008bcc end 00008c6d length   161 section .text
-start 00008c6d end 00008c80 length    19 section .text
-start ******** end ******** length     0 section .text *** removed ***
-start ******** end ******** length     0 section .text *** removed ***
-start 00008c80 end 00008ca7 length    39 section .text
+start 00008d97 end 00008dfd length   102 section .text
+start 00008dfd end 00008e9e length   161 section .text
+start 00008e9e end 00008eb1 length    19 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
+start 00008eb1 end 00008ed8 length    39 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
-start 00008ca7 end 00008cea length    67 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 00008ed8 end 00008f1b length    67 section .text
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_beep.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000b3b end 00000bbd length   130 section .info.
+start 00000c3c end 00000cbe length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -438,7 +446,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_awu.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000bbd end 00000c3e length   129 section .info.
+start 00000cbe end 00000d3f length   129 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -449,7 +457,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Release\stm8s_adc1.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00000c3e end 00000cc0 length   130 section .info.
+start 00000d3f end 00000dc1 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -474,104 +482,104 @@ start ******** end ******** length     0 section .text *** removed ***
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)cmulx.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000cc0 end 00000cf0 length    48 section .info.
+start 00000dc1 end 00000df1 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)imul.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000cf0 end 00000d1f length    47 section .info.
+start 00000df1 end 00000e20 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ladd.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000d1f end 00000d4e length    47 section .info.
+start 00000e20 end 00000e4f length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lcmp.o:
-start ******** end ******** length     0 section .text *** removed ***
-start 00000d4e end 00000d7d length    47 section .info.
+start 00008f1b end 00008f3b length    32 section .text
+start 00000e4f end 00000e7e length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgadd.o:
-start 00008cea end 00008d01 length    23 section .text
-start 00000d7d end 00000dad length    48 section .info.
+start 00008f3b end 00008f52 length    23 section .text
+start 00000e7e end 00000eae length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgor.o:
-start 00008d01 end 00008d18 length    23 section .text
-start 00000dad end 00000ddc length    47 section .info.
+start 00008f52 end 00008f69 length    23 section .text
+start 00000eae end 00000edd length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)llsh.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000ddc end 00000e0b length    47 section .info.
+start 00000edd end 00000f0c length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lmul.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000e0b end 00000e3a length    47 section .info.
+start 00000f0c end 00000f3b length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lreg.o:
-start 00000036 end 0000003a length     4 section .ubsct
-start 00000e3a end 00000e69 length    47 section .info.
+start 0000003b end 0000003f length     4 section .ubsct
+start 00000f3b end 00000f6a length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lsub.o:
-start ******** end ******** length     0 section .text *** removed ***
-start 00000e69 end 00000e98 length    47 section .info.
+start 00008f69 end 00008f81 length    24 section .text
+start 00000f6a end 00000f99 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ltor.o:
-start 00008d18 end 00008d2a length    18 section .text
-start 00000e98 end 00000ec7 length    47 section .info.
+start 00008f81 end 00008f93 length    18 section .text
+start 00000f99 end 00000fc8 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ludiv.o:
-start 00008d2a end 00008d3e length    20 section .text
-start 00000ec7 end 00000ef7 length    48 section .info.
+start 00008f93 end 00008fa7 length    20 section .text
+start 00000fc8 end 00000ff8 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o:
-start 00008d3e end 00008e29 length   235 section .text
-start 00000ef7 end 00000f26 length    47 section .info.
+start 00008fa7 end 00009092 length   235 section .text
+start 00000ff8 end 00001027 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgneg.o:
-start 00008e29 end 00008e3c length    19 section .text
-start 00000f26 end 00000f56 length    48 section .info.
+start 00009092 end 000090a5 length    19 section .text
+start 00001027 end 00001057 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lneg.o:
-start 00008e3c end 00008e51 length    21 section .text
-start 00000f56 end 00000f85 length    47 section .info.
+start 000090a5 end 000090ba length    21 section .text
+start 00001057 end 00001086 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lursh.o:
-start 00008e51 end 00008e60 length    15 section .text
-start 00000f85 end 00000fb5 length    48 section .info.
+start 000090ba end 000090c9 length    15 section .text
+start 00001086 end 000010b6 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)rtol.o:
-start 00008e60 end 00008e72 length    18 section .text
-start 00000fb5 end 00000fe4 length    47 section .info.
+start 000090c9 end 000090db length    18 section .text
+start 000010b6 end 000010e5 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)sdivx.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00000fe4 end 00001014 length    48 section .info.
+start 000010e5 end 00001115 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)smul.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00001014 end 00001043 length    47 section .info.
+start 00001115 end 00001144 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)utolx.o:
-start 00008e72 end 00008e79 length     7 section .text
-start 00001043 end 00001073 length    48 section .info.
+start 000090db end 000090e2 length     7 section .text
+start 00001144 end 00001174 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)umul.o:
 start ******** end ******** length     0 section .text *** removed ***
-start 00001073 end 000010a2 length    47 section .info.
+start 00001174 end 000011a3 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xreg.o:
-start 0000003a end 0000003d length     3 section .ubsct
-start 000010a2 end 000010d1 length    47 section .info.
+start 0000003f end 00000042 length     3 section .ubsct
+start 000011a3 end 000011d2 length    47 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xymov.o:
-start 00008e79 end 00008eb8 length    63 section .text
-start 000010d1 end 00001101 length    48 section .info.
+start 000090e2 end 00009121 length    63 section .text
+start 000011d2 end 00001202 length    48 section .info.
 
 (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)yreg.o:
-start 0000003d end 00000040 length     3 section .ubsct
-start 00001101 end 00001130 length    47 section .info.
+start 00000042 end 00000045 length     3 section .ubsct
+start 00001202 end 00001231 length    47 section .info.
 
 Release\stm8_interrupt_vector.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00001130 end 000011bd length   141 section .info.
-start 00008eb8 end 00008eb9 length     1 section .text
+start 00001231 end 000012be length   141 section .info.
+start 00009121 end 00009122 length     1 section .text
 start 00008000 end 00008080 length   128 section .const
 
 
@@ -584,8 +592,8 @@ _Clock_HSI_Init                 14   (4)
 _DisableAllPeripherals           6   (2)
 
 Release\dht11.o:
-_DHT11_Init                     16   (6)
-_dht11_Lectura              >   35   (25)
+_DHT11_Init                     18   (8)
+_dht11_Lectura              >   43   (25) *** pointer() ***
 
 Release\gpio.o:
 _NHALgpio_Init                   8   (2)
@@ -596,12 +604,12 @@ Release\gpio_config.o:
 _NHALgpioConfig_SetType          5   (5)
 
 Release\hx711.o:
-_HX711_Init                     22   (12)
+_HX711_Init                     24   (14)
 _hx711_Lectura              >   33   (15) *** pointer() ***
 _hx711_Tarar                >   38   (20) *** pointer() ***
 
 Release\main.o:
-_main                       >   24   (2) *** pointer() ***
+_main                       >   33   (9) *** pointer() ***
 
 Release\stm8_interrupt_vector.o:
 f_NonHandledInterrupt       >    6   (6)
@@ -635,6 +643,7 @@ _TIM1_ClearFlag                  4   (4)
 _TIM1_ClearITPendingBit          2   (2)
 _TIM1_Cmd                        2   (2)
 _TIM1_ITConfig                   4   (4)
+_TIM1_SetCounter                 2   (2)
 _TIM1_TimeBaseInit               8   (8)
 
 Release\timeout.o:
@@ -643,9 +652,10 @@ _Timeout_Start                  18   (6)
 _Timeout_Stop                    8   (4) *** pointer() ***
 
 Release\timer.o:
+_Timer_Config_Init              10   (10)
 _Timer_Init                     12   (4)
 
-Stack size: 54
+Stack size: 59
 
 
                               ---------
@@ -665,131 +675,139 @@ Stack size: 54
    9      |    + _GPIO_WriteHigh: (5)
   10      |    + _GPIO_WriteLow: (5)
           | 
-       
-  11 > _getFlagTimer1: (2)
-
-  12 > _hx711_Lectura: (15)
-  13      + _NHALgpio_Read --> 6
-  14      + _NHALgpio_Write --> 8
-  15      + _Timeout_Start: (6)
-  16      |    + _Timer_Init: (4)
-  17      |    |    + _TIM1_Cmd: (2)
-  18      |    |    + _TIM1_ITConfig: (4)
-  19      |    |    + _TIM1_TimeBaseInit: (8)
+  11      + _Timeout_Start: (6)
+  12      |    + _Timer_Init: (4)
+  13      |    |    + _TIM1_Cmd: (2)
+  14      |    |    + _TIM1_ITConfig: (4)
+  15      |    |    + _TIM1_TimeBaseInit: (8)
           |    | 
           | 
-  20      + _Timeout_Stop: (4)
-  21      |    + _TIM1_ClearFlag: (4)
-  22      |    + _TIM1_ClearITPendingBit: (2)
-  23      |    + _TIM1_Cmd --> 17
-  24      |    + _TIM1_ITConfig --> 18
+  16      + _Timeout_Stop: (4)
+  17      |    + _TIM1_ClearFlag: (4)
+  18      |    + _TIM1_ClearITPendingBit: (2)
+  19      |    + _TIM1_Cmd --> 13
+  20      |    + _TIM1_ITConfig --> 14
+  21      |    + _TIM1_SetCounter: (2)
           | 
        
-  25 > _hx711_Tarar: (20)
-  26      + _NHALgpio_Read --> 6
-  27      + _NHALgpio_Write --> 8
-  28      + _Timeout_Start --> 15
-  29      + _Timeout_Stop --> 20
+  22 > _getFlagTimer1: (2)
+
+  23 > _hx711_Lectura: (15)
+  24      + _NHALgpio_Read --> 6
+  25      + _NHALgpio_Write --> 8
+  26      + _Timeout_Start --> 11
+  27      + _Timeout_Stop --> 16
        
-  30 > _main: (2)
-  31      + _Clock_HSI_Init: (4)
-  32      |    + _CLK_ClockSwitchCmd: (2)
-  33      |    + _CLK_ClockSwitchConfig: (10)
-  34      |    + _CLK_DeInit: (2)
-  35      |    + _CLK_GetFlagStatus: (7)
-  36      |    + _CLK_HSECmd: (2)
-  37      |    + _CLK_HSICmd: (2)
-  38      |    + _CLK_HSIPrescalerConfig: (3)
-  39      |    + _CLK_LSICmd: (2)
-  40      |    + _CLK_SYSCLKConfig: (3)
-  41      |    + _DisableAllPeripherals: (2)
-  42      |    |    + _CLK_PeripheralClockConfig: (4)
+  28 > _hx711_Tarar: (20)
+  29      + _NHALgpio_Read --> 6
+  30      + _NHALgpio_Write --> 8
+  31      + _Timeout_Start --> 11
+  32      + _Timeout_Stop --> 16
+       
+  33 > _main: (9)
+  34      + _Clock_HSI_Init: (4)
+  35      |    + _CLK_ClockSwitchCmd: (2)
+  36      |    + _CLK_ClockSwitchConfig: (10)
+  37      |    + _CLK_DeInit: (2)
+  38      |    + _CLK_GetFlagStatus: (7)
+  39      |    + _CLK_HSECmd: (2)
+  40      |    + _CLK_HSICmd: (2)
+  41      |    + _CLK_HSIPrescalerConfig: (3)
+  42      |    + _CLK_LSICmd: (2)
+  43      |    + _CLK_SYSCLKConfig: (3)
+  44      |    + _DisableAllPeripherals: (2)
+  45      |    |    + _CLK_PeripheralClockConfig: (4)
           |    | 
           | 
-  43      + _DHT11_Init: (6)
-  44      |    + _NHALgpioConfig_SetType --> 3
-  45      |    + _NHALgpio_Init --> 4
-  46      |    + _NHALgpio_Write --> 8
+  46      + _DHT11_Init: (8)
+  47      |    + _NHALgpioConfig_SetType --> 3
+  48      |    + _NHALgpio_Init --> 4
+  49      |    + _NHALgpio_Write --> 8
           | 
-  47      + _GPIO_DeInit: (2)
-  48      + _HX711_Init: (12)
-  49      |    + _NHALgpioConfig_SetType --> 3
-  50      |    + _NHALgpio_Init --> 4
-  51      |    + _NHALgpio_Write --> 8
+  50      + _GPIO_DeInit: (2)
+  51      + _HX711_Init: (14)
+  52      |    + _NHALgpioConfig_SetType --> 3
+  53      |    + _NHALgpio_Init --> 4
+  54      |    + _NHALgpio_Write --> 8
           | 
-  52      + _Timeout_Init: (10)
+  55      + _Timeout_Init: (10)
+  56      + _Timer_Config_Init: (10)
        
-  53 > _setFlagTimer1: (2)
+  57 > _setFlagTimer1: (2)
 
-  54 > f_NonHandledInterrupt: (6)
+  58 > f_NonHandledInterrupt: (6)
 
-  55 > f_TIM1_OV_IRQHandler: (12)
-  56      + _TIM1_ClearFlag --> 21
-  57      + _TIM1_ClearITPendingBit --> 22
+  59 > f_TIM1_OV_IRQHandler: (12)
+  60      + _TIM1_ClearFlag --> 17
+  61      + _TIM1_ClearITPendingBit --> 18
        
-  58   _CLK_ClockSwitchCmd --> 32
+  62   _CLK_ClockSwitchCmd --> 35
 
-  59   _CLK_ClockSwitchConfig --> 33
+  63   _CLK_ClockSwitchConfig --> 36
 
-  60   _CLK_DeInit --> 34
+  64   _CLK_DeInit --> 37
 
-  61   _CLK_GetFlagStatus --> 35
+  65   _CLK_GetFlagStatus --> 38
 
-  62   _CLK_HSECmd --> 36
+  66   _CLK_HSECmd --> 39
 
-  63   _CLK_HSICmd --> 37
+  67   _CLK_HSICmd --> 40
 
-  64   _CLK_HSIPrescalerConfig --> 38
+  68   _CLK_HSIPrescalerConfig --> 41
 
-  65   _CLK_LSICmd --> 39
+  69   _CLK_LSICmd --> 42
 
-  66   _CLK_PeripheralClockConfig --> 42
+  70   _CLK_PeripheralClockConfig --> 45
 
-  67   _CLK_SYSCLKConfig --> 40
+  71   _CLK_SYSCLKConfig --> 43
 
-  68   _Clock_HSI_Init --> 31
+  72   _Clock_HSI_Init --> 34
 
-  69   _DHT11_Init --> 43
+  73   _DHT11_Init --> 46
 
-  70   _DisableAllPeripherals --> 41
+  74   _DisableAllPeripherals --> 44
 
-  71   _GPIO_DeInit --> 47
+  75   _GPIO_DeInit --> 50
 
-  72   _GPIO_Init --> 5
+  76   _GPIO_Init --> 5
 
-  73   _GPIO_ReadInputPin --> 7
+  77   _GPIO_ReadInputPin --> 7
 
-  74   _GPIO_WriteHigh --> 9
+  78   _GPIO_WriteHigh --> 9
 
-  75   _GPIO_WriteLow --> 10
+  79   _GPIO_WriteLow --> 10
 
-  76   _HX711_Init --> 48
+  80   _HX711_Init --> 51
 
-  77   _NHALgpioConfig_SetType --> 3
+  81   _NHALgpioConfig_SetType --> 3
 
-  78   _NHALgpio_Init --> 4
+  82   _NHALgpio_Init --> 4
 
-  79   _NHALgpio_Read --> 6
+  83   _NHALgpio_Read --> 6
 
-  80   _NHALgpio_Write --> 8
+  84   _NHALgpio_Write --> 8
 
-  81   _TIM1_ClearFlag --> 21
+  85   _TIM1_ClearFlag --> 17
 
-  82   _TIM1_ClearITPendingBit --> 22
+  86   _TIM1_ClearITPendingBit --> 18
 
-  83   _TIM1_Cmd --> 17
+  87   _TIM1_Cmd --> 13
 
-  84   _TIM1_ITConfig --> 18
+  88   _TIM1_ITConfig --> 14
 
-  85   _TIM1_TimeBaseInit --> 19
+  89   _TIM1_SetCounter --> 21
 
-  86   _Timeout_Init --> 52
+  90   _TIM1_TimeBaseInit --> 15
 
-  87   _Timeout_Start --> 15
+  91   _Timeout_Init --> 55
 
-  88   _Timeout_Stop --> 20
+  92   _Timeout_Start --> 11
 
-  89   _Timer_Init --> 16
+  93   _Timeout_Stop --> 16
+
+  94   _Timer_Config_Init --> 56
+
+  95   _Timer_Init --> 12
 
 
 
@@ -835,39 +853,39 @@ _CLK_CCOCmd                      ********   *** removed from Release\stm8s_clk.o
 _CLK_CCOConfig                   ********   *** removed from Release\stm8s_clk.o ***
 _CLK_ClearITPendingBit           ********   *** removed from Release\stm8s_clk.o ***
 _CLK_ClockSecuritySystemEnable   ********   *** removed from Release\stm8s_clk.o ***
-_CLK_ClockSwitchCmd              00008b59   defined in Release\stm8s_clk.o section .text
+_CLK_ClockSwitchCmd              00008d8a   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
-_CLK_ClockSwitchConfig           00008bcc   defined in Release\stm8s_clk.o section .text
+_CLK_ClockSwitchConfig           00008dfd   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
-_CLK_DeInit                      00008afc   defined in Release\stm8s_clk.o section .text
+_CLK_DeInit                      00008d2d   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
 _CLK_FastHaltWakeUpCmd           ********   *** removed from Release\stm8s_clk.o ***
 _CLK_GetClockFreq                ********   *** removed from Release\stm8s_clk.o ***
-_CLK_GetFlagStatus               00008ca7   defined in Release\stm8s_clk.o section .text
+_CLK_GetFlagStatus               00008ed8   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
 _CLK_GetITStatus                 ********   *** removed from Release\stm8s_clk.o ***
 _CLK_GetSYSCLKSource             ********   *** removed from Release\stm8s_clk.o ***
-_CLK_HSECmd                      00008b32   defined in Release\stm8s_clk.o section .text
+_CLK_HSECmd                      00008d63   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
-_CLK_HSICmd                      00008b3f   defined in Release\stm8s_clk.o section .text
+_CLK_HSICmd                      00008d70   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
-_CLK_HSIPrescalerConfig          00008c6d   defined in Release\stm8s_clk.o section .text
+_CLK_HSIPrescalerConfig          00008e9e   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
 _CLK_ITConfig                    ********   *** removed from Release\stm8s_clk.o ***
-_CLK_LSICmd                      00008b4c   defined in Release\stm8s_clk.o section .text
+_CLK_LSICmd                      00008d7d   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
-_CLK_PeripheralClockConfig       00008b66   defined in Release\stm8s_clk.o section .text
+_CLK_PeripheralClockConfig       00008d97   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
 _CLK_SWIMConfig                  ********   *** removed from Release\stm8s_clk.o ***
-_CLK_SYSCLKConfig                00008c80   defined in Release\stm8s_clk.o section .text
+_CLK_SYSCLKConfig                00008eb1   defined in Release\stm8s_clk.o section .text
                                             used in Release\clock.o
 _CLK_SYSCLKEmergencyClear        ********   *** removed from Release\stm8s_clk.o ***
 _CLK_SlowActiveHaltWakeUpCmd     ********   *** removed from Release\stm8s_clk.o ***
-_Clock_HSI_Init                  00008175   defined in Release\clock.o section .text
+_Clock_HSI_Init                  000081af   defined in Release\clock.o section .text
                                             used in Release\main.o
-_DHT11_Init                      000082ac   defined in Release\dht11.o section .text
+_DHT11_Init                      00008300   defined in Release\dht11.o section .text
                                             used in Release\main.o
-_DisableAllPeripherals           000081ae   defined in Release\clock.o section .text
+_DisableAllPeripherals           000081e8   defined in Release\clock.o section .text
 _EXTI_DeInit                     ********   *** removed from Release\stm8s_exti.o ***
 _EXTI_GetExtIntSensitivity       ********   *** removed from Release\stm8s_exti.o ***
 _EXTI_GetTLISensitivity          ********   *** removed from Release\stm8s_exti.o ***
@@ -894,23 +912,23 @@ _FLASH_SetLowPowerMode           ********   *** removed from Release\stm8s_flash
 _FLASH_SetProgrammingTime        ********   *** removed from Release\stm8s_flash.o ***
 _FLASH_Unlock                    ********   *** removed from Release\stm8s_flash.o ***
 _FLASH_WaitForLastOperation      ********   *** removed from Release\stm8s_flash.o ***
-_GPIO_DeInit                     00008a93   defined in Release\stm8s_gpio.o section .text
+_GPIO_DeInit                     00008cc4   defined in Release\stm8s_gpio.o section .text
                                             used in Release\main.o
 _GPIO_ExternalPullUpConfig       ********   *** removed from Release\stm8s_gpio.o ***
-_GPIO_Init                       00008a9b   defined in Release\stm8s_gpio.o section .text
+_GPIO_Init                       00008ccc   defined in Release\stm8s_gpio.o section .text
                                             used in Release\gpio.o
 _GPIO_ReadInputData              ********   *** removed from Release\stm8s_gpio.o ***
-_GPIO_ReadInputPin               00008af7   defined in Release\stm8s_gpio.o section .text
+_GPIO_ReadInputPin               00008d28   defined in Release\stm8s_gpio.o section .text
                                             used in Release\gpio.o
 _GPIO_ReadOutputData             ********   *** removed from Release\stm8s_gpio.o ***
 _GPIO_Write                      ********   *** removed from Release\stm8s_gpio.o ***
-_GPIO_WriteHigh                  00008aec   defined in Release\stm8s_gpio.o section .text
+_GPIO_WriteHigh                  00008d1d   defined in Release\stm8s_gpio.o section .text
                                             used in Release\gpio.o
-_GPIO_WriteLow                   00008af1   defined in Release\stm8s_gpio.o section .text
+_GPIO_WriteLow                   00008d22   defined in Release\stm8s_gpio.o section .text
                                             used in Release\gpio.o
 _GPIO_WriteReverse               ********   *** removed from Release\stm8s_gpio.o ***
 _HSIDivFactor                    ********   *** removed from Release\stm8s_clk.o ***
-_HX711_Init                      00008575   defined in Release\hx711.o section .text
+_HX711_Init                      0000875e   defined in Release\hx711.o section .text
                                             used in Release\main.o
 _I2C_AcknowledgeConfig           ********   *** removed from Release\stm8s_i2c.o ***
 _I2C_CheckEvent                  ********   *** removed from Release\stm8s_i2c.o ***
@@ -942,18 +960,18 @@ _IWDG_ReloadCounter              ********   *** removed from Release\stm8s_iwdg.
 _IWDG_SetPrescaler               ********   *** removed from Release\stm8s_iwdg.o ***
 _IWDG_SetReload                  ********   *** removed from Release\stm8s_iwdg.o ***
 _IWDG_WriteAccessCmd             ********   *** removed from Release\stm8s_iwdg.o ***
-_NHALgpioConfig_SetType          000081dc   defined in Release\gpio_config.o section .text
+_NHALgpioConfig_SetType          00008216   defined in Release\gpio_config.o section .text
                                             used in Release\clock.o
                                                     Release\dht11.o
                                                     Release\hx711.o
-_NHALgpio_Init                   000081e1   defined in Release\gpio.o section .text
+_NHALgpio_Init                   0000821b   defined in Release\gpio.o section .text
                                             used in Release\clock.o
                                                     Release\dht11.o
                                                     Release\hx711.o
-_NHALgpio_Read                   000081ed   defined in Release\gpio.o section .text
+_NHALgpio_Read                   00008227   defined in Release\gpio.o section .text
                                             used in Release\dht11.o
                                                     Release\hx711.o
-_NHALgpio_Write                  000081fc   defined in Release\gpio.o section .text
+_NHALgpio_Write                  00008236   defined in Release\gpio.o section .text
                                             used in Release\dht11.o
                                                     Release\hx711.o
 _RST_ClearFlag                   ********   *** removed from Release\stm8s_rst.o ***
@@ -975,21 +993,21 @@ _SPI_ReceiveData                 ********   *** removed from Release\stm8s_spi.o
 _SPI_ResetCRC                    ********   *** removed from Release\stm8s_spi.o ***
 _SPI_SendData                    ********   *** removed from Release\stm8s_spi.o ***
 _SPI_TransmitCRC                 ********   *** removed from Release\stm8s_spi.o ***
-_SensorPesaje                    00000010   defined in Release\main.o section .ubsct
-_SensorTempHum                   0000002a   defined in Release\main.o section .ubsct
+_SensorPesaje                    00000011   defined in Release\main.o section .ubsct
+_SensorTempHum                   0000002d   defined in Release\main.o section .ubsct
 _TBR_Array                       ********   *** removed from Release\stm8s_awu.o ***
 _TIM1_ARRPreloadConfig           ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_BDTRConfig                 ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_CCPreloadControl           ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_CCxCmd                     ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_CCxNCmd                    ********   *** removed from Release\stm8s_tim1.o ***
-_TIM1_ClearFlag                  00008a4c   defined in Release\stm8s_tim1.o section .text
+_TIM1_ClearFlag                  00008c7a   defined in Release\stm8s_tim1.o section .text
                                             used in Release\timeout.o
                                                     Release\stm8s_itc.o
-_TIM1_ClearITPendingBit          00008a5c   defined in Release\stm8s_tim1.o section .text
+_TIM1_ClearITPendingBit          00008c8a   defined in Release\stm8s_tim1.o section .text
                                             used in Release\timeout.o
                                                     Release\stm8s_itc.o
-_TIM1_Cmd                        00008a29   defined in Release\stm8s_tim1.o section .text
+_TIM1_Cmd                        00008c4e   defined in Release\stm8s_tim1.o section .text
                                             used in Release\timer.o
                                                     Release\timeout.o
 _TIM1_CounterModeConfig          ********   *** removed from Release\stm8s_tim1.o ***
@@ -1013,7 +1031,7 @@ _TIM1_GetFlagStatus              ********   *** removed from Release\stm8s_tim1.
 _TIM1_GetITStatus                ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_GetPrescaler               ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_ICInit                     ********   *** removed from Release\stm8s_tim1.o ***
-_TIM1_ITConfig                   00008a36   defined in Release\stm8s_tim1.o section .text
+_TIM1_ITConfig                   00008c5b   defined in Release\stm8s_tim1.o section .text
                                             used in Release\timer.o
                                                     Release\timeout.o
 _TIM1_InternalClockConfig        ********   *** removed from Release\stm8s_tim1.o ***
@@ -1051,13 +1069,14 @@ _TIM1_SetCompare1                ********   *** removed from Release\stm8s_tim1.
 _TIM1_SetCompare2                ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_SetCompare3                ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_SetCompare4                ********   *** removed from Release\stm8s_tim1.o ***
-_TIM1_SetCounter                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetCounter                 00008c71   defined in Release\stm8s_tim1.o section .text
+                                            used in Release\timeout.o
 _TIM1_SetIC1Prescaler            ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_SetIC2Prescaler            ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_SetIC3Prescaler            ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_SetIC4Prescaler            ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_TIxExternalClockConfig     ********   *** removed from Release\stm8s_tim1.o ***
-_TIM1_TimeBaseInit               00008a07   defined in Release\stm8s_tim1.o section .text
+_TIM1_TimeBaseInit               00008c2c   defined in Release\stm8s_tim1.o section .text
                                             used in Release\timer.o
 _TIM1_UpdateDisableConfig        ********   *** removed from Release\stm8s_tim1.o ***
 _TIM1_UpdateRequestConfig        ********   *** removed from Release\stm8s_tim1.o ***
@@ -1122,15 +1141,18 @@ _TIM4_SetCounter                 ********   *** removed from Release\stm8s_tim4.
 _TIM4_TimeBaseInit               ********   *** removed from Release\stm8s_tim4.o ***
 _TIM4_UpdateDisableConfig        ********   *** removed from Release\stm8s_tim4.o ***
 _TIM4_UpdateRequestConfig        ********   *** removed from Release\stm8s_tim4.o ***
-_Timeout                         00000001   defined in Release\main.o section .ubsct
-_Timeout_Check                   ********   *** removed from Release\timeout.o ***
-_Timeout_Init                    0000824d   defined in Release\timeout.o section .text
+_Timeout                         00000002   defined in Release\main.o section .ubsct
+_Timeout_Init                    0000829b   defined in Release\timeout.o section .text
                                             used in Release\main.o
-_Timeout_Start                   00008265   defined in Release\timeout.o section .text
-                                            used in Release\hx711.o
-_Timeout_Stop                    00008286   defined in Release\timeout.o section .text
-                                            used in Release\hx711.o
-_Timer_Init                      00008216   defined in Release\timer.o section .text
+_Timeout_Start                   000082b3   defined in Release\timeout.o section .text
+                                            used in Release\dht11.o
+                                                    Release\hx711.o
+_Timeout_Stop                    000082d4   defined in Release\timeout.o section .text
+                                            used in Release\dht11.o
+                                                    Release\hx711.o
+_Timer_Config_Init               00008287   defined in Release\timer.o section .text
+                                            used in Release\main.o
+_Timer_Init                      00008250   defined in Release\timer.o section .text
                                             used in Release\timeout.o
 _UART1_ClearFlag                 ********   *** removed from Release\stm8s_uart1.o ***
 _UART1_ClearITPendingBit         ********   *** removed from Release\stm8s_uart1.o ***
@@ -1164,7 +1186,7 @@ _WWDG_SetCounter                 ********   *** removed from Release\stm8s_wwdg.
 _WWDG_SetWindowValue             ********   *** removed from Release\stm8s_wwdg.o ***
 __endmem                         000001ff   defined in command file
                                             *** not used ***
-__endzp                          00000040   defined in command file section .ubsct
+__endzp                          00000045   defined in command file section .ubsct
                                             used in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8
 __idesc__                        0000808f   defined in linker section .init
                                             used in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8
@@ -1174,45 +1196,47 @@ __stack                          000003ff   defined in command file
                                             used in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8
 __startmem                       00000100   defined in command file section .bss
                                             *** not used ***
-__stext                          00008098   defined in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8 section .text
+__stext                          00008099   defined in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8 section .text
                                             used in Release\stm8_interrupt_vector.o
 __vectab                         00008000   defined in Release\stm8_interrupt_vector.o section .const
                                             *** not used ***
-_dht11_Lectura                   000082d4   defined in Release\dht11.o section .text
+_dht11_Lectura                   0000832c   defined in Release\dht11.o section .text
                                             used in Release\main.o
-_exit                            000080e6   defined in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8 section .text
-_getFlagTimer1                   00008a8d   defined in Release\stm8s_itc.o section .text
+_exit                            000080e7   defined in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8 section .text
+_getFlagTimer1                   00008cbe   defined in Release\stm8s_itc.o section .text
                                             used in Release\main.o
-_hx711_Lectura                   000085f3   defined in Release\hx711.o section .text
+_hx711_Lectura                   000087f4   defined in Release\hx711.o section .text
                                             used in Release\main.o
-_hx711_Tarar                     00008800   defined in Release\hx711.o section .text
+_hx711_Tarar                     00008a21   defined in Release\hx711.o section .text
                                             used in Release\main.o
-_main                            000080e8   defined in Release\main.o section .text
+_main                            000080e9   defined in Release\main.o section .text
                                             used in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8
-_setFlagTimer1                   00008a90   defined in Release\stm8s_itc.o section .text
+_setFlagTimer1                   00008cc1   defined in Release\stm8s_itc.o section .text
                                             used in Release\main.o
-_timer_Timeout                   0000000a   defined in Release\main.o section .ubsct
+_timer_Timeout                   0000000b   defined in Release\main.o section .ubsct
 c_cmulx                          ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)cmulx.o ***
-c_divsl                          00008d3e   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o section .text
+c_divsl                          00008fa7   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o section .text
                                             *** not used ***
-c_divul                          00008d55   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o section .text
+c_divul                          00008fbe   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o section .text
                                             used in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ludiv.o
 c_imul                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)imul.o ***
 c_ladd                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ladd.o ***
-c_lcmp                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lcmp.o ***
-c_lgadd                          00008cea   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgadd.o section .text
+c_lcmp                           00008f1b   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lcmp.o section .text
+                                            used in Release\hx711.o
+                                                    Release\stm8s_i2c.o
+c_lgadd                          00008f3b   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgadd.o section .text
                                             used in Release\hx711.o
                                                     Release\stm8s_flash.o
-c_lgneg                          00008e29   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgneg.o section .text
+c_lgneg                          00009092   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgneg.o section .text
                                             used in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o
-c_lgor                           00008d01   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgor.o section .text
+c_lgor                           00008f52   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lgor.o section .text
                                             used in Release\hx711.o
 c_llsh                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)llsh.o ***
 c_lmul                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lmul.o ***
 c_lmulc                          ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lmul.o ***
-c_lneg                           00008e3c   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lneg.o section .text
+c_lneg                           000090a5   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lneg.o section .text
                                             used in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ldiv.o
-c_lreg                           00000036   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lreg.o section .ubsct
+c_lreg                           0000003b   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lreg.o section .ubsct
                                             used in Release\hx711.o
                                                     Release\stm8s_uart1.o
                                                     Release\stm8s_i2c.o
@@ -1236,8 +1260,10 @@ c_lreg                           00000036   defined in (D:\Programas\CosmicC\CXS
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)smul.o
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)utolx.o
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)umul.o
-c_lsub                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lsub.o ***
-c_ltor                           00008d18   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ltor.o section .text
+c_lsub                           00008f69   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lsub.o section .text
+                                            used in Release\hx711.o
+                                                    Release\stm8s_uart1.o
+c_ltor                           00008f81   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ltor.o section .text
                                             used in Release\hx711.o
                                                     Release\stm8s_uart1.o
                                                     Release\stm8s_i2c.o
@@ -1245,16 +1271,16 @@ c_ltor                           00008d18   defined in (D:\Programas\CosmicC\CXS
                                                     Release\stm8s_clk.o
                                                     Release\stm8s_beep.o
                                                     Release\stm8s_awu.o
-c_ludv                           00008d2a   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ludiv.o section .text
+c_ludv                           00008f93   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)ludiv.o section .text
                                             used in Release\hx711.o
                                                     Release\stm8s_uart1.o
                                                     Release\stm8s_i2c.o
                                                     Release\stm8s_clk.o
                                                     Release\stm8s_beep.o
                                                     Release\stm8s_awu.o
-c_lursh                          00008e51   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lursh.o section .text
+c_lursh                          000090ba   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)lursh.o section .text
                                             used in Release\hx711.o
-c_rtol                           00008e60   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)rtol.o section .text
+c_rtol                           000090c9   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)rtol.o section .text
                                             used in Release\main.o
                                                     Release\hx711.o
                                                     Release\stm8s_uart1.o
@@ -1264,11 +1290,11 @@ c_rtol                           00008e60   defined in (D:\Programas\CosmicC\CXS
 c_sdivx                          ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)sdivx.o ***
 c_smodx                          ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)sdivx.o ***
 c_smul                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)smul.o ***
-c_uitolx                         00008e72   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)utolx.o section .text
+c_uitolx                         000090db   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)utolx.o section .text
                                             used in Release\main.o
                                                     Release\hx711.o
 c_umul                           ********   *** removed from (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)umul.o ***
-c_x                              0000003a   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xreg.o section .ubsct
+c_x                              0000003f   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xreg.o section .ubsct
                                             used in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8
                                                     Release\dht11.o
                                                     Release\stm8s_itc.o
@@ -1280,12 +1306,12 @@ c_x                              0000003a   defined in (D:\Programas\CosmicC\CXS
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)sdivx.o
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)umul.o
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xymov.o
-c_xymov                          00008e79   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xymov.o section .text
+c_xymov                          000090e2   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)xymov.o section .text
                                             used in Release\dht11.o
-c_y                              0000003d   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)yreg.o section .ubsct
+c_y                              00000042   defined in (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)yreg.o section .ubsct
                                             used in D:\Programas\CosmicC\CXSTM8\lib\crtsi0.sm8
                                                     Release\stm8s_itc.o
                                                     (D:\Programas\CosmicC\CXSTM8\lib\libm0.sm8)umul.o
-f_NonHandledInterrupt            00008eb8   defined in Release\stm8_interrupt_vector.o section .text
-f_TIM1_OV_IRQHandler             00008a61   defined in Release\stm8s_itc.o section .text
+f_NonHandledInterrupt            00009121   defined in Release\stm8_interrupt_vector.o section .text
+f_TIM1_OV_IRQHandler             00008c8f   defined in Release\stm8s_itc.o section .text
                                             used in Release\stm8_interrupt_vector.o

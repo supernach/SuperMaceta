@@ -72,12 +72,12 @@ static @inline uint8_t leerByte( DHT11_t_ptr dht11 )
 	
 	for( contador; contador < 8; contador++ )
 	{
-		Timeout_Start( dht11->Timeout, 140 );
-		while( !NHALgpio_Read( &dht11->Config.HW ) && ( dht11->Timeout->Config.Notificacion( ) == 0 ) ) //Espera nuevo bit
+		Timeout_Start( dht11->Timeout, TIMEOUT_1MS );
+		while( !NHALgpio_Read( &dht11->Config.HW ) && ( dht11->Timeout->Config.Notificacion( ) < TIMEOUT_MAX_500MS ) ) //Espera nuevo bit
 		{
 		
 		}
-		if( dht11->Timeout->Config.Notificacion( ) )
+		if( dht11->Timeout->Config.Notificacion( ) >= TIMEOUT_MAX_500MS )
 		{
 			dht11->Datos.Estado = dht11_TIMEOUT;
 		}
@@ -103,16 +103,10 @@ static @inline uint8_t leerByte( DHT11_t_ptr dht11 )
 				temp <<=  1;
 			}
 			
-			Timeout_Start( dht11->Timeout, 140 );
-			while( NHALgpio_Read( &dht11->Config.HW ) && ( dht11->Timeout->Config.Notificacion( ) == 0 ) ) //Si el bit=1 espero a que baje señal
+			while( NHALgpio_Read( &dht11->Config.HW ) ) //Si el bit=1 espero a que baje señal
 			{
 			
 			}
-			if( dht11->Timeout->Config.Notificacion( ) )
-			{
-				dht11->Datos.Estado = dht11_TIMEOUT;
-			}
-			Timeout_Stop( dht11->Timeout );
 		}
 	}
 	
@@ -133,21 +127,46 @@ static @inline bool dht11_ComenzarTransmision( DHT11_t_ptr sensor )
 	NHALgpio_Init( &sensor->Config.HW ); 
 	_delay_us( 40 );
 	
-	Timeout_Start( sensor->Timeout, 140 );
-	while( !NHALgpio_Read( &sensor->Config.HW ) && ( sensor->Timeout->Config.Notificacion( ) == 0 ) )
+	Timeout_Start( sensor->Timeout, TIMEOUT_1MS );
+	while( !NHALgpio_Read( &sensor->Config.HW ) && ( sensor->Timeout->Config.Notificacion( ) < TIMEOUT_MAX_500MS ) )
 	{
 		sensor->Datos.Estado = dht11_ESPERA_BAJO;
 	}
 	
-	
-	while( NHALgpio_Read( &sensor->Config.HW ) )
+	if( sensor->Timeout->Config.Notificacion( ) >= TIMEOUT_MAX_500MS )
 	{
-		sensor->Datos.Estado = dht11_ESPERA_ALTO;
+		sensor->Datos.Estado = dht11_TIMEOUT;
 	}
+	Timeout_Stop( sensor->Timeout );
+
 	
+	if( sensor->Datos.Estado != dht11_TIMEOUT )
+	{
+		Timeout_Start( sensor->Timeout, TIMEOUT_1MS );
+		while( NHALgpio_Read( &sensor->Config.HW ) && ( sensor->Timeout->Config.Notificacion( ) < TIMEOUT_MAX_500MS ) )
+		{
+			sensor->Datos.Estado = dht11_ESPERA_ALTO;
+		}
+		if( sensor->Timeout->Config.Notificacion( ) >= TIMEOUT_MAX_500MS )
+		{
+			sensor->Datos.Estado = dht11_TIMEOUT;
+		}
+		Timeout_Stop( sensor->Timeout );
 	
-	sensor->Datos.Estado = dht11_CONEXION_OK;
-	return true;
+		if( sensor->Datos.Estado != dht11_TIMEOUT )
+		{
+			sensor->Datos.Estado = dht11_CONEXION_OK;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
 }
 
 static @inline DHT11_SI_t dht11_LeerDatos( DHT11_t_ptr sensor )
