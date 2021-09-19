@@ -110,6 +110,7 @@ extern "C"{
 #endif
 
 void Timer_Init( Timer_t_ptr timer );
+void Timer_Config_Init( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo );
 
 #ifdef __cplusplus
 } // extern "C"

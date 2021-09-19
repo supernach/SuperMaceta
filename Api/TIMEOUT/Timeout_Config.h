@@ -118,7 +118,7 @@ struct Timeout_Config
 extern "C"{
 #endif
 
-//void Timeout_Config_Init( Timeout_Config_t* timeout_config );
+
 
 #ifdef __cplusplus
 } // extern "C"

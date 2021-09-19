@@ -117,3 +117,47 @@ void Timer_Init( Timer_t_ptr timer )
 	}
 	enableInterrupts();
 }
+
+/******************************************************************************
+* Function : Timer_Config_Init()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		Timer_Config_t
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 18/09/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+void Timer_Config_Init( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo )
+{
+	timerConfig->Timer = timer ;
+	timerConfig->Canal = canal ;
+	timerConfig->Modo = modo ;
+	timerConfig->IT = it ;
+	timerConfig->Tiempo = tiempo ;
+}

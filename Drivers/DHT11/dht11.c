@@ -64,7 +64,7 @@
 * Function Prototypes
 *******************************************************************************/
 
-static @inline uint8_t leerByte( Gpio_Config_t* gpio )
+static @inline uint8_t leerByte( DHT11_t_ptr dht11 )
 {
 	uint8_t contador = 0;
 	uint8_t temp = 0;
@@ -72,31 +72,47 @@ static @inline uint8_t leerByte( Gpio_Config_t* gpio )
 	
 	for( contador; contador < 8; contador++ )
 	{
-		while( !NHALgpio_Read( gpio ) ) //Espera nuevo bit
+		Timeout_Start( dht11->Timeout, 140 );
+		while( !NHALgpio_Read( &dht11->Config.HW ) && ( dht11->Timeout->Config.Notificacion( ) == 0 ) ) //Espera nuevo bit
 		{
 		
 		}
-		_delay_us( 40 ); //Espero para comprobar nivel de la gpio +30us = 1 ; -30us = 0
+		if( dht11->Timeout->Config.Notificacion( ) )
+		{
+			dht11->Datos.Estado = dht11_TIMEOUT;
+		}
+		Timeout_Stop( dht11->Timeout );
+		
+		if( dht11->Datos.Estado != dht11_TIMEOUT )
+		{
+			_delay_us( 40 ); //Espero para comprobar nivel de la gpio +30us = 1 ; -30us = 0
 	
-		bitLeido = 0;
-		if( NHALgpio_Read( gpio ) )
-		{
-			bitLeido = 1;
-		}
-		else
-		{
 			bitLeido = 0;
-		}
+			if( NHALgpio_Read( &dht11->Config.HW ) )
+			{
+				bitLeido = 1;
+			}
+			else
+			{
+				bitLeido = 0;
+			}
 		
-		temp |= bitLeido;
-		if( contador < 7 )
-		{
-			temp <<=  1;
-		}
-		
-		while( NHALgpio_Read( gpio ) ) //Si el bit=1 espero a que baje señal
-		{
+			temp |= bitLeido;
+			if( contador < 7 )
+			{
+				temp <<=  1;
+			}
 			
+			Timeout_Start( dht11->Timeout, 140 );
+			while( NHALgpio_Read( &dht11->Config.HW ) && ( dht11->Timeout->Config.Notificacion( ) == 0 ) ) //Si el bit=1 espero a que baje señal
+			{
+			
+			}
+			if( dht11->Timeout->Config.Notificacion( ) )
+			{
+				dht11->Datos.Estado = dht11_TIMEOUT;
+			}
+			Timeout_Stop( dht11->Timeout );
 		}
 	}
 	
@@ -117,7 +133,8 @@ static @inline bool dht11_ComenzarTransmision( DHT11_t_ptr sensor )
 	NHALgpio_Init( &sensor->Config.HW ); 
 	_delay_us( 40 );
 	
-	while( !NHALgpio_Read( &sensor->Config.HW ) )
+	Timeout_Start( sensor->Timeout, 140 );
+	while( !NHALgpio_Read( &sensor->Config.HW ) && ( sensor->Timeout->Config.Notificacion( ) == 0 ) )
 	{
 		sensor->Datos.Estado = dht11_ESPERA_BAJO;
 	}
@@ -141,18 +158,18 @@ static @inline DHT11_SI_t dht11_LeerDatos( DHT11_t_ptr sensor )
 	DHT11_SI_t semilla = { 0, 0, 0, 0, 0 };
 	
 	sensor->Datos.Estado = dht11_MIDIENDO_H;
-	semilla.H_Entero = leerByte(&sensor->Config.HW);
+	semilla.H_Entero = leerByte( sensor );
 	
 	sensor->Datos.Estado = dht11_MIDIENDO_H;
-	semilla.H_Decimal = leerByte(&sensor->Config.HW);
+	semilla.H_Decimal = leerByte( sensor );
 	
 	sensor->Datos.Estado = dht11_MIDIENDO_T;
-	semilla.T_Entero = leerByte(&sensor->Config.HW);
+	semilla.T_Entero = leerByte( sensor );
 	
 	sensor->Datos.Estado = dht11_MIDIENDO_T;
-	semilla.T_Decimal = leerByte(&sensor->Config.HW);
+	semilla.T_Decimal = leerByte( sensor );
 	
-	semilla.CRC = leerByte(&sensor->Config.HW);
+	semilla.CRC = leerByte( sensor );
 	
 	checkCRC = semilla.H_Entero + semilla.H_Decimal + semilla.T_Entero + semilla.T_Decimal;
 	checkCRC &= mask;
@@ -217,9 +234,11 @@ static @inline void dht11_CerrarConexion( DHT11_t_ptr sensor )
 * <hr>
 *
 *******************************************************************************/
-void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura )
+void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr Timeout )
 {
 	dht11->Lectura = Lectura;
+	
+	dht11->Timeout = Timeout;
 	
 	dht11->Datos.UltimaLectura.CRC = 0;
 	dht11->Datos.UltimaLectura.T_Decimal = 0;

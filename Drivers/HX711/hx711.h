@@ -46,7 +46,12 @@
 *******************************************************************************/
 #include <utils.h>
 #include <gpio.h>
-#include <timeout.h>
+
+#define HX711_TIMEOUT_SI 1
+#ifdef HX711_TIMEOUT_SI
+	#include <timeout.h>
+#endif
+
 
 /******************************************************************************
 * Constants
@@ -167,7 +172,7 @@ struct HX711_Config
 	uint16_t ValorConversion;		/**< Valor de calibracion con peso conocido. Usado para calcular respuesta lectura
 															*		 TODO: Guardar en eeprom
 															*/
-	uint16_t ValorZero;					/**< Valor unico de cada grupo de 4 celulas de carga. Grabado en cada unidad
+	uint32_t ValorZero;					/**< Valor unico de cada grupo de 4 celulas de carga. Grabado en cada unidad
 															* 	 TODO:Guardar en eeprom y por programa. No modificable
 															*/
 	uint16_t ValorTara;					/**< Valor guardado al ejecutar la funcion de taraje */
@@ -184,7 +189,7 @@ struct HX711_Config
 struct HX711
 {
 	HX711_Config_t Config;	/**< Configuracion del objeto hx711 */
-	HX711_Datos_t Datos;		/**< Datos del objeto hx711 */
+	HX711_Datos_t Datos;   /**< Datos del objeto hx711 */
 	Timeout_t_ptr Timeout;
 	
 	HX711_fPtr Lectura;			/**< Puntero hacia la funcion de lectura */

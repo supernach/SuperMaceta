@@ -115,14 +115,10 @@ static @inline void InicializacionCLK(void)
 */
 static @inline void InicializacionComponentes(void)
 {
-	timer_Timeout.Config.Timer = TIMER1;
-	timer_Timeout.Config.Canal = CANAL1;
-	timer_Timeout.Config.Modo = COUNTERUP;
-	timer_Timeout.Config.IT = SI;
-	timer_Timeout.Config.Tiempo = 1;
-	
+	Timer_Config_Init( &timer_Timeout.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
 	Timeout_Init( &Timeout, &timer_Timeout, &getFlagTimer1, &setFlagTimer1 );
-	DHT11_Init( &SensorTempHum, &dht11_Lectura );
+	
+	DHT11_Init( &SensorTempHum, &dht11_Lectura, &Timeout );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
 }
 
@@ -142,6 +138,18 @@ static @inline void Inicializacion_Total(void)
 }
 
 /**
+/* @fn void LecturaSensores
+/* @brief Tarea de lectura de datos de los sensores
+/*
+/*
+*/
+static @inline void LecturaSensores(void)
+{
+	SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
+	SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
+}
+
+/**
 /*
 /* @brief Rutina principal
 /*
@@ -155,10 +163,7 @@ int main()
 	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 	while (1)
 	{
-		//SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
-		
-		SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
-		
-		//_delay_ms( 1000 );
+		LecturaSensores( );
+		_delay_ms( 1000 );
 	}
 }

@@ -48,6 +48,11 @@
 #include <utils.h>
 #include <Gpio.h>
 
+#define DHT11_TIMEOUT_SI 1
+#ifdef DHT11_TIMEOUT_SI
+	#include <timeout.h>
+#endif
+
 /******************************************************************************
 * Constants
 *******************************************************************************/
@@ -131,7 +136,8 @@ typedef enum
 	dht11_ESPERA_ALTO,				/**< Recibiendo datos. Espero sensor en alto */
 	dht11_FALLO_AL_LEER,			/**< Datos recibidos y crc no concuerdan */
 	dht11_FALLO_AL_COMUNICAR,	/**< Sensor no responde */
-	dht11_LECTURA_OK					/**< Datos recibidos y crc concuerdan */
+	dht11_LECTURA_OK,					/**< Datos recibidos y crc concuerdan */
+	dht11_TIMEOUT
 } DHT11_Estado_e;
 
 /******************************************************************************
@@ -188,6 +194,7 @@ struct DHT11
 {
 	DHT11_Config_t Config;	/**< Configuracion del sensor */
 	DHT11_Datos_t Datos;		/**< Datos del sensor */
+	Timeout_t_ptr Timeout;  /**< Sin descripcion */
 	
 	DHT11_fPtr Lectura;			/**< Puntero a la funcion de lectura */
 };
@@ -203,7 +210,7 @@ struct DHT11
 extern "C"{
 #endif
 
-void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura );
+void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr timeout );
 DHT11_SI_t dht11_Lectura( DHT11_t_ptr sensor );
 
 #ifdef __cplusplus
