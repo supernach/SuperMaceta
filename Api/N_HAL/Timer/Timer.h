@@ -39,8 +39,18 @@
 *
 *******************************************************************************/
 /** @file Timer.h
- *  @brief 
+ *  @brief Define las acciones que se pueden realizar con el timer.
+ *				 Inicializacion, deinicializacion..
  */
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup TIMER
+  * @{
+  */ 
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -64,17 +74,17 @@
 *******************************************************************************/
 /**
 * @typedef Timer_t
-* @brief <descripcion>
+* @brief Tipo definido para manejar el timer
 *
-* @see <referencias>
+* @see Timer
 */
 typedef struct Timer Timer_t;
 
 /**
 * @typedef Timer_t_ptr
-* @brief <descripcion>
+* @brief Puntero al tipo timer_t
 *
-* @see <referencias>
+* @see Timer_t*
 */
 typedef Timer_t* Timer_t_ptr;
 
@@ -83,13 +93,13 @@ typedef Timer_t* Timer_t_ptr;
 *******************************************************************************/
 /**
 * @struct Timer
-* @brief 
+* @brief Estructura tipo con las acciones del timer
 *
-* @see
+* @see Timer_Config_t
 */
 struct Timer
 {
-	Timer_Config_t Config;
+	Timer_Config_t Config;	/**< Configuracion del timer */
 };
 
 /******************************************************************************
@@ -111,9 +121,20 @@ extern "C"{
 
 void Timer_Init( Timer_t_ptr timer );
 void Timer_Config_Init( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo );
+void Timer_DeInit( Timer_t_ptr timer );
 
 #ifdef __cplusplus
 } // extern "C"
 #endif 
 
 #endif
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/

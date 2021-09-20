@@ -36,8 +36,17 @@
 *
 *******************************************************************************/
 /** @file Timer.c
- *  @brief 
+ *  @brief Implementacion de las acciones del timer
  */
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup TIMER
+  * @{
+  */  
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -63,26 +72,27 @@
 * Function Prototypes
 *******************************************************************************/
 /******************************************************************************
-* Function : plantilla()
+* Function : Timer_Init()
 *//**
 * \b Description:
 *
-* plantilla descripcion
+* Al pasarle una variable timer, se chequea su configuracion y dependiendo
+* de eso se inicializan una sparte u otras del timer.
 *
-* PRE-CONDITION: 
-* PRE-CONDITION: 
-* PRE-CONDITION: 
-*
-* POST-CONDITION: 
+* PRE-CONDITION: Configuracion del timer creada
 * 
-* @param			
-* @param			
+*
+* POST-CONDITION: El timer esta inicializado segun la configuracion
+* 
+* @param	timer	Puntero hacia un dato tipo Timer_t			
+*			
 *
 * @return 		void
 *
 * \b Example Ejemplo:
 * @code
-*		
+*		Timer_Config_Init( &timer.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
+*	  Timer_Init( &timer );
 * @endcode
 *
 * @see 
@@ -123,26 +133,34 @@ void Timer_Init( Timer_t_ptr timer )
 *//**
 * \b Description:
 *
-* plantilla descripcion
+* Se encarga de rellenar la estructura de configuracion del timer
+* segun los parametros asignados a la funcion
 *
-* PRE-CONDITION: 
-* PRE-CONDITION: 
-* PRE-CONDITION: 
+* PRE-CONDITION: Parametros de configuracion elegidos
 *
-* POST-CONDITION: 
+*
+* POST-CONDITION: La configuracion esta inicializada.
 * 
-* @param			
-* @param			
+* @param	timerConfig	Puntero a  la configuracion del timer		
+* @param	timer	Numero del timer usado
+* @param	canal	Canal del timer utilizado
+* @param	modo	Modo de trabajo del timer
+* @param	it	define si el timer usa interrupcion
+*	
 *
-* @return 		Timer_Config_t
+* @return 		void
 *
 * \b Example Ejemplo:
 * @code
-*		
+*		Timer_Config_Init( &timer.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
 * @endcode
 *
-* @see 
-* @see 
+* @see Timer_Config_t_ptr
+* @see Timer_Numero_e
+* @see Timer_Canal_e
+* @see Timer_Modo_e
+* @see Timer_Interrupcion_e
+*
 *
 * <br><b> - CHANGELOG - </b>
 *
@@ -161,3 +179,62 @@ void Timer_Config_Init( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Ti
 	timerConfig->IT = it ;
 	timerConfig->Tiempo = tiempo ;
 }
+
+/******************************************************************************
+* Function : Timer_DeInit()
+*//**
+* \b Description:
+*
+* Deinicializa el timer elegido, si usa interrupcion limpia flags
+*
+* PRE-CONDITION: El timer esta inicializado
+*
+*
+* POST-CONDITION: El timer esta desinicializado
+* 
+* @param	timer  Timer que hay que deinicializar		
+*	
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		Timer_DeInit( &timer );
+* @endcode
+*
+* @see Timer_t_ptr
+*
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 18/09/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+void Timer_DeInit( Timer_t_ptr timer )
+{
+	if( timer->Config.Timer == TIMER1 )
+	{
+		if( timer->Config.IT == SI )
+		{
+			TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
+			TIM1_ClearFlag(TIM1_FLAG_UPDATE);
+			TIM1_SetCounter( 0 );
+			TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
+		}
+		TIM1_Cmd( DISABLE );
+	}
+}
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/

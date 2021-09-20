@@ -86,28 +86,99 @@ $(document).ready(function(){initNavTree('_gpio___config_8h_source.html',''); in
   <div class="headertitle"><div class="title">Gpio_Config.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_gpio___config_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GPIO_CONFIG_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GPIO_CONFIG_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stm8s.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_gpio___config_8h.html#a7aa4bb275ad378e29d954e6381250ded">   17</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_gpio___config__t.html">Gpio_Config_t</a> <a class="code hl_struct" href="struct_gpio___config__t.html">Gpio_Config_t</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_gpio___config__t.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_gpio___config__t.html">Gpio_Config_t</a></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_gpio___config__t.html#a42610492ee668827c954ad0ffb6da5ab">   20</a></span>  GPIO_TypeDef* <a class="code hl_variable" href="struct_gpio___config__t.html#a42610492ee668827c954ad0ffb6da5ab">Puerto</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_gpio___config__t.html#a603a315eae9d184f3deab405d3397c7e">   21</a></span>  GPIO_Pin_TypeDef <a class="code hl_variable" href="struct_gpio___config__t.html#a603a315eae9d184f3deab405d3397c7e">Pin</a>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_gpio___config__t.html#a7c2a52eec08420a67852df87de14638d">   22</a></span>  GPIO_Mode_TypeDef <a class="code hl_variable" href="struct_gpio___config__t.html#a7c2a52eec08420a67852df87de14638d">Tipo</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="_gpio___config_8h.html#a96d5e883141fad682ddcc2921245f465">NHALgpioConfig_SetType</a>( <a class="code hl_struct" href="struct_gpio___config__t.html">Gpio_Config_t</a>* gpio, GPIO_Mode_TypeDef tipo );</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_gpio___config_8h_html_a96d5e883141fad682ddcc2921245f465"><div class="ttname"><a href="_gpio___config_8h.html#a96d5e883141fad682ddcc2921245f465">NHALgpioConfig_SetType</a></div><div class="ttdeci">void NHALgpioConfig_SetType(Gpio_Config_t *gpio, GPIO_Mode_TypeDef tipo)</div><div class="ttdef"><b>Definition:</b> Gpio_Config.c:99</div></div>
-<div class="ttc" id="astruct_gpio___config__t_html"><div class="ttname"><a href="struct_gpio___config__t.html">Gpio_Config_t</a></div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:19</div></div>
-<div class="ttc" id="astruct_gpio___config__t_html_a42610492ee668827c954ad0ffb6da5ab"><div class="ttname"><a href="struct_gpio___config__t.html#a42610492ee668827c954ad0ffb6da5ab">Gpio_Config_t::Puerto</a></div><div class="ttdeci">GPIO_TypeDef * Puerto</div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:20</div></div>
-<div class="ttc" id="astruct_gpio___config__t_html_a603a315eae9d184f3deab405d3397c7e"><div class="ttname"><a href="struct_gpio___config__t.html#a603a315eae9d184f3deab405d3397c7e">Gpio_Config_t::Pin</a></div><div class="ttdeci">GPIO_Pin_TypeDef Pin</div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:21</div></div>
-<div class="ttc" id="astruct_gpio___config__t_html_a7c2a52eec08420a67852df87de14638d"><div class="ttname"><a href="struct_gpio___config__t.html#a7c2a52eec08420a67852df87de14638d">Gpio_Config_t::Tipo</a></div><div class="ttdeci">GPIO_Mode_TypeDef Tipo</div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:22</div></div>
+<a href="_gpio___config_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/****************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* Title                 :   Gpio_Config API</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* Filename              :   Gpio_config.h</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">* Author                :   SuperNach</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* Origin Date           :   20/08/2021</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">* Version               :   1.0.0</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">* Compiler              :   Cosmic C</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">* Target                :   STM8</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">* Copyright             :   </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">* All Rights Reserved</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">*</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">* AQUI VA DECLARACIONES DERECHOS</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">/****************************************************************************</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">* Doxygen C Template</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">* Copyright (c) 2013 - Jacob Beningo - All Rights Reserved</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">* Feel free to use this Doxygen Code Template at your own risk for your own</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">* purposes.  The latest license and updates for this Doxygen C template can be</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">* For updates, free software, training and to stay up to date on the latest</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">* embedded software techniques sign-up for Jacobs newsletter at</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">* http://www.beningo.com/814-2/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">* The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">* all copies or substantial portions of the Template.</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/*************** SOURCE REVISION LOG *****************************************</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*    Date    Version   Author         Description</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*  20/08/21   1.0.0   SuperNach       Initial Release.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">*  </span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifndef GPIO_CONFIG_H</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define GPIO_CONFIG_H</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">* Includes</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#include &lt;stm8s.h&gt;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">* Constants</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">* Configuration</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">* Macros</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">* Typedefs</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group___g_p_i_o___c_o_n_f_i_g.html#ga81d968812dfc63266cca243b992c9ad5">   87</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_gpio___config.html">Gpio_Config</a> <a class="code hl_struct" href="struct_gpio___config.html">Gpio_Config_t</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">* Struct</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="struct_gpio___config.html">   99</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_gpio___config.html">Gpio_Config</a></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="struct_gpio___config.html#a42610492ee668827c954ad0ffb6da5ab">  101</a></span>  GPIO_TypeDef* <a class="code hl_variable" href="struct_gpio___config.html#a42610492ee668827c954ad0ffb6da5ab">Puerto</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="struct_gpio___config.html#a603a315eae9d184f3deab405d3397c7e">  102</a></span>  GPIO_Pin_TypeDef <a class="code hl_variable" href="struct_gpio___config.html#a603a315eae9d184f3deab405d3397c7e">Pin</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="struct_gpio___config.html#a7c2a52eec08420a67852df87de14638d">  103</a></span>  GPIO_Mode_TypeDef <a class="code hl_variable" href="struct_gpio___config.html#a7c2a52eec08420a67852df87de14638d">Tipo</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">* Variables</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">* Function Prototypes</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_p_i_o___c_o_n_f_i_g.html#ga6c09cd09e372553b3468282c9a1663ec">NHALgpioConfig_SetType</a>( <a class="code hl_struct" href="struct_gpio___config.html">Gpio_Config_t</a>* gpio, GPIO_Mode_TypeDef tipo );</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="ttc" id="agroup___g_p_i_o___c_o_n_f_i_g_html_ga6c09cd09e372553b3468282c9a1663ec"><div class="ttname"><a href="group___g_p_i_o___c_o_n_f_i_g.html#ga6c09cd09e372553b3468282c9a1663ec">NHALgpioConfig_SetType</a></div><div class="ttdeci">void NHALgpioConfig_SetType(Gpio_Config_t *gpio, GPIO_Mode_TypeDef nuevoTipo)</div><div class="ttdef"><b>Definition:</b> Gpio_Config.c:111</div></div>
+<div class="ttc" id="astruct_gpio___config_html"><div class="ttname"><a href="struct_gpio___config.html">Gpio_Config</a></div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:100</div></div>
+<div class="ttc" id="astruct_gpio___config_html_a42610492ee668827c954ad0ffb6da5ab"><div class="ttname"><a href="struct_gpio___config.html#a42610492ee668827c954ad0ffb6da5ab">Gpio_Config::Puerto</a></div><div class="ttdeci">GPIO_TypeDef * Puerto</div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:101</div></div>
+<div class="ttc" id="astruct_gpio___config_html_a603a315eae9d184f3deab405d3397c7e"><div class="ttname"><a href="struct_gpio___config.html#a603a315eae9d184f3deab405d3397c7e">Gpio_Config::Pin</a></div><div class="ttdeci">GPIO_Pin_TypeDef Pin</div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:102</div></div>
+<div class="ttc" id="astruct_gpio___config_html_a7c2a52eec08420a67852df87de14638d"><div class="ttname"><a href="struct_gpio___config.html#a7c2a52eec08420a67852df87de14638d">Gpio_Config::Tipo</a></div><div class="ttdeci">GPIO_Mode_TypeDef Tipo</div><div class="ttdef"><b>Definition:</b> Gpio_Config.h:103</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -41,7 +41,16 @@
 /** @file  Utils.h
  *  @brief Define distintas funciones, macros utiles
  */
-
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup UTILS
+  * @{
+  */
+	
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -185,3 +194,13 @@ static @inline void _delay_ms( unsigned short __ms )
 #endif 
 
 #endif 
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/

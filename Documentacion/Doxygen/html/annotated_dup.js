@@ -2,7 +2,7 @@ var annotated_dup =
 [
     [ "DHT11", "struct_d_h_t11.html", "struct_d_h_t11" ],
     [ "DHT11_Config", "struct_d_h_t11___config.html", "struct_d_h_t11___config" ],
-    [ "Gpio_Config_t", "struct_gpio___config__t.html", "struct_gpio___config__t" ],
+    [ "Gpio_Config", "struct_gpio___config.html", "struct_gpio___config" ],
     [ "HX711", "struct_h_x711.html", "struct_h_x711" ],
     [ "HX711_Config", "struct_h_x711___config.html", "struct_h_x711___config" ],
     [ "HX711_Datos", "struct_h_x711___datos.html", "struct_h_x711___datos" ],

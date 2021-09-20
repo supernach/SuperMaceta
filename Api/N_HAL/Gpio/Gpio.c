@@ -39,6 +39,16 @@
  * @brief Este archivo contiene las operaciones basicas sobre los puertos
  *        gpio.
  */
+
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup GPIO
+  * @{
+  */
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -187,3 +197,13 @@ void NHALgpio_Write( Gpio_Config_t* gpio, bool estado )
 		GPIO_WriteLow(gpio->Puerto, gpio->Pin);
 	}
 }
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/

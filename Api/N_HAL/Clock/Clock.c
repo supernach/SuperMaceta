@@ -39,6 +39,16 @@
  *  @brief Proporciona un acceso basico a la configuracion y
  *				 usos del reloj interno del micro.
  */
+ 
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup CLOCK
+  * @{
+  */ 
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -171,3 +181,13 @@ void EnableClockMirror(CLK_Output_TypeDef source, Gpio_Config_t* pin)
 	CLK_CCOConfig(source);
   CLK_CCOCmd(ENABLE);
 }
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/

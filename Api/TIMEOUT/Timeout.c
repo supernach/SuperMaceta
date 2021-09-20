@@ -38,6 +38,13 @@
 /** @file Timeout.c
  *  @brief 
  */
+ /** @addtogroup API
+  * @{
+  */
+/** @addtogroup TIMEOUT
+  * @{
+  */	
+	
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -197,17 +204,17 @@ void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos )
 *******************************************************************************/
 void Timeout_Stop( Timeout_t_ptr timeout )
 {
-	TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
-	TIM1_ClearFlag(TIM1_FLAG_UPDATE);
-	TIM1_SetCounter( 0 );
-	TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
-	
-	TIM1_Cmd( DISABLE );
+	Timer_DeInit( timeout->Config.Timer );
 
 	timeout->Config.ResetNotificacion( 0 );
 	timeout->ValorDesborde = 0;
 	timeout->Estado = INACTIVO;
 }
 
-
+/**
+  * @}
+  */
+/**
+  * @}
+  */	
 

@@ -42,6 +42,13 @@
  *  @brief Configura y proporciona acceso a la lectura del sensor de temperatura
  *         y humedad DHT11
  */
+
+/** @addtogroup DRIVERS
+  * @{
+  */
+/** @addtogroup DHT11
+  * @{
+  */	
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -215,3 +222,10 @@ DHT11_SI_t dht11_Lectura( DHT11_t_ptr sensor );
 #endif 
 
 #endif
+
+/**
+  * @}
+  */
+/**
+  * @}
+  */	

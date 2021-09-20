@@ -39,6 +39,18 @@
  * @brief Este archivo contiene operaciones de configuracion
  *				 gpio
  */
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup GPIO
+  * @{
+  */
+/** @addtogroup GPIO_CONFIG
+  * @{
+  */	 
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -100,3 +112,16 @@ void NHALgpioConfig_SetType( Gpio_Config_t* gpio, GPIO_Mode_TypeDef nuevoTipo )
 {
 	gpio->Tipo = nuevoTipo;
 }
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/
+/**
+  * @}
+*/

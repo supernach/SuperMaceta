@@ -42,7 +42,15 @@
  *  @brief Archivo de configuracion para la aplicacion. Se declaran los componentes
  *         necesarios para su funcionamiento.
  */
-
+/** @addtogroup APLICACION
+  * @{
+  */
+/** @addtogroup CONFIGURACION
+  * @{
+  */
+/** @addtogroup APPCONFIG
+  * @{
+  */
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -120,3 +128,13 @@ extern "C"{
 #endif 
 
 #endif
+
+/**
+  * @}
+  */
+/**
+  * @}
+  */	
+/**
+  * @}
+  */

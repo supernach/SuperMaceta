@@ -1,6 +1,5 @@
 var _gpio___config_8h =
 [
-    [ "Gpio_Config_t", "struct_gpio___config__t.html", "struct_gpio___config__t" ],
-    [ "Gpio_Config_t", "_gpio___config_8h.html#a7aa4bb275ad378e29d954e6381250ded", null ],
-    [ "NHALgpioConfig_SetType", "_gpio___config_8h.html#a96d5e883141fad682ddcc2921245f465", null ]
+    [ "Gpio_Config_t", "group___g_p_i_o___c_o_n_f_i_g.html#ga81d968812dfc63266cca243b992c9ad5", null ],
+    [ "NHALgpioConfig_SetType", "group___g_p_i_o___c_o_n_f_i_g.html#ga6c09cd09e372553b3468282c9a1663ec", null ]
 ];

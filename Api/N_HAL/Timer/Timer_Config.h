@@ -39,8 +39,20 @@
 *
 *******************************************************************************/
 /** @file Timer.h
- *  @brief 
+ *  @brief Ofrece funciones referidas al TIMER1 para abtraerse de la SPL
  */
+/** @addtogroup API
+  * @{
+  */
+/** @addtogroup N_HAL
+  * @{
+  */
+/** @addtogroup TIMER
+  * @{
+  */
+/** @addtogroup TIMER_CONFIG
+  * @{
+  */	 
 /******************************************************************************
 * Includes
 *******************************************************************************/
@@ -62,94 +74,86 @@
 * Typedefs
 *******************************************************************************/
 /**
-* @typedef Timer_Modo_e
-* @brief <descripcion>
+* @typedef Timer_Config_t
+* @brief Tipo que contiene distintas opciones de configuracion del timer
 *
-* @see <referencias>
+* @see Timer_Config
 */
 typedef struct Timer_Config Timer_Config_t;
 
 
 /**
 * @typedef Timer_Config_t_ptr
-* @brief <descripcion>
+* @brief Puntero a la estructura de ocnfiguracion del timer
 *
-* @see <referencias>
+* @see Timer_Config_t*
 */
 typedef Timer_Config_t* Timer_Config_t_ptr;
 
 /**
 * @typedef Timer_Modo_e
-* @brief <descripcion>
+* @brief Distintos modos en los que puede trabajar el timer
 *
-* @see <referencias>
+* 
 */
 typedef enum
 {
-	COUNTERUP
+	COUNTERUP	/**< Modo trabajo: Contador ascendente */
 }Timer_Modo_e;
 
 /**
 * @typedef Timer_Interrupcion_e
-* @brief <descripcion>
+* @brief Definimos si el timer usa interrupcion
 *
-* @see <referencias>
+* 
 */
 typedef enum
 {
-	SI,
-	NO
+	SI,	/**< Con interrupcion */
+	NO	/**< Sin interrupcion */
 }Timer_Interrupcion_e;
 
 /**
-* @typedef Timer_BaseTiempo_e
-* @brief <descripcion>
-*
-* @see <referencias>
-*/
-/*typedef enum
-{
-	MICROSEGUNDOS
-}Timer_BaseTiempo_e;*/
-
-/**
 * @typedef Timer_Numero_e
-* @brief <descripcion>
+* @brief Numero del timer utilizado
 *
-* @see <referencias>
+* 
 */
 typedef enum
 {
-	TIMER1
+	TIMER1	/**< Timer1 del stm8s */
 }Timer_Numero_e;
 
 /**
 * @typedef Timer_Canal_e
-* @brief <descripcion>
+* @brief Canal del timer utilizado
 *
-* @see <referencias>
+* 
 */
 typedef enum
 {
-	CANAL1
+	CANAL1	/**< Numero del canal del timer usado */
 }Timer_Canal_e;
 
 /******************************************************************************
 * Struct
 *******************************************************************************/
 /**
-* @struct 
-* @brief 
+* @struct Timer_Config
+* @brief Estructura tipo para la definicion de la configuracion del timer
 *
-* @see
+* @see Timer_Numero_e
+* @see Timer_Canal_e
+* @see Timer_Modo_e
+* @see Timer_Interrupcion_e
 */
 struct Timer_Config
 {
-	Timer_Numero_e Timer;
-	Timer_Canal_e Canal;
-	Timer_Modo_e Modo;
-	Timer_Interrupcion_e IT;
-	uint16_t Tiempo;
+	Timer_Numero_e Timer;	/**< Timer fisico usado */
+	Timer_Canal_e Canal;	/**< Canal del time rusadp */
+	Timer_Modo_e Modo;	/**< Modo de trabajo del timer */
+	Timer_Interrupcion_e IT;	/**< Seleccion uso interrupcion */
+	uint16_t Tiempo;	/**< Tiempo contaje */
 };
 
 /******************************************************************************
@@ -175,3 +179,16 @@ extern "C"{
 #endif 
 
 #endif
+
+/**
+  * @}
+  */
+/**
+  * @}
+	*/
+/**
+  * @}
+*/
+/**
+  * @}
+*/
