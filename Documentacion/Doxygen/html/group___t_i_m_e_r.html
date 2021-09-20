@@ -17,6 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="DoxygenCSS.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,15 +101,16 @@ Módulos</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Estructuras de datos</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_timer.html">Timer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura tipo con las acciones del timer.  <a href="struct_timer.html#details">Más...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 typedefs</h2></td></tr>
 <tr class="memitem:ga319c52bd646ec80339374a6a2b528d5c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_timer.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m_e_r.html#ga319c52bd646ec80339374a6a2b528d5c">Timer_t</a></td></tr>
-<tr class="memdesc:ga319c52bd646ec80339374a6a2b528d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;descripcion&gt;  <a href="group___t_i_m_e_r.html#ga319c52bd646ec80339374a6a2b528d5c">Más...</a><br /></td></tr>
+<tr class="memdesc:ga319c52bd646ec80339374a6a2b528d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo definido para manejar el timer.  <a href="group___t_i_m_e_r.html#ga319c52bd646ec80339374a6a2b528d5c">Más...</a><br /></td></tr>
 <tr class="separator:ga319c52bd646ec80339374a6a2b528d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4d8ae1c554c588cf1527e24c9c466362"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___t_i_m_e_r.html#ga319c52bd646ec80339374a6a2b528d5c">Timer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a></td></tr>
-<tr class="memdesc:ga4d8ae1c554c588cf1527e24c9c466362"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;descripcion&gt;  <a href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Más...</a><br /></td></tr>
+<tr class="memdesc:ga4d8ae1c554c588cf1527e24c9c466362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero al tipo timer_t.  <a href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Más...</a><br /></td></tr>
 <tr class="separator:ga4d8ae1c554c588cf1527e24c9c466362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -117,6 +119,8 @@ Funciones</h2></td></tr>
 <tr class="separator:ga60b2e95eb192d675d0e74f791f983a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8ae7aa0701cc5c9870ee835c250d78f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a> (<a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga56e89c573a58b16a925737f7bece76ff">Timer_Config_t_ptr</a> timerConfig, <a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</a> timer, <a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</a> canal, <a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</a> modo, <a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</a> it, uint16_t tiempo)</td></tr>
 <tr class="separator:ga8ae7aa0701cc5c9870ee835c250d78f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bf616b8c20359e44fe29a79ded613c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m_e_r.html#ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</a> (<a class="el" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a> timer)</td></tr>
+<tr class="separator:ga5bf616b8c20359e44fe29a79ded613c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <h2 class="groupheader">Documentación de los 'typedefs'</h2>
@@ -132,8 +136,8 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt;descripcion&gt; </p>
-<dl class="section see"><dt>Ver también</dt><dd>&lt;referencias&gt; </dd></dl>
+<p>Tipo definido para manejar el timer. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="struct_timer.html" title="Estructura tipo con las acciones del timer.">Timer</a> </dd></dl>
 
 </div>
 </div>
@@ -149,8 +153,8 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt;descripcion&gt; </p>
-<dl class="section see"><dt>Ver también</dt><dd>&lt;referencias&gt; </dd></dl>
+<p>Puntero al tipo timer_t. </p>
+<dl class="section see"><dt>Ver también</dt><dd>Timer_t* </dd></dl>
 
 </div>
 </div>
@@ -205,20 +209,80 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p ><b>Description:</b> </p>
-<p >plantilla descripcion</p>
-<p >PRE-CONDITION: PRE-CONDITION: PRE-CONDITION:</p>
-<p >POST-CONDITION:</p>
+<p >Se encarga de rellenar la estructura de configuracion del timer segun los parametros asignados a la funcion</p>
+<p >PRE-CONDITION: Parametros de configuracion elegidos</p>
+<p >POST-CONDITION: La configuracion esta inicializada.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">&lt;br&gt;</td><td></td></tr>
-    <tr><td class="paramname">&lt;br&gt;</td><td></td></tr>
+    <tr><td class="paramname">timerConfig</td><td>Puntero a la configuracion del timer <br  />
+ </td></tr>
+    <tr><td class="paramname">timer</td><td>Numero del timer usado </td></tr>
+    <tr><td class="paramname">canal</td><td>Canal del timer utilizado </td></tr>
+    <tr><td class="paramname">modo</td><td>Modo de trabajo del timer </td></tr>
+    <tr><td class="paramname">it</td><td>define si el timer usa interrupcion</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd>Timer_Config_t</dd></dl>
-<p><b>Example</b> Ejemplo: </p><div class="fragment"></div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd></dd>
+<dl class="section return"><dt>Devuelve</dt><dd>void</dd></dl>
+<p><b>Example</b> Ejemplo: </p><div class="fragment"><div class="line"><a class="code hl_function" href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a>( &amp;timer.Config, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</a>, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</a>, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</a>, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</a>, 1 );</div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</a></div><div class="ttdeci">@ SI</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:112</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</a></div><div class="ttdeci">@ COUNTERUP</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:101</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</a></div><div class="ttdeci">@ CANAL1</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:135</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</a></div><div class="ttdeci">@ TIMER1</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:124</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga8ae7aa0701cc5c9870ee835c250d78f1"><div class="ttname"><a href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a></div><div class="ttdeci">void Timer_Config_Init(Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo)</div><div class="ttdef"><b>Definition:</b> Timer.c:174</div></div>
+</div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd><a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga56e89c573a58b16a925737f7bece76ff" title="Puntero a la estructura de ocnfiguracion del timer.">Timer_Config_t_ptr</a> </dd>
 <dd>
-</dd></dl>
+<a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gaf2d309f4c465c40a6b08c5a0bf67fa27" title="Numero del timer utilizado.">Timer_Numero_e</a> </dd>
+<dd>
+<a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581" title="Canal del timer utilizado.">Timer_Canal_e</a> </dd>
+<dd>
+<a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga680b74b362115ddab0ec67f68858ac77" title="Distintos modos en los que puede trabajar el timer.">Timer_Modo_e</a> </dd>
+<dd>
+<a class="el" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga3f543feccade77b24ffa4a0d88a683f8" title="Definimos si el timer usa interrupcion.">Timer_Interrupcion_e</a></dd></dl>
+<p><br  />
+<b> - CHANGELOG - </b></p>
+<table align="left" style="width:800px">
+<tr>
+<td>Fecha </td><td>Software Version </td><td>Creador </td><td>Descripcion  </td></tr>
+<tr>
+<td>18/09/2021 </td><td>1.0.0 </td><td>SN </td><td>Primera edicion  </td></tr>
+</table>
+<p><br  />
+<br  />
+ </p><hr  />
+ 
+</div>
+</div>
+<a id="ga5bf616b8c20359e44fe29a79ded613c9" name="ga5bf616b8c20359e44fe29a79ded613c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bf616b8c20359e44fe29a79ded613c9">&#9670;&nbsp;</a></span>Timer_DeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer_DeInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a>&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p ><b>Description:</b> </p>
+<p >Deinicializa el timer elegido, si usa interrupcion limpia flags</p>
+<p >PRE-CONDITION: El timer esta inicializado</p>
+<p >POST-CONDITION: El timer esta desinicializado</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td><a class="el" href="struct_timer.html" title="Estructura tipo con las acciones del timer.">Timer</a> que hay que deinicializar <br  />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void</dd></dl>
+<p><b>Example</b> Ejemplo: </p><div class="fragment"><div class="line"><a class="code hl_function" href="group___t_i_m_e_r.html#ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</a>( &amp;timer );</div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga5bf616b8c20359e44fe29a79ded613c9"><div class="ttname"><a href="group___t_i_m_e_r.html#ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</a></div><div class="ttdeci">void Timer_DeInit(Timer_t_ptr timer)</div><div class="ttdef"><b>Definition:</b> Timer.c:217</div></div>
+</div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd><a class="el" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362" title="Puntero al tipo timer_t.">Timer_t_ptr</a></dd></dl>
 <p><br  />
 <b> - CHANGELOG - </b></p>
 <table align="left" style="width:800px">
@@ -249,18 +313,21 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p ><b>Description:</b> </p>
-<p >plantilla descripcion</p>
-<p >PRE-CONDITION: PRE-CONDITION: PRE-CONDITION:</p>
-<p >POST-CONDITION:</p>
+<p >Al pasarle una variable timer, se chequea su configuracion y dependiendo de eso se inicializan una sparte u otras del timer.</p>
+<p >PRE-CONDITION: Configuracion del timer creada</p>
+<p >POST-CONDITION: El timer esta inicializado segun la configuracion</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">&lt;br&gt;</td><td></td></tr>
-    <tr><td class="paramname">&lt;br&gt;</td><td></td></tr>
+    <tr><td class="paramname">timer</td><td>Puntero hacia un dato tipo Timer_t <br  />
+</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>void</dd></dl>
-<p><b>Example</b> Ejemplo: </p><div class="fragment"></div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd></dd>
+<p><b>Example</b> Ejemplo: </p><div class="fragment"><div class="line"><a class="code hl_function" href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a>( &amp;timer.Config, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</a>, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</a>, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</a>, <a class="code hl_enumvalue" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</a>, 1 );</div>
+<div class="line"><a class="code hl_function" href="group___t_i_m_e_r.html#ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</a>( &amp;timer );</div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga60b2e95eb192d675d0e74f791f983a3b"><div class="ttname"><a href="group___t_i_m_e_r.html#ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</a></div><div class="ttdeci">void Timer_Init(Timer_t_ptr timer)</div><div class="ttdef"><b>Definition:</b> Timer.c:110</div></div>
+</div><!-- fragment --><dl class="section see"><dt>Ver también</dt><dd></dd>
 <dd>
 </dd></dl>
 <p><br  />

@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['resetnotificacion_0',['ResetNotificacion',['../struct_timeout___config.html#ad45ab02431ae55523fb5d10fa18965ed',1,'Timeout_Config']]],
-  ['rs485_1',['RS485',['../group___r_s485.html',1,'']]],
-  ['rs485_2ec_2',['RS485.c',['../_r_s485_8c.html',1,'']]],
-  ['rs485_2eh_3',['RS485.h',['../_r_s485_8h.html',1,'']]],
-  ['rs485_5forden_4',['RS485_Orden',['../struct_r_s485___orden.html',1,'']]],
-  ['rs485_5forden_5ft_5',['RS485_Orden_t',['../group___o_r_d_e_n_e_s.html#ga6fb2542c8b7a173205e575aebc2264be',1,'RS485_Ordenes.h']]],
-  ['rs485_5fordenes_2eh_6',['RS485_Ordenes.h',['../_r_s485___ordenes_8h.html',1,'']]],
-  ['rs485_5ftramas_2ec_7',['RS485_Tramas.c',['../_r_s485___tramas_8c.html',1,'']]],
-  ['rs485_5ftramas_2eh_8',['RS485_Tramas.h',['../_r_s485___tramas_8h.html',1,'']]]
+  ['paridad_0',['Paridad',['../group___c_o_m_m_u_n_i_c_a_t_i_o_n.html#ga7e77db2feaff608949b3fd7f0e2c846b',1,'UART_Config']]],
+  ['pd_5fsck_1',['PD_SCK',['../struct_h_x711___config.html#ad23f57ec814bea3301f6271bc978f3c3',1,'HX711_Config']]],
+  ['pin_2',['Pin',['../struct_gpio___config.html#a603a315eae9d184f3deab405d3397c7e',1,'Gpio_Config']]],
+  ['plantilla_3',['PLANTILLA',['../group___p_l_a_n_t_i_l_l_a.html',1,'']]],
+  ['plantilla_2ec_4',['plantilla.c',['../plantilla_8c.html',1,'']]],
+  ['plantilla_2eh_5',['plantilla.h',['../plantilla_8h.html',1,'']]],
+  ['puerto_6',['Puerto',['../struct_gpio___config.html#a42610492ee668827c954ad0ffb6da5ab',1,'Gpio_Config']]]
 ];

@@ -30,6 +30,7 @@ var menudata={children:[
 {text:"Índice de estructura de datos",url:"classes.html"},
 {text:"Campos de datos",url:"functions.html",children:[
 {text:"Todo",url:"functions.html",children:[
+{text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"e",url:"functions.html#index_e"},
@@ -43,10 +44,12 @@ var menudata={children:[
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
+{text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"},
 {text:"v",url:"functions.html#index_v"}]},
 {text:"Variables",url:"functions_vars.html",children:[
+{text:"b",url:"functions_vars.html#index_b"},
 {text:"c",url:"functions_vars.html#index_c"},
 {text:"d",url:"functions_vars.html#index_d"},
 {text:"e",url:"functions_vars.html#index_e"},
@@ -60,6 +63,7 @@ var menudata={children:[
 {text:"o",url:"functions_vars.html#index_o"},
 {text:"p",url:"functions_vars.html#index_p"},
 {text:"r",url:"functions_vars.html#index_r"},
+{text:"s",url:"functions_vars.html#index_s"},
 {text:"t",url:"functions_vars.html#index_t"},
 {text:"u",url:"functions_vars.html#index_u"},
 {text:"v",url:"functions_vars.html#index_v"}]}]}]},
@@ -83,7 +87,13 @@ var menudata={children:[
 {text:"t",url:"globals.html#index_t"}]},
 {text:"Funciones",url:"globals_func.html"},
 {text:"Variables",url:"globals_vars.html"},
-{text:"typedefs",url:"globals_type.html"},
+{text:"typedefs",url:"globals_type.html",children:[
+{text:"d",url:"globals_type.html#index_d"},
+{text:"g",url:"globals_type.html#index_g"},
+{text:"h",url:"globals_type.html#index_h"},
+{text:"i",url:"globals_type.html#index_i"},
+{text:"r",url:"globals_type.html#index_r"},
+{text:"t",url:"globals_type.html#index_t"}]},
 {text:"Enumeraciones",url:"globals_enum.html"},
 {text:"Valores de enumeraciones",url:"globals_eval.html"},
 {text:"defines",url:"globals_defs.html"}]}]}]}

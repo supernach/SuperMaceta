@@ -7,6 +7,8 @@ var annotated_dup =
     [ "HX711_Config", "struct_h_x711___config.html", "struct_h_x711___config" ],
     [ "HX711_Datos", "struct_h_x711___datos.html", "struct_h_x711___datos" ],
     [ "interrupt_vector", "structinterrupt__vector.html", "structinterrupt__vector" ],
+    [ "RS485", "struct_r_s485.html", "struct_r_s485" ],
+    [ "RS485_Config", "struct_r_s485___config.html", "struct_r_s485___config" ],
     [ "RS485_Orden", "struct_r_s485___orden.html", "struct_r_s485___orden" ],
     [ "sDht11_SI", "structs_dht11___s_i.html", "structs_dht11___s_i" ],
     [ "sDht11Datos", "structs_dht11_datos.html", "structs_dht11_datos" ],
@@ -16,5 +18,6 @@ var annotated_dup =
     [ "Timer_Config", "struct_timer___config.html", "struct_timer___config" ],
     [ "Trama_BROADCAST", "struct_trama___b_r_o_a_d_c_a_s_t.html", "struct_trama___b_r_o_a_d_c_a_s_t" ],
     [ "Trama_RX", "struct_trama___r_x.html", "struct_trama___r_x" ],
-    [ "Trama_TX", "struct_trama___t_x.html", "struct_trama___t_x" ]
+    [ "Trama_TX", "struct_trama___t_x.html", "struct_trama___t_x" ],
+    [ "UART_Config", "struct_u_a_r_t___config.html", "struct_u_a_r_t___config" ]
 ];

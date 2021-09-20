@@ -7,7 +7,7 @@ var group___t_i_m_e_r___c_o_n_f_i_g =
       [ "Tiempo", "struct_timer___config.html#a773cdf1a90139f6d6c52601303fa6af0", null ],
       [ "Timer", "struct_timer___config.html#a1497343df3acd025a715f8d238de0e0c", null ]
     ] ],
-    [ "Timer_Config_t", "group___t_i_m_e_r___c_o_n_f_i_g.html#ga76902e759289684677672baf5708e01c", null ],
+    [ "Timer_Config_t", "group___t_i_m_e_r___c_o_n_f_i_g.html#ga3d11342883e62986684fbc936ff0ca5b", null ],
     [ "Timer_Config_t_ptr", "group___t_i_m_e_r___c_o_n_f_i_g.html#ga56e89c573a58b16a925737f7bece76ff", null ],
     [ "Timer_Canal_e", "group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581", [
       [ "CANAL1", "group___t_i_m_e_r___c_o_n_f_i_g.html#gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84", null ]

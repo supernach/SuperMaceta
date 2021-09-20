@@ -74,7 +74,7 @@
 *
 * @see RS48_Config
 */
-typedef struct RS48_Config RS485_Config_t;
+typedef struct RS485_Config RS485_Config_t;
 
 /**
 * @typedef RS485_Config_t_ptr
@@ -82,7 +82,8 @@ typedef struct RS48_Config RS485_Config_t;
 *
 * @see RS485_Config_t*
 */
-typedef struct RS485_Config_t* RS485_Config_t_ptr;
+typedef RS485_Config_t* RS485_Config_t_ptr;
+
 
 /******************************************************************************
 * Struct
@@ -141,3 +142,6 @@ extern "C"{
 /**
   * @}
   */
+/**
+  * @}
+  */	

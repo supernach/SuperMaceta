@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['ganancia_0',['Ganancia',['../struct_h_x711___config.html#a31842012140e37a11cbca628bd760dab',1,'HX711_Config']]],
-  ['gpio_1',['GPIO',['../group___g_p_i_o.html',1,'']]],
-  ['gpio_2ec_2',['Gpio.c',['../_gpio_8c.html',1,'']]],
-  ['gpio_2eh_3',['Gpio.h',['../_gpio_8h.html',1,'']]],
-  ['gpio_5fconfig_4',['Gpio_Config',['../struct_gpio___config.html',1,'']]],
-  ['gpio_5fconfig_5',['GPIO_CONFIG',['../group___g_p_i_o___c_o_n_f_i_g.html',1,'']]],
-  ['gpio_5fconfig_2ec_6',['Gpio_Config.c',['../_gpio___config_8c.html',1,'']]],
-  ['gpio_5fconfig_2eh_7',['Gpio_Config.h',['../_gpio___config_8h.html',1,'']]],
-  ['gpio_5fconfig_5ft_8',['Gpio_Config_t',['../group___g_p_i_o___c_o_n_f_i_g.html#ga81d968812dfc63266cca243b992c9ad5',1,'Gpio_Config.h']]]
+  ['fclk_0',['FCLK',['../group___u_t_i_l_s.html#ga6ebe466e477d394ca5bb309b35b6bc39',1,'utils.h']]],
+  ['funcion_1',['Funcion',['../struct_r_s485___orden.html#a3d72cfc54b374bc8aeffdeb1164ae6ed',1,'RS485_Orden']]]
 ];

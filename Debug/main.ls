@@ -105,11 +105,11 @@
 1322  00a9 89            	pushw	x
 1323  00aa 92cd37        	call	[_SensorTempHum+12.w]
 1325  00ad 5b04          	addw	sp,#4
-1326                     ; 168 * <table align="left" style="width:800px">
+1326                     ; 168 * \b Example Ejemplo:
 1329  00af ae03e8        	ldw	x,#1000
 1332  00b2 200a          	jra	L367
 1333  00b4               L757:
-1334                     ; 101 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
+1334                     ; 110 	_asm("nop\n $N:\n decw X\n jrne $L\n nop\n ", __ticks);  
 1338  00b4 ae14d4        	ldw	x,#5332
 1340  00b7 9d            	nop	
 1341  00b8               L63:
@@ -119,7 +119,7 @@
 1345                     
 1347  00bc 1e06          	ldw	x,(OFST-1,sp)
 1348  00be               L367:
-1349                     ; 177 	while ( __ms-- )
+1349                     ; 186 	while ( __ms-- )
 1351  00be 5a            	decw	x
 1352  00bf 1f06          	ldw	(OFST-1,sp),x
 1353  00c1 5c            	incw	x

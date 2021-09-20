@@ -82,7 +82,7 @@ typedef struct RS485 RS485_t;
 *
 * @see RS485_t*
 */
-typedef struct RS485_t* RS485_t_ptr;
+typedef RS485_t* RS485_t_ptr;
 
 /******************************************************************************
 * Struct

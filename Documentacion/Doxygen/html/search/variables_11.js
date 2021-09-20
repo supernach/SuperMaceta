@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['valorconversion_0',['ValorConversion',['../struct_h_x711___config.html#ab4822d50ce6c66444969a14e37fea3b7',1,'HX711_Config']]],
-  ['valordesborde_1',['ValorDesborde',['../struct_timeout.html#a1406844033393bc6ee9930acd9d13014',1,'Timeout']]],
-  ['valortara_2',['ValorTara',['../struct_h_x711___config.html#afd4d615b3ad3796d58ef0ff2402c6627',1,'HX711_Config']]],
-  ['valorzero_3',['ValorZero',['../struct_h_x711___config.html#a22ce79c6f2694de604942b6ceb43c01a',1,'HX711_Config']]]
+  ['uart_0',['UART',['../group___c_o_m_m_u_n_i_c_a_t_i_o_n.html#ga409717d6f24fa6e22c195c954308b068',1,'RS485_Config']]],
+  ['ultimalectura_1',['UltimaLectura',['../structs_dht11_datos.html#a15cb01bf978cd731fa95c61294142eec',1,'sDht11Datos::UltimaLectura()'],['../struct_h_x711___datos.html#a6c0c13ba21079ed21363c817442a7389',1,'HX711_Datos::UltimaLectura()']]]
 ];

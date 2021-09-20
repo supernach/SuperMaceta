@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['estado_0',['Estado',['../struct_timeout.html#a4dd567b97a872fc1b735cee73e5bea39',1,'Timeout::Estado()'],['../structs_dht11_datos.html#a2e30c2118a8d354382eda11133bec2f9',1,'sDht11Datos::Estado()'],['../struct_h_x711___datos.html#ae6e820be23d2ddec50532ecd92827e4c',1,'HX711_Datos::Estado()']]]
+  ['datos_0',['Datos',['../struct_d_h_t11.html#ad3e1ef8105ccdb49b9ade49cd875c804',1,'DHT11::Datos()'],['../struct_h_x711.html#a623fca772a5fa1e8240439472f1002c0',1,'HX711::Datos()']]],
+  ['dout_1',['DOUT',['../struct_h_x711___config.html#adecab8ec6694738b9fc07a17e9ea60f5',1,'HX711_Config']]]
 ];

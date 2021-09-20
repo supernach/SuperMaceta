@@ -105,7 +105,12 @@
 *******************************************************************************/
 void RS485_Init( RS485_t_ptr rs485 )
 {
-	
+	rs485->Config.UART.StopBit = UART1_STOPBITS_1;
+	rs485->Config.UART.Paridad = UART1_PARITY_NO;
+	rs485->Config.UART.Bits = UART1_WORDLENGTH_8D;
+	rs485->Config.UART.Baudios = 9600;
+	rs485->Config.UART.Modo = UART1_MODE_RX_ENABLE;
+	rs485->Config.UART.TipoInterrupcion = UART1_FLAG_RXNE;
 }
 
 

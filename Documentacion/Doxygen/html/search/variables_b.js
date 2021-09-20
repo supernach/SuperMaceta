@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['orden_0',['Orden',['../struct_trama___b_r_o_a_d_c_a_s_t.html#a21a25695a91b8b7aab613705a58afb02',1,'Trama_BROADCAST']]],
-  ['ordendht11_1',['OrdenDHT11',['../struct_trama___r_x.html#af31e3c3a0a6a7c5c1fcad906b6f881dd',1,'Trama_RX']]],
-  ['ordenhx711_2',['OrdenHX711',['../struct_trama___r_x.html#a36a88e96b357ef507ff6869fcaf2db9f',1,'Trama_RX']]]
+  ['nnodo_0',['nNodo',['../struct_trama___r_x.html#ad24dd9eb2237619ac0cd8f5beddc89c2',1,'Trama_RX::nNodo()'],['../struct_trama___t_x.html#ad24dd9eb2237619ac0cd8f5beddc89c2',1,'Trama_TX::nNodo()'],['../struct_trama___b_r_o_a_d_c_a_s_t.html#ad24dd9eb2237619ac0cd8f5beddc89c2',1,'Trama_BROADCAST::nNodo()']]],
+  ['notificacion_1',['Notificacion',['../struct_timeout___config.html#ac836715d9e14f241b095c91ee8eb8e9c',1,'Timeout_Config']]]
 ];

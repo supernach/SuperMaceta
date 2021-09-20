@@ -17,6 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="DoxygenCSS.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -126,69 +127,71 @@ $(document).ready(function(){initNavTree('_timer_8h_source.html',''); initResiza
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">*  </span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">*</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">* Includes</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &lt;stm8s.h&gt;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &lt;<a class="code" href="_timer___config_8h.html">timer_config.h</a>&gt;</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">* Constants</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">* Configuration</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">* Macros</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">* Typedefs</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group___t_i_m_e_r.html#ga319c52bd646ec80339374a6a2b528d5c">   80</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a> <a class="code hl_struct" href="struct_timer.html">Timer_t</a>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">   88</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="struct_timer.html">Timer_t</a>* <a class="code hl_typedef" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">* Struct</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="struct_timer.html">   99</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="struct_timer.html#a3a5bc11b443112d63b5ae3e5741e1dec">  101</a></span>  <a class="code hl_struct" href="struct_timer___config.html">Timer_Config_t</a> <a class="code hl_variable" href="struct_timer.html#a3a5bc11b443112d63b5ae3e5741e1dec">Config</a>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>};</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">* Variables</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">* Function Prototypes</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">*******************************************************************************/</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___t_i_m_e_r.html#ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</a>( <a class="code hl_struct" href="struct_timer.html">Timer_t_ptr</a> timer );</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a>( <a class="code hl_struct" href="struct_timer___config.html">Timer_Config_t_ptr</a> timerConfig, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</a> timer, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</a> canal, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</a> modo, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</a> it, uint16_t tiempo );</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// extern &quot;C&quot;</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif </span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">* Includes</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &lt;stm8s.h&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;<a class="code" href="_timer___config_8h.html">timer_config.h</a>&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">* Constants</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">* Configuration</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">* Macros</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">* Typedefs</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group___t_i_m_e_r.html#ga319c52bd646ec80339374a6a2b528d5c">   81</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a> <a class="code hl_struct" href="struct_timer.html">Timer_t</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">   89</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="struct_timer.html">Timer_t</a>* <a class="code hl_typedef" href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">* Struct</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="struct_timer.html">  100</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="struct_timer.html#a3a5bc11b443112d63b5ae3e5741e1dec">  102</a></span>  <a class="code hl_struct" href="struct_timer___config.html">Timer_Config_t</a> <a class="code hl_variable" href="struct_timer.html#a3a5bc11b443112d63b5ae3e5741e1dec">Config</a>;  </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">* Variables</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">* Function Prototypes</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___t_i_m_e_r.html#ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</a>( <a class="code hl_struct" href="struct_timer.html">Timer_t_ptr</a> timer );</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a>( <a class="code hl_struct" href="struct_timer___config.html">Timer_Config_t_ptr</a> timerConfig, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</a> timer, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</a> canal, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</a> modo, <a class="code hl_enumeration" href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</a> it, uint16_t tiempo );</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___t_i_m_e_r.html#ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</a>( <a class="code hl_struct" href="struct_timer.html">Timer_t_ptr</a> timer );</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif </span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="ttc" id="a_timer___config_8h_html"><div class="ttname"><a href="_timer___config_8h.html">Timer_Config.h</a></div></div>
-<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ga3f543feccade77b24ffa4a0d88a683f8"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</a></div><div class="ttdeci">Timer_Interrupcion_e</div><div class="ttdoc">&lt;descripcion&gt;</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:111</div></div>
-<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ga680b74b362115ddab0ec67f68858ac77"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</a></div><div class="ttdeci">Timer_Modo_e</div><div class="ttdoc">&lt;descripcion&gt;</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:100</div></div>
-<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ga6fa5a9233f1ca5e8eb5479206364f581"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</a></div><div class="ttdeci">Timer_Canal_e</div><div class="ttdoc">&lt;descripcion&gt;</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:145</div></div>
-<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_gaf2d309f4c465c40a6b08c5a0bf67fa27"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</a></div><div class="ttdeci">Timer_Numero_e</div><div class="ttdoc">&lt;descripcion&gt;</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:134</div></div>
-<div class="ttc" id="agroup___t_i_m_e_r_html_ga4d8ae1c554c588cf1527e24c9c466362"><div class="ttname"><a href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a></div><div class="ttdeci">Timer_t * Timer_t_ptr</div><div class="ttdoc">&lt;descripcion&gt;</div><div class="ttdef"><b>Definition:</b> Timer.h:88</div></div>
-<div class="ttc" id="agroup___t_i_m_e_r_html_ga60b2e95eb192d675d0e74f791f983a3b"><div class="ttname"><a href="group___t_i_m_e_r.html#ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</a></div><div class="ttdeci">void Timer_Init(Timer_t_ptr timer)</div><div class="ttdef"><b>Definition:</b> Timer.c:109</div></div>
-<div class="ttc" id="agroup___t_i_m_e_r_html_ga8ae7aa0701cc5c9870ee835c250d78f1"><div class="ttname"><a href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a></div><div class="ttdeci">void Timer_Config_Init(Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo)</div><div class="ttdef"><b>Definition:</b> Timer.c:165</div></div>
-<div class="ttc" id="astruct_timer___config_html"><div class="ttname"><a href="struct_timer___config.html">Timer_Config</a></div><div class="ttdef"><b>Definition:</b> Timer_Config.h:159</div></div>
-<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> Timer.h:100</div></div>
-<div class="ttc" id="astruct_timer_html_a3a5bc11b443112d63b5ae3e5741e1dec"><div class="ttname"><a href="struct_timer.html#a3a5bc11b443112d63b5ae3e5741e1dec">Timer::Config</a></div><div class="ttdeci">Timer_Config_t Config</div><div class="ttdef"><b>Definition:</b> Timer.h:101</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ga3f543feccade77b24ffa4a0d88a683f8"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</a></div><div class="ttdeci">Timer_Interrupcion_e</div><div class="ttdoc">Definimos si el timer usa interrupcion.</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:111</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ga680b74b362115ddab0ec67f68858ac77"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</a></div><div class="ttdeci">Timer_Modo_e</div><div class="ttdoc">Distintos modos en los que puede trabajar el timer.</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:100</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_ga6fa5a9233f1ca5e8eb5479206364f581"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</a></div><div class="ttdeci">Timer_Canal_e</div><div class="ttdoc">Canal del timer utilizado.</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:134</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r___c_o_n_f_i_g_html_gaf2d309f4c465c40a6b08c5a0bf67fa27"><div class="ttname"><a href="group___t_i_m_e_r___c_o_n_f_i_g.html#gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</a></div><div class="ttdeci">Timer_Numero_e</div><div class="ttdoc">Numero del timer utilizado.</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:123</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga4d8ae1c554c588cf1527e24c9c466362"><div class="ttname"><a href="group___t_i_m_e_r.html#ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</a></div><div class="ttdeci">Timer_t * Timer_t_ptr</div><div class="ttdoc">Puntero al tipo timer_t.</div><div class="ttdef"><b>Definition:</b> Timer.h:89</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga5bf616b8c20359e44fe29a79ded613c9"><div class="ttname"><a href="group___t_i_m_e_r.html#ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</a></div><div class="ttdeci">void Timer_DeInit(Timer_t_ptr timer)</div><div class="ttdef"><b>Definition:</b> Timer.c:217</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga60b2e95eb192d675d0e74f791f983a3b"><div class="ttname"><a href="group___t_i_m_e_r.html#ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</a></div><div class="ttdeci">void Timer_Init(Timer_t_ptr timer)</div><div class="ttdef"><b>Definition:</b> Timer.c:110</div></div>
+<div class="ttc" id="agroup___t_i_m_e_r_html_ga8ae7aa0701cc5c9870ee835c250d78f1"><div class="ttname"><a href="group___t_i_m_e_r.html#ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</a></div><div class="ttdeci">void Timer_Config_Init(Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo)</div><div class="ttdef"><b>Definition:</b> Timer.c:174</div></div>
+<div class="ttc" id="astruct_timer___config_html"><div class="ttname"><a href="struct_timer___config.html">Timer_Config</a></div><div class="ttdoc">Estructura tipo para la definicion de la configuracion del timer.</div><div class="ttdef"><b>Definition:</b> Timer_Config.h:151</div></div>
+<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdoc">Estructura tipo con las acciones del timer.</div><div class="ttdef"><b>Definition:</b> Timer.h:101</div></div>
+<div class="ttc" id="astruct_timer_html_a3a5bc11b443112d63b5ae3e5741e1dec"><div class="ttname"><a href="struct_timer.html#a3a5bc11b443112d63b5ae3e5741e1dec">Timer::Config</a></div><div class="ttdeci">Timer_Config_t Config</div><div class="ttdef"><b>Definition:</b> Timer.h:102</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
