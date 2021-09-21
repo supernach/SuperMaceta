@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "STM8S103F3P3"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-11-14-14:30:53)
+    (mountForm default
+        (footprintRef "SOP65P640X120-20N")
+        (spec "System")
+    )
+)

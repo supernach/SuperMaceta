@@ -52,6 +52,7 @@
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
+#include <gpio.h>
 
 /******************************************************************************
 * Constants
@@ -102,6 +103,8 @@ struct UART_Config
 	uint32_t Baudios;
 	UART1_Mode_TypeDef Modo;
 	UART1_IT_TypeDef TipoInterrupcion;
+	Gpio_Config_t P_RX;
+	Gpio_Config_t P_TX;
 };
 
 /**

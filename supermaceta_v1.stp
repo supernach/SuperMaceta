@@ -639,7 +639,12 @@ String.6.0=2021,8,20,17,59,38
 [Root.Communication.Communication\RS485]
 ElemType=Folder
 PathName=Communication\RS485
-Child=Root.Communication.Communication\RS485.Communication\RS485\Ordenes
+Child=Root.Communication.Communication\RS485.communication\rs485\rs485_config.h
+
+[Root.Communication.Communication\RS485.communication\rs485\rs485_config.h]
+ElemType=File
+PathName=communication\rs485\rs485_config.h
+Next=Root.Communication.Communication\RS485.Communication\RS485\Ordenes
 
 [Root.Communication.Communication\RS485.Communication\RS485\Ordenes]
 ElemType=Folder

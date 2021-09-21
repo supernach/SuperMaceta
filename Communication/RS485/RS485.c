@@ -105,12 +105,33 @@
 *******************************************************************************/
 void RS485_Init( RS485_t_ptr rs485 )
 {
+	// CONFIGURO PARAMETROS COMUNICACION SERIE
 	rs485->Config.UART.StopBit = UART1_STOPBITS_1;
 	rs485->Config.UART.Paridad = UART1_PARITY_NO;
 	rs485->Config.UART.Bits = UART1_WORDLENGTH_8D;
 	rs485->Config.UART.Baudios = 9600;
-	rs485->Config.UART.Modo = UART1_MODE_RX_ENABLE;
+	rs485->Config.UART.Modo = UART1_MODE_TXRX_ENABLE;
 	rs485->Config.UART.TipoInterrupcion = UART1_FLAG_RXNE;
+	
+	// CONFIGURO E INICIALIZO PIN RX
+	rs485->Config.UART.P_RX.Puerto = GPIOD;
+	rs485->Config.UART.P_RX.Pin = GPIO_PIN_6;
+	rs485->Config.UART.P_RX.Tipo = GPIO_MODE_IN_PU_NO_IT; /**< No IT quizas hay que cambiar */
+	NHALgpio_Init( &rs485->Config.UART.P_RX ); 
+	
+	// CONFIGURO E INICIALIZO PIN TX
+	rs485->Config.UART.P_TX.Puerto = GPIOD;
+	rs485->Config.UART.P_TX.Pin = GPIO_PIN_5;
+	rs485->Config.UART.P_TX.Tipo = GPIO_MODE_OUT_PP_HIGH_FAST;
+	NHALgpio_Init( &rs485->Config.UART.P_TX ); 
+	
+	UART1_DeInit();
+	
+	// INCIALIZO UART1
+	CLK_PeripheralClockConfig(CLK_PERIPHERAL_UART1, ENABLE);
+	UART1_Init( rs485->Config.UART.Baudios, rs485->Config.UART.Bits, rs485->Config.UART.StopBit, rs485->Config.UART.Paridad, UART1_SYNCMODE_CLOCK_DISABLE, rs485->Config.UART.Modo );
+	UART1_Cmd(ENABLE);
+	
 }
 
 

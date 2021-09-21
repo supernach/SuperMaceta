@@ -1,0 +1,9 @@
+Manufacturer=STMicroelectronics
+PartNumber=STM8S103F3P3
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=20
+Version=2.1
+Released=2015-04-16 09:48:08
+Downloaded=2021-09-20 22:44:06
+3D=Y

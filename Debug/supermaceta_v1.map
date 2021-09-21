@@ -1,5 +1,5 @@
 
-Map of Debug\supermaceta_v1.sm8 from link file Debug\supermaceta_v1.lkf - Mon Sep 20 23:03:49 2021
+Map of Debug\supermaceta_v1.sm8 from link file Debug\supermaceta_v1.lkf - Tue Sep 21 19:02:11 2021
 
 
                                --------
@@ -17,7 +17,7 @@ start 00000045 end 00000045 length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 00000100 length     0 segment .bss
 start 00000000 end 00000d6d length  3437 segment .info.
-start 00000000 end 0000e4fc length 58620 segment .debug
+start 00000000 end 0000e986 length 59782 segment .debug
 start 00008000 end 00008080 length   128 segment .const
 start 0000808f end 00008097 length     8 segment .init
 
@@ -80,18 +80,18 @@ start 000082f4 end 0000830b length    23 section .text
 
 Debug\rs485.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00003051 end 000035f3 length  1442 section .debug
+start 00003051 end 00003a7d length  2604 section .debug
 start 0000032e end 000003ac length   126 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\rs485_tramas.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000035f3 end 00003694 length   161 section .debug
+start 00003a7d end 00003b1e length   161 section .debug
 start 000003ac end 00000431 length   133 section .info.
 
 Debug\dht11.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00003694 end 00004620 length  3980 section .debug
+start 00003b1e end 00004aaa length  3980 section .debug
 start 00000431 end 000004af length   126 section .info.
 start 00008080 end 0000808f length    15 section .const
 start 0000830b end 00008337 length    44 section .text
@@ -99,7 +99,7 @@ start 00008337 end 00008769 length  1074 section .text
 
 Debug\hx711.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00004620 end 000055c8 length  4008 section .debug
+start 00004aaa end 00005a52 length  4008 section .debug
 start 000004af end 0000052d length   126 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start 00008769 end 000087ff length   150 section .text
@@ -108,7 +108,7 @@ start 00008a2c end 00008c37 length   523 section .text
 
 Debug\stm8s_uart1.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 000055c8 end 00006a11 length  5193 section .debug
+start 00005a52 end 00006e9b length  5193 section .debug
 start 0000052d end 000005b1 length   132 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .const *** removed ***
@@ -139,7 +139,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_tim1.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 00006a11 end 0000a9f8 length 16359 section .debug
+start 00006e9b end 0000ae82 length 16359 section .debug
 start 000005b1 end 00000634 length   131 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start 00008c37 end 00008c59 length    34 section .text
@@ -222,14 +222,14 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_rst.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000a9f8 end 0000ac84 length   652 section .debug
+start 0000ae82 end 0000b10e length   652 section .debug
 start 00000634 end 000006b6 length   130 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_itc.o:
 start 00000000 end 00000002 length     2 section .bsct
-start 0000ac84 end 0000b3c5 length  1857 section .debug
+start 0000b10e end 0000b84f length  1857 section .debug
 start 000006b6 end 00000738 length   130 section .info.
 start 00008c9a end 00008cc9 length    47 section .text
 start 00008cc9 end 00008ccc length     3 section .text
@@ -243,7 +243,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_gpio.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000b3c5 end 0000be2c length  2663 section .debug
+start 0000b84f end 0000c2b6 length  2663 section .debug
 start 00000738 end 000007bb length   131 section .info.
 start 00008ccf end 00008cd7 length     8 section .text
 start 00008cd7 end 00008d28 length    81 section .text
@@ -258,7 +258,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_flash.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000be2c end 0000cc68 length  3644 section .debug
+start 0000c2b6 end 0000d0f2 length  3644 section .debug
 start 000007bb end 0000083f length   132 section .info.
 start ******** end ******** length     0 section .text *** removed ***
 start ******** end ******** length     0 section .text *** removed ***
@@ -283,7 +283,7 @@ start ******** end ******** length     0 section .text *** removed ***
 
 Debug\stm8s_clk.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000cc68 end 0000e334 length  5836 section .debug
+start 0000d0f2 end 0000e7be length  5836 section .debug
 start 0000083f end 000008c1 length   130 section .info.
 start ******** end ******** length     0 section .const *** removed ***
 start 00008d38 end 00008d6e length    54 section .text
@@ -396,7 +396,7 @@ start 00000c74 end 00000ca3 length    47 section .info.
 
 Debug\stm8_interrupt_vector.o:
 start ******** end ******** length     0 section .bsct *** removed ***
-start 0000e334 end 0000e4fc length   456 section .debug
+start 0000e7be end 0000e986 length   456 section .debug
 start 00000ca3 end 00000d31 length   142 section .info.
 start 0000912c end 0000912d length     1 section .text
 start 00008000 end 00008080 length   128 section .const
@@ -689,7 +689,7 @@ _CLK_ITConfig                    ********   *** removed from Debug\stm8s_clk.o *
 _CLK_LSICmd                      00008d88   defined in Debug\stm8s_clk.o section .text
                                             used in Debug\clock.o
 _CLK_PeripheralClockConfig       00008da2   defined in Debug\stm8s_clk.o section .text
-                                            used in Debug\clock.o
+                                            used in Debug\clock.o Debug\rs485.o
 _CLK_SWIMConfig                  ********   *** removed from Debug\stm8s_clk.o ***
 _CLK_SYSCLKConfig                00008ebc   defined in Debug\stm8s_clk.o section .text
                                             used in Debug\clock.o
@@ -748,8 +748,8 @@ _NHALgpioConfig_SetType          00008216   defined in Debug\gpio_config.o secti
                                             used in Debug\clock.o Debug\dht11.o
                                                     Debug\hx711.o
 _NHALgpio_Init                   0000821b   defined in Debug\gpio.o section .text
-                                            used in Debug\clock.o Debug\dht11.o
-                                                    Debug\hx711.o
+                                            used in Debug\clock.o Debug\rs485.o
+                                                    Debug\dht11.o Debug\hx711.o
 _NHALgpio_Read                   00008227   defined in Debug\gpio.o section .text
                                             used in Debug\dht11.o Debug\hx711.o
 _NHALgpio_Write                  00008236   defined in Debug\gpio.o section .text

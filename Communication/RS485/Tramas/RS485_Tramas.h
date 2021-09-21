@@ -95,6 +95,14 @@ typedef struct Trama_TX Trama_TX_t;
 */
 typedef struct Trama_BROADCAST Trama_BROADCAST_t;
 
+/**
+* @typedef Buffer_Tramas_t
+* @brief <descripcion>
+*
+* @see Buffer_Tramas
+*/
+typedef struct Buffer_Tramas Buffer_Tramas_t;
+
 /******************************************************************************
 * Struct
 *******************************************************************************/
@@ -134,6 +142,19 @@ struct Trama_BROADCAST
 {
 	uint8_t nNodo;
 	RS485_Orden_t Orden;
+};
+
+/**
+* @struct Buffer_Tramas 
+* @brief 
+*
+* @see
+*/
+struct Buffer_Tramas
+{
+	Trama_BROADCAST_t broadcast;
+	Trama_TX_t tx;
+	Trama_RX_t rx;
 };
 	
 
