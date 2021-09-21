@@ -60,6 +60,7 @@
 #include <timer_config.h>
 #include <Dht11.h>
 #include <Hx711.h>
+#include <rs485.h>
 #include <utils.h>
 
 
@@ -113,6 +114,14 @@ Timer_t timer_Timeout;
 * @see Timeout_t
 */
 Timeout_t Timeout;
+
+/**
+* @var Timeout
+* @brief
+*
+* @see Timeout_t
+*/
+RS485_t Comunicacion;
 
 /******************************************************************************
 * Function Prototypes

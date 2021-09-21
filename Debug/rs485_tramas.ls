@@ -5,4 +5,6 @@
   18                     	bsct
   19  0000               L3_flagTimer1:
   20  0000 0000          	dc.w	0
-  68                     	end
+  21  0002               L5_flagUartRXNE:
+  22  0002 00            	dc.b	0
+  79                     	end

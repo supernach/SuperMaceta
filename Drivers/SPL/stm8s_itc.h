@@ -35,11 +35,17 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
 
+// INTERRUPCION TIMER1 PARA TIMEOUT
 static volatile uint16_t flagTimer1 = 0;
 @far @interrupt void TIM1_OV_IRQHandler( void );
 uint16_t getFlagTimer1( void );
 void setFlagTimer1( uint16_t valor );
-//#include <gpio.h>
+
+//INTERRUPCION UART RXNE
+static volatile uint8_t flagUartRXNE = 0;
+@far @interrupt void UART_RXNE_IRQHandler( void );
+uint8_t getFlagUartRXNE( void );
+void setFlagUartRXNE( uint8_t valor );
 
 /* Exported types ------------------------------------------------------------*/
 

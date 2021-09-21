@@ -152,9 +152,9 @@ struct Trama_BROADCAST
 */
 struct Buffer_Tramas
 {
-	Trama_BROADCAST_t broadcast;
-	Trama_TX_t tx;
-	Trama_RX_t rx;
+	Trama_BROADCAST_t Broadcast;
+	Trama_TX_t Tx;
+	Trama_RX_t Rx;
 };
 	
 

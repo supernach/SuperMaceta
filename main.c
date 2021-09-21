@@ -118,6 +118,8 @@ static @inline void InicializacionComponentes(void)
 	Timer_Config_Init( &timer_Timeout.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
 	Timeout_Init( &Timeout, &timer_Timeout, &getFlagTimer1, &setFlagTimer1 );
 	
+	RS485_Init( &Comunicacion );
+	
 	DHT11_Init( &SensorTempHum, &dht11_Lectura, &Timeout );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
 }
@@ -161,10 +163,15 @@ int main()
 {
 	Inicializacion_Total();
 	
-	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
+	//SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 	while (1)
 	{
-		LecturaSensores( );
-		_delay_ms( 1000 );
+		if( getFlagUartRXNE( ) > 0 )
+		{
+			Comunicacion.Buffer.Rx.nNodo = UART1_ReceiveData8( );
+			setFlagUartRXNE( 0 );
+		}
+		//LecturaSensores( );
+		//_delay_ms( 1000 );
 	}
 }

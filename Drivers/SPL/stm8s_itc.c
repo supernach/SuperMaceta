@@ -28,7 +28,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s_itc.h"
 
-
+// INTERRUPCION TIMER1 PARA TIMEOUT
 void TIM1_OV_IRQHandler( void )
 {
 	++flagTimer1;
@@ -45,6 +45,25 @@ void setFlagTimer1( uint16_t valor )
 {
 	flagTimer1 = valor;
 }
+
+// INTERRUPCION UART RXNE
+void UART_RXNE_IRQHandler( void )
+{
+	++flagUartRXNE;
+	UART1_ClearITPendingBit( UART1_FLAG_RXNE );
+	UART1_ClearFlag( UART1_FLAG_RXNE );
+}
+
+uint8_t getFlagUartRXNE( void )
+{
+	return flagUartRXNE;
+}
+
+void setFlagUartRXNE( uint8_t valor )
+{
+	flagUartRXNE = valor;
+}
+
 /** @addtogroup STM8S_StdPeriph_Driver
   * @{
   */

@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ACTIVO	api\timeout\timeout.h	93;"	enumerator	enum:__anon5
+ACTIVO	api\timeout\timeout.h	101;"	enumerator	enum:__anon5
 ADC1	drivers\spl\stm8s.h	2603;"	macro
 ADC1_ALIGN_LEFT	drivers\spl\stm8s_adc1.h	70;"	enumerator	enum:__anon122
 ADC1_ALIGN_RIGHT	drivers\spl\stm8s_adc1.h	71;"	enumerator	enum:__anon122
@@ -267,13 +267,19 @@ BYTE_0	drivers\spl\stm8s.h	2800;"	macro
 BYTE_1	drivers\spl\stm8s.h	2801;"	macro
 BYTE_2	drivers\spl\stm8s.h	2802;"	macro
 BYTE_3	drivers\spl\stm8s.h	2803;"	macro
+Baudios	communication\rs485\rs485_config.h	103;"	member	struct:UART_Config
 BitAction	drivers\spl\stm8s.h	233;"	typedef	typeref:enum:__anon129
 BitClr	drivers\spl\stm8s.h	2822;"	macro
 BitSet	drivers\spl\stm8s.h	2823;"	macro
 BitStatus	drivers\spl\stm8s.h	233;"	typedef	typeref:enum:__anon129
 BitVal	drivers\spl\stm8s.h	2824;"	macro
+Bits	communication\rs485\rs485_config.h	102;"	member	struct:UART_Config
+Broadcast	communication\rs485\tramas\rs485_tramas.h	155;"	member	struct:Buffer_Tramas
+Buffer	communication\rs485\rs485.h	100;"	member	struct:RS485
+Buffer_Tramas	communication\rs485\tramas\rs485_tramas.h	153;"	struct
+Buffer_Tramas_t	communication\rs485\tramas\rs485_tramas.h	104;"	typedef	typeref:struct:Buffer_Tramas
 CAN	drivers\spl\stm8s.h	2616;"	macro
-CANAL1	api\n_hal\timer\timer_config.h	134;"	enumerator	enum:__anon4
+CANAL1	api\n_hal\timer\timer_config.h	135;"	enumerator	enum:__anon4
 CAN_BTR1_RESET_VALUE	drivers\spl\stm8s.h	2504;"	macro
 CAN_BTR2_RESET_VALUE	drivers\spl\stm8s.h	2505;"	macro
 CAN_BaseAddress	drivers\spl\stm8s.h	2588;"	macro
@@ -463,9 +469,9 @@ CFG_GCR_RESET_VALUE	drivers\spl\stm8s.h	2532;"	macro
 CFG_GCR_SWD	drivers\spl\stm8s.h	2542;"	macro
 CFG_TypeDef	drivers\spl\stm8s.h	2526;"	typedef	typeref:struct:CFG_struct
 CFG_struct	drivers\spl\stm8s.h	2522;"	struct
-CHANNELA_128	drivers\hx711\hx711.h	139;"	enumerator	enum:__anon8
-CHANNELA_64	drivers\hx711\hx711.h	140;"	enumerator	enum:__anon8
-CHANNELB_32	drivers\hx711\hx711.h	141;"	enumerator	enum:__anon8
+CHANNELA_128	drivers\hx711\hx711.h	157;"	enumerator	enum:__anon8
+CHANNELA_64	drivers\hx711\hx711.h	158;"	enumerator	enum:__anon8
+CHANNELB_32	drivers\hx711\hx711.h	159;"	enumerator	enum:__anon8
 CKDIVR	drivers\spl\stm8s.h	516;"	member	struct:CLK_struct
 CLK	drivers\spl\stm8s.h	2619;"	macro
 CLKPrescTable	drivers\spl\stm8s_clk.c	49;"	variable
@@ -667,9 +673,9 @@ CNTRL	drivers\spl\stm8s.h	963;"	member	struct:TIM3_struct
 CONST	drivers\spl\stm8s.h	126;"	macro
 CONST	drivers\spl\stm8s.h	132;"	macro
 CONST	drivers\spl\stm8s.h	146;"	macro
-COUNTERUP	api\n_hal\timer\timer_config.h	89;"	enumerator	enum:__anon1
+COUNTERUP	api\n_hal\timer\timer_config.h	101;"	enumerator	enum:__anon1
 CPU_CC_I1I0	drivers\spl\stm8s.h	1462;"	macro
-CPU_SOFT_INT_DISABLED	drivers\spl\stm8s_itc.h	145;"	macro
+CPU_SOFT_INT_DISABLED	drivers\spl\stm8s_itc.h	151;"	macro
 CR	drivers\spl\stm8s.h	1635;"	member	struct:WWDG_struct
 CR1	drivers\spl\stm8s.h	1060;"	member	struct:TIM4_struct
 CR1	drivers\spl\stm8s.h	1123;"	member	struct:TIM5_struct
@@ -717,22 +723,25 @@ CR5	drivers\spl\stm8s.h	2074;"	member	struct:UART4_struct
 CR6	drivers\spl\stm8s.h	1876;"	member	struct:UART2_struct
 CR6	drivers\spl\stm8s.h	1983;"	member	struct:UART3_struct
 CR6	drivers\spl\stm8s.h	2075;"	member	struct:UART4_struct
-CRC	drivers\dht11\dht11.h	154;"	member	struct:sDht11_SI
+CRC	drivers\dht11\dht11.h	158;"	member	struct:sDht11_SI
 CRCPR	drivers\spl\stm8s.h	1703;"	member	struct:SPI_struct
 CSR	drivers\spl\stm8s.h	321;"	member	struct:ADC1_struct
 CSR	drivers\spl\stm8s.h	392;"	member	struct:ADC2_struct
 CSR	drivers\spl\stm8s.h	442;"	member	struct:AWU_struct
 CSR	drivers\spl\stm8s.h	482;"	member	struct:BEEP_struct
 CSSR	drivers\spl\stm8s.h	518;"	member	struct:CLK_struct
-Canal	api\n_hal\timer\timer_config.h	149;"	member	struct:Timer_Config
+Canal	api\n_hal\timer\timer_config.h	153;"	member	struct:Timer_Config
 ChgBit	drivers\spl\stm8s.h	2792;"	macro
-Clock_HSI_Init	api\n_hal\clock\clock.c	99;"	function	signature:(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
-Clock_HSI_Init	api\n_hal\clock\clock.h	95;"	prototype	signature:(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
+Clock_HSI_Init	api\n_hal\clock\clock.c	109;"	function	signature:(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
+Clock_HSI_Init	api\n_hal\clock\clock.h	105;"	prototype	signature:(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
 ClrBit	drivers\spl\stm8s.h	2790;"	macro
-Config	api\n_hal\timer\timer.h	92;"	member	struct:Timer
-Config	api\timeout\timeout.h	108;"	member	struct:Timeout
-Config	drivers\dht11\dht11.h	195;"	member	struct:DHT11
-Config	drivers\hx711\hx711.h	191;"	member	struct:HX711
+Comando	communication\rs485\ordenes\rs485_ordenes.h	94;"	member	struct:RS485_Orden
+Comunicacion	aplicacion\configuracion\appconfig.h	124;"	variable
+Config	api\n_hal\timer\timer.h	102;"	member	struct:Timer
+Config	api\timeout\timeout.h	116;"	member	struct:Timeout
+Config	communication\rs485\rs485.h	99;"	member	struct:RS485
+Config	drivers\dht11\dht11.h	199;"	member	struct:DHT11
+Config	drivers\hx711\hx711.h	209;"	member	struct:HX711
 Config	drivers\spl\stm8s.h	2306;"	member	union:__anon132::__anon133	typeref:struct:__anon132::__anon133::__anon139
 DB0RH	drivers\spl\stm8s.h	300;"	member	struct:ADC1_struct
 DB0RL	drivers\spl\stm8s.h	301;"	member	struct:ADC1_struct
@@ -756,24 +765,23 @@ DB9RH	drivers\spl\stm8s.h	318;"	member	struct:ADC1_struct
 DB9RL	drivers\spl\stm8s.h	319;"	member	struct:ADC1_struct
 DDR	drivers\spl\stm8s.h	269;"	member	struct:GPIO_struct
 DGR	drivers\spl\stm8s.h	2182;"	member	struct:__anon132
-DHT11	drivers\dht11\dht11.h	193;"	struct
-DHT11_Config	drivers\dht11\dht11.h	180;"	struct
-DHT11_Config_t	drivers\dht11\dht11.h	85;"	typedef	typeref:struct:DHT11_Config
-DHT11_Datos_t	drivers\dht11\dht11.h	101;"	typedef	typeref:struct:sDht11Datos
-DHT11_Estado_e	drivers\dht11\dht11.h	141;"	typedef	typeref:enum:__anon6
+DHT11	drivers\dht11\dht11.h	197;"	struct
+DHT11_Config	drivers\dht11\dht11.h	184;"	struct
+DHT11_Config_t	drivers\dht11\dht11.h	89;"	typedef	typeref:struct:DHT11_Config
+DHT11_Datos_t	drivers\dht11\dht11.h	105;"	typedef	typeref:struct:sDht11Datos
+DHT11_Estado_e	drivers\dht11\dht11.h	145;"	typedef	typeref:enum:__anon6
 DHT11_H	drivers\dht11\dht11.h	2;"	macro
-DHT11_Init	drivers\dht11\dht11.c	262;"	function	signature:( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr Timeout )
-DHT11_Init	drivers\dht11\dht11.h	213;"	prototype	signature:( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr timeout )
-DHT11_SI_t	drivers\dht11\dht11.h	93;"	typedef	typeref:struct:sDht11_SI
-DHT11_TIMEOUT_SI	drivers\dht11\dht11.h	51;"	macro
-DHT11_fPtr	drivers\dht11\dht11.h	118;"	typedef
-DHT11_t	drivers\dht11\dht11.h	77;"	typedef	typeref:struct:DHT11
-DHT11_t_ptr	drivers\dht11\dht11.h	109;"	typedef
+DHT11_Init	drivers\dht11\dht11.c	263;"	function	signature:( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr Timeout )
+DHT11_Init	drivers\dht11\dht11.h	217;"	prototype	signature:( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr timeout )
+DHT11_SI_t	drivers\dht11\dht11.h	97;"	typedef	typeref:struct:sDht11_SI
+DHT11_fPtr	drivers\dht11\dht11.h	122;"	typedef
+DHT11_t	drivers\dht11\dht11.h	81;"	typedef	typeref:struct:DHT11
+DHT11_t_ptr	drivers\dht11\dht11.h	113;"	typedef
 DISABLE	drivers\spl\stm8s.h	235;"	enumerator	enum:__anon130
-DISPARADO	api\timeout\timeout.h	94;"	enumerator	enum:__anon5
+DISPARADO	api\timeout\timeout.h	102;"	enumerator	enum:__anon5
 DM	drivers\spl\stm8s.h	2704;"	macro
 DM_BaseAddress	drivers\spl\stm8s.h	2591;"	macro
-DOUT	drivers\hx711\hx711.h	168;"	member	struct:HX711_Config
+DOUT	drivers\hx711\hx711.h	186;"	member	struct:HX711_Config
 DR	drivers\spl\stm8s.h	1336;"	member	struct:I2C_struct
 DR	drivers\spl\stm8s.h	1702;"	member	struct:SPI_struct
 DR	drivers\spl\stm8s.h	1770;"	member	struct:UART1_struct
@@ -786,11 +794,11 @@ DRL	drivers\spl\stm8s.h	326;"	member	struct:ADC1_struct
 DRL	drivers\spl\stm8s.h	397;"	member	struct:ADC2_struct
 DTR	drivers\spl\stm8s.h	644;"	member	struct:TIM1_struct
 DUKR	drivers\spl\stm8s.h	1526;"	member	struct:FLASH_struct
-Datos	drivers\dht11\dht11.h	196;"	member	struct:DHT11
-Datos	drivers\hx711\hx711.h	192;"	member	struct:HX711
+Datos	drivers\dht11\dht11.h	200;"	member	struct:DHT11
+Datos	drivers\hx711\hx711.h	210;"	member	struct:HX711
 DeInitAllGPIO	main.c	55;"	function	file:	signature:(void)
-DisableAllPeripherals	api\n_hal\clock\clock.c	120;"	function	signature:(void)
-DisableAllPeripherals	api\n_hal\clock\clock.h	82;"	prototype	signature:(void)
+DisableAllPeripherals	api\n_hal\clock\clock.c	130;"	function	signature:(void)
+DisableAllPeripherals	api\n_hal\clock\clock.h	92;"	prototype	signature:(void)
 ECKR	drivers\spl\stm8s.h	511;"	member	struct:CLK_struct
 EEPROM	drivers\spl\stm8s.h	125;"	macro
 EEPROM	drivers\spl\stm8s.h	131;"	macro
@@ -842,12 +850,12 @@ EXTI_TLISENSITIVITY_RISE_ONLY	drivers\spl\stm8s_exti.h	56;"	enumerator	enum:__an
 EXTI_TLISensitivity_TypeDef	drivers\spl\stm8s_exti.h	57;"	typedef	typeref:enum:__anon105
 EXTI_TypeDef	drivers\spl\stm8s.h	1478;"	typedef	typeref:struct:EXTI_struct
 EXTI_struct	drivers\spl\stm8s.h	1473;"	struct
-EnableClockMirror	api\n_hal\clock\clock.c	167;"	function	signature:(CLK_Output_TypeDef source, Gpio_Config_t* pin)
-EnableClockMirror	api\n_hal\clock\clock.h	104;"	prototype	signature:(CLK_Output_TypeDef source, Gpio_Config_t* pin)
+EnableClockMirror	api\n_hal\clock\clock.c	177;"	function	signature:(CLK_Output_TypeDef source, Gpio_Config_t* pin)
+EnableClockMirror	api\n_hal\clock\clock.h	114;"	prototype	signature:(CLK_Output_TypeDef source, Gpio_Config_t* pin)
 ErrorStatus	drivers\spl\stm8s.h	238;"	typedef	typeref:enum:__anon131
-Estado	api\timeout\timeout.h	109;"	member	struct:Timeout
-Estado	drivers\dht11\dht11.h	171;"	member	struct:sDht11Datos
-Estado	drivers\hx711\hx711.h	156;"	member	struct:HX711_Datos
+Estado	api\timeout\timeout.h	117;"	member	struct:Timeout
+Estado	drivers\dht11\dht11.h	175;"	member	struct:sDht11Datos
+Estado	drivers\hx711\hx711.h	174;"	member	struct:HX711_Datos
 F0R1	drivers\spl\stm8s.h	2230;"	member	struct:__anon132::__anon133::__anon136
 F0R2	drivers\spl\stm8s.h	2231;"	member	struct:__anon132::__anon133::__anon136
 F0R3	drivers\spl\stm8s.h	2232;"	member	struct:__anon132::__anon133::__anon136
@@ -900,7 +908,7 @@ FALSE	drivers\spl\stm8s.h	231;"	enumerator	enum:__anon128
 FAR	drivers\spl\stm8s.h	122;"	macro
 FAR	drivers\spl\stm8s.h	128;"	macro
 FAR	drivers\spl\stm8s.h	142;"	macro
-FCLK	api\n_hal\utils\utils.h	57;"	macro
+FCLK	api\n_hal\utils\utils.h	66;"	macro
 FCR1	drivers\spl\stm8s.h	2302;"	member	struct:__anon132::__anon133::__anon139
 FCR2	drivers\spl\stm8s.h	2303;"	member	struct:__anon132::__anon133::__anon139
 FCR3	drivers\spl\stm8s.h	2304;"	member	struct:__anon132::__anon133::__anon139
@@ -1046,6 +1054,7 @@ Filter01	drivers\spl\stm8s.h	2247;"	member	union:__anon132::__anon133	typeref:st
 Filter23	drivers\spl\stm8s.h	2268;"	member	union:__anon132::__anon133	typeref:struct:__anon132::__anon133::__anon137
 Filter45	drivers\spl\stm8s.h	2289;"	member	union:__anon132::__anon133	typeref:struct:__anon132::__anon133::__anon138
 FlagStatus	drivers\spl\stm8s.h	233;"	typedef	typeref:enum:__anon129
+Funcion	communication\rs485\ordenes\rs485_ordenes.h	93;"	member	struct:RS485_Orden
 FunctionalState	drivers\spl\stm8s.h	235;"	typedef	typeref:enum:__anon130
 GCR	drivers\spl\stm8s.h	2524;"	member	struct:CFG_struct
 GPIOA	drivers\spl\stm8s.h	2627;"	macro
@@ -1066,7 +1075,7 @@ GPIOH	drivers\spl\stm8s.h	2646;"	macro
 GPIOH_BaseAddress	drivers\spl\stm8s.h	2564;"	macro
 GPIOI	drivers\spl\stm8s.h	2647;"	macro
 GPIOI_BaseAddress	drivers\spl\stm8s.h	2565;"	macro
-GPIO_CONFIG_H	api\n_hal\gpio\gpio_config.h	2;"	macro
+GPIO_CONFIG_H	api\n_hal\gpio\gpio_config.h	56;"	macro
 GPIO_CR1_RESET_VALUE	drivers\spl\stm8s.h	285;"	macro
 GPIO_CR2_RESET_VALUE	drivers\spl\stm8s.h	286;"	macro
 GPIO_DDR_RESET_VALUE	drivers\spl\stm8s.h	284;"	macro
@@ -1074,7 +1083,7 @@ GPIO_DeInit	drivers\spl\stm8s_gpio.c	53;"	function	signature:(GPIO_TypeDef* GPIO
 GPIO_DeInit	drivers\spl\stm8s_gpio.h	139;"	prototype	signature:(GPIO_TypeDef* GPIOx)
 GPIO_ExternalPullUpConfig	drivers\spl\stm8s_gpio.c	225;"	function	signature:(GPIO_TypeDef* GPIOx, GPIO_Pin_TypeDef GPIO_Pin, FunctionalState NewState)
 GPIO_ExternalPullUpConfig	drivers\spl\stm8s_gpio.h	148;"	prototype	signature:(GPIO_TypeDef* GPIOx, GPIO_Pin_TypeDef GPIO_Pin, FunctionalState NewState)
-GPIO_H	api\n_hal\gpio\gpio.h	43;"	macro
+GPIO_H	api\n_hal\gpio\gpio.h	53;"	macro
 GPIO_Init	drivers\spl\stm8s_gpio.c	71;"	function	signature:(GPIO_TypeDef* GPIOx, GPIO_Pin_TypeDef GPIO_Pin, GPIO_Mode_TypeDef GPIO_Mode)
 GPIO_Init	drivers\spl\stm8s_gpio.h	140;"	prototype	signature:(GPIO_TypeDef* GPIOx, GPIO_Pin_TypeDef GPIO_Pin, GPIO_Mode_TypeDef GPIO_Mode)
 GPIO_MODE_IN_FL_IT	drivers\spl\stm8s_gpio.h	58;"	enumerator	enum:__anon96
@@ -1122,9 +1131,9 @@ GPIO_struct	drivers\spl\stm8s.h	265;"	struct
 GTR	drivers\spl\stm8s.h	1778;"	member	struct:UART1_struct
 GTR	drivers\spl\stm8s.h	1877;"	member	struct:UART2_struct
 GTR	drivers\spl\stm8s.h	2076;"	member	struct:UART4_struct
-Ganancia	drivers\hx711\hx711.h	171;"	member	struct:HX711_Config
-Gpio_Config_t	api\n_hal\gpio\gpio_config.h	17;"	typedef	typeref:struct:Gpio_Config_t
-Gpio_Config_t	api\n_hal\gpio\gpio_config.h	18;"	struct
+Ganancia	drivers\hx711\hx711.h	189;"	member	struct:HX711_Config
+Gpio_Config	api\n_hal\gpio\gpio_config.h	99;"	struct
+Gpio_Config_t	api\n_hal\gpio\gpio_config.h	87;"	typedef	typeref:struct:Gpio_Config
 HSE_VALUE	drivers\spl\stm8s.h	109;"	macro
 HSE_VALUE	drivers\spl\stm8s.h	111;"	macro
 HSIDivFactor	drivers\spl\stm8s_clk.c	48;"	variable
@@ -1132,26 +1141,27 @@ HSITRIMR	drivers\spl\stm8s.h	522;"	member	struct:CLK_struct
 HSI_VALUE	drivers\spl\stm8s.h	118;"	macro
 HTRH	drivers\spl\stm8s.h	329;"	member	struct:ADC1_struct
 HTRL	drivers\spl\stm8s.h	330;"	member	struct:ADC1_struct
-HW	drivers\dht11\dht11.h	182;"	member	struct:DHT11_Config
-HX711	drivers\hx711\hx711.h	189;"	struct
-HX711_Config	drivers\hx711\hx711.h	166;"	struct
-HX711_Config_t	drivers\hx711\hx711.h	99;"	typedef	typeref:struct:HX711_Config
-HX711_Datos	drivers\hx711\hx711.h	153;"	struct
-HX711_Datos_t	drivers\hx711\hx711.h	105;"	typedef	typeref:struct:HX711_Datos
-HX711_Estado_e	drivers\hx711\hx711.h	131;"	typedef	typeref:enum:__anon7
-HX711_Ganancia_e	drivers\hx711\hx711.h	142;"	typedef	typeref:enum:__anon8
+HW	drivers\dht11\dht11.h	186;"	member	struct:DHT11_Config
+HX711	drivers\hx711\hx711.h	207;"	struct
+HX711_Config	drivers\hx711\hx711.h	184;"	struct
+HX711_Config_t	drivers\hx711\hx711.h	105;"	typedef	typeref:struct:HX711_Config
+HX711_Config_t_ptr	drivers\hx711\hx711.h	136;"	typedef
+HX711_Datos	drivers\hx711\hx711.h	171;"	struct
+HX711_Datos_t	drivers\hx711\hx711.h	111;"	typedef	typeref:struct:HX711_Datos
+HX711_Datos_t_ptr	drivers\hx711\hx711.h	130;"	typedef
+HX711_Estado_e	drivers\hx711\hx711.h	149;"	typedef	typeref:enum:__anon7
+HX711_Ganancia_e	drivers\hx711\hx711.h	160;"	typedef	typeref:enum:__anon8
 HX711_H	drivers\hx711\hx711.h	2;"	macro
-HX711_Init	drivers\hx711\hx711.c	259;"	function	signature:( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout )
-HX711_Init	drivers\hx711\hx711.h	210;"	prototype	signature:( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout )
-HX711_LONGITUDTRAMA	drivers\hx711\hx711.h	63;"	variable
-HX711_TIEMPOCLOCK	drivers\hx711\hx711.h	69;"	variable
-HX711_TIEMPOCLOCKSLEEP	drivers\hx711\hx711.h	75;"	variable
-HX711_TIMEOUT_SI	drivers\hx711\hx711.h	50;"	macro
-HX711_fPtr	drivers\hx711\hx711.h	112;"	typedef
-HX711_t	drivers\hx711\hx711.h	93;"	typedef	typeref:struct:HX711
-HX711_t_ptr	drivers\hx711\hx711.h	118;"	typedef
-H_Decimal	drivers\dht11\dht11.h	157;"	member	struct:sDht11_SI
-H_Entero	drivers\dht11\dht11.h	158;"	member	struct:sDht11_SI
+HX711_Init	drivers\hx711\hx711.c	265;"	function	signature:( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout )
+HX711_Init	drivers\hx711\hx711.h	228;"	prototype	signature:( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout )
+HX711_LONGITUDTRAMA	drivers\hx711\hx711.h	69;"	variable
+HX711_TIEMPOCLOCK	drivers\hx711\hx711.h	75;"	variable
+HX711_TIEMPOCLOCKSLEEP	drivers\hx711\hx711.h	81;"	variable
+HX711_fPtr	drivers\hx711\hx711.h	118;"	typedef
+HX711_t	drivers\hx711\hx711.h	99;"	typedef	typeref:struct:HX711
+HX711_t_ptr	drivers\hx711\hx711.h	124;"	typedef
+H_Decimal	drivers\dht11\dht11.h	161;"	member	struct:sDht11_SI
+H_Entero	drivers\dht11\dht11.h	162;"	member	struct:sDht11_SI
 I2C	drivers\spl\stm8s.h	2656;"	macro
 I2C_ACK_CURR	drivers\spl\stm8s_i2c.h	56;"	enumerator	enum:__anon89
 I2C_ACK_NEXT	drivers\spl\stm8s_i2c.h	57;"	enumerator	enum:__anon89
@@ -1326,8 +1336,8 @@ IER	drivers\spl\stm8s.h	2181;"	member	struct:__anon132
 IER	drivers\spl\stm8s.h	618;"	member	struct:TIM1_struct
 IER	drivers\spl\stm8s.h	831;"	member	struct:TIM2_struct
 IER	drivers\spl\stm8s.h	955;"	member	struct:TIM3_struct
-INACTIVO	api\timeout\timeout.h	92;"	enumerator	enum:__anon5
-INICIALIZADO	drivers\hx711\hx711.h	126;"	enumerator	enum:__anon7
+INACTIVO	api\timeout\timeout.h	100;"	enumerator	enum:__anon5
+INICIALIZADO	drivers\hx711\hx711.h	144;"	enumerator	enum:__anon7
 INTERRUPT	drivers\spl\stm8s.h	2770;"	macro
 INTERRUPT	drivers\spl\stm8s.h	2772;"	macro
 INTERRUPT_HANDLER	drivers\spl\stm8s.h	2748;"	macro
@@ -1405,15 +1415,15 @@ IS_I2C_INTERRUPT_OK	drivers\spl\stm8s_i2c.h	383;"	macro
 IS_I2C_ITPENDINGBIT_OK	drivers\spl\stm8s_i2c.h	428;"	macro
 IS_I2C_OUTPUT_CLOCK_FREQ_OK	drivers\spl\stm8s_i2c.h	493;"	macro
 IS_I2C_OWN_ADDRESS_OK	drivers\spl\stm8s_i2c.h	476;"	macro
-IS_ITC_INTERRUPTS_DISABLED	drivers\spl\stm8s_itc.h	170;"	macro
-IS_ITC_IRQ_OK	drivers\spl\stm8s_itc.h	160;"	macro
-IS_ITC_PRIORITY_OK	drivers\spl\stm8s_itc.h	163;"	macro
+IS_ITC_INTERRUPTS_DISABLED	drivers\spl\stm8s_itc.h	176;"	macro
+IS_ITC_IRQ_OK	drivers\spl\stm8s_itc.h	166;"	macro
+IS_ITC_PRIORITY_OK	drivers\spl\stm8s_itc.h	169;"	macro
 IS_IWDG_PRESCALER_OK	drivers\spl\stm8s_iwdg.h	65;"	macro
 IS_IWDG_WRITEACCESS_MODE_OK	drivers\spl\stm8s_iwdg.h	77;"	macro
 IS_LSI_FREQUENCY_OK	drivers\spl\stm8s_awu.h	120;"	macro
 IS_LSI_FREQUENCY_OK	drivers\spl\stm8s_beep.h	92;"	macro
 IS_MEMORY_TYPE_OK	drivers\spl\stm8s_flash.h	196;"	macro
-IS_NULL	api\n_hal\utils\utils.h	76;"	macro
+IS_NULL	api\n_hal\utils\utils.h	85;"	macro
 IS_OPTION_BYTE_ADDRESS_OK	drivers\spl\stm8s_flash.h	227;"	macro
 IS_RST_FLAG_OK	drivers\spl\stm8s_rst.h	66;"	macro
 IS_SPI_BAUDRATE_PRESCALER_OK	drivers\spl\stm8s_spi.h	212;"	macro
@@ -1516,57 +1526,57 @@ IS_UART1_WAKEUP_OK	drivers\spl\stm8s_uart1.h	292;"	macro
 IS_UART1_WORDLENGTH_OK	drivers\spl\stm8s_uart1.h	205;"	macro
 IS_WWDG_COUNTERVALUE_OK	drivers\spl\stm8s_wwdg.h	55;"	macro
 IS_WWDG_WINDOWLIMITVALUE_OK	drivers\spl\stm8s_wwdg.h	49;"	macro
-IT	api\n_hal\timer\timer_config.h	151;"	member	struct:Timer_Config
+IT	api\n_hal\timer\timer_config.h	155;"	member	struct:Timer_Config
 ITC	drivers\spl\stm8s.h	2700;"	macro
 ITC_BaseAddress	drivers\spl\stm8s.h	2590;"	macro
-ITC_DeInit	drivers\spl\stm8s_itc.c	97;"	function	signature:(void)
-ITC_DeInit	drivers\spl\stm8s_itc.h	183;"	prototype	signature:(void)
-ITC_GetCPUCC	drivers\spl\stm8s_itc.c	67;"	function	signature:(void)
-ITC_GetCPUCC	drivers\spl\stm8s_itc.h	182;"	prototype	signature:(void)
-ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.c	114;"	function	signature:(void)
-ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.h	184;"	prototype	signature:(void)
-ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.c	124;"	function	signature:(ITC_Irq_TypeDef IrqNum)
-ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.h	186;"	prototype	signature:(ITC_Irq_TypeDef IrqNum)
-ITC_IRQ_ADC1	drivers\spl\stm8s_itc.h	113;"	enumerator	enum:__anon86
-ITC_IRQ_ADC2	drivers\spl\stm8s_itc.h	109;"	enumerator	enum:__anon86
-ITC_IRQ_AWU	drivers\spl\stm8s_itc.h	55;"	enumerator	enum:__anon86
-ITC_IRQ_CAN_RX	drivers\spl\stm8s_itc.h	64;"	enumerator	enum:__anon86
-ITC_IRQ_CAN_TX	drivers\spl\stm8s_itc.h	65;"	enumerator	enum:__anon86
-ITC_IRQ_CLK	drivers\spl\stm8s_itc.h	56;"	enumerator	enum:__anon86
-ITC_IRQ_EEPROM_EEC	drivers\spl\stm8s_itc.h	123;"	enumerator	enum:__anon86
-ITC_IRQ_I2C	drivers\spl\stm8s_itc.h	99;"	enumerator	enum:__anon86
-ITC_IRQ_PORTA	drivers\spl\stm8s_itc.h	57;"	enumerator	enum:__anon86
-ITC_IRQ_PORTB	drivers\spl\stm8s_itc.h	58;"	enumerator	enum:__anon86
-ITC_IRQ_PORTC	drivers\spl\stm8s_itc.h	59;"	enumerator	enum:__anon86
-ITC_IRQ_PORTD	drivers\spl\stm8s_itc.h	60;"	enumerator	enum:__anon86
-ITC_IRQ_PORTE	drivers\spl\stm8s_itc.h	61;"	enumerator	enum:__anon86
-ITC_IRQ_PORTF	drivers\spl\stm8s_itc.h	69;"	enumerator	enum:__anon86
-ITC_IRQ_SPI	drivers\spl\stm8s_itc.h	72;"	enumerator	enum:__anon86
-ITC_IRQ_TIM1_CAPCOM	drivers\spl\stm8s_itc.h	75;"	enumerator	enum:__anon86
-ITC_IRQ_TIM1_OVF	drivers\spl\stm8s_itc.h	73;"	enumerator	enum:__anon86
-ITC_IRQ_TIM3_CAPCOM	drivers\spl\stm8s_itc.h	87;"	enumerator	enum:__anon86
-ITC_IRQ_TIM3_OVF	drivers\spl\stm8s_itc.h	86;"	enumerator	enum:__anon86
-ITC_IRQ_TIM5_CAPCOM	drivers\spl\stm8s_itc.h	80;"	enumerator	enum:__anon86
-ITC_IRQ_TIM5_OVFTRI	drivers\spl\stm8s_itc.h	78;"	enumerator	enum:__anon86
-ITC_IRQ_TIM6_OVFTRI	drivers\spl\stm8s_itc.h	117;"	enumerator	enum:__anon86
-ITC_IRQ_TLI	drivers\spl\stm8s_itc.h	54;"	enumerator	enum:__anon86
-ITC_IRQ_UART1_RX	drivers\spl\stm8s_itc.h	92;"	enumerator	enum:__anon86
-ITC_IRQ_UART1_TX	drivers\spl\stm8s_itc.h	91;"	enumerator	enum:__anon86
-ITC_IRQ_UART2_RX	drivers\spl\stm8s_itc.h	103;"	enumerator	enum:__anon86
-ITC_IRQ_UART2_TX	drivers\spl\stm8s_itc.h	102;"	enumerator	enum:__anon86
-ITC_IRQ_UART3_RX	drivers\spl\stm8s_itc.h	108;"	enumerator	enum:__anon86
-ITC_IRQ_UART3_TX	drivers\spl\stm8s_itc.h	107;"	enumerator	enum:__anon86
-ITC_IRQ_UART4_RX	drivers\spl\stm8s_itc.h	96;"	enumerator	enum:__anon86
-ITC_IRQ_UART4_TX	drivers\spl\stm8s_itc.h	95;"	enumerator	enum:__anon86
-ITC_Irq_TypeDef	drivers\spl\stm8s_itc.h	124;"	typedef	typeref:enum:__anon86
-ITC_PRIORITYLEVEL_0	drivers\spl\stm8s_itc.h	130;"	enumerator	enum:__anon87
-ITC_PRIORITYLEVEL_1	drivers\spl\stm8s_itc.h	131;"	enumerator	enum:__anon87
-ITC_PRIORITYLEVEL_2	drivers\spl\stm8s_itc.h	132;"	enumerator	enum:__anon87
-ITC_PRIORITYLEVEL_3	drivers\spl\stm8s_itc.h	133;"	enumerator	enum:__anon87
-ITC_PriorityLevel_TypeDef	drivers\spl\stm8s_itc.h	134;"	typedef	typeref:enum:__anon87
+ITC_DeInit	drivers\spl\stm8s_itc.c	116;"	function	signature:(void)
+ITC_DeInit	drivers\spl\stm8s_itc.h	189;"	prototype	signature:(void)
+ITC_GetCPUCC	drivers\spl\stm8s_itc.c	86;"	function	signature:(void)
+ITC_GetCPUCC	drivers\spl\stm8s_itc.h	188;"	prototype	signature:(void)
+ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.c	133;"	function	signature:(void)
+ITC_GetSoftIntStatus	drivers\spl\stm8s_itc.h	190;"	prototype	signature:(void)
+ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.c	143;"	function	signature:(ITC_Irq_TypeDef IrqNum)
+ITC_GetSoftwarePriority	drivers\spl\stm8s_itc.h	192;"	prototype	signature:(ITC_Irq_TypeDef IrqNum)
+ITC_IRQ_ADC1	drivers\spl\stm8s_itc.h	119;"	enumerator	enum:__anon86
+ITC_IRQ_ADC2	drivers\spl\stm8s_itc.h	115;"	enumerator	enum:__anon86
+ITC_IRQ_AWU	drivers\spl\stm8s_itc.h	61;"	enumerator	enum:__anon86
+ITC_IRQ_CAN_RX	drivers\spl\stm8s_itc.h	70;"	enumerator	enum:__anon86
+ITC_IRQ_CAN_TX	drivers\spl\stm8s_itc.h	71;"	enumerator	enum:__anon86
+ITC_IRQ_CLK	drivers\spl\stm8s_itc.h	62;"	enumerator	enum:__anon86
+ITC_IRQ_EEPROM_EEC	drivers\spl\stm8s_itc.h	129;"	enumerator	enum:__anon86
+ITC_IRQ_I2C	drivers\spl\stm8s_itc.h	105;"	enumerator	enum:__anon86
+ITC_IRQ_PORTA	drivers\spl\stm8s_itc.h	63;"	enumerator	enum:__anon86
+ITC_IRQ_PORTB	drivers\spl\stm8s_itc.h	64;"	enumerator	enum:__anon86
+ITC_IRQ_PORTC	drivers\spl\stm8s_itc.h	65;"	enumerator	enum:__anon86
+ITC_IRQ_PORTD	drivers\spl\stm8s_itc.h	66;"	enumerator	enum:__anon86
+ITC_IRQ_PORTE	drivers\spl\stm8s_itc.h	67;"	enumerator	enum:__anon86
+ITC_IRQ_PORTF	drivers\spl\stm8s_itc.h	75;"	enumerator	enum:__anon86
+ITC_IRQ_SPI	drivers\spl\stm8s_itc.h	78;"	enumerator	enum:__anon86
+ITC_IRQ_TIM1_CAPCOM	drivers\spl\stm8s_itc.h	81;"	enumerator	enum:__anon86
+ITC_IRQ_TIM1_OVF	drivers\spl\stm8s_itc.h	79;"	enumerator	enum:__anon86
+ITC_IRQ_TIM3_CAPCOM	drivers\spl\stm8s_itc.h	93;"	enumerator	enum:__anon86
+ITC_IRQ_TIM3_OVF	drivers\spl\stm8s_itc.h	92;"	enumerator	enum:__anon86
+ITC_IRQ_TIM5_CAPCOM	drivers\spl\stm8s_itc.h	86;"	enumerator	enum:__anon86
+ITC_IRQ_TIM5_OVFTRI	drivers\spl\stm8s_itc.h	84;"	enumerator	enum:__anon86
+ITC_IRQ_TIM6_OVFTRI	drivers\spl\stm8s_itc.h	123;"	enumerator	enum:__anon86
+ITC_IRQ_TLI	drivers\spl\stm8s_itc.h	60;"	enumerator	enum:__anon86
+ITC_IRQ_UART1_RX	drivers\spl\stm8s_itc.h	98;"	enumerator	enum:__anon86
+ITC_IRQ_UART1_TX	drivers\spl\stm8s_itc.h	97;"	enumerator	enum:__anon86
+ITC_IRQ_UART2_RX	drivers\spl\stm8s_itc.h	109;"	enumerator	enum:__anon86
+ITC_IRQ_UART2_TX	drivers\spl\stm8s_itc.h	108;"	enumerator	enum:__anon86
+ITC_IRQ_UART3_RX	drivers\spl\stm8s_itc.h	114;"	enumerator	enum:__anon86
+ITC_IRQ_UART3_TX	drivers\spl\stm8s_itc.h	113;"	enumerator	enum:__anon86
+ITC_IRQ_UART4_RX	drivers\spl\stm8s_itc.h	102;"	enumerator	enum:__anon86
+ITC_IRQ_UART4_TX	drivers\spl\stm8s_itc.h	101;"	enumerator	enum:__anon86
+ITC_Irq_TypeDef	drivers\spl\stm8s_itc.h	130;"	typedef	typeref:enum:__anon86
+ITC_PRIORITYLEVEL_0	drivers\spl\stm8s_itc.h	136;"	enumerator	enum:__anon87
+ITC_PRIORITYLEVEL_1	drivers\spl\stm8s_itc.h	137;"	enumerator	enum:__anon87
+ITC_PRIORITYLEVEL_2	drivers\spl\stm8s_itc.h	138;"	enumerator	enum:__anon87
+ITC_PRIORITYLEVEL_3	drivers\spl\stm8s_itc.h	139;"	enumerator	enum:__anon87
+ITC_PriorityLevel_TypeDef	drivers\spl\stm8s_itc.h	140;"	typedef	typeref:enum:__anon87
 ITC_SPRX_RESET_VALUE	drivers\spl\stm8s.h	1452;"	macro
-ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.c	237;"	function	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
-ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.h	185;"	prototype	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
+ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.c	256;"	function	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
+ITC_SetSoftwarePriority	drivers\spl\stm8s_itc.h	191;"	prototype	signature:(ITC_Irq_TypeDef IrqNum, ITC_PriorityLevel_TypeDef PriorityValue)
 ITC_TypeDef	drivers\spl\stm8s.h	1446;"	typedef	typeref:struct:ITC_struct
 ITC_struct	drivers\spl\stm8s.h	1435;"	struct
 ITEN_Mask	drivers\spl\stm8s_i2c.c	44;"	macro	file:
@@ -1604,7 +1614,7 @@ IWDG_struct	drivers\spl\stm8s.h	1609;"	struct
 InicializacionCLK	main.c	105;"	function	file:	signature:(void)
 InicializacionComponentes	main.c	116;"	function	file:	signature:(void)
 InicializacionGPIO	main.c	93;"	function	file:	signature:(void)
-Inicializacion_Total	main.c	131;"	function	file:	signature:(void)
+Inicializacion_Total	main.c	133;"	function	file:	signature:(void)
 KR	drivers\spl\stm8s.h	1611;"	member	struct:IWDG_struct
 LSI_FREQUENCY_MAX	drivers\spl\stm8s_awu.h	77;"	macro
 LSI_FREQUENCY_MAX	drivers\spl\stm8s_beep.h	64;"	macro
@@ -1613,9 +1623,11 @@ LSI_FREQUENCY_MIN	drivers\spl\stm8s_beep.h	63;"	macro
 LSI_VALUE	drivers\spl\stm8s.h	119;"	macro
 LTRH	drivers\spl\stm8s.h	331;"	member	struct:ADC1_struct
 LTRL	drivers\spl\stm8s.h	332;"	member	struct:ADC1_struct
-Lectura	drivers\dht11\dht11.h	199;"	member	struct:DHT11
-Lectura	drivers\hx711\hx711.h	195;"	member	struct:HX711
-LecturaSensores	main.c	146;"	function	file:	signature:(void)
+Lectura	drivers\dht11\dht11.h	203;"	member	struct:DHT11
+Lectura	drivers\hx711\hx711.h	213;"	member	struct:HX711
+LecturaDHT11	communication\rs485\tramas\rs485_tramas.h	131;"	member	struct:Trama_TX
+LecturaHX711	communication\rs485\tramas\rs485_tramas.h	132;"	member	struct:Trama_TX
+LecturaSensores	main.c	148;"	function	file:	signature:(void)
 MCR	drivers\spl\stm8s.h	2176;"	member	struct:__anon132
 MCSR	drivers\spl\stm8s.h	2189;"	member	struct:__anon132::__anon133::__anon134
 MDAR1	drivers\spl\stm8s.h	2195;"	member	struct:__anon132::__anon133::__anon134
@@ -1654,7 +1666,8 @@ MTSRL	drivers\spl\stm8s.h	2203;"	member	struct:__anon132::__anon133::__anon134
 MTSRL	drivers\spl\stm8s.h	2324;"	member	struct:__anon132::__anon133::__anon140
 MemoryAddressCast	drivers\spl\stm8s.h	157;"	macro
 MemoryAddressCast	drivers\spl\stm8s.h	161;"	macro
-Modo	api\n_hal\timer\timer_config.h	150;"	member	struct:Timer_Config
+Modo	api\n_hal\timer\timer_config.h	154;"	member	struct:Timer_Config
+Modo	communication\rs485\rs485_config.h	104;"	member	struct:UART_Config
 MskBit	drivers\spl\stm8s.h	2796;"	macro
 NCR2	drivers\spl\stm8s.h	1518;"	member	struct:FLASH_struct
 NEAR	drivers\spl\stm8s.h	123;"	macro
@@ -1663,25 +1676,25 @@ NEAR	drivers\spl\stm8s.h	143;"	macro
 NFPR	drivers\spl\stm8s.h	1520;"	member	struct:FLASH_struct
 NHAL_TIMER_CONFIG_H	api\n_hal\timer\timer_config.h	2;"	macro
 NHAL_TIMER_H	api\n_hal\timer\timer.h	2;"	macro
-NHALgpioConfig_SetType	api\n_hal\gpio\gpio_config.c	99;"	function	signature:( Gpio_Config_t* gpio, GPIO_Mode_TypeDef nuevoTipo )
-NHALgpioConfig_SetType	api\n_hal\gpio\gpio_config.h	26;"	prototype	signature:( Gpio_Config_t* gpio, GPIO_Mode_TypeDef tipo )
-NHALgpio_Init	api\n_hal\gpio\gpio.c	98;"	function	signature:( Gpio_Config_t* gpio )
-NHALgpio_Init	api\n_hal\gpio\gpio.h	81;"	prototype	signature:( Gpio_Config_t* gpio )
-NHALgpio_Read	api\n_hal\gpio\gpio.c	141;"	function	signature:( Gpio_Config_t* gpio )
-NHALgpio_Read	api\n_hal\gpio\gpio.h	82;"	prototype	signature:( Gpio_Config_t* gpio )
-NHALgpio_Write	api\n_hal\gpio\gpio.c	179;"	function	signature:( Gpio_Config_t* gpio, bool estado )
-NHALgpio_Write	api\n_hal\gpio\gpio.h	83;"	prototype	signature:( Gpio_Config_t* gpio, bool estado )
-NO	api\n_hal\timer\timer_config.h	101;"	enumerator	enum:__anon2
+NHALgpioConfig_SetType	api\n_hal\gpio\gpio_config.c	111;"	function	signature:( Gpio_Config_t* gpio, GPIO_Mode_TypeDef nuevoTipo )
+NHALgpioConfig_SetType	api\n_hal\gpio\gpio_config.h	117;"	prototype	signature:( Gpio_Config_t* gpio, GPIO_Mode_TypeDef tipo )
+NHALgpio_Init	api\n_hal\gpio\gpio.c	108;"	function	signature:( Gpio_Config_t* gpio )
+NHALgpio_Init	api\n_hal\gpio\gpio.h	91;"	prototype	signature:( Gpio_Config_t* gpio )
+NHALgpio_Read	api\n_hal\gpio\gpio.c	151;"	function	signature:( Gpio_Config_t* gpio )
+NHALgpio_Read	api\n_hal\gpio\gpio.h	92;"	prototype	signature:( Gpio_Config_t* gpio )
+NHALgpio_Write	api\n_hal\gpio\gpio.c	189;"	function	signature:( Gpio_Config_t* gpio, bool estado )
+NHALgpio_Write	api\n_hal\gpio\gpio.h	93;"	prototype	signature:( Gpio_Config_t* gpio, bool estado )
+NO	api\n_hal\timer\timer_config.h	113;"	enumerator	enum:__anon2
 NOPT1	drivers\spl\stm8s.h	1588;"	member	struct:OPT_struct
 NOPT2	drivers\spl\stm8s.h	1590;"	member	struct:OPT_struct
 NOPT3	drivers\spl\stm8s.h	1592;"	member	struct:OPT_struct
 NOPT4	drivers\spl\stm8s.h	1594;"	member	struct:OPT_struct
 NOPT5	drivers\spl\stm8s.h	1596;"	member	struct:OPT_struct
 NOPT7	drivers\spl\stm8s.h	1600;"	member	struct:OPT_struct
-NUEVA_LECTURA	drivers\hx711\hx711.h	129;"	enumerator	enum:__anon7
-NULL	api\n_hal\utils\utils.h	70;"	macro
+NUEVA_LECTURA	drivers\hx711\hx711.h	147;"	enumerator	enum:__anon7
+NULL	api\n_hal\utils\utils.h	79;"	macro
 NonHandledInterrupt	stm8_interrupt_vector.c	20;"	function	signature:(void)
-Notificacion	api\timeout\timeout_config.h	100;"	member	struct:Timeout_Config
+Notificacion	api\timeout\timeout_config.h	109;"	member	struct:Timeout_Config
 OARH	drivers\spl\stm8s.h	1334;"	member	struct:I2C_struct
 OARL	drivers\spl\stm8s.h	1333;"	member	struct:I2C_struct
 ODR	drivers\spl\stm8s.h	267;"	member	struct:GPIO_struct
@@ -1700,9 +1713,12 @@ OPTION_BYTE_START_PHYSICAL_ADDRESS	drivers\spl\stm8s_flash.h	73;"	macro
 OPT_BaseAddress	drivers\spl\stm8s.h	2556;"	macro
 OPT_TypeDef	drivers\spl\stm8s.h	1602;"	typedef	typeref:struct:OPT_struct
 OPT_struct	drivers\spl\stm8s.h	1584;"	struct
+Orden	communication\rs485\tramas\rs485_tramas.h	144;"	member	struct:Trama_BROADCAST
+OrdenDHT11	communication\rs485\tramas\rs485_tramas.h	118;"	member	struct:Trama_RX
+OrdenHX711	communication\rs485\tramas\rs485_tramas.h	119;"	member	struct:Trama_RX
 PCKENR1	drivers\spl\stm8s.h	517;"	member	struct:CLK_struct
 PCKENR2	drivers\spl\stm8s.h	520;"	member	struct:CLK_struct
-PD_SCK	drivers\hx711\hx711.h	169;"	member	struct:HX711_Config
+PD_SCK	drivers\hx711\hx711.h	187;"	member	struct:HX711_Config
 PR	drivers\spl\stm8s.h	1612;"	member	struct:IWDG_struct
 PSCR	drivers\spl\stm8s.h	1069;"	member	struct:TIM4_struct
 PSCR	drivers\spl\stm8s.h	1137;"	member	struct:TIM5_struct
@@ -1716,12 +1732,15 @@ PSCRH	drivers\spl\stm8s.h	630;"	member	struct:TIM1_struct
 PSCRL	drivers\spl\stm8s.h	631;"	member	struct:TIM1_struct
 PSR	drivers\spl\stm8s.h	2183;"	member	struct:__anon132
 PUKR	drivers\spl\stm8s.h	1524;"	member	struct:FLASH_struct
+P_RX	communication\rs485\rs485_config.h	106;"	member	struct:UART_Config
+P_TX	communication\rs485\rs485_config.h	107;"	member	struct:UART_Config
 Page	drivers\spl\stm8s.h	2327;"	member	struct:__anon132	typeref:union:__anon132::__anon133
-Pin	api\n_hal\gpio\gpio_config.h	21;"	member	struct:Gpio_Config_t
+Paridad	communication\rs485\rs485_config.h	101;"	member	struct:UART_Config
+Pin	api\n_hal\gpio\gpio_config.h	102;"	member	struct:Gpio_Config
 Pin_Init	main.c	71;"	function	file:	signature:(void)
 PointerAttr	drivers\spl\stm8s.h	156;"	macro
 PointerAttr	drivers\spl\stm8s.h	160;"	macro
-Puerto	api\n_hal\gpio\gpio_config.h	20;"	member	struct:Gpio_Config_t
+Puerto	api\n_hal\gpio\gpio_config.h	101;"	member	struct:Gpio_Config
 RCR	drivers\spl\stm8s.h	634;"	member	struct:TIM1_struct
 RECR	drivers\spl\stm8s.h	2296;"	member	struct:__anon132::__anon133::__anon139
 REGISTER_Mask	drivers\spl\stm8s_i2c.c	40;"	macro	file:
@@ -1746,6 +1765,20 @@ RESERVED3	drivers\spl\stm8s.h	1525;"	member	struct:FLASH_struct
 RESET	drivers\spl\stm8s.h	233;"	enumerator	enum:__anon129
 RFR	drivers\spl\stm8s.h	2180;"	member	struct:__anon132
 RLR	drivers\spl\stm8s.h	1613;"	member	struct:IWDG_struct
+RS485	communication\rs485\rs485.h	97;"	struct
+RS485_CONFIG_H	communication\rs485\rs485_config.h	2;"	macro
+RS485_Config	communication\rs485\rs485_config.h	116;"	struct
+RS485_Config_t	communication\rs485\rs485_config.h	78;"	typedef	typeref:struct:RS485_Config
+RS485_Config_t_ptr	communication\rs485\rs485_config.h	86;"	typedef
+RS485_H	communication\rs485\rs485.h	2;"	macro
+RS485_Init	communication\rs485\rs485.c	106;"	function	signature:( RS485_t_ptr rs485 )
+RS485_Init	communication\rs485\rs485.h	120;"	prototype	signature:( RS485_t_ptr rs485 )
+RS485_ORDENES_H	communication\rs485\ordenes\rs485_ordenes.h	2;"	macro
+RS485_Orden	communication\rs485\ordenes\rs485_ordenes.h	91;"	struct
+RS485_Orden_t	communication\rs485\ordenes\rs485_ordenes.h	79;"	typedef	typeref:struct:RS485_Orden
+RS485_TRAMAS_H	communication\rs485\tramas\rs485_tramas.h	2;"	macro
+RS485_t	communication\rs485\rs485.h	78;"	typedef	typeref:struct:RS485
+RS485_t_ptr	communication\rs485\rs485.h	86;"	typedef
 RST	drivers\spl\stm8s.h	2650;"	macro
 RST_BaseAddress	drivers\spl\stm8s.h	2568;"	macro
 RST_ClearFlag	drivers\spl\stm8s_rst.c	69;"	function	signature:(RST_Flag_TypeDef RST_Flag)
@@ -1768,7 +1801,8 @@ RST_struct	drivers\spl\stm8s.h	1671;"	struct
 RXCRCR	drivers\spl\stm8s.h	1704;"	member	struct:SPI_struct
 Reserved1	drivers\spl\stm8s.h	2299;"	member	struct:__anon132::__anon133::__anon139
 Reserved2	drivers\spl\stm8s.h	2305;"	member	struct:__anon132::__anon133::__anon139
-ResetNotificacion	api\timeout\timeout_config.h	101;"	member	struct:Timeout_Config
+ResetNotificacion	api\timeout\timeout_config.h	110;"	member	struct:Timeout_Config
+Rx	communication\rs485\tramas\rs485_tramas.h	157;"	member	struct:Buffer_Tramas
 RxFIFO	drivers\spl\stm8s.h	2326;"	member	union:__anon132::__anon133	typeref:struct:__anon132::__anon133::__anon140
 S16_MAX	drivers\spl\stm8s.h	244;"	macro
 S16_MIN	drivers\spl\stm8s.h	245;"	macro
@@ -1777,9 +1811,9 @@ S32_MIN	drivers\spl\stm8s.h	248;"	macro
 S8_MAX	drivers\spl\stm8s.h	241;"	macro
 S8_MIN	drivers\spl\stm8s.h	242;"	macro
 SET	drivers\spl\stm8s.h	233;"	enumerator	enum:__anon129
-SI	api\n_hal\timer\timer_config.h	100;"	enumerator	enum:__anon2
-SINVALORCONVERSION	drivers\hx711\hx711.h	127;"	enumerator	enum:__anon7
-SLEEP	drivers\hx711\hx711.h	128;"	enumerator	enum:__anon7
+SI	api\n_hal\timer\timer_config.h	112;"	enumerator	enum:__anon2
+SINVALORCONVERSION	drivers\hx711\hx711.h	145;"	enumerator	enum:__anon7
+SLEEP	drivers\hx711\hx711.h	146;"	enumerator	enum:__anon7
 SMCR	drivers\spl\stm8s.h	1125;"	member	struct:TIM5_struct
 SMCR	drivers\spl\stm8s.h	1264;"	member	struct:TIM6_struct
 SMCR	drivers\spl\stm8s.h	616;"	member	struct:TIM1_struct
@@ -1929,9 +1963,10 @@ SUCCESS	drivers\spl\stm8s.h	238;"	enumerator	enum:__anon131
 SWCR	drivers\spl\stm8s.h	515;"	member	struct:CLK_struct
 SWIMCCR	drivers\spl\stm8s.h	523;"	member	struct:CLK_struct
 SWR	drivers\spl\stm8s.h	514;"	member	struct:CLK_struct
-SensorPesaje	aplicacion\configuracion\appconfig.h	91;"	variable
-SensorTempHum	aplicacion\configuracion\appconfig.h	83;"	variable
+SensorPesaje	aplicacion\configuracion\appconfig.h	100;"	variable
+SensorTempHum	aplicacion\configuracion\appconfig.h	92;"	variable
 SetBit	drivers\spl\stm8s.h	2789;"	macro
+StopBit	communication\rs485\rs485_config.h	100;"	member	struct:UART_Config
 TBR	drivers\spl\stm8s.h	444;"	member	struct:AWU_struct
 TBR_Array	drivers\spl\stm8s_awu.c	55;"	variable
 TDRH	drivers\spl\stm8s.h	327;"	member	struct:ADC1_struct
@@ -2272,7 +2307,7 @@ TIM1_OUTPUTNSTATE_ENABLE	drivers\spl\stm8s_tim1.h	155;"	enumerator	enum:__anon48
 TIM1_OUTPUTSTATE_DISABLE	drivers\spl\stm8s_tim1.h	144;"	enumerator	enum:__anon47
 TIM1_OUTPUTSTATE_ENABLE	drivers\spl\stm8s_tim1.h	145;"	enumerator	enum:__anon47
 TIM1_OV_IRQHandler	drivers\spl\stm8s_itc.c	32;"	function	signature:( void )
-TIM1_OV_IRQHandler	drivers\spl\stm8s_itc.h	39;"	prototype	signature:( void )
+TIM1_OV_IRQHandler	drivers\spl\stm8s_itc.h	40;"	prototype	signature:( void )
 TIM1_OutputNState_TypeDef	drivers\spl\stm8s_tim1.h	156;"	typedef	typeref:enum:__anon48
 TIM1_OutputState_TypeDef	drivers\spl\stm8s_tim1.h	146;"	typedef	typeref:enum:__anon47
 TIM1_PSCH_PSC	drivers\spl\stm8s.h	777;"	macro
@@ -2856,10 +2891,12 @@ TIM6_SR1_TIF	drivers\spl\stm8s.h	1309;"	macro
 TIM6_SR1_UIF	drivers\spl\stm8s.h	1310;"	macro
 TIM6_TypeDef	drivers\spl\stm8s.h	1272;"	typedef	typeref:struct:TIM6_struct
 TIM6_struct	drivers\spl\stm8s.h	1260;"	struct
-TIMEOUT	drivers\hx711\hx711.h	130;"	enumerator	enum:__anon7
+TIMEOUT	drivers\hx711\hx711.h	148;"	enumerator	enum:__anon7
+TIMEOUT_1MS	api\timeout\timeout.h	64;"	macro
 TIMEOUT_CONFIG_H	api\timeout\timeout_config.h	2;"	macro
 TIMEOUT_H	api\timeout\timeout.h	2;"	macro
-TIMER1	api\n_hal\timer\timer_config.h	123;"	enumerator	enum:__anon3
+TIMEOUT_MAX_500MS	api\timeout\timeout.h	63;"	macro
+TIMER1	api\n_hal\timer\timer_config.h	124;"	enumerator	enum:__anon3
 TINY	drivers\spl\stm8s.h	124;"	macro
 TINY	drivers\spl\stm8s.h	130;"	macro
 TINY	drivers\spl\stm8s.h	144;"	macro
@@ -2868,51 +2905,60 @@ TRISER	drivers\spl\stm8s.h	1343;"	member	struct:I2C_struct
 TRUE	drivers\spl\stm8s.h	231;"	enumerator	enum:__anon128
 TSR	drivers\spl\stm8s.h	2178;"	member	struct:__anon132
 TXCRCR	drivers\spl\stm8s.h	1705;"	member	struct:SPI_struct
-T_COUNT	api\n_hal\utils\utils.h	100;"	macro
-T_Decimal	drivers\dht11\dht11.h	155;"	member	struct:sDht11_SI
-T_Entero	drivers\dht11\dht11.h	156;"	member	struct:sDht11_SI
-Tarar	drivers\hx711\hx711.h	196;"	member	struct:HX711
-Tiempo	api\n_hal\timer\timer_config.h	152;"	member	struct:Timer_Config
-Timeout	api\timeout\timeout.h	106;"	struct
-Timeout	aplicacion\configuracion\appconfig.h	107;"	variable
-Timeout	drivers\dht11\dht11.h	197;"	member	struct:DHT11
-Timeout	drivers\hx711\hx711.h	193;"	member	struct:HX711
-Timeout_Check	api\timeout\timeout.c	246;"	function	signature:( Timeout_t_ptr timeout )
-Timeout_Check	api\timeout\timeout.h	134;"	prototype	signature:( Timeout_t_ptr timeout )
-Timeout_Config	api\timeout\timeout_config.h	97;"	struct
-Timeout_Config_t	api\timeout\timeout_config.h	70;"	typedef	typeref:struct:Timeout_Config
-Timeout_Estado_e	api\timeout\timeout.h	95;"	typedef	typeref:enum:__anon5
-Timeout_Init	api\timeout\timeout.c	106;"	function	signature:( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
-Timeout_Init	api\timeout\timeout.h	131;"	prototype	signature:( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
-Timeout_Notificacion	api\timeout\timeout_config.h	78;"	typedef
-Timeout_ResetNotificacion	api\timeout\timeout_config.h	86;"	typedef
-Timeout_Start	api\timeout\timeout.c	151;"	function	signature:( Timeout_t_ptr timeout, uint16_t microsegundos )
-Timeout_Start	api\timeout\timeout.h	132;"	prototype	signature:( Timeout_t_ptr timeout, uint16_t microsegundos )
-Timeout_Stop	api\timeout\timeout.c	198;"	function	signature:( Timeout_t_ptr timeout )
-Timeout_Stop	api\timeout\timeout.h	133;"	prototype	signature:( Timeout_t_ptr timeout )
-Timeout_t	api\timeout\timeout.h	74;"	typedef	typeref:struct:Timeout
-Timeout_t_ptr	api\timeout\timeout.h	82;"	typedef
-Timer	api\n_hal\timer\timer.h	90;"	struct
-Timer	api\n_hal\timer\timer_config.h	148;"	member	struct:Timer_Config
-Timer	api\timeout\timeout_config.h	99;"	member	struct:Timeout_Config
-Timer_Canal_e	api\n_hal\timer\timer_config.h	135;"	typedef	typeref:enum:__anon4
-Timer_Config	api\n_hal\timer\timer_config.h	146;"	struct
-Timer_Config_Init	api\n_hal\timer\timer.c	156;"	function	signature:( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo )
-Timer_Config_Init	api\n_hal\timer\timer.h	113;"	prototype	signature:( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo )
-Timer_Config_t	api\n_hal\timer\timer_config.h	70;"	typedef	typeref:struct:Timer_Config
-Timer_Config_t_ptr	api\n_hal\timer\timer_config.h	79;"	typedef
-Timer_Init	api\n_hal\timer\timer.c	100;"	function	signature:( Timer_t_ptr timer )
-Timer_Init	api\n_hal\timer\timer.h	112;"	prototype	signature:( Timer_t_ptr timer )
-Timer_Interrupcion_e	api\n_hal\timer\timer_config.h	102;"	typedef	typeref:enum:__anon2
-Timer_Modo_e	api\n_hal\timer\timer_config.h	90;"	typedef	typeref:enum:__anon1
-Timer_Numero_e	api\n_hal\timer\timer_config.h	124;"	typedef	typeref:enum:__anon3
-Timer_t	api\n_hal\timer\timer.h	71;"	typedef	typeref:struct:Timer
-Timer_t_ptr	api\n_hal\timer\timer.h	79;"	typedef
-Tipo	api\n_hal\gpio\gpio_config.h	22;"	member	struct:Gpio_Config_t
+T_COUNT	api\n_hal\utils\utils.h	109;"	macro
+T_Decimal	drivers\dht11\dht11.h	159;"	member	struct:sDht11_SI
+T_Entero	drivers\dht11\dht11.h	160;"	member	struct:sDht11_SI
+Tarar	drivers\hx711\hx711.h	214;"	member	struct:HX711
+Tiempo	api\n_hal\timer\timer_config.h	156;"	member	struct:Timer_Config
+Timeout	api\timeout\timeout.h	114;"	struct
+Timeout	aplicacion\configuracion\appconfig.h	116;"	variable
+Timeout	drivers\dht11\dht11.h	201;"	member	struct:DHT11
+Timeout	drivers\hx711\hx711.h	211;"	member	struct:HX711
+Timeout_Config	api\timeout\timeout_config.h	106;"	struct
+Timeout_Config_t	api\timeout\timeout_config.h	79;"	typedef	typeref:struct:Timeout_Config
+Timeout_Estado_e	api\timeout\timeout.h	103;"	typedef	typeref:enum:__anon5
+Timeout_Init	api\timeout\timeout.c	113;"	function	signature:( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
+Timeout_Init	api\timeout\timeout.h	139;"	prototype	signature:( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
+Timeout_Notificacion	api\timeout\timeout_config.h	87;"	typedef
+Timeout_ResetNotificacion	api\timeout\timeout_config.h	95;"	typedef
+Timeout_Start	api\timeout\timeout.c	158;"	function	signature:( Timeout_t_ptr timeout, uint16_t microsegundos )
+Timeout_Start	api\timeout\timeout.h	140;"	prototype	signature:( Timeout_t_ptr timeout, uint16_t microsegundos )
+Timeout_Stop	api\timeout\timeout.c	205;"	function	signature:( Timeout_t_ptr timeout )
+Timeout_Stop	api\timeout\timeout.h	141;"	prototype	signature:( Timeout_t_ptr timeout )
+Timeout_t	api\timeout\timeout.h	82;"	typedef	typeref:struct:Timeout
+Timeout_t_ptr	api\timeout\timeout.h	90;"	typedef
+Timer	api\n_hal\timer\timer.h	100;"	struct
+Timer	api\n_hal\timer\timer_config.h	152;"	member	struct:Timer_Config
+Timer	api\timeout\timeout_config.h	108;"	member	struct:Timeout_Config
+Timer_Canal_e	api\n_hal\timer\timer_config.h	136;"	typedef	typeref:enum:__anon4
+Timer_Config	api\n_hal\timer\timer_config.h	150;"	struct
+Timer_Config_Init	api\n_hal\timer\timer.c	174;"	function	signature:( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo )
+Timer_Config_Init	api\n_hal\timer\timer.h	123;"	prototype	signature:( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo )
+Timer_Config_t	api\n_hal\timer\timer_config.h	82;"	typedef	typeref:struct:Timer_Config
+Timer_Config_t_ptr	api\n_hal\timer\timer_config.h	91;"	typedef
+Timer_DeInit	api\n_hal\timer\timer.c	217;"	function	signature:( Timer_t_ptr timer )
+Timer_DeInit	api\n_hal\timer\timer.h	124;"	prototype	signature:( Timer_t_ptr timer )
+Timer_Init	api\n_hal\timer\timer.c	110;"	function	signature:( Timer_t_ptr timer )
+Timer_Init	api\n_hal\timer\timer.h	122;"	prototype	signature:( Timer_t_ptr timer )
+Timer_Interrupcion_e	api\n_hal\timer\timer_config.h	114;"	typedef	typeref:enum:__anon2
+Timer_Modo_e	api\n_hal\timer\timer_config.h	102;"	typedef	typeref:enum:__anon1
+Timer_Numero_e	api\n_hal\timer\timer_config.h	125;"	typedef	typeref:enum:__anon3
+Timer_t	api\n_hal\timer\timer.h	81;"	typedef	typeref:struct:Timer
+Timer_t_ptr	api\n_hal\timer\timer.h	89;"	typedef
+Tipo	api\n_hal\gpio\gpio_config.h	103;"	member	struct:Gpio_Config
+TipoInterrupcion	communication\rs485\rs485_config.h	105;"	member	struct:UART_Config
+Trama_BROADCAST	communication\rs485\tramas\rs485_tramas.h	141;"	struct
+Trama_BROADCAST_t	communication\rs485\tramas\rs485_tramas.h	96;"	typedef	typeref:struct:Trama_BROADCAST
+Trama_RX	communication\rs485\tramas\rs485_tramas.h	115;"	struct
+Trama_RX_t	communication\rs485\tramas\rs485_tramas.h	80;"	typedef	typeref:struct:Trama_RX
+Trama_TX	communication\rs485\tramas\rs485_tramas.h	128;"	struct
+Trama_TX_t	communication\rs485\tramas\rs485_tramas.h	88;"	typedef	typeref:struct:Trama_TX
+Tx	communication\rs485\tramas\rs485_tramas.h	156;"	member	struct:Buffer_Tramas
 TxMailbox	drivers\spl\stm8s.h	2205;"	member	union:__anon132::__anon133	typeref:struct:__anon132::__anon133::__anon134
 U16_MAX	drivers\spl\stm8s.h	243;"	macro
 U32_MAX	drivers\spl\stm8s.h	246;"	macro
 U8_MAX	drivers\spl\stm8s.h	240;"	macro
+UART	communication\rs485\rs485_config.h	118;"	member	struct:RS485_Config	typeref:struct:RS485_Config::UART_Config
 UART1	drivers\spl\stm8s.h	2660;"	macro
 UART1_ADDRESS_MAX	drivers\spl\stm8s_uart1.h	332;"	macro
 UART1_BRR1_DIVM	drivers\spl\stm8s.h	1815;"	macro
@@ -3252,17 +3298,20 @@ UART4_SR_TC	drivers\spl\stm8s.h	2106;"	macro
 UART4_SR_TXE	drivers\spl\stm8s.h	2105;"	macro
 UART4_TypeDef	drivers\spl\stm8s.h	2079;"	typedef	typeref:struct:UART4_struct
 UART4_struct	drivers\spl\stm8s.h	2064;"	struct
+UART_Config	communication\rs485\rs485_config.h	98;"	struct
+UART_RXNE_IRQHandler	drivers\spl\stm8s_itc.c	50;"	function	signature:( void )
+UART_RXNE_IRQHandler	drivers\spl\stm8s_itc.h	46;"	prototype	signature:( void )
 UNUSED	drivers\spl\stm8s.h	2805;"	macro
 USE_STDPERIPH_DRIVER	drivers\spl\stm8s.h	96;"	macro
 UTILS_H	api\n_hal\utils\utils.h	2;"	macro
-UltimaLectura	drivers\dht11\dht11.h	170;"	member	struct:sDht11Datos
-UltimaLectura	drivers\hx711\hx711.h	155;"	member	struct:HX711_Datos
+UltimaLectura	drivers\dht11\dht11.h	174;"	member	struct:sDht11Datos
+UltimaLectura	drivers\hx711\hx711.h	173;"	member	struct:HX711_Datos
 VECTOR_ID	drivers\spl\stm8s.h	2759;"	macro
 ValBit	drivers\spl\stm8s.h	2798;"	macro
-ValorConversion	drivers\hx711\hx711.h	172;"	member	struct:HX711_Config
-ValorDesborde	api\timeout\timeout.h	110;"	member	struct:Timeout
-ValorTara	drivers\hx711\hx711.h	178;"	member	struct:HX711_Config
-ValorZero	drivers\hx711\hx711.h	175;"	member	struct:HX711_Config
+ValorConversion	drivers\hx711\hx711.h	190;"	member	struct:HX711_Config
+ValorDesborde	api\timeout\timeout.h	118;"	member	struct:Timeout
+ValorTara	drivers\hx711\hx711.h	196;"	member	struct:HX711_Config
+ValorZero	drivers\hx711\hx711.h	193;"	member	struct:HX711_Config
 WR	drivers\spl\stm8s.h	1636;"	member	struct:WWDG_struct
 WWDG	drivers\spl\stm8s.h	2652;"	macro
 WWDG_BaseAddress	drivers\spl\stm8s.h	2570;"	macro
@@ -3318,59 +3367,62 @@ __STM8S_TIM4_H	drivers\spl\stm8s_tim4.h	30;"	macro
 __STM8S_UART1_H	drivers\spl\stm8s_uart1.h	30;"	macro
 __STM8S_WWDG_H	drivers\spl\stm8s_wwdg.h	30;"	macro
 __bool_true_false_are_defined	..\..\programas\cosmicc\cxstm8\hstm8\stdbool.h	11;"	macro
-_delay_cycl	api\n_hal\utils\utils.h	98;"	function	signature:( unsigned short __ticks )
-_delay_ms	api\n_hal\utils\utils.h	175;"	function	signature:( unsigned short __ms )
-_delay_us	api\n_hal\utils\utils.h	137;"	function	signature:( const unsigned short __us )
+_delay_cycl	api\n_hal\utils\utils.h	107;"	function	signature:( unsigned short __ticks )
+_delay_ms	api\n_hal\utils\utils.h	184;"	function	signature:( unsigned short __ms )
+_delay_us	api\n_hal\utils\utils.h	146;"	function	signature:( const unsigned short __us )
 _stext	stm8_interrupt_vector.c	36;"	prototype	file:
 _vectab	stm8_interrupt_vector.c	38;"	variable
-aDormir	drivers\hx711\hx711.c	104;"	function	file:	signature:( HX711_t_ptr hx711 )
+aDormir	drivers\hx711\hx711.c	110;"	function	file:	signature:( HX711_t_ptr hx711 )
 assert_failed	drivers\spl\stm8s_conf.h	109;"	prototype	signature:(uint8_t* file, uint32_t line)
 assert_param	drivers\spl\stm8s_conf.h	107;"	macro
 assert_param	drivers\spl\stm8s_conf.h	111;"	macro
 bool	..\..\programas\cosmicc\cxstm8\hstm8\stdbool.h	7;"	macro
 bool	drivers\spl\stm8s.h	231;"	typedef	typeref:enum:__anon128
-chequearValorConversion	drivers\hx711\hx711.c	91;"	function	file:	signature:( HX711_t_ptr hx711 )
-dht11_CERRANDO_CONEXION	drivers\dht11\dht11.h	133;"	enumerator	enum:__anon6
-dht11_COMUNICANDO	drivers\dht11\dht11.h	129;"	enumerator	enum:__anon6
-dht11_CONEXION_OK	drivers\dht11\dht11.h	130;"	enumerator	enum:__anon6
-dht11_CerrarConexion	drivers\dht11\dht11.c	214;"	function	file:	signature:( DHT11_t_ptr sensor )
-dht11_ComenzarTransmision	drivers\dht11\dht11.c	122;"	function	file:	signature:( DHT11_t_ptr sensor )
-dht11_ESPERA_ALTO	drivers\dht11\dht11.h	136;"	enumerator	enum:__anon6
-dht11_ESPERA_BAJO	drivers\dht11\dht11.h	135;"	enumerator	enum:__anon6
-dht11_FALLO_AL_COMUNICAR	drivers\dht11\dht11.h	138;"	enumerator	enum:__anon6
-dht11_FALLO_AL_LEER	drivers\dht11\dht11.h	137;"	enumerator	enum:__anon6
-dht11_INICIALIZADO	drivers\dht11\dht11.h	128;"	enumerator	enum:__anon6
-dht11_LECTURA_OK	drivers\dht11\dht11.h	139;"	enumerator	enum:__anon6
-dht11_Lectura	drivers\dht11\dht11.c	317;"	function	signature:( DHT11_t_ptr dht11 )
-dht11_Lectura	drivers\dht11\dht11.h	214;"	prototype	signature:( DHT11_t_ptr sensor )
-dht11_LeerDatos	drivers\dht11\dht11.c	178;"	function	file:	signature:( DHT11_t_ptr sensor )
-dht11_MIDIENDO_H	drivers\dht11\dht11.h	131;"	enumerator	enum:__anon6
-dht11_MIDIENDO_T	drivers\dht11\dht11.h	132;"	enumerator	enum:__anon6
-dht11_SLEEP	drivers\dht11\dht11.h	134;"	enumerator	enum:__anon6
-dht11_TIMEOUT	drivers\dht11\dht11.h	140;"	enumerator	enum:__anon6
+chequearValorConversion	drivers\hx711\hx711.c	97;"	function	file:	signature:( HX711_Config_t_ptr hx711Config, HX711_Datos_t_ptr hx711Datos )
+dht11_CERRANDO_CONEXION	drivers\dht11\dht11.h	137;"	enumerator	enum:__anon6
+dht11_COMUNICANDO	drivers\dht11\dht11.h	133;"	enumerator	enum:__anon6
+dht11_CONEXION_OK	drivers\dht11\dht11.h	134;"	enumerator	enum:__anon6
+dht11_CerrarConexion	drivers\dht11\dht11.c	215;"	function	file:	signature:( DHT11_t_ptr sensor )
+dht11_ComenzarTransmision	drivers\dht11\dht11.c	123;"	function	file:	signature:( DHT11_t_ptr sensor )
+dht11_ESPERA_ALTO	drivers\dht11\dht11.h	140;"	enumerator	enum:__anon6
+dht11_ESPERA_BAJO	drivers\dht11\dht11.h	139;"	enumerator	enum:__anon6
+dht11_FALLO_AL_COMUNICAR	drivers\dht11\dht11.h	142;"	enumerator	enum:__anon6
+dht11_FALLO_AL_LEER	drivers\dht11\dht11.h	141;"	enumerator	enum:__anon6
+dht11_INICIALIZADO	drivers\dht11\dht11.h	132;"	enumerator	enum:__anon6
+dht11_LECTURA_OK	drivers\dht11\dht11.h	143;"	enumerator	enum:__anon6
+dht11_Lectura	drivers\dht11\dht11.c	318;"	function	signature:( DHT11_t_ptr dht11 )
+dht11_Lectura	drivers\dht11\dht11.h	218;"	prototype	signature:( DHT11_t_ptr sensor )
+dht11_LeerDatos	drivers\dht11\dht11.c	179;"	function	file:	signature:( DHT11_t_ptr sensor )
+dht11_MIDIENDO_H	drivers\dht11\dht11.h	135;"	enumerator	enum:__anon6
+dht11_MIDIENDO_T	drivers\dht11\dht11.h	136;"	enumerator	enum:__anon6
+dht11_SLEEP	drivers\dht11\dht11.h	138;"	enumerator	enum:__anon6
+dht11_TIMEOUT	drivers\dht11\dht11.h	144;"	enumerator	enum:__anon6
 disableInterrupts	drivers\spl\stm8s.h	2717;"	macro
 disableInterrupts	drivers\spl\stm8s.h	2726;"	macro
 disableInterrupts	drivers\spl\stm8s.h	2736;"	macro
 enableInterrupts	drivers\spl\stm8s.h	2716;"	macro
 enableInterrupts	drivers\spl\stm8s.h	2725;"	macro
 enableInterrupts	drivers\spl\stm8s.h	2735;"	macro
-esperoDatosDisponibles	drivers\hx711\hx711.c	157;"	function	file:	signature:( HX711_t_ptr hx711 )
+esperoDatosDisponibles	drivers\hx711\hx711.c	163;"	function	file:	signature:( HX711_t_ptr hx711 )
 false	..\..\programas\cosmicc\cxstm8\hstm8\stdbool.h	10;"	macro
-fijarGanancia	drivers\hx711\hx711.c	124;"	function	file:	signature:( HX711_t_ptr hx711 )
-flagTimer1	drivers\spl\stm8s_itc.h	38;"	variable
+fijarGanancia	drivers\hx711\hx711.c	130;"	function	file:	signature:( HX711_t_ptr hx711 )
+flagTimer1	drivers\spl\stm8s_itc.h	39;"	variable
+flagUartRXNE	drivers\spl\stm8s_itc.h	45;"	variable
 getFlagTimer1	drivers\spl\stm8s_itc.c	39;"	function	signature:( void )
-getFlagTimer1	drivers\spl\stm8s_itc.h	40;"	prototype	signature:( void )
+getFlagTimer1	drivers\spl\stm8s_itc.h	41;"	prototype	signature:( void )
+getFlagUartRXNE	drivers\spl\stm8s_itc.c	57;"	function	signature:( void )
+getFlagUartRXNE	drivers\spl\stm8s_itc.h	47;"	prototype	signature:( void )
 halt	drivers\spl\stm8s.h	2723;"	macro
 halt	drivers\spl\stm8s.h	2732;"	macro
 halt	drivers\spl\stm8s.h	2742;"	macro
-hx711_Lectura	drivers\hx711\hx711.c	308;"	function	signature:( HX711_t_ptr hx711 )
-hx711_Lectura	drivers\hx711\hx711.h	211;"	prototype	signature:( HX711_t_ptr hx711 )
-hx711_Tarar	drivers\hx711\hx711.c	358;"	function	signature:( HX711_t_ptr hx711 )
-hx711_Tarar	drivers\hx711\hx711.h	212;"	prototype	signature:( HX711_t_ptr hx711 )
-initDOUT	drivers\hx711\hx711.c	79;"	function	file:	signature:( Gpio_Config_t* dout )
-initPDSCK	drivers\hx711\hx711.c	85;"	function	file:	signature:( Gpio_Config_t* pdsck )
-initPtrFunciones	drivers\hx711\hx711.c	65;"	function	file:	signature:( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar )
-initVariables	drivers\hx711\hx711.c	71;"	function	file:	signature:( HX711_t_ptr hx711 )
+hx711_Lectura	drivers\hx711\hx711.c	314;"	function	signature:( HX711_t_ptr hx711 )
+hx711_Lectura	drivers\hx711\hx711.h	229;"	prototype	signature:( HX711_t_ptr hx711 )
+hx711_Tarar	drivers\hx711\hx711.c	364;"	function	signature:( HX711_t_ptr hx711 )
+hx711_Tarar	drivers\hx711\hx711.h	230;"	prototype	signature:( HX711_t_ptr hx711 )
+initDOUT	drivers\hx711\hx711.c	85;"	function	file:	signature:( Gpio_Config_t* dout )
+initPDSCK	drivers\hx711\hx711.c	91;"	function	file:	signature:( Gpio_Config_t* pdsck )
+initPtrFunciones	drivers\hx711\hx711.c	71;"	function	file:	signature:( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar )
+initVariables	drivers\hx711\hx711.c	77;"	function	file:	signature:(HX711_Config_t_ptr hx711Config, HX711_Datos_t_ptr hx711Datos )
 int16_t	drivers\spl\stm8s.h	212;"	typedef
 int32_t	drivers\spl\stm8s.h	213;"	typedef
 int8_t	drivers\spl\stm8s.h	211;"	typedef
@@ -3378,28 +3430,33 @@ interrupt_handler	stm8_interrupt_vector.c	17;"	member	struct:interrupt_vector	fi
 interrupt_handler_t	stm8_interrupt_vector.c	13;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	16;"	member	struct:interrupt_vector	file:
 interrupt_vector	stm8_interrupt_vector.c	15;"	struct	file:
-leer	drivers\hx711\hx711.c	183;"	function	file:	signature:( HX711_t_ptr hx711 )
-leerByte	drivers\dht11\dht11.c	67;"	function	file:	signature:( DHT11_t_ptr dht11 )
-main	main.c	159;"	function
+leer	drivers\hx711\hx711.c	189;"	function	file:	signature:( HX711_t_ptr hx711 )
+leerByte	drivers\dht11\dht11.c	74;"	function	file:	signature:( DHT11_t_ptr dht11 )
+main	main.c	162;"	function
+nNodo	communication\rs485\tramas\rs485_tramas.h	117;"	member	struct:Trama_RX
+nNodo	communication\rs485\tramas\rs485_tramas.h	130;"	member	struct:Trama_TX
+nNodo	communication\rs485\tramas\rs485_tramas.h	143;"	member	struct:Trama_BROADCAST
 nop	drivers\spl\stm8s.h	2720;"	macro
 nop	drivers\spl\stm8s.h	2729;"	macro
 nop	drivers\spl\stm8s.h	2739;"	macro
-pulsoReloj	drivers\hx711\hx711.c	118;"	function	file:	signature:( HX711_t_ptr hx711, bool estado )
+pulsoReloj	drivers\hx711\hx711.c	124;"	function	file:	signature:( HX711_t_ptr hx711, bool estado )
 rim	drivers\spl\stm8s.h	2718;"	macro
 rim	drivers\spl\stm8s.h	2727;"	macro
 rim	drivers\spl\stm8s.h	2737;"	macro
 s16	drivers\spl\stm8s.h	223;"	typedef
 s32	drivers\spl\stm8s.h	222;"	typedef
 s8	drivers\spl\stm8s.h	224;"	typedef
-sDht11Datos	drivers\dht11\dht11.h	168;"	struct
-sDht11_SI	drivers\dht11\dht11.h	152;"	struct
-setFlagTimer1	drivers\spl\stm8s_itc.c	44;"	function	signature:( uint8_t valor )
-setFlagTimer1	drivers\spl\stm8s_itc.h	41;"	prototype	signature:( uint8_t valor )
+sDht11Datos	drivers\dht11\dht11.h	172;"	struct
+sDht11_SI	drivers\dht11\dht11.h	156;"	struct
+setFlagTimer1	drivers\spl\stm8s_itc.c	44;"	function	signature:( uint16_t valor )
+setFlagTimer1	drivers\spl\stm8s_itc.h	42;"	prototype	signature:( uint16_t valor )
+setFlagUartRXNE	drivers\spl\stm8s_itc.c	62;"	function	signature:( uint8_t valor )
+setFlagUartRXNE	drivers\spl\stm8s_itc.h	48;"	prototype	signature:( uint8_t valor )
 sim	drivers\spl\stm8s.h	2719;"	macro
 sim	drivers\spl\stm8s.h	2728;"	macro
 sim	drivers\spl\stm8s.h	2738;"	macro
-tick1us	api\timeout\timeout.c	65;"	function	file:	signature:( void )
-timer_Timeout	aplicacion\configuracion\appconfig.h	99;"	variable
+tick1us	api\timeout\timeout.c	72;"	function	file:	signature:( void )
+timer_Timeout	aplicacion\configuracion\appconfig.h	108;"	variable
 trap	drivers\spl\stm8s.h	2721;"	macro
 trap	drivers\spl\stm8s.h	2730;"	macro
 trap	drivers\spl\stm8s.h	2740;"	macro

@@ -1,3 +1,4 @@
+mainpage.h
 stm8_interrupt_vector.c
 main.c
 api\n_hal\clock\clock.h
@@ -14,6 +15,12 @@ api\timeout\timeout_config.h
 api\timeout\timeout.h
 api\timeout\timeout.c
 aplicacion\configuracion\appconfig.h
+communication\rs485\rs485_config.h
+communication\rs485\ordenes\rs485_ordenes.h
+communication\rs485\rs485.h
+communication\rs485\rs485.c
+communication\rs485\tramas\rs485_tramas.h
+communication\rs485\tramas\rs485_tramas.c
 drivers\dht11\dht11.h
 drivers\dht11\dht11.c
 drivers\hx711\hx711.h
