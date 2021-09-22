@@ -59,6 +59,8 @@
 /******************************************************************************
 * Constants
 *******************************************************************************/
+#define RS485_BYTES_N_NODO 2
+#define RS485_BYTES_BUFFER_RX 6
 
 /******************************************************************************
 * Configuration
@@ -106,6 +108,21 @@ typedef struct Buffer_Tramas Buffer_Tramas_t;
 /******************************************************************************
 * Struct
 *******************************************************************************/
+struct FSM_Trama_Paso
+{
+	uint8_t nPasoSiguiente;
+	uint8_t BytesaLeer;
+	
+};
+struct FSM_Trama_RX
+{
+	uint8_t pasoActual;
+	//uint8_t contajeBytes;
+	struct FSM_Trama_Paso LecturaNodo;
+	struct FSM_Trama_Paso LecturaOrdenDHT11;
+	struct FSM_Trama_Paso LecturaOrdenHX711;
+	
+};
 /**
 * @struct Trama_RX
 * @brief 
@@ -114,9 +131,9 @@ typedef struct Buffer_Tramas Buffer_Tramas_t;
 */
 struct Trama_RX
 {
-	uint8_t nNodo;
-	RS485_Orden_t OrdenDHT11;
-	RS485_Orden_t OrdenHX711;
+	uint8_t buffer[RS485_BYTES_BUFFER_RX];
+	uint8_t ptrBuffer;
+	struct FSM_Trama_RX Secuencia;
 };
 
 /**

@@ -1,18 +1,3 @@
-[WorkState_v1-Edit.Breakpoints]
-Break0=TypeFile, drivers\spl\stm8s_itc.c, 54, 0, 1, 1,
-Break1=TypeFile, main.c, 123, 0, 1, 1,
-Break2=TypeFile, main.c, 119, 0, 1, 1,
-Break3=TypeFile, communication\rs485\rs485.c, 142, 0, 1, 1,
-Break4=TypeFile, communication\rs485\rs485.c, 143, 0, 1, 1,
-Break5=TypeFile, communication\rs485\rs485.c, 146, 0, 1, 1,
-Break6=TypeFile, communication\rs485\rs485.c, 147, 0, 1, 1,
-Break7=TypeFile, communication\rs485\rs485.c, 149, 0, 1, 1,
-Break8=TypeFile, communication\rs485\rs485.c, 150, 0, 1, 1,
-Break9=TypeFile, communication\rs485\rs485.c, 152, 0, 1, 1,
-Break10=TypeFile, communication\rs485\rs485.c, 125, 0, 1, 1,
-Break11=TypeFile, communication\rs485\rs485.c, 130, 0, 1, 1,
-Break12=TypeFile, communication\rs485\rs485.c, 119, 0, 1, 1,
-Break13=TypeFile, communication\rs485\rs485.c, 123, 0, 1, 1,
 
 [WorkState_v1_2]
 ptn_Child1=DockState
@@ -59,7 +44,7 @@ ptn_Child33=Bar-32
 
 [WorkState_v1_2.DockState.Bar-0]
 BarID=59419
-Bars=59
+Bars=95
 Bar#0=0
 Bar#1=59647
 Bar#2=0
@@ -119,6 +104,42 @@ Bar#55=0
 Bar#56=0
 Bar#57=0
 Bar#58=0
+Bar#59=0
+Bar#60=0
+Bar#61=0
+Bar#62=0
+Bar#63=0
+Bar#64=0
+Bar#65=0
+Bar#66=0
+Bar#67=0
+Bar#68=0
+Bar#69=0
+Bar#70=0
+Bar#71=0
+Bar#72=0
+Bar#73=0
+Bar#74=0
+Bar#75=0
+Bar#76=0
+Bar#77=0
+Bar#78=0
+Bar#79=0
+Bar#80=0
+Bar#81=0
+Bar#82=0
+Bar#83=0
+Bar#84=0
+Bar#85=0
+Bar#86=0
+Bar#87=0
+Bar#88=0
+Bar#89=0
+Bar#90=0
+Bar#91=0
+Bar#92=0
+Bar#93=0
+Bar#94=0
 Style=0
 ExStyle=0
 PrevFloating=False
@@ -1299,7 +1320,7 @@ ptn_Child2=ChildFrames
 
 [WorkState_v1_2.Frames.MainFrame]
 WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPHLAAAAAAEHAAAAAAEGEAAAAADBDAAAAA
-Title=ST Visual Develop - SuperMaceta.stw* - [main.c]
+Title=ST Visual Develop - SuperMaceta.stw - [main.c]
 
 [WorkState_v1_2.Frames.ChildFrames]
 ptn_Child1=Document-0
@@ -1323,6 +1344,7 @@ ptn_Child18=Document-17
 ptn_Child19=Document-18
 ptn_Child20=Document-19
 ptn_Child21=Document-20
+ptn_Child22=Document-21
 
 [WorkState_v1_2.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
@@ -1339,10 +1361,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-1.ViewFrame-0]
-DocPathName=drivers\spl\stm8s_uart1.h
+DocPathName=drivers\spl\stm8s_itc.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKBAAAAAAKBAAAAAAKIFAAAAABPBAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPGLAAAAAAGLAAAAAAGCGAAAAANICAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1350,10 +1372,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-2.ViewFrame-0]
-DocPathName=api\n_hal\gpio\gpio_config.h
+DocPathName=aplicacion\configuracion\appconfig.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPEDAAAAAAEDAAAAAAEKFAAAAALACAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPANAAAAAAANAAAAAAAEGAAAAAHKCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1361,10 +1383,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-3.ViewFrame-0]
-DocPathName=drivers\hx711\hx711.c
+DocPathName=drivers\spl\stm8s_uart1.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPOEAAAAAAOEAAAAAAOLFAAAAAFCCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKBAAAAAAKBAAAAAAKIFAAAAABPBAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1372,10 +1394,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-4.ViewFrame-0]
-DocPathName=api\n_hal\clock\clock.c
+DocPathName=communication\rs485\ordenes\rs485_ordenes.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPIGAAAAAAIGAAAAAAINFAAAAAPDCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKOAAAAAAKOAAAAAAKFGAAAAABMCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1383,10 +1405,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-5.ViewFrame-0]
-DocPathName=communication\rs485\tramas\rs485_tramas.h
+DocPathName=drivers\spl\stm8s_gpio.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPCIAAAAAACIAAAAAACPFAAAAAJFCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAAAAAAAAAAAAAAAAAHFAAAAAHNBAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1394,10 +1416,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-6.ViewFrame-0]
-DocPathName=api\timeout\timeout_config.h
+DocPathName=api\n_hal\gpio\gpio_config.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAAAAAAAAAAAAAAAAAHFAAAAAHNBAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPEDAAAAAAEDAAAAAAEKFAAAAALACAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1405,10 +1427,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-7.ViewFrame-0]
-DocPathName=api\n_hal\timer\timer.h
+DocPathName=drivers\hx711\hx711.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKBAAAAAAKBAAAAAAKIFAAAAABPBAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPOEAAAAAAOEAAAAAAOLFAAAAAFCCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1416,10 +1438,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-8.ViewFrame-0]
-DocPathName=api\n_hal\timer\timer.c
+DocPathName=api\n_hal\clock\clock.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPEDAAAAAAEDAAAAAAEKFAAAAALACAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPIGAAAAAAIGAAAAAAINFAAAAAPDCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1427,10 +1449,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-9.ViewFrame-0]
-DocPathName=api\n_hal\timer\timer_config.h
+DocPathName=communication\rs485\tramas\rs485_tramas.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPOEAAAAAAOEAAAAAAOLFAAAAAFCCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPCIAAAAAACIAAAAAACPFAAAAAJFCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1438,10 +1460,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-10.ViewFrame-0]
-DocPathName=communication\rs485\rs485.h
+DocPathName=api\timeout\timeout_config.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPCIAAAAAACIAAAAAACPFAAAAAJFCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAAAAAAAAAAAAAAAAAHFAAAAAHNBAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1449,10 +1471,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-11.ViewFrame-0]
-DocPathName=communication\rs485\rs485_config.h
+DocPathName=api\n_hal\timer\timer_config.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPMJAAAAAAMJAAAAAAMAGAAAAADHCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPOEAAAAAAOEAAAAAAOLFAAAAAFCCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1460,10 +1482,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-12.ViewFrame-0]
-DocPathName=communication\rs485\rs485.c
+DocPathName=api\n_hal\timer\timer.h
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPGLAAAAAAGLAAAAAAGCGAAAAANICAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKBAAAAAAKBAAAAAAKIFAAAAABPBAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1471,10 +1493,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-13.ViewFrame-0]
-DocPathName=drivers\hx711\hx711.h
+DocPathName=api\n_hal\timer\timer.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPANAAAAAAANAAAAAAAEGAAAAAHKCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPEDAAAAAAEDAAAAAAEKFAAAAALACAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1482,10 +1504,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-14.ViewFrame-0]
-DocPathName=drivers\spl\stm8s_uart1.c
+DocPathName=api\timeout\timeout.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPIGAAAAAAIGAAAAAAINFAAAAAPDCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKBAAAAAAKBAAAAAAKIFAAAAABPBAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1493,7 +1515,7 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-15.ViewFrame-0]
-DocPathName=stm8_interrupt_vector.c
+DocPathName=communication\rs485\rs485.h
 DocumentString=
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPCIAAAAAACIAAAAAACPFAAAAAJFCAAAAA
@@ -1504,7 +1526,7 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-16.ViewFrame-0]
-DocPathName=drivers\spl\stm8s_itc.h
+DocPathName=communication\rs485\rs485_config.h
 DocumentString=
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPMJAAAAAAMJAAAAAAMAGAAAAADHCAAAAA
@@ -1515,7 +1537,7 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-17.ViewFrame-0]
-DocPathName=drivers\spl\stm8s_itc.c
+DocPathName=communication\rs485\rs485.c
 DocumentString=
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPGLAAAAAAGLAAAAAAGCGAAAAANICAAAAA
@@ -1526,7 +1548,7 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-18.ViewFrame-0]
-DocPathName=aplicacion\configuracion\appconfig.h
+DocPathName=drivers\hx711\hx711.h
 DocumentString=
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPANAAAAAAANAAAAAAAEGAAAAAHKCAAAAA
@@ -1537,10 +1559,10 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-19.ViewFrame-0]
-DocPathName=communication\rs485\ordenes\rs485_ordenes.h
+DocPathName=drivers\spl\stm8s_uart1.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPKOAAAAAAKOAAAAAAKFGAAAAABMCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPIGAAAAAAIGAAAAAAINFAAAAAPDCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
 
@@ -1548,9 +1570,20 @@ IsFrameVisible=True
 ptn_Child1=ViewFrame-0
 
 [WorkState_v1_2.Frames.ChildFrames.Document-20.ViewFrame-0]
-DocPathName=drivers\spl\stm8s_gpio.h
+DocPathName=stm8_interrupt_vector.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAAAAAAAAAAAAAAAAAHFAAAAAHNBAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPCIAAAAAACIAAAAAACPFAAAAAJFCAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+
+[WorkState_v1_2.Frames.ChildFrames.Document-21]
+ptn_Child1=ViewFrame-0
+
+[WorkState_v1_2.Frames.ChildFrames.Document-21.ViewFrame-0]
+DocPathName=drivers\spl\stm8s_itc.h
+DocumentString=
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPMJAAAAAAMJAAAAAAMAGAAAAADHCAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True

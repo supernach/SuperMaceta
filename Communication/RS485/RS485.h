@@ -85,9 +85,32 @@ typedef struct RS485 RS485_t;
 */
 typedef RS485_t* RS485_t_ptr;
 
+/**
+* @typedef RS485_t_ptr
+* @brief <descripcion>
+*
+* @see RS485_t*
+*/
+typedef union
+{
+  uint8_t flag;
+  struct flagBit
+  {
+    uint8_t NuevaRecepcion : 1;
+    uint8_t Inicializado : 1;
+    uint8_t Standby : 1;
+    uint8_t bit3 : 1;
+    uint8_t bit4 : 1;
+    uint8_t bit5 : 1;
+    uint8_t bit6 : 1;
+    uint8_t bit7 : 1;
+  } bit;
+}RS485_Flags_u;
+
 /******************************************************************************
 * Struct
 *******************************************************************************/
+
 /**
 * @struct RS485
 * @brief 
@@ -98,6 +121,7 @@ struct RS485
 {
 	RS485_Config_t Config;
 	Buffer_Tramas_t Buffer;
+	RS485_Flags_u Flags;
 };
 
 /******************************************************************************

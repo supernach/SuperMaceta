@@ -6,7 +6,3 @@ Keyword=ST7Workspace-V0.7
 [Project0]
 Filename=supermaceta_v1.stp
 Dependencies=
-[Options]
-ActiveProject=supermaceta_v1
-ActiveConfig=Debug
-AddSortedElements=0

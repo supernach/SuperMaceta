@@ -145,11 +145,74 @@ static @inline void Inicializacion_Total(void)
 /*
 /*
 */
-static @inline void LecturaSensores(void)
+/*static @inline void LecturaSensores(void)
 {
-	SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
-	SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
+	if( ( Comunicacion.Buffer.Rx.nNodo[0] == 0x36 ) )
+	{
+		if( ( Comunicacion.Buffer.Rx.nNodo[1] == 0x35 ) )
+		{
+			SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
+		}
+		
+		else if( ( Comunicacion.Buffer.Rx.nNodo[1] == 0x36 ) )
+		{
+			SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
+		}
+		else
+		{
+			
+		}
+		
+		Comunicacion.Buffer.Rx.nNodo[0] = 0x00;
+		Comunicacion.Buffer.Rx.nNodo[1] = 0x00;
+		NuevaOrden = 0;
+	}
+	else
+	{
+		NuevaOrden = 0;
+		Comunicacion.Buffer.Rx.nNodo[0] = 0x00;
+		Comunicacion.Buffer.Rx.nNodo[1] = 0x00;
+	}
+}*/
+
+static @inline void LecturaRS485( Trama_RX_t* bufRX, uint8_t dato )
+{
+	uint8_t nuevaRecepcion = 0;
 	
+	if( bufRX->Secuencia.pasoActual == 0 )
+	{
+		if( bufRX->ptrBuffer == ( bufRX->Secuencia.LecturaNodo.BytesaLeer ) - 1 )
+		{
+			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaNodo.nPasoSiguiente;
+		}
+	}
+	else if( bufRX->Secuencia.pasoActual == 1 )
+	{
+		if( bufRX->ptrBuffer == ( ( bufRX->Secuencia.LecturaNodo.BytesaLeer + bufRX->Secuencia.LecturaOrdenDHT11.BytesaLeer ) - 1 ) )
+		{
+			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaOrdenDHT11.nPasoSiguiente;
+		}
+	}
+	else if( bufRX->Secuencia.pasoActual == 2 )
+	{
+		if( bufRX->ptrBuffer == ( ( bufRX->Secuencia.LecturaNodo.BytesaLeer + bufRX->Secuencia.LecturaOrdenDHT11.BytesaLeer + bufRX->Secuencia.LecturaOrdenHX711.BytesaLeer ) - 1 ) )
+		{
+			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaOrdenHX711.nPasoSiguiente;
+			nuevaRecepcion = 1;
+		}
+	}
+	else
+	{
+		
+	}
+	
+	bufRX->buffer[bufRX->ptrBuffer] = dato;
+	bufRX->ptrBuffer = bufRX->ptrBuffer + 1;
+	
+	if( nuevaRecepcion == 1 )
+	{
+		bufRX->ptrBuffer = 0;
+	}
 }
 
 /**
@@ -163,14 +226,15 @@ int main()
 {
 	Inicializacion_Total();
 	
-	//SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
+	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 	while (1)
 	{
 		if( getFlagUartRXNE( ) > 0 )
 		{
-			Comunicacion.Buffer.Rx.nNodo = UART1_ReceiveData8( );
+			LecturaRS485( &Comunicacion.Buffer.Rx, UART1_ReceiveData8( ) );
 			setFlagUartRXNE( 0 );
 		}
+		
 		//LecturaSensores( );
 		//_delay_ms( 1000 );
 	}
