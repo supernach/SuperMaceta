@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__gpio___config_8h" xml:lang="es">
+<title>Referencia del Archivo Api/N_HAL/Gpio/Gpio_Config.h</title>
+<indexterm><primary>Api/N_HAL/Gpio/Gpio_Config.h</primary></indexterm>
+<para>
+
+<para>Este archivo define los datos necesarios de configuracion gpio. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_gpio___config">Gpio_Config</link></para>
+
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_gpio___config">Gpio_Config</link> <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></para>
+
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga6c09cd09e372553b3468282c9a1663ec">NHALgpioConfig_SetType</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio, GPIO_Mode_TypeDef nuevoTipo)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Este archivo define los datos necesarios de configuracion gpio. </para>
+</section>
+</section>

@@ -1,0 +1,36 @@
+\hypertarget{_timer_8h}{}\doxysection{Referencia del Archivo Api/\+N\+\_\+\+HAL/\+Timer/\+Timer.h}
+\label{_timer_8h}\index{Api/N\_HAL/Timer/Timer.h@{Api/N\_HAL/Timer/Timer.h}}
+
+
+Define las acciones que se pueden realizar con el timer. Inicializacion, deinicializacion..  
+
+
+{\ttfamily \#include $<$stm8s.\+h$>$}\newline
+{\ttfamily \#include $<$timer\+\_\+config.\+h$>$}\newline
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_timer}{Timer}}
+\begin{DoxyCompactList}\small\item\em Estructura tipo con las acciones del timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_timer}{Timer}} \mbox{\hyperlink{group___t_y_p_e_d_e_f_ga319c52bd646ec80339374a6a2b528d5c}{Timer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Tipo definido para manejar el timer. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group___t_y_p_e_d_e_f_ga319c52bd646ec80339374a6a2b528d5c}{Timer\+\_\+t}} $\ast$ \mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\+\_\+t\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Puntero al tipo timer\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___funciones_ga60b2e95eb192d675d0e74f791f983a3b}{Timer\+\_\+\+Init}} (\mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\+\_\+t\+\_\+ptr}} timer)
+\item 
+void \mbox{\hyperlink{group___funciones_ga8ae7aa0701cc5c9870ee835c250d78f1}{Timer\+\_\+\+Config\+\_\+\+Init}} (\mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga56e89c573a58b16a925737f7bece76ff}{Timer\+\_\+\+Config\+\_\+t\+\_\+ptr}} timer\+Config, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_gaf2d309f4c465c40a6b08c5a0bf67fa27}{Timer\+\_\+\+Numero\+\_\+e}} timer, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga6fa5a9233f1ca5e8eb5479206364f581}{Timer\+\_\+\+Canal\+\_\+e}} canal, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga680b74b362115ddab0ec67f68858ac77}{Timer\+\_\+\+Modo\+\_\+e}} modo, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga3f543feccade77b24ffa4a0d88a683f8}{Timer\+\_\+\+Interrupcion\+\_\+e}} it, uint16\+\_\+t tiempo)
+\item 
+void \mbox{\hyperlink{group___funciones_ga5bf616b8c20359e44fe29a79ded613c9}{Timer\+\_\+\+De\+Init}} (\mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\+\_\+t\+\_\+ptr}} timer)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Define las acciones que se pueden realizar con el timer. Inicializacion, deinicializacion.. 
+
+Ofrece funciones referidas al TIMER1 para abtraerse de la SPL.

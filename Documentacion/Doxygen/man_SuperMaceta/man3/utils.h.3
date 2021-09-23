@@ -1,0 +1,43 @@
+.TH "Api/N_HAL/Utils/utils.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Api/N_HAL/Utils/utils.h \- Define distintas funciones, macros utiles\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stm8s\&.h>\fP
+.br
+
+.SS "defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFCLK\fP   16000000"
+.br
+.RI "Definir en Hz la frecuencia de trabajo del reloj\&. "
+.ti -1c
+.RI "#define \fBNULL\fP   (void*)0"
+.br
+.RI "Macro Null para punteros\&. "
+.ti -1c
+.RI "#define \fBIS_NULL\fP(val)   ((val == \fBNULL\fP) ? true : false)"
+.br
+.RI "Macro para comprobar punteros nulos\&. "
+.ti -1c
+.RI "#define \fBT_COUNT\fP(x)   (( x * (\fBFCLK\fP / 1000000UL) )\-3)/3)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Define distintas funciones, macros utiles\&. 
+
+
+.SH "Documentación de los 'defines'"
+.PP 
+.SS "#define T_COUNT(x)   (( x * (\fBFCLK\fP / 1000000UL) )\-3)/3)"
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timeout___config_8h" xml:lang="es">
+<title>Referencia del Archivo Api/TIMEOUT/Timeout_Config.h</title>
+<indexterm><primary>Api/TIMEOUT/Timeout_Config.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_timeout___config">Timeout_Config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_timeout___config">Timeout_Config</link> <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga2476c4fb37cb540da0dd2e1a2eaf6260">Timeout_Config_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef volatile uint16_t(* <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link>) (void)</para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef void(* <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link>) (uint16_t)</para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

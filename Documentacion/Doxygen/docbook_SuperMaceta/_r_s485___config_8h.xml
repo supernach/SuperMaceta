@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485___config_8h" xml:lang="es">
+<title>Referencia del Archivo Communication/RS485/RS485_Config.h</title>
+<indexterm><primary>Communication/RS485/RS485_Config.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+#include &lt;gpio.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_u_a_r_t___config">UART_Config</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_s485___config">RS485_Config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_r_s485___config">RS485_Config</link> <link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link> * <link linkend="_group___r_s485_1gac1995416eb9e21b7bb9cef96bd3971c9">RS485_Config_t_ptr</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

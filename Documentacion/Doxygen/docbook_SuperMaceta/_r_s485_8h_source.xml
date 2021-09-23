@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485_8h_source" xml:lang="es">
+<title>RS485.h</title>
+<indexterm><primary>Communication/RS485/RS485.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;RS485_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;RS485_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;RS485&#32;COMM</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;RS485.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;20/09/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;19/09/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+50 <emphasis role="comment">/******************************************************************************</emphasis>
+51 <emphasis role="comment">*&#32;Includes</emphasis>
+52 <emphasis role="comment">*******************************************************************************/</emphasis>
+53 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+54 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__r_s485___config_8h">RS485_Config.h</link>&gt;</emphasis>
+55 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__r_s485___tramas_8h">RS485_Tramas.h</link>&gt;</emphasis>
+56 
+57 <emphasis role="comment">/******************************************************************************</emphasis>
+58 <emphasis role="comment">*&#32;Constants</emphasis>
+59 <emphasis role="comment">*******************************************************************************/</emphasis>
+60 
+61 <emphasis role="comment">/******************************************************************************</emphasis>
+62 <emphasis role="comment">*&#32;Configuration</emphasis>
+63 <emphasis role="comment">*******************************************************************************/</emphasis>
+64 
+65 <emphasis role="comment">/******************************************************************************</emphasis>
+66 <emphasis role="comment">*&#32;Macros</emphasis>
+67 <emphasis role="comment">*******************************************************************************/</emphasis>
+68 
+69 <emphasis role="comment">/******************************************************************************</emphasis>
+70 <emphasis role="comment">*&#32;Typedefs</emphasis>
+71 <emphasis role="comment">*******************************************************************************/</emphasis>
+78 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_r_s485">RS485</link>&#32;<link linkend="_struct_r_s485">RS485_t</link>;
+79 
+86 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_r_s485">RS485_t</link>*&#32;<link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link>;
+87 
+94 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">union</emphasis>
+95 {
+96 &#32;&#32;uint8_t&#32;<link linkend="_union_r_s485___flags__u_1aa2585d779da0ab21273a8d92de9a0ebe">flags</link>;&#32;
+97 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_r_s485___flags__u_1_1flag_bit">flagBit</link>
+98 &#32;&#32;{
+99 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1abe5a554780780fbc10d63a5d7f649201">NuevaRecepcion</link>&#32;:&#32;1;&#32;
+100 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a9c283d5c304bd0ba55c3eb23b282095a">Inicializado</link>&#32;:&#32;1;&#32;
+101 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a40779b74c939697e4f97288a32087b98">Standby</link>&#32;:&#32;1;&#32;
+102 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1ae1457b2475c549e53d084a2daa6475f5">bit3</link>&#32;:&#32;1;&#32;
+103 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1aec79d033d0709e9c4caf5b21f85848bc">bit4</link>&#32;:&#32;1;&#32;
+104 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a56012f9e5f78d285eb450866b270b86d">bit5</link>&#32;:&#32;1;&#32;
+105 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a39af6ce9105754718e17a87fb173b0fb">bit6</link>&#32;:&#32;1;&#32;
+106 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a23364783b1302b0aab8b38fc7853cad3">bit7</link>&#32;:&#32;1;&#32;
+107 &#32;&#32;}&#32;bit;
+108 }<link linkend="_union_r_s485___flags__u">RS485_Flags_u</link>;
+109 
+110 <emphasis role="comment">/******************************************************************************</emphasis>
+111 <emphasis role="comment">*&#32;Struct</emphasis>
+112 <emphasis role="comment">*******************************************************************************/</emphasis>
+113 
+120 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_r_s485">RS485</link>
+121 {
+122 &#32;&#32;<link linkend="_struct_r_s485___config">RS485_Config_t</link>&#32;<link linkend="_struct_r_s485_1abd4ae6715509766a8e03b8210c8eb366">Config</link>;&#32;
+123 &#32;&#32;<link linkend="_struct_buffer___tramas">Buffer_Tramas_t</link>&#32;<link linkend="_struct_r_s485_1ab68c854291df20f264398a9d1b060a9e">Buffer</link>;&#32;
+124 &#32;&#32;<link linkend="_union_r_s485___flags__u">RS485_Flags_u</link>&#32;<link linkend="_struct_r_s485_1aa1d22d8ab12da614018bf0df36585290">Flags</link>;&#32;
+125 };
+126 
+127 <emphasis role="comment">/******************************************************************************</emphasis>
+128 <emphasis role="comment">*&#32;Variables</emphasis>
+129 <emphasis role="comment">*******************************************************************************/</emphasis>
+137 <emphasis role="comment">/******************************************************************************</emphasis>
+138 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+139 <emphasis role="comment">*******************************************************************************/</emphasis>
+140 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+141 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+142 <emphasis role="preprocessor">#endif</emphasis>
+143 
+144 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___r_s485_1ga1f6423e3bc24c9c086ae41f05cbe5204">RS485_Init</link>(&#32;<link linkend="_struct_r_s485">RS485_t_ptr</link>&#32;rs485&#32;);
+145 
+146 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+147 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+148 <emphasis role="preprocessor">#endif&#32;</emphasis>
+149 
+150 <emphasis role="preprocessor">#endif</emphasis>
+151 
+</programlisting></section>

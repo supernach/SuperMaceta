@@ -116,10 +116,10 @@ Timer_t timer_Timeout;
 Timeout_t Timeout;
 
 /**
-* @var Timeout
+* @var Comunicacion
 * @brief
 *
-* @see Timeout_t
+* @see RS485_t
 */
 RS485_t Comunicacion;
 

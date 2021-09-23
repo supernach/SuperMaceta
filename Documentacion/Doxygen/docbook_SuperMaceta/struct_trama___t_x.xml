@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_trama___t_x" xml:lang="es">
+<title>Referencia de la Estructura Trama_TX</title>
+<indexterm><primary>Trama_TX</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Tramas.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_trama___t_x_1ad24dd9eb2237619ac0cd8f5beddc89c2">nNodo</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_trama___t_x_1a142d9c6453e8dec0d428c2fd165bcaeb">LecturaDHT11</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_trama___t_x_1a668c320d0a6f9af5c547b8cf3016ba7b">LecturaHX711</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_trama___t_x_1a142d9c6453e8dec0d428c2fd165bcaeb"/><section>
+    <title>LecturaDHT11</title>
+<indexterm><primary>LecturaDHT11</primary><secondary>Trama_TX</secondary></indexterm>
+<indexterm><primary>Trama_TX</primary><secondary>LecturaDHT11</secondary></indexterm>
+<para><computeroutput>uint32_t LecturaDHT11</computeroutput></para></section>
+<anchor xml:id="_struct_trama___t_x_1a668c320d0a6f9af5c547b8cf3016ba7b"/><section>
+    <title>LecturaHX711</title>
+<indexterm><primary>LecturaHX711</primary><secondary>Trama_TX</secondary></indexterm>
+<indexterm><primary>Trama_TX</primary><secondary>LecturaHX711</secondary></indexterm>
+<para><computeroutput>uint32_t LecturaHX711</computeroutput></para></section>
+<anchor xml:id="_struct_trama___t_x_1ad24dd9eb2237619ac0cd8f5beddc89c2"/><section>
+    <title>nNodo</title>
+<indexterm><primary>nNodo</primary><secondary>Trama_TX</secondary></indexterm>
+<indexterm><primary>Trama_TX</primary><secondary>nNodo</secondary></indexterm>
+<para><computeroutput>uint8_t nNodo</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/Tramas/<link linkend="__r_s485___tramas_8h">RS485_Tramas.h</link></section>
+</section>

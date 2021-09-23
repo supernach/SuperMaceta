@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_s_m___trama___r_x" xml:lang="es">
+<title>Referencia de la Estructura FSM_Trama_RX</title>
+<indexterm><primary>FSM_Trama_RX</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Tramas.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_f_s_m___trama___r_x_1a63b812daf24418afa2e73a0922e78466">pasoActual</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_f_s_m___trama___r_x_1ad84be988254ebb0b27867c02e7a1f792">transicion</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link> <link linkend="_struct_f_s_m___trama___r_x_1aeda51b593dd7b390a2eb4ee632306f9d">LecturaNodo</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link> <link linkend="_struct_f_s_m___trama___r_x_1add89c4cac675978097d93aa3f7a49d7e">LecturaOrdenDHT11</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link> <link linkend="_struct_f_s_m___trama___r_x_1ad6967013ebcdd57783877d334fd599a8">LecturaOrdenHX711</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_f_s_m___trama___r_x_1aeda51b593dd7b390a2eb4ee632306f9d"/><section>
+    <title>LecturaNodo</title>
+<indexterm><primary>LecturaNodo</primary><secondary>FSM_Trama_RX</secondary></indexterm>
+<indexterm><primary>FSM_Trama_RX</primary><secondary>LecturaNodo</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link> LecturaNodo</computeroutput></para></section>
+<anchor xml:id="_struct_f_s_m___trama___r_x_1add89c4cac675978097d93aa3f7a49d7e"/><section>
+    <title>LecturaOrdenDHT11</title>
+<indexterm><primary>LecturaOrdenDHT11</primary><secondary>FSM_Trama_RX</secondary></indexterm>
+<indexterm><primary>FSM_Trama_RX</primary><secondary>LecturaOrdenDHT11</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link> LecturaOrdenDHT11</computeroutput></para></section>
+<anchor xml:id="_struct_f_s_m___trama___r_x_1ad6967013ebcdd57783877d334fd599a8"/><section>
+    <title>LecturaOrdenHX711</title>
+<indexterm><primary>LecturaOrdenHX711</primary><secondary>FSM_Trama_RX</secondary></indexterm>
+<indexterm><primary>FSM_Trama_RX</primary><secondary>LecturaOrdenHX711</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link> LecturaOrdenHX711</computeroutput></para></section>
+<anchor xml:id="_struct_f_s_m___trama___r_x_1a63b812daf24418afa2e73a0922e78466"/><section>
+    <title>pasoActual</title>
+<indexterm><primary>pasoActual</primary><secondary>FSM_Trama_RX</secondary></indexterm>
+<indexterm><primary>FSM_Trama_RX</primary><secondary>pasoActual</secondary></indexterm>
+<para><computeroutput>uint8_t pasoActual</computeroutput></para></section>
+<anchor xml:id="_struct_f_s_m___trama___r_x_1ad84be988254ebb0b27867c02e7a1f792"/><section>
+    <title>transicion</title>
+<indexterm><primary>transicion</primary><secondary>FSM_Trama_RX</secondary></indexterm>
+<indexterm><primary>FSM_Trama_RX</primary><secondary>transicion</secondary></indexterm>
+<para><computeroutput>uint8_t transicion</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/Tramas/<link linkend="__r_s485___tramas_8h">RS485_Tramas.h</link></section>
+</section>

@@ -1,0 +1,49 @@
+.TH "sDht11_SI" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sDht11_SI \- Define el esquema de la trama recibida al leer el sensor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dht11\&.h>\fP
+.SS "Campos de datos"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBCRC\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBT_Decimal\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBT_Entero\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBH_Decimal\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBH_Entero\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Define el esquema de la trama recibida al leer el sensor\&. 
+.SH "Documentación de los campos"
+.PP 
+.SS "uint8_t CRC"
+CRC recibido 
+.SS "uint8_t H_Decimal"
+Humedad, parte decimal 
+.SS "uint8_t H_Entero"
+Humedad, parte entera 
+.SS "uint8_t T_Decimal"
+Temperatura, parte decimal 
+.SS "uint8_t T_Entero"
+Temperatura, parte entera 
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

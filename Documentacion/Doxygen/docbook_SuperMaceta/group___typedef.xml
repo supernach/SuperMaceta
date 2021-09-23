@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___typedef" xml:lang="es">
+<title>Typedef</title>
+<indexterm><primary>Typedef</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___punteros">Punteros</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___enum">Enum</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_h_x711">HX711</link> <link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link></para>
+
+<para>Crea un tipo de dato <link linkend="_struct_h_x711">HX711</link> para trabajar sobre el Contiene toda la funcionalidad del sensor. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_h_x711___config">HX711_Config</link> <link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link></para>
+
+<para>Tipo de dato para definir la configuracion del hx711. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_h_x711___datos">HX711_Datos</link> <link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link></para>
+
+<para>Tipo de dato para definir la informacion a almacenar. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8"/><section>
+    <title>HX711_Config_t</title>
+<indexterm><primary>HX711_Config_t</primary><secondary>Typedef</secondary></indexterm>
+<indexterm><primary>Typedef</primary><secondary>HX711_Config_t</secondary></indexterm>
+<para><computeroutput>struct _Config <link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link></computeroutput></para><para>
+
+<para>Tipo de dato para definir la configuracion del hx711. </para>
+</para>
+</section>
+<anchor xml:id="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889"/><section>
+    <title>HX711_Datos_t</title>
+<indexterm><primary>HX711_Datos_t</primary><secondary>Typedef</secondary></indexterm>
+<indexterm><primary>Typedef</primary><secondary>HX711_Datos_t</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_h_x711___datos">HX711_Datos</link> <link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link></computeroutput></para><para>
+
+<para>Tipo de dato para definir la informacion a almacenar. </para>
+</para>
+</section>
+<anchor xml:id="_group___typedef_1ga243fec3499adb318184d6dfc775d471d"/><section>
+    <title>HX711_t</title>
+<indexterm><primary>HX711_t</primary><secondary>Typedef</secondary></indexterm>
+<indexterm><primary>Typedef</primary><secondary>HX711_t</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_h_x711">HX711</link> <link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link></computeroutput></para><para>
+
+<para>Crea un tipo de dato <link linkend="_struct_h_x711">HX711</link> para trabajar sobre el Contiene toda la funcionalidad del sensor. </para>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485_8c" xml:lang="es">
+<title>Referencia del Archivo Communication/RS485/RS485.c</title>
+<indexterm><primary>Communication/RS485/RS485.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;RS485.h&gt;
+</programlisting><simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___r_s485_1ga1f6423e3bc24c9c086ae41f05cbe5204">RS485_Init</link> (<link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link> rs485)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

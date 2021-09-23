@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opt_5fstruct_0',['OPT_struct',['../struct_o_p_t__struct.html',1,'']]]
+  ['uart_5fconfig_0',['UART_Config',['../struct_u_a_r_t___config.html',1,'']]]
 ];

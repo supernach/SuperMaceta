@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_l_o_c_k" xml:lang="es">
+<title>CLOCK</title>
+<indexterm><primary>CLOCK</primary></indexterm>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___c_l_o_c_k_1ga154788159bac63badebcb13a4592e9d0">Clock_HSI_Init</link> (CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)</para>
+
+<para>Inicializa el reloj de alta velocidad interno del micro. A su vez deshabilita el reloj externo y el reloj lento interno. Configura la frecuencia Master y la frecuencia de la cpu. Por ultimo deshabilita el uso del reloj para todos los perifericos. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_l_o_c_k_1ga9149d6d67ca17423b6aff809598a5253">DisableAllPeripherals</link> (void)</para>
+
+<para>Deshabilita el uso del reloj en todos los perifericos 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_l_o_c_k_1gae748795e59c88680053eb0eb85cfd78d">EnableClockMirror</link> (CLK_Output_TypeDef source, <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *pin)</para>
+
+<para>Habilita el uso de la funcion CCO en el pin por defecto del micro. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___c_l_o_c_k_1ga154788159bac63badebcb13a4592e9d0"/><section>
+    <title>Clock_HSI_Init()</title>
+<indexterm><primary>Clock_HSI_Init</primary><secondary>CLOCK</secondary></indexterm>
+<indexterm><primary>CLOCK</primary><secondary>Clock_HSI_Init</secondary></indexterm>
+<para><computeroutput>void Clock_HSI_Init (CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)</computeroutput></para><para>
+
+<para>Inicializa el reloj de alta velocidad interno del micro. A su vez deshabilita el reloj externo y el reloj lento interno. Configura la frecuencia Master y la frecuencia de la cpu. Por ultimo deshabilita el uso del reloj para todos los perifericos. </para>
+</para>
+
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Inicializacion del reloj interno de alta velocidad</para>
+
+<para>PRE-CONDITION: Parametros del reloj elegidos</para>
+
+<para>POST-CONDITION: El reloj esta habilitado a la frecuencia elegida</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Divisor</entry><entry>
+<para>para la frecuencia master </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Divisor</entry><entry>
+<para>para la frecuencia de la cpu, esta va referida a la frecuencia master</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___c_l_o_c_k_1ga154788159bac63badebcb13a4592e9d0">Clock_HSI_Init</link>(CLK_PRESCALER_HSIDIV1,&#32;CLK_PRESCALER_CPUDIV1);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/02/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Prescaler</entry><entry>
+<para>para la frecuencia Master. 1,2,4,8 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Prescaler</entry><entry>
+<para>para la frecuencia de la cpu. Esta la marca la frecuencia Master. 1,2,4,8,16,32,64,128 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___c_l_o_c_k_1ga9149d6d67ca17423b6aff809598a5253"/><section>
+    <title>DisableAllPeripherals()</title>
+<indexterm><primary>DisableAllPeripherals</primary><secondary>CLOCK</secondary></indexterm>
+<indexterm><primary>CLOCK</primary><secondary>DisableAllPeripherals</secondary></indexterm>
+<para><computeroutput>void DisableAllPeripherals (void )</computeroutput></para><para>
+
+<para>Deshabilita el uso del reloj en todos los perifericos 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+</section>
+<anchor xml:id="_group___c_l_o_c_k_1gae748795e59c88680053eb0eb85cfd78d"/><section>
+    <title>EnableClockMirror()</title>
+<indexterm><primary>EnableClockMirror</primary><secondary>CLOCK</secondary></indexterm>
+<indexterm><primary>CLOCK</primary><secondary>EnableClockMirror</secondary></indexterm>
+<para><computeroutput>void EnableClockMirror (CLK_Output_TypeDef source, <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> * pin)</computeroutput></para><para>
+
+<para>Habilita el uso de la funcion CCO en el pin por defecto del micro. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos. </para>
+</para>
+
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Habilita un pin del micro y saca la se�al de reloj elegida</para>
+
+<para>PRE-CONDITION: Reloj configurado y habilitado PRE-CONDITION: IO parametrizada</para>
+
+<para>POST-CONDITION: IO configurada como salida POST-CONDITION: Se�al del reloj elegida es replicada en la IO</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Se�al</entry><entry>
+<para>de reloj a replicar </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Configuracion</entry><entry>
+<para>de la IO</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___c_l_o_c_k_1gae748795e59c88680053eb0eb85cfd78d">EnableClockMirror</link>(CLK_OUTPUT_CPU,&#32;&amp;gpio)
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/02/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Se�al</entry><entry>
+<para>de reloj a usar </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Configuracion</entry><entry>
+<para>fisica del pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

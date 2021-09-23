@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timeout_8h_source" xml:lang="es">
+<title>Timeout.h</title>
+<indexterm><primary>Api/TIMEOUT/Timeout.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;TIMEOUT_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;TIMEOUT_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Timeout&#32;API</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Timeout.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;9/09/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;9/09/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+51 <emphasis role="comment">/******************************************************************************</emphasis>
+52 <emphasis role="comment">*&#32;Includes</emphasis>
+53 <emphasis role="comment">*******************************************************************************/</emphasis>
+54 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+55 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_utils_8h">utils.h</link>&gt;</emphasis>
+56 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__gpio_8h">gpio.h</link>&gt;</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__timer_8h">timer.h</link>&gt;</emphasis>
+58 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__timeout___config_8h">Timeout_Config.h</link>&gt;</emphasis>
+59 
+60 <emphasis role="comment">/******************************************************************************</emphasis>
+61 <emphasis role="comment">*&#32;Constants</emphasis>
+62 <emphasis role="comment">*******************************************************************************/</emphasis>
+63 <emphasis role="preprocessor">#define&#32;TIMEOUT_MAX_500MS&#32;500</emphasis>
+64 <emphasis role="preprocessor">#define&#32;TIMEOUT_1MS&#32;1000</emphasis>
+65 <emphasis role="comment">/******************************************************************************</emphasis>
+66 <emphasis role="comment">*&#32;Configuration</emphasis>
+67 <emphasis role="comment">*******************************************************************************/</emphasis>
+68 
+69 <emphasis role="comment">/******************************************************************************</emphasis>
+70 <emphasis role="comment">*&#32;Macros</emphasis>
+71 <emphasis role="comment">*******************************************************************************/</emphasis>
+72 
+73 <emphasis role="comment">/******************************************************************************</emphasis>
+74 <emphasis role="comment">*&#32;Typedefs</emphasis>
+75 <emphasis role="comment">*******************************************************************************/</emphasis>
+82 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_timeout">Timeout</link>&#32;<link linkend="_struct_timeout">Timeout_t</link>;
+83 
+90 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_timeout">Timeout_t</link>*&#32;<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link>;
+91 
+98 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+99 {
+100 &#32;&#32;<link linkend="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9">INACTIVO</link>,
+101 &#32;&#32;<link linkend="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e">ACTIVO</link>,
+102 &#32;&#32;<link linkend="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb">DISPARADO</link>
+103 }<link linkend="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096">Timeout_Estado_e</link>;
+104 
+105 <emphasis role="comment">/******************************************************************************</emphasis>
+106 <emphasis role="comment">*&#32;Struct</emphasis>
+107 <emphasis role="comment">*******************************************************************************/</emphasis>
+114 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_timeout">Timeout</link>
+115 {
+116 &#32;&#32;<link linkend="_struct_timeout___config">Timeout_Config_t</link>&#32;<link linkend="_struct_timeout_1a32ea46dd112055146535dad780bfcec2">Config</link>;
+117 &#32;&#32;<link linkend="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096">Timeout_Estado_e</link>&#32;<link linkend="_struct_timeout_1a4dd567b97a872fc1b735cee73e5bea39">Estado</link>;
+118 &#32;&#32;uint16_t&#32;<link linkend="_struct_timeout_1a1406844033393bc6ee9930acd9d13014">ValorDesborde</link>;
+119 };
+120 
+121 <emphasis role="comment">/******************************************************************************</emphasis>
+122 <emphasis role="comment">*&#32;Variables</emphasis>
+123 <emphasis role="comment">*******************************************************************************/</emphasis>
+131 <emphasis role="comment">/******************************************************************************</emphasis>
+132 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+133 <emphasis role="comment">*******************************************************************************/</emphasis>
+134 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+135 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+136 <emphasis role="preprocessor">#endif</emphasis>
+137 
+138 
+139 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___t_i_m_e_o_u_t_1gacf4087f528451c740786aa0b21520d6c">Timeout_Init</link>(&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;timeout,&#32;<link linkend="_struct_timer">Timer_t_ptr</link>&#32;timer,&#32;<link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link>&#32;isr_Notificacion,&#32;<link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link>&#32;isr_Reset&#32;);
+140 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___t_i_m_e_o_u_t_1gab42447d16c69163776bc7e676d906612">Timeout_Start</link>(&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;timeout,&#32;uint16_t&#32;microsegundos&#32;);
+141 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___t_i_m_e_o_u_t_1ga29cfcf61fd1e84e7bcf4ce228ba21808">Timeout_Stop</link>(&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;timeout&#32;);
+142 
+143 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+144 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+145 <emphasis role="preprocessor">#endif&#32;</emphasis>
+146 
+147 <emphasis role="preprocessor">#endif</emphasis>
+148 &#32;&#32;
+</programlisting></section>

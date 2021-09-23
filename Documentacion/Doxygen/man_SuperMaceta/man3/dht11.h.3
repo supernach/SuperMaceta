@@ -1,0 +1,90 @@
+.TH "Drivers/DHT11/dht11.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/DHT11/dht11.h \- Configura y proporciona acceso a la lectura del sensor de temperatura y humedad \fBDHT11\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <utils\&.h>\fP
+.br
+\fC#include <Gpio\&.h>\fP
+.br
+\fC#include <timeout\&.h>\fP
+.br
+
+.SS "Estructuras de datos"
+
+.in +1c
+.ti -1c
+.RI "struct \fBsDht11_SI\fP"
+.br
+.RI "Define el esquema de la trama recibida al leer el sensor\&. "
+.ti -1c
+.RI "struct \fBsDht11Datos\fP"
+.br
+.RI "Define la composicion de datos del sensor\&. "
+.ti -1c
+.RI "struct \fBDHT11_Config\fP"
+.br
+.RI "Define los pines elegidos para comunicar con el sensor\&. "
+.ti -1c
+.RI "struct \fBDHT11\fP"
+.br
+.RI "Define el objeto principal para interactuar con un sensor \fBDHT11\fP\&. "
+.in -1c
+.SS "typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBDHT11\fP \fBDHT11_t\fP"
+.br
+.RI "Tipo que define el objeto principal \fBDHT11\fP\&. "
+.ti -1c
+.RI "typedef struct \fBDHT11_Config\fP \fBDHT11_Config_t\fP"
+.br
+.RI "Tipo que define la configuracion del sensor\&. "
+.ti -1c
+.RI "typedef struct \fBsDht11_SI\fP \fBDHT11_SI_t\fP"
+.br
+.RI "Tipo que define la trama recibida del sensor\&. "
+.ti -1c
+.RI "typedef struct \fBsDht11Datos\fP \fBDHT11_Datos_t\fP"
+.br
+.RI "Tipo que define el esquema de datos del sensor\&. "
+.ti -1c
+.RI "typedef \fBDHT11_t\fP * \fBDHT11_t_ptr\fP"
+.br
+.RI "Puntero a un objeto \fBDHT11\fP\&. "
+.ti -1c
+.RI "typedef \fBDHT11_SI_t\fP(* \fBDHT11_fPtr\fP) (\fBDHT11_t_ptr\fP)"
+.br
+.RI "Puntero a una funcion para realizar acciones de lectura\&. "
+.in -1c
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDHT11_Estado_e\fP { \fBdht11_INICIALIZADO\fP, \fBdht11_COMUNICANDO\fP, \fBdht11_CONEXION_OK\fP, \fBdht11_MIDIENDO_H\fP, \fBdht11_MIDIENDO_T\fP, \fBdht11_CERRANDO_CONEXION\fP, \fBdht11_SLEEP\fP, \fBdht11_ESPERA_BAJO\fP, \fBdht11_ESPERA_ALTO\fP, \fBdht11_FALLO_AL_LEER\fP, \fBdht11_FALLO_AL_COMUNICAR\fP, \fBdht11_LECTURA_OK\fP, \fBdht11_TIMEOUT\fP }"
+.br
+.RI "Distintos estados en los qu epuede encontrarse el sensor\&. "
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBDHT11_Init\fP (\fBDHT11_t_ptr\fP dht11, \fBDHT11_fPtr\fP Lectura, \fBTimeout_t_ptr\fP \fBTimeout\fP)"
+.br
+.ti -1c
+.RI "\fBDHT11_SI_t\fP \fBdht11_Lectura\fP (\fBDHT11_t_ptr\fP dht11)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Configura y proporciona acceso a la lectura del sensor de temperatura y humedad \fBDHT11\fP\&. 
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

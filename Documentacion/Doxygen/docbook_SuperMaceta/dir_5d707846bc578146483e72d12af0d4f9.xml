@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5d707846bc578146483e72d12af0d4f9" xml:lang="es">
+<title>Referencia del directorio Aplicacion</title>
+<indexterm><primary>Referencia del directorio Aplicacion</primary></indexterm>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_1dfabd6182ef7584f3d75594c169a6d6">Configuracion</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

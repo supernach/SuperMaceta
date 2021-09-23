@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_h_x711" xml:lang="es">
+<title>Referencia de la Estructura HX711</title>
+<indexterm><primary>HX711</primary></indexterm>
+<para>
+
+<para>Objeto principal para interactuar con el hx711. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;hx711.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link> <link linkend="_struct_h_x711_1a91f722639ed0e1fbdc8a957b163280ba">Config</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link> <link linkend="_struct_h_x711_1a623fca772a5fa1e8240439472f1002c0">Datos</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_h_x711_1abb295df56198a023972379bfc188cff5">Timeout</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> <link linkend="_struct_h_x711_1a1a4736592e3c8b2c7c80fbad979fdfaf">Lectura</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> <link linkend="_struct_h_x711_1a841352c7ab2908ab44449f31d70e06a6">Tarar</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Objeto principal para interactuar con el hx711. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link> </para>
+
+<para><link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link> </para>
+
+<para><link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_h_x711_1a91f722639ed0e1fbdc8a957b163280ba"/><section>
+    <title>Config</title>
+<indexterm><primary>Config</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>Config</secondary></indexterm>
+<para><computeroutput><link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link> Config</computeroutput></para>
+<para>Configuracion del objeto hx711 </para>
+</section>
+<anchor xml:id="_struct_h_x711_1a623fca772a5fa1e8240439472f1002c0"/><section>
+    <title>Datos</title>
+<indexterm><primary>Datos</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>Datos</secondary></indexterm>
+<para><computeroutput><link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link> Datos</computeroutput></para>
+<para>Datos del objeto hx711 </para>
+</section>
+<anchor xml:id="_struct_h_x711_1a1a4736592e3c8b2c7c80fbad979fdfaf"/><section>
+    <title>Lectura</title>
+<indexterm><primary>Lectura</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>Lectura</secondary></indexterm>
+<para><computeroutput><link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Lectura</computeroutput></para>
+<para>Puntero hacia la funcion de lectura </para>
+</section>
+<anchor xml:id="_struct_h_x711_1a841352c7ab2908ab44449f31d70e06a6"/><section>
+    <title>Tarar</title>
+<indexterm><primary>Tarar</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>Tarar</secondary></indexterm>
+<para><computeroutput><link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Tarar</computeroutput></para>
+<para>Puntero hacia la funcion de taraje </para>
+</section>
+<anchor xml:id="_struct_h_x711_1abb295df56198a023972379bfc188cff5"/><section>
+    <title>Timeout</title>
+<indexterm><primary>Timeout</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>Timeout</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link></computeroutput></para>
+<para>Referencia para ejecutar el timeout </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Drivers/HX711/<link linkend="_hx711_8h">hx711.h</link></section>
+</section>

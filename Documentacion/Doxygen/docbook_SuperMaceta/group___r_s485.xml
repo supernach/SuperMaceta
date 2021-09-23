@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_s485" xml:lang="es">
+<title>RS485</title>
+<indexterm><primary>RS485</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___o_r_d_e_n_e_s">ORDENES</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_r_a_m_a_s">TRAMAS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>union <link linkend="_union_r_s485___flags__u">RS485_Flags_u</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_s485">RS485</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_a_r_t___config">UART_Config</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_s485___config">RS485_Config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_r_s485">RS485</link> <link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link> * <link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_r_s485___config">RS485_Config</link> <link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link> * <link linkend="_group___r_s485_1gac1995416eb9e21b7bb9cef96bd3971c9">RS485_Config_t_ptr</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___r_s485_1ga1f6423e3bc24c9c086ae41f05cbe5204">RS485_Init</link> (<link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link> rs485)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___r_s485_1ga01ed9c547903f2916e086406397526cc"/><section>
+    <title>RS485_Config_t</title>
+<indexterm><primary>RS485_Config_t</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>RS485_Config_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>RS48_Config </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___r_s485_1gac1995416eb9e21b7bb9cef96bd3971c9"/><section>
+    <title>RS485_Config_t_ptr</title>
+<indexterm><primary>RS485_Config_t_ptr</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>RS485_Config_t_ptr</secondary></indexterm>
+<para><computeroutput><link linkend="_group___r_s485_1gac1995416eb9e21b7bb9cef96bd3971c9">RS485_Config_t_ptr</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>RS485_Config_t* </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d"/><section>
+    <title>RS485_t</title>
+<indexterm><primary>RS485_t</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>RS485_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_struct_r_s485">RS485</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383"/><section>
+    <title>RS485_t_ptr</title>
+<indexterm><primary>RS485_t_ptr</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>RS485_t_ptr</secondary></indexterm>
+<para><computeroutput><link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>RS485_t* </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___r_s485_1ga1f6423e3bc24c9c086ae41f05cbe5204"/><section>
+    <title>RS485_Init()</title>
+<indexterm><primary>RS485_Init</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>RS485_Init</secondary></indexterm>
+<para><computeroutput>void RS485_Init (<link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link> rs485)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>plantilla descripcion</para>
+
+<para>PRE-CONDITION: PRE-CONDITION: PRE-CONDITION:</para>
+
+<para>POST-CONDITION:</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>RS485_t_ptr</entry><entry>
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                            <row>
+<entry>&lt;br&gt;</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput></computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_hx711_8h_source" xml:lang="es">
+<title>hx711.h</title>
+<indexterm><primary>Drivers/HX711/hx711.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;HX711_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;HX711_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;HX711&#32;&#32;DRIVER</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Hx711.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;9/09/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;@attention</emphasis>
+16 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+17 <emphasis role="comment">*</emphasis>
+18 <emphasis role="comment">*******************************************************************************/</emphasis>
+19 <emphasis role="comment">/****************************************************************************</emphasis>
+20 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+21 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+22 <emphasis role="comment">*</emphasis>
+23 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+24 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+25 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+26 <emphasis role="comment">*</emphasis>
+27 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+28 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+29 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+30 <emphasis role="comment">*</emphasis>
+31 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+32 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+33 <emphasis role="comment">*</emphasis>
+34 <emphasis role="comment">*****************************************************************************/</emphasis>
+35 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+36 <emphasis role="comment">*</emphasis>
+37 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+38 <emphasis role="comment">*&#32;&#32;9/09/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+39 <emphasis role="comment">*&#32;&#32;</emphasis>
+40 <emphasis role="comment">*</emphasis>
+41 <emphasis role="comment">*******************************************************************************/</emphasis>
+53 <emphasis role="comment">/******************************************************************************</emphasis>
+54 <emphasis role="comment">*&#32;Includes</emphasis>
+55 <emphasis role="comment">*******************************************************************************/</emphasis>
+56 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_utils_8h">utils.h</link>&gt;</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__gpio_8h">gpio.h</link>&gt;</emphasis>
+58 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__timeout_8h">timeout.h</link>&gt;</emphasis>
+59 
+60 
+61 
+62 <emphasis role="comment">/******************************************************************************</emphasis>
+63 <emphasis role="comment">*&#32;Constants</emphasis>
+64 <emphasis role="comment">*******************************************************************************/</emphasis>
+73 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;uint8_t&#32;HX711_LONGITUDTRAMA&#32;=&#32;24;
+74 
+79 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;uint8_t&#32;HX711_TIEMPOCLOCK&#32;=&#32;3;
+80 
+85 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;uint8_t&#32;HX711_TIEMPOCLOCKSLEEP&#32;=&#32;70;
+86 
+90 <emphasis role="comment">/******************************************************************************</emphasis>
+91 <emphasis role="comment">*&#32;Configuration</emphasis>
+92 <emphasis role="comment">*******************************************************************************/</emphasis>
+93 
+94 <emphasis role="comment">/******************************************************************************</emphasis>
+95 <emphasis role="comment">*&#32;Macros</emphasis>
+96 <emphasis role="comment">*******************************************************************************/</emphasis>
+97 
+98 <emphasis role="comment">/******************************************************************************</emphasis>
+99 <emphasis role="comment">*&#32;Typedefs</emphasis>
+100 <emphasis role="comment">*******************************************************************************/</emphasis>
+110 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_h_x711">HX711</link>&#32;<link linkend="_struct_h_x711">HX711_t</link>;
+111 
+116 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_h_x711___config">HX711_Config</link>&#32;<link linkend="_struct_h_x711___config">HX711_Config_t</link>;
+117 
+122 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_h_x711___datos">HX711_Datos</link>&#32;<link linkend="_struct_h_x711___datos">HX711_Datos_t</link>;
+123 
+132 <emphasis role="keyword">typedef</emphasis>&#32;uint16_t(*<link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link>)(<link linkend="_struct_h_x711">HX711_t</link>*);
+133 
+138 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_h_x711">HX711_t</link>*&#32;<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link>;
+139 
+144 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_h_x711___datos">HX711_Datos_t</link>*&#32;<link linkend="_group___punteros_1gacd5c6f1bb5950aaa81bf97d3c2556112">HX711_Datos_t_ptr</link>;
+145 
+150 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_h_x711___config">HX711_Config_t</link>*&#32;<link linkend="_group___punteros_1gaf7666f28c15bcd886c56feea5977864e">HX711_Config_t_ptr</link>;
+151 
+163 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+164 {
+165 &#32;&#32;<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">INICIALIZADO</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+166 &#32;&#32;<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">SINVALORCONVERSION</link>,&#32;
+167 &#32;&#32;<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">SLEEP</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+168 &#32;&#32;<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">NUEVA_LECTURA</link>,&#32;&#32;&#32;&#32;&#32;&#32;
+169 &#32;&#32;<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">TIMEOUT</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+170 }&#32;<link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link>;
+171 
+176 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+177 {
+178 &#32;&#32;<link linkend="_group___enum_1ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">CHANNELA_128</link>,&#32;
+179 &#32;&#32;<link linkend="_group___enum_1ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">CHANNELA_64</link>,&#32;&#32;
+180 &#32;&#32;<link linkend="_group___enum_1ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">CHANNELB_32</link>&#32;&#32;&#32;
+181 }&#32;<link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link>;
+182 
+189 <emphasis role="comment">/******************************************************************************</emphasis>
+190 <emphasis role="comment">*&#32;Struct</emphasis>
+191 <emphasis role="comment">*******************************************************************************/</emphasis>
+202 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_h_x711___datos">HX711_Datos</link>
+203 {
+204 &#32;&#32;uint32_t&#32;<link linkend="_struct_h_x711___datos_1a6c0c13ba21079ed21363c817442a7389">UltimaLectura</link>;&#32;
+205 &#32;&#32;<link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link>&#32;<link linkend="_struct_h_x711___datos_1ae6e820be23d2ddec50532ecd92827e4c">Estado</link>;&#32;&#32;
+206 };
+207 
+215 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_h_x711___config">HX711_Config</link>
+216 {
+217 &#32;&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>&#32;<link linkend="_struct_h_x711___config_1adecab8ec6694738b9fc07a17e9ea60f5">DOUT</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+218 &#32;&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>&#32;<link linkend="_struct_h_x711___config_1ad23f57ec814bea3301f6271bc978f3c3">PD_SCK</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+220 &#32;&#32;<link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link>&#32;<link linkend="_struct_h_x711___config_1a31842012140e37a11cbca628bd760dab">Ganancia</link>;&#32;&#32;
+221 &#32;&#32;uint16_t&#32;<link linkend="_struct_h_x711___config_1ab4822d50ce6c66444969a14e37fea3b7">ValorConversion</link>;&#32;&#32;&#32;
+224 &#32;&#32;uint32_t&#32;<link linkend="_struct_h_x711___config_1a22ce79c6f2694de604942b6ceb43c01a">ValorZero</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+227 &#32;&#32;uint16_t&#32;<link linkend="_struct_h_x711___config_1afd4d615b3ad3796d58ef0ff2402c6627">ValorTara</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+228 };
+229 
+238 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_h_x711">HX711</link>
+239 {
+240 &#32;&#32;<link linkend="_struct_h_x711___config">HX711_Config_t</link>&#32;<link linkend="_struct_h_x711_1a91f722639ed0e1fbdc8a957b163280ba">Config</link>;&#32;&#32;
+241 &#32;&#32;<link linkend="_struct_h_x711___datos">HX711_Datos_t</link>&#32;<link linkend="_struct_h_x711_1a623fca772a5fa1e8240439472f1002c0">Datos</link>;&#32;&#32;&#32;
+242 &#32;&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;<link linkend="_struct_h_x711_1abb295df56198a023972379bfc188cff5">Timeout</link>;&#32;
+244 &#32;&#32;<link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link>&#32;<link linkend="_struct_h_x711_1a1a4736592e3c8b2c7c80fbad979fdfaf">Lectura</link>;&#32;&#32;&#32;&#32;&#32;
+245 &#32;&#32;<link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link>&#32;<link linkend="_struct_h_x711_1a841352c7ab2908ab44449f31d70e06a6">Tarar</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+246 };
+247 
+252 <emphasis role="comment">/******************************************************************************</emphasis>
+253 <emphasis role="comment">*&#32;Variables</emphasis>
+254 <emphasis role="comment">*******************************************************************************/</emphasis>
+255 
+256 <emphasis role="comment">/******************************************************************************</emphasis>
+257 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+258 <emphasis role="comment">*******************************************************************************/</emphasis>
+259 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+260 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+261 <emphasis role="preprocessor">#endif</emphasis>
+262 
+267 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___funciones_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link>(&#32;<link linkend="_struct_h_x711">HX711_t_ptr</link>&#32;hx711,&#32;<link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link>&#32;Lectura,&#32;<link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link>&#32;Tarar,&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;<link linkend="_struct_timeout">Timeout</link>&#32;);
+268 uint16_t&#32;<link linkend="_group___funciones_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link>(&#32;<link linkend="_struct_h_x711">HX711_t_ptr</link>&#32;hx711&#32;);
+269 uint16_t&#32;<link linkend="_group___funciones_1gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</link>(&#32;<link linkend="_struct_h_x711">HX711_t_ptr</link>&#32;hx711&#32;);
+270 
+275 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+276 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+277 <emphasis role="preprocessor">#endif&#32;</emphasis>
+278 
+279 <emphasis role="preprocessor">#endif</emphasis>
+280 &#32;&#32;
+</programlisting></section>

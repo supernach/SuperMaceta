@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_timer___config" xml:lang="es">
+<title>Referencia de la Estructura Timer_Config</title>
+<indexterm><primary>Timer_Config</primary></indexterm>
+<para>
+
+<para>Estructura tipo para la definicion de la configuracion del timer. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Timer_Config.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> <link linkend="_struct_timer___config_1a1497343df3acd025a715f8d238de0e0c">Timer</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> <link linkend="_struct_timer___config_1a2f88d3573249a5759ef9a7294f917d50">Canal</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> <link linkend="_struct_timer___config_1a809be16fd63b80aa0c9750e8eee535a2">Modo</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link> <link linkend="_struct_timer___config_1a317cb34836247d714d8e910d014fb35b">IT</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_timer___config_1a773cdf1a90139f6d6c52601303fa6af0">Tiempo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Estructura tipo para la definicion de la configuracion del timer. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_timer___config_1a2f88d3573249a5759ef9a7294f917d50"/><section>
+    <title>Canal</title>
+<indexterm><primary>Canal</primary><secondary>Timer_Config</secondary></indexterm>
+<indexterm><primary>Timer_Config</primary><secondary>Canal</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> Canal</computeroutput></para>
+<para>Canal del time rusadp </para>
+</section>
+<anchor xml:id="_struct_timer___config_1a317cb34836247d714d8e910d014fb35b"/><section>
+    <title>IT</title>
+<indexterm><primary>IT</primary><secondary>Timer_Config</secondary></indexterm>
+<indexterm><primary>Timer_Config</primary><secondary>IT</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link> IT</computeroutput></para>
+<para>Seleccion uso interrupcion </para>
+</section>
+<anchor xml:id="_struct_timer___config_1a809be16fd63b80aa0c9750e8eee535a2"/><section>
+    <title>Modo</title>
+<indexterm><primary>Modo</primary><secondary>Timer_Config</secondary></indexterm>
+<indexterm><primary>Timer_Config</primary><secondary>Modo</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> Modo</computeroutput></para>
+<para>Modo de trabajo del timer </para>
+</section>
+<anchor xml:id="_struct_timer___config_1a773cdf1a90139f6d6c52601303fa6af0"/><section>
+    <title>Tiempo</title>
+<indexterm><primary>Tiempo</primary><secondary>Timer_Config</secondary></indexterm>
+<indexterm><primary>Timer_Config</primary><secondary>Tiempo</secondary></indexterm>
+<para><computeroutput>uint16_t Tiempo</computeroutput></para>
+<para>Tiempo contaje </para>
+</section>
+<anchor xml:id="_struct_timer___config_1a1497343df3acd025a715f8d238de0e0c"/><section>
+    <title>Timer</title>
+<indexterm><primary>Timer</primary><secondary>Timer_Config</secondary></indexterm>
+<indexterm><primary>Timer_Config</primary><secondary>Timer</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> <link linkend="_struct_timer">Timer</link></computeroutput></para>
+<para><link linkend="_struct_timer">Timer</link> fisico usado </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Api/N_HAL/Timer/<link linkend="__timer___config_8h">Timer_Config.h</link></section>
+</section>

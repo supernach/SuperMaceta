@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_timer" xml:lang="es">
+<title>Referencia de la Estructura Timer</title>
+<indexterm><primary>Timer</primary></indexterm>
+<para>
+
+<para>Estructura tipo con las acciones del timer. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Timer.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3d11342883e62986684fbc936ff0ca5b">Timer_Config_t</link> <link linkend="_struct_timer_1a3a5bc11b443112d63b5ae3e5741e1dec">Config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Estructura tipo con las acciones del timer. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3d11342883e62986684fbc936ff0ca5b">Timer_Config_t</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_timer_1a3a5bc11b443112d63b5ae3e5741e1dec"/><section>
+    <title>Config</title>
+<indexterm><primary>Config</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>Config</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3d11342883e62986684fbc936ff0ca5b">Timer_Config_t</link> Config</computeroutput></para>
+<para>Configuracion del timer </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Api/N_HAL/Timer/<link linkend="__timer_8h">Timer.h</link></section>
+</section>

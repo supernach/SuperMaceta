@@ -97,14 +97,14 @@ typedef RS485_Config_t* RS485_Config_t_ptr;
 */
 struct UART_Config
 {
-	UART1_StopBits_TypeDef StopBit;
-	UART1_Parity_TypeDef Paridad;
-	UART1_WordLength_TypeDef Bits;
-	uint32_t Baudios;
-	UART1_Mode_TypeDef Modo;
-	UART1_IT_TypeDef TipoInterrupcion;
-	Gpio_Config_t P_RX;
-	Gpio_Config_t P_TX;
+	UART1_StopBits_TypeDef StopBit; /**<  */
+	UART1_Parity_TypeDef Paridad; /**<  */
+	UART1_WordLength_TypeDef Bits; /**<  */
+	uint32_t Baudios; /**<  */
+	UART1_Mode_TypeDef Modo; /**<  */
+	UART1_IT_TypeDef TipoInterrupcion; /**<  */
+	Gpio_Config_t P_RX; /**<  */
+	Gpio_Config_t P_TX; /**<  */
 };
 
 /**
@@ -115,7 +115,7 @@ struct UART_Config
 */
 struct RS485_Config
 {
-	struct UART_Config UART;
+	struct UART_Config UART; /**<  */
 };
 
 /******************************************************************************

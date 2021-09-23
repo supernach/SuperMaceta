@@ -72,6 +72,10 @@
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/** @addtogroup TYPEDEF
+  * @{
+  */
+	
 /**
 * @typedef Timer_t
 * @brief Tipo definido para manejar el timer
@@ -88,9 +92,16 @@ typedef struct Timer Timer_t;
 */
 typedef Timer_t* Timer_t_ptr;
 
+/**
+  * @}
+*/
 /******************************************************************************
 * Struct
 *******************************************************************************/
+/** @addtogroup STRUCT
+  * @{
+  */
+
 /**
 * @struct Timer
 * @brief Estructura tipo con las acciones del timer
@@ -102,6 +113,9 @@ struct Timer
 	Timer_Config_t Config;	/**< Configuracion del timer */
 };
 
+/**
+  * @}
+*/
 /******************************************************************************
 * Variables
 *******************************************************************************/
@@ -119,9 +133,17 @@ struct Timer
 extern "C"{
 #endif
 
+/** @addtogroup Funciones Publicas
+  * @{
+  */
+
 void Timer_Init( Timer_t_ptr timer );
 void Timer_Config_Init( Timer_Config_t_ptr timerConfig, Timer_Numero_e timer, Timer_Canal_e canal, Timer_Modo_e modo, Timer_Interrupcion_e it, uint16_t tiempo );
 void Timer_DeInit( Timer_t_ptr timer );
+
+/**
+  * @}
+*/
 
 #ifdef __cplusplus
 } // extern "C"

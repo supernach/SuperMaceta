@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_213fb74e3124e453331ab488f455f33a" xml:lang="es">
+<title>Referencia del directorio Api/N_HAL/Utils</title>
+<indexterm><primary>Referencia del directorio Api/N_HAL/Utils</primary></indexterm>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="_utils_8h">utils.h</link></para>
+
+<para>Define distintas funciones, macros utiles. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

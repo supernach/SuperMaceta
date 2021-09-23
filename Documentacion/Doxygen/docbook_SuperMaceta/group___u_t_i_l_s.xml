@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_t_i_l_s" xml:lang="es">
+<title>UTILS</title>
+<indexterm><primary>UTILS</primary></indexterm>
+<simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_t_i_l_s_1ga6ebe466e477d394ca5bb309b35b6bc39">FCLK</link>   16000000</para>
+
+<para>Definir en Hz la frecuencia de trabajo del reloj. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_t_i_l_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>   (void*)0</para>
+
+<para>Macro Null para punteros. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_t_i_l_s_1ga529b7044c999fa70ae7bc878a6d4946c">IS_NULL</link>(val)   ((val == <link linkend="_group___u_t_i_l_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>) ? true : false)</para>
+
+<para>Macro para comprobar punteros nulos. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;defines&apos;</title>
+<anchor xml:id="_group___u_t_i_l_s_1ga6ebe466e477d394ca5bb309b35b6bc39"/><section>
+    <title>FCLK</title>
+<indexterm><primary>FCLK</primary><secondary>UTILS</secondary></indexterm>
+<indexterm><primary>UTILS</primary><secondary>FCLK</secondary></indexterm>
+<para><computeroutput>#define FCLK   16000000</computeroutput></para><para>
+
+<para>Definir en Hz la frecuencia de trabajo del reloj. </para>
+</para>
+
+<para>Velocidad frecuencia cpu(depende de la configuracion) </para>
+</section>
+<anchor xml:id="_group___u_t_i_l_s_1ga529b7044c999fa70ae7bc878a6d4946c"/><section>
+    <title>IS_NULL</title>
+<indexterm><primary>IS_NULL</primary><secondary>UTILS</secondary></indexterm>
+<indexterm><primary>UTILS</primary><secondary>IS_NULL</secondary></indexterm>
+<para><computeroutput>#define IS_NULL( val)   ((val == <link linkend="_group___u_t_i_l_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>) ? true : false)</computeroutput></para><para>
+
+<para>Macro para comprobar punteros nulos. </para>
+</para>
+
+<para>Chequeo puntero nulo Comprobacion que esta establecida la velocidad en Hz del reloj </para>
+</section>
+<anchor xml:id="_group___u_t_i_l_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4"/><section>
+    <title>NULL</title>
+<indexterm><primary>NULL</primary><secondary>UTILS</secondary></indexterm>
+<indexterm><primary>UTILS</primary><secondary>NULL</secondary></indexterm>
+<para><computeroutput>#define NULL   (void*)0</computeroutput></para><para>
+
+<para>Macro Null para punteros. </para>
+</para>
+
+<para>Definicion de puntero nulo </para>
+</section>
+</section>
+</section>

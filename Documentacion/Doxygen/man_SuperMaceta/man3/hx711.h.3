@@ -1,0 +1,96 @@
+.TH "Drivers/HX711/hx711.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/HX711/hx711.h \- Configura y proporciona acceso a la lectura del sensor adc de 24 bits\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <utils\&.h>\fP
+.br
+\fC#include <gpio\&.h>\fP
+.br
+\fC#include <timeout\&.h>\fP
+.br
+
+.SS "Estructuras de datos"
+
+.in +1c
+.ti -1c
+.RI "struct \fBHX711_Datos\fP"
+.br
+.RI "Contiene los datos que podemos obtener dle hx711\&. "
+.ti -1c
+.RI "struct \fBHX711_Config\fP"
+.br
+.RI "Contiene elementos de configuracion para el hx711 y sus funciones\&. "
+.ti -1c
+.RI "struct \fBHX711\fP"
+.br
+.RI "Objeto principal para interactuar con el hx711\&. "
+.in -1c
+.SS "typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBHX711\fP \fBHX711_t\fP"
+.br
+.RI "Crea un tipo de dato \fBHX711\fP para trabajar sobre el Contiene toda la funcionalidad del sensor\&. "
+.ti -1c
+.RI "typedef struct \fBHX711_Config\fP \fBHX711_Config_t\fP"
+.br
+.RI "Tipo de dato para definir la configuracion del hx711\&. "
+.ti -1c
+.RI "typedef struct \fBHX711_Datos\fP \fBHX711_Datos_t\fP"
+.br
+.RI "Tipo de dato para definir la informacion a almacenar\&. "
+.ti -1c
+.RI "typedef uint16_t(* \fBHX711_fPtr\fP) (\fBHX711_t\fP *)"
+.br
+.ti -1c
+.RI "typedef \fBHX711_t\fP * \fBHX711_t_ptr\fP"
+.br
+.RI "Puntero al tipo HX711_t\&. "
+.ti -1c
+.RI "typedef \fBHX711_Datos_t\fP * \fBHX711_Datos_t_ptr\fP"
+.br
+.RI "Puntero al tipo HX711_t\&. "
+.ti -1c
+.RI "typedef \fBHX711_Config_t\fP * \fBHX711_Config_t_ptr\fP"
+.br
+.RI "Puntero al tipo HX711_t\&. "
+.in -1c
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHX711_Estado_e\fP { \fBINICIALIZADO\fP, \fBSINVALORCONVERSION\fP, \fBSLEEP\fP, \fBNUEVA_LECTURA\fP, \fBTIMEOUT\fP }"
+.br
+.RI "Estados en los que puede encontrarse el \fBHX711\fP\&. "
+.ti -1c
+.RI "enum \fBHX711_Ganancia_e\fP { \fBCHANNELA_128\fP, \fBCHANNELA_64\fP, \fBCHANNELB_32\fP }"
+.br
+.RI "La ganancia que queremos definir para las lecturas\&. "
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBHX711_Init\fP (\fBHX711_t_ptr\fP hx711, \fBHX711_fPtr\fP Lectura, \fBHX711_fPtr\fP Tarar, \fBTimeout_t_ptr\fP \fBTimeout\fP)"
+.br
+.ti -1c
+.RI "uint16_t \fBhx711_Lectura\fP (\fBHX711_t_ptr\fP hx711)"
+.br
+.ti -1c
+.RI "uint16_t \fBhx711_Tarar\fP (\fBHX711_t_ptr\fP hx711)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Configura y proporciona acceso a la lectura del sensor adc de 24 bits\&. 
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

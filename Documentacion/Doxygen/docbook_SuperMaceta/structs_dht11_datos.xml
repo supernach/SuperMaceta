@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs_dht11_datos" xml:lang="es">
+<title>Referencia de la Estructura sDht11Datos</title>
+<indexterm><primary>sDht11Datos</primary></indexterm>
+<para>
+
+<para>Define la composicion de datos del sensor. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;dht11.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> <link linkend="_structs_dht11_datos_1a15cb01bf978cd731fa95c61294142eec">UltimaLectura</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link> <link linkend="_structs_dht11_datos_1a2e30c2118a8d354382eda11133bec2f9">Estado</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Define la composicion de datos del sensor. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> </para>
+
+<para><link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_structs_dht11_datos_1a2e30c2118a8d354382eda11133bec2f9"/><section>
+    <title>Estado</title>
+<indexterm><primary>Estado</primary><secondary>sDht11Datos</secondary></indexterm>
+<indexterm><primary>sDht11Datos</primary><secondary>Estado</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link> Estado</computeroutput></para>
+<para>Estado del sensor </para>
+</section>
+<anchor xml:id="_structs_dht11_datos_1a15cb01bf978cd731fa95c61294142eec"/><section>
+    <title>UltimaLectura</title>
+<indexterm><primary>UltimaLectura</primary><secondary>sDht11Datos</secondary></indexterm>
+<indexterm><primary>sDht11Datos</primary><secondary>UltimaLectura</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> UltimaLectura</computeroutput></para>
+<para>Buffer de la ultima lectura </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Drivers/DHT11/<link linkend="_dht11_8h">dht11.h</link></section>
+</section>

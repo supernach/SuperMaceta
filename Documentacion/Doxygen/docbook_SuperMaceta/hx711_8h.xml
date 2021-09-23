@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_hx711_8h" xml:lang="es">
+<title>Referencia del Archivo Drivers/HX711/hx711.h</title>
+<indexterm><primary>Drivers/HX711/hx711.h</primary></indexterm>
+<para>
+
+<para>Configura y proporciona acceso a la lectura del sensor adc de 24 bits. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;utils.h&gt;
+#include &lt;gpio.h&gt;
+#include &lt;timeout.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_h_x711___datos">HX711_Datos</link></para>
+
+<para>Contiene los datos que podemos obtener dle hx711. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_x711___config">HX711_Config</link></para>
+
+<para>Contiene elementos de configuracion para el hx711 y sus funciones. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_x711">HX711</link></para>
+
+<para>Objeto principal para interactuar con el hx711. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_h_x711">HX711</link> <link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link></para>
+
+<para>Crea un tipo de dato <link linkend="_struct_h_x711">HX711</link> para trabajar sobre el Contiene toda la funcionalidad del sensor. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_h_x711___config">HX711_Config</link> <link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link></para>
+
+<para>Tipo de dato para definir la configuracion del hx711. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_h_x711___datos">HX711_Datos</link> <link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link></para>
+
+<para>Tipo de dato para definir la informacion a almacenar. </para>
+</listitem>
+            <listitem><para>typedef uint16_t(* <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link>) (<link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link> *)</para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link> * <link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link></para>
+
+<para>Puntero al tipo HX711_t. </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___typedef_1ga0b080b3cf8bfd49006abf285f711b889">HX711_Datos_t</link> * <link linkend="_group___punteros_1gacd5c6f1bb5950aaa81bf97d3c2556112">HX711_Datos_t_ptr</link></para>
+
+<para>Puntero al tipo HX711_t. </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___typedef_1gaedf0be3fefff74aa155fe1f371df81a8">HX711_Config_t</link> * <link linkend="_group___punteros_1gaf7666f28c15bcd886c56feea5977864e">HX711_Config_t_ptr</link></para>
+
+<para>Puntero al tipo HX711_t. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumeraciones    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link> { 
+<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">INICIALIZADO</link>
+, <link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">SINVALORCONVERSION</link>
+, <link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">SLEEP</link>
+, <link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">NUEVA_LECTURA</link>
+, 
+<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">TIMEOUT</link>
+ }</para>
+
+<para>Estados en los que puede encontrarse el <link linkend="_struct_h_x711">HX711</link>. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link> { <link linkend="_group___enum_1ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">CHANNELA_128</link>
+, <link linkend="_group___enum_1ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">CHANNELA_64</link>
+, <link linkend="_group___enum_1ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">CHANNELB_32</link>
+ }</para>
+
+<para>La ganancia que queremos definir para las lecturas. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___funciones_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Lectura, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Tarar, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link>)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___funciones_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___funciones_1gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Configura y proporciona acceso a la lectura del sensor adc de 24 bits. </para>
+</section>
+</section>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_timeout" xml:lang="es">
+<title>Referencia de la Estructura Timeout</title>
+<indexterm><primary>Timeout</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Timeout.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga2476c4fb37cb540da0dd2e1a2eaf6260">Timeout_Config_t</link> <link linkend="_struct_timeout_1a32ea46dd112055146535dad780bfcec2">Config</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096">Timeout_Estado_e</link> <link linkend="_struct_timeout_1a4dd567b97a872fc1b735cee73e5bea39">Estado</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_timeout_1a1406844033393bc6ee9930acd9d13014">ValorDesborde</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_timeout_1a32ea46dd112055146535dad780bfcec2"/><section>
+    <title>Config</title>
+<indexterm><primary>Config</primary><secondary>Timeout</secondary></indexterm>
+<indexterm><primary>Timeout</primary><secondary>Config</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga2476c4fb37cb540da0dd2e1a2eaf6260">Timeout_Config_t</link> Config</computeroutput></para></section>
+<anchor xml:id="_struct_timeout_1a4dd567b97a872fc1b735cee73e5bea39"/><section>
+    <title>Estado</title>
+<indexterm><primary>Estado</primary><secondary>Timeout</secondary></indexterm>
+<indexterm><primary>Timeout</primary><secondary>Estado</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096">Timeout_Estado_e</link> Estado</computeroutput></para></section>
+<anchor xml:id="_struct_timeout_1a1406844033393bc6ee9930acd9d13014"/><section>
+    <title>ValorDesborde</title>
+<indexterm><primary>ValorDesborde</primary><secondary>Timeout</secondary></indexterm>
+<indexterm><primary>Timeout</primary><secondary>ValorDesborde</secondary></indexterm>
+<para><computeroutput>uint16_t ValorDesborde</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Api/TIMEOUT/<link linkend="__timeout_8h">Timeout.h</link></section>
+</section>

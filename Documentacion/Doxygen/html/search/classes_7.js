@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uart_5fconfig_0',['UART_Config',['../struct_u_a_r_t___config.html',1,'']]]
+  ['sdht11_5fsi_0',['sDht11_SI',['../structs_dht11___s_i.html',1,'']]],
+  ['sdht11datos_1',['sDht11Datos',['../structs_dht11_datos.html',1,'']]]
 ];

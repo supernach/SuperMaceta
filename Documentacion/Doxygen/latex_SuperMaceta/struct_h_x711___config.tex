@@ -1,0 +1,80 @@
+\hypertarget{struct_h_x711___config}{}\doxysection{Referencia de la Estructura HX711\+\_\+\+Config}
+\label{struct_h_x711___config}\index{HX711\_Config@{HX711\_Config}}
+
+
+Contiene elementos de configuracion para el hx711 y sus funciones.  
+
+
+
+
+{\ttfamily \#include $<$hx711.\+h$>$}
+
+\doxysubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} \mbox{\hyperlink{struct_h_x711___config_adecab8ec6694738b9fc07a17e9ea60f5}{DOUT}}
+\item 
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} \mbox{\hyperlink{struct_h_x711___config_ad23f57ec814bea3301f6271bc978f3c3}{PD\+\_\+\+SCK}}
+\item 
+\mbox{\hyperlink{group___enum_gae933250036608b3d14c31720968d5bad}{HX711\+\_\+\+Ganancia\+\_\+e}} \mbox{\hyperlink{struct_h_x711___config_a31842012140e37a11cbca628bd760dab}{Ganancia}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_h_x711___config_ab4822d50ce6c66444969a14e37fea3b7}{Valor\+Conversion}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_h_x711___config_a22ce79c6f2694de604942b6ceb43c01a}{Valor\+Zero}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_h_x711___config_afd4d615b3ad3796d58ef0ff2402c6627}{Valor\+Tara}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Contiene elementos de configuracion para el hx711 y sus funciones. 
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} 
+
+\mbox{\hyperlink{group___enum_gae933250036608b3d14c31720968d5bad}{HX711\+\_\+\+Ganancia\+\_\+e}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentación de los campos}
+\mbox{\Hypertarget{struct_h_x711___config_adecab8ec6694738b9fc07a17e9ea60f5}\label{struct_h_x711___config_adecab8ec6694738b9fc07a17e9ea60f5}} 
+\index{HX711\_Config@{HX711\_Config}!DOUT@{DOUT}}
+\index{DOUT@{DOUT}!HX711\_Config@{HX711\_Config}}
+\doxysubsubsection{\texorpdfstring{DOUT}{DOUT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} DOUT}
+
+Pin DOUT del hx711. Por aqui recibimos info \mbox{\Hypertarget{struct_h_x711___config_a31842012140e37a11cbca628bd760dab}\label{struct_h_x711___config_a31842012140e37a11cbca628bd760dab}} 
+\index{HX711\_Config@{HX711\_Config}!Ganancia@{Ganancia}}
+\index{Ganancia@{Ganancia}!HX711\_Config@{HX711\_Config}}
+\doxysubsubsection{\texorpdfstring{Ganancia}{Ganancia}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___enum_gae933250036608b3d14c31720968d5bad}{HX711\+\_\+\+Ganancia\+\_\+e}} Ganancia}
+
+Ganacia que queremos para el hx711 \mbox{\Hypertarget{struct_h_x711___config_ad23f57ec814bea3301f6271bc978f3c3}\label{struct_h_x711___config_ad23f57ec814bea3301f6271bc978f3c3}} 
+\index{HX711\_Config@{HX711\_Config}!PD\_SCK@{PD\_SCK}}
+\index{PD\_SCK@{PD\_SCK}!HX711\_Config@{HX711\_Config}}
+\doxysubsubsection{\texorpdfstring{PD\_SCK}{PD\_SCK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} PD\+\_\+\+SCK}
+
+Pin PD\+\_\+\+SCK del hx711. Se�al de reloj para desplazar bits leidos \mbox{\Hypertarget{struct_h_x711___config_ab4822d50ce6c66444969a14e37fea3b7}\label{struct_h_x711___config_ab4822d50ce6c66444969a14e37fea3b7}} 
+\index{HX711\_Config@{HX711\_Config}!ValorConversion@{ValorConversion}}
+\index{ValorConversion@{ValorConversion}!HX711\_Config@{HX711\_Config}}
+\doxysubsubsection{\texorpdfstring{ValorConversion}{ValorConversion}}
+{\footnotesize\ttfamily uint16\+\_\+t Valor\+Conversion}
+
+Valor de calibracion con peso conocido. Usado para calcular respuesta lectura TODO\+: Guardar en eeprom \mbox{\Hypertarget{struct_h_x711___config_afd4d615b3ad3796d58ef0ff2402c6627}\label{struct_h_x711___config_afd4d615b3ad3796d58ef0ff2402c6627}} 
+\index{HX711\_Config@{HX711\_Config}!ValorTara@{ValorTara}}
+\index{ValorTara@{ValorTara}!HX711\_Config@{HX711\_Config}}
+\doxysubsubsection{\texorpdfstring{ValorTara}{ValorTara}}
+{\footnotesize\ttfamily uint16\+\_\+t Valor\+Tara}
+
+Valor guardado al ejecutar la funcion de taraje \mbox{\Hypertarget{struct_h_x711___config_a22ce79c6f2694de604942b6ceb43c01a}\label{struct_h_x711___config_a22ce79c6f2694de604942b6ceb43c01a}} 
+\index{HX711\_Config@{HX711\_Config}!ValorZero@{ValorZero}}
+\index{ValorZero@{ValorZero}!HX711\_Config@{HX711\_Config}}
+\doxysubsubsection{\texorpdfstring{ValorZero}{ValorZero}}
+{\footnotesize\ttfamily uint32\+\_\+t Valor\+Zero}
+
+Valor unico de cada grupo de 4 celulas de carga. Grabado en cada unidad TODO\+:Guardar en eeprom y por programa. No modificable 
+
+La documentación para esta estructura fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+HX711/\mbox{\hyperlink{hx711_8h}{hx711.\+h}}\end{DoxyCompactItemize}

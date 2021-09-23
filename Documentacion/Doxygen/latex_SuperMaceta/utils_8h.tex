@@ -1,0 +1,33 @@
+\hypertarget{utils_8h}{}\doxysection{Referencia del Archivo Api/\+N\+\_\+\+HAL/\+Utils/utils.h}
+\label{utils_8h}\index{Api/N\_HAL/Utils/utils.h@{Api/N\_HAL/Utils/utils.h}}
+
+
+Define distintas funciones, macros utiles.  
+
+
+{\ttfamily \#include $<$stm8s.\+h$>$}\newline
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s_ga6ebe466e477d394ca5bb309b35b6bc39}{FCLK}}~16000000
+\begin{DoxyCompactList}\small\item\em Definir en Hz la frecuencia de trabajo del reloj. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}~(void$\ast$)0
+\begin{DoxyCompactList}\small\item\em Macro Null para punteros. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s_ga529b7044c999fa70ae7bc878a6d4946c}{IS\+\_\+\+NULL}}(val)~((val == \mbox{\hyperlink{group___u_t_i_l_s_ga070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) ? true \+: false)
+\begin{DoxyCompactList}\small\item\em Macro para comprobar punteros nulos. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{utils_8h_a5a9593f5765effd9a2bd5126034e3d4f}{T\+\_\+\+COUNT}}(x)~(( x $\ast$ (\mbox{\hyperlink{group___u_t_i_l_s_ga6ebe466e477d394ca5bb309b35b6bc39}{FCLK}} / 1000000\+UL) )-\/3)/3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Define distintas funciones, macros utiles. 
+
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{utils_8h_a5a9593f5765effd9a2bd5126034e3d4f}\label{utils_8h_a5a9593f5765effd9a2bd5126034e3d4f}} 
+\index{utils.h@{utils.h}!T\_COUNT@{T\_COUNT}}
+\index{T\_COUNT@{T\_COUNT}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{T\_COUNT}{T\_COUNT}}
+{\footnotesize\ttfamily \#define T\+\_\+\+COUNT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(( x $\ast$ (\mbox{\hyperlink{group___u_t_i_l_s_ga6ebe466e477d394ca5bb309b35b6bc39}{FCLK}} / 1000000\+UL) )-\/3)/3)}
+

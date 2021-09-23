@@ -1,7 +1,10 @@
 var annotated_dup =
 [
+    [ "Buffer_Tramas", "struct_buffer___tramas.html", "struct_buffer___tramas" ],
     [ "DHT11", "struct_d_h_t11.html", "struct_d_h_t11" ],
     [ "DHT11_Config", "struct_d_h_t11___config.html", "struct_d_h_t11___config" ],
+    [ "FSM_Trama_Paso", "struct_f_s_m___trama___paso.html", "struct_f_s_m___trama___paso" ],
+    [ "FSM_Trama_RX", "struct_f_s_m___trama___r_x.html", "struct_f_s_m___trama___r_x" ],
     [ "Gpio_Config", "struct_gpio___config.html", "struct_gpio___config" ],
     [ "HX711", "struct_h_x711.html", "struct_h_x711" ],
     [ "HX711_Config", "struct_h_x711___config.html", "struct_h_x711___config" ],
@@ -9,6 +12,7 @@ var annotated_dup =
     [ "interrupt_vector", "structinterrupt__vector.html", "structinterrupt__vector" ],
     [ "RS485", "struct_r_s485.html", "struct_r_s485" ],
     [ "RS485_Config", "struct_r_s485___config.html", "struct_r_s485___config" ],
+    [ "RS485_Flags_u", "union_r_s485___flags__u.html", "union_r_s485___flags__u" ],
     [ "RS485_Orden", "struct_r_s485___orden.html", "struct_r_s485___orden" ],
     [ "sDht11_SI", "structs_dht11___s_i.html", "structs_dht11___s_i" ],
     [ "sDht11Datos", "structs_dht11_datos.html", "structs_dht11_datos" ],

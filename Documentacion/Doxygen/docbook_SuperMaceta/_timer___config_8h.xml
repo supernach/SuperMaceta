@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer___config_8h" xml:lang="es">
+<title>Referencia del Archivo Api/N_HAL/Timer/Timer_Config.h</title>
+<indexterm><primary>Api/N_HAL/Timer/Timer_Config.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_timer___config">Timer_Config</link></para>
+
+<para>Estructura tipo para la definicion de la configuracion del timer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_timer___config">Timer_Config</link> <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3d11342883e62986684fbc936ff0ca5b">Timer_Config_t</link></para>
+
+<para>Tipo que contiene distintas opciones de configuracion del timer. </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3d11342883e62986684fbc936ff0ca5b">Timer_Config_t</link> * <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga56e89c573a58b16a925737f7bece76ff">Timer_Config_t_ptr</link></para>
+
+<para>Puntero a la estructura de ocnfiguracion del timer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumeraciones    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> { <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</link>
+ }</para>
+
+<para>Distintos modos en los que puede trabajar el timer. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link> { <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</link>
+, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga3f543feccade77b24ffa4a0d88a683f8a0d077f5b932ce05e5b9f30c6087a2f31">NO</link>
+ }</para>
+
+<para>Definimos si el timer usa interrupcion. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> { <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</link>
+ }</para>
+
+<para>Numero del timer utilizado. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> { <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</link>
+ }</para>
+
+<para>Canal del timer utilizado. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

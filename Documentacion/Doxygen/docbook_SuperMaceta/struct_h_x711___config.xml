@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_h_x711___config" xml:lang="es">
+<title>Referencia de la Estructura HX711_Config</title>
+<indexterm><primary>HX711_Config</primary></indexterm>
+<para>
+
+<para>Contiene elementos de configuracion para el hx711 y sus funciones. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;hx711.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> <link linkend="_struct_h_x711___config_1adecab8ec6694738b9fc07a17e9ea60f5">DOUT</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> <link linkend="_struct_h_x711___config_1ad23f57ec814bea3301f6271bc978f3c3">PD_SCK</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link> <link linkend="_struct_h_x711___config_1a31842012140e37a11cbca628bd760dab">Ganancia</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_h_x711___config_1ab4822d50ce6c66444969a14e37fea3b7">ValorConversion</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_h_x711___config_1a22ce79c6f2694de604942b6ceb43c01a">ValorZero</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_h_x711___config_1afd4d615b3ad3796d58ef0ff2402c6627">ValorTara</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Contiene elementos de configuracion para el hx711 y sus funciones. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> </para>
+
+<para><link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_h_x711___config_1adecab8ec6694738b9fc07a17e9ea60f5"/><section>
+    <title>DOUT</title>
+<indexterm><primary>DOUT</primary><secondary>HX711_Config</secondary></indexterm>
+<indexterm><primary>HX711_Config</primary><secondary>DOUT</secondary></indexterm>
+<para><computeroutput><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> DOUT</computeroutput></para>
+<para>Pin DOUT del hx711. Por aqui recibimos info </para>
+</section>
+<anchor xml:id="_struct_h_x711___config_1a31842012140e37a11cbca628bd760dab"/><section>
+    <title>Ganancia</title>
+<indexterm><primary>Ganancia</primary><secondary>HX711_Config</secondary></indexterm>
+<indexterm><primary>HX711_Config</primary><secondary>Ganancia</secondary></indexterm>
+<para><computeroutput><link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link> Ganancia</computeroutput></para>
+<para>Ganacia que queremos para el hx711 </para>
+</section>
+<anchor xml:id="_struct_h_x711___config_1ad23f57ec814bea3301f6271bc978f3c3"/><section>
+    <title>PD_SCK</title>
+<indexterm><primary>PD_SCK</primary><secondary>HX711_Config</secondary></indexterm>
+<indexterm><primary>HX711_Config</primary><secondary>PD_SCK</secondary></indexterm>
+<para><computeroutput><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> PD_SCK</computeroutput></para>
+<para>Pin PD_SCK del hx711. Se�al de reloj para desplazar bits leidos </para>
+</section>
+<anchor xml:id="_struct_h_x711___config_1ab4822d50ce6c66444969a14e37fea3b7"/><section>
+    <title>ValorConversion</title>
+<indexterm><primary>ValorConversion</primary><secondary>HX711_Config</secondary></indexterm>
+<indexterm><primary>HX711_Config</primary><secondary>ValorConversion</secondary></indexterm>
+<para><computeroutput>uint16_t ValorConversion</computeroutput></para>
+<para>Valor de calibracion con peso conocido. Usado para calcular respuesta lectura TODO: Guardar en eeprom </para>
+</section>
+<anchor xml:id="_struct_h_x711___config_1afd4d615b3ad3796d58ef0ff2402c6627"/><section>
+    <title>ValorTara</title>
+<indexterm><primary>ValorTara</primary><secondary>HX711_Config</secondary></indexterm>
+<indexterm><primary>HX711_Config</primary><secondary>ValorTara</secondary></indexterm>
+<para><computeroutput>uint16_t ValorTara</computeroutput></para>
+<para>Valor guardado al ejecutar la funcion de taraje </para>
+</section>
+<anchor xml:id="_struct_h_x711___config_1a22ce79c6f2694de604942b6ceb43c01a"/><section>
+    <title>ValorZero</title>
+<indexterm><primary>ValorZero</primary><secondary>HX711_Config</secondary></indexterm>
+<indexterm><primary>HX711_Config</primary><secondary>ValorZero</secondary></indexterm>
+<para><computeroutput>uint32_t ValorZero</computeroutput></para>
+<para>Valor unico de cada grupo de 4 celulas de carga. Grabado en cada unidad TODO:Guardar en eeprom y por programa. No modificable </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Drivers/HX711/<link linkend="_hx711_8h">hx711.h</link></section>
+</section>

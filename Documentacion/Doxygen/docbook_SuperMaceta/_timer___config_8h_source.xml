@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer___config_8h_source" xml:lang="es">
+<title>Timer_Config.h</title>
+<indexterm><primary>Api/N_HAL/Timer/Timer_Config.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;NHAL_TIMER_CONFIG_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;NHAL_TIMER_CONFIG_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Timer&#32;Config&#32;API</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Timer_Config.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;11/09/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;11/09/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+56 <emphasis role="comment">/******************************************************************************</emphasis>
+57 <emphasis role="comment">*&#32;Includes</emphasis>
+58 <emphasis role="comment">*******************************************************************************/</emphasis>
+59 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+60 
+61 <emphasis role="comment">/******************************************************************************</emphasis>
+62 <emphasis role="comment">*&#32;Constants</emphasis>
+63 <emphasis role="comment">*******************************************************************************/</emphasis>
+64 
+65 <emphasis role="comment">/******************************************************************************</emphasis>
+66 <emphasis role="comment">*&#32;Configuration</emphasis>
+67 <emphasis role="comment">*******************************************************************************/</emphasis>
+68 
+69 <emphasis role="comment">/******************************************************************************</emphasis>
+70 <emphasis role="comment">*&#32;Macros</emphasis>
+71 <emphasis role="comment">*******************************************************************************/</emphasis>
+72 
+73 <emphasis role="comment">/******************************************************************************</emphasis>
+74 <emphasis role="comment">*&#32;Typedefs</emphasis>
+75 <emphasis role="comment">*******************************************************************************/</emphasis>
+82 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_timer___config">Timer_Config</link>&#32;<link linkend="_struct_timer___config">Timer_Config_t</link>;
+83 
+84 
+91 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_timer___config">Timer_Config_t</link>*&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga56e89c573a58b16a925737f7bece76ff">Timer_Config_t_ptr</link>;
+92 
+99 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+100 {
+101 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</link>&#32;
+102 }<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link>;
+103 
+110 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+111 {
+112 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</link>,&#32;
+113 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga3f543feccade77b24ffa4a0d88a683f8a0d077f5b932ce05e5b9f30c6087a2f31">NO</link>&#32;&#32;
+114 }<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link>;
+115 
+122 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+123 {
+124 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</link>&#32;&#32;
+125 }<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link>;
+126 
+133 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+134 {
+135 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</link>&#32;&#32;
+136 }<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link>;
+137 
+138 <emphasis role="comment">/******************************************************************************</emphasis>
+139 <emphasis role="comment">*&#32;Struct</emphasis>
+140 <emphasis role="comment">*******************************************************************************/</emphasis>
+150 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_timer___config">Timer_Config</link>
+151 {
+152 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link>&#32;<link linkend="_struct_timer___config_1a1497343df3acd025a715f8d238de0e0c">Timer</link>;&#32;
+153 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link>&#32;<link linkend="_struct_timer___config_1a2f88d3573249a5759ef9a7294f917d50">Canal</link>;&#32;&#32;
+154 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link>&#32;<link linkend="_struct_timer___config_1a809be16fd63b80aa0c9750e8eee535a2">Modo</link>;&#32;&#32;
+155 &#32;&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link>&#32;<link linkend="_struct_timer___config_1a317cb34836247d714d8e910d014fb35b">IT</link>;&#32;&#32;
+156 &#32;&#32;uint16_t&#32;<link linkend="_struct_timer___config_1a773cdf1a90139f6d6c52601303fa6af0">Tiempo</link>;&#32;&#32;
+157 };
+158 
+159 <emphasis role="comment">/******************************************************************************</emphasis>
+160 <emphasis role="comment">*&#32;Variables</emphasis>
+161 <emphasis role="comment">*******************************************************************************/</emphasis>
+169 <emphasis role="comment">/******************************************************************************</emphasis>
+170 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+171 <emphasis role="comment">*******************************************************************************/</emphasis>
+172 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+173 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+174 <emphasis role="preprocessor">#endif</emphasis>
+175 
+176 
+177 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+178 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+179 <emphasis role="preprocessor">#endif&#32;</emphasis>
+180 
+181 <emphasis role="preprocessor">#endif</emphasis>
+182 
+</programlisting></section>

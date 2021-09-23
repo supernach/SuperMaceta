@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485___tramas_8h_source" xml:lang="es">
+<title>RS485_Tramas.h</title>
+<indexterm><primary>Communication/RS485/Tramas/RS485_Tramas.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;RS485_TRAMAS_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;RS485_TRAMAS_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;plantilla</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;plantilla.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;19/09/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;19/09/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+53 <emphasis role="comment">/******************************************************************************</emphasis>
+54 <emphasis role="comment">*&#32;Includes</emphasis>
+55 <emphasis role="comment">*******************************************************************************/</emphasis>
+56 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__r_s485___ordenes_8h">rs485_ordenes.h</link>&gt;</emphasis>
+58 
+59 <emphasis role="comment">/******************************************************************************</emphasis>
+60 <emphasis role="comment">*&#32;Constants</emphasis>
+61 <emphasis role="comment">*******************************************************************************/</emphasis>
+68 <emphasis role="preprocessor">#define&#32;RS485_BYTES_N_NODO&#32;2</emphasis>
+69 
+76 <emphasis role="preprocessor">#define&#32;RS485_BYTES_BUFFER_RX&#32;6</emphasis>
+77 
+78 <emphasis role="comment">/******************************************************************************</emphasis>
+79 <emphasis role="comment">*&#32;Configuration</emphasis>
+80 <emphasis role="comment">*******************************************************************************/</emphasis>
+81 
+82 <emphasis role="comment">/******************************************************************************</emphasis>
+83 <emphasis role="comment">*&#32;Macros</emphasis>
+84 <emphasis role="comment">*******************************************************************************/</emphasis>
+85 
+86 <emphasis role="comment">/******************************************************************************</emphasis>
+87 <emphasis role="comment">*&#32;Typedefs</emphasis>
+88 <emphasis role="comment">*******************************************************************************/</emphasis>
+95 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_trama___r_x">Trama_RX</link>&#32;<link linkend="_struct_trama___r_x">Trama_RX_t</link>;
+96 
+103 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_trama___t_x">Trama_TX</link>&#32;<link linkend="_struct_trama___t_x">Trama_TX_t</link>;
+104 
+111 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link>&#32;<link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST_t</link>;
+112 
+119 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_buffer___tramas">Buffer_Tramas</link>&#32;<link linkend="_struct_buffer___tramas">Buffer_Tramas_t</link>;
+120 
+121 <emphasis role="comment">/******************************************************************************</emphasis>
+122 <emphasis role="comment">*&#32;Struct</emphasis>
+123 <emphasis role="comment">*******************************************************************************/</emphasis>
+130 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link>
+131 {
+132 &#32;&#32;uint8_t&#32;<link linkend="_struct_f_s_m___trama___paso_1ae0a4146952a43da12563c30fc1042ccf">nPasoSiguiente</link>;
+133 &#32;&#32;uint8_t&#32;<link linkend="_struct_f_s_m___trama___paso_1a0c57063561d0957d4896ae6f34bba681">BytesaLeer</link>;
+134 &#32;&#32;uint8_t&#32;<link linkend="_struct_f_s_m___trama___paso_1a4b8239b88d69b31c908a262c797b7e37">nPaso</link>;
+135 };
+136 
+143 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link>
+144 {
+145 &#32;&#32;uint8_t&#32;<link linkend="_struct_f_s_m___trama___r_x_1a63b812daf24418afa2e73a0922e78466">pasoActual</link>;
+146 &#32;&#32;uint8_t&#32;<link linkend="_struct_f_s_m___trama___r_x_1ad84be988254ebb0b27867c02e7a1f792">transicion</link>;
+147 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link>&#32;<link linkend="_struct_f_s_m___trama___r_x_1aeda51b593dd7b390a2eb4ee632306f9d">LecturaNodo</link>;
+148 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link>&#32;<link linkend="_struct_f_s_m___trama___r_x_1add89c4cac675978097d93aa3f7a49d7e">LecturaOrdenDHT11</link>;
+149 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link>&#32;<link linkend="_struct_f_s_m___trama___r_x_1ad6967013ebcdd57783877d334fd599a8">LecturaOrdenHX711</link>;
+150 &#32;&#32;
+151 };
+158 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_trama___r_x">Trama_RX</link>
+159 {
+160 &#32;&#32;uint8_t&#32;<link linkend="_struct_trama___r_x_1adb18a96536c24cd7121e2891c2f7eeba">buffer</link>[<link linkend="_group___t_r_a_m_a_s_1gae5b324ccc7a9b31732d82e7265f9c4d8">RS485_BYTES_BUFFER_RX</link>];
+161 &#32;&#32;uint8_t&#32;<link linkend="_struct_trama___r_x_1a10da001df611cfc3d6d098db16132e03">ptrBuffer</link>;
+162 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link>&#32;<link linkend="_struct_trama___r_x_1a1f2f72cabd90cde4fb2cac9a7adbba16">Secuencia</link>;
+163 };
+164 
+171 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_trama___t_x">Trama_TX</link>
+172 {
+173 &#32;&#32;uint8_t&#32;<link linkend="_struct_trama___t_x_1ad24dd9eb2237619ac0cd8f5beddc89c2">nNodo</link>;
+174 &#32;&#32;uint32_t&#32;<link linkend="_struct_trama___t_x_1a142d9c6453e8dec0d428c2fd165bcaeb">LecturaDHT11</link>;
+175 &#32;&#32;uint32_t&#32;<link linkend="_struct_trama___t_x_1a668c320d0a6f9af5c547b8cf3016ba7b">LecturaHX711</link>;
+176 };
+177 
+184 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link>
+185 {
+186 &#32;&#32;uint8_t&#32;<link linkend="_struct_trama___b_r_o_a_d_c_a_s_t_1ad24dd9eb2237619ac0cd8f5beddc89c2">nNodo</link>;
+187 &#32;&#32;<link linkend="_struct_r_s485___orden">RS485_Orden_t</link>&#32;<link linkend="_struct_trama___b_r_o_a_d_c_a_s_t_1a21a25695a91b8b7aab613705a58afb02">Orden</link>;
+188 };
+189 
+196 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_buffer___tramas">Buffer_Tramas</link>
+197 {
+198 &#32;&#32;<link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST_t</link>&#32;<link linkend="_struct_buffer___tramas_1ae3ed419e1d3785150e1707ba04c1f090">Broadcast</link>;
+199 &#32;&#32;<link linkend="_struct_trama___t_x">Trama_TX_t</link>&#32;<link linkend="_struct_buffer___tramas_1aee544c3c3a3065aa65c9e72172c0ac04">Tx</link>;
+200 &#32;&#32;<link linkend="_struct_trama___r_x">Trama_RX_t</link>&#32;<link linkend="_struct_buffer___tramas_1a34cea0299c7f0e014476ea365b1379a9">Rx</link>;
+201 };
+202 &#32;&#32;
+203 
+204 <emphasis role="comment">/******************************************************************************</emphasis>
+205 <emphasis role="comment">*&#32;Variables</emphasis>
+206 <emphasis role="comment">*******************************************************************************/</emphasis>
+214 <emphasis role="comment">/******************************************************************************</emphasis>
+215 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+216 <emphasis role="comment">*******************************************************************************/</emphasis>
+217 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+218 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+219 <emphasis role="preprocessor">#endif</emphasis>
+220 
+221 
+222 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+223 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+224 <emphasis role="preprocessor">#endif&#32;</emphasis>
+225 
+226 <emphasis role="preprocessor">#endif</emphasis>
+227 
+</programlisting></section>

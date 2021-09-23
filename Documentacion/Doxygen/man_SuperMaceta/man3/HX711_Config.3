@@ -1,0 +1,65 @@
+.TH "HX711_Config" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HX711_Config \- Contiene elementos de configuracion para el hx711 y sus funciones\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hx711\&.h>\fP
+.SS "Campos de datos"
+
+.in +1c
+.ti -1c
+.RI "\fBGpio_Config_t\fP \fBDOUT\fP"
+.br
+.ti -1c
+.RI "\fBGpio_Config_t\fP \fBPD_SCK\fP"
+.br
+.ti -1c
+.RI "\fBHX711_Ganancia_e\fP \fBGanancia\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBValorConversion\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBValorZero\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBValorTara\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Contiene elementos de configuracion para el hx711 y sus funciones\&. 
+
+
+.PP
+\fBVer también\fP
+.RS 4
+\fBGpio_Config_t\fP 
+.PP
+\fBHX711_Ganancia_e\fP 
+.RE
+.PP
+
+.SH "Documentación de los campos"
+.PP 
+.SS "\fBGpio_Config_t\fP DOUT"
+Pin DOUT del hx711\&. Por aqui recibimos info 
+.SS "\fBHX711_Ganancia_e\fP Ganancia"
+Ganacia que queremos para el hx711 
+.SS "\fBGpio_Config_t\fP PD_SCK"
+Pin PD_SCK del hx711\&. Se�al de reloj para desplazar bits leidos 
+.SS "uint16_t ValorConversion"
+Valor de calibracion con peso conocido\&. Usado para calcular respuesta lectura TODO: Guardar en eeprom 
+.SS "uint16_t ValorTara"
+Valor guardado al ejecutar la funcion de taraje 
+.SS "uint32_t ValorZero"
+Valor unico de cada grupo de 4 celulas de carga\&. Grabado en cada unidad TODO:Guardar en eeprom y por programa\&. No modificable 
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

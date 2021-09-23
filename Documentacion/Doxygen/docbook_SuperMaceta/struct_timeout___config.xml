@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_timeout___config" xml:lang="es">
+<title>Referencia de la Estructura Timeout_Config</title>
+<indexterm><primary>Timeout_Config</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Timeout_Config.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> <link linkend="_struct_timeout___config_1a40590d52fff784f09dd27ba2964ce4e9">Timer</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link> <link linkend="_struct_timeout___config_1ac836715d9e14f241b095c91ee8eb8e9c">Notificacion</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link> <link linkend="_struct_timeout___config_1ad45ab02431ae55523fb5d10fa18965ed">ResetNotificacion</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_timeout___config_1ac836715d9e14f241b095c91ee8eb8e9c"/><section>
+    <title>Notificacion</title>
+<indexterm><primary>Notificacion</primary><secondary>Timeout_Config</secondary></indexterm>
+<indexterm><primary>Timeout_Config</primary><secondary>Notificacion</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link> Notificacion</computeroutput></para></section>
+<anchor xml:id="_struct_timeout___config_1ad45ab02431ae55523fb5d10fa18965ed"/><section>
+    <title>ResetNotificacion</title>
+<indexterm><primary>ResetNotificacion</primary><secondary>Timeout_Config</secondary></indexterm>
+<indexterm><primary>Timeout_Config</primary><secondary>ResetNotificacion</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link> ResetNotificacion</computeroutput></para></section>
+<anchor xml:id="_struct_timeout___config_1a40590d52fff784f09dd27ba2964ce4e9"/><section>
+    <title>Timer</title>
+<indexterm><primary>Timer</primary><secondary>Timeout_Config</secondary></indexterm>
+<indexterm><primary>Timeout_Config</primary><secondary>Timer</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> <link linkend="_struct_timer">Timer</link></computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Api/TIMEOUT/<link linkend="__timeout___config_8h">Timeout_Config.h</link></section>
+</section>

@@ -1,0 +1,67 @@
+\hypertarget{hx711_8h}{}\doxysection{Referencia del Archivo Drivers/\+HX711/hx711.h}
+\label{hx711_8h}\index{Drivers/HX711/hx711.h@{Drivers/HX711/hx711.h}}
+
+
+Configura y proporciona acceso a la lectura del sensor adc de 24 bits.  
+
+
+{\ttfamily \#include $<$utils.\+h$>$}\newline
+{\ttfamily \#include $<$gpio.\+h$>$}\newline
+{\ttfamily \#include $<$timeout.\+h$>$}\newline
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_x711___datos}{HX711\+\_\+\+Datos}}
+\begin{DoxyCompactList}\small\item\em Contiene los datos que podemos obtener dle hx711. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_h_x711___config}{HX711\+\_\+\+Config}}
+\begin{DoxyCompactList}\small\item\em Contiene elementos de configuracion para el hx711 y sus funciones. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_h_x711}{HX711}}
+\begin{DoxyCompactList}\small\item\em Objeto principal para interactuar con el hx711. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_h_x711}{HX711}} \mbox{\hyperlink{group___typedef_ga243fec3499adb318184d6dfc775d471d}{HX711\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Crea un tipo de dato \mbox{\hyperlink{struct_h_x711}{HX711}} para trabajar sobre el Contiene toda la funcionalidad del sensor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_h_x711___config}{HX711\+\_\+\+Config}} \mbox{\hyperlink{group___typedef_gaedf0be3fefff74aa155fe1f371df81a8}{HX711\+\_\+\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Tipo de dato para definir la configuracion del hx711. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_h_x711___datos}{HX711\+\_\+\+Datos}} \mbox{\hyperlink{group___typedef_ga0b080b3cf8bfd49006abf285f711b889}{HX711\+\_\+\+Datos\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Tipo de dato para definir la informacion a almacenar. \end{DoxyCompactList}\item 
+typedef uint16\+\_\+t($\ast$ \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}}) (\mbox{\hyperlink{group___typedef_ga243fec3499adb318184d6dfc775d471d}{HX711\+\_\+t}} $\ast$)
+\item 
+typedef \mbox{\hyperlink{group___typedef_ga243fec3499adb318184d6dfc775d471d}{HX711\+\_\+t}} $\ast$ \mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Puntero al tipo HX711\+\_\+t. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group___typedef_ga0b080b3cf8bfd49006abf285f711b889}{HX711\+\_\+\+Datos\+\_\+t}} $\ast$ \mbox{\hyperlink{group___punteros_gacd5c6f1bb5950aaa81bf97d3c2556112}{HX711\+\_\+\+Datos\+\_\+t\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Puntero al tipo HX711\+\_\+t. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group___typedef_gaedf0be3fefff74aa155fe1f371df81a8}{HX711\+\_\+\+Config\+\_\+t}} $\ast$ \mbox{\hyperlink{group___punteros_gaf7666f28c15bcd886c56feea5977864e}{HX711\+\_\+\+Config\+\_\+t\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Puntero al tipo HX711\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___enum_ga3b06dedcf428c2a447fb32b6338f594e}{HX711\+\_\+\+Estado\+\_\+e}} \{ \newline
+\mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2}{INICIALIZADO}}
+, \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99}{SINVALORCONVERSION}}
+, \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa}{SLEEP}}
+, \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855}{NUEVA\+\_\+\+LECTURA}}
+, \newline
+\mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b}{TIMEOUT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Estados en los que puede encontrarse el \mbox{\hyperlink{struct_h_x711}{HX711}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___enum_gae933250036608b3d14c31720968d5bad}{HX711\+\_\+\+Ganancia\+\_\+e}} \{ \mbox{\hyperlink{group___enum_ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0}{CHANNELA\+\_\+128}}
+, \mbox{\hyperlink{group___enum_ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6}{CHANNELA\+\_\+64}}
+, \mbox{\hyperlink{group___enum_ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8}{CHANNELB\+\_\+32}}
+ \}
+\begin{DoxyCompactList}\small\item\em La ganancia que queremos definir para las lecturas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___funciones_ga5e2f902a7b30390fa34d2bf2b05f0ef3}{HX711\+\_\+\+Init}} (\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}} hx711, \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}} Lectura, \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}} Tarar, \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} \mbox{\hyperlink{struct_timeout}{Timeout}})
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___funciones_ga324bf5567c5ec2e210404234fb5e5242}{hx711\+\_\+\+Lectura}} (\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}} hx711)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___funciones_gaecc0da5c8ae51a1eb3cb136c7c594a4f}{hx711\+\_\+\+Tarar}} (\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}} hx711)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Configura y proporciona acceso a la lectura del sensor adc de 24 bits. 
+

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_9dc94be79af48200060083eec0f4ee34" xml:lang="es">
+<title>Referencia del directorio Api/N_HAL/Timer</title>
+<indexterm><primary>Referencia del directorio Api/N_HAL/Timer</primary></indexterm>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__timer_8c">Timer.c</link></para>
+
+<para>Implementacion de las acciones del timer. </para>
+</listitem>
+            <listitem><para>archivo <link linkend="__timer_8h">Timer.h</link></para>
+
+<para>Define las acciones que se pueden realizar con el timer. Inicializacion, deinicializacion.. </para>
+</listitem>
+            <listitem><para>archivo <link linkend="__timer___config_8h">Timer_Config.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

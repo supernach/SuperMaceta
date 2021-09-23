@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_9c84df62130b51884dc356818c6ad5d1" xml:lang="es">
+<title>Referencia del directorio Communication</title>
+<indexterm><primary>Referencia del directorio Communication</primary></indexterm>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_6df338ba79b4d1e5a3bf04eae7d99899">RS485</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

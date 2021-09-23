@@ -1,0 +1,174 @@
+.TH "GPIO" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIO \- GPIO
+.SH SYNOPSIS
+.br
+.PP
+.SS "Módulos"
+
+.in +1c
+.ti -1c
+.RI "\fBGPIO_CONFIG\fP"
+.br
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBNHALgpio_Init\fP (\fBGpio_Config_t\fP *gpio)"
+.br
+.ti -1c
+.RI "bool \fBNHALgpio_Read\fP (\fBGpio_Config_t\fP *gpio)"
+.br
+.ti -1c
+.RI "void \fBNHALgpio_Write\fP (\fBGpio_Config_t\fP *gpio, bool estado)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "void NHALgpio_Init (\fBGpio_Config_t\fP * gpio)"
+\fBDescription:\fP 
+.PP
+Esta funcion inicializa la IO segun su declaracion
+.PP
+PRE-CONDITION: Clock habilitado PRE-CONDITION: Configuracion de la gpio creada
+.PP
+POST-CONDITION: La gpio esta inicializada a los valores indicados
+.PP
+\fBParámetros\fP
+.RS 4
+\fIConfiguracion\fP de la gpio
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+NHALgpio_Init( &gpio );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBGpio_Config_t\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  20/08/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "bool NHALgpio_Read (\fBGpio_Config_t\fP * gpio)"
+\fBDescription:\fP 
+.PP
+Esta funcion devuelve el estado de la gpio
+.PP
+PRE-CONDITION: La gpio ha sido configurada
+.PP
+POST-CONDITION: Obtenemos valor del estado de la gpio
+.PP
+\fBParámetros\fP
+.RS 4
+\fIConfiguracion\fP de la gpio
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+Estado de la gpio
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+if( NHALgpio_Read( &gpio ) )
+{
+  //Hacer algo
+}
+else
+{
+  //Hacer algo
+}
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBGpio_Config_t\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  20/08/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "void NHALgpio_Write (\fBGpio_Config_t\fP * gpio, bool estado)"
+\fBDescription:\fP 
+.PP
+Esta sobreescribe el estado logico de la gpio
+.PP
+PRE-CONDITION: La gpio ha sido configurada
+.PP
+POST-CONDITION: El estado logico de la gpio ha sido establecido
+.PP
+\fBParámetros\fP
+.RS 4
+\fIConfiguracion\fP de la gpio 
+.br
+\fIValor\fP logico de la gpio a establecer
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+NHALgpio_Write( &gpio, true );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBGpio_Config_t\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  20/08/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

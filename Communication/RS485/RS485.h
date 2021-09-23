@@ -5,7 +5,7 @@
 * Title                 :   RS485 COMM
 * Filename              :   RS485.h
 * Author                :   SuperNach
-* Origin Date           :   20/08/2021
+* Origin Date           :   20/09/2021
 * Version               :   1.0.0
 * Compiler              :   Cosmic C
 * Target                :   STM8
@@ -86,24 +86,24 @@ typedef struct RS485 RS485_t;
 typedef RS485_t* RS485_t_ptr;
 
 /**
-* @typedef RS485_t_ptr
+* @typedef RS485_Flags_u
 * @brief <descripcion>
 *
-* @see RS485_t*
+* @see 
 */
 typedef union
 {
-  uint8_t flag;
+  uint8_t flags; /**<  */
   struct flagBit
   {
-    uint8_t NuevaRecepcion : 1;
-    uint8_t Inicializado : 1;
-    uint8_t Standby : 1;
-    uint8_t bit3 : 1;
-    uint8_t bit4 : 1;
-    uint8_t bit5 : 1;
-    uint8_t bit6 : 1;
-    uint8_t bit7 : 1;
+    uint8_t NuevaRecepcion : 1; /**<  */
+    uint8_t Inicializado : 1; /**<  */
+    uint8_t Standby : 1; /**<  */
+    uint8_t bit3 : 1; /**<  */
+    uint8_t bit4 : 1; /**<  */
+    uint8_t bit5 : 1; /**<  */
+    uint8_t bit6 : 1; /**<  */
+    uint8_t bit7 : 1; /**<  */
   } bit;
 }RS485_Flags_u;
 
@@ -119,9 +119,9 @@ typedef union
 */
 struct RS485
 {
-	RS485_Config_t Config;
-	Buffer_Tramas_t Buffer;
-	RS485_Flags_u Flags;
+	RS485_Config_t Config; /**<  */
+	Buffer_Tramas_t Buffer; /**<  */
+	RS485_Flags_u Flags; /**<  */
 };
 
 /******************************************************************************

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structinterrupt__vector" xml:lang="es">
+<title>Referencia de la Estructura interrupt_vector</title>
+<indexterm><primary>interrupt_vector</primary></indexterm>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>unsigned char <link linkend="_structinterrupt__vector_1ace151797442d6a11380a2c211a59974f">interrupt_instruction</link></para>
+</listitem>
+            <listitem><para><link linkend="_stm8__interrupt__vector_8c_1a393c89fc1af62826fb348ca9bb431089">interrupt_handler_t</link> <link linkend="_structinterrupt__vector_1ae8b4b58330bd02e264e561e0e9dbc8a5">interrupt_handler</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_structinterrupt__vector_1ae8b4b58330bd02e264e561e0e9dbc8a5"/><section>
+    <title>interrupt_handler</title>
+<indexterm><primary>interrupt_handler</primary><secondary>interrupt_vector</secondary></indexterm>
+<indexterm><primary>interrupt_vector</primary><secondary>interrupt_handler</secondary></indexterm>
+<para><computeroutput><link linkend="_stm8__interrupt__vector_8c_1a393c89fc1af62826fb348ca9bb431089">interrupt_handler_t</link> interrupt_handler</computeroutput></para></section>
+<anchor xml:id="_structinterrupt__vector_1ace151797442d6a11380a2c211a59974f"/><section>
+    <title>interrupt_instruction</title>
+<indexterm><primary>interrupt_instruction</primary><secondary>interrupt_vector</secondary></indexterm>
+<indexterm><primary>interrupt_vector</primary><secondary>interrupt_instruction</secondary></indexterm>
+<para><computeroutput>unsigned char interrupt_instruction</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+<link linkend="_stm8__interrupt__vector_8c">stm8_interrupt_vector.c</link></section>
+</section>

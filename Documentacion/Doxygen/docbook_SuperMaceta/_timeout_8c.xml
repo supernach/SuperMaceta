@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timeout_8c" xml:lang="es">
+<title>Referencia del Archivo Api/TIMEOUT/Timeout.c</title>
+<indexterm><primary>Api/TIMEOUT/Timeout.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;timeout.h&gt;
+</programlisting><simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___t_i_m_e_o_u_t_1gacf4087f528451c740786aa0b21520d6c">Timeout_Init</link> (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout, <link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer, <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link> isr_Notificacion, <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link> isr_Reset)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m_e_o_u_t_1gab42447d16c69163776bc7e676d906612">Timeout_Start</link> (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout, uint16_t microsegundos)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m_e_o_u_t_1ga29cfcf61fd1e84e7bcf4ce228ba21808">Timeout_Stop</link> (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

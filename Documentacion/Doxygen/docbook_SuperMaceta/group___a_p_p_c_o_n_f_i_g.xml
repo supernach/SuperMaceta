@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___a_p_p_c_o_n_f_i_g" xml:lang="es">
+<title>APPCONFIG</title>
+<indexterm><primary>APPCONFIG</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> <link linkend="_group___a_p_p_c_o_n_f_i_g_1ga79e538d9afbac79beaaa01fab09eb355">SensorTempHum</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link> <link linkend="_group___a_p_p_c_o_n_f_i_g_1ga5c54b6d9f5fda025c154335fa4754ab3">SensorPesaje</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_y_p_e_d_e_f_1ga319c52bd646ec80339374a6a2b528d5c">Timer_t</link> <link linkend="_group___a_p_p_c_o_n_f_i_g_1ga36d1150409ad214491496ee19b5cf4db">timer_Timeout</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t_1ga27c0b53ab5389da20ab95634d2a8435c">Timeout_t</link> <link linkend="_group___a_p_p_c_o_n_f_i_g_1gac9bae762fa8503eb566f9f0c1df369d6">Timeout</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link> <link linkend="_group___a_p_p_c_o_n_f_i_g_1gae14a678342669e81f8fd880ba8ea8dc1">Comunicacion</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_group___a_p_p_c_o_n_f_i_g_1gae14a678342669e81f8fd880ba8ea8dc1"/><section>
+    <title>Comunicacion</title>
+<indexterm><primary>Comunicacion</primary><secondary>APPCONFIG</secondary></indexterm>
+<indexterm><primary>APPCONFIG</primary><secondary>Comunicacion</secondary></indexterm>
+<para><computeroutput>Comunicacion</computeroutput></para>
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___a_p_p_c_o_n_f_i_g_1ga5c54b6d9f5fda025c154335fa4754ab3"/><section>
+    <title>SensorPesaje</title>
+<indexterm><primary>SensorPesaje</primary><secondary>APPCONFIG</secondary></indexterm>
+<indexterm><primary>APPCONFIG</primary><secondary>SensorPesaje</secondary></indexterm>
+<para><computeroutput><link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link> SensorPesaje</computeroutput></para>
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___a_p_p_c_o_n_f_i_g_1ga79e538d9afbac79beaaa01fab09eb355"/><section>
+    <title>SensorTempHum</title>
+<indexterm><primary>SensorTempHum</primary><secondary>APPCONFIG</secondary></indexterm>
+<indexterm><primary>APPCONFIG</primary><secondary>SensorTempHum</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> SensorTempHum</computeroutput></para>
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___a_p_p_c_o_n_f_i_g_1gac9bae762fa8503eb566f9f0c1df369d6"/><section>
+    <title>Timeout</title>
+<indexterm><primary>Timeout</primary><secondary>APPCONFIG</secondary></indexterm>
+<indexterm><primary>APPCONFIG</primary><secondary>Timeout</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_timeout">Timeout</link></computeroutput></para>
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___t_i_m_e_o_u_t_1ga27c0b53ab5389da20ab95634d2a8435c">Timeout_t</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___a_p_p_c_o_n_f_i_g_1ga36d1150409ad214491496ee19b5cf4db"/><section>
+    <title>timer_Timeout</title>
+<indexterm><primary>timer_Timeout</primary><secondary>APPCONFIG</secondary></indexterm>
+<indexterm><primary>APPCONFIG</primary><secondary>timer_Timeout</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_y_p_e_d_e_f_1ga319c52bd646ec80339374a6a2b528d5c">Timer_t</link> timer_Timeout</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_u_a_r_t___config" xml:lang="es">
+<title>Referencia de la Estructura UART_Config</title>
+<indexterm><primary>UART_Config</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Config.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>UART1_StopBits_TypeDef <link linkend="_struct_u_a_r_t___config_1a3d3530f99abe6712de1c93ed10b7ba7b">StopBit</link></para>
+</listitem>
+            <listitem><para>UART1_Parity_TypeDef <link linkend="_struct_u_a_r_t___config_1a7e77db2feaff608949b3fd7f0e2c846b">Paridad</link></para>
+</listitem>
+            <listitem><para>UART1_WordLength_TypeDef <link linkend="_struct_u_a_r_t___config_1ac7559600176eecc75123e7c0ff538f58">Bits</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___config_1a58d40148f309705c1e7bfea650a03a4f">Baudios</link></para>
+</listitem>
+            <listitem><para>UART1_Mode_TypeDef <link linkend="_struct_u_a_r_t___config_1a8325b3c479e3ede2910c6cf0e12ee59f">Modo</link></para>
+</listitem>
+            <listitem><para>UART1_IT_TypeDef <link linkend="_struct_u_a_r_t___config_1af987ebaec400142dfd7403611c94de37">TipoInterrupcion</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> <link linkend="_struct_u_a_r_t___config_1a11c3a5163a30aac6fc21aec31b239617">P_RX</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> <link linkend="_struct_u_a_r_t___config_1a16c248c97dcc0958d2156fda45054688">P_TX</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_u_a_r_t___config_1a58d40148f309705c1e7bfea650a03a4f"/><section>
+    <title>Baudios</title>
+<indexterm><primary>Baudios</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>Baudios</secondary></indexterm>
+<para><computeroutput>uint32_t Baudios</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1ac7559600176eecc75123e7c0ff538f58"/><section>
+    <title>Bits</title>
+<indexterm><primary>Bits</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>Bits</secondary></indexterm>
+<para><computeroutput>UART1_WordLength_TypeDef Bits</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1a8325b3c479e3ede2910c6cf0e12ee59f"/><section>
+    <title>Modo</title>
+<indexterm><primary>Modo</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>Modo</secondary></indexterm>
+<para><computeroutput>UART1_Mode_TypeDef Modo</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1a11c3a5163a30aac6fc21aec31b239617"/><section>
+    <title>P_RX</title>
+<indexterm><primary>P_RX</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>P_RX</secondary></indexterm>
+<para><computeroutput><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> P_RX</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1a16c248c97dcc0958d2156fda45054688"/><section>
+    <title>P_TX</title>
+<indexterm><primary>P_TX</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>P_TX</secondary></indexterm>
+<para><computeroutput><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> P_TX</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1a7e77db2feaff608949b3fd7f0e2c846b"/><section>
+    <title>Paridad</title>
+<indexterm><primary>Paridad</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>Paridad</secondary></indexterm>
+<para><computeroutput>UART1_Parity_TypeDef Paridad</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1a3d3530f99abe6712de1c93ed10b7ba7b"/><section>
+    <title>StopBit</title>
+<indexterm><primary>StopBit</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>StopBit</secondary></indexterm>
+<para><computeroutput>UART1_StopBits_TypeDef StopBit</computeroutput></para></section>
+<anchor xml:id="_struct_u_a_r_t___config_1af987ebaec400142dfd7403611c94de37"/><section>
+    <title>TipoInterrupcion</title>
+<indexterm><primary>TipoInterrupcion</primary><secondary>UART_Config</secondary></indexterm>
+<indexterm><primary>UART_Config</primary><secondary>TipoInterrupcion</secondary></indexterm>
+<para><computeroutput>UART1_IT_TypeDef TipoInterrupcion</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/<link linkend="__r_s485___config_8h">RS485_Config.h</link></section>
+</section>

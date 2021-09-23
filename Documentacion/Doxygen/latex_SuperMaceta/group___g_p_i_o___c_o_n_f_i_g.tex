@@ -1,0 +1,88 @@
+\hypertarget{group___g_p_i_o___c_o_n_f_i_g}{}\doxysection{GPIO\+\_\+\+CONFIG}
+\label{group___g_p_i_o___c_o_n_f_i_g}\index{GPIO\_CONFIG@{GPIO\_CONFIG}}
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_gpio___config}{Gpio\+\_\+\+Config}}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_gpio___config}{Gpio\+\_\+\+Config}} \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga6c09cd09e372553b3468282c9a1663ec}{NHALgpio\+Config\+\_\+\+Set\+Type}} (\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$gpio, GPIO\+\_\+\+Mode\+\_\+\+Type\+Def nuevo\+Tipo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\mbox{\Hypertarget{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}\label{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}} 
+\index{GPIO\_CONFIG@{GPIO\_CONFIG}!Gpio\_Config\_t@{Gpio\_Config\_t}}
+\index{Gpio\_Config\_t@{Gpio\_Config\_t}!GPIO\_CONFIG@{GPIO\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{Gpio\_Config\_t}{Gpio\_Config\_t}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}}}
+
+
+
+~\newline
+ 
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{group___g_p_i_o___c_o_n_f_i_g_ga6c09cd09e372553b3468282c9a1663ec}\label{group___g_p_i_o___c_o_n_f_i_g_ga6c09cd09e372553b3468282c9a1663ec}} 
+\index{GPIO\_CONFIG@{GPIO\_CONFIG}!NHALgpioConfig\_SetType@{NHALgpioConfig\_SetType}}
+\index{NHALgpioConfig\_SetType@{NHALgpioConfig\_SetType}!GPIO\_CONFIG@{GPIO\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{NHALgpioConfig\_SetType()}{NHALgpioConfig\_SetType()}}
+{\footnotesize\ttfamily void NHALgpio\+Config\+\_\+\+Set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$}]{gpio,  }\item[{GPIO\+\_\+\+Mode\+\_\+\+Type\+Def}]{nuevo\+Tipo }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Esta funcion cambia el tipo de la gpio
+
+PRE-\/\+CONDITION\+: Configuracion gpio creada PRE-\/\+CONDITION\+: Nuevo tipo asignado
+
+POST-\/\+CONDITION\+: La gpio ha cambiado de tipo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Configuracion} & de la gpio \\
+\hline
+{\em Nuevo} & tipo de la gpio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga6c09cd09e372553b3468282c9a1663ec}{NHALgpioConfig\_SetType}}( \&gpio, GPIO\_MODE\_IN\_FL\_NO\_IT );}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+
+
+\texorpdfstring{$<$}{<}TODO\+: Mejorar abstraccion del parametro tipo 

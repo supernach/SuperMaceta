@@ -1,0 +1,43 @@
+\hypertarget{_timeout_8h}{}\doxysection{Referencia del Archivo Api/\+TIMEOUT/\+Timeout.h}
+\label{_timeout_8h}\index{Api/TIMEOUT/Timeout.h@{Api/TIMEOUT/Timeout.h}}
+{\ttfamily \#include $<$stm8s.\+h$>$}\newline
+{\ttfamily \#include $<$utils.\+h$>$}\newline
+{\ttfamily \#include $<$gpio.\+h$>$}\newline
+{\ttfamily \#include $<$timer.\+h$>$}\newline
+{\ttfamily \#include $<$Timeout\+\_\+\+Config.\+h$>$}\newline
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_timeout}{Timeout}}
+\end{DoxyCompactItemize}
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_e_o_u_t_gaeae3a10fb3e3beb126cdb5fe62a7738a}{TIMEOUT\+\_\+\+MAX\+\_\+500\+MS}}~500
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga37228cc19fd959cf0bc89665d0f83193}{TIMEOUT\+\_\+1\+MS}}~1000
+\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_timeout}{Timeout}} \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}{Timeout\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em $<$descripcion$>$ \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}{Timeout\+\_\+t}} $\ast$ \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em $<$descripcion$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga9b8c298323735086c33bb2fd017ee096}{Timeout\+\_\+\+Estado\+\_\+e}} \{ \mbox{\hyperlink{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9}{INACTIVO}}
+, \mbox{\hyperlink{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e}{ACTIVO}}
+, \mbox{\hyperlink{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb}{DISPARADO}}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$descripcion$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___t_i_m_e_o_u_t_gacf4087f528451c740786aa0b21520d6c}{Timeout\+\_\+\+Init}} (\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} timeout, \mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\+\_\+t\+\_\+ptr}} timer, \mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g_ga7e5bba325225938c20ad412994075aad}{Timeout\+\_\+\+Notificacion}} isr\+\_\+\+Notificacion, \mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g_ga9c2bb2957932ee1700826fe54000b6bb}{Timeout\+\_\+\+Reset\+Notificacion}} isr\+\_\+\+Reset)
+\item 
+void \mbox{\hyperlink{group___t_i_m_e_o_u_t_gab42447d16c69163776bc7e676d906612}{Timeout\+\_\+\+Start}} (\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} timeout, uint16\+\_\+t microsegundos)
+\item 
+void \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga29cfcf61fd1e84e7bcf4ce228ba21808}{Timeout\+\_\+\+Stop}} (\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} timeout)
+\end{DoxyCompactItemize}

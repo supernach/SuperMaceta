@@ -1,0 +1,155 @@
+\hypertarget{hx711_8h_source}{}\doxysection{hx711.\+h}
+\label{hx711_8h_source}\index{Drivers/HX711/hx711.h@{Drivers/HX711/hx711.h}}
+\mbox{\hyperlink{hx711_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef HX711\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define HX711\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   HX711  DRIVER}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   Hx711.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   9/09/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* @attention}}
+\DoxyCodeLine{16 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{17 \textcolor{comment}{*}}
+\DoxyCodeLine{18 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{20 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{21 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{22 \textcolor{comment}{*}}
+\DoxyCodeLine{23 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{24 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{25 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{26 \textcolor{comment}{*}}
+\DoxyCodeLine{27 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{28 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{29 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{30 \textcolor{comment}{*}}
+\DoxyCodeLine{31 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{32 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{33 \textcolor{comment}{*}}
+\DoxyCodeLine{34 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{35 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{36 \textcolor{comment}{*}}
+\DoxyCodeLine{37 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{38 \textcolor{comment}{*  9/09/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{39 \textcolor{comment}{*  }}
+\DoxyCodeLine{40 \textcolor{comment}{*}}
+\DoxyCodeLine{41 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{53 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{54 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{55 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{utils_8h}{utils.h}}>}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gpio_8h}{gpio.h}}>}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_timeout_8h}{timeout.h}}>}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{63 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{64 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{73 \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t HX711\_LONGITUDTRAMA = 24;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79 \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t HX711\_TIEMPOCLOCK = 3;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85 \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t HX711\_TIEMPOCLOCKSLEEP = 70;}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{90 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{91 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{92 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{95 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{96 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{99 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{100 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{110 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_h_x711}{HX711}} \mbox{\hyperlink{struct_h_x711}{HX711\_t}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{116 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_h_x711___config}{HX711\_Config}} \mbox{\hyperlink{struct_h_x711___config}{HX711\_Config\_t}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{122 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_h_x711___datos}{HX711\_Datos}} \mbox{\hyperlink{struct_h_x711___datos}{HX711\_Datos\_t}};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{132 \textcolor{keyword}{typedef} uint16\_t(*\mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\_fPtr}})(\mbox{\hyperlink{struct_h_x711}{HX711\_t}}*);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{138 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_h_x711}{HX711\_t}}* \mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\_t\_ptr}};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{144 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_h_x711___datos}{HX711\_Datos\_t}}* \mbox{\hyperlink{group___punteros_gacd5c6f1bb5950aaa81bf97d3c2556112}{HX711\_Datos\_t\_ptr}};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{150 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_h_x711___config}{HX711\_Config\_t}}* \mbox{\hyperlink{group___punteros_gaf7666f28c15bcd886c56feea5977864e}{HX711\_Config\_t\_ptr}};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{163 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{164 \{}
+\DoxyCodeLine{165   \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2}{INICIALIZADO}},       }
+\DoxyCodeLine{166   \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99}{SINVALORCONVERSION}}, }
+\DoxyCodeLine{167   \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa}{SLEEP}},             }
+\DoxyCodeLine{168   \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855}{NUEVA\_LECTURA}},     }
+\DoxyCodeLine{169   \mbox{\hyperlink{group___enum_gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b}{TIMEOUT}}              }
+\DoxyCodeLine{170 \} \mbox{\hyperlink{group___enum_ga3b06dedcf428c2a447fb32b6338f594e}{HX711\_Estado\_e}};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{176 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{177 \{}
+\DoxyCodeLine{178   \mbox{\hyperlink{group___enum_ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0}{CHANNELA\_128}}, }
+\DoxyCodeLine{179   \mbox{\hyperlink{group___enum_ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6}{CHANNELA\_64}}, }
+\DoxyCodeLine{180   \mbox{\hyperlink{group___enum_ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8}{CHANNELB\_32}}    }
+\DoxyCodeLine{181 \} \mbox{\hyperlink{group___enum_gae933250036608b3d14c31720968d5bad}{HX711\_Ganancia\_e}};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{189 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{190 \textcolor{comment}{* Struct}}
+\DoxyCodeLine{191 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{202 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_h_x711___datos}{HX711\_Datos}}}
+\DoxyCodeLine{203 \{}
+\DoxyCodeLine{204   uint32\_t \mbox{\hyperlink{struct_h_x711___datos_a6c0c13ba21079ed21363c817442a7389}{UltimaLectura}};  }
+\DoxyCodeLine{205   \mbox{\hyperlink{group___enum_ga3b06dedcf428c2a447fb32b6338f594e}{HX711\_Estado\_e}} \mbox{\hyperlink{struct_h_x711___datos_ae6e820be23d2ddec50532ecd92827e4c}{Estado}};  }
+\DoxyCodeLine{206 \};}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{215 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_h_x711___config}{HX711\_Config}}}
+\DoxyCodeLine{216 \{}
+\DoxyCodeLine{217   \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}} \mbox{\hyperlink{struct_h_x711___config_adecab8ec6694738b9fc07a17e9ea60f5}{DOUT}};          }
+\DoxyCodeLine{218   \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}} \mbox{\hyperlink{struct_h_x711___config_ad23f57ec814bea3301f6271bc978f3c3}{PD\_SCK}};        }
+\DoxyCodeLine{220   \mbox{\hyperlink{group___enum_gae933250036608b3d14c31720968d5bad}{HX711\_Ganancia\_e}} \mbox{\hyperlink{struct_h_x711___config_a31842012140e37a11cbca628bd760dab}{Ganancia}};  }
+\DoxyCodeLine{221   uint16\_t \mbox{\hyperlink{struct_h_x711___config_ab4822d50ce6c66444969a14e37fea3b7}{ValorConversion}};    }
+\DoxyCodeLine{224   uint32\_t \mbox{\hyperlink{struct_h_x711___config_a22ce79c6f2694de604942b6ceb43c01a}{ValorZero}};          }
+\DoxyCodeLine{227   uint16\_t \mbox{\hyperlink{struct_h_x711___config_afd4d615b3ad3796d58ef0ff2402c6627}{ValorTara}};          }
+\DoxyCodeLine{228 \};}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{238 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_h_x711}{HX711}}}
+\DoxyCodeLine{239 \{}
+\DoxyCodeLine{240   \mbox{\hyperlink{struct_h_x711___config}{HX711\_Config\_t}} \mbox{\hyperlink{struct_h_x711_a91f722639ed0e1fbdc8a957b163280ba}{Config}};  }
+\DoxyCodeLine{241   \mbox{\hyperlink{struct_h_x711___datos}{HX711\_Datos\_t}} \mbox{\hyperlink{struct_h_x711_a623fca772a5fa1e8240439472f1002c0}{Datos}};   }
+\DoxyCodeLine{242   \mbox{\hyperlink{struct_timeout}{Timeout\_t\_ptr}} \mbox{\hyperlink{struct_h_x711_abb295df56198a023972379bfc188cff5}{Timeout}}; }
+\DoxyCodeLine{244   \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\_fPtr}} \mbox{\hyperlink{struct_h_x711_a1a4736592e3c8b2c7c80fbad979fdfaf}{Lectura}};      }
+\DoxyCodeLine{245   \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\_fPtr}} \mbox{\hyperlink{struct_h_x711_a841352c7ab2908ab44449f31d70e06a6}{Tarar}};        }
+\DoxyCodeLine{246 \};}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{252 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{253 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{254 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{257 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{258 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{260 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{267 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___funciones_ga5e2f902a7b30390fa34d2bf2b05f0ef3}{HX711\_Init}}( \mbox{\hyperlink{struct_h_x711}{HX711\_t\_ptr}} hx711, \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\_fPtr}} Lectura, \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\_fPtr}} Tarar, \mbox{\hyperlink{struct_timeout}{Timeout\_t\_ptr}} \mbox{\hyperlink{struct_timeout}{Timeout}} );}
+\DoxyCodeLine{268 uint16\_t \mbox{\hyperlink{group___funciones_ga324bf5567c5ec2e210404234fb5e5242}{hx711\_Lectura}}( \mbox{\hyperlink{struct_h_x711}{HX711\_t\_ptr}} hx711 );}
+\DoxyCodeLine{269 uint16\_t \mbox{\hyperlink{group___funciones_gaecc0da5c8ae51a1eb3cb136c7c594a4f}{hx711\_Tarar}}( \mbox{\hyperlink{struct_h_x711}{HX711\_t\_ptr}} hx711 );}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{276 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{280   }
+
+\end{DoxyCode}

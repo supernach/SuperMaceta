@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___a_p_l_i_c_a_c_i_o_n" xml:lang="es">
+<title>APLICACION</title>
+<indexterm><primary>APLICACION</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_o_n_f_i_g_u_r_a_c_i_o_n">CONFIGURACION</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+</section>

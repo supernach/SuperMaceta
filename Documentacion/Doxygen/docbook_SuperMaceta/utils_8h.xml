@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_utils_8h" xml:lang="es">
+<title>Referencia del Archivo Api/N_HAL/Utils/utils.h</title>
+<indexterm><primary>Api/N_HAL/Utils/utils.h</primary></indexterm>
+<para>
+
+<para>Define distintas funciones, macros utiles. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+</programlisting><simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_t_i_l_s_1ga6ebe466e477d394ca5bb309b35b6bc39">FCLK</link>   16000000</para>
+
+<para>Definir en Hz la frecuencia de trabajo del reloj. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_t_i_l_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>   (void*)0</para>
+
+<para>Macro Null para punteros. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_t_i_l_s_1ga529b7044c999fa70ae7bc878a6d4946c">IS_NULL</link>(val)   ((val == <link linkend="_group___u_t_i_l_s_1ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>) ? true : false)</para>
+
+<para>Macro para comprobar punteros nulos. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_utils_8h_1a5a9593f5765effd9a2bd5126034e3d4f">T_COUNT</link>(x)   (( x * (<link linkend="_group___u_t_i_l_s_1ga6ebe466e477d394ca5bb309b35b6bc39">FCLK</link> / 1000000UL) )-3)/3)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Define distintas funciones, macros utiles. </para>
+</section>
+<section>
+<title>Documentación de los &apos;defines&apos;</title>
+<anchor xml:id="_utils_8h_1a5a9593f5765effd9a2bd5126034e3d4f"/><section>
+    <title>T_COUNT</title>
+<indexterm><primary>T_COUNT</primary><secondary>utils.h</secondary></indexterm>
+<indexterm><primary>utils.h</primary><secondary>T_COUNT</secondary></indexterm>
+<para><computeroutput>#define T_COUNT( x)   (( x * (<link linkend="_group___u_t_i_l_s_1ga6ebe466e477d394ca5bb309b35b6bc39">FCLK</link> / 1000000UL) )-3)/3)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="es">
+
+<para><emphasis role="bold">SuperMaceta</emphasis> es un proyecto para el control de macetas</para>
+
+<para><formalpara>
+<title>Componentes del sistema</title>
+<para>Esta es una lista de los modulos que componen el proyecto<itemizedlist>
+<listitem>
+<para><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> </para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<formalpara>
+<title>Usage</title>
+<para></para>
+</formalpara>
+<literallayout><computeroutput>DHT11_t dht11;
+</computeroutput></literallayout></para>
+
+<para><formalpara>
+<title>Example</title>
+<para></para>
+</formalpara>
+<literallayout><computeroutput>DHT11_t dht11;
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</chapter>

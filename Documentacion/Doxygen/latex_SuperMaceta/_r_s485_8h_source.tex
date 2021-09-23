@@ -1,0 +1,117 @@
+\hypertarget{_r_s485_8h_source}{}\doxysection{RS485.\+h}
+\label{_r_s485_8h_source}\index{Communication/RS485/RS485.h@{Communication/RS485/RS485.h}}
+\mbox{\hyperlink{_r_s485_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RS485\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RS485\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   RS485 COMM}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   RS485.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   20/09/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{16 \textcolor{comment}{*}}
+\DoxyCodeLine{17 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{19 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{20 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{23 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{24 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{25 \textcolor{comment}{*}}
+\DoxyCodeLine{26 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{27 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{28 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{31 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{34 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{35 \textcolor{comment}{*}}
+\DoxyCodeLine{36 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{37 \textcolor{comment}{*  19/09/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{38 \textcolor{comment}{*  }}
+\DoxyCodeLine{39 \textcolor{comment}{*}}
+\DoxyCodeLine{40 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{50 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{51 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{52 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <stm8s.h>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_r_s485___config_8h}{RS485\_Config.h}}>}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_r_s485___tramas_8h}{RS485\_Tramas.h}}>}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{58 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{59 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{62 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{63 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{66 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{67 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{70 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{71 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_r_s485}{RS485}} \mbox{\hyperlink{struct_r_s485}{RS485\_t}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{86 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_r_s485}{RS485\_t}}* \mbox{\hyperlink{group___r_s485_gaaa3843bc7d3f577ac724daa28615d383}{RS485\_t\_ptr}};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{94 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{95 \{}
+\DoxyCodeLine{96   uint8\_t \mbox{\hyperlink{union_r_s485___flags__u_aa2585d779da0ab21273a8d92de9a0ebe}{flags}}; }
+\DoxyCodeLine{97   \textcolor{keyword}{struct }\mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit}{flagBit}}}
+\DoxyCodeLine{98   \{}
+\DoxyCodeLine{99     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_abe5a554780780fbc10d63a5d7f649201}{NuevaRecepcion}} : 1; }
+\DoxyCodeLine{100     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_a9c283d5c304bd0ba55c3eb23b282095a}{Inicializado}} : 1; }
+\DoxyCodeLine{101     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_a40779b74c939697e4f97288a32087b98}{Standby}} : 1; }
+\DoxyCodeLine{102     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_ae1457b2475c549e53d084a2daa6475f5}{bit3}} : 1; }
+\DoxyCodeLine{103     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_aec79d033d0709e9c4caf5b21f85848bc}{bit4}} : 1; }
+\DoxyCodeLine{104     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_a56012f9e5f78d285eb450866b270b86d}{bit5}} : 1; }
+\DoxyCodeLine{105     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_a39af6ce9105754718e17a87fb173b0fb}{bit6}} : 1; }
+\DoxyCodeLine{106     uint8\_t \mbox{\hyperlink{struct_r_s485___flags__u_1_1flag_bit_a23364783b1302b0aab8b38fc7853cad3}{bit7}} : 1; }
+\DoxyCodeLine{107   \} bit;}
+\DoxyCodeLine{108 \}\mbox{\hyperlink{union_r_s485___flags__u}{RS485\_Flags\_u}};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{111 \textcolor{comment}{* Struct}}
+\DoxyCodeLine{112 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{120 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_r_s485}{RS485}}}
+\DoxyCodeLine{121 \{}
+\DoxyCodeLine{122   \mbox{\hyperlink{struct_r_s485___config}{RS485\_Config\_t}} \mbox{\hyperlink{struct_r_s485_abd4ae6715509766a8e03b8210c8eb366}{Config}}; }
+\DoxyCodeLine{123   \mbox{\hyperlink{struct_buffer___tramas}{Buffer\_Tramas\_t}} \mbox{\hyperlink{struct_r_s485_ab68c854291df20f264398a9d1b060a9e}{Buffer}}; }
+\DoxyCodeLine{124   \mbox{\hyperlink{union_r_s485___flags__u}{RS485\_Flags\_u}} \mbox{\hyperlink{struct_r_s485_aa1d22d8ab12da614018bf0df36585290}{Flags}}; }
+\DoxyCodeLine{125 \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{128 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{129 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{137 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{138 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{139 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{141 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_s485_ga1f6423e3bc24c9c086ae41f05cbe5204}{RS485\_Init}}( \mbox{\hyperlink{struct_r_s485}{RS485\_t\_ptr}} rs485 );}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{147 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{151 }
+
+\end{DoxyCode}

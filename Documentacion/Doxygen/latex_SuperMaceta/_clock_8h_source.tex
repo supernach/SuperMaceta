@@ -1,0 +1,92 @@
+\hypertarget{_clock_8h_source}{}\doxysection{Clock.\+h}
+\label{_clock_8h_source}\index{Api/N\_HAL/Clock/Clock.h@{Api/N\_HAL/Clock/Clock.h}}
+\mbox{\hyperlink{_clock_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CLOCK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CLOCK\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   Clock API}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   Clock.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   20/02/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{16 \textcolor{comment}{*}}
+\DoxyCodeLine{17 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{19 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{20 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{23 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{24 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{25 \textcolor{comment}{*}}
+\DoxyCodeLine{26 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{27 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{28 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{31 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{34 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{35 \textcolor{comment}{*}}
+\DoxyCodeLine{36 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{37 \textcolor{comment}{*  20/02/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{38 \textcolor{comment}{*  }}
+\DoxyCodeLine{39 \textcolor{comment}{*}}
+\DoxyCodeLine{40 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{55 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{56 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{57 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <stm8s.h>}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gpio_8h}{Gpio.h}}>}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{62 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{63 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{66 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{67 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{70 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{71 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{74 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{75 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{78 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{79 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{82 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{83 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{85 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_l_o_c_k_ga9149d6d67ca17423b6aff809598a5253}{DisableAllPeripherals}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{105 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_l_o_c_k_ga154788159bac63badebcb13a4592e9d0}{Clock\_HSI\_Init}}(CLK\_Prescaler\_TypeDef fHsi, CLK\_Prescaler\_TypeDef fCpu);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{114 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_l_o_c_k_gae748795e59c88680053eb0eb85cfd78d}{EnableClockMirror}}(CLK\_Output\_TypeDef source, \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}}* pin);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{118 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{122 }
+
+\end{DoxyCode}

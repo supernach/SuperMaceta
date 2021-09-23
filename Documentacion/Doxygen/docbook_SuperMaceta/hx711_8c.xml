@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_hx711_8c" xml:lang="es">
+<title>Referencia del Archivo Drivers/HX711/hx711.c</title>
+<indexterm><primary>Drivers/HX711/hx711.c</primary></indexterm>
+<para>
+
+<para>Configura y proporciona acceso a la lectura del sensor adc de 24 bits. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;hx711.h&gt;
+</programlisting><simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___h_x711_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Lectura, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Tarar, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link>)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___h_x711_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___h_x711_1gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Configura y proporciona acceso a la lectura del sensor adc de 24 bits. </para>
+</section>
+</section>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485_8h" xml:lang="es">
+<title>Referencia del Archivo Communication/RS485/RS485.h</title>
+<indexterm><primary>Communication/RS485/RS485.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+#include &lt;RS485_Config.h&gt;
+#include &lt;RS485_Tramas.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>union <link linkend="_union_r_s485___flags__u">RS485_Flags_u</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_s485___flags__u_1_1flag_bit">RS485_Flags_u::flagBit</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_s485">RS485</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_r_s485">RS485</link> <link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___r_s485_1ga7f6dab0b826cb4daa6f4644a7becf74d">RS485_t</link> * <link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___r_s485_1ga1f6423e3bc24c9c086ae41f05cbe5204">RS485_Init</link> (<link linkend="_group___r_s485_1gaaa3843bc7d3f577ac724daa28615d383">RS485_t_ptr</link> rs485)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

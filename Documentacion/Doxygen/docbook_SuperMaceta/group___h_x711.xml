@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_x711" xml:lang="es">
+<title>HX711</title>
+<indexterm><primary>HX711</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___constantes">Constantes</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___typedef">Typedef</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___estructuras">Estructuras</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___funciones">Publicas</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___h_x711_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Lectura, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Tarar, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link>)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___h_x711_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___h_x711_1gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</link> (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___h_x711_1ga5e2f902a7b30390fa34d2bf2b05f0ef3"/><section>
+    <title>HX711_Init()</title>
+<indexterm><primary>HX711_Init</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>HX711_Init</secondary></indexterm>
+<para><computeroutput>void HX711_Init (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Lectura, <link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link> Tarar, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> Timeout)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Inicializa valores y funciones del sensor</para>
+
+<para>PRE-CONDITION: Clock habilitado PRE-CONDITION: Configuracion de la gpio creada PRE-CONDITION: funcion callback de lectura creada PRE-CONDITION: funcion callback de Tara creada</para>
+
+<para>POST-CONDITION: El sensor esta listo para usarse</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Sensor</entry><entry>
+<para>a inicializar </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Funcion</entry><entry>
+<para>callback de lectura </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Funcion</entry><entry>
+<para>callback de Tara</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___h_x711_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link>(&#32;&amp;hx711,&#32;&amp;<link linkend="_group___h_x711_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link>&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link> </para>
+
+<para><link linkend="_group___punteros_1ga41e4c007231820e467c5dfcb2f298084">HX711_fPtr</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>9/09/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___h_x711_1ga324bf5567c5ec2e210404234fb5e5242"/><section>
+    <title>hx711_Lectura()</title>
+<indexterm><primary>hx711_Lectura</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>hx711_Lectura</secondary></indexterm>
+<para><computeroutput>uint16_t hx711_Lectura (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Realiza y devuelve el valor de la lectura de 24bits</para>
+
+<para>PRE-CONDITION: hx711 inicializado</para>
+
+<para>POST-CONDITION: Lectura valida o fallo</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Sensor</entry><entry>
+<para>sobre el que realizar la lectura</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>Lectura</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___h_x711_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link>(&#32;&amp;hx711,&#32;&amp;<link linkend="_group___h_x711_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link>&#32;);
+hx711.Datos.UltimaLectura&#32;=&#32;hx711.Lectura(&#32;&amp;hx711&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>9/09/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___h_x711_1gaecc0da5c8ae51a1eb3cb136c7c594a4f"/><section>
+    <title>hx711_Tarar()</title>
+<indexterm><primary>hx711_Tarar</primary><secondary>HX711</secondary></indexterm>
+<indexterm><primary>HX711</primary><secondary>hx711_Tarar</secondary></indexterm>
+<para><computeroutput>uint16_t hx711_Tarar (<link linkend="_group___punteros_1gae379a330709bd3cfe8dff040b02c8b7a">HX711_t_ptr</link> hx711)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Realiza 4 lecturas y devuelve el valor medio para establecerlo como tara</para>
+
+<para>PRE-CONDITION: hx711 inicializado</para>
+
+<para>POST-CONDITION: Tara valida o fallo</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hx711</entry><entry>
+<para>Sensor sobre el que realizar la lectura</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>Tara</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___h_x711_1ga5e2f902a7b30390fa34d2bf2b05f0ef3">HX711_Init</link>(&#32;&amp;hx711,&#32;&amp;<link linkend="_group___h_x711_1ga324bf5567c5ec2e210404234fb5e5242">hx711_Lectura</link>,&#32;&amp;<link linkend="_group___h_x711_1gaecc0da5c8ae51a1eb3cb136c7c594a4f">hx711_Tarar</link>&#32;);
+hx711.Config.ValorTara&#32;=&#32;hx711.Tarar(&#32;&amp;hx711&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___typedef_1ga243fec3499adb318184d6dfc775d471d">HX711_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>9/09/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+</section>

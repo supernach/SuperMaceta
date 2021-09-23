@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_r_a_m_a_s" xml:lang="es">
+<title>TRAMAS</title>
+<indexterm><primary>TRAMAS</primary></indexterm>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_trama___r_x">Trama_RX</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_trama___t_x">Trama_TX</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_buffer___tramas">Buffer_Tramas</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_r_a_m_a_s_1ga1c42fbe70b123b650d914d1162267682">RS485_BYTES_N_NODO</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_r_a_m_a_s_1gae5b324ccc7a9b31732d82e7265f9c4d8">RS485_BYTES_BUFFER_RX</link>   6</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_trama___r_x">Trama_RX</link> <link linkend="_group___t_r_a_m_a_s_1ga0817146552b49da8e085f85cf917854f">Trama_RX_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_trama___t_x">Trama_TX</link> <link linkend="_group___t_r_a_m_a_s_1ga3d810169dcadc4ef3d153e03bbb12751">Trama_TX_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link> <link linkend="_group___t_r_a_m_a_s_1gaa42bedcd0f7e267f945b1e8222b4d2da">Trama_BROADCAST_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_buffer___tramas">Buffer_Tramas</link> <link linkend="_group___t_r_a_m_a_s_1ga0c14f5a454fdf19cef6b4e2f74596934">Buffer_Tramas_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;defines&apos;</title>
+<anchor xml:id="_group___t_r_a_m_a_s_1gae5b324ccc7a9b31732d82e7265f9c4d8"/><section>
+    <title>RS485_BYTES_BUFFER_RX</title>
+<indexterm><primary>RS485_BYTES_BUFFER_RX</primary><secondary>TRAMAS</secondary></indexterm>
+<indexterm><primary>TRAMAS</primary><secondary>RS485_BYTES_BUFFER_RX</secondary></indexterm>
+<para><computeroutput>RS485_BYTES_BUFFER_RX   6</computeroutput></para>
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___t_r_a_m_a_s_1ga1c42fbe70b123b650d914d1162267682"/><section>
+    <title>RS485_BYTES_N_NODO</title>
+<indexterm><primary>RS485_BYTES_N_NODO</primary><secondary>TRAMAS</secondary></indexterm>
+<indexterm><primary>TRAMAS</primary><secondary>RS485_BYTES_N_NODO</secondary></indexterm>
+<para><computeroutput>RS485_BYTES_N_NODO   2</computeroutput></para>
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___t_r_a_m_a_s_1ga0c14f5a454fdf19cef6b4e2f74596934"/><section>
+    <title>Buffer_Tramas_t</title>
+<indexterm><primary>Buffer_Tramas_t</primary><secondary>TRAMAS</secondary></indexterm>
+<indexterm><primary>TRAMAS</primary><secondary>Buffer_Tramas_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_r_a_m_a_s_1ga0c14f5a454fdf19cef6b4e2f74596934">Buffer_Tramas_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_struct_buffer___tramas">Buffer_Tramas</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___t_r_a_m_a_s_1gaa42bedcd0f7e267f945b1e8222b4d2da"/><section>
+    <title>Trama_BROADCAST_t</title>
+<indexterm><primary>Trama_BROADCAST_t</primary><secondary>TRAMAS</secondary></indexterm>
+<indexterm><primary>TRAMAS</primary><secondary>Trama_BROADCAST_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_r_a_m_a_s_1gaa42bedcd0f7e267f945b1e8222b4d2da">Trama_BROADCAST_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>&lt;referencias&gt; </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___t_r_a_m_a_s_1ga0817146552b49da8e085f85cf917854f"/><section>
+    <title>Trama_RX_t</title>
+<indexterm><primary>Trama_RX_t</primary><secondary>TRAMAS</secondary></indexterm>
+<indexterm><primary>TRAMAS</primary><secondary>Trama_RX_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_r_a_m_a_s_1ga0817146552b49da8e085f85cf917854f">Trama_RX_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>&lt;referencias&gt; </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___t_r_a_m_a_s_1ga3d810169dcadc4ef3d153e03bbb12751"/><section>
+    <title>Trama_TX_t</title>
+<indexterm><primary>Trama_TX_t</primary><secondary>TRAMAS</secondary></indexterm>
+<indexterm><primary>TRAMAS</primary><secondary>Trama_TX_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_r_a_m_a_s_1ga3d810169dcadc4ef3d153e03bbb12751">Trama_TX_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>&lt;referencias&gt; </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

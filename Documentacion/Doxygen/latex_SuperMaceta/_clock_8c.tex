@@ -1,0 +1,13 @@
+\hypertarget{_clock_8c}{}\doxysection{Referencia del Archivo Api/\+N\+\_\+\+HAL/\+Clock/\+Clock.c}
+\label{_clock_8c}\index{Api/N\_HAL/Clock/Clock.c@{Api/N\_HAL/Clock/Clock.c}}
+{\ttfamily \#include $<$Clock.\+h$>$}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___c_l_o_c_k_ga154788159bac63badebcb13a4592e9d0}{Clock\+\_\+\+HSI\+\_\+\+Init}} (CLK\+\_\+\+Prescaler\+\_\+\+Type\+Def f\+Hsi, CLK\+\_\+\+Prescaler\+\_\+\+Type\+Def f\+Cpu)
+\begin{DoxyCompactList}\small\item\em Inicializa el reloj de alta velocidad interno del micro. A su vez deshabilita el reloj externo y el reloj lento interno. Configura la frecuencia Master y la frecuencia de la cpu. Por ultimo deshabilita el uso del reloj para todos los perifericos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_l_o_c_k_ga9149d6d67ca17423b6aff809598a5253}{Disable\+All\+Peripherals}} (void)
+\begin{DoxyCompactList}\small\item\em Deshabilita el uso del reloj en todos los perifericos ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_l_o_c_k_gae748795e59c88680053eb0eb85cfd78d}{Enable\+Clock\+Mirror}} (CLK\+\_\+\+Output\+\_\+\+Type\+Def source, \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$pin)
+\begin{DoxyCompactList}\small\item\em Habilita el uso de la funcion CCO en el pin por defecto del micro. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{_timer_8h_source}{}\doxysection{Timer.\+h}
+\label{_timer_8h_source}\index{Api/N\_HAL/Timer/Timer.h@{Api/N\_HAL/Timer/Timer.h}}
+\mbox{\hyperlink{_timer_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NHAL\_TIMER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NHAL\_TIMER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   Timar API}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   Timer.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   11/09/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{16 \textcolor{comment}{*}}
+\DoxyCodeLine{17 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{19 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{20 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{23 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{24 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{25 \textcolor{comment}{*}}
+\DoxyCodeLine{26 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{27 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{28 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{31 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{34 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{35 \textcolor{comment}{*}}
+\DoxyCodeLine{36 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{37 \textcolor{comment}{*  11/09/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{38 \textcolor{comment}{*  }}
+\DoxyCodeLine{39 \textcolor{comment}{*}}
+\DoxyCodeLine{40 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{54 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{55 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{56 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <stm8s.h>}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_timer___config_8h}{timer\_config.h}}>}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{61 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{62 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{65 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{66 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{69 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{70 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{73 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{74 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{85 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_timer}{Timer}} \mbox{\hyperlink{struct_timer}{Timer\_t}};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{93 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_timer}{Timer\_t}}* \mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\_t\_ptr}};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{99 \textcolor{comment}{* Struct}}
+\DoxyCodeLine{100 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{111 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_timer}{Timer}}}
+\DoxyCodeLine{112 \{}
+\DoxyCodeLine{113   \mbox{\hyperlink{struct_timer___config}{Timer\_Config\_t}} \mbox{\hyperlink{struct_timer_a3a5bc11b443112d63b5ae3e5741e1dec}{Config}};  }
+\DoxyCodeLine{114 \};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{119 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{120 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{121 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{129 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{130 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{131 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{133 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{140 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___funciones_ga60b2e95eb192d675d0e74f791f983a3b}{Timer\_Init}}( \mbox{\hyperlink{struct_timer}{Timer\_t\_ptr}} timer );}
+\DoxyCodeLine{141 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___funciones_ga8ae7aa0701cc5c9870ee835c250d78f1}{Timer\_Config\_Init}}( \mbox{\hyperlink{struct_timer___config}{Timer\_Config\_t\_ptr}} timerConfig, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_gaf2d309f4c465c40a6b08c5a0bf67fa27}{Timer\_Numero\_e}} timer, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga6fa5a9233f1ca5e8eb5479206364f581}{Timer\_Canal\_e}} canal, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga680b74b362115ddab0ec67f68858ac77}{Timer\_Modo\_e}} modo, \mbox{\hyperlink{group___t_i_m_e_r___c_o_n_f_i_g_ga3f543feccade77b24ffa4a0d88a683f8}{Timer\_Interrupcion\_e}} it, uint16\_t tiempo );}
+\DoxyCodeLine{142 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___funciones_ga5bf616b8c20359e44fe29a79ded613c9}{Timer\_DeInit}}( \mbox{\hyperlink{struct_timer}{Timer\_t\_ptr}} timer );}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{149 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{153 }
+
+\end{DoxyCode}

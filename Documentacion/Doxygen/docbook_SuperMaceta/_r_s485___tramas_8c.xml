@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485___tramas_8c" xml:lang="es">
+<title>Referencia del Archivo Communication/RS485/Tramas/RS485_Tramas.c</title>
+<indexterm><primary>Communication/RS485/Tramas/RS485_Tramas.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;rs485_tramas.h&gt;
+</programlisting></section>

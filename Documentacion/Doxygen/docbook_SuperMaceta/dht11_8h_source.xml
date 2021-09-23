@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dht11_8h_source" xml:lang="es">
+<title>dht11.h</title>
+<indexterm><primary>Drivers/DHT11/dht11.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;DHT11_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;DHT11_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;DHT11&#32;&#32;DRIVER</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Dht11.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;20/08/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;20/08/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+52 <emphasis role="comment">/******************************************************************************</emphasis>
+53 <emphasis role="comment">*&#32;Includes</emphasis>
+54 <emphasis role="comment">*******************************************************************************/</emphasis>
+55 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_utils_8h">utils.h</link>&gt;</emphasis>
+56 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__gpio_8h">Gpio.h</link>&gt;</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__timeout_8h">timeout.h</link>&gt;</emphasis>
+58 
+59 
+60 <emphasis role="comment">/******************************************************************************</emphasis>
+61 <emphasis role="comment">*&#32;Constants</emphasis>
+62 <emphasis role="comment">*******************************************************************************/</emphasis>
+63 
+64 <emphasis role="comment">/******************************************************************************</emphasis>
+65 <emphasis role="comment">*&#32;Configuration</emphasis>
+66 <emphasis role="comment">*******************************************************************************/</emphasis>
+67 
+68 <emphasis role="comment">/******************************************************************************</emphasis>
+69 <emphasis role="comment">*&#32;Macros</emphasis>
+70 <emphasis role="comment">*******************************************************************************/</emphasis>
+71 
+72 <emphasis role="comment">/******************************************************************************</emphasis>
+73 <emphasis role="comment">*&#32;Typedefs</emphasis>
+74 <emphasis role="comment">*******************************************************************************/</emphasis>
+81 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_d_h_t11">DHT11</link>&#32;<link linkend="_struct_d_h_t11">DHT11_t</link>;
+82 
+89 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_d_h_t11___config">DHT11_Config</link>&#32;<link linkend="_struct_d_h_t11___config">DHT11_Config_t</link>;
+90 
+97 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs_dht11___s_i">sDht11_SI</link>&#32;<link linkend="_structs_dht11___s_i">DHT11_SI_t</link>;
+98 
+105 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs_dht11_datos">sDht11Datos</link>&#32;<link linkend="_structs_dht11_datos">DHT11_Datos_t</link>;
+106 
+113 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_struct_d_h_t11">DHT11_t</link>*&#32;<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link>;
+114 
+122 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link>&#32;(&#32;*<link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link>&#32;)(&#32;<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link>&#32;);
+123 
+130 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+131 {
+132 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e">dht11_INICIALIZADO</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+133 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4">dht11_COMUNICANDO</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+134 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3">dht11_CONEXION_OK</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+135 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5">dht11_MIDIENDO_H</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+136 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7">dht11_MIDIENDO_T</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+137 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842">dht11_CERRANDO_CONEXION</link>,&#32;&#32;
+138 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7">dht11_SLEEP</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+139 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5">dht11_ESPERA_BAJO</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+140 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9">dht11_ESPERA_ALTO</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+141 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e">dht11_FALLO_AL_LEER</link>,&#32;&#32;&#32;&#32;&#32;&#32;
+142 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2">dht11_FALLO_AL_COMUNICAR</link>,&#32;
+143 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a">dht11_LECTURA_OK</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+144 &#32;&#32;<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc">dht11_TIMEOUT</link>
+145 }&#32;<link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link>;
+146 
+147 <emphasis role="comment">/******************************************************************************</emphasis>
+148 <emphasis role="comment">*&#32;Struct</emphasis>
+149 <emphasis role="comment">*******************************************************************************/</emphasis>
+156 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs_dht11___s_i">sDht11_SI</link>
+157 {
+158 &#32;&#32;uint8_t&#32;<link linkend="_structs_dht11___s_i_1a3c0a02ddbd40208239429e7c15046afe">CRC</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+159 &#32;&#32;uint8_t&#32;<link linkend="_structs_dht11___s_i_1a985c42e91f408b006f80bc3a323a32a7">T_Decimal</link>;&#32;&#32;
+160 &#32;&#32;uint8_t&#32;<link linkend="_structs_dht11___s_i_1a340f011d2f3bcf7341465809c81b9f26">T_Entero</link>;&#32;&#32;&#32;
+161 &#32;&#32;uint8_t&#32;<link linkend="_structs_dht11___s_i_1a02f69b668d550ec53fa837366098127d">H_Decimal</link>;&#32;&#32;
+162 &#32;&#32;uint8_t&#32;<link linkend="_structs_dht11___s_i_1ad7fae2bf2d0b03c82ff44b6fd95e0c34">H_Entero</link>;&#32;&#32;&#32;
+163 };
+164 
+172 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structs_dht11_datos">sDht11Datos</link>
+173 {
+174 &#32;&#32;<link linkend="_structs_dht11___s_i">DHT11_SI_t</link>&#32;<link linkend="_structs_dht11_datos_1a15cb01bf978cd731fa95c61294142eec">UltimaLectura</link>;&#32;
+175 &#32;&#32;<link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link>&#32;<link linkend="_structs_dht11_datos_1a2e30c2118a8d354382eda11133bec2f9">Estado</link>;&#32;&#32;&#32;&#32;
+176 };
+177 
+184 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_d_h_t11___config">DHT11_Config</link>
+185 {
+186 &#32;&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>&#32;<link linkend="_struct_d_h_t11___config_1ab29e76902ae91ac5a60473fb9417e653">HW</link>;&#32;
+187 };
+188 
+197 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_d_h_t11">DHT11</link>
+198 {
+199 &#32;&#32;<link linkend="_struct_d_h_t11___config">DHT11_Config_t</link>&#32;<link linkend="_struct_d_h_t11_1a9cb8866a1e47f6053b8bdf379d99d424">Config</link>;&#32;&#32;
+200 &#32;&#32;<link linkend="_structs_dht11_datos">DHT11_Datos_t</link>&#32;<link linkend="_struct_d_h_t11_1ad3e1ef8105ccdb49b9ade49cd875c804">Datos</link>;&#32;&#32;&#32;&#32;
+201 &#32;&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;<link linkend="_struct_d_h_t11_1abb295df56198a023972379bfc188cff5">Timeout</link>;&#32;&#32;
+203 &#32;&#32;<link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link>&#32;<link linkend="_struct_d_h_t11_1abf026b77114db481b0686b2d86e7e9b1">Lectura</link>;&#32;&#32;&#32;&#32;&#32;
+204 };
+205 
+206 <emphasis role="comment">/******************************************************************************</emphasis>
+207 <emphasis role="comment">*&#32;Variables</emphasis>
+208 <emphasis role="comment">*******************************************************************************/</emphasis>
+209 
+210 <emphasis role="comment">/******************************************************************************</emphasis>
+211 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+212 <emphasis role="comment">*******************************************************************************/</emphasis>
+213 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+214 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+215 <emphasis role="preprocessor">#endif</emphasis>
+216 
+217 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___d_h_t11_1ga86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</link>(&#32;<link linkend="_struct_d_h_t11">DHT11_t_ptr</link>&#32;dht11,&#32;<link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link>&#32;Lectura,&#32;<link linkend="_struct_timeout">Timeout_t_ptr</link>&#32;timeout&#32;);
+218 <link linkend="_structs_dht11___s_i">DHT11_SI_t</link>&#32;<link linkend="_group___d_h_t11_1gabc1f5f47365d834c03533a733cb911b9">dht11_Lectura</link>(&#32;<link linkend="_struct_d_h_t11">DHT11_t_ptr</link>&#32;sensor&#32;);
+219 
+220 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+221 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+222 <emphasis role="preprocessor">#endif&#32;</emphasis>
+223 
+224 <emphasis role="preprocessor">#endif</emphasis>
+225 &#32;&#32;
+</programlisting></section>

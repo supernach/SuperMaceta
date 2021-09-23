@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_s485" xml:lang="es">
+<title>Referencia de la Estructura RS485</title>
+<indexterm><primary>RS485</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link> <link linkend="_struct_r_s485_1abd4ae6715509766a8e03b8210c8eb366">Config</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_r_a_m_a_s_1ga0c14f5a454fdf19cef6b4e2f74596934">Buffer_Tramas_t</link> <link linkend="_struct_r_s485_1ab68c854291df20f264398a9d1b060a9e">Buffer</link></para>
+</listitem>
+            <listitem><para><link linkend="_union_r_s485___flags__u">RS485_Flags_u</link> <link linkend="_struct_r_s485_1aa1d22d8ab12da614018bf0df36585290">Flags</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_r_s485_1ab68c854291df20f264398a9d1b060a9e"/><section>
+    <title>Buffer</title>
+<indexterm><primary>Buffer</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>Buffer</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_r_a_m_a_s_1ga0c14f5a454fdf19cef6b4e2f74596934">Buffer_Tramas_t</link> Buffer</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485_1abd4ae6715509766a8e03b8210c8eb366"/><section>
+    <title>Config</title>
+<indexterm><primary>Config</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>Config</secondary></indexterm>
+<para><computeroutput><link linkend="_group___r_s485_1ga01ed9c547903f2916e086406397526cc">RS485_Config_t</link> Config</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485_1aa1d22d8ab12da614018bf0df36585290"/><section>
+    <title>Flags</title>
+<indexterm><primary>Flags</primary><secondary>RS485</secondary></indexterm>
+<indexterm><primary>RS485</primary><secondary>Flags</secondary></indexterm>
+<para><computeroutput><link linkend="_union_r_s485___flags__u">RS485_Flags_u</link> Flags</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/<link linkend="__r_s485_8h">RS485.h</link></section>
+</section>

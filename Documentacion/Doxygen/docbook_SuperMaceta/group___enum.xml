@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___enum" xml:lang="es">
+<title>Enum</title>
+<indexterm><primary>Enum</primary></indexterm>
+<simplesect>
+    <title>Enumeraciones    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link> { 
+<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2">INICIALIZADO</link>
+, <link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99">SINVALORCONVERSION</link>
+, <link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa">SLEEP</link>
+, <link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855">NUEVA_LECTURA</link>
+, 
+<link linkend="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b">TIMEOUT</link>
+ }</para>
+
+<para>Estados en los que puede encontrarse el <link linkend="_struct_h_x711">HX711</link>. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link> { <link linkend="_group___enum_1ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0">CHANNELA_128</link>
+, <link linkend="_group___enum_1ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6">CHANNELA_64</link>
+, <link linkend="_group___enum_1ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8">CHANNELB_32</link>
+ }</para>
+
+<para>La ganancia que queremos definir para las lecturas. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de las enumeraciones</title>
+<anchor xml:id="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e"/><section>
+    <title>HX711_Estado_e</title>
+<indexterm><primary>HX711_Estado_e</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>HX711_Estado_e</secondary></indexterm>
+<para><computeroutput>enum enum <link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link></computeroutput></para><para>
+
+<para>Estados en los que puede encontrarse el <link linkend="_struct_h_x711">HX711</link>. </para>
+</para>
+<informaltable frame="all">
+<title>Valores de enumeraciones</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>INICIALIZADO</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>INICIALIZADO</secondary></indexterm>
+<anchor xml:id="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead0a0d543fb4d273de7c0dff5da7751d2"/>INICIALIZADO</entry><entry>
+<para>hx711 listo 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SINVALORCONVERSION</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>SINVALORCONVERSION</secondary></indexterm>
+<anchor xml:id="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaacf985dca092d320ab9c91eb95954b99"/>SINVALORCONVERSION</entry><entry>
+<para>hx711 sin calibrar </para>
+</entry></row><row><entry><indexterm><primary>SLEEP</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>SLEEP</secondary></indexterm>
+<anchor xml:id="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594ead6137abebe4fdc59e2f0f2c84bdbe3fa"/>SLEEP</entry><entry>
+<para>hx711 durmiendo </para>
+</entry></row><row><entry><indexterm><primary>NUEVA_LECTURA</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>NUEVA_LECTURA</secondary></indexterm>
+<anchor xml:id="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eafab9a80a89b5faaeff433d917ceac855"/>NUEVA_LECTURA</entry><entry>
+<para>hx711 nueva lectura disponible </para>
+</entry></row><row><entry><indexterm><primary>TIMEOUT</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___enum_1gga3b06dedcf428c2a447fb32b6338f594eaad9dee005a3d0f9137b2ac1e0869f89b"/>TIMEOUT</entry><entry>
+<para><link linkend="_struct_timeout">Timeout</link> ocurrido </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_group___enum_1gae933250036608b3d14c31720968d5bad"/><section>
+    <title>HX711_Ganancia_e</title>
+<indexterm><primary>HX711_Ganancia_e</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>HX711_Ganancia_e</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___enum_1gae933250036608b3d14c31720968d5bad">HX711_Ganancia_e</link></computeroutput></para><para>
+
+<para>La ganancia que queremos definir para las lecturas. </para>
+</para>
+<informaltable frame="all">
+<title>Valores de enumeraciones</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CHANNELA_128</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>CHANNELA_128</secondary></indexterm>
+<anchor xml:id="_group___enum_1ggae933250036608b3d14c31720968d5badac5b8627cbc2b658460ccd5821f89b1b0"/>CHANNELA_128</entry><entry>
+<para>ganancia de 128 </para>
+</entry></row><row><entry><indexterm><primary>CHANNELA_64</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>CHANNELA_64</secondary></indexterm>
+<anchor xml:id="_group___enum_1ggae933250036608b3d14c31720968d5bada405ed7fed905453804949b7c62f39fd6"/>CHANNELA_64</entry><entry>
+<para>ganancia de 64 </para>
+</entry></row><row><entry><indexterm><primary>CHANNELB_32</primary><secondary>Enum</secondary></indexterm>
+<indexterm><primary>Enum</primary><secondary>CHANNELB_32</secondary></indexterm>
+<anchor xml:id="_group___enum_1ggae933250036608b3d14c31720968d5badaf10976c17faf9dd4e1fa10984da1d7d8"/>CHANNELB_32</entry><entry>
+<para>ganancia de 32 CanalB </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

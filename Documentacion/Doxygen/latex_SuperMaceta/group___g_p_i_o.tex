@@ -1,0 +1,164 @@
+\hypertarget{group___g_p_i_o}{}\doxysection{GPIO}
+\label{group___g_p_i_o}\index{GPIO@{GPIO}}
+\doxysubsection*{Módulos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g}{GPIO\+\_\+\+CONFIG}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___g_p_i_o_gaf27dc74fa63eece892123277a0b850ea}{NHALgpio\+\_\+\+Init}} (\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$gpio)
+\item 
+bool \mbox{\hyperlink{group___g_p_i_o_ga4d38d3a2718d07f7d43dccedd382880a}{NHALgpio\+\_\+\+Read}} (\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$gpio)
+\item 
+void \mbox{\hyperlink{group___g_p_i_o_ga2f79a43853eb7523f283478b39e93f3f}{NHALgpio\+\_\+\+Write}} (\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$gpio, bool estado)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{group___g_p_i_o_gaf27dc74fa63eece892123277a0b850ea}\label{group___g_p_i_o_gaf27dc74fa63eece892123277a0b850ea}} 
+\index{GPIO@{GPIO}!NHALgpio\_Init@{NHALgpio\_Init}}
+\index{NHALgpio\_Init@{NHALgpio\_Init}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{NHALgpio\_Init()}{NHALgpio\_Init()}}
+{\footnotesize\ttfamily void NHALgpio\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$}]{gpio }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Esta funcion inicializa la IO segun su declaracion
+
+PRE-\/\+CONDITION\+: Clock habilitado PRE-\/\+CONDITION\+: Configuracion de la gpio creada
+
+POST-\/\+CONDITION\+: La gpio esta inicializada a los valores indicados
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Configuracion} & de la gpio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___g_p_i_o_gaf27dc74fa63eece892123277a0b850ea}{NHALgpio\_Init}}( \&gpio );}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ \mbox{\Hypertarget{group___g_p_i_o_ga4d38d3a2718d07f7d43dccedd382880a}\label{group___g_p_i_o_ga4d38d3a2718d07f7d43dccedd382880a}} 
+\index{GPIO@{GPIO}!NHALgpio\_Read@{NHALgpio\_Read}}
+\index{NHALgpio\_Read@{NHALgpio\_Read}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{NHALgpio\_Read()}{NHALgpio\_Read()}}
+{\footnotesize\ttfamily bool NHALgpio\+\_\+\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$}]{gpio }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Esta funcion devuelve el estado de la gpio
+
+PRE-\/\+CONDITION\+: La gpio ha sido configurada
+
+POST-\/\+CONDITION\+: Obtenemos valor del estado de la gpio
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Configuracion} & de la gpio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Estado de la gpio
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}( \mbox{\hyperlink{group___g_p_i_o_ga4d38d3a2718d07f7d43dccedd382880a}{NHALgpio\_Read}}( \&gpio ) )}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{comment}{//Hacer algo}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{comment}{//Hacer algo}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ \mbox{\Hypertarget{group___g_p_i_o_ga2f79a43853eb7523f283478b39e93f3f}\label{group___g_p_i_o_ga2f79a43853eb7523f283478b39e93f3f}} 
+\index{GPIO@{GPIO}!NHALgpio\_Write@{NHALgpio\_Write}}
+\index{NHALgpio\_Write@{NHALgpio\_Write}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{NHALgpio\_Write()}{NHALgpio\_Write()}}
+{\footnotesize\ttfamily void NHALgpio\+\_\+\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$}]{gpio,  }\item[{bool}]{estado }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Esta sobreescribe el estado logico de la gpio
+
+PRE-\/\+CONDITION\+: La gpio ha sido configurada
+
+POST-\/\+CONDITION\+: El estado logico de la gpio ha sido establecido
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Configuracion} & de la gpio \\
+\hline
+{\em Valor} & logico de la gpio a establecer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___g_p_i_o_ga2f79a43853eb7523f283478b39e93f3f}{NHALgpio\_Write}}( \&gpio, \textcolor{keyword}{true} );}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ 

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dht11_8c" xml:lang="es">
+<title>Referencia del Archivo Drivers/DHT11/dht11.c</title>
+<indexterm><primary>Drivers/DHT11/dht11.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;dht11.h&gt;
+</programlisting><simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___d_h_t11_1ga86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</link> (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> dht11, <link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link> Lectura, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> <link linkend="_group___d_h_t11_1gabc1f5f47365d834c03533a733cb911b9">dht11_Lectura</link> (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> dht11)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

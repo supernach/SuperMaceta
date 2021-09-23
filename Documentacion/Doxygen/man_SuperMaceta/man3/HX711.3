@@ -1,0 +1,62 @@
+.TH "HX711" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HX711 \- Objeto principal para interactuar con el hx711\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hx711\&.h>\fP
+.SS "Campos de datos"
+
+.in +1c
+.ti -1c
+.RI "\fBHX711_Config_t\fP \fBConfig\fP"
+.br
+.ti -1c
+.RI "\fBHX711_Datos_t\fP \fBDatos\fP"
+.br
+.ti -1c
+.RI "\fBTimeout_t_ptr\fP \fBTimeout\fP"
+.br
+.ti -1c
+.RI "\fBHX711_fPtr\fP \fBLectura\fP"
+.br
+.ti -1c
+.RI "\fBHX711_fPtr\fP \fBTarar\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Objeto principal para interactuar con el hx711\&. 
+
+
+.PP
+\fBVer también\fP
+.RS 4
+\fBHX711_Config_t\fP 
+.PP
+\fBHX711_Datos_t\fP 
+.PP
+\fBHX711_fPtr\fP 
+.RE
+.PP
+
+.SH "Documentación de los campos"
+.PP 
+.SS "\fBHX711_Config_t\fP Config"
+Configuracion del objeto hx711 
+.SS "\fBHX711_Datos_t\fP Datos"
+Datos del objeto hx711 
+.SS "\fBHX711_fPtr\fP Lectura"
+Puntero hacia la funcion de lectura 
+.SS "\fBHX711_fPtr\fP Tarar"
+Puntero hacia la funcion de taraje 
+.SS "\fBTimeout_t_ptr\fP \fBTimeout\fP"
+Referencia para ejecutar el timeout 
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

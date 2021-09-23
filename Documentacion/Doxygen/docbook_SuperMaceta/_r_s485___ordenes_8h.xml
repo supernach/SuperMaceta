@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485___ordenes_8h" xml:lang="es">
+<title>Referencia del Archivo Communication/RS485/Ordenes/RS485_Ordenes.h</title>
+<indexterm><primary>Communication/RS485/Ordenes/RS485_Ordenes.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_s485___orden">RS485_Orden</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___o_r_d_e_n_e_s_1ga609964b31a334763d10756a84d8741ce">RS485_ORDENES_BYTES</link>   2</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_r_s485___orden">RS485_Orden</link> <link linkend="_group___o_r_d_e_n_e_s_1ga6fb2542c8b7a173205e575aebc2264be">RS485_Orden_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

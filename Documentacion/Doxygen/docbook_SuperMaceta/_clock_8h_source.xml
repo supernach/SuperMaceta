@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__clock_8h_source" xml:lang="es">
+<title>Clock.h</title>
+<indexterm><primary>Api/N_HAL/Clock/Clock.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;CLOCK_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;CLOCK_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Clock&#32;API</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Clock.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;20/02/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;20/02/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+55 <emphasis role="comment">/******************************************************************************</emphasis>
+56 <emphasis role="comment">*&#32;Includes</emphasis>
+57 <emphasis role="comment">*******************************************************************************/</emphasis>
+58 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+59 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__gpio_8h">Gpio.h</link>&gt;</emphasis>
+60 
+61 <emphasis role="comment">/******************************************************************************</emphasis>
+62 <emphasis role="comment">*&#32;Constants</emphasis>
+63 <emphasis role="comment">*******************************************************************************/</emphasis>
+64 
+65 <emphasis role="comment">/******************************************************************************</emphasis>
+66 <emphasis role="comment">*&#32;Configuration</emphasis>
+67 <emphasis role="comment">*******************************************************************************/</emphasis>
+68 
+69 <emphasis role="comment">/******************************************************************************</emphasis>
+70 <emphasis role="comment">*&#32;Macros</emphasis>
+71 <emphasis role="comment">*******************************************************************************/</emphasis>
+72 
+73 <emphasis role="comment">/******************************************************************************</emphasis>
+74 <emphasis role="comment">*&#32;Typedefs</emphasis>
+75 <emphasis role="comment">*******************************************************************************/</emphasis>
+76 
+77 <emphasis role="comment">/******************************************************************************</emphasis>
+78 <emphasis role="comment">*&#32;Variables</emphasis>
+79 <emphasis role="comment">*******************************************************************************/</emphasis>
+80 
+81 <emphasis role="comment">/******************************************************************************</emphasis>
+82 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+83 <emphasis role="comment">*******************************************************************************/</emphasis>
+84 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+85 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+86 <emphasis role="preprocessor">#endif</emphasis>
+87 
+92 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___c_l_o_c_k_1ga9149d6d67ca17423b6aff809598a5253">DisableAllPeripherals</link>(<emphasis role="keywordtype">void</emphasis>);
+93 
+105 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___c_l_o_c_k_1ga154788159bac63badebcb13a4592e9d0">Clock_HSI_Init</link>(CLK_Prescaler_TypeDef&#32;fHsi,&#32;CLK_Prescaler_TypeDef&#32;fCpu);
+106 
+114 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___c_l_o_c_k_1gae748795e59c88680053eb0eb85cfd78d">EnableClockMirror</link>(CLK_Output_TypeDef&#32;source,&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>*&#32;pin);
+115 
+116 
+117 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+118 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+119 <emphasis role="preprocessor">#endif&#32;</emphasis>
+120 
+121 <emphasis role="preprocessor">#endif</emphasis>
+122 
+</programlisting></section>

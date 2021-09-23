@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['dht11_0',['DHT11',['../struct_d_h_t11.html',1,'']]],
-  ['dht11_5fconfig_1',['DHT11_Config',['../struct_d_h_t11___config.html',1,'']]]
+  ['buffer_5ftramas_0',['Buffer_Tramas',['../struct_buffer___tramas.html',1,'']]]
 ];

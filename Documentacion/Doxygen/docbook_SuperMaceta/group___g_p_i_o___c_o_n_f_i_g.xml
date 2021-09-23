@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_p_i_o___c_o_n_f_i_g" xml:lang="es">
+<title>GPIO_CONFIG</title>
+<indexterm><primary>GPIO_CONFIG</primary></indexterm>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_gpio___config">Gpio_Config</link></para>
+
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_gpio___config">Gpio_Config</link> <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></para>
+
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga6c09cd09e372553b3468282c9a1663ec">NHALgpioConfig_SetType</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio, GPIO_Mode_TypeDef nuevoTipo)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5"/><section>
+    <title>Gpio_Config_t</title>
+<indexterm><primary>Gpio_Config_t</primary><secondary>GPIO_CONFIG</secondary></indexterm>
+<indexterm><primary>GPIO_CONFIG</primary><secondary>Gpio_Config_t</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></computeroutput></para><para>
+
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___g_p_i_o___c_o_n_f_i_g_1ga6c09cd09e372553b3468282c9a1663ec"/><section>
+    <title>NHALgpioConfig_SetType()</title>
+<indexterm><primary>NHALgpioConfig_SetType</primary><secondary>GPIO_CONFIG</secondary></indexterm>
+<indexterm><primary>GPIO_CONFIG</primary><secondary>NHALgpioConfig_SetType</secondary></indexterm>
+<para><computeroutput>void NHALgpioConfig_SetType (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> * gpio, GPIO_Mode_TypeDef nuevoTipo)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Esta funcion cambia el tipo de la gpio</para>
+
+<para>PRE-CONDITION: Configuracion gpio creada PRE-CONDITION: Nuevo tipo asignado</para>
+
+<para>POST-CONDITION: La gpio ha cambiado de tipo</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Configuracion</entry><entry>
+<para>de la gpio </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Nuevo</entry><entry>
+<para>tipo de la gpio</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga6c09cd09e372553b3468282c9a1663ec">NHALgpioConfig_SetType</link>(&#32;&amp;gpio,&#32;GPIO_MODE_IN_FL_NO_IT&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+
+<para>&lt;TODO: Mejorar abstraccion del parametro tipo </para>
+</section>
+</section>
+</section>

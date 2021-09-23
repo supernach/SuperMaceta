@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m_e_o_u_t" xml:lang="es">
+<title>TIMEOUT</title>
+<indexterm><primary>TIMEOUT</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g">TIMEOUT_CONFIG</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_timeout">Timeout</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m_e_o_u_t_1gaeae3a10fb3e3beb126cdb5fe62a7738a">TIMEOUT_MAX_500MS</link>   500</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_e_o_u_t_1ga37228cc19fd959cf0bc89665d0f83193">TIMEOUT_1MS</link>   1000</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_timeout">Timeout</link> <link linkend="_group___t_i_m_e_o_u_t_1ga27c0b53ab5389da20ab95634d2a8435c">Timeout_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___t_i_m_e_o_u_t_1ga27c0b53ab5389da20ab95634d2a8435c">Timeout_t</link> * <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumeraciones    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096">Timeout_Estado_e</link> { <link linkend="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9">INACTIVO</link>
+, <link linkend="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e">ACTIVO</link>
+, <link linkend="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb">DISPARADO</link>
+ }</para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___t_i_m_e_o_u_t_1gacf4087f528451c740786aa0b21520d6c">Timeout_Init</link> (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout, <link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer, <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link> isr_Notificacion, <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link> isr_Reset)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m_e_o_u_t_1gab42447d16c69163776bc7e676d906612">Timeout_Start</link> (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout, uint16_t microsegundos)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m_e_o_u_t_1ga29cfcf61fd1e84e7bcf4ce228ba21808">Timeout_Stop</link> (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;defines&apos;</title>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1ga37228cc19fd959cf0bc89665d0f83193"/><section>
+    <title>TIMEOUT_1MS</title>
+<indexterm><primary>TIMEOUT_1MS</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>TIMEOUT_1MS</secondary></indexterm>
+<para><computeroutput>#define TIMEOUT_1MS   1000</computeroutput></para></section>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1gaeae3a10fb3e3beb126cdb5fe62a7738a"/><section>
+    <title>TIMEOUT_MAX_500MS</title>
+<indexterm><primary>TIMEOUT_MAX_500MS</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>TIMEOUT_MAX_500MS</secondary></indexterm>
+<para><computeroutput>#define TIMEOUT_MAX_500MS   500</computeroutput></para></section>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1ga27c0b53ab5389da20ab95634d2a8435c"/><section>
+    <title>Timeout_t</title>
+<indexterm><primary>Timeout_t</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>Timeout_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t_1ga27c0b53ab5389da20ab95634d2a8435c">Timeout_t</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>&lt;referencias&gt; </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef"/><section>
+    <title>Timeout_t_ptr</title>
+<indexterm><primary>Timeout_t_ptr</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>Timeout_t_ptr</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>&lt;referencias&gt; </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Documentación de las enumeraciones</title>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096"/><section>
+    <title>Timeout_Estado_e</title>
+<indexterm><primary>Timeout_Estado_e</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>Timeout_Estado_e</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___t_i_m_e_o_u_t_1ga9b8c298323735086c33bb2fd017ee096">Timeout_Estado_e</link></computeroutput></para><para>
+
+<para>&lt;descripcion&gt; </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para>&lt;referencias&gt; </para>
+</formalpara>
+</para>
+<informaltable frame="all">
+<title>Valores de enumeraciones</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>INACTIVO</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>INACTIVO</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9"/>INACTIVO</entry><entry></entry></row><row><entry><indexterm><primary>ACTIVO</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>ACTIVO</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e"/>ACTIVO</entry><entry></entry></row><row><entry><indexterm><primary>DISPARADO</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>DISPARADO</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb"/>DISPARADO</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1gacf4087f528451c740786aa0b21520d6c"/><section>
+    <title>Timeout_Init()</title>
+<indexterm><primary>Timeout_Init</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>Timeout_Init</secondary></indexterm>
+<para><computeroutput>void Timeout_Init (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout, <link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer, <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga7e5bba325225938c20ad412994075aad">Timeout_Notificacion</link> isr_Notificacion, <link linkend="_group___t_i_m_e_o_u_t___c_o_n_f_i_g_1ga9c2bb2957932ee1700826fe54000b6bb">Timeout_ResetNotificacion</link> isr_Reset)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>plantilla descripcion</para>
+
+<para>PRE-CONDITION: PRE-CONDITION: PRE-CONDITION:</para>
+
+<para>POST-CONDITION:</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>&lt;br&gt;</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>&lt;br&gt;</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput></computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1gab42447d16c69163776bc7e676d906612"/><section>
+    <title>Timeout_Start()</title>
+<indexterm><primary>Timeout_Start</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>Timeout_Start</secondary></indexterm>
+<para><computeroutput>void Timeout_Start (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout, uint16_t microsegundos)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>plantilla descripcion</para>
+
+<para>PRE-CONDITION: PRE-CONDITION: PRE-CONDITION:</para>
+
+<para>POST-CONDITION:</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>&lt;br&gt;</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>&lt;br&gt;</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput></computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___t_i_m_e_o_u_t_1ga29cfcf61fd1e84e7bcf4ce228ba21808"/><section>
+    <title>Timeout_Stop()</title>
+<indexterm><primary>Timeout_Stop</primary><secondary>TIMEOUT</secondary></indexterm>
+<indexterm><primary>TIMEOUT</primary><secondary>Timeout_Stop</secondary></indexterm>
+<para><computeroutput>void Timeout_Stop (<link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> timeout)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>plantilla descripcion</para>
+
+<para>PRE-CONDITION: PRE-CONDITION: PRE-CONDITION:</para>
+
+<para>POST-CONDITION:</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>&lt;br&gt;</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>&lt;br&gt;</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput></computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+</section>

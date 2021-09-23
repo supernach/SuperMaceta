@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_s485___flags__u_1_1flag_bit" xml:lang="es">
+<title>Referencia de la Estructura RS485_Flags_u::flagBit</title>
+<indexterm><primary>RS485_Flags_u::flagBit</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1abe5a554780780fbc10d63a5d7f649201">NuevaRecepcion</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a9c283d5c304bd0ba55c3eb23b282095a">Inicializado</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a40779b74c939697e4f97288a32087b98">Standby</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1ae1457b2475c549e53d084a2daa6475f5">bit3</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1aec79d033d0709e9c4caf5b21f85848bc">bit4</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a56012f9e5f78d285eb450866b270b86d">bit5</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a39af6ce9105754718e17a87fb173b0fb">bit6</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___flags__u_1_1flag_bit_1a23364783b1302b0aab8b38fc7853cad3">bit7</link>: 1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1ae1457b2475c549e53d084a2daa6475f5"/><section>
+    <title>bit3</title>
+<indexterm><primary>bit3</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>bit3</secondary></indexterm>
+<para><computeroutput>uint8_t bit3</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1aec79d033d0709e9c4caf5b21f85848bc"/><section>
+    <title>bit4</title>
+<indexterm><primary>bit4</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>bit4</secondary></indexterm>
+<para><computeroutput>uint8_t bit4</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1a56012f9e5f78d285eb450866b270b86d"/><section>
+    <title>bit5</title>
+<indexterm><primary>bit5</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>bit5</secondary></indexterm>
+<para><computeroutput>uint8_t bit5</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1a39af6ce9105754718e17a87fb173b0fb"/><section>
+    <title>bit6</title>
+<indexterm><primary>bit6</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>bit6</secondary></indexterm>
+<para><computeroutput>uint8_t bit6</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1a23364783b1302b0aab8b38fc7853cad3"/><section>
+    <title>bit7</title>
+<indexterm><primary>bit7</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>bit7</secondary></indexterm>
+<para><computeroutput>uint8_t bit7</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1a9c283d5c304bd0ba55c3eb23b282095a"/><section>
+    <title>Inicializado</title>
+<indexterm><primary>Inicializado</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>Inicializado</secondary></indexterm>
+<para><computeroutput>uint8_t Inicializado</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1abe5a554780780fbc10d63a5d7f649201"/><section>
+    <title>NuevaRecepcion</title>
+<indexterm><primary>NuevaRecepcion</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>NuevaRecepcion</secondary></indexterm>
+<para><computeroutput>uint8_t NuevaRecepcion</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___flags__u_1_1flag_bit_1a40779b74c939697e4f97288a32087b98"/><section>
+    <title>Standby</title>
+<indexterm><primary>Standby</primary><secondary>RS485_Flags_u::flagBit</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u::flagBit</primary><secondary>Standby</secondary></indexterm>
+<para><computeroutput>uint8_t Standby</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/<link linkend="__r_s485_8h">RS485.h</link></section>
+</section>

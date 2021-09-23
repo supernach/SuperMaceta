@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_s_m___trama___paso" xml:lang="es">
+<title>Referencia de la Estructura FSM_Trama_Paso</title>
+<indexterm><primary>FSM_Trama_Paso</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Tramas.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_f_s_m___trama___paso_1ae0a4146952a43da12563c30fc1042ccf">nPasoSiguiente</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_f_s_m___trama___paso_1a0c57063561d0957d4896ae6f34bba681">BytesaLeer</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_f_s_m___trama___paso_1a4b8239b88d69b31c908a262c797b7e37">nPaso</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_f_s_m___trama___paso_1a0c57063561d0957d4896ae6f34bba681"/><section>
+    <title>BytesaLeer</title>
+<indexterm><primary>BytesaLeer</primary><secondary>FSM_Trama_Paso</secondary></indexterm>
+<indexterm><primary>FSM_Trama_Paso</primary><secondary>BytesaLeer</secondary></indexterm>
+<para><computeroutput>uint8_t BytesaLeer</computeroutput></para></section>
+<anchor xml:id="_struct_f_s_m___trama___paso_1a4b8239b88d69b31c908a262c797b7e37"/><section>
+    <title>nPaso</title>
+<indexterm><primary>nPaso</primary><secondary>FSM_Trama_Paso</secondary></indexterm>
+<indexterm><primary>FSM_Trama_Paso</primary><secondary>nPaso</secondary></indexterm>
+<para><computeroutput>uint8_t nPaso</computeroutput></para></section>
+<anchor xml:id="_struct_f_s_m___trama___paso_1ae0a4146952a43da12563c30fc1042ccf"/><section>
+    <title>nPasoSiguiente</title>
+<indexterm><primary>nPasoSiguiente</primary><secondary>FSM_Trama_Paso</secondary></indexterm>
+<indexterm><primary>FSM_Trama_Paso</primary><secondary>nPasoSiguiente</secondary></indexterm>
+<para><computeroutput>uint8_t nPasoSiguiente</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/Tramas/<link linkend="__r_s485___tramas_8h">RS485_Tramas.h</link></section>
+</section>

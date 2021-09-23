@@ -1,0 +1,68 @@
+.TH "Enum" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Enum \- Enum
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHX711_Estado_e\fP { \fBINICIALIZADO\fP, \fBSINVALORCONVERSION\fP, \fBSLEEP\fP, \fBNUEVA_LECTURA\fP, \fBTIMEOUT\fP }"
+.br
+.RI "Estados en los que puede encontrarse el \fBHX711\fP\&. "
+.ti -1c
+.RI "enum \fBHX711_Ganancia_e\fP { \fBCHANNELA_128\fP, \fBCHANNELA_64\fP, \fBCHANNELB_32\fP }"
+.br
+.RI "La ganancia que queremos definir para las lecturas\&. "
+.in -1c
+.SH "Descripción detallada"
+.PP 
+
+.SH "Documentación de las enumeraciones"
+.PP 
+.SS "enum enum \fBHX711_Estado_e\fP"
+
+.PP
+Estados en los que puede encontrarse el \fBHX711\fP\&. 
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fIINICIALIZADO \fP\fP
+hx711 listo 
+.br
+ 
+.TP
+\fB\fISINVALORCONVERSION \fP\fP
+hx711 sin calibrar 
+.TP
+\fB\fISLEEP \fP\fP
+hx711 durmiendo 
+.TP
+\fB\fINUEVA_LECTURA \fP\fP
+hx711 nueva lectura disponible 
+.TP
+\fB\fITIMEOUT \fP\fP
+\fBTimeout\fP ocurrido 
+.SS "enum \fBHX711_Ganancia_e\fP"
+
+.PP
+La ganancia que queremos definir para las lecturas\&. 
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fICHANNELA_128 \fP\fP
+ganancia de 128 
+.TP
+\fB\fICHANNELA_64 \fP\fP
+ganancia de 64 
+.TP
+\fB\fICHANNELB_32 \fP\fP
+ganancia de 32 CanalB 
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

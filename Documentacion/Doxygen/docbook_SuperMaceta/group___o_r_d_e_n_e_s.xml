@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___o_r_d_e_n_e_s" xml:lang="es">
+<title>ORDENES</title>
+<indexterm><primary>ORDENES</primary></indexterm>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_s485___orden">RS485_Orden</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___o_r_d_e_n_e_s_1ga609964b31a334763d10756a84d8741ce">RS485_ORDENES_BYTES</link>   2</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_r_s485___orden">RS485_Orden</link> <link linkend="_group___o_r_d_e_n_e_s_1ga6fb2542c8b7a173205e575aebc2264be">RS485_Orden_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;defines&apos;</title>
+<anchor xml:id="_group___o_r_d_e_n_e_s_1ga609964b31a334763d10756a84d8741ce"/><section>
+    <title>RS485_ORDENES_BYTES</title>
+<indexterm><primary>RS485_ORDENES_BYTES</primary><secondary>ORDENES</secondary></indexterm>
+<indexterm><primary>ORDENES</primary><secondary>RS485_ORDENES_BYTES</secondary></indexterm>
+<para><computeroutput>#define RS485_ORDENES_BYTES   2</computeroutput></para></section>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___o_r_d_e_n_e_s_1ga6fb2542c8b7a173205e575aebc2264be"/><section>
+    <title>RS485_Orden_t</title>
+<indexterm><primary>RS485_Orden_t</primary><secondary>ORDENES</secondary></indexterm>
+<indexterm><primary>ORDENES</primary><secondary>RS485_Orden_t</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_struct_r_s485___orden">RS485_Orden</link> <link linkend="_group___o_r_d_e_n_e_s_1ga6fb2542c8b7a173205e575aebc2264be">RS485_Orden_t</link></computeroutput></para></section>
+</section>
+</section>

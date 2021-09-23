@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__gpio_8c" xml:lang="es">
+<title>Referencia del Archivo Api/N_HAL/Gpio/Gpio.c</title>
+<indexterm><primary>Api/N_HAL/Gpio/Gpio.c</primary></indexterm>
+<para>
+
+<para>Este archivo contiene las operaciones basicas sobre los puertos gpio. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;gpio.h&gt;
+</programlisting><simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1gaf27dc74fa63eece892123277a0b850ea">NHALgpio_Init</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_group___g_p_i_o_1ga4d38d3a2718d07f7d43dccedd382880a">NHALgpio_Read</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1ga2f79a43853eb7523f283478b39e93f3f">NHALgpio_Write</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio, bool estado)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Este archivo contiene las operaciones basicas sobre los puertos gpio. </para>
+</section>
+</section>

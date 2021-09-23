@@ -1,0 +1,147 @@
+\hypertarget{group___c_l_o_c_k}{}\doxysection{CLOCK}
+\label{group___c_l_o_c_k}\index{CLOCK@{CLOCK}}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___c_l_o_c_k_ga154788159bac63badebcb13a4592e9d0}{Clock\+\_\+\+HSI\+\_\+\+Init}} (CLK\+\_\+\+Prescaler\+\_\+\+Type\+Def f\+Hsi, CLK\+\_\+\+Prescaler\+\_\+\+Type\+Def f\+Cpu)
+\begin{DoxyCompactList}\small\item\em Inicializa el reloj de alta velocidad interno del micro. A su vez deshabilita el reloj externo y el reloj lento interno. Configura la frecuencia Master y la frecuencia de la cpu. Por ultimo deshabilita el uso del reloj para todos los perifericos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_l_o_c_k_ga9149d6d67ca17423b6aff809598a5253}{Disable\+All\+Peripherals}} (void)
+\begin{DoxyCompactList}\small\item\em Deshabilita el uso del reloj en todos los perifericos ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___c_l_o_c_k_gae748795e59c88680053eb0eb85cfd78d}{Enable\+Clock\+Mirror}} (CLK\+\_\+\+Output\+\_\+\+Type\+Def source, \mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$pin)
+\begin{DoxyCompactList}\small\item\em Habilita el uso de la funcion CCO en el pin por defecto del micro. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{group___c_l_o_c_k_ga154788159bac63badebcb13a4592e9d0}\label{group___c_l_o_c_k_ga154788159bac63badebcb13a4592e9d0}} 
+\index{CLOCK@{CLOCK}!Clock\_HSI\_Init@{Clock\_HSI\_Init}}
+\index{Clock\_HSI\_Init@{Clock\_HSI\_Init}!CLOCK@{CLOCK}}
+\doxysubsubsection{\texorpdfstring{Clock\_HSI\_Init()}{Clock\_HSI\_Init()}}
+{\footnotesize\ttfamily void Clock\+\_\+\+HSI\+\_\+\+Init (\begin{DoxyParamCaption}\item[{CLK\+\_\+\+Prescaler\+\_\+\+Type\+Def}]{f\+Hsi,  }\item[{CLK\+\_\+\+Prescaler\+\_\+\+Type\+Def}]{f\+Cpu }\end{DoxyParamCaption})}
+
+
+
+Inicializa el reloj de alta velocidad interno del micro. A su vez deshabilita el reloj externo y el reloj lento interno. Configura la frecuencia Master y la frecuencia de la cpu. Por ultimo deshabilita el uso del reloj para todos los perifericos. 
+
+{\bfseries{Description\+:}} 
+
+Inicializacion del reloj interno de alta velocidad
+
+PRE-\/\+CONDITION\+: Parametros del reloj elegidos
+
+POST-\/\+CONDITION\+: El reloj esta habilitado a la frecuencia elegida
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Divisor} & para la frecuencia master \\
+\hline
+{\em Divisor} & para la frecuencia de la cpu, esta va referida a la frecuencia master\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___c_l_o_c_k_ga154788159bac63badebcb13a4592e9d0}{Clock\_HSI\_Init}}(CLK\_PRESCALER\_HSIDIV1, CLK\_PRESCALER\_CPUDIV1);}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/02/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Prescaler} & para la frecuencia Master. 1,2,4,8 \\
+\hline
+{\em Prescaler} & para la frecuencia de la cpu. Esta la marca la frecuencia Master. 1,2,4,8,16,32,64,128 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___c_l_o_c_k_ga9149d6d67ca17423b6aff809598a5253}\label{group___c_l_o_c_k_ga9149d6d67ca17423b6aff809598a5253}} 
+\index{CLOCK@{CLOCK}!DisableAllPeripherals@{DisableAllPeripherals}}
+\index{DisableAllPeripherals@{DisableAllPeripherals}!CLOCK@{CLOCK}}
+\doxysubsubsection{\texorpdfstring{DisableAllPeripherals()}{DisableAllPeripherals()}}
+{\footnotesize\ttfamily void Disable\+All\+Peripherals (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Deshabilita el uso del reloj en todos los perifericos ~\newline
+ 
+
+\mbox{\Hypertarget{group___c_l_o_c_k_gae748795e59c88680053eb0eb85cfd78d}\label{group___c_l_o_c_k_gae748795e59c88680053eb0eb85cfd78d}} 
+\index{CLOCK@{CLOCK}!EnableClockMirror@{EnableClockMirror}}
+\index{EnableClockMirror@{EnableClockMirror}!CLOCK@{CLOCK}}
+\doxysubsubsection{\texorpdfstring{EnableClockMirror()}{EnableClockMirror()}}
+{\footnotesize\ttfamily void Enable\+Clock\+Mirror (\begin{DoxyParamCaption}\item[{CLK\+\_\+\+Output\+\_\+\+Type\+Def}]{source,  }\item[{\mbox{\hyperlink{group___g_p_i_o___c_o_n_f_i_g_ga81d968812dfc63266cca243b992c9ad5}{Gpio\+\_\+\+Config\+\_\+t}} $\ast$}]{pin }\end{DoxyParamCaption})}
+
+
+
+Habilita el uso de la funcion CCO en el pin por defecto del micro. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos. 
+
+{\bfseries{Description\+:}} 
+
+Habilita un pin del micro y saca la se�al de reloj elegida
+
+PRE-\/\+CONDITION\+: Reloj configurado y habilitado PRE-\/\+CONDITION\+: IO parametrizada
+
+POST-\/\+CONDITION\+: IO configurada como salida POST-\/\+CONDITION\+: Se�al del reloj elegida es replicada en la IO
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Se�al} & de reloj a replicar \\
+\hline
+{\em Configuracion} & de la IO\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___c_l_o_c_k_gae748795e59c88680053eb0eb85cfd78d}{EnableClockMirror}}(CLK\_OUTPUT\_CPU, \&gpio)}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/02/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Se�al} & de reloj a usar \\
+\hline
+{\em Configuracion} & fisica del pin \\
+\hline
+\end{DoxyParams}

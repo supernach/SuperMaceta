@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_p_i_o" xml:lang="es">
+<title>GPIO</title>
+<indexterm><primary>GPIO</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___g_p_i_o___c_o_n_f_i_g">GPIO_CONFIG</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1gaf27dc74fa63eece892123277a0b850ea">NHALgpio_Init</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_group___g_p_i_o_1ga4d38d3a2718d07f7d43dccedd382880a">NHALgpio_Read</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1ga2f79a43853eb7523f283478b39e93f3f">NHALgpio_Write</link> (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *gpio, bool estado)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___g_p_i_o_1gaf27dc74fa63eece892123277a0b850ea"/><section>
+    <title>NHALgpio_Init()</title>
+<indexterm><primary>NHALgpio_Init</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>NHALgpio_Init</secondary></indexterm>
+<para><computeroutput>void NHALgpio_Init (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> * gpio)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Esta funcion inicializa la IO segun su declaracion</para>
+
+<para>PRE-CONDITION: Clock habilitado PRE-CONDITION: Configuracion de la gpio creada</para>
+
+<para>POST-CONDITION: La gpio esta inicializada a los valores indicados</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Configuracion</entry><entry>
+<para>de la gpio</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___g_p_i_o_1gaf27dc74fa63eece892123277a0b850ea">NHALgpio_Init</link>(&#32;&amp;gpio&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___g_p_i_o_1ga4d38d3a2718d07f7d43dccedd382880a"/><section>
+    <title>NHALgpio_Read()</title>
+<indexterm><primary>NHALgpio_Read</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>NHALgpio_Read</secondary></indexterm>
+<para><computeroutput>bool NHALgpio_Read (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> * gpio)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Esta funcion devuelve el estado de la gpio</para>
+
+<para>PRE-CONDITION: La gpio ha sido configurada</para>
+
+<para>POST-CONDITION: Obtenemos valor del estado de la gpio</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Configuracion</entry><entry>
+<para>de la gpio</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>Estado de la gpio</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><emphasis role="keywordflow">if</emphasis>(&#32;<link linkend="_group___g_p_i_o_1ga4d38d3a2718d07f7d43dccedd382880a">NHALgpio_Read</link>(&#32;&amp;gpio&#32;)&#32;)
+{
+&#32;&#32;<emphasis role="comment">//Hacer&#32;algo</emphasis>
+}
+<emphasis role="keywordflow">else</emphasis>
+{
+&#32;&#32;<emphasis role="comment">//Hacer&#32;algo</emphasis>
+}
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___g_p_i_o_1ga2f79a43853eb7523f283478b39e93f3f"/><section>
+    <title>NHALgpio_Write()</title>
+<indexterm><primary>NHALgpio_Write</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>NHALgpio_Write</secondary></indexterm>
+<para><computeroutput>void NHALgpio_Write (<link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> * gpio, bool estado)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Esta sobreescribe el estado logico de la gpio</para>
+
+<para>PRE-CONDITION: La gpio ha sido configurada</para>
+
+<para>POST-CONDITION: El estado logico de la gpio ha sido establecido</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Configuracion</entry><entry>
+<para>de la gpio </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Valor</entry><entry>
+<para>logico de la gpio a establecer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___g_p_i_o_1ga2f79a43853eb7523f283478b39e93f3f">NHALgpio_Write</link>(&#32;&amp;gpio,&#32;<emphasis role="keyword">true</emphasis>&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+</section>

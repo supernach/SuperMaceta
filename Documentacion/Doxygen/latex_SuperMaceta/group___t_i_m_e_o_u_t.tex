@@ -1,0 +1,265 @@
+\hypertarget{group___t_i_m_e_o_u_t}{}\doxysection{TIMEOUT}
+\label{group___t_i_m_e_o_u_t}\index{TIMEOUT@{TIMEOUT}}
+\doxysubsection*{Módulos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g}{TIMEOUT\+\_\+\+CONFIG}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_timeout}{Timeout}}
+\end{DoxyCompactItemize}
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_e_o_u_t_gaeae3a10fb3e3beb126cdb5fe62a7738a}{TIMEOUT\+\_\+\+MAX\+\_\+500\+MS}}~500
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga37228cc19fd959cf0bc89665d0f83193}{TIMEOUT\+\_\+1\+MS}}~1000
+\end{DoxyCompactItemize}
+\doxysubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_timeout}{Timeout}} \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}{Timeout\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em $<$descripcion$>$ \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}{Timeout\+\_\+t}} $\ast$ \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em $<$descripcion$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga9b8c298323735086c33bb2fd017ee096}{Timeout\+\_\+\+Estado\+\_\+e}} \{ \mbox{\hyperlink{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9}{INACTIVO}}
+, \mbox{\hyperlink{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e}{ACTIVO}}
+, \mbox{\hyperlink{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb}{DISPARADO}}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$descripcion$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___t_i_m_e_o_u_t_gacf4087f528451c740786aa0b21520d6c}{Timeout\+\_\+\+Init}} (\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} timeout, \mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\+\_\+t\+\_\+ptr}} timer, \mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g_ga7e5bba325225938c20ad412994075aad}{Timeout\+\_\+\+Notificacion}} isr\+\_\+\+Notificacion, \mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g_ga9c2bb2957932ee1700826fe54000b6bb}{Timeout\+\_\+\+Reset\+Notificacion}} isr\+\_\+\+Reset)
+\item 
+void \mbox{\hyperlink{group___t_i_m_e_o_u_t_gab42447d16c69163776bc7e676d906612}{Timeout\+\_\+\+Start}} (\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} timeout, uint16\+\_\+t microsegundos)
+\item 
+void \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga29cfcf61fd1e84e7bcf4ce228ba21808}{Timeout\+\_\+\+Stop}} (\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{group___t_i_m_e_o_u_t_ga37228cc19fd959cf0bc89665d0f83193}\label{group___t_i_m_e_o_u_t_ga37228cc19fd959cf0bc89665d0f83193}} 
+\index{TIMEOUT@{TIMEOUT}!TIMEOUT\_1MS@{TIMEOUT\_1MS}}
+\index{TIMEOUT\_1MS@{TIMEOUT\_1MS}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_1MS}{TIMEOUT\_1MS}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+1\+MS~1000}
+
+\mbox{\Hypertarget{group___t_i_m_e_o_u_t_gaeae3a10fb3e3beb126cdb5fe62a7738a}\label{group___t_i_m_e_o_u_t_gaeae3a10fb3e3beb126cdb5fe62a7738a}} 
+\index{TIMEOUT@{TIMEOUT}!TIMEOUT\_MAX\_500MS@{TIMEOUT\_MAX\_500MS}}
+\index{TIMEOUT\_MAX\_500MS@{TIMEOUT\_MAX\_500MS}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_MAX\_500MS}{TIMEOUT\_MAX\_500MS}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+MAX\+\_\+500\+MS~500}
+
+
+
+\doxysubsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\mbox{\Hypertarget{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}\label{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}} 
+\index{TIMEOUT@{TIMEOUT}!Timeout\_t@{Timeout\_t}}
+\index{Timeout\_t@{Timeout\_t}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{Timeout\_t}{Timeout\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga27c0b53ab5389da20ab95634d2a8435c}{Timeout\+\_\+t}}}
+
+
+
+$<$descripcion$>$ 
+
+\begin{DoxySeeAlso}{Ver también}
+$<$referencias$>$ 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}\label{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}} 
+\index{TIMEOUT@{TIMEOUT}!Timeout\_t\_ptr@{Timeout\_t\_ptr}}
+\index{Timeout\_t\_ptr@{Timeout\_t\_ptr}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{Timeout\_t\_ptr}{Timeout\_t\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}}
+
+
+
+$<$descripcion$>$ 
+
+\begin{DoxySeeAlso}{Ver también}
+$<$referencias$>$ 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentación de las enumeraciones}
+\mbox{\Hypertarget{group___t_i_m_e_o_u_t_ga9b8c298323735086c33bb2fd017ee096}\label{group___t_i_m_e_o_u_t_ga9b8c298323735086c33bb2fd017ee096}} 
+\index{TIMEOUT@{TIMEOUT}!Timeout\_Estado\_e@{Timeout\_Estado\_e}}
+\index{Timeout\_Estado\_e@{Timeout\_Estado\_e}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{Timeout\_Estado\_e}{Timeout\_Estado\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga9b8c298323735086c33bb2fd017ee096}{Timeout\+\_\+\+Estado\+\_\+e}}}
+
+
+
+$<$descripcion$>$ 
+
+\begin{DoxySeeAlso}{Ver también}
+$<$referencias$>$ 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INACTIVO@{INACTIVO}!TIMEOUT@{TIMEOUT}}\index{TIMEOUT@{TIMEOUT}!INACTIVO@{INACTIVO}}}\mbox{\Hypertarget{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9}\label{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4a9d9377c5617618b74718cfcd701fa9}} 
+INACTIVO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACTIVO@{ACTIVO}!TIMEOUT@{TIMEOUT}}\index{TIMEOUT@{TIMEOUT}!ACTIVO@{ACTIVO}}}\mbox{\Hypertarget{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e}\label{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a29e6ad29e84e8aa6f8772e42aef1616e}} 
+ACTIVO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISPARADO@{DISPARADO}!TIMEOUT@{TIMEOUT}}\index{TIMEOUT@{TIMEOUT}!DISPARADO@{DISPARADO}}}\mbox{\Hypertarget{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb}\label{group___t_i_m_e_o_u_t_gga9b8c298323735086c33bb2fd017ee096a4066d83027f905c525fe440a0769f5eb}} 
+DISPARADO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{group___t_i_m_e_o_u_t_gacf4087f528451c740786aa0b21520d6c}\label{group___t_i_m_e_o_u_t_gacf4087f528451c740786aa0b21520d6c}} 
+\index{TIMEOUT@{TIMEOUT}!Timeout\_Init@{Timeout\_Init}}
+\index{Timeout\_Init@{Timeout\_Init}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{Timeout\_Init()}{Timeout\_Init()}}
+{\footnotesize\ttfamily void Timeout\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}}]{timeout,  }\item[{\mbox{\hyperlink{group___t_y_p_e_d_e_f_ga4d8ae1c554c588cf1527e24c9c466362}{Timer\+\_\+t\+\_\+ptr}}}]{timer,  }\item[{\mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g_ga7e5bba325225938c20ad412994075aad}{Timeout\+\_\+\+Notificacion}}}]{isr\+\_\+\+Notificacion,  }\item[{\mbox{\hyperlink{group___t_i_m_e_o_u_t___c_o_n_f_i_g_ga9c2bb2957932ee1700826fe54000b6bb}{Timeout\+\_\+\+Reset\+Notificacion}}}]{isr\+\_\+\+Reset }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+plantilla descripcion
+
+PRE-\/\+CONDITION\+: PRE-\/\+CONDITION\+: PRE-\/\+CONDITION\+:
+
+POST-\/\+CONDITION\+:
+
+
+\begin{DoxyParams}{Parámetros}
+{\em $<$br$>$} & \\
+\hline
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+
+
+
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ \mbox{\Hypertarget{group___t_i_m_e_o_u_t_gab42447d16c69163776bc7e676d906612}\label{group___t_i_m_e_o_u_t_gab42447d16c69163776bc7e676d906612}} 
+\index{TIMEOUT@{TIMEOUT}!Timeout\_Start@{Timeout\_Start}}
+\index{Timeout\_Start@{Timeout\_Start}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{Timeout\_Start()}{Timeout\_Start()}}
+{\footnotesize\ttfamily void Timeout\+\_\+\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}}]{timeout,  }\item[{uint16\+\_\+t}]{microsegundos }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+plantilla descripcion
+
+PRE-\/\+CONDITION\+: PRE-\/\+CONDITION\+: PRE-\/\+CONDITION\+:
+
+POST-\/\+CONDITION\+:
+
+
+\begin{DoxyParams}{Parámetros}
+{\em $<$br$>$} & \\
+\hline
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+
+
+
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ \mbox{\Hypertarget{group___t_i_m_e_o_u_t_ga29cfcf61fd1e84e7bcf4ce228ba21808}\label{group___t_i_m_e_o_u_t_ga29cfcf61fd1e84e7bcf4ce228ba21808}} 
+\index{TIMEOUT@{TIMEOUT}!Timeout\_Stop@{Timeout\_Stop}}
+\index{Timeout\_Stop@{Timeout\_Stop}!TIMEOUT@{TIMEOUT}}
+\doxysubsubsection{\texorpdfstring{Timeout\_Stop()}{Timeout\_Stop()}}
+{\footnotesize\ttfamily void Timeout\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}}]{timeout }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+plantilla descripcion
+
+PRE-\/\+CONDITION\+: PRE-\/\+CONDITION\+: PRE-\/\+CONDITION\+:
+
+POST-\/\+CONDITION\+:
+
+
+\begin{DoxyParams}{Parámetros}
+{\em $<$br$>$} & \\
+\hline
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+
+
+
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+20/08/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ 

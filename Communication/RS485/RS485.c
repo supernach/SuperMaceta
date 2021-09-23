@@ -81,7 +81,7 @@
 *
 * POST-CONDITION: 
 * 
-* @param			
+* @param	RS485_t_ptr			
 * @param			
 *
 * @return 		void
@@ -105,6 +105,7 @@
 *******************************************************************************/
 void RS485_Init( RS485_t_ptr rs485 )
 {
+	rs485->Flags.flags = 0;
 	// CONFIGURO PARAMETROS COMUNICACION SERIE
 	rs485->Config.UART.StopBit = UART1_STOPBITS_1;
 	rs485->Config.UART.Paridad = UART1_PARITY_NO;
@@ -144,15 +145,19 @@ void RS485_Init( RS485_t_ptr rs485 )
 	rs485->Buffer.Rx.ptrBuffer = 0;
 	//// FSM DE LA RECEPCION
 	rs485->Buffer.Rx.Secuencia.pasoActual = 0;
+	rs485->Buffer.Rx.Secuencia.transicion = 1; // Empieza con lectura nodo ( BYTES NNODO - 1 )
 	////// PASO 0 = LECTURA NUMERO NODO
 	rs485->Buffer.Rx.Secuencia.LecturaNodo.nPasoSiguiente = 1;
 	rs485->Buffer.Rx.Secuencia.LecturaNodo.BytesaLeer = RS485_BYTES_N_NODO;
+	rs485->Buffer.Rx.Secuencia.LecturaNodo.nPaso = 0;
 	////// PASO 1 = LECTURA ORDEN DHT11
 	rs485->Buffer.Rx.Secuencia.LecturaOrdenDHT11.nPasoSiguiente = 2;
 	rs485->Buffer.Rx.Secuencia.LecturaOrdenDHT11.BytesaLeer = RS485_ORDENES_BYTES;
+	rs485->Buffer.Rx.Secuencia.LecturaOrdenDHT11.nPaso = 1;
 	////// PASO 2 = LECTURA ORDEN HX711
 	rs485->Buffer.Rx.Secuencia.LecturaOrdenHX711.nPasoSiguiente = 0;
 	rs485->Buffer.Rx.Secuencia.LecturaOrdenHX711.BytesaLeer = RS485_ORDENES_BYTES;
+	rs485->Buffer.Rx.Secuencia.LecturaOrdenHX711.nPaso = 2;
 	
 	
 	
@@ -170,6 +175,8 @@ void RS485_Init( RS485_t_ptr rs485 )
 	// LIMPIO FLAGS INTERRUPCION
 	UART1_ClearFlag( UART1_FLAG_RXNE );
 	enableInterrupts();
+	
+	rs485->Flags.bit.Inicializado = 1;
 }
 
 /******************************************************************************

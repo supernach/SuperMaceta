@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm8__interrupt__vector_8c" xml:lang="es">
+<title>Referencia del Archivo stm8_interrupt_vector.c</title>
+<indexterm><primary>stm8_interrupt_vector.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s_itc.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structinterrupt__vector">interrupt_vector</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef void far(* <link linkend="_stm8__interrupt__vector_8c_1a393c89fc1af62826fb348ca9bb431089">interrupt_handler_t</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>far interrupt void <link linkend="_stm8__interrupt__vector_8c_1a5d09f6ff4108c9af464e450eb7cf4e8b">NonHandledInterrupt</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_stm8__interrupt__vector_8c_1aad73b6c3b557e2fb5588d9ea699bd984">_stext</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structinterrupt__vector">interrupt_vector</link> const <link linkend="_stm8__interrupt__vector_8c_1ab2a96bab737fa472b336d61938d7123d">_vectab</link> []</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_stm8__interrupt__vector_8c_1a393c89fc1af62826fb348ca9bb431089"/><section>
+    <title>interrupt_handler_t</title>
+<indexterm><primary>interrupt_handler_t</primary><secondary>stm8_interrupt_vector.c</secondary></indexterm>
+<indexterm><primary>stm8_interrupt_vector.c</primary><secondary>interrupt_handler_t</secondary></indexterm>
+<para><computeroutput>typedef void far(* interrupt_handler_t) (void)</computeroutput></para>
+<para>includes agregados por mi </para>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_stm8__interrupt__vector_8c_1aad73b6c3b557e2fb5588d9ea699bd984"/><section>
+    <title>_stext()</title>
+<indexterm><primary>_stext</primary><secondary>stm8_interrupt_vector.c</secondary></indexterm>
+<indexterm><primary>stm8_interrupt_vector.c</primary><secondary>_stext</secondary></indexterm>
+<para><computeroutput>void _stext ( )</computeroutput></para></section>
+<anchor xml:id="_stm8__interrupt__vector_8c_1a5d09f6ff4108c9af464e450eb7cf4e8b"/><section>
+    <title>NonHandledInterrupt()</title>
+<indexterm><primary>NonHandledInterrupt</primary><secondary>stm8_interrupt_vector.c</secondary></indexterm>
+<indexterm><primary>stm8_interrupt_vector.c</primary><secondary>NonHandledInterrupt</secondary></indexterm>
+<para><computeroutput>far interrupt void NonHandledInterrupt (void )</computeroutput></para></section>
+</section>
+<section>
+<title>Documentación de las variables</title>
+<anchor xml:id="_stm8__interrupt__vector_8c_1ab2a96bab737fa472b336d61938d7123d"/><section>
+    <title>_vectab</title>
+<indexterm><primary>_vectab</primary><secondary>stm8_interrupt_vector.c</secondary></indexterm>
+<indexterm><primary>stm8_interrupt_vector.c</primary><secondary>_vectab</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_structinterrupt__vector">interrupt_vector</link> const _vectab[]</computeroutput></para></section>
+</section>
+</section>

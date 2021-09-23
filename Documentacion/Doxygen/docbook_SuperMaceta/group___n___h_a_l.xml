@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___n___h_a_l" xml:lang="es">
+<title>N_HAL</title>
+<indexterm><primary>N_HAL</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_l_o_c_k">CLOCK</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o">GPIO</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_r">TIMER</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_t_i_l_s">UTILS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+</section>

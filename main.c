@@ -179,25 +179,28 @@ static @inline void LecturaRS485( Trama_RX_t* bufRX, uint8_t dato )
 {
 	uint8_t nuevaRecepcion = 0;
 	
-	if( bufRX->Secuencia.pasoActual == 0 )
+	if( bufRX->Secuencia.pasoActual == bufRX->Secuencia.LecturaNodo.nPaso )
 	{
-		if( bufRX->ptrBuffer == ( bufRX->Secuencia.LecturaNodo.BytesaLeer ) - 1 )
+		if( bufRX->ptrBuffer == bufRX->Secuencia.transicion )
 		{
 			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaNodo.nPasoSiguiente;
+			bufRX->Secuencia.transicion = bufRX->Secuencia.transicion + bufRX->Secuencia.LecturaOrdenDHT11.BytesaLeer;
 		}
 	}
-	else if( bufRX->Secuencia.pasoActual == 1 )
+	else if( bufRX->Secuencia.pasoActual == bufRX->Secuencia.LecturaOrdenDHT11.nPaso )
 	{
-		if( bufRX->ptrBuffer == ( ( bufRX->Secuencia.LecturaNodo.BytesaLeer + bufRX->Secuencia.LecturaOrdenDHT11.BytesaLeer ) - 1 ) )
+		if( bufRX->ptrBuffer == bufRX->Secuencia.transicion )
 		{
 			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaOrdenDHT11.nPasoSiguiente;
+			bufRX->Secuencia.transicion = bufRX->Secuencia.transicion + bufRX->Secuencia.LecturaOrdenHX711.BytesaLeer;
 		}
 	}
-	else if( bufRX->Secuencia.pasoActual == 2 )
+	else if( bufRX->Secuencia.pasoActual ==  bufRX->Secuencia.LecturaOrdenHX711.nPaso )
 	{
-		if( bufRX->ptrBuffer == ( ( bufRX->Secuencia.LecturaNodo.BytesaLeer + bufRX->Secuencia.LecturaOrdenDHT11.BytesaLeer + bufRX->Secuencia.LecturaOrdenHX711.BytesaLeer ) - 1 ) )
+		if( bufRX->ptrBuffer == bufRX->Secuencia.transicion )
 		{
 			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaOrdenHX711.nPasoSiguiente;
+			bufRX->Secuencia.transicion = 1; // (bytes nnodo - 1)
 			nuevaRecepcion = 1;
 		}
 	}

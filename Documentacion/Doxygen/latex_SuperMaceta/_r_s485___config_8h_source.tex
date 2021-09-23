@@ -1,0 +1,109 @@
+\hypertarget{_r_s485___config_8h_source}{}\doxysection{RS485\+\_\+\+Config.\+h}
+\label{_r_s485___config_8h_source}\index{Communication/RS485/RS485\_Config.h@{Communication/RS485/RS485\_Config.h}}
+\mbox{\hyperlink{_r_s485___config_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RS485\_CONFIG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RS485\_CONFIG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   RS48\_Config COMM}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   RS485\_Config.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   20/09/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{16 \textcolor{comment}{*}}
+\DoxyCodeLine{17 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{19 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{20 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{23 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{24 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{25 \textcolor{comment}{*}}
+\DoxyCodeLine{26 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{27 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{28 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{31 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{34 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{35 \textcolor{comment}{*}}
+\DoxyCodeLine{36 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{37 \textcolor{comment}{*  20/09/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{38 \textcolor{comment}{*  }}
+\DoxyCodeLine{39 \textcolor{comment}{*}}
+\DoxyCodeLine{40 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{51 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{52 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{53 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <stm8s.h>}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gpio_8h}{gpio.h}}>}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{58 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{59 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{62 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{63 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{66 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{67 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{70 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{71 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_r_s485___config}{RS485\_Config}} \mbox{\hyperlink{struct_r_s485___config}{RS485\_Config\_t}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{86 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_r_s485___config}{RS485\_Config\_t}}* \mbox{\hyperlink{group___r_s485_gac1995416eb9e21b7bb9cef96bd3971c9}{RS485\_Config\_t\_ptr}};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{90 \textcolor{comment}{* Struct}}
+\DoxyCodeLine{91 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{98 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_u_a_r_t___config}{UART\_Config}}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100   UART1\_StopBits\_TypeDef \mbox{\hyperlink{struct_u_a_r_t___config_a3d3530f99abe6712de1c93ed10b7ba7b}{StopBit}}; }
+\DoxyCodeLine{101   UART1\_Parity\_TypeDef \mbox{\hyperlink{struct_u_a_r_t___config_a7e77db2feaff608949b3fd7f0e2c846b}{Paridad}}; }
+\DoxyCodeLine{102   UART1\_WordLength\_TypeDef \mbox{\hyperlink{struct_u_a_r_t___config_ac7559600176eecc75123e7c0ff538f58}{Bits}}; }
+\DoxyCodeLine{103   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___config_a58d40148f309705c1e7bfea650a03a4f}{Baudios}}; }
+\DoxyCodeLine{104   UART1\_Mode\_TypeDef \mbox{\hyperlink{struct_u_a_r_t___config_a8325b3c479e3ede2910c6cf0e12ee59f}{Modo}}; }
+\DoxyCodeLine{105   UART1\_IT\_TypeDef \mbox{\hyperlink{struct_u_a_r_t___config_af987ebaec400142dfd7403611c94de37}{TipoInterrupcion}}; }
+\DoxyCodeLine{106   \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}} \mbox{\hyperlink{struct_u_a_r_t___config_a11c3a5163a30aac6fc21aec31b239617}{P\_RX}}; }
+\DoxyCodeLine{107   \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}} \mbox{\hyperlink{struct_u_a_r_t___config_a16c248c97dcc0958d2156fda45054688}{P\_TX}}; }
+\DoxyCodeLine{108 \};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{116 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_r_s485___config}{RS485\_Config}}}
+\DoxyCodeLine{117 \{}
+\DoxyCodeLine{118   \textcolor{keyword}{struct }\mbox{\hyperlink{struct_u_a_r_t___config}{UART\_Config}} \mbox{\hyperlink{struct_r_s485___config_a409717d6f24fa6e22c195c954308b068}{UART}}; }
+\DoxyCodeLine{119 \};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{122 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{123 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{131 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{132 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{133 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{135 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{140 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{144   }
+
+\end{DoxyCode}

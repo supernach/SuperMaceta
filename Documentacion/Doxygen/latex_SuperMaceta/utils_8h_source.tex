@@ -1,0 +1,114 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+\label{utils_8h_source}\index{Api/N\_HAL/Utils/utils.h@{Api/N\_HAL/Utils/utils.h}}
+\mbox{\hyperlink{utils_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTILS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTILS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   Utils NHAL}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   Utils.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   20/08/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{16 \textcolor{comment}{*}}
+\DoxyCodeLine{17 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{19 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{20 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{23 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{24 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{25 \textcolor{comment}{*}}
+\DoxyCodeLine{26 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{27 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{28 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{31 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{34 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{35 \textcolor{comment}{*}}
+\DoxyCodeLine{36 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{37 \textcolor{comment}{*  20/08/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{38 \textcolor{comment}{*  }}
+\DoxyCodeLine{39 \textcolor{comment}{*}}
+\DoxyCodeLine{40 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{54 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{55 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{56 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <stm8s.h>}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{60 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{61 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define FCLK 16000000 }}
+\DoxyCodeLine{68 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{69 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{70 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{73 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{74 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define NULL (void*)0 }}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define IS\_NULL(val) ((val == NULL) ? true : false) }}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#ifndef FCLK }}
+\DoxyCodeLine{89 \textcolor{preprocessor}{  \#error FCLK is not defined! }}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{91 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{92 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{93 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{96 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{97 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{100 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{101 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{103 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{static} @\textcolor{keyword}{inline} \textcolor{keywordtype}{void} \_delay\_cycl( \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \_\_ticks )}
+\DoxyCodeLine{108 \{}
+\DoxyCodeLine{109 \textcolor{preprocessor}{  \#define T\_COUNT(x) (( x * (FCLK / 1000000UL) )-\/3)/3)}}
+\DoxyCodeLine{110   \_asm(\textcolor{stringliteral}{"{}nop\(\backslash\)n \$N:\(\backslash\)n decw X\(\backslash\)n jrne \$L\(\backslash\)n nop\(\backslash\)n "{}}, \_\_ticks);  }
+\DoxyCodeLine{111 \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{114 \textcolor{comment}{* Function : \_delay\_us()}}
+\DoxyCodeLine{115 \textcolor{comment}{*/}}
+\DoxyCodeLine{146 \textcolor{keyword}{static} @\textcolor{keyword}{inline} \textcolor{keywordtype}{void} \_delay\_us( \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \_\_us )}
+\DoxyCodeLine{147 \{}
+\DoxyCodeLine{148   \_delay\_cycl( (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short})( \mbox{\hyperlink{utils_8h_a5a9593f5765effd9a2bd5126034e3d4f}{T\_COUNT}}(\_\_us) );}
+\DoxyCodeLine{149 \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{152 \textcolor{comment}{* Function : \_delay\_ms()}}
+\DoxyCodeLine{153 \textcolor{comment}{*/}}
+\DoxyCodeLine{184 \textcolor{keyword}{static} @\textcolor{keyword}{inline} \textcolor{keywordtype}{void} \_delay\_ms( \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \_\_ms )}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186   \textcolor{keywordflow}{while} ( \_\_ms-\/-\/ )}
+\DoxyCodeLine{187   \{}
+\DoxyCodeLine{188     \_delay\_us( 1000 );}
+\DoxyCodeLine{189   \}}
+\DoxyCodeLine{190 \}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{193 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{197 }
+
+\end{DoxyCode}

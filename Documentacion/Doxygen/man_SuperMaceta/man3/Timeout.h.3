@@ -1,0 +1,72 @@
+.TH "Api/TIMEOUT/Timeout.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Api/TIMEOUT/Timeout.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stm8s\&.h>\fP
+.br
+\fC#include <utils\&.h>\fP
+.br
+\fC#include <gpio\&.h>\fP
+.br
+\fC#include <timer\&.h>\fP
+.br
+\fC#include <Timeout_Config\&.h>\fP
+.br
+
+.SS "Estructuras de datos"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTimeout\fP"
+.br
+.in -1c
+.SS "defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIMEOUT_MAX_500MS\fP   500"
+.br
+.ti -1c
+.RI "#define \fBTIMEOUT_1MS\fP   1000"
+.br
+.in -1c
+.SS "typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBTimeout\fP \fBTimeout_t\fP"
+.br
+.RI "<descripcion> "
+.ti -1c
+.RI "typedef \fBTimeout_t\fP * \fBTimeout_t_ptr\fP"
+.br
+.RI "<descripcion> "
+.in -1c
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTimeout_Estado_e\fP { \fBINACTIVO\fP, \fBACTIVO\fP, \fBDISPARADO\fP }"
+.br
+.RI "<descripcion> "
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBTimeout_Init\fP (\fBTimeout_t_ptr\fP timeout, \fBTimer_t_ptr\fP timer, \fBTimeout_Notificacion\fP isr_Notificacion, \fBTimeout_ResetNotificacion\fP isr_Reset)"
+.br
+.ti -1c
+.RI "void \fBTimeout_Start\fP (\fBTimeout_t_ptr\fP timeout, uint16_t microsegundos)"
+.br
+.ti -1c
+.RI "void \fBTimeout_Stop\fP (\fBTimeout_t_ptr\fP timeout)"
+.br
+.in -1c
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

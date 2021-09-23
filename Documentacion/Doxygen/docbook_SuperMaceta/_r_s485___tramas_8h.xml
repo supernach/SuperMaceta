@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_s485___tramas_8h" xml:lang="es">
+<title>Referencia del Archivo Communication/RS485/Tramas/RS485_Tramas.h</title>
+<indexterm><primary>Communication/RS485/Tramas/RS485_Tramas.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stm8s.h&gt;
+#include &lt;rs485_ordenes.h&gt;
+</programlisting><simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_trama___r_x">Trama_RX</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_trama___t_x">Trama_TX</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_buffer___tramas">Buffer_Tramas</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>defines    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_r_a_m_a_s_1ga1c42fbe70b123b650d914d1162267682">RS485_BYTES_N_NODO</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_r_a_m_a_s_1gae5b324ccc7a9b31732d82e7265f9c4d8">RS485_BYTES_BUFFER_RX</link>   6</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_trama___r_x">Trama_RX</link> <link linkend="_group___t_r_a_m_a_s_1ga0817146552b49da8e085f85cf917854f">Trama_RX_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_trama___t_x">Trama_TX</link> <link linkend="_group___t_r_a_m_a_s_1ga3d810169dcadc4ef3d153e03bbb12751">Trama_TX_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link> <link linkend="_group___t_r_a_m_a_s_1gaa42bedcd0f7e267f945b1e8222b4d2da">Trama_BROADCAST_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_buffer___tramas">Buffer_Tramas</link> <link linkend="_group___t_r_a_m_a_s_1ga0c14f5a454fdf19cef6b4e2f74596934">Buffer_Tramas_t</link></para>
+
+<para>&lt;descripcion&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

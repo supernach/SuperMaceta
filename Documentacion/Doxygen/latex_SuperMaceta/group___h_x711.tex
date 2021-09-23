@@ -1,0 +1,169 @@
+\hypertarget{group___h_x711}{}\doxysection{HX711}
+\label{group___h_x711}\index{HX711@{HX711}}
+\doxysubsection*{Módulos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___constantes}{Constantes}}
+\item 
+\mbox{\hyperlink{group___typedef}{Typedef}}
+\item 
+\mbox{\hyperlink{group___estructuras}{Estructuras}}
+\item 
+\mbox{\hyperlink{group___funciones}{Publicas}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___h_x711_ga5e2f902a7b30390fa34d2bf2b05f0ef3}{HX711\+\_\+\+Init}} (\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}} hx711, \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}} Lectura, \mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}} Tarar, \mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}} \mbox{\hyperlink{struct_timeout}{Timeout}})
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___h_x711_ga324bf5567c5ec2e210404234fb5e5242}{hx711\+\_\+\+Lectura}} (\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}} hx711)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___h_x711_gaecc0da5c8ae51a1eb3cb136c7c594a4f}{hx711\+\_\+\+Tarar}} (\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}} hx711)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{group___h_x711_ga5e2f902a7b30390fa34d2bf2b05f0ef3}\label{group___h_x711_ga5e2f902a7b30390fa34d2bf2b05f0ef3}} 
+\index{HX711@{HX711}!HX711\_Init@{HX711\_Init}}
+\index{HX711\_Init@{HX711\_Init}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{HX711\_Init()}{HX711\_Init()}}
+{\footnotesize\ttfamily void HX711\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}}}]{hx711,  }\item[{\mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}}}]{Lectura,  }\item[{\mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}}}]{Tarar,  }\item[{\mbox{\hyperlink{group___t_i_m_e_o_u_t_ga22304e7f09db57806c347e540d2031ef}{Timeout\+\_\+t\+\_\+ptr}}}]{Timeout }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Inicializa valores y funciones del sensor
+
+PRE-\/\+CONDITION\+: Clock habilitado PRE-\/\+CONDITION\+: Configuracion de la gpio creada PRE-\/\+CONDITION\+: funcion callback de lectura creada PRE-\/\+CONDITION\+: funcion callback de Tara creada
+
+POST-\/\+CONDITION\+: El sensor esta listo para usarse
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sensor} & a inicializar \\
+\hline
+{\em Funcion} & callback de lectura \\
+\hline
+{\em Funcion} & callback de Tara\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___h_x711_ga5e2f902a7b30390fa34d2bf2b05f0ef3}{HX711\_Init}}( \&hx711, \&\mbox{\hyperlink{group___h_x711_ga324bf5567c5ec2e210404234fb5e5242}{hx711\_Lectura}} );}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___typedef_ga243fec3499adb318184d6dfc775d471d}{HX711\+\_\+t}} 
+
+\mbox{\hyperlink{group___punteros_ga41e4c007231820e467c5dfcb2f298084}{HX711\+\_\+f\+Ptr}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+9/09/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ \mbox{\Hypertarget{group___h_x711_ga324bf5567c5ec2e210404234fb5e5242}\label{group___h_x711_ga324bf5567c5ec2e210404234fb5e5242}} 
+\index{HX711@{HX711}!hx711\_Lectura@{hx711\_Lectura}}
+\index{hx711\_Lectura@{hx711\_Lectura}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{hx711\_Lectura()}{hx711\_Lectura()}}
+{\footnotesize\ttfamily uint16\+\_\+t hx711\+\_\+\+Lectura (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}}}]{hx711 }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Realiza y devuelve el valor de la lectura de 24bits
+
+PRE-\/\+CONDITION\+: hx711 inicializado
+
+POST-\/\+CONDITION\+: Lectura valida o fallo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sensor} & sobre el que realizar la lectura\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Lectura
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___h_x711_ga5e2f902a7b30390fa34d2bf2b05f0ef3}{HX711\_Init}}( \&hx711, \&\mbox{\hyperlink{group___h_x711_ga324bf5567c5ec2e210404234fb5e5242}{hx711\_Lectura}} );}
+\DoxyCodeLine{hx711.Datos.UltimaLectura = hx711.Lectura( \&hx711 );}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___typedef_ga243fec3499adb318184d6dfc775d471d}{HX711\+\_\+t}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+9/09/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ \mbox{\Hypertarget{group___h_x711_gaecc0da5c8ae51a1eb3cb136c7c594a4f}\label{group___h_x711_gaecc0da5c8ae51a1eb3cb136c7c594a4f}} 
+\index{HX711@{HX711}!hx711\_Tarar@{hx711\_Tarar}}
+\index{hx711\_Tarar@{hx711\_Tarar}!HX711@{HX711}}
+\doxysubsubsection{\texorpdfstring{hx711\_Tarar()}{hx711\_Tarar()}}
+{\footnotesize\ttfamily uint16\+\_\+t hx711\+\_\+\+Tarar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___punteros_gae379a330709bd3cfe8dff040b02c8b7a}{HX711\+\_\+t\+\_\+ptr}}}]{hx711 }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} 
+
+Realiza 4 lecturas y devuelve el valor medio para establecerlo como tara
+
+PRE-\/\+CONDITION\+: hx711 inicializado
+
+POST-\/\+CONDITION\+: Tara valida o fallo
+
+
+\begin{DoxyParams}{Parámetros}
+{\em hx711} & Sensor sobre el que realizar la lectura\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Tara
+\end{DoxyReturn}
+{\bfseries{Example}} Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___h_x711_ga5e2f902a7b30390fa34d2bf2b05f0ef3}{HX711\_Init}}( \&hx711, \&\mbox{\hyperlink{group___h_x711_ga324bf5567c5ec2e210404234fb5e5242}{hx711\_Lectura}}, \&\mbox{\hyperlink{group___h_x711_gaecc0da5c8ae51a1eb3cb136c7c594a4f}{hx711\_Tarar}} );}
+\DoxyCodeLine{hx711.Config.ValorTara = hx711.Tarar( \&hx711 );}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{group___typedef_ga243fec3499adb318184d6dfc775d471d}{HX711\+\_\+t}}
+\end{DoxySeeAlso}
+~\newline
+{\bfseries{ -\/ CHANGELOG -\/ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+Fecha &Software Version &Creador &Descripcion  \\\cline{1-4}
+9/09/2021 &1.\+0.\+0 &SN &Primera edicion  \\\cline{1-4}
+\end{longtabu}
+~\newline
+~\newline
+ \DoxyHorRuler{0}
+ 

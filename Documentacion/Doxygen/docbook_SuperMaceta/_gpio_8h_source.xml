@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__gpio_8h_source" xml:lang="es">
+<title>Gpio.h</title>
+<indexterm><primary>Api/N_HAL/Gpio/Gpio.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/****************************************************************************</emphasis>
+2 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Gpio&#32;API</emphasis>
+3 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Gpio.h</emphasis>
+4 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+5 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;20/08/2021</emphasis>
+6 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+7 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+8 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+9 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+10 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+11 <emphasis role="comment">*</emphasis>
+12 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+13 <emphasis role="comment">*</emphasis>
+14 <emphasis role="comment">*******************************************************************************/</emphasis>
+15 <emphasis role="comment">/****************************************************************************</emphasis>
+16 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+17 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+18 <emphasis role="comment">*</emphasis>
+19 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+20 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+21 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+22 <emphasis role="comment">*</emphasis>
+23 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+24 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+25 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+26 <emphasis role="comment">*</emphasis>
+27 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+28 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*****************************************************************************/</emphasis>
+31 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+34 <emphasis role="comment">*&#32;&#32;20/08/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+35 <emphasis role="comment">*&#32;&#32;</emphasis>
+36 <emphasis role="comment">*</emphasis>
+37 <emphasis role="comment">*******************************************************************************/</emphasis>
+52 <emphasis role="preprocessor">#ifndef&#32;GPIO_H</emphasis>
+53 <emphasis role="preprocessor">#define&#32;GPIO_H</emphasis>
+54 
+55 
+56 <emphasis role="comment">/******************************************************************************</emphasis>
+57 <emphasis role="comment">*&#32;Includes</emphasis>
+58 <emphasis role="comment">*******************************************************************************/</emphasis>
+59 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+60 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+61 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__gpio___config_8h">Gpio_Config.h</link>&gt;</emphasis>
+62 
+63 <emphasis role="comment">/******************************************************************************</emphasis>
+64 <emphasis role="comment">*&#32;Constants</emphasis>
+65 <emphasis role="comment">*******************************************************************************/</emphasis>
+66 
+67 <emphasis role="comment">/******************************************************************************</emphasis>
+68 <emphasis role="comment">*&#32;Configuration</emphasis>
+69 <emphasis role="comment">*******************************************************************************/</emphasis>
+70 
+71 <emphasis role="comment">/******************************************************************************</emphasis>
+72 <emphasis role="comment">*&#32;Macros</emphasis>
+73 <emphasis role="comment">*******************************************************************************/</emphasis>
+74 
+75 <emphasis role="comment">/******************************************************************************</emphasis>
+76 <emphasis role="comment">*&#32;Typedefs</emphasis>
+77 <emphasis role="comment">*******************************************************************************/</emphasis>
+78 
+79 <emphasis role="comment">/******************************************************************************</emphasis>
+80 <emphasis role="comment">*&#32;Variables</emphasis>
+81 <emphasis role="comment">*******************************************************************************/</emphasis>
+82 
+83 <emphasis role="comment">/******************************************************************************</emphasis>
+84 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+85 <emphasis role="comment">*******************************************************************************/</emphasis>
+86 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+87 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+88 <emphasis role="preprocessor">#endif</emphasis>
+89 
+90 
+91 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___g_p_i_o_1gaf27dc74fa63eece892123277a0b850ea">NHALgpio_Init</link>(&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>*&#32;gpio&#32;);
+92 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_group___g_p_i_o_1ga4d38d3a2718d07f7d43dccedd382880a">NHALgpio_Read</link>(&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>*&#32;gpio&#32;);
+93 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___g_p_i_o_1ga2f79a43853eb7523f283478b39e93f3f">NHALgpio_Write</link>(&#32;<link linkend="_struct_gpio___config">Gpio_Config_t</link>*&#32;gpio,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;estado&#32;);
+94 
+95 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+96 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+97 <emphasis role="preprocessor">#endif&#32;</emphasis>
+98 
+99 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*GPIO_H_*/</emphasis><emphasis role="preprocessor"></emphasis>
+100 
+</programlisting></section>

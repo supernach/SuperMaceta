@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1dfabd6182ef7584f3d75594c169a6d6" xml:lang="es">
+<title>Referencia del directorio Aplicacion/Configuracion</title>
+<indexterm><primary>Referencia del directorio Aplicacion/Configuracion</primary></indexterm>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__app_config_8h">AppConfig.h</link></para>
+
+<para>Archivo de configuracion para la aplicacion. Se declaran los componentes necesarios para su funcionamiento. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

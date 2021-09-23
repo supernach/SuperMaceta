@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2fada11ca7a5740c2fd14bcfec8a1230" xml:lang="es">
+<title>Referencia del directorio Api/N_HAL</title>
+<indexterm><primary>Referencia del directorio Api/N_HAL</primary></indexterm>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_c1b0a8de3aa529a997e7a57770b72b34">Clock</link></para>
+</listitem>
+            <listitem><para>directorio <link linkend="_dir_2c2600d8d7d57decaabaaaaf9e5340e1">Gpio</link></para>
+</listitem>
+            <listitem><para>directorio <link linkend="_dir_9dc94be79af48200060083eec0f4ee34">Timer</link></para>
+</listitem>
+            <listitem><para>directorio <link linkend="_dir_213fb74e3124e453331ab488f455f33a">Utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_union_r_s485___flags__u" xml:lang="es">
+<title>Referencia de la Unión RS485_Flags_u</title>
+<indexterm><primary>RS485_Flags_u</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_s485___flags__u_1_1flag_bit">flagBit</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_union_r_s485___flags__u_1aa2585d779da0ab21273a8d92de9a0ebe">flags</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_s485___flags__u_1_1flag_bit">RS485_Flags_u::flagBit</link> <link linkend="_union_r_s485___flags__u_1ad1369e7d356c4e2acdc8b796fc88d2e7">bit</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_union_r_s485___flags__u_1ad1369e7d356c4e2acdc8b796fc88d2e7"/><section>
+    <title>bit</title>
+<indexterm><primary>bit</primary><secondary>RS485_Flags_u</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u</primary><secondary>bit</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_r_s485___flags__u_1_1flag_bit">RS485_Flags_u::flagBit</link> bit</computeroutput></para></section>
+<anchor xml:id="_union_r_s485___flags__u_1aa2585d779da0ab21273a8d92de9a0ebe"/><section>
+    <title>flags</title>
+<indexterm><primary>flags</primary><secondary>RS485_Flags_u</secondary></indexterm>
+<indexterm><primary>RS485_Flags_u</primary><secondary>flags</secondary></indexterm>
+<para><computeroutput>uint8_t flags</computeroutput></para></section>
+<para>
+La documentación para esta unión fue generada a partir del siguiente fichero:</para>
+Communication/RS485/<link linkend="__r_s485_8h">RS485.h</link></section>
+</section>

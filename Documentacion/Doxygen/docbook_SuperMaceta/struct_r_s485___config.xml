@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_s485___config" xml:lang="es">
+<title>Referencia de la Estructura RS485_Config</title>
+<indexterm><primary>RS485_Config</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Config.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_u_a_r_t___config">UART_Config</link> <link linkend="_struct_r_s485___config_1a409717d6f24fa6e22c195c954308b068">UART</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_r_s485___config_1a409717d6f24fa6e22c195c954308b068"/><section>
+    <title>UART</title>
+<indexterm><primary>UART</primary><secondary>RS485_Config</secondary></indexterm>
+<indexterm><primary>RS485_Config</primary><secondary>UART</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_u_a_r_t___config">UART_Config</link> UART</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/<link linkend="__r_s485___config_8h">RS485_Config.h</link></section>
+</section>

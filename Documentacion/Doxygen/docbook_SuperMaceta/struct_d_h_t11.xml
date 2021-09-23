@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_d_h_t11" xml:lang="es">
+<title>Referencia de la Estructura DHT11</title>
+<indexterm><primary>DHT11</primary></indexterm>
+<para>
+
+<para>Define el objeto principal para interactuar con un sensor <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;dht11.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___d_h_t11_1gaa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</link> <link linkend="_struct_d_h_t11_1a9cb8866a1e47f6053b8bdf379d99d424">Config</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___d_h_t11_1gaec3005d6c153733375aef0805f401fee">DHT11_Datos_t</link> <link linkend="_struct_d_h_t11_1ad3e1ef8105ccdb49b9ade49cd875c804">Datos</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_d_h_t11_1abb295df56198a023972379bfc188cff5">Timeout</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link> <link linkend="_struct_d_h_t11_1abf026b77114db481b0686b2d86e7e9b1">Lectura</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Define el objeto principal para interactuar con un sensor <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1gaa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</link> </para>
+
+<para><link linkend="_group___d_h_t11_1gaec3005d6c153733375aef0805f401fee">DHT11_Datos_t</link> </para>
+
+<para><link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_d_h_t11_1a9cb8866a1e47f6053b8bdf379d99d424"/><section>
+    <title>Config</title>
+<indexterm><primary>Config</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>Config</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gaa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</link> Config</computeroutput></para>
+<para>Configuracion del sensor </para>
+</section>
+<anchor xml:id="_struct_d_h_t11_1ad3e1ef8105ccdb49b9ade49cd875c804"/><section>
+    <title>Datos</title>
+<indexterm><primary>Datos</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>Datos</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gaec3005d6c153733375aef0805f401fee">DHT11_Datos_t</link> Datos</computeroutput></para>
+<para>Datos del sensor </para>
+</section>
+<anchor xml:id="_struct_d_h_t11_1abf026b77114db481b0686b2d86e7e9b1"/><section>
+    <title>Lectura</title>
+<indexterm><primary>Lectura</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>Lectura</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link> Lectura</computeroutput></para>
+<para>Puntero a la funcion de lectura </para>
+</section>
+<anchor xml:id="_struct_d_h_t11_1abb295df56198a023972379bfc188cff5"/><section>
+    <title>Timeout</title>
+<indexterm><primary>Timeout</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>Timeout</secondary></indexterm>
+<para><computeroutput><link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link></computeroutput></para>
+<para>Sin descripcion </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Drivers/DHT11/<link linkend="_dht11_8h">dht11.h</link></section>
+</section>

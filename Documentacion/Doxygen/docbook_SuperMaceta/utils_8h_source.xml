@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_utils_8h_source" xml:lang="es">
+<title>utils.h</title>
+<indexterm><primary>Api/N_HAL/Utils/utils.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;UTILS_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;UTILS_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Utils&#32;NHAL</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Utils.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;20/08/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;20/08/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+54 <emphasis role="comment">/******************************************************************************</emphasis>
+55 <emphasis role="comment">*&#32;Includes</emphasis>
+56 <emphasis role="comment">*******************************************************************************/</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+58 
+59 <emphasis role="comment">/******************************************************************************</emphasis>
+60 <emphasis role="comment">*&#32;Constants</emphasis>
+61 <emphasis role="comment">*******************************************************************************/</emphasis>
+66 <emphasis role="preprocessor">#define&#32;FCLK&#32;16000000&#32;</emphasis>
+68 <emphasis role="comment">/******************************************************************************</emphasis>
+69 <emphasis role="comment">*&#32;Configuration</emphasis>
+70 <emphasis role="comment">*******************************************************************************/</emphasis>
+71 
+72 <emphasis role="comment">/******************************************************************************</emphasis>
+73 <emphasis role="comment">*&#32;Macros</emphasis>
+74 <emphasis role="comment">*******************************************************************************/</emphasis>
+79 <emphasis role="preprocessor">#define&#32;NULL&#32;(void*)0&#32;</emphasis>
+85 <emphasis role="preprocessor">#define&#32;IS_NULL(val)&#32;((val&#32;==&#32;NULL)&#32;?&#32;true&#32;:&#32;false)&#32;</emphasis>
+88 <emphasis role="preprocessor">#ifndef&#32;FCLK&#32;</emphasis>
+89 <emphasis role="preprocessor">&#32;&#32;#error&#32;FCLK&#32;is&#32;not&#32;defined!&#32;</emphasis>
+90 <emphasis role="preprocessor">#endif</emphasis>
+91 <emphasis role="comment">/******************************************************************************</emphasis>
+92 <emphasis role="comment">*&#32;Typedefs</emphasis>
+93 <emphasis role="comment">*******************************************************************************/</emphasis>
+94 
+95 <emphasis role="comment">/******************************************************************************</emphasis>
+96 <emphasis role="comment">*&#32;Variables</emphasis>
+97 <emphasis role="comment">*******************************************************************************/</emphasis>
+98 
+99 <emphasis role="comment">/******************************************************************************</emphasis>
+100 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+101 <emphasis role="comment">*******************************************************************************/</emphasis>
+102 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+103 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+104 <emphasis role="preprocessor">#endif</emphasis>
+105 
+106 
+107 <emphasis role="keyword">static</emphasis>&#32;@<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;_delay_cycl(&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">short</emphasis>&#32;__ticks&#32;)
+108 {
+109 <emphasis role="preprocessor">&#32;&#32;#define&#32;T_COUNT(x)&#32;((&#32;x&#32;*&#32;(FCLK&#32;/&#32;1000000UL)&#32;)-3)/3)</emphasis>
+110 &#32;&#32;_asm(<emphasis role="stringliteral">&quot;nop\n&#32;$N:\n&#32;decw&#32;X\n&#32;jrne&#32;$L\n&#32;nop\n&#32;&quot;</emphasis>,&#32;__ticks);&#32;&#32;
+111 }
+112 
+113 <emphasis role="comment">/******************************************************************************</emphasis>
+114 <emphasis role="comment">*&#32;Function&#32;:&#32;_delay_us()</emphasis>
+115 <emphasis role="comment">*/</emphasis>
+146 <emphasis role="keyword">static</emphasis>&#32;@<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;_delay_us(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">short</emphasis>&#32;__us&#32;)
+147 {
+148 &#32;&#32;_delay_cycl(&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">short</emphasis>)(&#32;<link linkend="_utils_8h_1a5a9593f5765effd9a2bd5126034e3d4f">T_COUNT</link>(__us)&#32;);
+149 }
+150 
+151 <emphasis role="comment">/******************************************************************************</emphasis>
+152 <emphasis role="comment">*&#32;Function&#32;:&#32;_delay_ms()</emphasis>
+153 <emphasis role="comment">*/</emphasis>
+184 <emphasis role="keyword">static</emphasis>&#32;@<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;_delay_ms(&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">short</emphasis>&#32;__ms&#32;)
+185 {
+186 &#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(&#32;__ms--&#32;)
+187 &#32;&#32;{
+188 &#32;&#32;&#32;&#32;_delay_us(&#32;1000&#32;);
+189 &#32;&#32;}
+190 }
+191 
+192 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+193 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+194 <emphasis role="preprocessor">#endif&#32;</emphasis>
+195 
+196 <emphasis role="preprocessor">#endif&#32;</emphasis>
+197 
+</programlisting></section>

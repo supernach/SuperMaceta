@@ -52,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_app_config_8h.html",
-"struct_timer___config.html#a317cb34836247d714d8e910d014fb35b"
+"struct_f_s_m___trama___r_x.html#aeda51b593dd7b390a2eb4ee632306f9d"
 ];
 
 var SYNCONMSG = 'click en deshabilitar sincronización';

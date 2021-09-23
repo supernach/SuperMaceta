@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___a_p_i" xml:lang="es">
+<title>API</title>
+<indexterm><primary>API</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___n___h_a_l">N_HAL</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_o_u_t">TIMEOUT</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+</section>

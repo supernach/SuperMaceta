@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__app_config_8h_source" xml:lang="es">
+<title>AppConfig.h</title>
+<indexterm><primary>Aplicacion/Configuracion/AppConfig.h</primary></indexterm>
+Ir a la documentación de este archivo.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;APPCONFIG_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;APPCONFIG_H</emphasis>
+3 
+4 <emphasis role="comment">/****************************************************************************</emphasis>
+5 <emphasis role="comment">*&#32;Title&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;AppConfig</emphasis>
+6 <emphasis role="comment">*&#32;Filename&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;AppConfig.h</emphasis>
+7 <emphasis role="comment">*&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SuperNach</emphasis>
+8 <emphasis role="comment">*&#32;Origin&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;20/08/2021</emphasis>
+9 <emphasis role="comment">*&#32;Version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;1.0.0</emphasis>
+10 <emphasis role="comment">*&#32;Compiler&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;Cosmic&#32;C</emphasis>
+11 <emphasis role="comment">*&#32;Target&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;STM8</emphasis>
+12 <emphasis role="comment">*&#32;Copyright&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;</emphasis>
+13 <emphasis role="comment">*&#32;All&#32;Rights&#32;Reserved</emphasis>
+14 <emphasis role="comment">*</emphasis>
+15 <emphasis role="comment">*&#32;AQUI&#32;VA&#32;DECLARACIONES&#32;DERECHOS</emphasis>
+16 <emphasis role="comment">*</emphasis>
+17 <emphasis role="comment">*******************************************************************************/</emphasis>
+18 <emphasis role="comment">/****************************************************************************</emphasis>
+19 <emphasis role="comment">*&#32;Doxygen&#32;C&#32;Template</emphasis>
+20 <emphasis role="comment">*&#32;Copyright&#32;(c)&#32;2013&#32;-&#32;Jacob&#32;Beningo&#32;-&#32;All&#32;Rights&#32;Reserved</emphasis>
+21 <emphasis role="comment">*</emphasis>
+22 <emphasis role="comment">*&#32;Feel&#32;free&#32;to&#32;use&#32;this&#32;Doxygen&#32;Code&#32;Template&#32;at&#32;your&#32;own&#32;risk&#32;for&#32;your&#32;own</emphasis>
+23 <emphasis role="comment">*&#32;purposes.&#32;&#32;The&#32;latest&#32;license&#32;and&#32;updates&#32;for&#32;this&#32;Doxygen&#32;C&#32;template&#32;can&#32;be</emphasis>
+24 <emphasis role="comment">*&#32;found&#32;at&#32;www.beningo.com&#32;or&#32;by&#32;contacting&#32;Jacob&#32;at&#32;jacob@beningo.com.</emphasis>
+25 <emphasis role="comment">*</emphasis>
+26 <emphasis role="comment">*&#32;For&#32;updates,&#32;free&#32;software,&#32;training&#32;and&#32;to&#32;stay&#32;up&#32;to&#32;date&#32;on&#32;the&#32;latest</emphasis>
+27 <emphasis role="comment">*&#32;embedded&#32;software&#32;techniques&#32;sign-up&#32;for&#32;Jacobs&#32;newsletter&#32;at</emphasis>
+28 <emphasis role="comment">*&#32;http://www.beningo.com/814-2/</emphasis>
+29 <emphasis role="comment">*</emphasis>
+30 <emphasis role="comment">*&#32;The&#32;above&#32;copyright&#32;notice&#32;and&#32;this&#32;permission&#32;notice&#32;shall&#32;be&#32;included&#32;in</emphasis>
+31 <emphasis role="comment">*&#32;all&#32;copies&#32;or&#32;substantial&#32;portions&#32;of&#32;the&#32;Template.</emphasis>
+32 <emphasis role="comment">*</emphasis>
+33 <emphasis role="comment">*****************************************************************************/</emphasis>
+34 <emphasis role="comment">/***************&#32;SOURCE&#32;REVISION&#32;LOG&#32;*****************************************</emphasis>
+35 <emphasis role="comment">*</emphasis>
+36 <emphasis role="comment">*&#32;&#32;&#32;&#32;Date&#32;&#32;&#32;&#32;Version&#32;&#32;&#32;Author&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Description</emphasis>
+37 <emphasis role="comment">*&#32;&#32;20/08/21&#32;&#32;&#32;1.0.0&#32;&#32;&#32;SuperNach&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Release.</emphasis>
+38 <emphasis role="comment">*&#32;&#32;</emphasis>
+39 <emphasis role="comment">*</emphasis>
+40 <emphasis role="comment">*******************************************************************************/</emphasis>
+54 <emphasis role="comment">/******************************************************************************</emphasis>
+55 <emphasis role="comment">*&#32;Includes</emphasis>
+56 <emphasis role="comment">*******************************************************************************/</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&lt;stm8s.h&gt;</emphasis>
+58 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__clock_8h">Clock.h</link>&gt;</emphasis>
+59 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__gpio_8h">Gpio.h</link>&gt;</emphasis>
+60 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__timer___config_8h">timer_config.h</link>&gt;</emphasis>
+61 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_dht11_8h">Dht11.h</link>&gt;</emphasis>
+62 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_hx711_8h">Hx711.h</link>&gt;</emphasis>
+63 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__r_s485_8h">rs485.h</link>&gt;</emphasis>
+64 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_utils_8h">utils.h</link>&gt;</emphasis>
+65 
+66 
+67 <emphasis role="comment">/******************************************************************************</emphasis>
+68 <emphasis role="comment">*&#32;Constants</emphasis>
+69 <emphasis role="comment">*******************************************************************************/</emphasis>
+70 
+71 <emphasis role="comment">/******************************************************************************</emphasis>
+72 <emphasis role="comment">*&#32;Configuration</emphasis>
+73 <emphasis role="comment">*******************************************************************************/</emphasis>
+74 
+75 <emphasis role="comment">/******************************************************************************</emphasis>
+76 <emphasis role="comment">*&#32;Macros</emphasis>
+77 <emphasis role="comment">*******************************************************************************/</emphasis>
+78 
+79 <emphasis role="comment">/******************************************************************************</emphasis>
+80 <emphasis role="comment">*&#32;Typedefs</emphasis>
+81 <emphasis role="comment">*******************************************************************************/</emphasis>
+82 
+83 <emphasis role="comment">/******************************************************************************</emphasis>
+84 <emphasis role="comment">*&#32;Variables</emphasis>
+85 <emphasis role="comment">*******************************************************************************/</emphasis>
+92 <link linkend="_struct_d_h_t11">DHT11_t</link>&#32;<link linkend="_group___a_p_p_c_o_n_f_i_g_1ga79e538d9afbac79beaaa01fab09eb355">SensorTempHum</link>;
+93 
+100 <link linkend="_struct_h_x711">HX711_t</link>&#32;<link linkend="_group___a_p_p_c_o_n_f_i_g_1ga5c54b6d9f5fda025c154335fa4754ab3">SensorPesaje</link>;
+101 
+108 <link linkend="_struct_timer">Timer_t</link>&#32;<link linkend="_group___a_p_p_c_o_n_f_i_g_1ga36d1150409ad214491496ee19b5cf4db">timer_Timeout</link>;
+109 
+116 <link linkend="_struct_timeout">Timeout_t</link>&#32;<link linkend="_group___a_p_p_c_o_n_f_i_g_1gac9bae762fa8503eb566f9f0c1df369d6">Timeout</link>;
+117 
+124 <link linkend="_struct_r_s485">RS485_t</link>&#32;<link linkend="_group___a_p_p_c_o_n_f_i_g_1gae14a678342669e81f8fd880ba8ea8dc1">Comunicacion</link>;
+125 
+126 <emphasis role="comment">/******************************************************************************</emphasis>
+127 <emphasis role="comment">*&#32;Function&#32;Prototypes</emphasis>
+128 <emphasis role="comment">*******************************************************************************/</emphasis>
+129 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+130 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>{
+131 <emphasis role="preprocessor">#endif</emphasis>
+132 
+133 
+134 
+135 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+136 }&#32;<emphasis role="comment">//&#32;extern&#32;&quot;C&quot;</emphasis>
+137 <emphasis role="preprocessor">#endif&#32;</emphasis>
+138 
+139 <emphasis role="preprocessor">#endif</emphasis>
+140 
+</programlisting></section>

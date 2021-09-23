@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_s485___orden" xml:lang="es">
+<title>Referencia de la Estructura RS485_Orden</title>
+<indexterm><primary>RS485_Orden</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Ordenes.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___orden_1a3d72cfc54b374bc8aeffdeb1164ae6ed">Funcion</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_r_s485___orden_1a9daddd480e6c21d8e355c7bc7dd54a52">Comando</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_r_s485___orden_1a9daddd480e6c21d8e355c7bc7dd54a52"/><section>
+    <title>Comando</title>
+<indexterm><primary>Comando</primary><secondary>RS485_Orden</secondary></indexterm>
+<indexterm><primary>RS485_Orden</primary><secondary>Comando</secondary></indexterm>
+<para><computeroutput>uint8_t Comando</computeroutput></para></section>
+<anchor xml:id="_struct_r_s485___orden_1a3d72cfc54b374bc8aeffdeb1164ae6ed"/><section>
+    <title>Funcion</title>
+<indexterm><primary>Funcion</primary><secondary>RS485_Orden</secondary></indexterm>
+<indexterm><primary>RS485_Orden</primary><secondary>Funcion</secondary></indexterm>
+<para><computeroutput>uint8_t Funcion</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/Ordenes/<link linkend="__r_s485___ordenes_8h">RS485_Ordenes.h</link></section>
+</section>

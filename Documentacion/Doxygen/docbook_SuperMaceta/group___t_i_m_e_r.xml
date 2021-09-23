@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m_e_r" xml:lang="es">
+<title>TIMER</title>
+<indexterm><primary>TIMER</primary></indexterm>
+<simplesect>
+    <title>Módulos    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_y_p_e_d_e_f">TYPEDEF</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_r_u_c_t">STRUCT</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___funciones">Publicas</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g">TIMER_CONFIG</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___t_i_m_e_r_1ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</link> (<link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m_e_r_1ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</link> (<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga56e89c573a58b16a925737f7bece76ff">Timer_Config_t_ptr</link> timerConfig, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> timer, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> canal, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> modo, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link> it, uint16_t tiempo)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m_e_r_1ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</link> (<link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___t_i_m_e_r_1ga8ae7aa0701cc5c9870ee835c250d78f1"/><section>
+    <title>Timer_Config_Init()</title>
+<indexterm><primary>Timer_Config_Init</primary><secondary>TIMER</secondary></indexterm>
+<indexterm><primary>TIMER</primary><secondary>Timer_Config_Init</secondary></indexterm>
+<para><computeroutput>void Timer_Config_Init (<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga56e89c573a58b16a925737f7bece76ff">Timer_Config_t_ptr</link> timerConfig, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> timer, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> canal, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> modo, <link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link> it, uint16_t tiempo)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Se encarga de rellenar la estructura de configuracion del timer segun los parametros asignados a la funcion</para>
+
+<para>PRE-CONDITION: Parametros de configuracion elegidos</para>
+
+<para>POST-CONDITION: La configuracion esta inicializada.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>timerConfig</entry><entry>
+<para>Puntero a la configuracion del timer 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timer</entry><entry>
+<para>Numero del timer usado </para>
+</entry>
+                            </row>
+                            <row>
+<entry>canal</entry><entry>
+<para>Canal del timer utilizado </para>
+</entry>
+                            </row>
+                            <row>
+<entry>modo</entry><entry>
+<para>Modo de trabajo del timer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>it</entry><entry>
+<para>define si el timer usa interrupcion</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___t_i_m_e_r_1ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</link>(&#32;&amp;timer.Config,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</link>,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</link>,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</link>,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</link>,&#32;1&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga56e89c573a58b16a925737f7bece76ff">Timer_Config_t_ptr</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gaf2d309f4c465c40a6b08c5a0bf67fa27">Timer_Numero_e</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga6fa5a9233f1ca5e8eb5479206364f581">Timer_Canal_e</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga680b74b362115ddab0ec67f68858ac77">Timer_Modo_e</link> </para>
+
+<para><link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ga3f543feccade77b24ffa4a0d88a683f8">Timer_Interrupcion_e</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>18/09/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___t_i_m_e_r_1ga5bf616b8c20359e44fe29a79ded613c9"/><section>
+    <title>Timer_DeInit()</title>
+<indexterm><primary>Timer_DeInit</primary><secondary>TIMER</secondary></indexterm>
+<indexterm><primary>TIMER</primary><secondary>Timer_DeInit</secondary></indexterm>
+<para><computeroutput>void Timer_DeInit (<link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Deinicializa el timer elegido, si usa interrupcion limpia flags</para>
+
+<para>PRE-CONDITION: El timer esta inicializado</para>
+
+<para>POST-CONDITION: El timer esta desinicializado</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>timer</entry><entry>
+<para><link linkend="_struct_timer">Timer</link> que hay que deinicializar 
+<literallayout>&#160;&#xa;</literallayout>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___t_i_m_e_r_1ga5bf616b8c20359e44fe29a79ded613c9">Timer_DeInit</link>(&#32;&amp;timer&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>18/09/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___t_i_m_e_r_1ga60b2e95eb192d675d0e74f791f983a3b"/><section>
+    <title>Timer_Init()</title>
+<indexterm><primary>Timer_Init</primary><secondary>TIMER</secondary></indexterm>
+<indexterm><primary>TIMER</primary><secondary>Timer_Init</secondary></indexterm>
+<para><computeroutput>void Timer_Init (<link linkend="_group___t_y_p_e_d_e_f_1ga4d8ae1c554c588cf1527e24c9c466362">Timer_t_ptr</link> timer)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Al pasarle una variable timer, se chequea su configuracion y dependiendo de eso se inicializan una sparte u otras del timer.</para>
+
+<para>PRE-CONDITION: Configuracion del timer creada</para>
+
+<para>POST-CONDITION: El timer esta inicializado segun la configuracion</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>timer</entry><entry>
+<para>Puntero hacia un dato tipo Timer_t 
+<literallayout>&#160;&#xa;</literallayout>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___t_i_m_e_r_1ga8ae7aa0701cc5c9870ee835c250d78f1">Timer_Config_Init</link>(&#32;&amp;timer.Config,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1ggaf2d309f4c465c40a6b08c5a0bf67fa27a78900d10bb4d349f1403fbd090e66cd6">TIMER1</link>,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga6fa5a9233f1ca5e8eb5479206364f581ac858e6fe8b6f143f5fc11f900d131f84">CANAL1</link>,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga680b74b362115ddab0ec67f68858ac77a1a28ccfee258cbbc9596ba5e2884c2a3">COUNTERUP</link>,&#32;<link linkend="_group___t_i_m_e_r___c_o_n_f_i_g_1gga3f543feccade77b24ffa4a0d88a683f8a6cbe5ff42f143903e1c67abf94613791">SI</link>,&#32;1&#32;);
+<link linkend="_group___t_i_m_e_r_1ga60b2e95eb192d675d0e74f791f983a3b">Timer_Init</link>(&#32;&amp;timer&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+
+<para></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+</section>

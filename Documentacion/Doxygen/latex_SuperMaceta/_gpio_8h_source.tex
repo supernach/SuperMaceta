@@ -1,0 +1,92 @@
+\hypertarget{_gpio_8h_source}{}\doxysection{Gpio.\+h}
+\label{_gpio_8h_source}\index{Api/N\_HAL/Gpio/Gpio.h@{Api/N\_HAL/Gpio/Gpio.h}}
+\mbox{\hyperlink{_gpio_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{* Title                 :   Gpio API}}
+\DoxyCodeLine{3 \textcolor{comment}{* Filename              :   Gpio.h}}
+\DoxyCodeLine{4 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{5 \textcolor{comment}{* Origin Date           :   20/08/2021}}
+\DoxyCodeLine{6 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{7 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{8 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{9 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{10 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{13 \textcolor{comment}{*}}
+\DoxyCodeLine{14 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{15 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{16 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{17 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{18 \textcolor{comment}{*}}
+\DoxyCodeLine{19 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{20 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{21 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{22 \textcolor{comment}{*}}
+\DoxyCodeLine{23 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{24 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{25 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{26 \textcolor{comment}{*}}
+\DoxyCodeLine{27 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{28 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{31 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{34 \textcolor{comment}{*  20/08/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{35 \textcolor{comment}{*  }}
+\DoxyCodeLine{36 \textcolor{comment}{*}}
+\DoxyCodeLine{37 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifndef GPIO\_H}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define GPIO\_H}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{57 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{58 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <stm8s.h>}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gpio___config_8h}{Gpio\_Config.h}}>}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{64 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{65 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{68 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{69 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{72 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{73 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{76 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{77 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{80 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{81 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{84 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{85 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{87 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___g_p_i_o_gaf27dc74fa63eece892123277a0b850ea}{NHALgpio\_Init}}( \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}}* gpio );}
+\DoxyCodeLine{92 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group___g_p_i_o_ga4d38d3a2718d07f7d43dccedd382880a}{NHALgpio\_Read}}( \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}}* gpio );}
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___g_p_i_o_ga2f79a43853eb7523f283478b39e93f3f}{NHALgpio\_Write}}( \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}}* gpio, \textcolor{keywordtype}{bool} estado );}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{96 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*GPIO\_H\_*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{100 }
+
+\end{DoxyCode}

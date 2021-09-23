@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__clock_8c" xml:lang="es">
+<title>Referencia del Archivo Api/N_HAL/Clock/Clock.c</title>
+<indexterm><primary>Api/N_HAL/Clock/Clock.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;Clock.h&gt;
+</programlisting><simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___c_l_o_c_k_1ga154788159bac63badebcb13a4592e9d0">Clock_HSI_Init</link> (CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)</para>
+
+<para>Inicializa el reloj de alta velocidad interno del micro. A su vez deshabilita el reloj externo y el reloj lento interno. Configura la frecuencia Master y la frecuencia de la cpu. Por ultimo deshabilita el uso del reloj para todos los perifericos. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_l_o_c_k_1ga9149d6d67ca17423b6aff809598a5253">DisableAllPeripherals</link> (void)</para>
+
+<para>Deshabilita el uso del reloj en todos los perifericos 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_l_o_c_k_1gae748795e59c88680053eb0eb85cfd78d">EnableClockMirror</link> (CLK_Output_TypeDef source, <link linkend="_group___g_p_i_o___c_o_n_f_i_g_1ga81d968812dfc63266cca243b992c9ad5">Gpio_Config_t</link> *pin)</para>
+
+<para>Habilita el uso de la funcion CCO en el pin por defecto del micro. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

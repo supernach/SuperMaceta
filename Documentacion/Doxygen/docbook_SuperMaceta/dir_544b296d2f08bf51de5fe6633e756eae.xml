@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_544b296d2f08bf51de5fe6633e756eae" xml:lang="es">
+<title>Referencia del directorio Api</title>
+<indexterm><primary>Referencia del directorio Api</primary></indexterm>
+<simplesect>
+    <title>Directorios    </title>
+        <itemizedlist>
+            <listitem><para>directorio <link linkend="_dir_2fada11ca7a5740c2fd14bcfec8a1230">N_HAL</link></para>
+</listitem>
+            <listitem><para>directorio <link linkend="_dir_6e065144b21d39a1f9e61d0bcf1fca80">TIMEOUT</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

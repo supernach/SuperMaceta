@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['n_5fhal_0',['N_HAL',['../group___n___h_a_l.html',1,'']]]
+  ['hx711_0',['HX711',['../group___h_x711.html',1,'']]]
 ];

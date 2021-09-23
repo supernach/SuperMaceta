@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs_dht11___s_i" xml:lang="es">
+<title>Referencia de la Estructura sDht11_SI</title>
+<indexterm><primary>sDht11_SI</primary></indexterm>
+<para>
+
+<para>Define el esquema de la trama recibida al leer el sensor. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;dht11.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structs_dht11___s_i_1a3c0a02ddbd40208239429e7c15046afe">CRC</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs_dht11___s_i_1a985c42e91f408b006f80bc3a323a32a7">T_Decimal</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs_dht11___s_i_1a340f011d2f3bcf7341465809c81b9f26">T_Entero</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs_dht11___s_i_1a02f69b668d550ec53fa837366098127d">H_Decimal</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs_dht11___s_i_1ad7fae2bf2d0b03c82ff44b6fd95e0c34">H_Entero</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Define el esquema de la trama recibida al leer el sensor. </para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_structs_dht11___s_i_1a3c0a02ddbd40208239429e7c15046afe"/><section>
+    <title>CRC</title>
+<indexterm><primary>CRC</primary><secondary>sDht11_SI</secondary></indexterm>
+<indexterm><primary>sDht11_SI</primary><secondary>CRC</secondary></indexterm>
+<para><computeroutput>uint8_t CRC</computeroutput></para>
+<para>CRC recibido </para>
+</section>
+<anchor xml:id="_structs_dht11___s_i_1a02f69b668d550ec53fa837366098127d"/><section>
+    <title>H_Decimal</title>
+<indexterm><primary>H_Decimal</primary><secondary>sDht11_SI</secondary></indexterm>
+<indexterm><primary>sDht11_SI</primary><secondary>H_Decimal</secondary></indexterm>
+<para><computeroutput>uint8_t H_Decimal</computeroutput></para>
+<para>Humedad, parte decimal </para>
+</section>
+<anchor xml:id="_structs_dht11___s_i_1ad7fae2bf2d0b03c82ff44b6fd95e0c34"/><section>
+    <title>H_Entero</title>
+<indexterm><primary>H_Entero</primary><secondary>sDht11_SI</secondary></indexterm>
+<indexterm><primary>sDht11_SI</primary><secondary>H_Entero</secondary></indexterm>
+<para><computeroutput>uint8_t H_Entero</computeroutput></para>
+<para>Humedad, parte entera </para>
+</section>
+<anchor xml:id="_structs_dht11___s_i_1a985c42e91f408b006f80bc3a323a32a7"/><section>
+    <title>T_Decimal</title>
+<indexterm><primary>T_Decimal</primary><secondary>sDht11_SI</secondary></indexterm>
+<indexterm><primary>sDht11_SI</primary><secondary>T_Decimal</secondary></indexterm>
+<para><computeroutput>uint8_t T_Decimal</computeroutput></para>
+<para>Temperatura, parte decimal </para>
+</section>
+<anchor xml:id="_structs_dht11___s_i_1a340f011d2f3bcf7341465809c81b9f26"/><section>
+    <title>T_Entero</title>
+<indexterm><primary>T_Entero</primary><secondary>sDht11_SI</secondary></indexterm>
+<indexterm><primary>sDht11_SI</primary><secondary>T_Entero</secondary></indexterm>
+<para><computeroutput>uint8_t T_Entero</computeroutput></para>
+<para>Temperatura, parte entera </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Drivers/DHT11/<link linkend="_dht11_8h">dht11.h</link></section>
+</section>

@@ -1,0 +1,149 @@
+\hypertarget{dht11_8h_source}{}\doxysection{dht11.\+h}
+\label{dht11_8h_source}\index{Drivers/DHT11/dht11.h@{Drivers/DHT11/dht11.h}}
+\mbox{\hyperlink{dht11_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DHT11\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DHT11\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{* Title                 :   DHT11  DRIVER}}
+\DoxyCodeLine{6 \textcolor{comment}{* Filename              :   Dht11.h}}
+\DoxyCodeLine{7 \textcolor{comment}{* Author                :   SuperNach}}
+\DoxyCodeLine{8 \textcolor{comment}{* Origin Date           :   20/08/2021}}
+\DoxyCodeLine{9 \textcolor{comment}{* Version               :   1.0.0}}
+\DoxyCodeLine{10 \textcolor{comment}{* Compiler              :   Cosmic C}}
+\DoxyCodeLine{11 \textcolor{comment}{* Target                :   STM8}}
+\DoxyCodeLine{12 \textcolor{comment}{* Copyright             :   }}
+\DoxyCodeLine{13 \textcolor{comment}{* All Rights Reserved}}
+\DoxyCodeLine{14 \textcolor{comment}{*}}
+\DoxyCodeLine{15 \textcolor{comment}{* AQUI VA DECLARACIONES DERECHOS}}
+\DoxyCodeLine{16 \textcolor{comment}{*}}
+\DoxyCodeLine{17 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{18 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{19 \textcolor{comment}{* Doxygen C Template}}
+\DoxyCodeLine{20 \textcolor{comment}{* Copyright (c) 2013 -\/ Jacob Beningo -\/ All Rights Reserved}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{* Feel free to use this Doxygen Code Template at your own risk for your own}}
+\DoxyCodeLine{23 \textcolor{comment}{* purposes.  The latest license and updates for this Doxygen C template can be}}
+\DoxyCodeLine{24 \textcolor{comment}{* found at www.beningo.com or by contacting Jacob at jacob@beningo.com.}}
+\DoxyCodeLine{25 \textcolor{comment}{*}}
+\DoxyCodeLine{26 \textcolor{comment}{* For updates, free software, training and to stay up to date on the latest}}
+\DoxyCodeLine{27 \textcolor{comment}{* embedded software techniques sign-\/up for Jacobs newsletter at}}
+\DoxyCodeLine{28 \textcolor{comment}{* http://www.beningo.com/814-\/2/}}
+\DoxyCodeLine{29 \textcolor{comment}{*}}
+\DoxyCodeLine{30 \textcolor{comment}{* The above copyright notice and this permission notice shall be included in}}
+\DoxyCodeLine{31 \textcolor{comment}{* all copies or substantial portions of the Template.}}
+\DoxyCodeLine{32 \textcolor{comment}{*}}
+\DoxyCodeLine{33 \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{34 \textcolor{comment}{/*************** SOURCE REVISION LOG *****************************************}}
+\DoxyCodeLine{35 \textcolor{comment}{*}}
+\DoxyCodeLine{36 \textcolor{comment}{*    Date    Version   Author         Description}}
+\DoxyCodeLine{37 \textcolor{comment}{*  20/08/21   1.0.0   SuperNach       Initial Release.}}
+\DoxyCodeLine{38 \textcolor{comment}{*  }}
+\DoxyCodeLine{39 \textcolor{comment}{*}}
+\DoxyCodeLine{40 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{52 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{53 \textcolor{comment}{* Includes}}
+\DoxyCodeLine{54 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{utils_8h}{utils.h}}>}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gpio_8h}{Gpio.h}}>}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_timeout_8h}{timeout.h}}>}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{61 \textcolor{comment}{* Constants}}
+\DoxyCodeLine{62 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{65 \textcolor{comment}{* Configuration}}
+\DoxyCodeLine{66 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{69 \textcolor{comment}{* Macros}}
+\DoxyCodeLine{70 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{73 \textcolor{comment}{* Typedefs}}
+\DoxyCodeLine{74 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{81 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_h_t11}{DHT11}} \mbox{\hyperlink{struct_d_h_t11}{DHT11\_t}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{89 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_h_t11___config}{DHT11\_Config}} \mbox{\hyperlink{struct_d_h_t11___config}{DHT11\_Config\_t}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{97 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs_dht11___s_i}{sDht11\_SI}} \mbox{\hyperlink{structs_dht11___s_i}{DHT11\_SI\_t}};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{105 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs_dht11_datos}{sDht11Datos}} \mbox{\hyperlink{structs_dht11_datos}{DHT11\_Datos\_t}};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{113 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_d_h_t11}{DHT11\_t}}* \mbox{\hyperlink{group___d_h_t11_ga8cde3b7d6488ac04438cda9833420f56}{DHT11\_t\_ptr}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{122 \textcolor{keyword}{typedef} \mbox{\hyperlink{group___d_h_t11_gad58e655246648a2659266698cd6ea634}{DHT11\_SI\_t}} ( *\mbox{\hyperlink{group___d_h_t11_ga0534084dc24b29582964fb110d3460db}{DHT11\_fPtr}} )( \mbox{\hyperlink{group___d_h_t11_ga8cde3b7d6488ac04438cda9833420f56}{DHT11\_t\_ptr}} );}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{130 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e}{dht11\_INICIALIZADO}},       }
+\DoxyCodeLine{133   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4}{dht11\_COMUNICANDO}},       }
+\DoxyCodeLine{134   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3}{dht11\_CONEXION\_OK}},       }
+\DoxyCodeLine{135   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5}{dht11\_MIDIENDO\_H}},         }
+\DoxyCodeLine{136   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7}{dht11\_MIDIENDO\_T}},         }
+\DoxyCodeLine{137   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842}{dht11\_CERRANDO\_CONEXION}}, }
+\DoxyCodeLine{138   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7}{dht11\_SLEEP}},             }
+\DoxyCodeLine{139   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5}{dht11\_ESPERA\_BAJO}},       }
+\DoxyCodeLine{140   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9}{dht11\_ESPERA\_ALTO}},       }
+\DoxyCodeLine{141   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e}{dht11\_FALLO\_AL\_LEER}},     }
+\DoxyCodeLine{142   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2}{dht11\_FALLO\_AL\_COMUNICAR}}, }
+\DoxyCodeLine{143   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a}{dht11\_LECTURA\_OK}},         }
+\DoxyCodeLine{144   \mbox{\hyperlink{group___d_h_t11_ggaaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc}{dht11\_TIMEOUT}}}
+\DoxyCodeLine{145 \} \mbox{\hyperlink{group___d_h_t11_gaaa2d8e60a03c936f50ad271d0f0c4952}{DHT11\_Estado\_e}};}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{148 \textcolor{comment}{* Struct}}
+\DoxyCodeLine{149 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{156 \textcolor{keyword}{struct }\mbox{\hyperlink{structs_dht11___s_i}{sDht11\_SI}}}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158   uint8\_t \mbox{\hyperlink{structs_dht11___s_i_a3c0a02ddbd40208239429e7c15046afe}{CRC}};       }
+\DoxyCodeLine{159   uint8\_t \mbox{\hyperlink{structs_dht11___s_i_a985c42e91f408b006f80bc3a323a32a7}{T\_Decimal}}; }
+\DoxyCodeLine{160   uint8\_t \mbox{\hyperlink{structs_dht11___s_i_a340f011d2f3bcf7341465809c81b9f26}{T\_Entero}};   }
+\DoxyCodeLine{161   uint8\_t \mbox{\hyperlink{structs_dht11___s_i_a02f69b668d550ec53fa837366098127d}{H\_Decimal}}; }
+\DoxyCodeLine{162   uint8\_t \mbox{\hyperlink{structs_dht11___s_i_ad7fae2bf2d0b03c82ff44b6fd95e0c34}{H\_Entero}};   }
+\DoxyCodeLine{163 \};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{172 \textcolor{keyword}{struct }\mbox{\hyperlink{structs_dht11_datos}{sDht11Datos}}}
+\DoxyCodeLine{173 \{}
+\DoxyCodeLine{174   \mbox{\hyperlink{structs_dht11___s_i}{DHT11\_SI\_t}} \mbox{\hyperlink{structs_dht11_datos_a15cb01bf978cd731fa95c61294142eec}{UltimaLectura}};  }
+\DoxyCodeLine{175   \mbox{\hyperlink{group___d_h_t11_gaaa2d8e60a03c936f50ad271d0f0c4952}{DHT11\_Estado\_e}} \mbox{\hyperlink{structs_dht11_datos_a2e30c2118a8d354382eda11133bec2f9}{Estado}};    }
+\DoxyCodeLine{176 \};}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{184 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_h_t11___config}{DHT11\_Config}}}
+\DoxyCodeLine{185 \{}
+\DoxyCodeLine{186   \mbox{\hyperlink{struct_gpio___config}{Gpio\_Config\_t}} \mbox{\hyperlink{struct_d_h_t11___config_ab29e76902ae91ac5a60473fb9417e653}{HW}};  }
+\DoxyCodeLine{187 \};}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{197 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_h_t11}{DHT11}}}
+\DoxyCodeLine{198 \{}
+\DoxyCodeLine{199   \mbox{\hyperlink{struct_d_h_t11___config}{DHT11\_Config\_t}} \mbox{\hyperlink{struct_d_h_t11_a9cb8866a1e47f6053b8bdf379d99d424}{Config}};  }
+\DoxyCodeLine{200   \mbox{\hyperlink{structs_dht11_datos}{DHT11\_Datos\_t}} \mbox{\hyperlink{struct_d_h_t11_ad3e1ef8105ccdb49b9ade49cd875c804}{Datos}};    }
+\DoxyCodeLine{201   \mbox{\hyperlink{struct_timeout}{Timeout\_t\_ptr}} \mbox{\hyperlink{struct_d_h_t11_abb295df56198a023972379bfc188cff5}{Timeout}};  }
+\DoxyCodeLine{203   \mbox{\hyperlink{group___d_h_t11_ga0534084dc24b29582964fb110d3460db}{DHT11\_fPtr}} \mbox{\hyperlink{struct_d_h_t11_abf026b77114db481b0686b2d86e7e9b1}{Lectura}};      }
+\DoxyCodeLine{204 \};}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{207 \textcolor{comment}{* Variables}}
+\DoxyCodeLine{208 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{211 \textcolor{comment}{* Function Prototypes}}
+\DoxyCodeLine{212 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{214 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___d_h_t11_ga86dd6f57b9e0ef16f26c2e4f4c18df4a}{DHT11\_Init}}( \mbox{\hyperlink{struct_d_h_t11}{DHT11\_t\_ptr}} dht11, \mbox{\hyperlink{group___d_h_t11_ga0534084dc24b29582964fb110d3460db}{DHT11\_fPtr}} Lectura, \mbox{\hyperlink{struct_timeout}{Timeout\_t\_ptr}} timeout );}
+\DoxyCodeLine{218 \mbox{\hyperlink{structs_dht11___s_i}{DHT11\_SI\_t}} \mbox{\hyperlink{group___d_h_t11_gabc1f5f47365d834c03533a733cb911b9}{dht11\_Lectura}}( \mbox{\hyperlink{struct_d_h_t11}{DHT11\_t\_ptr}} sensor );}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{221 \} \textcolor{comment}{// extern "{}C"{}}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{225   }
+
+\end{DoxyCode}

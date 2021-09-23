@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="es">
+<title>Estructura de datos</title>
+Lista de estructuras con una breve descripción:<link linkend="_struct_buffer___tramas">Buffer_Tramas</link><link linkend="_struct_d_h_t11">DHT11</link>
+<para>Define el objeto principal para interactuar con un sensor <link linkend="_struct_d_h_t11">DHT11</link> </para>
+<link linkend="_struct_d_h_t11___config">DHT11_Config</link>
+<para>Define los pines elegidos para comunicar con el sensor </para>
+<link linkend="_struct_r_s485___flags__u_1_1flag_bit">RS485_Flags_u::flagBit</link><link linkend="_struct_f_s_m___trama___paso">FSM_Trama_Paso</link><link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link><link linkend="_struct_gpio___config">Gpio_Config</link>
+<para>
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<link linkend="_struct_h_x711">HX711</link>
+<para>Objeto principal para interactuar con el hx711 </para>
+<link linkend="_struct_h_x711___config">HX711_Config</link>
+<para>Contiene elementos de configuracion para el hx711 y sus funciones </para>
+<link linkend="_struct_h_x711___datos">HX711_Datos</link>
+<para>Contiene los datos que podemos obtener dle hx711 </para>
+<link linkend="_structinterrupt__vector">interrupt_vector</link><link linkend="_struct_r_s485">RS485</link><link linkend="_struct_r_s485___config">RS485_Config</link><link linkend="_union_r_s485___flags__u">RS485_Flags_u</link><link linkend="_struct_r_s485___orden">RS485_Orden</link><link linkend="_structs_dht11___s_i">sDht11_SI</link>
+<para>Define el esquema de la trama recibida al leer el sensor </para>
+<link linkend="_structs_dht11_datos">sDht11Datos</link>
+<para>Define la composicion de datos del sensor </para>
+<link linkend="_struct_timeout">Timeout</link><link linkend="_struct_timeout___config">Timeout_Config</link><link linkend="_struct_timer">Timer</link>
+<para>Estructura tipo con las acciones del timer </para>
+<link linkend="_struct_timer___config">Timer_Config</link>
+<para>Estructura tipo para la definicion de la configuracion del timer </para>
+<link linkend="_struct_trama___b_r_o_a_d_c_a_s_t">Trama_BROADCAST</link><link linkend="_struct_trama___r_x">Trama_RX</link><link linkend="_struct_trama___t_x">Trama_TX</link><link linkend="_struct_u_a_r_t___config">UART_Config</link></section>

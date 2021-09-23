@@ -1,0 +1,55 @@
+.TH "Api/N_HAL/Timer/Timer.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Api/N_HAL/Timer/Timer.h \- Define las acciones que se pueden realizar con el timer\&. Inicializacion, deinicializacion\&.\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stm8s\&.h>\fP
+.br
+\fC#include <timer_config\&.h>\fP
+.br
+
+.SS "Estructuras de datos"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTimer\fP"
+.br
+.RI "Estructura tipo con las acciones del timer\&. "
+.in -1c
+.SS "typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBTimer\fP \fBTimer_t\fP"
+.br
+.RI "Tipo definido para manejar el timer\&. "
+.ti -1c
+.RI "typedef \fBTimer_t\fP * \fBTimer_t_ptr\fP"
+.br
+.RI "Puntero al tipo timer_t\&. "
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBTimer_Init\fP (\fBTimer_t_ptr\fP timer)"
+.br
+.ti -1c
+.RI "void \fBTimer_Config_Init\fP (\fBTimer_Config_t_ptr\fP timerConfig, \fBTimer_Numero_e\fP timer, \fBTimer_Canal_e\fP canal, \fBTimer_Modo_e\fP modo, \fBTimer_Interrupcion_e\fP it, uint16_t tiempo)"
+.br
+.ti -1c
+.RI "void \fBTimer_DeInit\fP (\fBTimer_t_ptr\fP timer)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Define las acciones que se pueden realizar con el timer\&. Inicializacion, deinicializacion\&.\&. 
+
+Ofrece funciones referidas al TIMER1 para abtraerse de la SPL\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

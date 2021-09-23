@@ -1,0 +1,40 @@
+.TH "Api/N_HAL/Clock/Clock.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Api/N_HAL/Clock/Clock.h \- Proporciona un acceso basico a la configuracion y usos del reloj interno del micro\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stm8s\&.h>\fP
+.br
+\fC#include <Gpio\&.h>\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBDisableAllPeripherals\fP (void)"
+.br
+.RI "Deshabilita el uso del reloj en todos los perifericos 
+.br
+ "
+.ti -1c
+.RI "void \fBClock_HSI_Init\fP (CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)"
+.br
+.RI "Inicializa el reloj de alta velocidad interno del micro\&. A su vez deshabilita el reloj externo y el reloj lento interno\&. Configura la frecuencia Master y la frecuencia de la cpu\&. Por ultimo deshabilita el uso del reloj para todos los perifericos\&. "
+.ti -1c
+.RI "void \fBEnableClockMirror\fP (CLK_Output_TypeDef source, \fBGpio_Config_t\fP *pin)"
+.br
+.RI "Habilita el uso de la funcion CCO en el pin por defecto del micro\&. En ese pin tendremos un espejo de la frecuencia del reloj que elijamos\&. "
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Proporciona un acceso basico a la configuracion y usos del reloj interno del micro\&. 
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___estructuras" xml:lang="es">
+<title>Estructuras</title>
+<indexterm><primary>Estructuras</primary></indexterm>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_h_x711___datos">HX711_Datos</link></para>
+
+<para>Contiene los datos que podemos obtener dle hx711. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_x711___config">HX711_Config</link></para>
+
+<para>Contiene elementos de configuracion para el hx711 y sus funciones. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_x711">HX711</link></para>
+
+<para>Objeto principal para interactuar con el hx711. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+</section>

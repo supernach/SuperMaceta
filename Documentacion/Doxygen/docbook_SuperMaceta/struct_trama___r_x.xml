@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_trama___r_x" xml:lang="es">
+<title>Referencia de la Estructura Trama_RX</title>
+<indexterm><primary>Trama_RX</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Tramas.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_trama___r_x_1adb18a96536c24cd7121e2891c2f7eeba">buffer</link> [<link linkend="_group___t_r_a_m_a_s_1gae5b324ccc7a9b31732d82e7265f9c4d8">RS485_BYTES_BUFFER_RX</link>]</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_trama___r_x_1a10da001df611cfc3d6d098db16132e03">ptrBuffer</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link> <link linkend="_struct_trama___r_x_1a1f2f72cabd90cde4fb2cac9a7adbba16">Secuencia</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_trama___r_x_1adb18a96536c24cd7121e2891c2f7eeba"/><section>
+    <title>buffer</title>
+<indexterm><primary>buffer</primary><secondary>Trama_RX</secondary></indexterm>
+<indexterm><primary>Trama_RX</primary><secondary>buffer</secondary></indexterm>
+<para><computeroutput>uint8_t buffer[<link linkend="_group___t_r_a_m_a_s_1gae5b324ccc7a9b31732d82e7265f9c4d8">RS485_BYTES_BUFFER_RX</link>]</computeroutput></para></section>
+<anchor xml:id="_struct_trama___r_x_1a10da001df611cfc3d6d098db16132e03"/><section>
+    <title>ptrBuffer</title>
+<indexterm><primary>ptrBuffer</primary><secondary>Trama_RX</secondary></indexterm>
+<indexterm><primary>Trama_RX</primary><secondary>ptrBuffer</secondary></indexterm>
+<para><computeroutput>uint8_t ptrBuffer</computeroutput></para></section>
+<anchor xml:id="_struct_trama___r_x_1a1f2f72cabd90cde4fb2cac9a7adbba16"/><section>
+    <title>Secuencia</title>
+<indexterm><primary>Secuencia</primary><secondary>Trama_RX</secondary></indexterm>
+<indexterm><primary>Trama_RX</primary><secondary>Secuencia</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_struct_f_s_m___trama___r_x">FSM_Trama_RX</link> Secuencia</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/Tramas/<link linkend="__r_s485___tramas_8h">RS485_Tramas.h</link></section>
+</section>

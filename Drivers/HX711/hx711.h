@@ -62,6 +62,10 @@
 /******************************************************************************
 * Constants
 *******************************************************************************/
+/** @addtogroup Constantes
+  * @{
+  */
+
 /**
 * @var   uint8_t  HX711_LONGITUDTRAMA
 * @brief Define los bits a leer
@@ -80,6 +84,9 @@ static const uint8_t HX711_TIEMPOCLOCK = 3;
 */
 static const uint8_t HX711_TIEMPOCLOCKSLEEP = 70;
 
+/**
+  * @}
+*/
 /******************************************************************************
 * Configuration
 *******************************************************************************/
@@ -91,6 +98,10 @@ static const uint8_t HX711_TIEMPOCLOCKSLEEP = 70;
 /******************************************************************************
 * Typedefs
 *******************************************************************************/
+/** @addtogroup Typedef
+  * @{
+  */
+
 /**
 * @typedef struct  HX711 HX711_t
 * @brief	Crea un tipo de dato HX711 para trabajar sobre el
@@ -110,6 +121,9 @@ typedef struct HX711_Config HX711_Config_t;
 */
 typedef struct HX711_Datos HX711_Datos_t;
 
+/** @addtogroup Punteros
+  * @{
+  */
 /**
 * @typedef   uint16_t( *HX711_fPtr )( HX711_t* )  
 * @brief 		 Puntero a funcion para definir las acciones del sensor
@@ -136,6 +150,13 @@ typedef HX711_Datos_t* HX711_Datos_t_ptr;
 typedef HX711_Config_t* HX711_Config_t_ptr;
 
 /**
+  * @}
+*/
+
+/** @addtogroup Enum
+  * @{
+  */
+/**
 * @typedef   enum HX711_Estado_e 
 * @brief 		 Estados en los que puede encontrarse el HX711
 */
@@ -159,9 +180,19 @@ typedef enum
 	CHANNELB_32		/**< ganancia de 32 CanalB */
 } HX711_Ganancia_e;
 
+/**
+  * @}
+*/
+/**
+  * @}
+*/
 /******************************************************************************
 * Struct
 *******************************************************************************/
+/** @addtogroup Estructuras
+  * @{
+  */
+
 /**
 * @struct HX711_Datos
 * @brief 	Contiene los datos que podemos obtener dle hx711
@@ -208,11 +239,15 @@ struct HX711
 {
 	HX711_Config_t Config;	/**< Configuracion del objeto hx711 */
 	HX711_Datos_t Datos;   /**< Datos del objeto hx711 */
-	Timeout_t_ptr Timeout;
+	Timeout_t_ptr Timeout; /**< Referencia para ejecutar el timeout */
 	
 	HX711_fPtr Lectura;			/**< Puntero hacia la funcion de lectura */
 	HX711_fPtr Tarar;				/**< Puntero hacia la funcion de taraje */
 };
+
+/**
+  * @}
+*/
 
 /******************************************************************************
 * Variables
@@ -225,9 +260,17 @@ struct HX711
 extern "C"{
 #endif
 
+/** @addtogroup Funciones publicas
+  * @{
+  */
+
 void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeout_t_ptr Timeout );
 uint16_t hx711_Lectura( HX711_t_ptr hx711 );
 uint16_t hx711_Tarar( HX711_t_ptr hx711 );
+
+/**
+  * @}
+*/
 
 #ifdef __cplusplus
 } // extern "C"

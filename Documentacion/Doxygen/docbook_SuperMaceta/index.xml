@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="es">
+    <info>
+    <title>SuperMaceta</title>
+    </info>
+<chapter>
+    <title>SuperMaceta</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Documentación de módulos</title>
+    <xi:include href="group___a_p_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___n___h_a_l.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___c_l_o_c_k.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___g_p_i_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___g_p_i_o___c_o_n_f_i_g.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___t_i_m_e_r.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___t_y_p_e_d_e_f.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_r_u_c_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___funciones.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___t_i_m_e_r___c_o_n_f_i_g.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_t_i_l_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___t_i_m_e_o_u_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___t_i_m_e_o_u_t___c_o_n_f_i_g.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___a_p_l_i_c_a_c_i_o_n.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___c_o_n_f_i_g_u_r_a_c_i_o_n.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___a_p_p_c_o_n_f_i_g.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___c_o_m_m_u_n_i_c_a_t_i_o_n.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___r_s485.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___o_r_d_e_n_e_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___t_r_a_m_a_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___d_r_i_v_e_r_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___d_h_t11.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___h_x711.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___constantes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___typedef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___punteros.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___enum.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___estructuras.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___p_l_a_n_t_i_l_l_a.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Documentación de las estructuras de datos</title>
+    <xi:include href="struct_buffer___tramas.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_d_h_t11.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_d_h_t11___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_r_s485___flags__u_1_1flag_bit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_s_m___trama___paso.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_s_m___trama___r_x.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_gpio___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_h_x711.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_h_x711___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_h_x711___datos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structinterrupt__vector.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_r_s485.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_r_s485___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="union_r_s485___flags__u.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_r_s485___orden.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs_dht11___s_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structs_dht11_datos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_timeout.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_timeout___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_timer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_timer___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_trama___b_r_o_a_d_c_a_s_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_trama___r_x.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_trama___t_x.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_u_a_r_t___config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Documentación de archivos</title>
+    <xi:include href="_clock_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_clock_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_clock_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gpio_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gpio_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gpio_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gpio___config_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gpio___config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gpio___config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timer_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timer_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timer_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timer___config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timer___config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="utils_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="utils_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timeout_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timeout_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timeout_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timeout___config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_timeout___config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_app_config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_app_config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___ordenes_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___ordenes_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___tramas_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___tramas_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_s485___tramas_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dht11_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dht11_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dht11_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="hx711_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="hx711_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="hx711_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_s_o_p65_p640_x120-20_n_8d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_s_t_m8_s103_f3_p3_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_main_page_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_main_page_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="plantilla_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="plantilla_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="plantilla_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stm8__interrupt__vector_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

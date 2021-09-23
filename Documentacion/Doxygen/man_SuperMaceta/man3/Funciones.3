@@ -1,0 +1,325 @@
+.TH "Funciones" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Funciones \- Publicas
+.SH SYNOPSIS
+.br
+.PP
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBTimer_Init\fP (\fBTimer_t_ptr\fP timer)"
+.br
+.ti -1c
+.RI "void \fBTimer_Config_Init\fP (\fBTimer_Config_t_ptr\fP timerConfig, \fBTimer_Numero_e\fP timer, \fBTimer_Canal_e\fP canal, \fBTimer_Modo_e\fP modo, \fBTimer_Interrupcion_e\fP it, uint16_t tiempo)"
+.br
+.ti -1c
+.RI "void \fBTimer_DeInit\fP (\fBTimer_t_ptr\fP timer)"
+.br
+.ti -1c
+.RI "void \fBHX711_Init\fP (\fBHX711_t_ptr\fP hx711, \fBHX711_fPtr\fP Lectura, \fBHX711_fPtr\fP Tarar, \fBTimeout_t_ptr\fP \fBTimeout\fP)"
+.br
+.ti -1c
+.RI "uint16_t \fBhx711_Lectura\fP (\fBHX711_t_ptr\fP hx711)"
+.br
+.ti -1c
+.RI "uint16_t \fBhx711_Tarar\fP (\fBHX711_t_ptr\fP hx711)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "void HX711_Init (\fBHX711_t_ptr\fP hx711, \fBHX711_fPtr\fP Lectura, \fBHX711_fPtr\fP Tarar, \fBTimeout_t_ptr\fP Timeout)"
+\fBDescription:\fP 
+.PP
+Inicializa valores y funciones del sensor
+.PP
+PRE-CONDITION: Clock habilitado PRE-CONDITION: Configuracion de la gpio creada PRE-CONDITION: funcion callback de lectura creada PRE-CONDITION: funcion callback de Tara creada
+.PP
+POST-CONDITION: El sensor esta listo para usarse
+.PP
+\fBParámetros\fP
+.RS 4
+\fISensor\fP a inicializar 
+.br
+\fIFuncion\fP callback de lectura 
+.br
+\fIFuncion\fP callback de Tara
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+HX711_Init( &hx711, &hx711_Lectura );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBHX711_t\fP 
+.PP
+\fBHX711_fPtr\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  9/09/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "uint16_t hx711_Lectura (\fBHX711_t_ptr\fP hx711)"
+\fBDescription:\fP 
+.PP
+Realiza y devuelve el valor de la lectura de 24bits
+.PP
+PRE-CONDITION: hx711 inicializado
+.PP
+POST-CONDITION: Lectura valida o fallo
+.PP
+\fBParámetros\fP
+.RS 4
+\fISensor\fP sobre el que realizar la lectura
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+Lectura
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+HX711_Init( &hx711, &hx711_Lectura );
+hx711\&.Datos\&.UltimaLectura = hx711\&.Lectura( &hx711 );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBHX711_t\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  9/09/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "uint16_t hx711_Tarar (\fBHX711_t_ptr\fP hx711)"
+\fBDescription:\fP 
+.PP
+Realiza 4 lecturas y devuelve el valor medio para establecerlo como tara
+.PP
+PRE-CONDITION: hx711 inicializado
+.PP
+POST-CONDITION: Tara valida o fallo
+.PP
+\fBParámetros\fP
+.RS 4
+\fIhx711\fP Sensor sobre el que realizar la lectura
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+Tara
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+HX711_Init( &hx711, &hx711_Lectura, &hx711_Tarar );
+hx711\&.Config\&.ValorTara = hx711\&.Tarar( &hx711 );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBHX711_t\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  9/09/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "void Timer_Config_Init (\fBTimer_Config_t_ptr\fP timerConfig, \fBTimer_Numero_e\fP timer, \fBTimer_Canal_e\fP canal, \fBTimer_Modo_e\fP modo, \fBTimer_Interrupcion_e\fP it, uint16_t tiempo)"
+\fBDescription:\fP 
+.PP
+Se encarga de rellenar la estructura de configuracion del timer segun los parametros asignados a la funcion
+.PP
+PRE-CONDITION: Parametros de configuracion elegidos
+.PP
+POST-CONDITION: La configuracion esta inicializada\&.
+.PP
+\fBParámetros\fP
+.RS 4
+\fItimerConfig\fP Puntero a la configuracion del timer 
+.br
+ 
+.br
+\fItimer\fP Numero del timer usado 
+.br
+\fIcanal\fP Canal del timer utilizado 
+.br
+\fImodo\fP Modo de trabajo del timer 
+.br
+\fIit\fP define si el timer usa interrupcion
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+Timer_Config_Init( &timer\&.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBTimer_Config_t_ptr\fP 
+.PP
+\fBTimer_Numero_e\fP 
+.PP
+\fBTimer_Canal_e\fP 
+.PP
+\fBTimer_Modo_e\fP 
+.PP
+\fBTimer_Interrupcion_e\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  18/09/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "void Timer_DeInit (\fBTimer_t_ptr\fP timer)"
+\fBDescription:\fP 
+.PP
+Deinicializa el timer elegido, si usa interrupcion limpia flags
+.PP
+PRE-CONDITION: El timer esta inicializado
+.PP
+POST-CONDITION: El timer esta desinicializado
+.PP
+\fBParámetros\fP
+.RS 4
+\fItimer\fP \fBTimer\fP que hay que deinicializar 
+.br
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+Timer_DeInit( &timer );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+\fBTimer_t_ptr\fP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  18/09/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SS "void Timer_Init (\fBTimer_t_ptr\fP timer)"
+\fBDescription:\fP 
+.PP
+Al pasarle una variable timer, se chequea su configuracion y dependiendo de eso se inicializan una sparte u otras del timer\&.
+.PP
+PRE-CONDITION: Configuracion del timer creada
+.PP
+POST-CONDITION: El timer esta inicializado segun la configuracion
+.PP
+\fBParámetros\fP
+.RS 4
+\fItimer\fP Puntero hacia un dato tipo Timer_t 
+.br
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+void
+.RE
+.PP
+\fBExample\fP Ejemplo: 
+.PP
+.nf
+Timer_Config_Init( &timer\&.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
+Timer_Init( &timer );
+
+.fi
+.PP
+.PP
+\fBVer también\fP
+.RS 4
+.PP
+.RE
+.PP
+
+.br
+\fB - CHANGELOG - \fP
+.PP
+Fecha Software Version Creador Descripcion  20/08/2021 1\&.0\&.0 SN Primera edicion  
+.br
+
+.br
+ 
+.PP
+ 
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

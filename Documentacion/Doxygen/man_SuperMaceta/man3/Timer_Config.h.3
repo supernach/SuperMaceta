@@ -1,0 +1,54 @@
+.TH "Api/N_HAL/Timer/Timer_Config.h" 3 "Jueves, 23 de Septiembre de 2021" "Version 1" "SuperMaceta" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Api/N_HAL/Timer/Timer_Config.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stm8s\&.h>\fP
+.br
+
+.SS "Estructuras de datos"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTimer_Config\fP"
+.br
+.RI "Estructura tipo para la definicion de la configuracion del timer\&. "
+.in -1c
+.SS "typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBTimer_Config\fP \fBTimer_Config_t\fP"
+.br
+.RI "Tipo que contiene distintas opciones de configuracion del timer\&. "
+.ti -1c
+.RI "typedef \fBTimer_Config_t\fP * \fBTimer_Config_t_ptr\fP"
+.br
+.RI "Puntero a la estructura de ocnfiguracion del timer\&. "
+.in -1c
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTimer_Modo_e\fP { \fBCOUNTERUP\fP }"
+.br
+.RI "Distintos modos en los que puede trabajar el timer\&. "
+.ti -1c
+.RI "enum \fBTimer_Interrupcion_e\fP { \fBSI\fP, \fBNO\fP }"
+.br
+.RI "Definimos si el timer usa interrupcion\&. "
+.ti -1c
+.RI "enum \fBTimer_Numero_e\fP { \fBTIMER1\fP }"
+.br
+.RI "Numero del timer utilizado\&. "
+.ti -1c
+.RI "enum \fBTimer_Canal_e\fP { \fBCANAL1\fP }"
+.br
+.RI "Canal del timer utilizado\&. "
+.in -1c
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para SuperMaceta del código fuente\&.

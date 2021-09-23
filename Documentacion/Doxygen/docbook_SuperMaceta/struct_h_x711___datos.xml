@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_h_x711___datos" xml:lang="es">
+<title>Referencia de la Estructura HX711_Datos</title>
+<indexterm><primary>HX711_Datos</primary></indexterm>
+<para>
+
+<para>Contiene los datos que podemos obtener dle hx711. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;hx711.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_h_x711___datos_1a6c0c13ba21079ed21363c817442a7389">UltimaLectura</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link> <link linkend="_struct_h_x711___datos_1ae6e820be23d2ddec50532ecd92827e4c">Estado</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para>Contiene los datos que podemos obtener dle hx711. </para>
+
+
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_h_x711___datos_1ae6e820be23d2ddec50532ecd92827e4c"/><section>
+    <title>Estado</title>
+<indexterm><primary>Estado</primary><secondary>HX711_Datos</secondary></indexterm>
+<indexterm><primary>HX711_Datos</primary><secondary>Estado</secondary></indexterm>
+<para><computeroutput><link linkend="_group___enum_1ga3b06dedcf428c2a447fb32b6338f594e">HX711_Estado_e</link> Estado</computeroutput></para>
+<para>Como se encuentra </para>
+</section>
+<anchor xml:id="_struct_h_x711___datos_1a6c0c13ba21079ed21363c817442a7389"/><section>
+    <title>UltimaLectura</title>
+<indexterm><primary>UltimaLectura</primary><secondary>HX711_Datos</secondary></indexterm>
+<indexterm><primary>HX711_Datos</primary><secondary>UltimaLectura</secondary></indexterm>
+<para><computeroutput>uint32_t UltimaLectura</computeroutput></para>
+<para>Resultado de la ultima lectura </para>
+</section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Drivers/HX711/<link linkend="_hx711_8h">hx711.h</link></section>
+</section>

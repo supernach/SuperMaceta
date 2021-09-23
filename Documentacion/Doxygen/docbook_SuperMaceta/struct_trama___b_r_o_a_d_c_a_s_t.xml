@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_trama___b_r_o_a_d_c_a_s_t" xml:lang="es">
+<title>Referencia de la Estructura Trama_BROADCAST</title>
+<indexterm><primary>Trama_BROADCAST</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RS485_Tramas.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Campos de datos    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_struct_trama___b_r_o_a_d_c_a_s_t_1ad24dd9eb2237619ac0cd8f5beddc89c2">nNodo</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___o_r_d_e_n_e_s_1ga6fb2542c8b7a173205e575aebc2264be">RS485_Orden_t</link> <link linkend="_struct_trama___b_r_o_a_d_c_a_s_t_1a21a25695a91b8b7aab613705a58afb02">Orden</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+
+<para><formalpara><title>Ver también</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Documentación de los campos</title>
+<anchor xml:id="_struct_trama___b_r_o_a_d_c_a_s_t_1ad24dd9eb2237619ac0cd8f5beddc89c2"/><section>
+    <title>nNodo</title>
+<indexterm><primary>nNodo</primary><secondary>Trama_BROADCAST</secondary></indexterm>
+<indexterm><primary>Trama_BROADCAST</primary><secondary>nNodo</secondary></indexterm>
+<para><computeroutput>uint8_t nNodo</computeroutput></para></section>
+<anchor xml:id="_struct_trama___b_r_o_a_d_c_a_s_t_1a21a25695a91b8b7aab613705a58afb02"/><section>
+    <title>Orden</title>
+<indexterm><primary>Orden</primary><secondary>Trama_BROADCAST</secondary></indexterm>
+<indexterm><primary>Trama_BROADCAST</primary><secondary>Orden</secondary></indexterm>
+<para><computeroutput><link linkend="_group___o_r_d_e_n_e_s_1ga6fb2542c8b7a173205e575aebc2264be">RS485_Orden_t</link> Orden</computeroutput></para></section>
+<para>
+La documentación para esta estructura fue generada a partir del siguiente fichero:</para>
+Communication/RS485/Tramas/<link linkend="__r_s485___tramas_8h">RS485_Tramas.h</link></section>
+</section>

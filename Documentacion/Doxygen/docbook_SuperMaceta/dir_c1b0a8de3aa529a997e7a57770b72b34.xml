@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_c1b0a8de3aa529a997e7a57770b72b34" xml:lang="es">
+<title>Referencia del directorio Api/N_HAL/Clock</title>
+<indexterm><primary>Referencia del directorio Api/N_HAL/Clock</primary></indexterm>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__clock_8c">Clock.c</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__clock_8h">Clock.h</link></para>
+
+<para>Proporciona un acceso basico a la configuracion y usos del reloj interno del micro. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

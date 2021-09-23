@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_de9750563c01d79b4b439550d40c7d59" xml:lang="es">
+<title>Referencia del directorio KICAD/Librerias/LIB_STM8S103F3P3/STM8S103F3P3/PADS</title>
+<indexterm><primary>Referencia del directorio KICAD/Librerias/LIB_STM8S103F3P3/STM8S103F3P3/PADS</primary></indexterm>
+<simplesect>
+    <title>Archivos    </title>
+        <itemizedlist>
+            <listitem><para>archivo <link linkend="__s_o_p65_p640_x120-20_n_8d">SOP65P640X120-20N.d</link></para>
+</listitem>
+            <listitem><para>archivo <link linkend="__s_t_m8_s103_f3_p3_8c">STM8S103F3P3.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

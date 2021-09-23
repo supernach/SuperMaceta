@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hx711_0',['HX711',['../struct_h_x711.html',1,'']]],
-  ['hx711_5fconfig_1',['HX711_Config',['../struct_h_x711___config.html',1,'']]],
-  ['hx711_5fdatos_2',['HX711_Datos',['../struct_h_x711___datos.html',1,'']]]
+  ['flagbit_0',['flagBit',['../struct_r_s485___flags__u_1_1flag_bit.html',1,'RS485_Flags_u']]],
+  ['fsm_5ftrama_5fpaso_1',['FSM_Trama_Paso',['../struct_f_s_m___trama___paso.html',1,'']]],
+  ['fsm_5ftrama_5frx_2',['FSM_Trama_RX',['../struct_f_s_m___trama___r_x.html',1,'']]]
 ];

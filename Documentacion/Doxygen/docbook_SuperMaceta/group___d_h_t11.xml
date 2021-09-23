@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___d_h_t11" xml:lang="es">
+<title>DHT11</title>
+<indexterm><primary>DHT11</primary></indexterm>
+<simplesect>
+    <title>Estructuras de datos    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structs_dht11___s_i">sDht11_SI</link></para>
+
+<para>Define el esquema de la trama recibida al leer el sensor. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structs_dht11_datos">sDht11Datos</link></para>
+
+<para>Define la composicion de datos del sensor. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_d_h_t11___config">DHT11_Config</link></para>
+
+<para>Define los pines elegidos para comunicar con el sensor. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_d_h_t11">DHT11</link></para>
+
+<para>Define el objeto principal para interactuar con un sensor <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_d_h_t11">DHT11</link> <link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link></para>
+
+<para>Tipo que define el objeto principal <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct_d_h_t11___config">DHT11_Config</link> <link linkend="_group___d_h_t11_1gaa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</link></para>
+
+<para>Tipo que define la configuracion del sensor. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_structs_dht11___s_i">sDht11_SI</link> <link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link></para>
+
+<para>Tipo que define la trama recibida del sensor. </para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_structs_dht11_datos">sDht11Datos</link> <link linkend="_group___d_h_t11_1gaec3005d6c153733375aef0805f401fee">DHT11_Datos_t</link></para>
+
+<para>Tipo que define el esquema de datos del sensor. </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> * <link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link></para>
+
+<para>Puntero a un objeto <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link>(* <link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link>) (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link>)</para>
+
+<para>Puntero a una funcion para realizar acciones de lectura. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumeraciones    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link> { 
+<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e">dht11_INICIALIZADO</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4">dht11_COMUNICANDO</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3">dht11_CONEXION_OK</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5">dht11_MIDIENDO_H</link>
+, 
+<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7">dht11_MIDIENDO_T</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842">dht11_CERRANDO_CONEXION</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7">dht11_SLEEP</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5">dht11_ESPERA_BAJO</link>
+, 
+<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9">dht11_ESPERA_ALTO</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e">dht11_FALLO_AL_LEER</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2">dht11_FALLO_AL_COMUNICAR</link>
+, <link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a">dht11_LECTURA_OK</link>
+, 
+<link linkend="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc">dht11_TIMEOUT</link>
+ }</para>
+
+<para>Distintos estados en los qu epuede encontrarse el sensor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Funciones    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___d_h_t11_1ga86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</link> (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> dht11, <link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link> Lectura, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> <link linkend="_struct_timeout">Timeout</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> <link linkend="_group___d_h_t11_1gabc1f5f47365d834c03533a733cb911b9">dht11_Lectura</link> (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> dht11)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Descripción detallada</title>
+</section>
+<section>
+<title>Documentación de los &apos;typedefs&apos;</title>
+<anchor xml:id="_group___d_h_t11_1gaa4bff03c163f4d9d48b1f0e977cb57c5"/><section>
+    <title>DHT11_Config_t</title>
+<indexterm><primary>DHT11_Config_t</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_Config_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gaa4bff03c163f4d9d48b1f0e977cb57c5">DHT11_Config_t</link></computeroutput></para><para>
+
+<para>Tipo que define la configuracion del sensor. </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_struct_d_h_t11">DHT11</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___d_h_t11_1gaec3005d6c153733375aef0805f401fee"/><section>
+    <title>DHT11_Datos_t</title>
+<indexterm><primary>DHT11_Datos_t</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_Datos_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gaec3005d6c153733375aef0805f401fee">DHT11_Datos_t</link></computeroutput></para><para>
+
+<para>Tipo que define el esquema de datos del sensor. </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_structs_dht11_datos">sDht11Datos</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db"/><section>
+    <title>DHT11_fPtr</title>
+<indexterm><primary>DHT11_fPtr</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_fPtr</secondary></indexterm>
+<para><computeroutput>DHT11_fPtr</computeroutput></para><para>
+
+<para>Puntero a una funcion para realizar acciones de lectura. </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> </para>
+
+<para><link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634"/><section>
+    <title>DHT11_SI_t</title>
+<indexterm><primary>DHT11_SI_t</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_SI_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link></computeroutput></para><para>
+
+<para>Tipo que define la trama recibida del sensor. </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_structs_dht11___s_i">sDht11_SI</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368"/><section>
+    <title>DHT11_t</title>
+<indexterm><primary>DHT11_t</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_t</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link></computeroutput></para><para>
+
+<para>Tipo que define el objeto principal <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_struct_d_h_t11">DHT11</link> </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56"/><section>
+    <title>DHT11_t_ptr</title>
+<indexterm><primary>DHT11_t_ptr</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_t_ptr</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link></computeroutput></para><para>
+
+<para>Puntero a un objeto <link linkend="_struct_d_h_t11">DHT11</link>. </para>
+</para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Documentación de las enumeraciones</title>
+<anchor xml:id="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952"/><section>
+    <title>DHT11_Estado_e</title>
+<indexterm><primary>DHT11_Estado_e</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_Estado_e</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___d_h_t11_1gaaa2d8e60a03c936f50ad271d0f0c4952">DHT11_Estado_e</link></computeroutput></para><para>
+
+<para>Distintos estados en los qu epuede encontrarse el sensor. </para>
+</para>
+<informaltable frame="all">
+<title>Valores de enumeraciones</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>dht11_INICIALIZADO</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_INICIALIZADO</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ac1f2a29aff249617ae3f3987307e942e"/>dht11_INICIALIZADO</entry><entry>
+<para>En proceso de inicializar </para>
+</entry></row><row><entry><indexterm><primary>dht11_COMUNICANDO</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_COMUNICANDO</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a68dbbb2c505082720f46dd30bfb510e4"/>dht11_COMUNICANDO</entry><entry>
+<para>Comunicando con el sensor </para>
+</entry></row><row><entry><indexterm><primary>dht11_CONEXION_OK</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_CONEXION_OK</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a29232125dd9cc5bef27ccad284e73ac3"/>dht11_CONEXION_OK</entry><entry>
+<para>Sensor y conexion ok </para>
+</entry></row><row><entry><indexterm><primary>dht11_MIDIENDO_H</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_MIDIENDO_H</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa0ad934d2ea59d97b828745b641848a5"/>dht11_MIDIENDO_H</entry><entry>
+<para>Recibiendo valor humedad </para>
+</entry></row><row><entry><indexterm><primary>dht11_MIDIENDO_T</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_MIDIENDO_T</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa8513bc79b94c04ae8d2bedfd572f4e7"/>dht11_MIDIENDO_T</entry><entry>
+<para>Recibiendo valor temperatura </para>
+</entry></row><row><entry><indexterm><primary>dht11_CERRANDO_CONEXION</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_CERRANDO_CONEXION</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ad71dd4268beb5b9ecaef0ecafe56d842"/>dht11_CERRANDO_CONEXION</entry><entry>
+<para>Cerrando conexion con sensor </para>
+</entry></row><row><entry><indexterm><primary>dht11_SLEEP</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_SLEEP</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952ae2aa096465b2f910e2bd923d662a3ff7"/>dht11_SLEEP</entry><entry>
+<para>Sensor dormido </para>
+</entry></row><row><entry><indexterm><primary>dht11_ESPERA_BAJO</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_ESPERA_BAJO</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952aa151bfbde7f17b847383f8d2d2e6e1a5"/>dht11_ESPERA_BAJO</entry><entry>
+<para>Recibiendo datos. Espero sensor en bajo </para>
+</entry></row><row><entry><indexterm><primary>dht11_ESPERA_ALTO</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_ESPERA_ALTO</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a51beab0801f7f748b908172786175ac9"/>dht11_ESPERA_ALTO</entry><entry>
+<para>Recibiendo datos. Espero sensor en alto </para>
+</entry></row><row><entry><indexterm><primary>dht11_FALLO_AL_LEER</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_FALLO_AL_LEER</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a3d113792221051373dc3327074df9f0e"/>dht11_FALLO_AL_LEER</entry><entry>
+<para>Datos recibidos y crc no concuerdan </para>
+</entry></row><row><entry><indexterm><primary>dht11_FALLO_AL_COMUNICAR</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_FALLO_AL_COMUNICAR</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a0089da3a4085e9c50d250ee1ae9809c2"/>dht11_FALLO_AL_COMUNICAR</entry><entry>
+<para>Sensor no responde </para>
+</entry></row><row><entry><indexterm><primary>dht11_LECTURA_OK</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_LECTURA_OK</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a4e36a2cfaed2419025ed282f1839254a"/>dht11_LECTURA_OK</entry><entry>
+<para>Datos recibidos y crc concuerdan </para>
+</entry></row><row><entry><indexterm><primary>dht11_TIMEOUT</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___d_h_t11_1ggaaa2d8e60a03c936f50ad271d0f0c4952a92e8c19aeeeeb7d1361e1e0edec540cc"/>dht11_TIMEOUT</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentación de las funciones</title>
+<anchor xml:id="_group___d_h_t11_1ga86dd6f57b9e0ef16f26c2e4f4c18df4a"/><section>
+    <title>DHT11_Init()</title>
+<indexterm><primary>DHT11_Init</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>DHT11_Init</secondary></indexterm>
+<para><computeroutput>void DHT11_Init (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> dht11, <link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link> Lectura, <link linkend="_group___t_i_m_e_o_u_t_1ga22304e7f09db57806c347e540d2031ef">Timeout_t_ptr</link> Timeout)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Inicializa valores y funciones del sensor</para>
+
+<para>PRE-CONDITION: Clock habilitado PRE-CONDITION: Configuracion de la gpio creada PRE-CONDITION: funcion callback d electura creada</para>
+
+<para>POST-CONDITION: El sensor esta listo para usarse</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Sensor</entry><entry>
+<para>a inicializar </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Funcion</entry><entry>
+<para>callback de lectura</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>void</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___d_h_t11_1ga86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</link>(&#32;&amp;dht11,&#32;&amp;<link linkend="_group___d_h_t11_1gabc1f5f47365d834c03533a733cb911b9">dht11_Lectura</link>&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link> </para>
+
+<para><link linkend="_group___d_h_t11_1ga0534084dc24b29582964fb110d3460db">DHT11_fPtr</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<anchor xml:id="_group___d_h_t11_1gabc1f5f47365d834c03533a733cb911b9"/><section>
+    <title>dht11_Lectura()</title>
+<indexterm><primary>dht11_Lectura</primary><secondary>DHT11</secondary></indexterm>
+<indexterm><primary>DHT11</primary><secondary>dht11_Lectura</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> dht11_Lectura (<link linkend="_group___d_h_t11_1ga8cde3b7d6488ac04438cda9833420f56">DHT11_t_ptr</link> dht11)</computeroutput></para>
+<para><emphasis role="bold">Description:</emphasis> </para>
+
+<para>Realiza y devuelve el valor de la lectura de temperatura y humedad</para>
+
+<para>PRE-CONDITION: Dht11 inicializado</para>
+
+<para>POST-CONDITION: Lectura valida o fallo</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Sensor</entry><entry>
+<para>sobre el que realizar la lectura</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Devuelve</title>
+
+<para>Lectura</para>
+</formalpara>
+<emphasis role="bold">Example</emphasis> Ejemplo: <literallayout><computeroutput><link linkend="_group___d_h_t11_1ga86dd6f57b9e0ef16f26c2e4f4c18df4a">DHT11_Init</link>(&#32;&amp;dht11,&#32;&amp;<link linkend="_group___d_h_t11_1gabc1f5f47365d834c03533a733cb911b9">dht11_Lectura</link>&#32;);
+dht11.Datos.UltimaLectura&#32;=&#32;dht11.Lectura(&#32;&amp;dht11&#32;);
+</computeroutput></literallayout></para>
+
+<para><formalpara><title>Ver también</title>
+
+<para><link linkend="_group___d_h_t11_1gad58e655246648a2659266698cd6ea634">DHT11_SI_t</link> </para>
+
+<para><link linkend="_group___d_h_t11_1ga3e97a241d353f95774a23c235c6dc368">DHT11_t</link></para>
+</formalpara>
+
+<literallayout>&#160;&#xa;</literallayout>
+<emphasis role="bold"> - CHANGELOG - </emphasis></para>
+
+<para><informaltable frame="all">
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+<tbody>
+      <row >
+<entry>
+<para>Fecha </para>
+</entry><entry>
+<para>Software Version </para>
+</entry><entry>
+<para>Creador </para>
+</entry><entry>
+<para>Descripcion  </para>
+</entry></row>
+      <row >
+<entry>
+<para>20/08/2021 </para>
+</entry><entry>
+<para>1.0.0 </para>
+</entry><entry>
+<para>SN </para>
+</entry><entry>
+<para>Primera edicion  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+
+<literallayout>&#160;&#xa;</literallayout>
+
+<literallayout>&#160;&#xa;</literallayout>
+ <informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+</section>
