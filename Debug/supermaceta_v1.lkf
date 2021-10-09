@@ -51,10 +51,14 @@ crtsi0.sm8
 # Object files list - section reserved for STVD
 #<BEGIN OBJECT_FILES>
 Debug\main.o
+Debug\gestor_ordenes.o
 Debug\clock.o
 Debug\gpio_config.o
 Debug\gpio.o
 Debug\timer.o
+Debug\uart.o
+Debug\sujeto.o
+Debug\observador.o
 Debug\timeout.o
 Debug\rs485.o
 Debug\rs485_tramas.o
@@ -62,10 +66,8 @@ Debug\dht11.o
 Debug\hx711.o
 Debug\stm8s_uart1.o
 Debug\stm8s_tim1.o
-Debug\stm8s_rst.o
 Debug\stm8s_itc.o
 Debug\stm8s_gpio.o
-Debug\stm8s_flash.o
 Debug\stm8s_clk.o
 #<END OBJECT_FILES>
 

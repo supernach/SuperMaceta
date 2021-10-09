@@ -49,8 +49,9 @@ void setFlagTimer1( uint16_t valor )
 // INTERRUPCION UART RXNE
 void UART_RXNE_IRQHandler( void )
 {
-	++flagUartRXNE;
-	UART1_ClearITPendingBit( UART1_FLAG_RXNE );
+	bufferRX.temp[flagUartRXNE] = UART1_ReceiveData8( );
+	flagUartRXNE = flagUartRXNE + 1;
+	UART1_ClearITPendingBit( UART1_IT_RXNE );
 	UART1_ClearFlag( UART1_FLAG_RXNE );
 }
 
@@ -59,9 +60,33 @@ uint8_t getFlagUartRXNE( void )
 	return flagUartRXNE;
 }
 
+struct bufferRX_s getBufferRX( void )
+{
+	return bufferRX;
+}
+
 void setFlagUartRXNE( uint8_t valor )
 {
 	flagUartRXNE = valor;
+}
+
+// INTERRUPCION UART TXE
+void UART_TXE_IRQHandler( void )
+{
+	++flagUartTXE;
+	UART1_ClearITPendingBit( UART1_IT_TXE );
+	UART1_ClearFlag( UART1_FLAG_TXE );
+	UART1_ITConfig( UART1_IT_TXE, DISABLE );
+}
+
+uint8_t getFlagUartTXE( void )
+{
+	return flagUartTXE;
+}
+
+void setFlagUartTXE( uint8_t valor )
+{
+	flagUartTXE = valor;
 }
 
 /** @addtogroup STM8S_StdPeriph_Driver

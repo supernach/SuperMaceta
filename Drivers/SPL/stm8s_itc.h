@@ -42,10 +42,23 @@ uint16_t getFlagTimer1( void );
 void setFlagTimer1( uint16_t valor );
 
 //INTERRUPCION UART RXNE
+struct bufferRX_s
+{
+	uint8_t temp[6];
+};
+
 static volatile uint8_t flagUartRXNE = 0;
+static volatile struct bufferRX_s bufferRX;
 @far @interrupt void UART_RXNE_IRQHandler( void );
 uint8_t getFlagUartRXNE( void );
+struct bufferRX_s getBufferRX( void );
 void setFlagUartRXNE( uint8_t valor );
+
+//INTERRUPCION UART TXE
+static volatile uint8_t flagUartTXE = 0;
+@far @interrupt void UART_TXE_IRQHandler( void );
+uint8_t getFlagUartTXE( void );
+void setFlagUartTXE( uint8_t valor );
 
 /* Exported types ------------------------------------------------------------*/
 

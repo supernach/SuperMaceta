@@ -7,4 +7,6 @@
   20  0000 0000          	dc.w	0
   21  0002               L5_flagUartRXNE:
   22  0002 00            	dc.b	0
-  79                     	end
+  23  0003               L11_flagUartTXE:
+  24  0003 00            	dc.b	0
+  90                     	end

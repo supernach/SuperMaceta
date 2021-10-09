@@ -54,26 +54,33 @@
 * Includes
 *******************************************************************************/
 #include <stm8s.h>
-#include <rs485_ordenes.h>
 
 /******************************************************************************
 * Constants
 *******************************************************************************/
 /**
-* @var RS485_BYTES_N_NODO
-* @brief 
-*
-* @see
-*/
-#define RS485_BYTES_N_NODO 2
-
-/**
 * @var RS485_BYTES_BUFFER_RX
 * @brief 
 *
-* @see
+* @see	Trama_RX
 */
 #define RS485_BYTES_BUFFER_RX 6
+
+/**
+* @var RS485_BYTES_BUFFER_TX
+* @brief 
+*
+* @see	Trama_TX
+*/
+#define RS485_BYTES_BUFFER_TX 7
+
+/**
+* @var RS485_BYTES_BUFFER_BROADCAST
+* @brief 
+*
+* @see	Trama_TX
+*/
+#define RS485_BYTES_BUFFER_BROADCAST 4
 
 /******************************************************************************
 * Configuration
@@ -118,37 +125,17 @@ typedef struct Trama_BROADCAST Trama_BROADCAST_t;
 */
 typedef struct Buffer_Tramas Buffer_Tramas_t;
 
+/**
+* @typedef Buffer_Tramas_t_ptr
+* @brief <descripcion>
+*
+* @see Buffer_Tramas
+*/
+typedef Buffer_Tramas_t* Buffer_Tramas_t_ptr;
+
 /******************************************************************************
 * Struct
 *******************************************************************************/
-/**
-* @struct FSM_Trama_Paso
-* @brief 
-*
-* @see
-*/
-struct FSM_Trama_Paso
-{
-	uint8_t nPasoSiguiente;
-	uint8_t BytesaLeer;
-	uint8_t nPaso;
-};
-
-/**
-* @struct FSM_Trama_RX
-* @brief 
-*
-* @see
-*/
-struct FSM_Trama_RX
-{
-	uint8_t pasoActual;
-	uint8_t transicion;
-	struct FSM_Trama_Paso LecturaNodo;
-	struct FSM_Trama_Paso LecturaOrdenDHT11;
-	struct FSM_Trama_Paso LecturaOrdenHX711;
-	
-};
 /**
 * @struct Trama_RX
 * @brief 
@@ -159,7 +146,6 @@ struct Trama_RX
 {
 	uint8_t buffer[RS485_BYTES_BUFFER_RX];
 	uint8_t ptrBuffer;
-	struct FSM_Trama_RX Secuencia;
 };
 
 /**
@@ -170,9 +156,8 @@ struct Trama_RX
 */
 struct Trama_TX
 {
-	uint8_t nNodo;
-	uint32_t LecturaDHT11;
-	uint32_t LecturaHX711;
+	uint8_t buffer[RS485_BYTES_BUFFER_TX];
+	uint8_t ptrBuffer;
 };
 
 /**
@@ -183,8 +168,8 @@ struct Trama_TX
 */
 struct Trama_BROADCAST
 {
-	uint8_t nNodo;
-	RS485_Orden_t Orden;
+	uint8_t buffer[RS485_BYTES_BUFFER_BROADCAST];
+	uint8_t ptrBuffer;
 };
 
 /**
@@ -195,7 +180,7 @@ struct Trama_BROADCAST
 */
 struct Buffer_Tramas
 {
-	Trama_BROADCAST_t Broadcast;
+	//Trama_BROADCAST_t Broadcast;
 	Trama_TX_t Tx;
 	Trama_RX_t Rx;
 };

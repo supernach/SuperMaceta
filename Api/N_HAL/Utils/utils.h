@@ -189,6 +189,82 @@ static @inline void _delay_ms( unsigned short __ms )
 	}
 }
 
+/******************************************************************************
+* Function : WordToInt
+*//**
+* \b Description:
+*
+* 
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* 
+*
+* POST-CONDITION: 
+* 
+* @param			
+*
+* @return 		uint8_t
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 30/09/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+static @inline uint8_t WordToInt( uint8_t decena, uint8_t unidad )
+{
+	return (uint8_t)( ( ( decena - 48 ) * 10 ) + ( unidad - 48 ) );
+}
+
+/******************************************************************************
+* Function : ByteToInt
+*//**
+* \b Description:
+*
+* 
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* 
+*
+* POST-CONDITION: 
+* 
+* @param			
+*
+* @return 		uint8_t
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 30/09/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+static @inline uint8_t ByteToInt( uint8_t unidad )
+{
+	return (uint8_t)( unidad - 48 );
+}
+
 #ifdef __cplusplus
 } // extern "C"
 #endif 

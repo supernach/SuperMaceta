@@ -113,6 +113,8 @@ void Clock_HSI_Init(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu);
 */
 void EnableClockMirror(CLK_Output_TypeDef source, Gpio_Config_t* pin);
 
+void HabilitarRelojPeriferico( CLK_Peripheral_TypeDef periferico );
+
 
 #ifdef __cplusplus
 } // extern "C"

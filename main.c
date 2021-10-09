@@ -115,13 +115,19 @@ static @inline void InicializacionCLK(void)
 */
 static @inline void InicializacionComponentes(void)
 {
+	struct GO_Dispositivos dispositivos;
 	Timer_Config_Init( &timer_Timeout.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
 	Timeout_Init( &Timeout, &timer_Timeout, &getFlagTimer1, &setFlagTimer1 );
 	
-	RS485_Init( &Comunicacion );
-	
 	DHT11_Init( &SensorTempHum, &dht11_Lectura, &Timeout );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
+	
+	RS485_Init( &Comunicacion );
+	
+	dispositivos.Dht11 = &SensorTempHum;
+	dispositivos.Hx711 = &SensorPesaje;
+	GO_Init( &GestorRS485, dispositivos , &Comunicacion );
+	
 }
 
 /**
@@ -139,84 +145,6 @@ static @inline void Inicializacion_Total(void)
 	InicializacionComponentes();
 }
 
-/**
-/* @fn void LecturaSensores
-/* @brief Tarea de lectura de datos de los sensores
-/*
-/*
-*/
-/*static @inline void LecturaSensores(void)
-{
-	if( ( Comunicacion.Buffer.Rx.nNodo[0] == 0x36 ) )
-	{
-		if( ( Comunicacion.Buffer.Rx.nNodo[1] == 0x35 ) )
-		{
-			SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
-		}
-		
-		else if( ( Comunicacion.Buffer.Rx.nNodo[1] == 0x36 ) )
-		{
-			SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
-		}
-		else
-		{
-			
-		}
-		
-		Comunicacion.Buffer.Rx.nNodo[0] = 0x00;
-		Comunicacion.Buffer.Rx.nNodo[1] = 0x00;
-		NuevaOrden = 0;
-	}
-	else
-	{
-		NuevaOrden = 0;
-		Comunicacion.Buffer.Rx.nNodo[0] = 0x00;
-		Comunicacion.Buffer.Rx.nNodo[1] = 0x00;
-	}
-}*/
-
-static @inline void LecturaRS485( Trama_RX_t* bufRX, uint8_t dato )
-{
-	uint8_t nuevaRecepcion = 0;
-	
-	if( bufRX->Secuencia.pasoActual == bufRX->Secuencia.LecturaNodo.nPaso )
-	{
-		if( bufRX->ptrBuffer == bufRX->Secuencia.transicion )
-		{
-			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaNodo.nPasoSiguiente;
-			bufRX->Secuencia.transicion = bufRX->Secuencia.transicion + bufRX->Secuencia.LecturaOrdenDHT11.BytesaLeer;
-		}
-	}
-	else if( bufRX->Secuencia.pasoActual == bufRX->Secuencia.LecturaOrdenDHT11.nPaso )
-	{
-		if( bufRX->ptrBuffer == bufRX->Secuencia.transicion )
-		{
-			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaOrdenDHT11.nPasoSiguiente;
-			bufRX->Secuencia.transicion = bufRX->Secuencia.transicion + bufRX->Secuencia.LecturaOrdenHX711.BytesaLeer;
-		}
-	}
-	else if( bufRX->Secuencia.pasoActual ==  bufRX->Secuencia.LecturaOrdenHX711.nPaso )
-	{
-		if( bufRX->ptrBuffer == bufRX->Secuencia.transicion )
-		{
-			bufRX->Secuencia.pasoActual = bufRX->Secuencia.LecturaOrdenHX711.nPasoSiguiente;
-			bufRX->Secuencia.transicion = 1; // (bytes nnodo - 1)
-			nuevaRecepcion = 1;
-		}
-	}
-	else
-	{
-		
-	}
-	
-	bufRX->buffer[bufRX->ptrBuffer] = dato;
-	bufRX->ptrBuffer = bufRX->ptrBuffer + 1;
-	
-	if( nuevaRecepcion == 1 )
-	{
-		bufRX->ptrBuffer = 0;
-	}
-}
 
 /**
 /*
@@ -232,13 +160,15 @@ int main()
 	SensorPesaje.Config.ValorZero = SensorPesaje.Tarar( &SensorPesaje );
 	while (1)
 	{
-		if( getFlagUartRXNE( ) > 0 )
+		Comunicacion.Run( &Comunicacion );
+		
+		
+		if( Comunicacion.Flags.bit.Standby == true )
 		{
-			LecturaRS485( &Comunicacion.Buffer.Rx, UART1_ReceiveData8( ) );
-			setFlagUartRXNE( 0 );
+			SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
+			SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
+			_delay_ms( 1000 );
 		}
 		
-		//LecturaSensores( );
-		//_delay_ms( 1000 );
 	}
 }

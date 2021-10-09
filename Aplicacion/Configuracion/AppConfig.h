@@ -62,6 +62,7 @@
 #include <Hx711.h>
 #include <rs485.h>
 #include <utils.h>
+#include <gestor_ordenes.h>
 
 
 /******************************************************************************
@@ -122,6 +123,14 @@ Timeout_t Timeout;
 * @see RS485_t
 */
 RS485_t Comunicacion;
+
+/**
+* @var GestorRS485
+* @brief
+*
+* @see RS485_t
+*/
+Gestor_Ordenes_t GestorRS485;
 
 /******************************************************************************
 * Function Prototypes

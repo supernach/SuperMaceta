@@ -267,10 +267,10 @@ void DHT11_Init( DHT11_t_ptr dht11, DHT11_fPtr Lectura, Timeout_t_ptr Timeout )
 	dht11->Timeout = Timeout;
 	
 	dht11->Datos.UltimaLectura.CRC = 0;
-	dht11->Datos.UltimaLectura.T_Decimal = 0;
-	dht11->Datos.UltimaLectura.T_Entero = 0;
-	dht11->Datos.UltimaLectura.H_Decimal = 0;
-	dht11->Datos.UltimaLectura.H_Entero = 0;
+	dht11->Datos.UltimaLectura.T_Decimal = 1;
+	dht11->Datos.UltimaLectura.T_Entero = 2;
+	dht11->Datos.UltimaLectura.H_Decimal = 3;
+	dht11->Datos.UltimaLectura.H_Entero = 4;
 	
 	NHALgpioConfig_SetType( &dht11->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
 	NHALgpio_Init( &dht11->Config.HW );

@@ -314,8 +314,9 @@ void HX711_Init( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar, Timeou
 uint16_t hx711_Lectura( HX711_t_ptr hx711 )
 {
 	uint32_t semilla = 0;
-	
+
 	semilla = leer( hx711 );
+
 	aDormir( hx711 );
 	
 	if( ( semilla > hx711->Config.ValorZero ) )

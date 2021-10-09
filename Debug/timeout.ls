@@ -7,88 +7,90 @@
   20  0000 0000          	dc.w	0
   21  0002               L5_flagUartRXNE:
   22  0002 00            	dc.b	0
- 370                     ; 113 void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
- 370                     ; 114 {
- 372                     .text:	section	.text,new
- 373  0000               _Timeout_Init:
- 375  0000 89            	pushw	x
- 376       00000000      OFST:	set	0
- 379                     ; 115 	timeout->Config.Notificacion = isr_Notificacion;
- 381  0001 1607          	ldw	y,(OFST+7,sp)
- 382  0003 ef02          	ldw	(2,x),y
- 383                     ; 116 	timeout->Config.ResetNotificacion = isr_Reset;
- 385  0005 1609          	ldw	y,(OFST+9,sp)
- 386  0007 ef04          	ldw	(4,x),y
- 387                     ; 117 	timeout->Config.Timer = timer;
- 389  0009 1605          	ldw	y,(OFST+5,sp)
- 390  000b ff            	ldw	(x),y
- 391                     ; 118 	timeout->Estado = INACTIVO;
- 393  000c 6f06          	clr	(6,x)
- 394                     ; 119 	timeout->ValorDesborde = timer->Config.Tiempo;
- 396  000e 93            	ldw	x,y
- 397  000f 1601          	ldw	y,(OFST+1,sp)
- 398  0011 ee04          	ldw	x,(4,x)
- 399  0013 90ef07        	ldw	(7,y),x
- 400                     ; 120 }
- 403  0016 85            	popw	x
- 404  0017 81            	ret	
- 451                     ; 158 void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos )
- 451                     ; 159 {
- 452                     .text:	section	.text,new
- 453  0000               _Timeout_Start:
- 455  0000 89            	pushw	x
- 456       00000000      OFST:	set	0
- 459                     ; 160 	if( timeout->Estado == INACTIVO )
- 461  0001 e606          	ld	a,(6,x)
- 462  0003 261a          	jrne	L172
- 463                     ; 162 		timeout->Config.Timer->Config.Tiempo = microsegundos;
- 465  0005 fe            	ldw	x,(x)
- 466  0006 1605          	ldw	y,(OFST+5,sp)
- 467  0008 ef04          	ldw	(4,x),y
- 468                     ; 163 		Timer_Init( timeout->Config.Timer );
- 470  000a 1e01          	ldw	x,(OFST+1,sp)
- 471  000c fe            	ldw	x,(x)
- 472  000d cd0000        	call	_Timer_Init
- 474                     ; 165 		timeout->ValorDesborde = timeout->Config.Timer->Config.Tiempo;
- 476  0010 1e01          	ldw	x,(OFST+1,sp)
- 477  0012 fe            	ldw	x,(x)
- 478  0013 1601          	ldw	y,(OFST+1,sp)
- 479  0015 ee04          	ldw	x,(4,x)
- 480  0017 90ef07        	ldw	(7,y),x
- 481                     ; 166 		timeout->Estado = ACTIVO;
- 483  001a 93            	ldw	x,y
- 484  001b a601          	ld	a,#1
- 485  001d e706          	ld	(6,x),a
- 486  001f               L172:
- 487                     ; 168 }
- 490  001f 85            	popw	x
- 491  0020 81            	ret	
- 529                     ; 205 void Timeout_Stop( Timeout_t_ptr timeout )
- 529                     ; 206 {
- 530                     .text:	section	.text,new
- 531  0000               _Timeout_Stop:
- 533  0000 89            	pushw	x
- 534       00000000      OFST:	set	0
- 537                     ; 207 	Timer_DeInit( timeout->Config.Timer );
- 539  0001 fe            	ldw	x,(x)
- 540  0002 cd0000        	call	_Timer_DeInit
- 542                     ; 209 	timeout->Config.ResetNotificacion( 0 );
- 544  0005 1601          	ldw	y,(OFST+1,sp)
- 545  0007 5f            	clrw	x
- 546  0008 90ee04        	ldw	y,(4,y)
- 547  000b 90fd          	call	(y)
- 549                     ; 210 	timeout->ValorDesborde = 0;
- 551  000d 1e01          	ldw	x,(OFST+1,sp)
- 552  000f 905f          	clrw	y
- 553  0011 ef07          	ldw	(7,x),y
- 554                     ; 211 	timeout->Estado = INACTIVO;
- 556  0013 6f06          	clr	(6,x)
- 557                     ; 212 }
- 560  0015 85            	popw	x
- 561  0016 81            	ret	
- 574                     	xdef	_Timeout_Stop
- 575                     	xdef	_Timeout_Start
- 576                     	xdef	_Timeout_Init
- 577                     	xref	_Timer_DeInit
- 578                     	xref	_Timer_Init
- 597                     	end
+  23  0003               L11_flagUartTXE:
+  24  0003 00            	dc.b	0
+ 381                     ; 113 void Timeout_Init( Timeout_t_ptr timeout, Timer_t_ptr timer, Timeout_Notificacion isr_Notificacion, Timeout_ResetNotificacion isr_Reset )
+ 381                     ; 114 {
+ 383                     .text:	section	.text,new
+ 384  0000               _Timeout_Init:
+ 386  0000 89            	pushw	x
+ 387       00000000      OFST:	set	0
+ 390                     ; 115 	timeout->Config.Notificacion = isr_Notificacion;
+ 392  0001 1607          	ldw	y,(OFST+7,sp)
+ 393  0003 ef02          	ldw	(2,x),y
+ 394                     ; 116 	timeout->Config.ResetNotificacion = isr_Reset;
+ 396  0005 1609          	ldw	y,(OFST+9,sp)
+ 397  0007 ef04          	ldw	(4,x),y
+ 398                     ; 117 	timeout->Config.Timer = timer;
+ 400  0009 1605          	ldw	y,(OFST+5,sp)
+ 401  000b ff            	ldw	(x),y
+ 402                     ; 118 	timeout->Estado = INACTIVO;
+ 404  000c 6f06          	clr	(6,x)
+ 405                     ; 119 	timeout->ValorDesborde = timer->Config.Tiempo;
+ 407  000e 93            	ldw	x,y
+ 408  000f 1601          	ldw	y,(OFST+1,sp)
+ 409  0011 ee04          	ldw	x,(4,x)
+ 410  0013 90ef07        	ldw	(7,y),x
+ 411                     ; 120 }
+ 414  0016 85            	popw	x
+ 415  0017 81            	ret	
+ 462                     ; 158 void Timeout_Start( Timeout_t_ptr timeout, uint16_t microsegundos )
+ 462                     ; 159 {
+ 463                     .text:	section	.text,new
+ 464  0000               _Timeout_Start:
+ 466  0000 89            	pushw	x
+ 467       00000000      OFST:	set	0
+ 470                     ; 160 	if( timeout->Estado == INACTIVO )
+ 472  0001 e606          	ld	a,(6,x)
+ 473  0003 261a          	jrne	L503
+ 474                     ; 162 		timeout->Config.Timer->Config.Tiempo = microsegundos;
+ 476  0005 fe            	ldw	x,(x)
+ 477  0006 1605          	ldw	y,(OFST+5,sp)
+ 478  0008 ef04          	ldw	(4,x),y
+ 479                     ; 163 		Timer_Init( timeout->Config.Timer );
+ 481  000a 1e01          	ldw	x,(OFST+1,sp)
+ 482  000c fe            	ldw	x,(x)
+ 483  000d cd0000        	call	_Timer_Init
+ 485                     ; 165 		timeout->ValorDesborde = timeout->Config.Timer->Config.Tiempo;
+ 487  0010 1e01          	ldw	x,(OFST+1,sp)
+ 488  0012 fe            	ldw	x,(x)
+ 489  0013 1601          	ldw	y,(OFST+1,sp)
+ 490  0015 ee04          	ldw	x,(4,x)
+ 491  0017 90ef07        	ldw	(7,y),x
+ 492                     ; 166 		timeout->Estado = ACTIVO;
+ 494  001a 93            	ldw	x,y
+ 495  001b a601          	ld	a,#1
+ 496  001d e706          	ld	(6,x),a
+ 497  001f               L503:
+ 498                     ; 168 }
+ 501  001f 85            	popw	x
+ 502  0020 81            	ret	
+ 540                     ; 205 void Timeout_Stop( Timeout_t_ptr timeout )
+ 540                     ; 206 {
+ 541                     .text:	section	.text,new
+ 542  0000               _Timeout_Stop:
+ 544  0000 89            	pushw	x
+ 545       00000000      OFST:	set	0
+ 548                     ; 207 	Timer_DeInit( timeout->Config.Timer );
+ 550  0001 fe            	ldw	x,(x)
+ 551  0002 cd0000        	call	_Timer_DeInit
+ 553                     ; 209 	timeout->Config.ResetNotificacion( 0 );
+ 555  0005 1601          	ldw	y,(OFST+1,sp)
+ 556  0007 5f            	clrw	x
+ 557  0008 90ee04        	ldw	y,(4,y)
+ 558  000b 90fd          	call	(y)
+ 560                     ; 210 	timeout->ValorDesborde = 0;
+ 562  000d 1e01          	ldw	x,(OFST+1,sp)
+ 563  000f 905f          	clrw	y
+ 564  0011 ef07          	ldw	(7,x),y
+ 565                     ; 211 	timeout->Estado = INACTIVO;
+ 567  0013 6f06          	clr	(6,x)
+ 568                     ; 212 }
+ 571  0015 85            	popw	x
+ 572  0016 81            	ret	
+ 585                     	xdef	_Timeout_Stop
+ 586                     	xdef	_Timeout_Start
+ 587                     	xdef	_Timeout_Init
+ 588                     	xref	_Timer_DeInit
+ 589                     	xref	_Timer_Init
+ 608                     	end

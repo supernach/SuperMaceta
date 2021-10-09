@@ -7,15 +7,17 @@
   20  0000 0000          	dc.w	0
   21  0002               L5_flagUartRXNE:
   22  0002 00            	dc.b	0
- 387                     ; 111 void NHALgpioConfig_SetType( Gpio_Config_t* gpio, GPIO_Mode_TypeDef nuevoTipo )
- 387                     ; 112 {
- 389                     .text:	section	.text,new
- 390  0000               _NHALgpioConfig_SetType:
- 392       fffffffe      OFST: set -2
- 395                     ; 113 	gpio->Tipo = nuevoTipo;
- 397  0000 7b03          	ld	a,(OFST+5,sp)
- 398  0002 e703          	ld	(3,x),a
- 399                     ; 114 }
- 402  0004 81            	ret	
- 415                     	xdef	_NHALgpioConfig_SetType
- 434                     	end
+  23  0003               L11_flagUartTXE:
+  24  0003 00            	dc.b	0
+ 398                     ; 111 void NHALgpioConfig_SetType( Gpio_Config_t* gpio, GPIO_Mode_TypeDef nuevoTipo )
+ 398                     ; 112 {
+ 400                     .text:	section	.text,new
+ 401  0000               _NHALgpioConfig_SetType:
+ 403       fffffffe      OFST: set -2
+ 406                     ; 113 	gpio->Tipo = nuevoTipo;
+ 408  0000 7b03          	ld	a,(OFST+5,sp)
+ 409  0002 e703          	ld	(3,x),a
+ 410                     ; 114 }
+ 413  0004 81            	ret	
+ 426                     	xdef	_NHALgpioConfig_SetType
+ 445                     	end

@@ -182,6 +182,11 @@ void EnableClockMirror(CLK_Output_TypeDef source, Gpio_Config_t* pin)
   CLK_CCOCmd(ENABLE);
 }
 
+void HabilitarRelojPeriferico( CLK_Peripheral_TypeDef periferico )
+{
+	CLK_PeripheralClockConfig(periferico, ENABLE);
+}
+
 /**
   * @}
   */

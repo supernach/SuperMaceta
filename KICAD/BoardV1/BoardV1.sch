@@ -1,4 +1,314 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L STM8S103F3P3:STM8S103F3P3 IC?
+U 1 1 6161F8E0
+P 3450 3300
+F 0 "IC?" H 5550 3565 50  0000 C CNN
+F 1 "STM8S103F3P3" H 5550 3474 50  0000 C CNN
+F 2 "SOP65P640X120-20N" H 7500 3400 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00226640.pdf" H 7500 3300 50  0001 L CNN
+F 4 "STM8S103F3P3, 8 bit STM8 Microcontroller 16MHz 640 B, 8 kB Flash, 1 kB RAM, I2C 20-Pin TSSOP" H 7500 3200 50  0001 L CNN "Description"
+F 5 "1.2" H 7500 3100 50  0001 L CNN "Height"
+F 6 "STMicroelectronics" H 7500 3000 50  0001 L CNN "Manufacturer_Name"
+F 7 "STM8S103F3P3" H 7500 2900 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "511-STM8S103F3P3" H 7500 2800 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM8S103F3P3?qs=pW7VN3fQ%252BU8KMQcj%2FU46Sw%3D%3D" H 7500 2700 50  0001 L CNN "Mouser Price/Stock"
+F 10 "STM8S103F3P3" H 7500 2600 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/stm8s103f3p3/stmicroelectronics" H 7500 2500 50  0001 L CNN "Arrow Price/Stock"
+	1    3450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:DHT11 U?
+U 1 1 616241F7
+P 8700 1600
+F 0 "U?" H 8456 1646 50  0000 R CNN
+F 1 "DHT11" H 8456 1555 50  0000 R CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 8700 1200 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 8850 1850 50  0001 C CNN
+	1    8700 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4200 2300 4200
+Wire Wire Line
+	2300 4200 2300 2550
+Wire Wire Line
+	2300 2550 9000 2550
+Wire Wire Line
+	9000 2550 9000 1600
+Text GLabel 1950 1300 0    50   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR?
+U 1 1 616277D0
+P 2100 1550
+F 0 "#PWR?" H 2100 1300 50  0001 C CNN
+F 1 "GND" H 2105 1377 50  0000 C CNN
+F 2 "" H 2100 1550 50  0001 C CNN
+F 3 "" H 2100 1550 50  0001 C CNN
+	1    2100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61627D69
+P 2100 1200
+F 0 "#PWR?" H 2100 1050 50  0001 C CNN
+F 1 "+3.3V" H 2115 1373 50  0000 C CNN
+F 2 "" H 2100 1200 50  0001 C CNN
+F 3 "" H 2100 1200 50  0001 C CNN
+	1    2100 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1200 2100 1300
+Wire Wire Line
+	2100 1300 1950 1300
+Text GLabel 1950 1450 0    50   Input ~ 0
+GND
+Wire Wire Line
+	1950 1450 2100 1450
+Wire Wire Line
+	2100 1450 2100 1550
+Connection ~ 2100 1300
+Wire Wire Line
+	8700 1900 7400 1900
+Wire Wire Line
+	7400 1900 7400 1450
+Connection ~ 2100 1450
+$Comp
+L Regulator_Linear:AMS1117 U?
+U 1 1 6162D038
+P 1550 2100
+F 0 "U?" H 1550 2342 50  0000 C CNN
+F 1 "AMS1117" H 1550 2251 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1550 2300 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1650 1850 50  0001 C CNN
+	1    1550 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2100 2350 2100
+Wire Wire Line
+	2350 2100 2350 1300
+Connection ~ 2350 1300
+Wire Wire Line
+	2350 1300 2100 1300
+$Comp
+L Device:C C1
+U 1 1 6162ED29
+P 1050 2250
+F 0 "C1" H 1165 2296 50  0000 L CNN
+F 1 "104" H 1165 2205 50  0000 L CNN
+F 2 "" H 1088 2100 50  0001 C CNN
+F 3 "~" H 1050 2250 50  0001 C CNN
+	1    1050 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6163085C
+P 2000 2250
+F 0 "C2" H 2115 2296 50  0000 L CNN
+F 1 "104" H 2115 2205 50  0000 L CNN
+F 2 "" H 2038 2100 50  0001 C CNN
+F 3 "~" H 2000 2250 50  0001 C CNN
+	1    2000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2100 1050 2100
+Wire Wire Line
+	1050 2400 1050 2500
+Wire Wire Line
+	1050 2500 1550 2500
+Wire Wire Line
+	2000 2500 2000 2400
+Wire Wire Line
+	1550 2400 1550 2500
+Connection ~ 1550 2500
+Wire Wire Line
+	1550 2500 2000 2500
+Wire Wire Line
+	1550 2500 1550 2600
+Wire Wire Line
+	1550 2600 2250 2600
+Wire Wire Line
+	2250 2600 2250 2250
+Wire Wire Line
+	2250 2250 2500 2250
+Wire Wire Line
+	2500 2250 2500 1450
+Connection ~ 2500 1450
+Wire Wire Line
+	2500 1450 2100 1450
+$Comp
+L Device:C C3
+U 1 1 61635B8C
+P 2750 3750
+F 0 "C3" H 2635 3704 50  0000 R CNN
+F 1 "104" H 2635 3795 50  0000 R CNN
+F 2 "" H 2788 3600 50  0001 C CNN
+F 3 "~" H 2750 3750 50  0001 C CNN
+	1    2750 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 1450 2550 1450
+Wire Wire Line
+	2350 1300 2950 1300
+Wire Wire Line
+	3450 4100 2750 4100
+Wire Wire Line
+	2750 4100 2750 3900
+Wire Wire Line
+	2750 3900 2950 3900
+Wire Wire Line
+	2950 3900 2950 1300
+Connection ~ 2750 3900
+Connection ~ 2950 1300
+Wire Wire Line
+	2950 1300 3100 1300
+Wire Wire Line
+	3450 3900 3050 3900
+Wire Wire Line
+	3050 3900 3050 3600
+Wire Wire Line
+	3050 3600 2750 3600
+Wire Wire Line
+	2750 3600 2750 1450
+Connection ~ 2750 3600
+Connection ~ 2750 1450
+Wire Wire Line
+	2750 1450 3150 1450
+$Comp
+L Device:R R1
+U 1 1 6163FC14
+P 4900 2050
+F 0 "R1" H 4970 2096 50  0000 L CNN
+F 1 "10K" H 4970 2005 50  0000 L CNN
+F 2 "" V 4830 2050 50  0001 C CNN
+F 3 "~" H 4900 2050 50  0001 C CNN
+	1    4900 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1900 4900 1300
+Connection ~ 4900 1300
+Wire Wire Line
+	4900 1300 8700 1300
+Wire Wire Line
+	3300 2200 3300 3600
+Wire Wire Line
+	3300 3600 3450 3600
+$Comp
+L Device:C C4
+U 1 1 61643E66
+P 3300 2050
+F 0 "C4" H 3415 2096 50  0000 L CNN
+F 1 "104" H 3415 2005 50  0000 L CNN
+F 2 "" H 3338 1900 50  0001 C CNN
+F 3 "~" H 3300 2050 50  0001 C CNN
+	1    3300 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1900 3300 1450
+Connection ~ 3300 1450
+Wire Wire Line
+	3300 1450 4100 1450
+$Comp
+L Switch:SW_Push SW1
+U 1 1 61645F33
+P 4300 1850
+F 0 "SW1" H 4300 2135 50  0000 C CNN
+F 1 "RESET" H 4300 2044 50  0000 C CNN
+F 2 "" H 4300 2050 50  0001 C CNN
+F 3 "~" H 4300 2050 50  0001 C CNN
+	1    4300 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1850 4100 1450
+Connection ~ 4100 1450
+Wire Wire Line
+	4100 1450 7400 1450
+Wire Wire Line
+	3300 2200 4500 2200
+Wire Wire Line
+	4500 1850 4500 2200
+Connection ~ 4500 2200
+Wire Wire Line
+	4500 2200 4900 2200
+$Comp
+L Device:C C5
+U 1 1 6164A087
+P 2550 3000
+F 0 "C5" H 2665 3046 50  0000 L CNN
+F 1 "1uF" H 2665 2955 50  0000 L CNN
+F 2 "" H 2588 2850 50  0001 C CNN
+F 3 "~" H 2550 3000 50  0001 C CNN
+	1    2550 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4000 2550 4000
+Wire Wire Line
+	2550 4000 2550 3150
+Wire Wire Line
+	2550 2850 2550 1450
+Connection ~ 2550 1450
+Wire Wire Line
+	2550 1450 2750 1450
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 6164F24A
+P 1550 5500
+F 0 "J1" H 1658 5781 50  0000 C CNN
+F 1 "SWIM" H 1658 5690 50  0000 C CNN
+F 2 "" H 1550 5500 50  0001 C CNN
+F 3 "~" H 1550 5500 50  0001 C CNN
+	1    1550 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 5400 3100 5400
+Wire Wire Line
+	3100 5400 3100 1300
+Connection ~ 3100 1300
+Wire Wire Line
+	3100 1300 4900 1300
+Wire Wire Line
+	1750 5600 3150 5600
+Wire Wire Line
+	3150 5600 3150 1450
+Connection ~ 3150 1450
+Wire Wire Line
+	3150 1450 3300 1450
+Wire Wire Line
+	1750 5700 3300 5700
+Wire Wire Line
+	3300 5700 3300 3600
+Connection ~ 3300 3600
+Wire Wire Line
+	7650 3500 8250 3500
+Wire Wire Line
+	8250 3500 8250 5500
+Wire Wire Line
+	8250 5500 1750 5500
 $EndSCHEMATC
