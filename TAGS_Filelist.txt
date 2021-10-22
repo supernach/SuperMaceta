@@ -23,6 +23,8 @@ api\timeout\timeout_config.h
 api\timeout\timeout.h
 api\timeout\timeout.c
 aplicacion\configuracion\appconfig.h
+aplicacion\tareas\tareas.h
+aplicacion\tareas\tareas.c
 communication\rs485\rs485_config.h
 communication\rs485\rs485.h
 communication\rs485\rs485.c

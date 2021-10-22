@@ -68,12 +68,82 @@
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void initPtrFunciones( HX711_t_ptr hx711, HX711_fPtr Lectura, HX711_fPtr Tarar )
 {
 	hx711->Lectura = Lectura;
 	hx711->Tarar = Tarar;
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void initVariables(HX711_Config_t_ptr hx711Config, HX711_Datos_t_ptr hx711Datos )
 {
 	hx711Datos->UltimaLectura = 0;
@@ -82,18 +152,123 @@ static @inline void initVariables(HX711_Config_t_ptr hx711Config, HX711_Datos_t_
 	hx711Config->Ganancia = CHANNELA_128;
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void initDOUT( Gpio_Config_t* dout )
 {
 	NHALgpioConfig_SetType( dout,GPIO_MODE_IN_PU_NO_IT );
 	NHALgpio_Init( dout );
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void initPDSCK( Gpio_Config_t* pdsck )
 {
 	NHALgpioConfig_SetType( pdsck, GPIO_MODE_OUT_PP_LOW_FAST );
 	NHALgpio_Init( pdsck );
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void chequearValorConversion( HX711_Config_t_ptr hx711Config, HX711_Datos_t_ptr hx711Datos )
 {
 	if( ( hx711Config->ValorConversion ) == 0 )
@@ -107,6 +282,41 @@ static @inline void chequearValorConversion( HX711_Config_t_ptr hx711Config, HX7
 	}
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void aDormir( HX711_t_ptr hx711 )
 {
 	NHALgpio_Write( &hx711->Config.PD_SCK, true );
@@ -121,12 +331,82 @@ static @inline void aDormir( HX711_t_ptr hx711 )
 	}
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void pulsoReloj( HX711_t_ptr hx711, bool estado )
 {
 	NHALgpio_Write( &hx711->Config.PD_SCK, estado );
 	_delay_us( HX711_TIEMPOCLOCK );
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void fijarGanancia( HX711_t_ptr hx711 )
 {
 	switch( hx711->Config.Ganancia )
@@ -160,6 +440,41 @@ static @inline void fijarGanancia( HX711_t_ptr hx711 )
 	}
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void esperoDatosDisponibles( HX711_t_ptr hx711 )
 {
 	if( hx711->Timeout != NULL )
@@ -186,6 +501,41 @@ static @inline void esperoDatosDisponibles( HX711_t_ptr hx711 )
 	_delay_us( HX711_TIEMPOCLOCK );
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline uint32_t leer( HX711_t_ptr hx711 )
 {
 	uint32_t semilla = 0;

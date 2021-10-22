@@ -60,9 +60,11 @@
 #include <timer_config.h>
 #include <Dht11.h>
 #include <Hx711.h>
+#include <led.h>
 #include <rs485.h>
 #include <utils.h>
 #include <gestor_ordenes.h>
+#include <tareas.h>
 
 
 /******************************************************************************
@@ -84,6 +86,13 @@
 /******************************************************************************
 * Variables
 *******************************************************************************/
+/**
+* @var Led_Check
+* @brief
+*
+* @see Led_t
+*/
+Led_t Led_Check;
 /**
 * @var DHT11_t SensorTempHum
 * @brief
@@ -132,6 +141,13 @@ RS485_t Comunicacion;
 */
 Gestor_Ordenes_t GestorRS485;
 
+/**
+* @var GestorTareas
+* @brief
+*
+* @see RS485_t
+*/
+Tareas_t GestorTareas;
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/

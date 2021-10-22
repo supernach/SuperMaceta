@@ -5,459 +5,531 @@
   18                     	bsct
   19  0000               L3_flagTimer1:
   20  0000 0000          	dc.w	0
-  21  0002               L5_flagUartRXNE:
-  22  0002 00            	dc.b	0
-  23  0003               L11_flagUartTXE:
-  24  0003 00            	dc.b	0
-  72                     .const:	section	.text
-  73  0000               L15_HX711_LONGITUDTRAMA:
-  74  0000 18            	dc.b	24
-  75  0001               L35_HX711_TIEMPOCLOCK:
-  76  0001 03            	dc.b	3
-  77  0002               L55_HX711_TIEMPOCLOCKSLEEP:
-  78  0002 46            	dc.b	70
-2154                     ; 122 void GO_Init( Gestor_Ordenes_t_ptr gestor, struct GO_Dispositivos dispositivos, RS485_t_ptr sujeto )
-2154                     ; 123 {
-2156                     .text:	section	.text,new
-2157  0000               _GO_Init:
-2159  0000 89            	pushw	x
-2160  0001 89            	pushw	x
-2161       00000002      OFST:	set	2
-2164                     ; 124 	LimpiarDatos( gestor );
-2167  0002 1f01          	ldw	(OFST-1,sp),x
-2169                     ; 70 	gestor->nNodo = 0;
-2171  0004 7f            	clr	(x)
-2172                     ; 72 	gestor->ordenDHT11.Ejecutada = false;
-2174  0005 e601          	ld	a,(1,x)
-2175  0007 a4fe          	and	a,#254
-2176  0009 e701          	ld	(1,x),a
-2177                     ; 73 	gestor->ordenDHT11.Orden.Funcion = 0;
-2179  000b 6f02          	clr	(2,x)
-2180                     ; 74 	gestor->ordenDHT11.Orden.Comando = 0;
-2182  000d 6f03          	clr	(3,x)
-2183                     ; 75 	gestor->ordenHX711.Ejecutada = false;
-2185  000f e604          	ld	a,(4,x)
-2186  0011 a4fe          	and	a,#254
-2187  0013 e704          	ld	(4,x),a
-2188                     ; 76 	gestor->ordenHX711.Orden.Funcion = 0;
-2190  0015 6f05          	clr	(5,x)
-2191                     ; 77 	gestor->ordenHX711.Orden.Comando = 0;
-2193  0017 6f06          	clr	(6,x)
-2194                     ; 79 	gestor->DatosEnvio.Dht11.EnvioPreparado = false;
-2196  0019 e60b          	ld	a,(11,x)
-2197  001b a4fe          	and	a,#254
-2198  001d e70b          	ld	(11,x),a
-2199                     ; 80 	gestor->DatosEnvio.Dht11.T_Entero = 0;
-2201  001f 6f0c          	clr	(12,x)
-2202                     ; 81 	gestor->DatosEnvio.Dht11.T_Decimal = 0;
-2204  0021 6f0d          	clr	(13,x)
-2205                     ; 82 	gestor->DatosEnvio.Dht11.H_Entero = 0;
-2207  0023 6f0e          	clr	(14,x)
-2208                     ; 83 	gestor->DatosEnvio.Dht11.H_Decimal = 0;
-2210  0025 6f0f          	clr	(15,x)
-2211                     ; 84 	gestor->DatosEnvio.Hx711.EnvioPreparado = false;
-2213  0027 e610          	ld	a,(16,x)
-2214  0029 a4fe          	and	a,#254
-2215  002b e710          	ld	(16,x),a
-2216                     ; 85 	gestor->DatosEnvio.Hx711.Medida = 0;
-2218  002d 905f          	clrw	y
-2219  002f ef11          	ldw	(17,x),y
-2220                     ; 126 	gestor->Dispositivos = dispositivos;
-2222  0031 1e03          	ldw	x,(OFST+1,sp)
-2223  0033 1c0007        	addw	x,#7
-2224  0036 9096          	ldw	y,sp
-2225  0038 72a90007      	addw	y,#OFST+5
-2226  003c a604          	ld	a,#4
-2227  003e cd0000        	call	c_xymov
-2229                     ; 127 	gestor->rs485 = sujeto;
-2231  0041 1e03          	ldw	x,(OFST+1,sp)
-2232  0043 160b          	ldw	y,(OFST+9,sp)
-2233  0045 ef16          	ldw	(22,x),y
-2234                     ; 129 	Observador_Init( &gestor->GO_Observador, RECEPCION, &GO_evRecepcion );
-2236  0047 ae0000        	ldw	x,#_GO_evRecepcion
-2237  004a 89            	pushw	x
-2238  004b 4b01          	push	#1
-2239  004d 1e06          	ldw	x,(OFST+4,sp)
-2240  004f 1c0013        	addw	x,#19
-2241  0052 cd0000        	call	_Observador_Init
-2243  0055 5b03          	addw	sp,#3
-2244                     ; 131 	sujeto->Sujeto.SetSubscriptor( &sujeto->Sujeto, &gestor->GO_Observador );
-2246  0057 1e03          	ldw	x,(OFST+1,sp)
-2247  0059 1c0013        	addw	x,#19
-2248  005c 89            	pushw	x
-2249  005d 1e0d          	ldw	x,(OFST+11,sp)
-2250  005f 160d          	ldw	y,(OFST+11,sp)
-2251  0061 1c0029        	addw	x,#41
-2252  0064 90ee2d        	ldw	y,(45,y)
-2253  0067 90fd          	call	(y)
-2255  0069 85            	popw	x
-2256                     ; 132 }
-2259  006a 5b04          	addw	sp,#4
-2260  006c 81            	ret	
-2396                     ; 314 void GO_evRecepcion( Trama_RX_t* rx )
-2396                     ; 315 {
-2397                     .text:	section	.text,new
-2398  0000               _GO_evRecepcion:
-2400  0000 89            	pushw	x
-2401  0001 520a          	subw	sp,#10
-2402       0000000a      OFST:	set	10
-2405                     ; 316 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
-2408  0003 ae0000        	ldw	x,#_GestorRS485
-2409  0006 1f09          	ldw	(OFST-1,sp),x
-2414  0008 1f04          	ldw	(OFST-6,sp),x
-2418  000a 1e0b          	ldw	x,(OFST+1,sp)
-2419  000c 1f06          	ldw	(OFST-4,sp),x
-2424  000e f6            	ld	a,(x)
-2425  000f 6b02          	ld	(OFST-8,sp),a
-2429  0011 e601          	ld	a,(1,x)
-2431                     ; 227 	return (uint8_t)( ( ( decena - 48 ) * 10 ) + ( unidad - 48 ) );
-2433  0013 a030          	sub	a,#48
-2434  0015 6b01          	ld	(OFST-9,sp),a
-2436  0017 7b02          	ld	a,(OFST-8,sp)
-2437  0019 97            	ld	xl,a
-2438  001a a60a          	ld	a,#10
-2439  001c 42            	mul	x,a
-2440  001d 9f            	ld	a,xl
-2441  001e a0e0          	sub	a,#224
-2442  0020 1b01          	add	a,(OFST-9,sp)
-2443  0022 b700          	ld	_GestorRS485,a
-2446                     ; 316 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
-2449  0024 1e06          	ldw	x,(OFST-4,sp)
-2450  0026 e602          	ld	a,(2,x)
-2452                     ; 265 	return (uint8_t)( unidad - 48 );
-2454  0028 1e04          	ldw	x,(OFST-6,sp)
-2455  002a a030          	sub	a,#48
-2456  002c e702          	ld	(2,x),a
-2459                     ; 316 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
-2462  002e 1e06          	ldw	x,(OFST-4,sp)
-2463  0030 e603          	ld	a,(3,x)
-2465                     ; 265 	return (uint8_t)( unidad - 48 );
-2467  0032 1e04          	ldw	x,(OFST-6,sp)
-2468  0034 a030          	sub	a,#48
-2469  0036 e703          	ld	(3,x),a
-2472                     ; 316 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
-2475  0038 1e06          	ldw	x,(OFST-4,sp)
-2476  003a e604          	ld	a,(4,x)
-2478                     ; 265 	return (uint8_t)( unidad - 48 );
-2480  003c 1e04          	ldw	x,(OFST-6,sp)
-2481  003e a030          	sub	a,#48
-2482  0040 e705          	ld	(5,x),a
-2485                     ; 316 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
-2488  0042 1e06          	ldw	x,(OFST-4,sp)
-2489  0044 e605          	ld	a,(5,x)
-2490  0046 6b03          	ld	(OFST-7,sp),a
-2492                     ; 265 	return (uint8_t)( unidad - 48 );
-2494  0048 1e04          	ldw	x,(OFST-6,sp)
-2495  004a a030          	sub	a,#48
-2496  004c e706          	ld	(6,x),a
-2499                     ; 149 	if( gestor->nNodo == NUMERO_NODO_COMUNICACION )
-2502  004e 1e09          	ldw	x,(OFST-1,sp)
-2503  0050 f6            	ld	a,(x)
-2504  0051 4a            	dec	a
-2505  0052 2605          	jrne	L1202
-2506                     ; 151 		return true;
-2508  0054 4c            	inc	a
-2509  0055 6b08          	ld	(OFST-2,sp),a
-2512  0057 2002          	jra	L3461
-2513  0059               L1202:
-2514                     ; 155 		return false;
-2516  0059 0f08          	clr	(OFST-2,sp)
-2519  005b               L3461:
-2521  005b 2603cc0183    	jreq	L7102
-2522                     ; 161 	if( gestor->ordenDHT11.Orden.Funcion == 1 ) // FUNCIONES DEL DISPOSITIVO
-2525  0060 e602          	ld	a,(2,x)
-2526  0062 4a            	dec	a
-2527  0063 2655          	jrne	L1761
-2528                     ; 163 		switch( gestor->ordenDHT11.Orden.Comando )
-2530  0065 e603          	ld	a,(3,x)
-2532                     ; 199 			break;
-2533  0067 274b          	jreq	L1561
-2534  0069 4a            	dec	a
-2535  006a 271a          	jreq	L7461
-2536  006c 4a            	dec	a
-2537  006d 2745          	jreq	L1561
-2538  006f 4a            	dec	a
-2539  0070 2742          	jreq	L1561
-2540  0072 4a            	dec	a
-2541  0073 273f          	jreq	L1561
-2542  0075 4a            	dec	a
-2543  0076 273c          	jreq	L1561
-2544  0078 4a            	dec	a
-2545  0079 2739          	jreq	L1561
-2546  007b 4a            	dec	a
-2547  007c 2736          	jreq	L1561
-2548  007e 4a            	dec	a
-2549  007f 2733          	jreq	L1561
-2550  0081 4a            	dec	a
-2551  0082 2730          	jreq	L1561
-2552  0084 2034          	jra	L1761
-2553                     ; 165 			case 0: // SIN COMANDO
-2553                     ; 166 				gestor->ordenDHT11.Ejecutada = false;
-2554                     ; 167 			break;
-2556  0086               L7461:
-2557                     ; 168 			case 1: // LECTURA
-2557                     ; 169 				gestor->DatosEnvio.Dht11.T_Entero = gestor->Dispositivos.Dht11->Datos.UltimaLectura.T_Entero;
-2559  0086 ee07          	ldw	x,(7,x)
-2560  0088 e606          	ld	a,(6,x)
-2561  008a 1e09          	ldw	x,(OFST-1,sp)
-2562  008c e70c          	ld	(12,x),a
-2563                     ; 170 				gestor->DatosEnvio.Dht11.T_Decimal = gestor->Dispositivos.Dht11->Datos.UltimaLectura.T_Decimal;
-2565  008e ee07          	ldw	x,(7,x)
-2566  0090 e605          	ld	a,(5,x)
-2567  0092 1e09          	ldw	x,(OFST-1,sp)
-2568  0094 e70d          	ld	(13,x),a
-2569                     ; 171 				gestor->DatosEnvio.Dht11.H_Entero = gestor->Dispositivos.Dht11->Datos.UltimaLectura.H_Entero;
-2571  0096 ee07          	ldw	x,(7,x)
-2572  0098 e608          	ld	a,(8,x)
-2573  009a 1e09          	ldw	x,(OFST-1,sp)
-2574  009c e70e          	ld	(14,x),a
-2575                     ; 172 				gestor->DatosEnvio.Dht11.H_Decimal = gestor->Dispositivos.Dht11->Datos.UltimaLectura.H_Decimal;
-2577  009e ee07          	ldw	x,(7,x)
-2578  00a0 e607          	ld	a,(7,x)
-2579  00a2 1e09          	ldw	x,(OFST-1,sp)
-2580  00a4 e70f          	ld	(15,x),a
-2581                     ; 173 				gestor->ordenDHT11.Ejecutada = true;
-2583  00a6 e601          	ld	a,(1,x)
-2584  00a8 aa01          	or	a,#1
-2585  00aa e701          	ld	(1,x),a
-2586                     ; 174 				gestor->DatosEnvio.Dht11.EnvioPreparado = true;
-2588  00ac e60b          	ld	a,(11,x)
-2589  00ae aa01          	or	a,#1
-2590  00b0 e70b          	ld	(11,x),a
-2591                     ; 175 			break;
-2593  00b2 2006          	jra	L1761
-2594  00b4               L1561:
-2595                     ; 176 			case 2:
-2595                     ; 177 				gestor->ordenDHT11.Ejecutada = false;
-2596                     ; 178 			break;
-2598                     ; 179 			case 3:
-2598                     ; 180 				gestor->ordenDHT11.Ejecutada = false;
-2599                     ; 181 			break;
-2601                     ; 182 			case 4:
-2601                     ; 183 				gestor->ordenDHT11.Ejecutada = false;
-2602                     ; 184 			break;
-2604                     ; 185 			case 5:
-2604                     ; 186 				gestor->ordenDHT11.Ejecutada = false;
-2605                     ; 187 			break;
-2607                     ; 188 			case 6:
-2607                     ; 189 				gestor->ordenDHT11.Ejecutada = false;
-2608                     ; 190 			break;
-2610                     ; 191 			case 7:
-2610                     ; 192 				gestor->ordenDHT11.Ejecutada = false;
-2611                     ; 193 			break;
-2613                     ; 194 			case 8:
-2613                     ; 195 				gestor->ordenDHT11.Ejecutada = false;
-2614                     ; 196 			break;
-2616                     ; 197 			case 9:
-2616                     ; 198 				gestor->ordenDHT11.Ejecutada = false;
-2626  00b4 e601          	ld	a,(1,x)
-2627  00b6 a4fe          	and	a,#254
-2628  00b8 e701          	ld	(1,x),a
-2629                     ; 199 			break;
-2631  00ba               L1761:
-2632                     ; 207 	if( gestor->ordenHX711.Orden.Funcion == 1 ) // FUNCIONES DEL DISPOSITIVO
-2635  00ba e605          	ld	a,(5,x)
-2636  00bc 4a            	dec	a
-2637  00bd 2676          	jrne	L7171
-2638                     ; 209 		switch( gestor->ordenHX711.Orden.Comando )
-2640  00bf e606          	ld	a,(6,x)
-2642                     ; 244 			break;
-2643  00c1 276c          	jreq	L3071
-2644  00c3 4a            	dec	a
-2645  00c4 271a          	jreq	L5761
-2646  00c6 4a            	dec	a
-2647  00c7 272f          	jreq	L7761
-2648  00c9 4a            	dec	a
-2649  00ca 2742          	jreq	L1071
-2650  00cc 4a            	dec	a
-2651  00cd 2760          	jreq	L3071
-2652  00cf 4a            	dec	a
-2653  00d0 275d          	jreq	L3071
-2654  00d2 4a            	dec	a
-2655  00d3 275a          	jreq	L3071
-2656  00d5 4a            	dec	a
-2657  00d6 2757          	jreq	L3071
-2658  00d8 4a            	dec	a
-2659  00d9 2754          	jreq	L3071
-2660  00db 4a            	dec	a
-2661  00dc 2751          	jreq	L3071
-2662  00de 2055          	jra	L7171
-2663                     ; 211 			case 0: // SIN COMANDO
-2663                     ; 212 				gestor->ordenHX711.Ejecutada = false;
-2664                     ; 213 			break;
-2666  00e0               L5761:
-2667                     ; 214 			case 1: // LECTURA
-2667                     ; 215 				gestor->DatosEnvio.Hx711.Medida = gestor->Dispositivos.Hx711->Datos.UltimaLectura;
-2669  00e0 ee09          	ldw	x,(9,x)
-2670  00e2 1609          	ldw	y,(OFST-1,sp)
-2671  00e4 ee13          	ldw	x,(19,x)
-2672  00e6 90ef11        	ldw	(17,y),x
-2673                     ; 216 				gestor->ordenHX711.Ejecutada = true;
-2675  00e9 93            	ldw	x,y
-2676  00ea e604          	ld	a,(4,x)
-2677  00ec aa01          	or	a,#1
-2678  00ee e704          	ld	(4,x),a
-2679                     ; 217 				gestor->DatosEnvio.Hx711.EnvioPreparado = true;
-2681  00f0 e610          	ld	a,(16,x)
-2682  00f2 aa01          	or	a,#1
-2683  00f4 e710          	ld	(16,x),a
-2684                     ; 218 			break;
-2686  00f6 203d          	jra	L7171
-2687  00f8               L7761:
-2688                     ; 219 			case 2: // TARAR
-2688                     ; 220 				gestor->Dispositivos.Hx711->Config.ValorTara = gestor->Dispositivos.Hx711->Tarar( gestor->Dispositivos.Hx711 );
-2690  00f8 1609          	ldw	y,(OFST-1,sp)
-2691  00fa 90ee09        	ldw	y,(9,y)
-2692  00fd ee09          	ldw	x,(9,x)
-2693  00ff 90ee1a        	ldw	y,(26,y)
-2694  0102 90fd          	call	(y)
-2696  0104 1609          	ldw	y,(OFST-1,sp)
-2697  0106 90ee09        	ldw	y,(9,y)
-2698  0109 90ef0f        	ldw	(15,y),x
-2699                     ; 221 				gestor->ordenHX711.Ejecutada = true;
-2700                     ; 222 			break;
-2702  010c 2019          	jp	LC004
-2703  010e               L1071:
-2704                     ; 223 			case 3: // VALOR ZERO
-2704                     ; 224 				gestor->Dispositivos.Hx711->Config.ValorZero = gestor->Dispositivos.Hx711->Tarar( gestor->Dispositivos.Hx711 );
-2706  010e 1609          	ldw	y,(OFST-1,sp)
-2707  0110 90ee09        	ldw	y,(9,y)
-2708  0113 ee09          	ldw	x,(9,x)
-2709  0115 90ee1a        	ldw	y,(26,y)
-2710  0118 90fd          	call	(y)
-2712  011a cd0000        	call	c_uitolx
-2714  011d 1e09          	ldw	x,(OFST-1,sp)
-2715  011f ee09          	ldw	x,(9,x)
-2716  0121 1c000b        	addw	x,#11
-2717  0124 cd0000        	call	c_rtol
-2719                     ; 225 				gestor->ordenHX711.Ejecutada = true;
-2721  0127               LC004:
-2723  0127 1e09          	ldw	x,(OFST-1,sp)
-2724  0129 e604          	ld	a,(4,x)
-2725  012b aa01          	or	a,#1
-2726                     ; 226 			break;
-2728  012d 2004          	jp	LC002
-2729  012f               L3071:
-2730                     ; 227 			case 4:
-2730                     ; 228 				gestor->ordenHX711.Ejecutada = false;
-2731                     ; 229 			break;
-2733                     ; 230 			case 5:
-2733                     ; 231 				gestor->ordenHX711.Ejecutada = false;
-2734                     ; 232 			break;
-2736                     ; 233 			case 6:
-2736                     ; 234 				gestor->ordenHX711.Ejecutada = false;
-2737                     ; 235 			break;
-2739                     ; 236 			case 7:
-2739                     ; 237 				gestor->ordenHX711.Ejecutada = false;
-2740                     ; 238 			break;
-2742                     ; 239 			case 8:
-2742                     ; 240 				gestor->ordenHX711.Ejecutada = false;
-2743                     ; 241 			break;
-2745                     ; 242 			case 9:
-2745                     ; 243 				gestor->ordenHX711.Ejecutada = false;
-2753  012f e604          	ld	a,(4,x)
-2754  0131 a4fe          	and	a,#254
-2755  0133               LC002:
-2756  0133 e704          	ld	(4,x),a
-2757                     ; 244 			break;
-2759  0135               L7171:
-2760                     ; 259 		if( ( gestor->DatosEnvio.Dht11.EnvioPreparado == true ) || ( gestor->DatosEnvio.Hx711.EnvioPreparado == true ) )
-2762  0135 e60b          	ld	a,(11,x)
-2763  0137 a501          	bcp	a,#1
-2764  0139 2606          	jrne	L3402
-2766  013b e610          	ld	a,(16,x)
-2767  013d a501          	bcp	a,#1
-2768  013f 276f          	jreq	L3271
-2769  0141               L3402:
-2770                     ; 261 			gestor->rs485->Buffer.Tx.buffer[0] = NUMERO_NODO_COMUNICACION;
-2772  0141 ee16          	ldw	x,(22,x)
-2773  0143 a601          	ld	a,#1
-2774  0145 e712          	ld	(18,x),a
-2775                     ; 262 			gestor->rs485->Buffer.Tx.buffer[1] = gestor->DatosEnvio.Dht11.T_Entero;
-2777  0147 1e09          	ldw	x,(OFST-1,sp)
-2778  0149 e60c          	ld	a,(12,x)
-2779  014b ee16          	ldw	x,(22,x)
-2780  014d e713          	ld	(19,x),a
-2781                     ; 263 			gestor->rs485->Buffer.Tx.buffer[2] = gestor->DatosEnvio.Dht11.T_Decimal;
-2783  014f 1e09          	ldw	x,(OFST-1,sp)
-2784  0151 e60d          	ld	a,(13,x)
-2785  0153 ee16          	ldw	x,(22,x)
-2786  0155 e714          	ld	(20,x),a
-2787                     ; 264 			gestor->rs485->Buffer.Tx.buffer[3] = gestor->DatosEnvio.Dht11.H_Entero;
-2789  0157 1e09          	ldw	x,(OFST-1,sp)
-2790  0159 e60e          	ld	a,(14,x)
-2791  015b ee16          	ldw	x,(22,x)
-2792  015d e715          	ld	(21,x),a
-2793                     ; 265 			gestor->rs485->Buffer.Tx.buffer[4] = gestor->DatosEnvio.Dht11.H_Decimal;
-2795  015f 1e09          	ldw	x,(OFST-1,sp)
-2796  0161 e60f          	ld	a,(15,x)
-2797  0163 ee16          	ldw	x,(22,x)
-2798  0165 e716          	ld	(22,x),a
-2799                     ; 267 			gestor->rs485->Buffer.Tx.buffer[5] = gestor->DatosEnvio.Hx711.Bytes.alto;
-2801  0167 1e09          	ldw	x,(OFST-1,sp)
-2802  0169 e611          	ld	a,(17,x)
-2803  016b ee16          	ldw	x,(22,x)
-2804  016d e717          	ld	(23,x),a
-2805                     ; 268 			gestor->rs485->Buffer.Tx.buffer[6] = gestor->DatosEnvio.Hx711.Bytes.bajo;
-2807  016f 1e09          	ldw	x,(OFST-1,sp)
-2808  0171 e612          	ld	a,(18,x)
-2809  0173 ee16          	ldw	x,(22,x)
-2810  0175 e718          	ld	(24,x),a
-2811                     ; 271 			gestor->rs485->Flags.bit.EnvioPreparado = 1;
-2813  0177 1e09          	ldw	x,(OFST-1,sp)
-2814  0179 ee16          	ldw	x,(22,x)
-2815  017b e621          	ld	a,(33,x)
-2816  017d aa10          	or	a,#16
-2817  017f e721          	ld	(33,x),a
-2818  0181 202d          	jra	L3271
-2819  0183               L7102:
-2820                     ; 70 	gestor->nNodo = 0;
-2823  0183 7f            	clr	(x)
-2824                     ; 72 	gestor->ordenDHT11.Ejecutada = false;
-2826  0184 e601          	ld	a,(1,x)
-2827  0186 a4fe          	and	a,#254
-2828  0188 e701          	ld	(1,x),a
-2829                     ; 73 	gestor->ordenDHT11.Orden.Funcion = 0;
-2831  018a 6f02          	clr	(2,x)
-2832                     ; 74 	gestor->ordenDHT11.Orden.Comando = 0;
-2834  018c 6f03          	clr	(3,x)
-2835                     ; 75 	gestor->ordenHX711.Ejecutada = false;
-2837  018e e604          	ld	a,(4,x)
-2838  0190 a4fe          	and	a,#254
-2839  0192 e704          	ld	(4,x),a
-2840                     ; 76 	gestor->ordenHX711.Orden.Funcion = 0;
-2842  0194 6f05          	clr	(5,x)
-2843                     ; 77 	gestor->ordenHX711.Orden.Comando = 0;
-2845  0196 6f06          	clr	(6,x)
-2846                     ; 79 	gestor->DatosEnvio.Dht11.EnvioPreparado = false;
-2848  0198 e60b          	ld	a,(11,x)
-2849  019a a4fe          	and	a,#254
-2850  019c e70b          	ld	(11,x),a
-2851                     ; 80 	gestor->DatosEnvio.Dht11.T_Entero = 0;
-2853  019e 6f0c          	clr	(12,x)
-2854                     ; 81 	gestor->DatosEnvio.Dht11.T_Decimal = 0;
-2856  01a0 6f0d          	clr	(13,x)
-2857                     ; 82 	gestor->DatosEnvio.Dht11.H_Entero = 0;
-2859  01a2 6f0e          	clr	(14,x)
-2860                     ; 83 	gestor->DatosEnvio.Dht11.H_Decimal = 0;
-2862  01a4 6f0f          	clr	(15,x)
-2863                     ; 84 	gestor->DatosEnvio.Hx711.EnvioPreparado = false;
-2865  01a6 e610          	ld	a,(16,x)
-2866  01a8 a4fe          	and	a,#254
-2867  01aa e710          	ld	(16,x),a
-2868                     ; 85 	gestor->DatosEnvio.Hx711.Medida = 0;
-2870  01ac 905f          	clrw	y
-2871  01ae ef11          	ldw	(17,x),y
-2872  01b0               L3271:
-2873                     ; 317 }
-2876  01b0 5b0c          	addw	sp,#12
-2877  01b2 81            	ret	
-2890                     	xdef	_GO_evRecepcion
-2891                     	xdef	_GO_Init
-2892                     	xref.b	_GestorRS485
-2893                     	xref	_Observador_Init
-2894                     	xref.b	c_x
-2913                     	xref	c_rtol
-2914                     	xref	c_uitolx
-2915                     	xref	c_xymov
-2916                     	end
+  21  0002               L5_flagTimer2:
+  22  0002 0000          	dc.w	0
+  23  0004               L7_flagUartRXNE:
+  24  0004 00            	dc.b	0
+  25  0005               L31_flagUartTXE:
+  26  0005 00            	dc.b	0
+  83                     .const:	section	.text
+  84  0000               L75_HX711_LONGITUDTRAMA:
+  85  0000 18            	dc.b	24
+  86  0001               L16_HX711_TIEMPOCLOCK:
+  87  0001 03            	dc.b	3
+  88  0002               L36_HX711_TIEMPOCLOCKSLEEP:
+  89  0002 46            	dc.b	70
+2340                     ; 157 void GO_Init( Gestor_Ordenes_t_ptr gestor, struct GO_Dispositivos dispositivos, RS485_t_ptr sujeto )
+2340                     ; 158 {
+2342                     .text:	section	.text,new
+2343  0000               _GO_Init:
+2345  0000 89            	pushw	x
+2346  0001 89            	pushw	x
+2347       00000002      OFST:	set	2
+2350                     ; 159 	LimpiarDatos( gestor );
+2353  0002 1f01          	ldw	(OFST-1,sp),x
+2355                     ; 105 	gestor->nNodo = 0;
+2357  0004 7f            	clr	(x)
+2358                     ; 107 	gestor->ordenDHT11.Ejecutada = false;
+2360  0005 e601          	ld	a,(1,x)
+2361  0007 a4fe          	and	a,#254
+2362  0009 e701          	ld	(1,x),a
+2363                     ; 108 	gestor->ordenDHT11.Orden.Funcion = 0;
+2365  000b 6f02          	clr	(2,x)
+2366                     ; 109 	gestor->ordenDHT11.Orden.Comando = 0;
+2368  000d 6f03          	clr	(3,x)
+2369                     ; 110 	gestor->ordenHX711.Ejecutada = false;
+2371  000f e604          	ld	a,(4,x)
+2372  0011 a4fe          	and	a,#254
+2373  0013 e704          	ld	(4,x),a
+2374                     ; 111 	gestor->ordenHX711.Orden.Funcion = 0;
+2376  0015 6f05          	clr	(5,x)
+2377                     ; 112 	gestor->ordenHX711.Orden.Comando = 0;
+2379  0017 6f06          	clr	(6,x)
+2380                     ; 114 	gestor->DatosEnvio.Dht11.EnvioPreparado = false;
+2382  0019 e60d          	ld	a,(13,x)
+2383  001b a4fe          	and	a,#254
+2384  001d e70d          	ld	(13,x),a
+2385                     ; 115 	gestor->DatosEnvio.Dht11.T_Entero = 0;
+2387  001f 6f0e          	clr	(14,x)
+2388                     ; 116 	gestor->DatosEnvio.Dht11.T_Decimal = 0;
+2390  0021 6f0f          	clr	(15,x)
+2391                     ; 117 	gestor->DatosEnvio.Dht11.H_Entero = 0;
+2393  0023 6f10          	clr	(16,x)
+2394                     ; 118 	gestor->DatosEnvio.Dht11.H_Decimal = 0;
+2396  0025 6f11          	clr	(17,x)
+2397                     ; 119 	gestor->DatosEnvio.Hx711.EnvioPreparado = false;
+2399  0027 e612          	ld	a,(18,x)
+2400  0029 a4fe          	and	a,#254
+2401  002b e712          	ld	(18,x),a
+2402                     ; 120 	gestor->DatosEnvio.Hx711.Medida = 0;
+2404  002d 905f          	clrw	y
+2405  002f ef13          	ldw	(19,x),y
+2406                     ; 161 	gestor->Dispositivos = dispositivos;
+2408  0031 1e03          	ldw	x,(OFST+1,sp)
+2409  0033 1c0007        	addw	x,#7
+2410  0036 9096          	ldw	y,sp
+2411  0038 72a90007      	addw	y,#OFST+5
+2412  003c a606          	ld	a,#6
+2413  003e cd0000        	call	c_xymov
+2415                     ; 162 	gestor->rs485 = sujeto;
+2417  0041 1e03          	ldw	x,(OFST+1,sp)
+2418  0043 160d          	ldw	y,(OFST+11,sp)
+2419  0045 ef18          	ldw	(24,x),y
+2420                     ; 164 	Observador_Init( &gestor->GO_Observador, RECEPCION, &GO_evRecepcion );
+2422  0047 ae0000        	ldw	x,#_GO_evRecepcion
+2423  004a 89            	pushw	x
+2424  004b 4b01          	push	#1
+2425  004d 1e06          	ldw	x,(OFST+4,sp)
+2426  004f 1c0015        	addw	x,#21
+2427  0052 cd0000        	call	_Observador_Init
+2429  0055 5b03          	addw	sp,#3
+2430                     ; 166 	sujeto->Sujeto.SetSubscriptor( &sujeto->Sujeto, &gestor->GO_Observador );
+2432  0057 1e03          	ldw	x,(OFST+1,sp)
+2433  0059 1c0015        	addw	x,#21
+2434  005c 89            	pushw	x
+2435  005d 1e0f          	ldw	x,(OFST+13,sp)
+2436  005f 160f          	ldw	y,(OFST+13,sp)
+2437  0061 1c0029        	addw	x,#41
+2438  0064 90ee2d        	ldw	y,(45,y)
+2439  0067 90fd          	call	(y)
+2441  0069 85            	popw	x
+2442                     ; 167 }
+2445  006a 5b04          	addw	sp,#4
+2446  006c 81            	ret	
+2582                     ; 550 void GO_evRecepcion( Trama_RX_t* rx )
+2582                     ; 551 {
+2583                     .text:	section	.text,new
+2584  0000               _GO_evRecepcion:
+2586  0000 89            	pushw	x
+2587  0001 520a          	subw	sp,#10
+2588       0000000a      OFST:	set	10
+2591                     ; 552 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
+2594  0003 ae0000        	ldw	x,#_GestorRS485
+2595  0006 1f09          	ldw	(OFST-1,sp),x
+2600  0008 1f04          	ldw	(OFST-6,sp),x
+2604  000a 1e0b          	ldw	x,(OFST+1,sp)
+2605  000c 1f06          	ldw	(OFST-4,sp),x
+2610  000e f6            	ld	a,(x)
+2611  000f 6b02          	ld	(OFST-8,sp),a
+2615  0011 e601          	ld	a,(1,x)
+2617                     ; 227 	return (uint8_t)( ( ( decena - 48 ) * 10 ) + ( unidad - 48 ) );
+2619  0013 a030          	sub	a,#48
+2620  0015 6b01          	ld	(OFST-9,sp),a
+2622  0017 7b02          	ld	a,(OFST-8,sp)
+2623  0019 97            	ld	xl,a
+2624  001a a60a          	ld	a,#10
+2625  001c 42            	mul	x,a
+2626  001d 9f            	ld	a,xl
+2627  001e a0e0          	sub	a,#224
+2628  0020 1b01          	add	a,(OFST-9,sp)
+2629  0022 b700          	ld	_GestorRS485,a
+2632                     ; 552 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
+2635  0024 1e06          	ldw	x,(OFST-4,sp)
+2636  0026 e602          	ld	a,(2,x)
+2638                     ; 265 	return (uint8_t)( unidad - 48 );
+2640  0028 1e04          	ldw	x,(OFST-6,sp)
+2641  002a a030          	sub	a,#48
+2642  002c e702          	ld	(2,x),a
+2645                     ; 552 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
+2648  002e 1e06          	ldw	x,(OFST-4,sp)
+2649  0030 e603          	ld	a,(3,x)
+2651                     ; 265 	return (uint8_t)( unidad - 48 );
+2653  0032 1e04          	ldw	x,(OFST-6,sp)
+2654  0034 a030          	sub	a,#48
+2655  0036 e703          	ld	(3,x),a
+2658                     ; 552 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
+2661  0038 1e06          	ldw	x,(OFST-4,sp)
+2662  003a e604          	ld	a,(4,x)
+2664                     ; 265 	return (uint8_t)( unidad - 48 );
+2666  003c 1e04          	ldw	x,(OFST-6,sp)
+2667  003e a030          	sub	a,#48
+2668  0040 e705          	ld	(5,x),a
+2671                     ; 552 	GO_Auxiliar_evRecepcion( &GestorRS485, rx );
+2674  0042 1e06          	ldw	x,(OFST-4,sp)
+2675  0044 e605          	ld	a,(5,x)
+2676  0046 6b03          	ld	(OFST-7,sp),a
+2678                     ; 265 	return (uint8_t)( unidad - 48 );
+2680  0048 1e04          	ldw	x,(OFST-6,sp)
+2681  004a a030          	sub	a,#48
+2682  004c e706          	ld	(6,x),a
+2685                     ; 252 	if( gestor->nNodo == NUMERO_NODO_COMUNICACION )
+2688  004e 1e09          	ldw	x,(OFST-1,sp)
+2689  0050 f6            	ld	a,(x)
+2690  0051 4a            	dec	a
+2691  0052 2605          	jrne	L7412
+2692                     ; 254 		return true;
+2694  0054 4c            	inc	a
+2695  0055 6b08          	ld	(OFST-2,sp),a
+2698  0057 2002          	jra	L5671
+2699  0059               L7412:
+2700                     ; 258 		return false;
+2702  0059 0f08          	clr	(OFST-2,sp)
+2705  005b               L5671:
+2707  005b 2603cc01d8    	jreq	L5412
+2708                     ; 298 	if( gestor->ordenDHT11.Orden.Funcion == 1 ) // FUNCIONES DEL DISPOSITIVO
+2711  0060 e602          	ld	a,(2,x)
+2712  0062 a101          	cp	a,#1
+2713  0064 264f          	jrne	L3512
+2714                     ; 300 		switch( gestor->ordenDHT11.Orden.Comando )
+2716  0066 e603          	ld	a,(3,x)
+2718                     ; 336 			break;
+2719  0068 2767          	jreq	LC001
+2720  006a 4a            	dec	a
+2721  006b 271a          	jreq	L1771
+2722  006d 4a            	dec	a
+2723  006e 2761          	jreq	LC001
+2724  0070 4a            	dec	a
+2725  0071 275e          	jreq	LC001
+2726  0073 4a            	dec	a
+2727  0074 275b          	jreq	LC001
+2728  0076 4a            	dec	a
+2729  0077 2758          	jreq	LC001
+2730  0079 4a            	dec	a
+2731  007a 2755          	jreq	LC001
+2732  007c 4a            	dec	a
+2733  007d 2752          	jreq	LC001
+2734  007f 4a            	dec	a
+2735  0080 274f          	jreq	LC001
+2736  0082 4a            	dec	a
+2737  0083 274c          	jreq	LC001
+2738  0085 2050          	jra	L7102
+2739                     ; 302 			case 0: // SIN COMANDO
+2739                     ; 303 				gestor->ordenDHT11.Ejecutada = false;
+2740                     ; 304 			break;
+2742  0087               L1771:
+2743                     ; 305 			case 1: // LECTURA
+2743                     ; 306 				gestor->DatosEnvio.Dht11.T_Entero = gestor->Dispositivos.Dht11->Datos.UltimaLectura.T_Entero;
+2745  0087 ee07          	ldw	x,(7,x)
+2746  0089 e606          	ld	a,(6,x)
+2747  008b 1e09          	ldw	x,(OFST-1,sp)
+2748  008d e70e          	ld	(14,x),a
+2749                     ; 307 				gestor->DatosEnvio.Dht11.T_Decimal = gestor->Dispositivos.Dht11->Datos.UltimaLectura.T_Decimal;
+2751  008f ee07          	ldw	x,(7,x)
+2752  0091 e605          	ld	a,(5,x)
+2753  0093 1e09          	ldw	x,(OFST-1,sp)
+2754  0095 e70f          	ld	(15,x),a
+2755                     ; 308 				gestor->DatosEnvio.Dht11.H_Entero = gestor->Dispositivos.Dht11->Datos.UltimaLectura.H_Entero;
+2757  0097 ee07          	ldw	x,(7,x)
+2758  0099 e608          	ld	a,(8,x)
+2759  009b 1e09          	ldw	x,(OFST-1,sp)
+2760  009d e710          	ld	(16,x),a
+2761                     ; 309 				gestor->DatosEnvio.Dht11.H_Decimal = gestor->Dispositivos.Dht11->Datos.UltimaLectura.H_Decimal;
+2763  009f ee07          	ldw	x,(7,x)
+2764  00a1 e607          	ld	a,(7,x)
+2765  00a3 1e09          	ldw	x,(OFST-1,sp)
+2766  00a5 e711          	ld	(17,x),a
+2767                     ; 310 				gestor->ordenDHT11.Ejecutada = true;
+2769  00a7 e601          	ld	a,(1,x)
+2770  00a9 aa01          	or	a,#1
+2771  00ab e701          	ld	(1,x),a
+2772                     ; 311 				gestor->DatosEnvio.Dht11.EnvioPreparado = true;
+2774  00ad e60d          	ld	a,(13,x)
+2775  00af aa01          	or	a,#1
+2776  00b1 e70d          	ld	(13,x),a
+2777                     ; 312 			break;
+2779  00b3 2022          	jra	L7102
+2780                     ; 313 			case 2:
+2780                     ; 314 				gestor->ordenDHT11.Ejecutada = false;
+2781                     ; 315 			break;
+2783                     ; 316 			case 3:
+2783                     ; 317 				gestor->ordenDHT11.Ejecutada = false;
+2784                     ; 318 			break;
+2786                     ; 319 			case 4:
+2786                     ; 320 				gestor->ordenDHT11.Ejecutada = false;
+2787                     ; 321 			break;
+2789                     ; 322 			case 5:
+2789                     ; 323 				gestor->ordenDHT11.Ejecutada = false;
+2790                     ; 324 			break;
+2792                     ; 325 			case 6:
+2792                     ; 326 				gestor->ordenDHT11.Ejecutada = false;
+2793                     ; 327 			break;
+2795                     ; 328 			case 7:
+2795                     ; 329 				gestor->ordenDHT11.Ejecutada = false;
+2796                     ; 330 			break;
+2798                     ; 331 			case 8:
+2798                     ; 332 				gestor->ordenDHT11.Ejecutada = false;
+2799                     ; 333 			break;
+2801                     ; 334 			case 9:
+2801                     ; 335 				gestor->ordenDHT11.Ejecutada = false;
+2802                     ; 336 			break;
+2805  00b5               L3512:
+2806                     ; 340 	else if( gestor->ordenDHT11.Orden.Funcion == 9 ) // FUNCIONES DEL DISPOSITIVO led check
+2808  00b5 a109          	cp	a,#9
+2809  00b7 261e          	jrne	L7102
+2810                     ; 342 		switch( gestor->ordenDHT11.Orden.Comando )
+2812  00b9 e603          	ld	a,(3,x)
+2814                     ; 351 			break;
+2815  00bb 2705          	jreq	L3102
+2816  00bd 4a            	dec	a
+2817  00be 2709          	jreq	L5102
+2818  00c0 2015          	jra	L7102
+2819  00c2               L3102:
+2820                     ; 344 			case 0: // APAGAR
+2820                     ; 345 				gestor->Dispositivos.LedCheck->Estado.bitEstado.ComandoRecibido = false;
+2822  00c2 ee0b          	ldw	x,(11,x)
+2823  00c4 f6            	ld	a,(x)
+2824  00c5 a4fb          	and	a,#251
+2825                     ; 346 				gestor->ordenDHT11.Ejecutada = false;
+2826                     ; 347 			break;
+2828  00c7 2005          	jp	LC002
+2829  00c9               L5102:
+2830                     ; 348 			case 1: // ENCENDER
+2830                     ; 349 				gestor->Dispositivos.LedCheck->Estado.bitEstado.ComandoRecibido = true;
+2832  00c9 ee0b          	ldw	x,(11,x)
+2833  00cb f6            	ld	a,(x)
+2834  00cc aa04          	or	a,#4
+2835                     ; 350 				gestor->ordenDHT11.Ejecutada = false;
+2837  00ce               LC002:
+2838  00ce f7            	ld	(x),a
+2840  00cf 1e09          	ldw	x,(OFST-1,sp)
+2841  00d1               LC001:
+2851  00d1 e601          	ld	a,(1,x)
+2852  00d3 a4fe          	and	a,#254
+2853  00d5 e701          	ld	(1,x),a
+2854                     ; 351 			break;
+2856  00d7               L7102:
+2857                     ; 392 	if( gestor->ordenHX711.Orden.Funcion == 1 ) // FUNCIONES DEL DISPOSITIVO
+2860  00d7 1e09          	ldw	x,(OFST-1,sp)
+2861  00d9 e605          	ld	a,(5,x)
+2862  00db 4a            	dec	a
+2863  00dc 2676          	jrne	L5402
+2864                     ; 394 		switch( gestor->ordenHX711.Orden.Comando )
+2866  00de e606          	ld	a,(6,x)
+2868                     ; 429 			break;
+2869  00e0 276c          	jreq	L1302
+2870  00e2 4a            	dec	a
+2871  00e3 271a          	jreq	L3202
+2872  00e5 4a            	dec	a
+2873  00e6 272f          	jreq	L5202
+2874  00e8 4a            	dec	a
+2875  00e9 2742          	jreq	L7202
+2876  00eb 4a            	dec	a
+2877  00ec 2760          	jreq	L1302
+2878  00ee 4a            	dec	a
+2879  00ef 275d          	jreq	L1302
+2880  00f1 4a            	dec	a
+2881  00f2 275a          	jreq	L1302
+2882  00f4 4a            	dec	a
+2883  00f5 2757          	jreq	L1302
+2884  00f7 4a            	dec	a
+2885  00f8 2754          	jreq	L1302
+2886  00fa 4a            	dec	a
+2887  00fb 2751          	jreq	L1302
+2888  00fd 2055          	jra	L5402
+2889                     ; 396 			case 0: // SIN COMANDO
+2889                     ; 397 				gestor->ordenHX711.Ejecutada = false;
+2890                     ; 398 			break;
+2892  00ff               L3202:
+2893                     ; 399 			case 1: // LECTURA
+2893                     ; 400 				gestor->DatosEnvio.Hx711.Medida = gestor->Dispositivos.Hx711->Datos.UltimaLectura;
+2895  00ff ee09          	ldw	x,(9,x)
+2896  0101 1609          	ldw	y,(OFST-1,sp)
+2897  0103 ee13          	ldw	x,(19,x)
+2898  0105 90ef13        	ldw	(19,y),x
+2899                     ; 401 				gestor->ordenHX711.Ejecutada = true;
+2901  0108 93            	ldw	x,y
+2902  0109 e604          	ld	a,(4,x)
+2903  010b aa01          	or	a,#1
+2904  010d e704          	ld	(4,x),a
+2905                     ; 402 				gestor->DatosEnvio.Hx711.EnvioPreparado = true;
+2907  010f e612          	ld	a,(18,x)
+2908  0111 aa01          	or	a,#1
+2909  0113 e712          	ld	(18,x),a
+2910                     ; 403 			break;
+2912  0115 203d          	jra	L5402
+2913  0117               L5202:
+2914                     ; 404 			case 2: // TARAR
+2914                     ; 405 				gestor->Dispositivos.Hx711->Config.ValorTara = gestor->Dispositivos.Hx711->Tarar( gestor->Dispositivos.Hx711 );
+2916  0117 1609          	ldw	y,(OFST-1,sp)
+2917  0119 90ee09        	ldw	y,(9,y)
+2918  011c ee09          	ldw	x,(9,x)
+2919  011e 90ee1a        	ldw	y,(26,y)
+2920  0121 90fd          	call	(y)
+2922  0123 1609          	ldw	y,(OFST-1,sp)
+2923  0125 90ee09        	ldw	y,(9,y)
+2924  0128 90ef0f        	ldw	(15,y),x
+2925                     ; 406 				gestor->ordenHX711.Ejecutada = true;
+2926                     ; 407 			break;
+2928  012b 2019          	jp	LC005
+2929  012d               L7202:
+2930                     ; 408 			case 3: // VALOR ZERO
+2930                     ; 409 				gestor->Dispositivos.Hx711->Config.ValorZero = gestor->Dispositivos.Hx711->Tarar( gestor->Dispositivos.Hx711 );
+2932  012d 1609          	ldw	y,(OFST-1,sp)
+2933  012f 90ee09        	ldw	y,(9,y)
+2934  0132 ee09          	ldw	x,(9,x)
+2935  0134 90ee1a        	ldw	y,(26,y)
+2936  0137 90fd          	call	(y)
+2938  0139 cd0000        	call	c_uitolx
+2940  013c 1e09          	ldw	x,(OFST-1,sp)
+2941  013e ee09          	ldw	x,(9,x)
+2942  0140 1c000b        	addw	x,#11
+2943  0143 cd0000        	call	c_rtol
+2945                     ; 410 				gestor->ordenHX711.Ejecutada = true;
+2947  0146               LC005:
+2949  0146 1e09          	ldw	x,(OFST-1,sp)
+2950  0148 e604          	ld	a,(4,x)
+2951  014a aa01          	or	a,#1
+2952                     ; 411 			break;
+2954  014c 2004          	jp	LC003
+2955  014e               L1302:
+2956                     ; 412 			case 4:
+2956                     ; 413 				gestor->ordenHX711.Ejecutada = false;
+2957                     ; 414 			break;
+2959                     ; 415 			case 5:
+2959                     ; 416 				gestor->ordenHX711.Ejecutada = false;
+2960                     ; 417 			break;
+2962                     ; 418 			case 6:
+2962                     ; 419 				gestor->ordenHX711.Ejecutada = false;
+2963                     ; 420 			break;
+2965                     ; 421 			case 7:
+2965                     ; 422 				gestor->ordenHX711.Ejecutada = false;
+2966                     ; 423 			break;
+2968                     ; 424 			case 8:
+2968                     ; 425 				gestor->ordenHX711.Ejecutada = false;
+2969                     ; 426 			break;
+2971                     ; 427 			case 9:
+2971                     ; 428 				gestor->ordenHX711.Ejecutada = false;
+2979  014e e604          	ld	a,(4,x)
+2980  0150 a4fe          	and	a,#254
+2981  0152               LC003:
+2982  0152 e704          	ld	(4,x),a
+2983                     ; 429 			break;
+2985  0154               L5402:
+2986                     ; 478 		if( gestor->DatosEnvio.Dht11.EnvioPreparado == true )
+2988  0154 e60d          	ld	a,(13,x)
+2989  0156 a501          	bcp	a,#1
+2990  0158 2732          	jreq	L7712
+2991                     ; 480 			gestor->rs485->Buffer.Tx.buffer[0] = NUMERO_NODO_COMUNICACION;
+2993  015a ee18          	ldw	x,(24,x)
+2994  015c a601          	ld	a,#1
+2995  015e e712          	ld	(18,x),a
+2996                     ; 481 			gestor->rs485->Buffer.Tx.buffer[1] = gestor->DatosEnvio.Dht11.T_Entero;
+2998  0160 1e09          	ldw	x,(OFST-1,sp)
+2999  0162 e60e          	ld	a,(14,x)
+3000  0164 ee18          	ldw	x,(24,x)
+3001  0166 e713          	ld	(19,x),a
+3002                     ; 482 			gestor->rs485->Buffer.Tx.buffer[2] = gestor->DatosEnvio.Dht11.T_Decimal;
+3004  0168 1e09          	ldw	x,(OFST-1,sp)
+3005  016a e60f          	ld	a,(15,x)
+3006  016c ee18          	ldw	x,(24,x)
+3007  016e e714          	ld	(20,x),a
+3008                     ; 483 			gestor->rs485->Buffer.Tx.buffer[3] = gestor->DatosEnvio.Dht11.H_Entero;
+3010  0170 1e09          	ldw	x,(OFST-1,sp)
+3011  0172 e610          	ld	a,(16,x)
+3012  0174 ee18          	ldw	x,(24,x)
+3013  0176 e715          	ld	(21,x),a
+3014                     ; 484 			gestor->rs485->Buffer.Tx.buffer[4] = gestor->DatosEnvio.Dht11.H_Decimal;
+3016  0178 1e09          	ldw	x,(OFST-1,sp)
+3017  017a e611          	ld	a,(17,x)
+3018  017c ee18          	ldw	x,(24,x)
+3019  017e e716          	ld	(22,x),a
+3020                     ; 486 			gestor->rs485->Flags.bit.EnvioPreparado = 1;
+3022  0180 1e09          	ldw	x,(OFST-1,sp)
+3023  0182 ee18          	ldw	x,(24,x)
+3024  0184 e621          	ld	a,(33,x)
+3025  0186 aa10          	or	a,#16
+3026  0188 e721          	ld	(33,x),a
+3028  018a 2016          	jra	L1022
+3029  018c               L7712:
+3030                     ; 490 			gestor->rs485->Buffer.Tx.buffer[1] = 0;
+3032  018c ee18          	ldw	x,(24,x)
+3033  018e 6f13          	clr	(19,x)
+3034                     ; 491 			gestor->rs485->Buffer.Tx.buffer[2] = 0;
+3036  0190 1e09          	ldw	x,(OFST-1,sp)
+3037  0192 ee18          	ldw	x,(24,x)
+3038  0194 6f14          	clr	(20,x)
+3039                     ; 492 			gestor->rs485->Buffer.Tx.buffer[3] = 0;
+3041  0196 1e09          	ldw	x,(OFST-1,sp)
+3042  0198 ee18          	ldw	x,(24,x)
+3043  019a 6f15          	clr	(21,x)
+3044                     ; 493 			gestor->rs485->Buffer.Tx.buffer[4] = 0;
+3046  019c 1e09          	ldw	x,(OFST-1,sp)
+3047  019e ee18          	ldw	x,(24,x)
+3048  01a0 6f16          	clr	(22,x)
+3049  01a2               L1022:
+3050                     ; 496 		if( gestor->DatosEnvio.Hx711.EnvioPreparado == true )
+3052  01a2 1e09          	ldw	x,(OFST-1,sp)
+3053  01a4 e612          	ld	a,(18,x)
+3054  01a6 a501          	bcp	a,#1
+3055  01a8 2722          	jreq	L3022
+3056                     ; 498 			gestor->rs485->Buffer.Tx.buffer[0] = NUMERO_NODO_COMUNICACION;
+3058  01aa ee18          	ldw	x,(24,x)
+3059  01ac a601          	ld	a,#1
+3060  01ae e712          	ld	(18,x),a
+3061                     ; 499 			gestor->rs485->Buffer.Tx.buffer[5] = gestor->DatosEnvio.Hx711.Bytes.alto;
+3063  01b0 1e09          	ldw	x,(OFST-1,sp)
+3064  01b2 e613          	ld	a,(19,x)
+3065  01b4 ee18          	ldw	x,(24,x)
+3066  01b6 e717          	ld	(23,x),a
+3067                     ; 500 			gestor->rs485->Buffer.Tx.buffer[6] = gestor->DatosEnvio.Hx711.Bytes.bajo;
+3069  01b8 1e09          	ldw	x,(OFST-1,sp)
+3070  01ba e614          	ld	a,(20,x)
+3071  01bc ee18          	ldw	x,(24,x)
+3072  01be e718          	ld	(24,x),a
+3073                     ; 502 			gestor->rs485->Flags.bit.EnvioPreparado = 1;
+3075  01c0 1e09          	ldw	x,(OFST-1,sp)
+3076  01c2 ee18          	ldw	x,(24,x)
+3077  01c4 e621          	ld	a,(33,x)
+3078  01c6 aa10          	or	a,#16
+3079  01c8 e721          	ld	(33,x),a
+3081  01ca 2039          	jra	L1502
+3082  01cc               L3022:
+3083                     ; 506 			gestor->rs485->Buffer.Tx.buffer[5] = 0;
+3085  01cc ee18          	ldw	x,(24,x)
+3086  01ce 6f17          	clr	(23,x)
+3087                     ; 507 			gestor->rs485->Buffer.Tx.buffer[6] = 0;
+3089  01d0 1e09          	ldw	x,(OFST-1,sp)
+3090  01d2 ee18          	ldw	x,(24,x)
+3091  01d4 6f18          	clr	(24,x)
+3092  01d6 202d          	jra	L1502
+3093  01d8               L5412:
+3094                     ; 105 	gestor->nNodo = 0;
+3097  01d8 7f            	clr	(x)
+3098                     ; 107 	gestor->ordenDHT11.Ejecutada = false;
+3100  01d9 e601          	ld	a,(1,x)
+3101  01db a4fe          	and	a,#254
+3102  01dd e701          	ld	(1,x),a
+3103                     ; 108 	gestor->ordenDHT11.Orden.Funcion = 0;
+3105  01df 6f02          	clr	(2,x)
+3106                     ; 109 	gestor->ordenDHT11.Orden.Comando = 0;
+3108  01e1 6f03          	clr	(3,x)
+3109                     ; 110 	gestor->ordenHX711.Ejecutada = false;
+3111  01e3 e604          	ld	a,(4,x)
+3112  01e5 a4fe          	and	a,#254
+3113  01e7 e704          	ld	(4,x),a
+3114                     ; 111 	gestor->ordenHX711.Orden.Funcion = 0;
+3116  01e9 6f05          	clr	(5,x)
+3117                     ; 112 	gestor->ordenHX711.Orden.Comando = 0;
+3119  01eb 6f06          	clr	(6,x)
+3120                     ; 114 	gestor->DatosEnvio.Dht11.EnvioPreparado = false;
+3122  01ed e60d          	ld	a,(13,x)
+3123  01ef a4fe          	and	a,#254
+3124  01f1 e70d          	ld	(13,x),a
+3125                     ; 115 	gestor->DatosEnvio.Dht11.T_Entero = 0;
+3127  01f3 6f0e          	clr	(14,x)
+3128                     ; 116 	gestor->DatosEnvio.Dht11.T_Decimal = 0;
+3130  01f5 6f0f          	clr	(15,x)
+3131                     ; 117 	gestor->DatosEnvio.Dht11.H_Entero = 0;
+3133  01f7 6f10          	clr	(16,x)
+3134                     ; 118 	gestor->DatosEnvio.Dht11.H_Decimal = 0;
+3136  01f9 6f11          	clr	(17,x)
+3137                     ; 119 	gestor->DatosEnvio.Hx711.EnvioPreparado = false;
+3139  01fb e612          	ld	a,(18,x)
+3140  01fd a4fe          	and	a,#254
+3141  01ff e712          	ld	(18,x),a
+3142                     ; 120 	gestor->DatosEnvio.Hx711.Medida = 0;
+3144  0201 905f          	clrw	y
+3145  0203 ef13          	ldw	(19,x),y
+3146  0205               L1502:
+3147                     ; 553 }
+3150  0205 5b0c          	addw	sp,#12
+3151  0207 81            	ret	
+3164                     	xdef	_GO_evRecepcion
+3165                     	xdef	_GO_Init
+3166                     	xref.b	_GestorRS485
+3167                     	xref	_Observador_Init
+3168                     	xref.b	c_x
+3187                     	xref	c_rtol
+3188                     	xref	c_uitolx
+3189                     	xref	c_xymov
+3190                     	end

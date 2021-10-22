@@ -70,7 +70,41 @@
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
-
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline uint8_t leerByte( DHT11_t_ptr dht11 )
 {
 	uint8_t contador = 0;
@@ -120,6 +154,41 @@ static @inline uint8_t leerByte( DHT11_t_ptr dht11 )
 	return temp;
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline bool dht11_ComenzarTransmision( DHT11_t_ptr sensor )
 {
 	NHALgpioConfig_SetType( &sensor->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz
@@ -176,6 +245,41 @@ static @inline bool dht11_ComenzarTransmision( DHT11_t_ptr sensor )
 	}
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline DHT11_SI_t dht11_LeerDatos( DHT11_t_ptr sensor )
 {
 	uint16_t checkCRC = 0;
@@ -212,6 +316,41 @@ static @inline DHT11_SI_t dht11_LeerDatos( DHT11_t_ptr sensor )
 	}
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void dht11_CerrarConexion( DHT11_t_ptr sensor )
 {
 	NHALgpioConfig_SetType( &sensor->Config.HW, GPIO_MODE_OUT_PP_LOW_SLOW ); //Salida a 2Mhz

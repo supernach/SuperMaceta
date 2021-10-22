@@ -74,7 +74,7 @@ String.6.0=2021,8,20,17,59,38
 String.100.0=$(TargetFName)
 String.101.0=
 String.102.0=
-String.103.0=.\;drivers\spl;api\n_hal\clock;api\n_hal\gpio;api\n_hal\utils;drivers\dht11;drivers\hx711;aplicacion\configuracion;api\timeout;api\n_hal\timer;communication\rs485;communication\rs485\tramas;api\n_hal\uart;api\gestor_ordenes;api\patrones\observadorsujeto;aplicacion\tareas;
+String.103.0=.\;drivers\spl;api\n_hal\clock;api\n_hal\gpio;api\n_hal\utils;drivers\dht11;drivers\hx711;aplicacion\configuracion;api\timeout;api\n_hal\timer;communication\rs485;communication\rs485\tramas;api\n_hal\uart;api\gestor_ordenes;api\patrones\observadorsujeto;aplicacion\tareas;drivers\led;
 
 [Root.Config.0.Settings.2]
 String.2.0=
@@ -83,7 +83,7 @@ String.100.0=STM8S103F3P
 
 [Root.Config.0.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -157,7 +157,7 @@ String.6.0=2021,8,20,17,59,38
 String.100.0=$(TargetFName)
 String.101.0=
 String.102.0=
-String.103.0=.\;drivers\spl;api\n_hal\clock;api\n_hal\gpio;api\n_hal\utils;drivers\dht11;drivers\hx711;aplicacion\configuracion;api\timeout;api\n_hal\timer;communication\rs485;communication\rs485\tramas;api\n_hal\uart;api\gestor_ordenes;api\patrones\observadorsujeto;aplicacion\tareas;
+String.103.0=.\;drivers\spl;api\n_hal\clock;api\n_hal\gpio;api\n_hal\utils;drivers\dht11;drivers\hx711;aplicacion\configuracion;api\timeout;api\n_hal\timer;communication\rs485;communication\rs485\tramas;api\n_hal\uart;api\gestor_ordenes;api\patrones\observadorsujeto;aplicacion\tareas;drivers\led;
 
 [Root.Config.1.Settings.2]
 String.2.0=
@@ -166,7 +166,7 @@ String.100.0=STM8S103F3P
 
 [Root.Config.1.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -246,7 +246,7 @@ Int.1=0
 
 [Root.Source Files.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -273,7 +273,7 @@ Int.1=0
 
 [Root.Source Files.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -334,7 +334,7 @@ Int.1=0
 
 [Root.Api.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -361,7 +361,7 @@ Int.1=0
 
 [Root.Api.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -567,7 +567,7 @@ Int.1=0
 
 [Root.Aplicacion.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -594,7 +594,7 @@ Int.1=0
 
 [Root.Aplicacion.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -665,7 +665,7 @@ Int.1=0
 
 [Root.Communication.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -692,7 +692,7 @@ Int.1=0
 
 [Root.Communication.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -773,7 +773,7 @@ Int.1=0
 
 [Root.Drivers.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -800,7 +800,7 @@ Int.1=0
 
 [Root.Drivers.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -838,7 +838,7 @@ PathName=drivers\dht11\dht11.c
 ElemType=Folder
 PathName=Drivers\HX711
 Child=Root.Drivers.Drivers\HX711.drivers\hx711\hx711.h
-Next=Root.Drivers.Drivers\SPL
+Next=Root.Drivers.Drivers\LED
 
 [Root.Drivers.Drivers\HX711.drivers\hx711\hx711.h]
 ElemType=File
@@ -848,6 +848,21 @@ Next=Root.Drivers.Drivers\HX711.drivers\hx711\hx711.c
 [Root.Drivers.Drivers\HX711.drivers\hx711\hx711.c]
 ElemType=File
 PathName=drivers\hx711\hx711.c
+
+[Root.Drivers.Drivers\LED]
+ElemType=Folder
+PathName=Drivers\LED
+Child=Root.Drivers.Drivers\LED.drivers\led\led.h
+Next=Root.Drivers.Drivers\SPL
+
+[Root.Drivers.Drivers\LED.drivers\led\led.h]
+ElemType=File
+PathName=drivers\led\led.h
+Next=Root.Drivers.Drivers\LED.drivers\led\led.c
+
+[Root.Drivers.Drivers\LED.drivers\led\led.c]
+ElemType=File
+PathName=drivers\led\led.c
 
 [Root.Drivers.Drivers\SPL]
 ElemType=Folder
@@ -927,7 +942,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_wwdg.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -948,7 +963,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_wwdg.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1037,7 +1052,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim4.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1058,7 +1073,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim4.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1068,42 +1083,6 @@ String.8.0=Release
 ElemType=File
 PathName=drivers\spl\stm8s_tim2.h
 Next=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c
-Config.0=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.0
-Config.1=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.1
-
-[Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.0]
-Settings.0.0=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.0.Settings.0
-Settings.0.1=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.0.Settings.1
-
-[Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.1]
-Settings.1.0=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.1.Settings.0
-Settings.1.1=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.1.Settings.1
-
-[Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.0.Settings.0]
-String.6.0=2021,9,11,2,20,21
-String.8.0=Debug
-Int.0=1
-Int.1=0
-
-[Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.0.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2021,8,20,17,59,38
-
-[Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.1.Settings.0]
-String.6.0=2021,9,11,2,19,2
-String.8.0=Release
-Int.0=0
-Int.1=0
-
-[Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.h.Config.1.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c]
 ElemType=File
@@ -1123,9 +1102,9 @@ Settings.1.1=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c.Config.1.Settings
 Settings.1.2=Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c.Config.1.Settings.2
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c.Config.0.Settings.0]
-String.6.0=2021,9,11,2,20,21
+String.6.0=2021,10,18,7,24,52
 String.8.0=Debug
-Int.0=1
+Int.0=0
 Int.1=0
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c.Config.0.Settings.1]
@@ -1137,7 +1116,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1158,7 +1137,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_tim2.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1247,7 +1226,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_spi.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1268,7 +1247,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_spi.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1347,7 +1326,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_rst.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -1368,7 +1347,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_rst.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1447,7 +1426,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_iwdg.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1468,7 +1447,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_iwdg.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1557,7 +1536,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_i2c.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1578,7 +1557,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_i2c.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1667,7 +1646,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_flash.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -1688,7 +1667,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_flash.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1767,7 +1746,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_exti.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1788,7 +1767,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_exti.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1882,7 +1861,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_beep.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1903,7 +1882,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_beep.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -1982,7 +1961,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_awu.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -2003,7 +1982,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_awu.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -2082,7 +2061,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_adc1.c.Config.0.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -l -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -2103,7 +2082,7 @@ String.6.0=2021,8,20,17,59,38
 
 [Root.Drivers.Drivers\SPL.drivers\spl\stm8s_adc1.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5
@@ -2139,7 +2118,7 @@ Int.1=0
 
 [Root.Middleware.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  +warn +mods0 -customDebCompat -customOpt +split -customC-pp -customLst -v -l -icommunication\rs485\ordenes -icommunication\rs485\tramas -icommunication\rs485 -iapi\n_hal\timer -iapi\timeout -iaplicacion\configuracion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers -iapi -iaplicacion -icommunication -imiddleware $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,21,19,40,17
@@ -2166,7 +2145,7 @@ Int.1=0
 
 [Root.Middleware.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -idrivers\led  -iaplicacion\tareas  -iapi\patrones\observadorsujeto  -iapi\gestor_ordenes  -iapi\n_hal\uart  -icommunication\rs485\ordenes  -icommunication\rs485\tramas  -icommunication\rs485  -iapi\n_hal\timer  -iapi\timeout  +mods0 -customOpt +split -customC-pp -iaplicacion\configuracion -iaplicacion -idrivers\hx711 -idrivers\dht11 -iapi\n_hal\utils -iapi\n_hal\gpio -iapi\n_hal\clock -idrivers\spl $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2021,9,8,1,32,5

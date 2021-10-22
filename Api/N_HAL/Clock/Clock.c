@@ -127,6 +127,41 @@ void Clock_HSI_Init(CLK_Prescaler_TypeDef fHsi, CLK_Prescaler_TypeDef fCpu)
   DisableAllPeripherals();
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 void DisableAllPeripherals(void)
 {
 	CLK_PeripheralClockConfig(CLK_PERIPHERAL_I2C, DISABLE);
@@ -134,7 +169,7 @@ void DisableAllPeripherals(void)
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_UART1, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_AWU, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_ADC, DISABLE);
-  CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, ENABLE);
+  CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER2, DISABLE);
   CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER4, DISABLE);
 }
@@ -182,6 +217,41 @@ void EnableClockMirror(CLK_Output_TypeDef source, Gpio_Config_t* pin)
   CLK_CCOCmd(ENABLE);
 }
 
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 void HabilitarRelojPeriferico( CLK_Peripheral_TypeDef periferico )
 {
 	CLK_PeripheralClockConfig(periferico, ENABLE);

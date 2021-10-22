@@ -45,13 +45,34 @@
 #include <AppConfig.h>
 
 
-/**
-/* @fn void DeInitAllGPIO
-/* @brief Resetear todos los puertos perifericos
-/*
-/*
-*/
-
+/******************************************************************************
+* Function : DeInitAllGPIO()
+*//**
+* \b Description: 
+*
+* Pone en estado de fabrica los puertos
+*
+* POST-CONDITION: Los puertos estan incializados de fabrica
+* 
+* @param	void				
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		DeInitAllGPIO( );
+* @endcode
+* 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SuperNach  </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void DeInitAllGPIO(void)
 {
 	GPIO_DeInit(GPIOA);
@@ -60,16 +81,45 @@ static @inline void DeInitAllGPIO(void)
 	GPIO_DeInit(GPIOD);
 }
 
-/**
-/* @fn void Pin_Init
-/* @brief Inicializacion de los pines fisicos asociados a sensores
-/*        a traves del tipo Pin.
-/*
-/*
-*/
-
+/******************************************************************************
+* Function : Pin_Init()
+*//**
+* \b Description:
+*
+* Asignamos las direcciones fisicas de los puertos a los dispositivos
+* utilizados en el sistema
+*
+*
+* PRE-CONDITION: Saber que pines hay que inicializar
+*
+* POST-CONDITION: Los dispositivos pueden inicializar su parte fisica
+* 
+*			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		Pin_Init( );
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SuperNach      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void Pin_Init(void)
 {
+	Led_Check.HW.Puerto = GPIOB;
+	Led_Check.HW.Pin = GPIO_PIN_5;
+
 	// Configuracion sensor temperatura y humedad
 	SensorTempHum.Config.HW.Puerto = GPIOA;
 	SensorTempHum.Config.HW.Pin = GPIO_PIN_3;
@@ -82,60 +132,264 @@ static @inline void Pin_Init(void)
 	SensorPesaje.Config.PD_SCK.Pin = GPIO_PIN_3;
 }
 
-/**
-/* @fn void InicializacionGPIO
-/* @brief Inicializacion completa de las GPIO. Por ultimo
-/*        la IO se configura segun se necesite.
-/*
-/*
-*/
-
+/******************************************************************************
+* Function : InicializacionGPIO()
+*//**
+* \b Description:
+*
+* Ejecuta la inicializacion fisica de los pines
+*
+* PRE-CONDITION: Pin_Init( ) configurado
+*
+*
+*
+* 
+*			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		InicializacionGPIO( );
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SuperNach      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void InicializacionGPIO(void)
 {
 	Pin_Init();
 }
 
-/**
-/* @fn void InicializacionCLK
-/* @brief Inicializacion del reloj de sistema y cpu.
-/*
-/*
-*/
-
+/******************************************************************************
+* Function : InicializacionCLK()
+*//**
+* \b Description:
+*
+* Ejecuto la inicializacion del reloj de la cpu
+*
+* 
+*
+* POST-CONDITION: El reloj ha sido configurado a la velocidad elegida
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void InicializacionCLK(void)
 {
 	Clock_HSI_Init(CLK_PRESCALER_HSIDIV1, CLK_PRESCALER_CPUDIV1);
 }
 
-/**
-/* @fn void InicializacionComponentes
-/* @brief Inicializacion componentes del sistema
-/*
-/*
-*/
-static @inline void InicializacionComponentes(void)
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+static @inline void InicializarTareas( void )
+{
+	Tarea_Dispositivo_u dispositivoAuxiliar;
+	
+	Tareas_Init( &GestorTareas );
+	
+	dispositivoAuxiliar.Dispositivo = &SensorPesaje;
+	Tareas_Registrar( &GestorTareas, dispositivoAuxiliar, 200, TAREA_LECTURA, HX711 );
+	
+	dispositivoAuxiliar.Dispositivo = &SensorTempHum;
+	Tareas_Registrar( &GestorTareas, dispositivoAuxiliar, 1000, TAREA_LECTURA, DHT11 );
+	
+	dispositivoAuxiliar.Dispositivo = &Led_Check;
+	Tareas_Registrar( &GestorTareas, dispositivoAuxiliar, 650, TAREA_LED_TOGGLE, LED );
+}
+
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+static @inline void InicializarGestorOrdenes( void )
 {
 	struct GO_Dispositivos dispositivos;
+	
+	dispositivos.Dht11 = &SensorTempHum;
+	dispositivos.Hx711 = &SensorPesaje;
+	dispositivos.LedCheck = &Led_Check;
+	GO_Init( &GestorRS485, dispositivos , &Comunicacion );
+}
+
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
+static @inline void InicializacionComponentes(void)
+{
 	Timer_Config_Init( &timer_Timeout.Config, TIMER1, CANAL1, COUNTERUP, SI, 1 );
 	Timeout_Init( &Timeout, &timer_Timeout, &getFlagTimer1, &setFlagTimer1 );
 	
 	DHT11_Init( &SensorTempHum, &dht11_Lectura, &Timeout );
 	HX711_Init( &SensorPesaje, &hx711_Lectura, &hx711_Tarar, &Timeout );
+	Led_Init( &Led_Check );
 	
 	RS485_Init( &Comunicacion );
 	
-	dispositivos.Dht11 = &SensorTempHum;
-	dispositivos.Hx711 = &SensorPesaje;
-	GO_Init( &GestorRS485, dispositivos , &Comunicacion );
-	
+	InicializarGestorOrdenes( );
+
+	InicializarTareas( );
 }
 
-/**
-/* @fn void Inicializacion_Total
-/* @brief Resumen de todas las anteriores inicializaciones
-/*
-/*
-*/
+/******************************************************************************
+* Function : plantilla()
+*//**
+* \b Description:
+*
+* plantilla descripcion
+*
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+* PRE-CONDITION: 
+*
+* POST-CONDITION: 
+* 
+* @param			
+* @param			
+*
+* @return 		void
+*
+* \b Example Ejemplo:
+* @code
+*		
+* @endcode
+*
+* @see 
+* @see 
+*
+* <br><b> - CHANGELOG - </b>
+*
+* <table align="left" style="width:800px">
+* <tr><td> Fecha       </td><td> Software Version </td><td> Creador </td><td> Descripcion </td></tr>
+* <tr><td> 20/08/2021  </td><td> 1.0.0            </td><td> SN      </td><td> Primera edicion </td></tr>
+* </table><br><br>
+* <hr>
+*
+*******************************************************************************/
 static @inline void Inicializacion_Total(void)
 {
 	DeInitAllGPIO();
@@ -162,13 +416,7 @@ int main()
 	{
 		Comunicacion.Run( &Comunicacion );
 		
-		
-		if( Comunicacion.Flags.bit.Standby == true )
-		{
-			SensorPesaje.Datos.UltimaLectura = SensorPesaje.Lectura( &SensorPesaje );
-			SensorTempHum.Datos.UltimaLectura = SensorTempHum.Lectura( &SensorTempHum );
-			_delay_ms( 1000 );
-		}
+		Tareas_Run( &GestorTareas );
 		
 	}
 }

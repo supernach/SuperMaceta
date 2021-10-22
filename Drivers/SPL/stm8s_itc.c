@@ -46,6 +46,24 @@ void setFlagTimer1( uint16_t valor )
 	flagTimer1 = valor;
 }
 
+// INTERRUPCION TIMER2 PARA TAREASTICK
+void TIM2_OV_IRQHandler( void )
+{
+	++flagTimer2;
+	TIM2_ClearITPendingBit(TIM2_IT_UPDATE);
+	TIM2_ClearFlag(TIM2_FLAG_UPDATE);
+}
+
+uint16_t getFlagTimer2( void )
+{
+	return flagTimer2;
+}
+
+void setFlagTimer2( uint16_t valor )
+{
+	flagTimer2 = valor;
+}
+
 // INTERRUPCION UART RXNE
 void UART_RXNE_IRQHandler( void )
 {

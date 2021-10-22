@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name STM8S103F3P6)(type Legacy)(uri D:/KICAD/Librerias/STM8S103F3P6/STM8S103F3P6.lib)(options "")(descr "")(disabled))
+  (lib (name ConConversor-rescue)(type Legacy)(uri ${KIPRJMOD}/ConConversor-rescue.lib)(options "")(descr ""))
+)

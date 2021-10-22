@@ -41,6 +41,12 @@ static volatile uint16_t flagTimer1 = 0;
 uint16_t getFlagTimer1( void );
 void setFlagTimer1( uint16_t valor );
 
+// INTERRUPCION TIMER2 PARA TAREASTICK
+static volatile uint16_t flagTimer2 = 0;
+@far @interrupt void TIM2_OV_IRQHandler( void );
+uint16_t getFlagTimer2( void );
+void setFlagTimer2( uint16_t valor );
+
 //INTERRUPCION UART RXNE
 struct bufferRX_s
 {

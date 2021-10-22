@@ -337,6 +337,20 @@ static @inline void FuncionesDHT11( Gestor_Ordenes_t_ptr gestor )
 			
 		}
 	}
+	else if( gestor->ordenDHT11.Orden.Funcion == 9 ) // FUNCIONES DEL DISPOSITIVO led check
+	{
+		switch( gestor->ordenDHT11.Orden.Comando )
+		{
+			case 0: // APAGAR
+				gestor->Dispositivos.LedCheck->Estado.bitEstado.ComandoRecibido = false;
+				gestor->ordenDHT11.Ejecutada = false;
+			break;
+			case 1: // ENCENDER
+				gestor->Dispositivos.LedCheck->Estado.bitEstado.ComandoRecibido = true;
+				gestor->ordenDHT11.Ejecutada = false;
+			break;
+		}
+	}
 }
 /******************************************************************************
 * Function : FuncionesHX711
@@ -461,7 +475,7 @@ static @inline void GO_Auxiliar_evRecepcion( Gestor_Ordenes_t_ptr gestor, Trama_
 		FuncionesDHT11( gestor );
 		FuncionesHX711( gestor );
 		
-		if( ( gestor->DatosEnvio.Dht11.EnvioPreparado == true ) || ( gestor->DatosEnvio.Hx711.EnvioPreparado == true ) )
+		if( gestor->DatosEnvio.Dht11.EnvioPreparado == true )
 		{
 			gestor->rs485->Buffer.Tx.buffer[0] = NUMERO_NODO_COMUNICACION;
 			gestor->rs485->Buffer.Tx.buffer[1] = gestor->DatosEnvio.Dht11.T_Entero;
@@ -469,10 +483,28 @@ static @inline void GO_Auxiliar_evRecepcion( Gestor_Ordenes_t_ptr gestor, Trama_
 			gestor->rs485->Buffer.Tx.buffer[3] = gestor->DatosEnvio.Dht11.H_Entero;
 			gestor->rs485->Buffer.Tx.buffer[4] = gestor->DatosEnvio.Dht11.H_Decimal;
 			
+			gestor->rs485->Flags.bit.EnvioPreparado = 1;
+		}
+		else
+		{
+			gestor->rs485->Buffer.Tx.buffer[1] = 0;
+			gestor->rs485->Buffer.Tx.buffer[2] = 0;
+			gestor->rs485->Buffer.Tx.buffer[3] = 0;
+			gestor->rs485->Buffer.Tx.buffer[4] = 0;
+		}
+		
+		if( gestor->DatosEnvio.Hx711.EnvioPreparado == true )
+		{
+			gestor->rs485->Buffer.Tx.buffer[0] = NUMERO_NODO_COMUNICACION;
 			gestor->rs485->Buffer.Tx.buffer[5] = gestor->DatosEnvio.Hx711.Bytes.alto;
 			gestor->rs485->Buffer.Tx.buffer[6] = gestor->DatosEnvio.Hx711.Bytes.bajo;
 			
 			gestor->rs485->Flags.bit.EnvioPreparado = 1;
+		}
+		else
+		{
+			gestor->rs485->Buffer.Tx.buffer[5] = 0;
+			gestor->rs485->Buffer.Tx.buffer[6] = 0;
 		}
 	}
 	else

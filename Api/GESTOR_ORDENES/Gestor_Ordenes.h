@@ -54,6 +54,7 @@
 #include <utils.h>
 #include <dht11.h>
 #include <hx711.h>
+#include <led.h>
 
 
 /******************************************************************************
@@ -140,6 +141,7 @@ struct GO_Dispositivos
 {
 	DHT11_t* Dht11;
 	HX711_t* Hx711;
+	Led_t_ptr LedCheck;
 };
 
 /**

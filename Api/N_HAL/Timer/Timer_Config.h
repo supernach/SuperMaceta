@@ -121,7 +121,8 @@ typedef enum
 */
 typedef enum
 {
-	TIMER1	/**< Timer1 del stm8s */
+	TIMER1,	/**< Timer1 del stm8s */
+	TIMER2
 }Timer_Numero_e;
 
 /**
@@ -132,6 +133,7 @@ typedef enum
 */
 typedef enum
 {
+	SINCANAL,
 	CANAL1	/**< Numero del canal del timer usado */
 }Timer_Canal_e;
 

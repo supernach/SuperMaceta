@@ -111,6 +111,7 @@ void Timer_Init( Timer_t_ptr timer )
 {
 	if( timer->Config.Timer == TIMER1 )
 	{
+		CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, ENABLE);
 		if( timer->Config.IT == SI )
 		{
 			TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
@@ -122,10 +123,29 @@ void Timer_Init( Timer_t_ptr timer )
 		if( timer->Config.IT == SI )
 		{
 			TIM1_ITConfig( TIM1_IT_UPDATE, ENABLE );
+			enableInterrupts();
 		}
 		TIM1_Cmd( ENABLE );
 	}
-	enableInterrupts();
+	else if( timer->Config.Timer == TIMER2 )
+	{
+		CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER2, ENABLE);
+		if( timer->Config.IT == SI )
+		{
+			TIM2_ITConfig( TIM2_IT_UPDATE, DISABLE );
+		}
+		TIM2_Cmd( DISABLE );
+	
+		TIM2_TimeBaseInit( TIM2_PRESCALER_16, timer->Config.Tiempo);
+		
+		if( timer->Config.IT == SI )
+		{
+			TIM2_ITConfig( TIM2_IT_UPDATE, ENABLE );
+			enableInterrupts();
+		}
+		TIM2_Cmd( ENABLE );
+	}
+	
 }
 
 /******************************************************************************
@@ -220,10 +240,21 @@ void Timer_DeInit( Timer_t_ptr timer )
 	{
 		if( timer->Config.IT == SI )
 		{
-			TIM1_ClearITPendingBit(TIM1_IT_UPDATE);
-			TIM1_ClearFlag(TIM1_FLAG_UPDATE);
+			TIM1_ClearITPendingBit( TIM1_IT_UPDATE );
+			TIM1_ClearFlag( TIM1_FLAG_UPDATE );
 			TIM1_SetCounter( 0 );
 			TIM1_ITConfig( TIM1_IT_UPDATE, DISABLE );
+		}
+		TIM1_Cmd( DISABLE );
+	}
+	else if( timer->Config.Timer == TIMER2 )
+	{
+		if( timer->Config.IT == SI )
+		{
+			TIM2_ClearITPendingBit( TIM2_IT_UPDATE );
+			TIM2_ClearFlag( TIM2_FLAG_UPDATE );
+			TIM2_SetCounter( 0 );
+			TIM2_ITConfig( TIM2_IT_UPDATE, DISABLE );
 		}
 		TIM1_Cmd( DISABLE );
 	}

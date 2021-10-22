@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM8S103F3P3
+D STM8S103F3P3, 8 bit STM8 Microcontroller 16MHz 640 B, 8 kB Flash, 1 kB RAM, I2C 20-Pin TSSOP
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00226640.pdf
+$ENDCMP
+#
+#End Doc Library
