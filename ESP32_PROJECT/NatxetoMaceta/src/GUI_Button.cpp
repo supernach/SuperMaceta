@@ -1,23 +1,23 @@
 #include "GUI_Button.h"
 
 
-GUI_Button::GUI_Button(lv_obj_t * parent, const lv_obj_t * copy )
+GUI_Button::GUI_Button(lv_obj_t * parent, const lv_obj_t * copy, const char* txt, GUI_Style* estilo )
 {
     this->parent = parent;
     this->me = lv_btn_create(this->parent, NULL);
 
-    this->txt = GUI_Label( this->me, NULL, "aa" );
+    this->style = estilo;
 
     lv_btn_set_layout(this->me, LV_LAYOUT_CENTER );
 
-    
+    //this->texto = GUI_Label( this->me, NULL, txt );
 
-    lv_style_init(this->style);
-    /*lv_style_set_bg_color(this->style, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-    lv_style_set_bg_color(this->style, LV_STATE_PRESSED, LV_COLOR_GRAY);
-    lv_style_set_bg_color(this->style, LV_STATE_FOCUSED, LV_COLOR_RED);
-    lv_style_set_bg_color(this->style, LV_STATE_FOCUSED | LV_STATE_PRESSED, lv_color_hex(0xf88));*/
-    lv_obj_add_style(this->me, LV_BTN_PART_MAIN, this->style);
+    this->style->sBgColor( LV_COLOR_WHITE, LV_STATE_DEFAULT );
+    this->style->sBgColor( LV_COLOR_GRAY, LV_STATE_PRESSED );
+    this->style->sBgColor( LV_COLOR_RED, LV_STATE_FOCUSED );
+    this->style->sBgColor( lv_color_hex(0xf88), LV_STATE_FOCUSED | LV_STATE_PRESSED );
+
+    lv_obj_add_style(this->me, LV_BTN_PART_MAIN, this->style->getMe( ));
 
     lv_obj_set_event_cb(this->me, this->event_handler);
 	lv_obj_align(this->me, NULL, LV_ALIGN_CENTER, 0, -40);

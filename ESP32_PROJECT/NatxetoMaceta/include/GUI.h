@@ -25,10 +25,12 @@ class  GUI
         void Handler( );
         static void TickTask( );
         void LoadScreen( lv_obj_t * scr );
+      
     private:
         lv_disp_buf_t disp_buf;
         lv_color_t buf1[DISP_BUF_SIZE];
         lv_color_t buf2[DISP_BUF_SIZE];
+
         lv_disp_drv_t tft_Ili9341;
         lv_indev_drv_t Touch_XPT;
 
