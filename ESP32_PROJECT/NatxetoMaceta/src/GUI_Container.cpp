@@ -14,7 +14,7 @@ GUI_Container::GUI_Container( lv_obj_t * parent, const lv_obj_t * copy, GUI_Styl
     lv_obj_set_size(this->me, h, v );
     lv_obj_set_pos(this->me, x, y);
 
-    lv_cont_set_fit(this->me, LV_FIT_NONE);
+    //lv_cont_set_fit(this->me, LV_FIT_NONE);
     lv_cont_set_layout(this->me, align );
 
     lv_obj_add_style(this->me, LV_CONT_PART_MAIN, this->style->getMe( ) );

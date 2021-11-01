@@ -206,7 +206,8 @@ static void basic_init(void)
     lv_style_set_value_font(&styles->scr, LV_STATE_DEFAULT, theme.font_normal);
 
     lv_style_reset(&styles->bg);
-    lv_style_set_radius(&styles->bg, LV_STATE_DEFAULT, LV_DPX(8));
+    //lv_style_set_radius(&styles->bg, LV_STATE_DEFAULT, LV_DPX(8));
+    lv_style_set_radius(&styles->bg, LV_STATE_DEFAULT, 1);
     lv_style_set_bg_opa(&styles->bg, LV_STATE_DEFAULT, LV_OPA_COVER);
     lv_style_set_bg_color(&styles->bg, LV_STATE_DEFAULT, COLOR_BG);
     lv_style_set_border_color(&styles->bg, LV_STATE_DEFAULT, COLOR_BG_BORDER);
@@ -214,7 +215,8 @@ static void basic_init(void)
         lv_style_set_border_color(&styles->bg, LV_STATE_FOCUSED, theme.color_primary);
         lv_style_set_border_color(&styles->bg, LV_STATE_EDITED, theme.color_secondary);
     }
-    lv_style_set_border_width(&styles->bg, LV_STATE_DEFAULT, BORDER_WIDTH);
+    //lv_style_set_border_width(&styles->bg, LV_STATE_DEFAULT, BORDER_WIDTH);
+    lv_style_set_border_width(&styles->bg, LV_STATE_DEFAULT, 0);
     lv_style_set_border_post(&styles->bg, LV_STATE_DEFAULT, true);
     lv_style_set_text_color(&styles->bg, LV_STATE_DEFAULT, COLOR_BG_TEXT);
     lv_style_set_value_font(&styles->bg, LV_STATE_DEFAULT, theme.font_normal);
@@ -698,8 +700,10 @@ static void page_init(void)
     lv_style_set_bg_color(&styles->sb, LV_STATE_DEFAULT, (IS_LIGHT ? lv_color_hex(0xcccfd1) : lv_color_hex(0x777f85)));
     lv_style_set_radius(&styles->sb, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
     lv_style_set_size(&styles->sb, LV_STATE_DEFAULT, LV_DPX(7));
-    lv_style_set_pad_right(&styles->sb, LV_STATE_DEFAULT,  LV_DPX(7));
-    lv_style_set_pad_bottom(&styles->sb, LV_STATE_DEFAULT,  LV_DPX(7));
+    //lv_style_set_pad_right(&styles->sb, LV_STATE_DEFAULT,  LV_DPX(7));
+    //lv_style_set_pad_bottom(&styles->sb, LV_STATE_DEFAULT,  LV_DPX(7));
+    lv_style_set_pad_right(&styles->sb, LV_STATE_DEFAULT,  1);
+    lv_style_set_pad_bottom(&styles->sb, LV_STATE_DEFAULT, 1);
 
 #if LV_USE_ANIMATION
     lv_style_reset(&styles->edge_flash);
